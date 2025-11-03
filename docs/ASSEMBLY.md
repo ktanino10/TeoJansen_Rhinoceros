@@ -30,12 +30,14 @@ Before building, it's helpful to understand:
 
 ### Step 1: Gather Your Parts
 
-Print all STL files from the `STL/` directory. You will need:
+Print all STL files from the `STL/` directory. The specific components and file names will be provided when the design files are added to the repository. Typical components include:
 
-- Leg components
+- Leg linkage parts
 - Crank/drive mechanism
 - Body/frame parts
 - Connection pins/axles
+
+**Note**: Actual file names and specific part counts will be listed here once the design is finalized and STL files are added to the repository.
 
 ### Step 2: Prepare Parts
 
@@ -46,7 +48,13 @@ Print all STL files from the `STL/` directory. You will need:
 
 ### Step 3: Assembly Process
 
-**Coming Soon**: Detailed step-by-step assembly instructions with photos
+**Note**: Detailed step-by-step assembly instructions with photos will be added once the design files are finalized and the physical prototype is built. This section will include:
+- Specific assembly order
+- Joint connection methods
+- Alignment tips
+- Photos of each step
+
+For now, refer to general kinetic sculpture assembly principles and test fit all parts before final assembly.
 
 ### Step 4: Testing
 
