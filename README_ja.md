@@ -88,7 +88,7 @@
 [![Watch on YouTube](https://img.youtube.com/vi/JzXOxTJvHzw/0.jpg)](https://youtu.be/JzXOxTJvHzw?si=1MGZkGYogJQsFP-6)
 
 📄 **設計図面**  
-- [テオヤンセン2D図面最新.pdf](./テオヤンセン2D図面最新.pdf)
+- [テオヤンセン2D図面最新.pdf](./docs/テオヤンセン2D図面最新.pdf)
 
 🖼️ **Fusion 360 モデル画像**  
 ![Fusion 360 Screenshot](./images/87809_0 - コピー.jpg)
