@@ -19,8 +19,8 @@
 
 | バージョン | 概要 | 図面 | 動画 |
 |-------------|------|------|------|
-| Ver.1 | 初期設計。Fusion 360 でモデリング | [テオヤンセン2Dv1.pdf](./テオヤンセン2Dv1.pdf) | [参考動画](https://youtu.be/Q7d0sq1SNJ0?si=nhAsBmjNhFsv74Ju) |
-| Ver.2 | 改良版。150%スケール、安定した動作 | [テオヤンセン2D図面最新.pdf](./テオヤンセン2D図面最新.pdf) | [動作テスト動画](https://youtu.be/T3U7c1Mr3Y8?si=hUQZJXoczCW0qAUG)<br>[紹介・再検証動画](https://youtu.be/JzXOxTJvHzw?si=1MGZkGYogJQsFP-6) |
+| Ver.1 | 初期設計。Fusion 360 でモデリング | [テオヤンセン2Dv1.pdf](./テオヤンセン2Dv1.pdf)<br> [テオヤンセン2D図面最新.pdf](./テオヤンセン2D図面最新.pdf)  | [組み立て動画](https://youtu.be/Q7d0sq1SNJ0?si=nhAsBmjNhFsv74Ju)<br>[動きのシミュレーション](https://www.youtube.com/watch?v=RxUTcOTfPt0) |
+| Ver.2 | 改良版。150%スケール、安定した動作 || [初回動作テスト動画](https://youtu.be/T3U7c1Mr3Y8?si=hUQZJXoczCW0qAUG)<br>[紹介動画](https://youtu.be/JzXOxTJvHzw?si=1MGZkGYogJQsFP-6) |
 
 ---
 
