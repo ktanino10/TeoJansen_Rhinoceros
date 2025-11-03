@@ -1,6 +1,6 @@
 # Theo Jansen Rhinoceros - Kinetic Sculpture Project
 
-[English](#english) | [日本語](README_JP.md)
+[English](#english) | [日本語](README_ja.md)
 
 ## English
 
