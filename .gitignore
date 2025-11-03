@@ -1,0 +1,31 @@
+# Fusion 360 temporary files
+*.lock
+*.bak
+*.tmp
+*.temp
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# Archives
+*.zip
+*.rar
+*.7z
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
