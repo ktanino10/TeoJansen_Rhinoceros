@@ -53,7 +53,8 @@ Fusion 360で実際にパーツをモデリング。
 
 <img src="./docs/images/88187.jpg" width="500" alt="3Dプリンター出力中">
 
-[テストプリント動画（YouTube Shorts）](https://www.youtube.com/shorts/IP1fvOTGgno)
+🎥 **テストプリント動画**  
+[![Watch on YouTube](https://img.youtube.com/vi/IP1fvOTGgno/0.jpg)](https://www.youtube.com/shorts/IP1fvOTGgno)
 
 ---
 
@@ -63,7 +64,8 @@ Fusion 360で実際にパーツをモデリング。
 
 <img src="./docs/images/88075_0.jpg" width="500" alt="クランクシャフト研磨後">
 
-[研磨工程の動画](https://www.youtube.com/watch?v=w-jB8-OUFfA)
+🎥 **研磨工程の動画**  
+[![Watch on YouTube](https://img.youtube.com/vi/w-jB8-OUFfA/0.jpg)](https://www.youtube.com/watch?v=w-jB8-OUFfA)
 
 ---
 
@@ -73,7 +75,8 @@ Fusion 360で実際にパーツをモデリング。
 
 <img src="./docs/images/88073_0.jpg" width="500" alt="超音波洗浄の様子">
 
-[超音波洗浄の動画](https://www.youtube.com/watch?v=2DyWBz1phlA)
+🎥 **超音波洗浄の動画**  
+[![Watch on YouTube](https://img.youtube.com/vi/2DyWBz1phlA/0.jpg)](https://www.youtube.com/watch?v=2DyWBz1phlA)
 
 ---
 
@@ -89,7 +92,10 @@ Fusion 360で実際にパーツをモデリング。
 ---
 
 ## 8. 最終組立と動作確認
-歯車伝達、クランクシャフト回転、風力動作を確認し、滑らかなメカニズムの動きを確認しました。
+歯車伝達、クランクシャフト回転、風力動作を確認し、滑らかなメカニズムの動きを確認しました。  
+
+
+
 
 
 ---
