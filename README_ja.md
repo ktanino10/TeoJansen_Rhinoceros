@@ -115,10 +115,10 @@ Fusion 360で実際にパーツをモデリング。
 ### 📸 デカール貼付の様子
 貼り付け作業中および仕上げ直後の様子を以下に示します。  
 
-<img src="./docs/images/88060_1.jpg" width="500" alt="デカール貼付作業1">  
-<img src="./docs/images/88061_1.jpg" width="500" alt="デカール貼付作業2">  
-<img src="./docs/images/88062_1.jpg" width="500" alt="デカール貼付作業3">  
-<img src="./docs/images/88059_1.jpg" width="500" alt="デカール貼付作業4">
+<img src="./docs/images/88060_0.jpg" width="500" alt="デカール貼付作業1">  
+<img src="./docs/images/88061_0.jpg" width="500" alt="デカール貼付作業2">  
+<img src="./docs/images/88062_0.jpg" width="500" alt="デカール貼付作業3">  
+<img src="./docs/images/88059_0.jpg" width="500" alt="デカール貼付作業4">
 
 ---
 
