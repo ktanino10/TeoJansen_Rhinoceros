@@ -1,125 +1,162 @@
-# Theo Jansen Rhinoceros - Kinetic Sculpture Project
+# Theo Jansen Rhinoceros – Kinetic Sculpture Project  
 
 [English](#english) | [日本語](README_ja.md)
 
-## English
+---
 
-A Fusion 360-based kinetic sculpture inspired by Theo Jansen's legendary Strandbeest mechanisms (Rhinoceros Version 2).
+## Repository Contents
+
+TeoJansen_Rhinoceros/
+├── Fusion360/ # Fusion 360 design files (.f3d)
+├── STL/ # 3D printable parts (STL files)
+├── docs/ # Additional documentation and images
+│ └── images/ # Photos and diagrams
+├── README.md # This file (English)
+└── README_ja.md # Japanese documentation
+
+
+---
+
+## English  
+
+A **Fusion 360-based kinetic sculpture** inspired by **Theo Jansen's legendary Strandbeest mechanisms** (*Rhinoceros Version 2*).  
+This project merges mechanical engineering, art, and creative inspiration from the **ν (Nu) Gundam** design aesthetic.
 
 ![License](https://img.shields.io/badge/license-CC0%201.0-blue.svg)
 ![Educational](https://img.shields.io/badge/purpose-educational-green.svg)
 
-## About This Project
+---
 
-This repository documents my journey of creating a kinetic sculpture inspired by the brilliant work of Dutch artist **Theo Jansen** and his Strandbeest creations. The Strandbeest (meaning "beach beast" in Dutch) are kinetic sculptures that walk on wind power, demonstrating an elegant fusion of art, engineering, and nature.
+## 🧠 Background  
 
-### Purpose
+After watching [Theo Jansen’s Strandbeest](https://youtu.be/MYGJ9jrbpvg?si=qMYy9t26JGlFZo1x) on YouTube, I was fascinated by the elegant, wind-powered motion and natural rhythm of the creatures.  
+I was equally intrigued by the inner mechanics and wanted to reproduce them myself.  
 
-- **Educational**: Share the learning process of designing and building kinetic sculptures
-- **Inspire Children**: Help young learners explore the intersection of engineering, art, and mechanics
-- **Non-Commercial**: This project is created purely for educational purposes
-- **Open Source**: All design files and documentation are freely available
-
-### Attribution and Respect
-
-This project is deeply inspired by Theo Jansen's original Strandbeest mechanisms. I have tremendous respect for his innovative work and artistic vision. This project:
-
-- Is **NOT** an exact replica of Theo Jansen's designs
-- Serves as a learning tool to understand kinetic mechanisms
-- Is shared for **educational and non-commercial purposes only**
-- Encourages others to study and appreciate Theo Jansen's original works
-
-**Please visit [Theo Jansen's official website](https://www.strandbeest.com/) to learn about his amazing creations.**
-
-## Repository Contents
-
-```
-TeoJansen_Rhinoceros/
-├── Fusion360/          # Fusion 360 design files (.f3d)
-├── STL/                # 3D printable parts (STL files)
-├── docs/               # Additional documentation and images
-│   └── images/         # Photos and diagrams
-├── README.md           # This file (English)
-└── README_JP.md        # Japanese documentation
-```
-
-## What You'll Find Here
-
-### 🔧 Design Files
-- **Fusion 360 Project**: Complete CAD design files in the `Fusion360/` directory
-- **3D Models**: Parametric design allowing for customization and learning
-
-### 🖨️ 3D Printable Parts
-- **STL Files**: Ready-to-print components in the `STL/` directory
-- **Printing Guidelines**: Recommended settings for successful prints
-
-### 📚 Documentation
-- **Assembly Instructions**: Step-by-step guidance (in progress)
-- **Learning Resources**: Understanding the mechanisms and principles
-- **Bilingual Support**: Documentation in both English and Japanese
-
-## Getting Started
-
-### Prerequisites
-
-- **Fusion 360** (free for personal/educational use)
-- **3D Printer** (or access to 3D printing services)
-- **Basic tools** for assembly
-
-### How to Use This Repository
-
-1. **Download Design Files**: Clone this repository or download the Fusion 360 files
-2. **Study the Mechanism**: Open the files in Fusion 360 to understand the linkage system
-3. **3D Print Parts**: Use the STL files to print components
-4. **Assemble**: Follow documentation to build your own kinetic sculpture
-5. **Learn and Experiment**: Modify designs to understand the principles
-
-## Educational Goals
-
-This project aims to teach:
-
-- **Mechanical Linkages**: Understanding how connected parts create movement
-- **CAD Design**: Learning to use Fusion 360 for engineering projects
-- **3D Printing**: Practical application of additive manufacturing
-- **Problem Solving**: Iterative design and troubleshooting
-- **Art + Engineering**: The beauty of functional mechanical art
-
-## Contributing
-
-This is a personal learning project, but suggestions and improvements are welcome! If you:
-
-- Find issues with the design
-- Have suggestions for documentation
-- Want to share your own build
-- Have educational resources to add
-
-Please feel free to open an issue or submit a pull request.
-
-## License
-
-This project is released under the **CC0 1.0 Universal (CC0 1.0) Public Domain Dedication**.
-
-You are free to:
-- Use these designs for educational purposes
-- Modify and adapt the designs
-- Share with others
-
-**Important**: While this repository is CC0, please respect Theo Jansen's original work and intellectual property. This project is for educational purposes only.
-
-## Acknowledgments
-
-- **Theo Jansen**: For creating the original Strandbeest and inspiring countless engineers and artists
-- **The Maker Community**: For sharing knowledge and supporting learning
-- **Educators**: Who help children discover the joy of engineering and art
-
-## Contact
-
-For questions or comments about this educational project, please open an issue on GitHub.
-
-## Disclaimer
-
-This is an educational project created by an enthusiast. It is not affiliated with, endorsed by, or connected to Theo Jansen or his official Strandbeest projects. All original Strandbeest designs and concepts are the intellectual property of Theo Jansen.
+However, rather than creating a direct copy, I sought to incorporate **a more mechanical aesthetic** and **my own design influences**.  
+As a fan of **ν (Nu) Gundam**, I integrated its color scheme and mechanical nuances into this project.  
 
 ---
 
-**Happy Building and Learning! 🦏⚙️**
+## 🧩 Repository Usage  
+
+This project has evolved through multiple iterations — **Ver.1 → Ver.2**.  
+Each version includes STL files and design documentation.  
+If you’re new to the project, I recommend starting with **Ver.1** to understand the structure.  
+
+| Version | Description | Drawings | Videos |
+|----------|--------------|-----------|---------|
+| **Ver.1** | Initial design modeled in Fusion 360 | [Teo Jansen 2D v1.pdf](./docs/テオヤンセン2Dv1.pdf)<br>[Latest 2D Drawing.pdf](./docs/テオヤンセン2D図面最新.pdf) | [Assembly Video](https://youtu.be/Q7d0sq1SNJ0?si=nhAsBmjNhFsv74Ju)<br>[Motion Simulation](https://www.youtube.com/watch?v=RxUTcOTfPt0) |
+| **Ver.2** | Improved version at 150% scale for more stable motion |  | [First Motion Test](https://youtu.be/T3U7c1Mr3Y8?si=hUQZJXoczCW0qAUG)<br>[Showcase Video](https://youtu.be/JzXOxTJvHzw?si=1MGZkGYogJQsFP-6) |
+
+---
+
+## 🖨️ Printing Recommendations  
+
+- **Scale**: 150% (160% for legs recommended)  
+- **Material**: ABS (heat resistance ~80 °C, same as Gunpla plastic)  
+- **Printer**: Bambu Lab FDM printer  
+- **Adhesive**: Tamiya ABS cement  
+- **Finishing**: Sanding with 400 → 600 → 800 grit  
+
+---
+
+## ⚙️ Fabrication Process (Ver.1)  
+
+### 1. Research  
+Observed YouTube videos and reference images to understand the structure and linkage motion.  
+
+### 2. Design  
+Modeled all parts in Autodesk Fusion 360.  
+
+### 3. 3D Printing  
+Optimized print orientation and segmentation for strength and precision.  
+
+<img src="./docs/images/88187.jpg" width="500" alt="3D Printing in Progress">
+
+🎥 **Test Print Video**  
+[![Watch on YouTube](https://img.youtube.com/vi/IP1fvOTGgno/0.jpg)](https://www.youtube.com/shorts/IP1fvOTGgno)
+
+### 4. Sanding  
+Polished crankshaft using a power sander with 400 → 600 → 800 grit for a smooth surface.  
+
+<img src="./docs/images/88075_0.jpg" width="500" alt="After Sanding">
+
+🎥 **Sanding Process Video**  
+[![Watch on YouTube](https://img.youtube.com/vi/w-jB8-OUFfA/0.jpg)](https://www.youtube.com/watch?v=w-jB8-OUFfA)
+
+### 5. Ultrasonic Cleaning  
+Cleaned parts using an **ultrasonic cleaner** with a small amount of detergent to reduce surface tension and remove fine dust.  
+
+<img src="./docs/images/88073_0.jpg" width="500" alt="Ultrasonic Cleaning">
+
+🎥 **Ultrasonic Cleaning Video**  
+[![Watch on YouTube](https://img.youtube.com/vi/2DyWBz1phlA/0.jpg)](https://www.youtube.com/watch?v=2DyWBz1phlA)
+
+### 6. Painting  
+Airbrushed the parts in a paint booth using ABS-safe paints.  
+
+<img src="./docs/images/2339528.jpg" width="400" alt="Airbrush">  
+<img src="./docs/images/88072.jpg" width="400" alt="Paint Booth">  
+<img src="./docs/images/339.png" width="250" alt="Mask for Safety">
+
+**Painted Components:**  
+<img src="./docs/images/88089_0.jpg" width="500" alt="Painted parts drying">  
+<img src="./docs/images/88209_0.jpg" width="500" alt="Crankshaft comparison 1">  
+<img src="./docs/images/88210_0.jpg" width="500" alt="Crankshaft comparison 2">  
+<img src="./docs/images/88208_0.jpg" width="500" alt="Painted assembly overview">
+
+### 7. Decals  
+Applied decals using a softening agent, adjusted positions, and sealed with matte topcoat.  
+
+<img src="./docs/images/88060_0.jpg" width="500" alt="Decal work 1">  
+<img src="./docs/images/88061_0.jpg" width="500" alt="Decal work 2">  
+<img src="./docs/images/88062_0.jpg" width="500" alt="Decal work 3">  
+<img src="./docs/images/88059_0.jpg" width="500" alt="Decal work 4">
+
+### 8. Assembly & Testing  
+Verified gear transmission, crankshaft rotation, and wind-powered walking.  
+
+🎥 [First Motion Test](https://youtu.be/T3U7c1Mr3Y8)  
+🎥 [Showcase Video](https://youtu.be/JzXOxTJvHzw)
+
+---
+
+## 🧩 Improvements in Ver.2  
+
+- Adjusted **gear ratio** for torque balance  
+- Improved **Savonius-type wind turbine** efficiency  
+- Enhanced **clearance and structural rigidity**  
+- Redesigned **crank and axle alignment** for smoother transmission  
+
+---
+
+## 🧪 Prototyping Gallery  
+
+| Description | Image |
+|--------------|-------|
+| Crankshaft & Leg Hooks | <img src="./docs/images/87812.jpg" width="600" alt="Crankshaft and leg hook prototypes"> |
+| Gear Prototypes | <img src="./docs/images/87813.jpg" width="600" alt="Gear prototype variations"> |
+| Polished Finish Comparison | <img src="./docs/images/87814.jpg" width="600" alt="Finish comparison"> |
+| Wind Turbine Variations | <img src="./docs/images/87816.jpg" width="600" alt="Turbine prototypes"> |
+
+---
+
+## 🌬️ Future Work  
+
+For **Ver.3**, improvements will focus on natural walking and energy efficiency:  
+- Apply **Generative Design** for lightweight optimization  
+- Enhance **torque transmission** efficiency  
+- Use **CFD simulations** to visualize airflow and torque transfer  
+
+<img src="./docs/images/GD1.jpg" width="420" alt="Generative Design process">  
+<img src="./docs/images/87811_0.jpg" width="420" alt="GD vs Ver.2 comparison">
+
+---
+
+## 💬 Reflections  
+
+Through this project, I experienced how **Theo Jansen’s philosophy and mechanical design** beautifully merge.  
+Reproducing dynamic motion powered only by wind reminded me that **mechanics itself can be art**.  
+I hope to continue sharing and teaching this project as an educational resource.  
+
+🦏 **Happy Building & Learning!**
