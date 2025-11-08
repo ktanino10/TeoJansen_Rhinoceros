@@ -3,17 +3,17 @@
 [English](#english) | [日本語](README_ja.md)
 
 ---
-
 ## Repository Contents
 
+```text
 TeoJansen_Rhinoceros/
-├── Fusion360/ # Fusion 360 design files (.f3d)
-├── STL/ # 3D printable parts (STL files)
-├── docs/ # Additional documentation and images
-│ └── images/ # Photos and diagrams
-├── README.md # This file (English)
-└── README_ja.md # Japanese documentation
-
+├── Fusion360/          # Fusion 360 design files (.f3d)
+├── STL/                # 3D printable parts (STL files)
+├── docs/               # Additional documentation and images
+│   └── images/         # Photos and diagrams
+├── README.md           # This file (English)
+└── README_JP.md        # Japanese documentation
+```
 
 ---
 
