@@ -227,13 +227,6 @@ and cut them to length with **metal shears**:
 - [Stainless steel rods (Amazon)](https://www.amazon.co.jp/dp/B0FCYMZJF7?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)  
 - [Metal shears (Amazon)](https://www.amazon.co.jp/dp/B0BQB8PLWK?ref=ppx_yo2ov_dt_b_fed_asin_title)
 
-### ⚙️ Observed Issues
-
-- The wind turbine did not rotate well under wind power.  
-- Some parts popped off during manual rotation.  
-- The turbine was unstable and the shaft exhibited wobble.
-
-These findings became key drivers for improvements in Ver.2.
 
 ### Ver.1 Exterior (at completion)
 
@@ -248,6 +241,17 @@ These findings became key drivers for improvements in Ver.2.
 | <img src="./docs/images/テオヤンセンver1完成4.jpg" width="280" alt="Ver1 rear"> | <img src="./docs/images/テオヤンセンver1完成5.jpg" width="280" alt="Ver1 opposite"> | <img src="./docs/images/テオヤンセンver1完成6.jpg" width="280" alt="Ver1 reverse oblique"> |
 
 </div>
+
+### ⚙️ Observed Issues
+
+- The wind turbine did not rotate well under wind power.  
+- Some parts popped off during manual rotation.  
+- The turbine was unstable and the shaft exhibited wobble.
+
+These findings became key drivers for improvements in Ver.2.
+
+🎥 **Initial Motion Test Video**  
+[![Watch on YouTube](https://img.youtube.com/vi/Ic3GasmMlio/0.jpg)](https://youtu.be/Ic3GasmMlio?si=MSvn6-1x6faBUwIh)
 
 ---
 
