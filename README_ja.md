@@ -78,20 +78,19 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 
 </div>
 
-### 🧩 Ver.1 組み立てイメージ  
-📄 **2D図面（組み立て参考）**  
+### 🧩 Ver.1 組み立てイメージ   
 [テオヤンセン2Dv1.pdf](./docs/テオヤンセン2Dv1.pdf)
 
 > ※GitHub上ではPDFが直接プレビューされない場合があります。その場合は上のリンクから開いてください。
 
-🎥 **組み立て動画**  
+ **組み立て動画**  
 <a href="https://youtu.be/Q7d0sq1SNJ0?si=nhAsBmjNhFsv74Ju" target="_blank">
   <img src="https://img.youtube.com/vi/Q7d0sq1SNJ0/0.jpg" width="480" alt="Ver.1 Assembly YouTube thumbnail">
 </a>
 
 
 ### 🦿 Ver.1 動作イメージ  
-🎥 **Simulation Video**  
+**Simulation Video**  
 <a href="https://www.youtube.com/watch?v=RxUTcOTfPt0" target="_blank">
   <img src="https://img.youtube.com/vi/RxUTcOTfPt0/0.jpg" width="480" alt="Ver.1 Motion Simulation YouTube thumbnail">
 </a>
