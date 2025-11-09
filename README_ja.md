@@ -12,40 +12,49 @@
 
 ---
 
-## リポジトリの活用方法  
+## リポジトリの活用方法と概要  
 
-私はこのリノセウスを複数回にわたって改良し、**Ver.1 → Ver.2** へと進化させてきました。  
-それぞれにSTLファイルが格納されていますが、初めて挑戦される方はまず **Ver.1** の構造を理解することをおすすめします。  
+このリノセウスは、複数回の試作と改良を経て **Ver.1 → Ver.2** へと進化してきました。  
+詳細な手順書はありませんが、下記のPDFやアニメーションを参考にすれば、十分に製作可能だと思います。  
+
+各バージョンには対応する **STLファイル** が格納されています。  
+初めて挑戦される方は、まず **Ver.1** の構造や動きを理解することをおすすめします。  
+
+私自身の製作過程（Log）については、記憶している範囲で次の章にまとめています。
+
 
 | バージョン | 概要 | 図面 | 動画 |
 |-------------|------|------|------|
-| Ver.1 | 初期設計。Fusion 360 でモデリング | [テオヤンセン2Dv1.pdf](./docs/テオヤンセン2Dv1.pdf)<br> [テオヤンセン2D図面最新.pdf](./docs/テオヤンセン2D図面最新.pdf)  | [組み立て動画](https://youtu.be/Q7d0sq1SNJ0?si=nhAsBmjNhFsv74Ju)<br>[動きのシミュレーション](https://www.youtube.com/watch?v=RxUTcOTfPt0) |
-| Ver.2 | 改良版。150%スケール、安定した動作 || [初回動作テスト動画](https://youtu.be/T3U7c1Mr3Y8?si=hUQZJXoczCW0qAUG)<br>[紹介動画](https://youtu.be/JzXOxTJvHzw?si=1MGZkGYogJQsFP-6) |
+| Ver.1 | 初期設計。Fusion 360 でモデリング | 1.[テオヤンセン2Dv1.pdf](./docs/テオヤンセン2Dv1.pdf)<br> 2.[テオヤンセン2D図面.pdf](./docs/テオヤンセン2D図面最新.pdf)  | 1.[組み立て動画](https://youtu.be/Q7d0sq1SNJ0?si=nhAsBmjNhFsv74Ju)<br>2.[動きのシミュレーション](https://www.youtube.com/watch?v=RxUTcOTfPt0) |
+| Ver.2 | 改良版。150%スケール、安定した動作 ||1. [初回動作テスト動画](https://youtu.be/T3U7c1Mr3Y8?si=hUQZJXoczCW0qAUG)<br>2.[紹介動画](https://youtu.be/JzXOxTJvHzw?si=1MGZkGYogJQsFP-6) |
 
----
-
-## 印刷時の推奨設定  
-
-- **スケール**：150%（脚部のみ160%推奨）  
-- **素材**：ABS樹脂（ガンプラにも使用される、耐熱約80℃）  
-- **プリンタ**：Bambu Lab製FDMプリンタ  
-- **接着剤**：タミヤ製 ABS用セメント  
-- **後処理**：400 → 600 → 800番のヤスリで研磨  
 - **その他**：本モデルは、Bambu Lab社が提供する3Dプリンタ向けコミュニティサイト [**MakerWorld**](https://makerworld.com/ja/models/1971139-n-gundam-style-strandbeest-ver-2) にも掲載しています。
-
 ---
 
-## Ver.1 の製作過程  
 
-# リノセウス試作 Ver.1 製作過程
+# Ver.1 製作過程
 
 ## 1. 情報収集
-YouTubeや画像を観察し、構造を推測・理解。  
+YouTube や各種画像を観察し、構造や動作原理を推測・理解しました。  
+世界中の多くの制作者が作品を公開しているため、**ネットでのリサーチや動画閲覧**が非常に参考になります。
+
+<a href="https://youtu.be/MYGJ9jrbpvg?si=qMYy9t26JGlFZo1x" target="_blank">
+  <img src="https://img.youtube.com/vi/MYGJ9jrbpvg/0.jpg" width="480" alt="Theo Jansen Strandbeest YouTube thumbnail">
+</a>
 
 ---
 
 ## 2. 設計
-Fusion 360で実際にパーツをモデリング。  
+Autodesk **Fusion 360** を使用して、すべてのパーツを3Dモデリングしました。  
+初期段階では、主に実際の作品を観察しながら形状を写し取ることを重視しており、  
+細かな力学計算などはほとんど行っていませんでした。  
+
+このため、後の段階で試作と微調整を何度も繰り返すことになり、  
+最も時間と労力を要した工程の一つとなりました。  
+下記の図面は、あくまで**参考資料の一つ**としてご覧ください。  
+
+📄 **設計図面（2D Drawing）**  
+[テオヤンセン2D図面.pdf](./docs/テオヤンセン2D図面最新.pdf)
 
 
 ## 🎨 Ver.1 完成予想図レンダリング（Fusion 360 Rendering）
@@ -74,6 +83,19 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 印刷方向・分割を工夫しながら出力。精度と強度のバランスを最適化しました。  
 
 <img src="./docs/images/88187.jpg" width="500" alt="3Dプリンター出力中">
+
+---
+
+## 印刷時の推奨設定  
+
+- **スケール**：150%（脚部のみ160%推奨）  
+- **素材**：ABS樹脂（ガンプラにも使用される、耐熱約80℃）  
+- **プリンタ**：Bambu Lab製FDMプリンタ  
+- **接着剤**：タミヤ製 ABS用セメント  
+- **後処理**：400 → 600 → 800番のヤスリで研磨  
+- **その他**：本モデルは、Bambu Lab社が提供する3Dプリンタ向けコミュニティサイト [**MakerWorld**](https://makerworld.com/ja/models/1971139-n-gundam-style-strandbeest-ver-2) にも掲載しています。
+
+---
 
 🎥 **テストプリント動画**  
 [![Watch on YouTube](https://img.youtube.com/vi/IP1fvOTGgno/0.jpg)](https://www.youtube.com/shorts/IP1fvOTGgno)
