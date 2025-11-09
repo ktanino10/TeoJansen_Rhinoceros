@@ -109,7 +109,7 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 ## 3. 3Dプリント
 印刷方向・分割を工夫しながら出力。精度と強度のバランスを最適化しました。  
 
-<img src="./docs/images/88187.jpg" width="500" alt="3Dプリンター出力中">
+<img src="./docs/images/88187.jpg" width="300" alt="3Dプリンター出力中">
 
 
 ## 印刷時の設定  
@@ -134,7 +134,7 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 **400 → 600 → 800番** の順に番手を上げて磨くことで、  
 積層跡を滑らかに整え、美しい仕上がりを実現しています。
 
-<img src="./docs/images/88075_0.jpg" width="500" alt="クランクシャフト研磨後">
+<img src="./docs/images/88075_0.jpg" width="300" alt="クランクシャフト研磨後">
 
 🎥 **研磨工程の動画**  
 [![Watch on YouTube](https://img.youtube.com/vi/w-jB8-OUFfA/0.jpg)](https://www.youtube.com/watch?v=w-jB8-OUFfA)
@@ -145,7 +145,7 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 研磨後のパーツを **超音波洗浄機** で洗浄しました。  
 洗浄水には **少量の洗剤** を加え、表面張力を下げて気泡が細部まで入り込み、微細な粉や削りカスを効果的に除去しています。  
 
-<img src="./docs/images/88073_0.jpg" width="500" alt="超音波洗浄の様子">
+<img src="./docs/images/88073_0.jpg" width="300" alt="超音波洗浄の様子">
 
 🎥 **超音波洗浄の動画**  
 [![Watch on YouTube](https://img.youtube.com/vi/2DyWBz1phlA/0.jpg)](https://www.youtube.com/watch?v=2DyWBz1phlA)
@@ -169,22 +169,22 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 使用した機材は以下の通りです。
 
 - エアブラシ  
-  <img src="./docs/images/2339528.jpg" width="500" alt="使用したエアブラシ">
+  <img src="./docs/images/2339528.jpg" width="300" alt="使用したエアブラシ">
 
 - 塗装ブース  
-  <img src="./docs/images/88072.jpg" width="500" alt="使用した塗装ブース">
+  <img src="./docs/images/88072.jpg" width="300" alt="使用した塗装ブース">
 
 - 安全面にも配慮し、防毒マスクを着用しています。  
-<img src="./docs/images/339.png" width="500" alt="防塵マスク">
+<img src="./docs/images/339.png" width="300" alt="防塵マスク">
 
 - 塗装の準備画像  
-  <img src="./docs/images/88208_0.jpg" width="500" alt="塗装済み製品">
+  <img src="./docs/images/88208_0.jpg" width="300" alt="塗装済み製品">
 
 ### 🎨 塗装済み部品
 塗装後の部品と研磨・超音波洗浄・塗装前後の比較を示します。
 
 - 塗装済み部品の乾燥中  
-  <img src="./docs/images/88089_0.jpg" width="500" alt="塗装済み部品乾燥中">
+  <img src="./docs/images/88089_0.jpg" width="300" alt="塗装済み部品乾燥中">
 
 
 - クランクシャフト仕上げ比較  
@@ -207,10 +207,10 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 ### 📸 デカール貼付の様子
 貼り付け作業中および仕上げ直後の様子を以下に示します。  
 
-<img src="./docs/images/88060_0.jpg" width="500" alt="デカール貼付作業1">  
-<img src="./docs/images/88061_0.jpg" width="500" alt="デカール貼付作業2">  
-<img src="./docs/images/88062_0.jpg" width="500" alt="デカール貼付作業3">  
-<img src="./docs/images/88059_0.jpg" width="500" alt="デカール貼付作業4">
+<img src="./docs/images/88060_0.jpg" width="300" alt="デカール貼付作業1">  
+<img src="./docs/images/88061_0.jpg" width="300" alt="デカール貼付作業2">  
+<img src="./docs/images/88062_0.jpg" width="300" alt="デカール貼付作業3">  
+<img src="./docs/images/88059_0.jpg" width="300" alt="デカール貼付作業4">
 
 ---
 
@@ -276,7 +276,7 @@ Ver.1の試作では、複数の課題が明らかになりました。
    この原理を踏まえ、小さな風力でも十分に動作するギア構成を目指して、
    トルク伝達に優れた大歯車＋小歯車の再設計を行いました。
 
-<img src="./docs/images/88476.jpg" width="500" alt="歯車試作比較1">
+<img src="./docs/images/88476.jpg" width="300" alt="歯車試作比較1">
 </div>
 
 > 上の写真は、Ver.2開発に向けて行ったギア比検証の一例です。
@@ -285,7 +285,7 @@ Ver.1の試作では、複数の課題が明らかになりました。
   歯車は**組み合わせの自由度が高く、汎用性のある要素**であるため、  
   試行錯誤を重ねながら、Ver.2に向けて様々なパターンを検証しました。  
 
-<img src="./docs/images/87813.jpg" width="500" alt="歯車の試作群">
+<img src="./docs/images/87813.jpg" width="300" alt="歯車の試作群">
 </div>
 
 > 様々な試作を重ねるうちに、少しずつ歯車の奥深さがわかってきました。
@@ -330,15 +330,15 @@ Ver.1の試作では、複数の課題が明らかになりました。
 
 
 これまでの課題をすべて見直し、構造強度と動作の安定性を大幅に向上させました。  
-以下の表では、**Ver.1（初期設計）**と**Ver.2（改良設計）**の主要な違いを比較しています。
+以下の表では、Ver.1（初期設計）とVer.2（改良設計）の主要な違いを比較しています。
 
 | 項目 | Ver.1（初期設計） | Ver.2（改良設計） |
 |------|------------------|------------------|
-| **正面ビュー** | <img src="./docs/images/テオヤンセンv2joint v32.png" width="320" alt="Ver1 Front View"> | <img src="./docs/images/テオヤンセンv4joint v15.1.png" width="320" alt="Ver2 Front View"> |
-| **側面ビュー** | <img src="./docs/images/テオヤンセンv2joint v322.png" width="320" alt="Ver1 Side View"> | <img src="./docs/images/テオヤンセンv4joint v15.png" width="320" alt="Ver2 Side View"> |
+| **正面ビュー** | <img src="./docs/images/テオヤンセンv2joint v32.png" width="400" alt="Ver1 Front View"> | <img src="./docs/images/テオヤンセンv4joint v15.1.png" width="400" alt="Ver2 Front View"> |
+| **側面ビュー** | <img src="./docs/images/テオヤンセンv2joint v322.png" width="400" alt="Ver1 Side View"> | <img src="./docs/images/テオヤンセンv4joint v15.png" width="400" alt="Ver2 Side View"> |
 | **ギア比** | ギア比が小さく、風力ではトルク不足。 | ギア比を再設計し、少ない風力でも安定して駆動可能に。 |
 | **歯車精度** | 厚みやピッチが不均一で、噛み合わせに抵抗が発生。 | 歯形を修正し、スムーズな回転を実現。摩擦ロスを軽減。 |
-| **構造安定性** | 軸支持が弱く、ステンレス棒が撓（たわ）み、摩擦が増加。 | 支持構造を延長・補強し、**ステンレス棒の撓み問題を解消**。軸が水平を維持できるように再設計。 |
+| **構造安定性** | 軸支持が弱く、ステンレス棒が撓（たわ）み、摩擦が増加。 | 支持構造を延長・補強し、**ステンレス棒の撓み問題を解消**。|
 | **クランク配置** | 力の伝達経路が非効率で、脚部の動きにムラ。 | 力の方向を考慮した配置に再設計し、スムーズな駆動を実現。 |
 | **デザイン** | 試作要素が強く、構造が粗い印象。 | **メカニカルデザインと機能性の両立**を実現。 |
 
@@ -356,6 +356,22 @@ Ver.1の試作では、複数の課題が明らかになりました。
 | **斜めビュー** | <img src="./docs/images/Wheel2.jpg" width="300" alt="クランクシャフト比較2 Before"> | <img src="./docs/images/88210_0.jpg" width="300" alt="クランクシャフト比較2 After"> |
 | **見下ろしビュー** | <img src="./docs/images/Wheel3.jpg" width="300" alt="クランクシャフト比較3 Before"> | <img src="./docs/images//87814.jpg" width="300" alt="クランクシャフト比較3 After"> |
 
+
+**実際の試作風車（左：六枚羽型／右：サボニウス型）**  
+<img src="./docs/images/87816.jpg" width="300" alt="風車実物比較">
+
+改良のポイント：なぜサボニウス型が優れているのか
+
+| 観点 | 六枚羽型風車（Ver.1） | サボニウス型風車（Ver.2） |
+|------|----------------------|----------------------|
+| **風の受け方** | 風を正面から強く受け止める構造だが、背面で反発する力（抗力）が大きく、効率が低下。 | カップ形状により、風を受け流しながらも回転方向にトルクを集中させる構造。 |
+| **トルク特性** | 風速が弱いと回転を始めにくく、初動トルクが不足。 | 抗力差（ドラッグ差）を利用して、弱い風でも回転を開始できる。 |
+| **回転の安定性** | 羽根枚数が多く、風向変化でバランスを崩しやすい。 | 常に一方のカップが風を受け、もう一方が風を逃がすため、ブレが少なく安定。 |
+| **製造・調整の容易さ** | 羽根の角度・形状の調整が難しく、トルク方向の最適化が困難。 | 構造が単純で、安定した動作を得やすい。 |
+| **総合評価** | 見た目は軽快だが、実験では風の利用効率が低かった。 | トルク効率と安定性の両立を実現し、最終構造として採用。 |
+
+---
+
 3. **クランクシャフトと部品を繋ぐフックがよく外れる改良比較** 
 
   Ver.1 では、クランクシャフトと脚部を接続する**フック部品が頻繁に外れる**問題がありました。  
@@ -368,8 +384,8 @@ Ver.1の試作では、複数の課題が明らかになりました。
 
 | 視点 | 左（Ver.1）・右（Ver.2） |
 |------|------------------------------|
-| **フック構造（比較1）** | <img src="./docs/images/hook.jpg" width="300" alt="Hook Comparison 1"> |
-| **フック構造（比較2）** | <img src="./docs/images/hook2.jpg" width="300" alt="Hook Comparison 2"> |
+| **フック構造（比較1）** | <img src="./docs/images/hook.jpg" width="200" alt="Hook Comparison 1"> |
+| **フック構造（比較2）** | <img src="./docs/images/hook2.jpg" width="200" alt="Hook Comparison 2"> |
 
 ---
 ### Ver.2 完成時の外観  
@@ -398,7 +414,6 @@ Ver.1の試作では、複数の課題が明らかになりました。
 🎥 **紹介・再検証動画**  
 [![Watch on YouTube](https://img.youtube.com/vi/JzXOxTJvHzw/0.jpg)](https://youtu.be/JzXOxTJvHzw?si=1MGZkGYogJQsFP-6)
 
----
 
 
 
@@ -412,24 +427,6 @@ Ver.2 では力学的バランスを再構築し、**風の力だけで自然に
 
 
 
-
----
-
-### 🌬️ 風車の試作比較  
-
-<div align="center">
-<img src="./docs/images/87816.jpg" width="600" alt="風車の試作比較">
-</div>
-
-左3枚：**羽根型風車**　右：**サボニウス型風車**。  
-
-羽根型風車は、一見すると風を十分に受け止められない構造に見えますが、  
-実際には**風を逃がすことで柔らかく動く特性**を持っていました。  
-この挙動の観察から、「風をどう受け止めるか」だけでなく、  
-**「風をどう逃がすか・どう調和させるか」**という視点を得ることができました。  
-
-この考察を踏まえ、サボニウス型風車では風の流路とトルク伝達効率を両立させ、  
-より安定した回転が可能となりました。
 
 
 ---
@@ -457,8 +454,6 @@ Ver.3ではさらなる「自然な歩行」を目指し、以下の改善を検
   <img src="./docs/images/87811_0.jpg" width="420" alt="GD vs Ver2 Comparison">
 
   </div>
-
----
 
 - **軽量化とトルク伝達効率の向上**  
   部品の一体化や支点位置の最適化により、  
