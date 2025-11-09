@@ -459,7 +459,7 @@ I implemented the coding smoothly with **GitHub Copilot**.
 If you haven’t tried Copilot yet, I highly recommend it—  
 it speeds up development and broadens your creative options. 🚀
 
-🔗 [Reference repo: Fusion360 Export All STL – Add-on Project](https://github.com/ktanino10/fusion360-export-all-stl/blob/main/README_ja.md)
+🔗 [Reference repo: Fusion360 Export All STL – Add-on Project](https://github.com/ktanino10/fusion360-export-all-stl/blob/main/README.md)
 
 ---
 
