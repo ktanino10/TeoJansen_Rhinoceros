@@ -215,11 +215,11 @@ Ver.1完成画像
 
 | 斜めビュー | 正面ビュー | 側面ビュー |
 |-------------|-------------|-------------|
-| <img src="./docs/images/テオヤンセン1.png" width="280" alt="斜めビュー"> | <img src="./docs/images/テオヤンセン2.png" width="280" alt="正面ビュー"> | <img src="./docs/images/テオヤンセン3.png" width="280" alt="側面ビュー"> |
+| <img src="./docs/images/テオヤンセンver1完成1.jpg" width="280" alt="斜めビュー"> | <img src="./docs/images/テオヤンセンver1完成2.jpg" width="280" alt="正面ビュー"> | <img src="./docs/images/テオヤンセンver1完成3.jpg" width="280" alt="側面ビュー"> |
 
 | 裏面ビュー | 反対側面ビュー | 逆斜めビュー |
 |-------------|----------------|----------------|
-| <img src="./docs/images/テオヤンセン4.png" width="280" alt="裏面ビュー"> | <img src="./docs/images/テオヤンセン5.png" width="280" alt="反対側面ビュー"> | <img src="./docs/images/テオヤンセン6.png" width="280" alt="逆斜めビュー"> |
+| <img src="./docs/images/テオヤンセンver1完成4.jpg" width="280" alt="裏面ビュー"> | <img src="./docs/images/テオヤンセンver1完成5.jpg" width="280" alt="反対側面ビュー"> | <img src="./docs/images/テオヤンセンver1完成6.jpg" width="280" alt="逆斜めビュー"> |
 
 </div>
 
