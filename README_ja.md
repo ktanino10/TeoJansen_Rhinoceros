@@ -226,18 +226,7 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 - [ステンレス丸棒（Amazon）](https://www.amazon.co.jp/dp/B0FCYMZJF7?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)  
 - [金切りばさみ（Amazon）](https://www.amazon.co.jp/dp/B0BQB8PLWK?ref=ppx_yo2ov_dt_b_fed_asin_title)  
 
----
-
-### ⚙️ 動作上の課題  
-
-試作段階では、以下のような問題が発生しました：  
-- 風力では風車がうまく回転しない。  
-- 手動で回すと一部のパーツが外れてしまう。  
-- 風車が安定せず、軸のブレが生じる。  
-
-これらの課題は、後のVer.2で改良を重ねる重要なきっかけとなりました。
-
-歯車伝達、クランクシャフト回転、風力動作を確認し、滑らかなメカニズムの動きを確認しました。  
+--- 
 
 ### Ver.1 完成時の外観  
 
@@ -252,6 +241,18 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 | <img src="./docs/images/テオヤンセンver1完成4.jpg" width="280" alt="裏面ビュー"> | <img src="./docs/images/テオヤンセンver1完成5.jpg" width="280" alt="反対側面ビュー"> | <img src="./docs/images/テオヤンセンver1完成6.jpg" width="280" alt="逆斜めビュー"> |
 
 </div>
+
+### ⚙️ 動作上の課題  
+
+試作段階では、以下のような問題が発生しました：  
+- 風力では風車がうまく回転しない。  
+- 手動で回すと一部のパーツが外れてしまう。  
+- 風車が安定せず、軸のブレが生じる。  
+
+これらの課題は、後のVer.2で改良を重ねる重要なきっかけとなりました。
+
+🎥 **テスト動画**  
+[![Watch on YouTube](https://img.youtube.com/vi/Ic3GasmMlio/0.jpg)](https://youtu.be/Ic3GasmMlio?si=MSvn6-1x6faBUwIh)
 
 ---
 ## 9. Ver.1の再設計と構造改善
