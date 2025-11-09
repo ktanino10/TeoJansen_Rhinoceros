@@ -89,7 +89,6 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
   <img src="https://img.youtube.com/vi/Q7d0sq1SNJ0/0.jpg" width="480" alt="Ver.1 Assembly YouTube thumbnail">
 </a>
 
----
 
 ### 🦿 Ver.1 動作イメージ  
 🎥 **Simulation Video**  
