@@ -453,7 +453,7 @@ Ver.3ではさらなる「自然な歩行」を目指し、以下の改善を検
 
   また近年では、いすゞ中央研究所によるジェネレーティブデザイン活用事例など、  
   実用レベルでの応用も進んでいます。 こういう取り組みなども参考に出来ればと思っております。 
-   [Isuzu Central Research Laboratory × Generative Design（Autodesk公式ブログ）](https://www.autodesk.com/products/fusion-360/blog/isuzu-central-research-laboratory-generative-design/)
+   [Isuzu Central Research Laboratory × Generative Design（Autodesk公式ブログ）](https://www.autodesk.com/products/fusion-360/blog/ja/isuzu-central-research-laboratory-generative-design/)
 
 ---
 
