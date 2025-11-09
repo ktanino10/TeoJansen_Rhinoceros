@@ -91,9 +91,10 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 
 ### 🦿 Ver.1 動作イメージ  
 **Simulation Video**  
-<a href="https://www.youtube.com/watch?v=RxUTcOTfPt0" target="_blank">
+<a href="https://youtu.be/RxUTcOTfPt0?si=KSsferuiFyFRqOAX" target="_blank">
   <img src="https://img.youtube.com/vi/RxUTcOTfPt0/0.jpg" width="480" alt="Ver.1 Motion Simulation YouTube thumbnail">
 </a>
+
 
 ---
 
