@@ -53,11 +53,12 @@ Autodesk **Fusion 360** を使用して、すべてのパーツを3Dモデリン
 最も時間と労力を要した工程の一つとなりました。  
 下記の図面は、あくまで**参考資料の一つ**としてご覧ください。  
 
-📄 **設計図面（2D Drawing）**  
+### 📄 **Ver.1 設計図面（2D Drawing）**  
 [テオヤンセン2D図面.pdf](./docs/テオヤンセン2D図面最新.pdf)
 
+> ※GitHub上ではPDFが直接プレビューされない場合があります。その場合は上のリンクから開いてください。
 
-## 🎨 Ver.1 完成予想図レンダリング（Fusion 360 Rendering）
+### 🎨 Ver.1 完成予想図レンダリング（Fusion 360 Rendering）
 
 Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージです。  
 実際の3Dプリントを行う前に、形状・構造・色味・陰影を確認するために作成しました。  
@@ -76,6 +77,27 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 | <img src="./docs/images/テオヤンセン4.png" width="280" alt="裏面ビュー"> | <img src="./docs/images/テオヤンセン5.png" width="280" alt="反対側面ビュー"> | <img src="./docs/images/テオヤンセン6.png" width="280" alt="逆斜めビュー"> |
 
 </div>
+
+### 🧩 Ver.1 組み立てイメージ  
+📄 **2D図面（組み立て参考）**  
+[テオヤンセン2Dv1.pdf](./docs/テオヤンセン2Dv1.pdf)
+
+> ※GitHub上ではPDFが直接プレビューされない場合があります。その場合は上のリンクから開いてください。
+
+🎥 **組み立て動画**  
+<a href="https://youtu.be/Q7d0sq1SNJ0?si=nhAsBmjNhFsv74Ju" target="_blank">
+  <img src="https://img.youtube.com/vi/Q7d0sq1SNJ0/0.jpg" width="480" alt="Ver.1 Assembly YouTube thumbnail">
+</a>
+
+---
+
+### 🦿 Ver.1 動作イメージ  
+🎥 **Simulation Video**  
+<a href="https://www.youtube.com/watch?v=RxUTcOTfPt0" target="_blank">
+  <img src="https://img.youtube.com/vi/RxUTcOTfPt0/0.jpg" width="480" alt="Ver.1 Motion Simulation YouTube thumbnail">
+</a>
+
+---
 
 ---
 
