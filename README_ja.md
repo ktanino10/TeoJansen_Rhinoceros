@@ -123,8 +123,9 @@ Ver.1 モデルを Fusion 360 上でレンダリングした完成イメージ�
 
 ---
 
-🎥 **テストプリント動画**  
-[![Watch on YouTube](https://img.youtube.com/vi/IP1fvOTGgno/0.jpg)](https://www.youtube.com/shorts/IP1fvOTGgno)
+🎥 **3Dプリント動画**  
+[![Watch on YouTube](https://img.youtube.com/vi/6YfYPoaMa58/0.jpg)](https://www.youtube.com/watch?v=6YfYPoaMa58)
+
 
 ---
 
