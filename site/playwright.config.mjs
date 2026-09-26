@@ -15,9 +15,12 @@ export default defineConfig({
   use: {
     baseURL,
     browserName: "chromium",
-    launchOptions: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE
-      ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE }
-      : {},
+    launchOptions: {
+      ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE
+        ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE } : {}),
+      ...(process.env.PLAYWRIGHT_SOFTWARE_GPU === "1"
+        ? { args: ["--use-angle=swiftshader", "--disable-gpu"] } : {}),
+    },
     screenshot: "only-on-failure",
     trace: "retain-on-failure",
   },

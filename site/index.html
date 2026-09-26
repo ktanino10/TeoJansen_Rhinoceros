@@ -88,6 +88,7 @@
     <section class="chapter section" id="ver3" aria-labelledby="ver3-title">
       <div class="chapter-heading"><span class="chapter-number" aria-hidden="true">03</span><div><p class="eyebrow">VER.3 / THREE ENGINEERING CONCEPTS</p><h2 id="ver3-title">接合から考え直す、三つの案。</h2><p>実形状・共通条件・明示した限界。CGを、実機の完成と取り違えないために。</p></div></div>
       <aside class="warning" aria-labelledby="ver3-warning"><h3 id="ver3-warning">Ver.3は比較設計です。実機の風力歩行は未検証です。</h3><p><strong>全3案で接地残差3 mm目標は未達。Bは名目条件でも入力トルクが不足。</strong> Cは組立・接合・抵抗測定の候補であって、風力で動く完成機としての推奨ではありません。部材強度、印刷公差、重心、転倒、悪い風車角での自己始動は確認待ちです。</p></aside>
+      <div class="making-preview"><h3>Ver.2から何を変えたか。どの順番で組むか。</h3><p>接合の空転から調達まで八つの観点を、実写真・CG・検証状況のMatrixで整理しました。第一カットA/B/Cの正規CADを360°回して部品を選び、原典に対応する具体的な組立段階も確認できます。形状を見ることと、実機性能の確認は別です。</p><div class="hero-actions"><a class="button primary" href="comparison.html">Ver.2 → Ver.3 改良Matrix</a><a class="button" href="viewer.html">360°・部品選択・組立ガイド</a></div></div>
       {{comparison}}
       <div class="principles"><div><span class="principle-index">01</span><h3>接着剤頼みの接合から</h3><p>金属REX軸の平面と金属ハブを形状で係合し、樹脂部品は実在する穴とボルトで結合。接着剤を主トルク経路にしません。</p></div><div><span class="principle-index">02</span><h3>抜け止め・支持・組立順まで</h3><p>軸端止め、内輪専用スペーサ、ベアリング、脱着ガードを具体化。キャリアを先に外す工具経路と、ねじの逃げも是正しました。</p></div><div><span class="principle-index">03</span><h3>一つの機械データから</h3><p>CAD、BOM、CG、規定歩行を同じ部品・寸法・配置へ結び付け、別コンテキストのAIレビューで4件を是正。人の有資格者による設計承認ではありません。</p></div></div>
       <p class="small-note">以下の寸法・比率・質量・残差は <a href="{{source:docs/ver3/comparison.json}}">正規のcomparison.json</a> から生成しています。名目質量は全ソリッドCADと購入品の仮定／カタログ値の合計で、実測・スライサー質量ではありません。</p>
@@ -127,6 +128,8 @@
           <a href="{{download:Blender/Ver.3/ver3_ABC.blend}}">Blenderネイティブ（約28.3 MB）</a>
           <a href="{{tree:scripts/ver3}}">生成スクリプトと設定</a>
           <a href="{{tree:docs/ver3/media}}">すべてのCG・GIF・MP4</a>
+          <a href="viewer.html#assembly-guides">A/B/Cの工程別部品表と組立ガイド</a>
+          <a href="comparison.html#matrix">Ver.2からの変更と確認状況</a>
         </div>
         <p class="small-note">Ver.3はVer.2の無加工差替え部品ではありません。Aの最大フレームは256 mm境界に達し、造形面の余白・ブリムを保証しません。実物での滑りトルク、軸方向すきま、全周手回し、重心、転倒の確認が必要です。</p>
       </div>
