@@ -1,0 +1,146 @@
+{
+  "revisionId": "v3-r2-feasibility-02",
+  "loadcaseId": "REFERENCE_1N_SIMPLY_SUPPORTED",
+  "method": "Euler-Bernoulli beam; identical 1N center load and simple supports",
+  "elastic_modulus_mpa": 193000.0,
+  "records": [
+    {
+      "partId": "REFERENCE_ROUND_3",
+      "section": {
+        "area": 7.0685834705770345,
+        "inertia_min": 3.9760782021995817,
+        "extreme_fiber": 1.5,
+        "torsion_lower": 7.9521564043991635,
+        "torsion_upper": 7.9521564043991635,
+        "description": "solid circular section"
+      },
+      "columns": [
+        "support_span_mm",
+        "deflection_mm"
+      ],
+      "values": [
+        [
+          50,
+          0.003393567945839669
+        ],
+        [
+          75,
+          0.011453291817227115
+        ],
+        [
+          100,
+          0.0271485435667617
+        ],
+        [
+          125,
+          0.053024499153577445
+        ],
+        [
+          150,
+          0.0916263345379154
+        ],
+        [
+          175,
+          0.1454992256786392
+        ],
+        [
+          200,
+          0.2171883485340936
+        ]
+      ]
+    },
+    {
+      "partId": "REFERENCE_ROUND_4",
+      "section": {
+        "area": 12.566370614359172,
+        "inertia_min": 12.566370614359172,
+        "extreme_fiber": 2.0,
+        "torsion_lower": 25.132741228718345,
+        "torsion_upper": 25.132741228718345,
+        "description": "solid circular section"
+      },
+      "columns": [
+        "support_span_mm",
+        "deflection_mm"
+      ],
+      "values": [
+        [
+          50,
+          0.0010737461078676358
+        ],
+        [
+          75,
+          0.0036238931140328973
+        ],
+        [
+          100,
+          0.00858996886297014
+        ],
+        [
+          125,
+          0.01677728293533534
+        ],
+        [
+          150,
+          0.02899114491222885
+        ],
+        [
+          175,
+          0.04603686437465876
+        ],
+        [
+          200,
+          0.06871975090376112
+        ]
+      ]
+    },
+    {
+      "partId": "CANDIDATE_6D",
+      "section": {
+        "area": 27.148944979138044,
+        "inertia_min": 55.04422007961982,
+        "extreme_fiber": 3.1119837029945483,
+        "torsion_lower": 89.83605086173469,
+        "torsion_upper": 127.23450247038662,
+        "description": "single-flat D; weakest bending axis; Jt between inscribed/enclosing circles"
+      },
+      "columns": [
+        "support_span_mm",
+        "deflection_mm"
+      ],
+      "values": [
+        [
+          50,
+          0.00024513185067691156
+        ],
+        [
+          75,
+          0.000827319996027083
+        ],
+        [
+          100,
+          0.0019610548054175268
+        ],
+        [
+          125,
+          0.0038301851668031423
+        ],
+        [
+          150,
+          0.006618559968255002
+        ],
+        [
+          175,
+          0.010510028097707973
+        ],
+        [
+          200,
+          0.015688438443340214
+        ]
+      ]
+    }
+  ],
+  "resultStatus": "UNKNOWN",
+  "isMeasuredV2": false,
+  "warning": "Reference old-style thin/long rod only. Actual V2 spans, section, supports and loads were not established."
+}

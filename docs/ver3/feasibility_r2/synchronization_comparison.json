@@ -1,0 +1,211 @@
+{
+  "revisionId": "v3-r2-feasibility-02",
+  "loadcaseId": "SYNC_SAME_LOADS_QUARTERED_RODS",
+  "method": "closed-loop geometry/Jacobian plus conservative quasi-static friction bound; not complete assembly dynamics",
+  "geometry": {
+    "type": "two rigid three-hole coupling rods, with 0/90-degree crank-pin quartering",
+    "crankRadiusMm": 8.0,
+    "stationPitchMm": 84.0,
+    "rodWidthMm": 8.0,
+    "rodThicknessMm": 3.0,
+    "rodEndBossDiameterMm": 10.0,
+    "couplingJournalRadiusMm": 2.0,
+    "preloadPerJointCasesN": [
+      0.0,
+      1.0,
+      3.0
+    ],
+    "jointCount": 6,
+    "mainBearingCount": 6,
+    "note": "One bounded alternative to the 5-gear bus, not an approved substitution. Assembly overconstraint, radial play and body/rotor keepouts remain gates."
+  },
+  "closure_residual_mm": 0.0,
+  "minimum_relative_phase_constraint_singular_value_mm_per_rad": 7.999999999999998,
+  "single_rod_dead_centers": [
+    0,
+    180
+  ],
+  "quartering_rationale": "orthogonal sine/cosine lever arms cannot both vanish; all three shafts are physically coupled in phase",
+  "comparisons": [
+    {
+      "designId": "A",
+      "cases": [
+        {
+          "id": "low",
+          "same_mass_and_leg_loads_as_gear_bus": true,
+          "gear_bus_peak_input_nm": 0.00241384435543847,
+          "rod_bus_peak_input_nm": 0.0022219803890609303,
+          "reduction_fraction": 0.07948481265797602,
+          "coupling_pin_journal_radius_mm": 2.0,
+          "journal_mu": 0.05,
+          "unmeasured_preload_each_n": 0.0,
+          "friction_feedback_bound": 0.03535533905932738,
+          "rod_bus_efficiency_bound": 0.9646446609406726,
+          "rod_pin_force_upper_n": 1.6520884646524463,
+          "rod_segment_euler_screen_n": 20.142049798141546,
+          "rod_segment_euler_ratio": 12.19187121579405,
+          "resultStatus": "UNKNOWN"
+        },
+        {
+          "id": "nominal",
+          "same_mass_and_leg_loads_as_gear_bus": true,
+          "gear_bus_peak_input_nm": 0.005474368235561154,
+          "rod_bus_peak_input_nm": 0.004894709768249612,
+          "reduction_fraction": 0.10588591091591482,
+          "coupling_pin_journal_radius_mm": 2.0,
+          "journal_mu": 0.1,
+          "unmeasured_preload_each_n": 1.0,
+          "friction_feedback_bound": 0.07071067811865477,
+          "rod_bus_efficiency_bound": 0.9292893218813453,
+          "rod_pin_force_upper_n": 2.9665944071799784,
+          "rod_segment_euler_screen_n": 20.142049798141546,
+          "rod_segment_euler_ratio": 6.78962036380579,
+          "resultStatus": "UNKNOWN"
+        },
+        {
+          "id": "high",
+          "same_mass_and_leg_loads_as_gear_bus": true,
+          "gear_bus_peak_input_nm": 0.01698136709484617,
+          "rod_bus_peak_input_nm": 0.013882661693591763,
+          "reduction_fraction": 0.1824767925896179,
+          "coupling_pin_journal_radius_mm": 2.0,
+          "journal_mu": 0.18,
+          "unmeasured_preload_each_n": 3.0,
+          "friction_feedback_bound": 0.12727922061357855,
+          "rod_bus_efficiency_bound": 0.8727207793864215,
+          "rod_pin_force_upper_n": 5.945522089855038,
+          "rod_segment_euler_screen_n": 20.142049798141546,
+          "rod_segment_euler_ratio": 3.3877680536264974,
+          "resultStatus": "UNKNOWN"
+        }
+      ],
+      "gear_bus_bearings": 14,
+      "rod_bus_bearings": 10,
+      "domestic_bearing_cost_reduction_jpy": 748,
+      "new_parts": "2 rods, 6 indexed coupling cranks, 6 sleeve/pin joints and their fasteners; not fewer total interfaces by definition"
+    },
+    {
+      "designId": "B",
+      "cases": [
+        {
+          "id": "low",
+          "same_mass_and_leg_loads_as_gear_bus": true,
+          "gear_bus_peak_input_nm": 0.0005787369115312311,
+          "rod_bus_peak_input_nm": 0.0005512491098766243,
+          "reduction_fraction": 0.047496195778975236,
+          "coupling_pin_journal_radius_mm": 2.0,
+          "journal_mu": 0.05,
+          "unmeasured_preload_each_n": 0.0,
+          "friction_feedback_bound": 0.03535533905932738,
+          "rod_bus_efficiency_bound": 0.9646446609406726,
+          "rod_pin_force_upper_n": 1.875468808168722,
+          "rod_segment_euler_screen_n": 20.142049798141546,
+          "rod_segment_euler_ratio": 10.739741290503785,
+          "resultStatus": "UNKNOWN"
+        },
+        {
+          "id": "nominal",
+          "same_mass_and_leg_loads_as_gear_bus": true,
+          "gear_bus_peak_input_nm": 0.0015495502868297414,
+          "rod_bus_peak_input_nm": 0.0014554497240354643,
+          "reduction_fraction": 0.060727659885630114,
+          "coupling_pin_journal_radius_mm": 2.0,
+          "journal_mu": 0.1,
+          "unmeasured_preload_each_n": 1.0,
+          "friction_feedback_bound": 0.07071067811865477,
+          "rod_bus_efficiency_bound": 0.9292893218813453,
+          "rod_pin_force_upper_n": 3.5048622854726204,
+          "rod_segment_euler_screen_n": 20.142049798141546,
+          "rod_segment_euler_ratio": 5.746887654225036,
+          "resultStatus": "UNKNOWN"
+        },
+        {
+          "id": "high",
+          "same_mass_and_leg_loads_as_gear_bus": true,
+          "gear_bus_peak_input_nm": 0.005193737711818511,
+          "rod_bus_peak_input_nm": 0.004648793142147453,
+          "reduction_fraction": 0.10492339041900789,
+          "coupling_pin_journal_radius_mm": 2.0,
+          "journal_mu": 0.18,
+          "unmeasured_preload_each_n": 3.0,
+          "friction_feedback_bound": 0.12727922061357855,
+          "rod_bus_efficiency_bound": 0.8727207793864215,
+          "rod_pin_force_upper_n": 6.630075316192274,
+          "rod_segment_euler_screen_n": 20.142049798141546,
+          "rod_segment_euler_ratio": 3.03798204960805,
+          "resultStatus": "UNKNOWN"
+        }
+      ],
+      "gear_bus_bearings": 16,
+      "rod_bus_bearings": 12,
+      "domestic_bearing_cost_reduction_jpy": 748,
+      "new_parts": "2 rods, 6 indexed coupling cranks, 6 sleeve/pin joints and their fasteners; not fewer total interfaces by definition"
+    },
+    {
+      "designId": "C",
+      "cases": [
+        {
+          "id": "low",
+          "same_mass_and_leg_loads_as_gear_bus": true,
+          "gear_bus_peak_input_nm": 0.001166376154379025,
+          "rod_bus_peak_input_nm": 0.0010794984741068548,
+          "reduction_fraction": 0.0744851306724661,
+          "coupling_pin_journal_radius_mm": 2.0,
+          "journal_mu": 0.05,
+          "unmeasured_preload_each_n": 0.0,
+          "friction_feedback_bound": 0.03535533905932738,
+          "rod_bus_efficiency_bound": 0.9646446609406726,
+          "rod_pin_force_upper_n": 1.414745909287829,
+          "rod_segment_euler_screen_n": 20.142049798141546,
+          "rod_segment_euler_ratio": 14.237220737595829,
+          "resultStatus": "UNKNOWN"
+        },
+        {
+          "id": "nominal",
+          "same_mass_and_leg_loads_as_gear_bus": true,
+          "gear_bus_peak_input_nm": 0.0028393928081618066,
+          "rod_bus_peak_input_nm": 0.0025749532896818003,
+          "reduction_fraction": 0.0931324182127522,
+          "coupling_pin_journal_radius_mm": 2.0,
+          "journal_mu": 0.1,
+          "unmeasured_preload_each_n": 1.0,
+          "friction_feedback_bound": 0.07071067811865477,
+          "rod_bus_efficiency_bound": 0.9292893218813453,
+          "rod_pin_force_upper_n": 2.687303824182308,
+          "rod_segment_euler_screen_n": 20.142049798141546,
+          "rod_segment_euler_ratio": 7.495263325601213,
+          "resultStatus": "UNKNOWN"
+        },
+        {
+          "id": "high",
+          "same_mass_and_leg_loads_as_gear_bus": true,
+          "gear_bus_peak_input_nm": 0.009112721212292254,
+          "rod_bus_peak_input_nm": 0.007664156405442713,
+          "reduction_fraction": 0.15896072897473867,
+          "coupling_pin_journal_radius_mm": 2.0,
+          "journal_mu": 0.18,
+          "unmeasured_preload_each_n": 3.0,
+          "friction_feedback_bound": 0.12727922061357855,
+          "rod_bus_efficiency_bound": 0.8727207793864215,
+          "rod_pin_force_upper_n": 5.5907388049229825,
+          "rod_segment_euler_screen_n": 20.142049798141546,
+          "rod_segment_euler_ratio": 3.6027527847312877,
+          "resultStatus": "UNKNOWN"
+        }
+      ],
+      "gear_bus_bearings": 14,
+      "rod_bus_bearings": 10,
+      "domestic_bearing_cost_reduction_jpy": 748,
+      "new_parts": "2 rods, 6 indexed coupling cranks, 6 sleeve/pin joints and their fasteners; not fewer total interfaces by definition"
+    }
+  ],
+  "retained_baseline": "five-gear bus remains the common plotted baseline; the new rod option is not substituted into already generated figures",
+  "decision": "carry the two-rod option to a small fit/drag coupon before selecting a production bus",
+  "unresolved": [
+    "Two three-hole rods overconstrain unequal printed station pitches; zero preload is not assumed.",
+    "4mm OD stock journal selection and tolerances remain unresolved; the verified M3 Hirosugi OD6 sleeve is not interchangeable.",
+    "Swept rod/rotor/gearbox keepouts, coupling-disc D-datum and assembly tool access need final solids.",
+    "A lower predicted load alone does not qualify the alternate bus; extra bushings/fastener purchase lots can erase the JPY748 bearing saving."
+  ],
+  "resultStatus": "UNKNOWN"
+}

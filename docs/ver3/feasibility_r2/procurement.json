@@ -1,0 +1,477 @@
+{
+  "revisionId": "v3-r2-feasibility-02",
+  "checkedDateJst": "2026-09-27",
+  "resultStatus": "UNKNOWN",
+  "records": [
+    {
+      "designId": "A",
+      "quoted_lines": [
+        {
+          "sku": "686ZZ",
+          "required": 14,
+          "buy": 14,
+          "currency": "JPY",
+          "subtotal": 2618,
+          "tax": "included",
+          "source": "https://e-seki.net/products/detail1821.html"
+        },
+        {
+          "sku": "SC0606C",
+          "required": 10,
+          "buy": 10,
+          "currency": "JPY",
+          "subtotal": 1780,
+          "tax": "included",
+          "source": "https://www.torano-te.jp/p/i52-31856/"
+        },
+        {
+          "sku": "CE-308N",
+          "required": 12,
+          "buy": 50,
+          "currency": "JPY",
+          "subtotal": 1045,
+          "tax": "10% added to ex-tax list price",
+          "source": "https://hirosugi.co.jp/shop/g/gCE-301N/"
+        },
+        {
+          "sku": "CE-2007N",
+          "required": 18,
+          "buy": 50,
+          "currency": "JPY",
+          "subtotal": 1100,
+          "tax": "10% added to ex-tax list price",
+          "source": "https://hirosugi.co.jp/shop/g/gCE-301N/"
+        },
+        {
+          "sku": "CE-2011N",
+          "required": 6,
+          "buy": 50,
+          "currency": "JPY",
+          "subtotal": 1265,
+          "tax": "10% added to ex-tax list price",
+          "source": "https://hirosugi.co.jp/shop/g/gCE-301N/"
+        },
+        {
+          "sku": "2101-0006-0140",
+          "required": 4,
+          "buy": 4,
+          "currency": "USD",
+          "subtotal": 20.36,
+          "tax": "Japan landed tax unknown",
+          "source": "https://www.gobilda.com/stainless-steel-d-shafting/"
+        },
+        {
+          "sku": "2101-0006-0120",
+          "required": 1,
+          "buy": 1,
+          "currency": "USD",
+          "subtotal": 4.69,
+          "tax": "Japan landed tax unknown",
+          "source": "https://www.gobilda.com/stainless-steel-d-shafting/"
+        }
+      ],
+      "domestic_subset_jpy": 7808,
+      "import_shaft_subset_usd": 25.05,
+      "fx_cases": [
+        {
+          "jpy_per_usd_assumption": 140,
+          "quoted_subset_jpy": 11315,
+          "remaining_to_20000_before_unpriced_items_jpy": 8685,
+          "complete_budget_status": "UNKNOWN"
+        },
+        {
+          "jpy_per_usd_assumption": 160,
+          "quoted_subset_jpy": 11816,
+          "remaining_to_20000_before_unpriced_items_jpy": 8184,
+          "complete_budget_status": "UNKNOWN"
+        },
+        {
+          "jpy_per_usd_assumption": 180,
+          "quoted_subset_jpy": 12317,
+          "remaining_to_20000_before_unpriced_items_jpy": 7683,
+          "complete_budget_status": "UNKNOWN"
+        }
+      ],
+      "unpriced": [
+        "M2/M3 bolts and locknuts by real sizes/grades and purchase lots",
+        "thrust washers and inner-ring-only spacers",
+        "printed/sliced material, guards, toe material",
+        "import tax, exchange/payment fees and separately stated shipping"
+      ],
+      "interface_gates": [
+        "13mm nonflanged bearing seats instead of 14mm flanged seats",
+        "15mm collar face isolated from shield/outer ring",
+        "hybrid OD6/M3 A-P joints and OD4/M2 free joints",
+        "M3 root/core strength and actual clamp-stack clearance",
+        "printed D-bore coupon, shaft fit and axial retention"
+      ],
+      "complete_cost_jpy": null,
+      "resultStatus": "UNKNOWN"
+    },
+    {
+      "designId": "B",
+      "quoted_lines": [
+        {
+          "sku": "686ZZ",
+          "required": 16,
+          "buy": 16,
+          "currency": "JPY",
+          "subtotal": 2992,
+          "tax": "included",
+          "source": "https://e-seki.net/products/detail1821.html"
+        },
+        {
+          "sku": "SC0606C",
+          "required": 12,
+          "buy": 12,
+          "currency": "JPY",
+          "subtotal": 2136,
+          "tax": "included",
+          "source": "https://www.torano-te.jp/p/i52-31856/"
+        },
+        {
+          "sku": "CE-308N",
+          "required": 12,
+          "buy": 50,
+          "currency": "JPY",
+          "subtotal": 1045,
+          "tax": "10% added to ex-tax list price",
+          "source": "https://hirosugi.co.jp/shop/g/gCE-301N/"
+        },
+        {
+          "sku": "CE-2007N",
+          "required": 18,
+          "buy": 50,
+          "currency": "JPY",
+          "subtotal": 1100,
+          "tax": "10% added to ex-tax list price",
+          "source": "https://hirosugi.co.jp/shop/g/gCE-301N/"
+        },
+        {
+          "sku": "CE-2011N",
+          "required": 6,
+          "buy": 50,
+          "currency": "JPY",
+          "subtotal": 1265,
+          "tax": "10% added to ex-tax list price",
+          "source": "https://hirosugi.co.jp/shop/g/gCE-301N/"
+        },
+        {
+          "sku": "2101-0006-0140",
+          "required": 4,
+          "buy": 4,
+          "currency": "USD",
+          "subtotal": 20.36,
+          "tax": "Japan landed tax unknown",
+          "source": "https://www.gobilda.com/stainless-steel-d-shafting/"
+        },
+        {
+          "sku": "2101-0006-0120",
+          "required": 2,
+          "buy": 2,
+          "currency": "USD",
+          "subtotal": 9.38,
+          "tax": "Japan landed tax unknown",
+          "source": "https://www.gobilda.com/stainless-steel-d-shafting/"
+        }
+      ],
+      "domestic_subset_jpy": 8538,
+      "import_shaft_subset_usd": 29.740000000000002,
+      "fx_cases": [
+        {
+          "jpy_per_usd_assumption": 140,
+          "quoted_subset_jpy": 12702,
+          "remaining_to_20000_before_unpriced_items_jpy": 7298,
+          "complete_budget_status": "UNKNOWN"
+        },
+        {
+          "jpy_per_usd_assumption": 160,
+          "quoted_subset_jpy": 13296,
+          "remaining_to_20000_before_unpriced_items_jpy": 6704,
+          "complete_budget_status": "UNKNOWN"
+        },
+        {
+          "jpy_per_usd_assumption": 180,
+          "quoted_subset_jpy": 13891,
+          "remaining_to_20000_before_unpriced_items_jpy": 6109,
+          "complete_budget_status": "UNKNOWN"
+        }
+      ],
+      "unpriced": [
+        "M2/M3 bolts and locknuts by real sizes/grades and purchase lots",
+        "thrust washers and inner-ring-only spacers",
+        "printed/sliced material, guards, toe material",
+        "import tax, exchange/payment fees and separately stated shipping"
+      ],
+      "interface_gates": [
+        "13mm nonflanged bearing seats instead of 14mm flanged seats",
+        "15mm collar face isolated from shield/outer ring",
+        "hybrid OD6/M3 A-P joints and OD4/M2 free joints",
+        "M3 root/core strength and actual clamp-stack clearance",
+        "printed D-bore coupon, shaft fit and axial retention"
+      ],
+      "complete_cost_jpy": null,
+      "resultStatus": "UNKNOWN"
+    },
+    {
+      "designId": "C",
+      "quoted_lines": [
+        {
+          "sku": "686ZZ",
+          "required": 14,
+          "buy": 14,
+          "currency": "JPY",
+          "subtotal": 2618,
+          "tax": "included",
+          "source": "https://e-seki.net/products/detail1821.html"
+        },
+        {
+          "sku": "SC0606C",
+          "required": 10,
+          "buy": 10,
+          "currency": "JPY",
+          "subtotal": 1780,
+          "tax": "included",
+          "source": "https://www.torano-te.jp/p/i52-31856/"
+        },
+        {
+          "sku": "CE-308N",
+          "required": 12,
+          "buy": 50,
+          "currency": "JPY",
+          "subtotal": 1045,
+          "tax": "10% added to ex-tax list price",
+          "source": "https://hirosugi.co.jp/shop/g/gCE-301N/"
+        },
+        {
+          "sku": "CE-2007N",
+          "required": 18,
+          "buy": 50,
+          "currency": "JPY",
+          "subtotal": 1100,
+          "tax": "10% added to ex-tax list price",
+          "source": "https://hirosugi.co.jp/shop/g/gCE-301N/"
+        },
+        {
+          "sku": "CE-2011N",
+          "required": 6,
+          "buy": 50,
+          "currency": "JPY",
+          "subtotal": 1265,
+          "tax": "10% added to ex-tax list price",
+          "source": "https://hirosugi.co.jp/shop/g/gCE-301N/"
+        },
+        {
+          "sku": "2101-0006-0140",
+          "required": 4,
+          "buy": 4,
+          "currency": "USD",
+          "subtotal": 20.36,
+          "tax": "Japan landed tax unknown",
+          "source": "https://www.gobilda.com/stainless-steel-d-shafting/"
+        },
+        {
+          "sku": "2101-0006-0120",
+          "required": 1,
+          "buy": 1,
+          "currency": "USD",
+          "subtotal": 4.69,
+          "tax": "Japan landed tax unknown",
+          "source": "https://www.gobilda.com/stainless-steel-d-shafting/"
+        }
+      ],
+      "domestic_subset_jpy": 7808,
+      "import_shaft_subset_usd": 25.05,
+      "fx_cases": [
+        {
+          "jpy_per_usd_assumption": 140,
+          "quoted_subset_jpy": 11315,
+          "remaining_to_20000_before_unpriced_items_jpy": 8685,
+          "complete_budget_status": "UNKNOWN"
+        },
+        {
+          "jpy_per_usd_assumption": 160,
+          "quoted_subset_jpy": 11816,
+          "remaining_to_20000_before_unpriced_items_jpy": 8184,
+          "complete_budget_status": "UNKNOWN"
+        },
+        {
+          "jpy_per_usd_assumption": 180,
+          "quoted_subset_jpy": 12317,
+          "remaining_to_20000_before_unpriced_items_jpy": 7683,
+          "complete_budget_status": "UNKNOWN"
+        }
+      ],
+      "unpriced": [
+        "M2/M3 bolts and locknuts by real sizes/grades and purchase lots",
+        "thrust washers and inner-ring-only spacers",
+        "printed/sliced material, guards, toe material",
+        "import tax, exchange/payment fees and separately stated shipping"
+      ],
+      "interface_gates": [
+        "13mm nonflanged bearing seats instead of 14mm flanged seats",
+        "15mm collar face isolated from shield/outer ring",
+        "hybrid OD6/M3 A-P joints and OD4/M2 free joints",
+        "M3 root/core strength and actual clamp-stack clearance",
+        "printed D-bore coupon, shaft fit and axial retention"
+      ],
+      "complete_cost_jpy": null,
+      "resultStatus": "UNKNOWN"
+    }
+  ],
+  "sources_and_terms": {
+    "checkedDateJst": "2026-09-27",
+    "verifiedItems": [
+      {
+        "id": "SHAFT_6D_140",
+        "sku": "2101-0006-0140",
+        "source": "https://www.gobilda.com/stainless-steel-d-shafting/",
+        "description": "6mm stainless D-shaft, 140mm, catalogue mass 30g",
+        "unitPrice": 5.09,
+        "currency": "USD",
+        "packQuantity": 1,
+        "tax": "Japan landed tax unknown",
+        "stock": null,
+        "shippingJpy": null,
+        "dimensionalBackup": null,
+        "status": "PARTIAL_SPEC_AND_LIST_PRICE_ONLY"
+      },
+      {
+        "id": "SHAFT_6D_120",
+        "sku": "2101-0006-0120",
+        "source": "https://www.gobilda.com/stainless-steel-d-shafting/",
+        "description": "6mm stainless D-shaft, 120mm, catalogue mass 25g",
+        "unitPrice": 4.69,
+        "currency": "USD",
+        "packQuantity": 1,
+        "tax": "Japan landed tax unknown",
+        "stock": null,
+        "shippingJpy": null,
+        "dimensionalBackup": null,
+        "status": "PARTIAL_SPEC_AND_LIST_PRICE_ONLY"
+      }
+    ],
+    "domesticOptions": [
+      {
+        "id": "H_COLLAR_6_DOMESTIC",
+        "manufacturer": "IWATA",
+        "sku": "SC0606C",
+        "retailerSku": "I52-31856",
+        "source": "https://www.torano-te.jp/p/i52-31856/",
+        "description": "6mm ID x 15mm OD x 6mm width; M4x4 set screw; S45C black oxide",
+        "unitPriceJpyTaxIncluded": 178,
+        "packQuantity": 1,
+        "availabilityText": "5 business days displayed; Product structured data says InStock. No quantity reserved or guaranteed.",
+        "shipping": "JPY3000 tax-included threshold displayed; below threshold and regional conditions not priced",
+        "compatibility": "Axial stop only, not a torque key. A verified inner-ring-only spacer and axial clearance are required; the 15mm face must NOT rub the 13mm bearing outer ring or shield."
+      },
+      {
+        "id": "H_BEARING_686ZZ_DOMESTIC",
+        "manufacturer": "ISC (NSK Micro Precision)",
+        "sku": "686ZZ",
+        "source": "https://e-seki.net/products/detail1821.html",
+        "description": "chrome miniature deep-groove, ZZ shields; 6mm ID x 13mm OD x 5mm",
+        "unitPriceJpyTaxIncluded": 187,
+        "packQuantity": 1,
+        "availabilityText": "lead time: 1 day (displayed, not a reserved quantity)",
+        "shippingTermsSource": "https://e-seki.net/order/",
+        "shipping": "bank transfer and JPY3980+ tax-included: free except listed regions; below threshold depends on region; COD +480, convenience payment +280",
+        "startingTorqueNm": null,
+        "ringFaceDimensionsVerified": false,
+        "compatibility": "NOT a drop-in for the 6x14x5 flanged goBILDA part. Requires 13mm seats and separate outer-ring retention."
+      },
+      {
+        "id": "H_COLLAR_6_DOMESTIC_SCREEN",
+        "manufacturer": "IWATA",
+        "sku": "SC0607CB2",
+        "source": "https://www.orange-book.com/ja/c/products/index.html?itemCd=SC0607CB2%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%201004",
+        "description": "6mm ID x 13mm OD x 7.5mm total width; M3x3 set screw; S45C black oxide; 5g",
+        "catalogueUnitPriceJpyExTax": 430,
+        "taxIncludedAt10PercentJpy": 473,
+        "availabilityText": "special order",
+        "retailPriceJpy": null,
+        "compatibility": "Catalogue names 626ZZ, not 686ZZ. Inner-ring shoulder contact and any spacer must be verified; do not buy as a dimensionally qualified 686 collar.",
+        "status": "CATALOGUE_OPTION_NOT_QUALIFIED_INTERFACE"
+      },
+      {
+        "id": "H_SLEEVE_M3_DOMESTIC_SCREEN",
+        "manufacturer": "Hirosugi",
+        "skus": [
+          "CE-307N",
+          "CE-311N"
+        ],
+        "source": "https://hirosugi.co.jp/shop/g/gCE-301N/",
+        "drawingSource": "https://hirosugi.co.jp/img/goods/1/CE-300N_d.png",
+        "description": "nickel-plated C6801BD lead-free brass; OD6, bore3.2 +/-0.15, L7 or11 +/-0.1mm",
+        "unitPricesJpyExTax": [
+          19,
+          22
+        ],
+        "minimumOrderEachSku": 50,
+        "twoMinimumLotsJpyTaxIncluded": 2255,
+        "individualPurchaseSource": "https://hirosugi.co.jp/shop/pages/guide",
+        "individualPurchase": "explicitly available without registration via order/quote form",
+        "shipping": "under JPY3000 ex tax: JPY500 ex tax; above: free. COD under threshold: +JPY400 ex tax.",
+        "availabilityText": "generic in-stock dispatch policy only; exact part stock not shown; delivery-date unit price applies",
+        "compatibility": "OD6 is NOT the study's 4mm journal. Friction, bosses, washer bore and entire joint stack must be recalculated; no silent substitution.",
+        "status": "AVAILABLE_STANDARD_FAMILY_NOT_SELECTED_JOURNAL"
+      },
+      {
+        "id": "H_SLEEVE_HYBRID_DOMESTIC",
+        "manufacturer": "Hirosugi",
+        "skus": [
+          "CE-308N",
+          "CE-2007N",
+          "CE-2011N"
+        ],
+        "sources": [
+          "https://hirosugi.co.jp/shop/g/gCE-301N/",
+          "https://hirosugi.co.jp/img/goods/1/CE-300N_d.png",
+          "https://hirosugi.co.jp/img/goods/1/CE-2000N_d.png"
+        ],
+        "description": "Ni-plated C6801BD. CE-308N: OD6, bore3.2 +/-0.15, length8 +/-0.1; CE-2007N/2011N: OD4, bore2.2 +/-0.15, length7/11 +/-0.1mm",
+        "requiredQuantitiesBeforeFinalCAD": [
+          12,
+          18,
+          6
+        ],
+        "unitPricesJpyExTax": [
+          19,
+          20,
+          23
+        ],
+        "minimumOrderEachSku": 50,
+        "threeMinimumLotsJpyTaxIncluded": 3410,
+        "shipping": "At the recorded supplier guide's JPY3000 ex-tax threshold: these three minimum lots total JPY3100 ex tax, free domestic shipping under that policy",
+        "availabilityText": "generic stock dispatch policy, exact SKU inventory unconfirmed; delivery-date unit price applies",
+        "status": "STOCK_INTERFACE_CANDIDATE; fit, bolt/core strength and completed clamp stack pending",
+        "note": "M3 is not forced through a 2.2mm bore. A/P friction now uses radius3mm; smaller free joints use radius2mm."
+      },
+      {
+        "id": "SHAFT_DOMESTIC_NOT_INTERCHANGEABLE",
+        "manufacturer": "Tamiya",
+        "sku": "70105",
+        "source": "https://www.tamiya.com/japan/products/70105/index.html",
+        "manualSource": "https://d7z22c0gz59ng.cloudfront.net/cms/japan/download/pdf/robot/70105.pdf",
+        "unitPriceJpyTaxIncluded": 704,
+        "description": "two each of 3x150 hex, 3x100 hex, 3x100 round and 3x100 threaded-end shafts; two crank arms",
+        "stock": null,
+        "compatibility": "The manual does not specify AF/corner diameter or bearing-grade tolerance. Not inserted into a nominal 3mm round bearing by assumption. Not a qualified backup for 6mm D.",
+        "status": "LOW_COST_OPTION_REJECTED_AS_DIRECT_SUBSTITUTE"
+      }
+    ],
+    "unresolvedGroups": [
+      "exact 686ZZ ring-face contact dimensions and measured drag",
+      "inner-ring-only spacer between SC0606C and 686ZZ, collar access/axial clearance",
+      "hybrid M2/M3 joint clamp-stack tolerances, root support and strength",
+      "M2/M3 bolts, locknuts, thrust washers, ring spacers and complete pack-rounded quantities",
+      "printed material, sliced mass, foot contact material and material coupons",
+      "domestic equivalent D-shaft and dimensionally verified backup"
+    ],
+    "totalJpy": null,
+    "status": "UNKNOWN",
+    "note": "A quoted shaft subtotal is not a complete BOM or a budget PASS. No generic search results treated as a stocked exact part."
+  },
+  "not_a_release_bom": true,
+  "note": "Domestic options replace expensive import bearings/collars only after interface redesign. No full-price, in-stock, or complete assembly PASS."
+}
