@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Ver.3第一カットのA・B・Cを実CAD由来の3Dで回転・拡大し、部品IDと組立手順を確認。性能未達と実機未確認の範囲を明示した対話ガイドです。">
+  <title>Ver.3 360°・組立ガイド — リノセウス</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="viewer.css">
+  <script src="app.js" defer></script>
+  <script src="viewer-loader.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span>RHINOCEROS<small>風で歩く仕組みの探究</small></span></a>
+      <nav aria-label="メインナビゲーション"><a href="index.html#ver3">三案の概要</a><a href="comparison.html">改良Matrix</a><a href="#viewer">360°</a><a href="#assembly-guides">組立手順</a></nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="section viewer-intro" id="top" aria-labelledby="viewer-title">
+      <p class="eyebrow">EXACT CAD MESH / INTERACTIVE ASSEMBLY REFERENCE</p>
+      <h1 id="viewer-title">回して見る。<br><span>部品から、組み方を読む。</span></h1>
+      <p>マウス・タッチで360°回転、拡大、移動。A・B・Cの正規CADメッシュと部品IDを使い、購入品も含む構成を確認できます。回転動画の代替ではなく、操作できる3Dです。</p>
+      <aside class="warning"><h2>表示するのは、{{viewer_revision}}です。</h2><p><strong>実機の風力歩行は未検証。全案で接地残差3 mm目標は未達。Bは名目トルク入力も不足。</strong> Cも組立・接合・抵抗測定の候補であって、完成機の推奨ではありません。対策案を実証済みの性能改善として表示しません。</p></aside>
+      <p class="small-note">CADの頂点・三角形・全正規インスタンスを保持し、mmからmへの表示単位変換だけを行っています。元から購入品のねじ山・軸受内部・ハブのたわみ部は概略形状です。新しいCAD・Blender・物理結果は生成していません。出典版：<a href="{{viewer_source}}">{{viewer_revision_id}}</a>。</p>
+    </section>
+
+    <section class="section viewer-section" id="viewer" aria-labelledby="interactive-title">
+      <div class="section-heading"><p class="eyebrow">360° / A · B · C</p><h2 id="interactive-title">全体も、部品も、自分の視点で。</h2></div>
+      <div class="viewer-toolbar">
+        <label for="design-select">比較案
+          <select id="design-select"><option value="A">A · 大風車／ベルト＋歯車</option><option value="B">B · 小風車／三段歯車</option><option value="C">C · 中間風車／生成フレーム</option></select>
+        </label>
+        <button type="button" class="button primary" id="load-viewer" hidden>選んだ案の3Dを読み込む</button>
+        <p id="load-note" class="small-note">操作するまで3Dライブラリ・GLBは読み込みません。1案のGLBは約4.4〜5.0 MB。別の案は選んだときだけ取得します。</p>
+      </div>
+      <p id="viewer-status" role="status" aria-live="polite">静止画と下の組立手順は、3Dを読み込まなくても閲覧できます。</p>
+      <p id="viewer-error" class="media-error" role="alert" hidden></p>
+      <div class="viewer-fallback" id="viewer-fallback">
+        {{figure:comparison|Ver.3 A・B・Cの正規CADによる比較CG。3Dを使えない場合の静止資料。|設計CG · 第一カット。実物ではなく、実機性能は未確認です。}}
+        <div class="document-strip"><a href="{{download:FreeCAD/Ver.3/A/Ver3_A.step}}">A · STEP原本</a><a href="{{download:FreeCAD/Ver.3/B/Ver3_B.step}}">B · STEP原本</a><a href="{{download:FreeCAD/Ver.3/C/Ver3_C.step}}">C · STEP原本</a><a href="#assembly-guides">静的組立手順へ</a></div>
+      </div>
+      <noscript><p class="record-scope">JavaScriptが無効なため3D操作は利用できません。静止画・原本ダウンロードと、下の全案の具体的手順をご利用ください。</p></noscript>
+      <div id="viewer-workspace" hidden>
+        <div class="viewer-layout">
+          <div class="viewer-visual">
+            <div class="camera-controls" role="group" aria-label="視点と拡大">
+              <button type="button" class="button" data-view="isometric">斜め</button><button type="button" class="button" data-view="front">正面</button><button type="button" class="button" data-view="left">左</button><button type="button" class="button" data-view="right">右</button><button type="button" class="button" data-view="back">背面</button><button type="button" class="button" data-view="top">上</button><button type="button" class="button" data-view="bottom">下</button>
+              <button type="button" class="button" id="fit-view">全体を収める</button><button type="button" class="button" id="reset-view">視点リセット</button>
+              <button type="button" class="button" id="zoom-in">拡大 ＋</button><button type="button" class="button" id="zoom-out">縮小 −</button>
+            </div>
+            <div id="canvas-host" class="canvas-host"></div>
+            <p id="canvas-help" class="small-note">ドラッグ／指1本：回転。ホイール／指2本：ズーム・移動。右ドラッグ：移動。キーボードは3D領域にフォーカスして矢印で回転、Shift＋矢印で移動、＋／−で拡縮、Homeで全体表示。</p>
+            <p class="small-note">正規座標：X＝軸方向、Y＝歩行平面、Z＝高さ。正面は−Y側、左は−X側。3Dは組立基準姿勢で、歩行・接触・風のシミュレーションではありません。</p>
+            <div class="viewer-options">
+              <label><input id="fade-previous" type="checkbox" checked> 前段の部品を淡色にする</label>
+              <label><input id="clip-section" type="checkbox"> X断面の表示クリップ</label>
+              <button type="button" class="text-button" id="clear-selection">選択を解除</button>
+            </div>
+            <p class="small-note">表示クリップは断面の切り口を新しく生成しません。寸法確認には<a id="section-source" href="{{tree:docs/ver3/drawings}}">元CADからの断面図</a>を使用してください。</p>
+            <details class="viewer-diagnostics"><summary>表示中の版・数量・寸法</summary><p id="model-stats"></p><p id="camera-stats"></p><p id="source-stats"></p></details>
+          </div>
+          <aside class="assembly-panel" aria-labelledby="stage-panel-title">
+            <h3 id="stage-panel-title">組立を順番に見る</h3>
+            <div class="step-navigation" role="group" aria-label="組立の進行">
+              <button type="button" class="button" id="step-first">先頭・未配置</button><button type="button" class="button" id="step-previous">前へ</button><button type="button" class="button" id="step-next">次へ</button><button type="button" class="button primary" id="step-complete">全完成</button>
+            </div>
+            <label for="step-select">原典に対応する工程<select id="step-select"></select></label>
+            <label for="step-range">工程を移動<input type="range" id="step-range" min="0" max="1" step="1" value="1"></label>
+            <p class="viewer-count" id="instance-count"></p>
+            <div class="stage-legend"><span><i class="swatch added"></i>今回の対象</span><span><i class="swatch previous"></i>前段の部品</span><span><i class="swatch selected"></i>選択部品</span></div>
+            <h4 id="stage-title"></h4>
+            <p id="stage-operation"></p>
+            <p class="small-note" id="stage-tools"></p>
+            <p class="small-note" id="arrow-note"></p>
+            <p class="small-note" id="temporary-note"></p>
+            <details><summary>向き・締結・順序の注意（原文に基づく）</summary><p id="stage-cautions"></p></details>
+            <details class="step-bom" open><summary>今回の部品ID・数量・区分</summary><div id="stage-parts" role="region" aria-label="今回の部品一覧" tabindex="0"></div></details>
+            <label for="access-select">分解時の工具経路（原典14）<select id="access-select"><option value="">通常の組立表示</option></select></label>
+            <p class="small-note">工具経路は原典の部分組立前提でのみCAD標本確認されています。キャリアを残した完成状態を通り抜ける証明ではありません。</p>
+          </aside>
+        </div>
+        <section class="part-inspector" aria-labelledby="part-title">
+          <div><h3 id="part-title">部品を選ぶ</h3><p class="small-note">3D上をクリックするか、一覧から選択。工程で非表示の部品を調べるときは「全完成」へ戻してください。</p><label for="part-select">部品ID・名称<select id="part-select"><option value="">未選択</option></select></label><button type="button" class="button" id="fit-selection" disabled>選択部品へ寄る</button></div>
+          <div id="part-description" role="status" aria-live="polite">部品はまだ選択されていません。</div>
+        </section>
+      </div>
+      <div class="record-scope"><h3>この3Dを、実物の組立完了と取り違えないために。</h3><p>準備したサブアセンブリも完成時の位置で表示します。工程2は仕分け、工程3〜7は部品・部分組立の準備であり、その位置にすでに組み付いたことを意味しません。工程8以降は主機構・各段・窓・キャリアを順に確認します。原典が要求するキャリアの一時取外しは、該当工程で非表示にします。</p><p>矢印は挿入・工具操作の方向を読むための説明です。任意の直線移動や同時爆発を、干渉のない組付け経路の証明としていません。Aのベルト調整時の仮組み・再取外しは本文の順序に従ってください。現物の印刷・組立・締付・ベンチ試験は未実施です。</p></div>
+    </section>
+
+    <section class="downloads-section" id="assembly-guides" aria-labelledby="assembly-guides-title">
+      <div class="section">
+        <div class="section-heading"><p class="eyebrow">NO WEBGL REQUIRED / DOCUMENTED STAGES</p><h2 id="assembly-guides-title">各案の具体的な組立手順。</h2><p>下の手順と部品表は3Dに渡すのと同じ工程データから生成しています。部品ID・数量は正規のBOMと照合し、すべての正規組立インスタンスを工程へ対応付けています。</p></div>
+        <nav class="journey-nav" aria-label="静的組立手順の案"><a href="#guide-A">Aの手順</a><a href="#guide-B">Bの手順</a><a href="#guide-C">Cの手順</a><a href="{{source:docs/ver3/ASSEMBLY_ja.md}}">組立原文・未実施のベンチ確認票</a></nav>
+        <div class="scale-warning"><strong>全案100%、mm。原典の事前条件を先に確認してください。</strong><p>切断・端面・M4軸端加工、購入品の寸法と締付仕様、試験片の確認が必要です。Aの最大フレームは256 mm境界に達し、ブリムや端部余白を保証しません。新しい部品や設備の購入をこのガイドで要求・手配したものではありません。</p></div>
+        {{assembly_guides}}
+      </div>
+    </section>
+    <section class="section sources-section"><div><p class="eyebrow">SOURCE-BOUND VIEWER</p><h2>形状・部品表・手順を、同じ版で。</h2></div><div><p>表示用GLBは既存のrender_geometry.json.gzとassembly JSONから作成し、BOM・装着経路・組立原文のハッシュも固定しています。一部だけ新しい設計へ差し替わった場合はビルドを停止します。将来の設計変更は、まとまった版としてadapterの契約を更新して反映します。</p><p>描画は<a href="assets/three-LICENSE.txt">Three.js（MIT License）</a>。ライブラリも表示データも同じPagesから配信し、外部3Dサービス・広告・解析・自動動画再生は使いません。</p><div class="link-list"><a href="{{viewer_source}}">このガイドの機械資料の確定版</a><a href="{{source:site/viewer-source.json}}">表示adapterの出典ハッシュ</a><a href="{{source:docs/ver3/REVIEW_ja.md}}">第一カットの独立レビューと是正範囲</a><a href="comparison.html">Ver.2からの変更と検証状況をMatrixで読む</a></div></div></section>
+  </main>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>Ver.3 · 形状の閲覧と、性能の実証は別。</span></div><a href="#top">先頭へ ↑</a><a href="production.html">Ver.1・Ver.2製作記録</a><a href="index.html#ver3">比較設計の概要</a></footer>
+</body>
+</html>

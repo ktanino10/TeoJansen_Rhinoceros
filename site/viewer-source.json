@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "revisionId": "ver3-first-cut-2026-09-26",
+  "label": "Ver.3 第一カット（性能未達を含む）",
+  "canonicalCommit": "c8d5ca2e6656ed6f30556db04bf0e0690d50280a",
+  "adapter": "first-cut-assembly-v1",
+  "sourceHashes": {
+    "docs/ver3/ASSEMBLY_ja.md": "531fee38939b848a58a7b2d4d98a59ea927f72f80a0afeca2ceb94770a057616",
+    "docs/ver3/comparison.json": "660ae654f4adb612870a02b85711983cd791dcb5b1f72561081c20ff99c257b6",
+    "docs/ver3/assembly_A.json": "eb3dff9491bfa47d419815d908115c7cc73dae54b000b5829f56edb6643bfb1b",
+    "FreeCAD/Ver.3/A/render_geometry.json.gz": "bdc8e56c407e830d8edd50a960213f8b0a1acd91e424b3aa8d10676add6ac5fe",
+    "docs/ver3/BOM_A.csv": "cddba2f1fe4f85425e8ff7b70c2819a34fe8d6c829dcca05e6f0a1378f51ab96",
+    "docs/ver3/assembly_access_A.json": "84f8a2f4a4c4f2cb6274fa30ec9e7afdbcac09005a644184b4fc07579074d512",
+    "docs/ver3/assembly_B.json": "4d070ff8c721b8b1fcd8cc3f83da64310d22d4d4214b6129ddcf8f758a2f3488",
+    "FreeCAD/Ver.3/B/render_geometry.json.gz": "6f89c463a3a3a236f6e9b9d9464492b09f9105b9b337e4359c87ac825daddae0",
+    "docs/ver3/BOM_B.csv": "ac20913dba2fee4ef1a4c60e610eaa148c0704cf3adc69e272baa6868deaff9f",
+    "docs/ver3/assembly_access_B.json": "1f6662f111e285d283bc828f9de0ad2934568ab15ce73c78abbf7cc63f55b37d",
+    "docs/ver3/assembly_C.json": "f70ed27902c914a0117fc61ad178971656769051fb51a08ecda9c85dc47bfd0f",
+    "FreeCAD/Ver.3/C/render_geometry.json.gz": "d8806c0aafcefc1ce6873d55a266f28453a3fafde92fb7fe47121f7d7002ca74",
+    "docs/ver3/BOM_C.csv": "5f076206e03ba9eac0d33ac40a439a67c309da1be7573f73210f1d0bd8295360",
+    "docs/ver3/assembly_access_C.json": "976d751e3b310d7cbb796b8014c8e9f7ce3d57de7e469b8d6b59df84c846ba64",
+    "docs/ver3/media/comparison.png": "1aa59c13d6ef056c4712a4a8126289d381a8746f4051b96fc57ca04b8bb49b0a",
+    "docs/ver3/media/hero_A.png": "04e0ad3a9a3fbda004f5fa0c07520a27ecb0f0ed95399831cdf20fb465be7841",
+    "docs/ver3/media/hero_B.png": "e0e367a435cf0dc6920de271f2294d18d97bceccd341b45ce425a2be21d0a657",
+    "docs/ver3/media/hero_C.png": "cd6317d3b1271deb73befe7bc068b9cfd11a7a449bf0dc22a91e0019c908869a",
+    "docs/ver3/media/rex_connection.png": "8f04f20bee1a1356832662bca65d91b6fddc2ab8521c399abb2b2f433dcf2ef9",
+    "docs/ver3/media/drivetrain_detail.png": "16b15bc67ba21a1367a8719ce74d77799ae43c24e6a01572339361c6f37d5413",
+    "docs/ver3/media/exploded_A.png": "ed9a0d09cbfc00aa4b37d7a0888810a4c318cf385013f08c0e3dc40acdbc8c50",
+    "docs/ver3/media/frame_C.png": "f25895398c5021e8f08cf314c7b941cbe1278d6a77ab05400d05241ffb0fbb5f",
+    "docs/ver3/media/walking_C.png": "9b2223381ecd0ca897a882ca0f53da7c87af0fa482b7e949c2baf873416c8a30"
+  }
+}

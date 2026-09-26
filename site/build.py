@@ -20,8 +20,9 @@ SITE = ROOT / "site"
 REPOSITORY = "ktanino10/TeoJansen_Rhinoceros"
 SLUG = "TeoJansen_Rhinoceros"
 DEFAULT_OUTPUT = SITE / "dist" / SLUG
-MAX_BUNDLE_BYTES = 12_000_000
-PAGES = ("index.html", "production.html")
+MAX_BUNDLE_BYTES = 30_000_000
+MAX_STATIC_BYTES = 12_000_000
+PAGES = ("index.html", "production.html", "comparison.html", "viewer.html")
 IMAGES = {
     "hero": ("docs/images/テオヤンセンver2完成3.jpg", (320, 0, 1240, 1100), 1100),
     "v1-photo": ("docs/images/テオヤンセンver1完成1.jpg", (70, 0, 1240, 1090), 1050),
@@ -31,6 +32,7 @@ IMAGES = {
     "frame-c": ("docs/ver3/media/frame_C.png", None, 1000),
     "drive": ("docs/ver3/media/drivetrain_detail.png", None, 1000),
     "exploded": ("docs/ver3/media/exploded_A.png", None, 1000),
+    "rex-connection": ("docs/ver3/media/rex_connection.png", None, 1100),
     **{f"hero-{i}": (f"docs/ver3/media/hero_{i}.png", None, 900) for i in "ABC"},
     **{f"walking-{i}": (f"docs/ver3/media/walking_{i}.png", None, 1000) for i in "ABC"},
     "making-printer": ("docs/images/88187.jpg", (20, 0, 920, 1110), 700),
@@ -244,12 +246,14 @@ def validate(output: Path, manifest: dict) -> None:
             if tag == "img" and not (attrs.get("alt") and attrs.get("width") and attrs.get("height")):
                 raise ValueError("Every content image needs alt text and dimensions")
     actual = {str(path.relative_to(output)) for path in output.rglob("*") if path.is_file()}
-    expected = {*PAGES, "styles.css", "app.js", "favicon.svg", ".nojekyll", "build-manifest.json",
+    expected = {*PAGES, "styles.css", "viewer.css", "app.js", "viewer-loader.js", "favicon.svg", ".nojekyll", "build-manifest.json",
                 *manifest["assets"].keys()}
     if actual != expected:
         raise ValueError(f"Unexpected output files: {actual ^ expected}")
-    if sum(path.stat().st_size for path in output.rglob("*") if path.is_file()) > MAX_BUNDLE_BYTES:
-        raise ValueError("Public bundle exceeded the 12 MB budget")
+    total = sum(path.stat().st_size for path in output.rglob("*") if path.is_file())
+    display = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("loading") == "on-demand")
+    if total > MAX_BUNDLE_BYTES or total - display > MAX_STATIC_BYTES or display > 18_000_000:
+        raise ValueError("Public bundle exceeded the 12 MB static / 18 MB opt-in 3D budgets")
     for name in manifest["assets"]:
         path = output / name
         if path.suffix == ".webp":
@@ -259,6 +263,8 @@ def validate(output: Path, manifest: dict) -> None:
 
 
 def build(output: Path, ref: str) -> dict:
+    from viewer_data import build_viewer, static_guides
+
     if not re.fullmatch(r"[0-9a-f]{40}", ref):
         raise ValueError("Use an immutable, full 40-character Git commit for source links")
     output = output.resolve()
@@ -283,6 +289,14 @@ def build(output: Path, ref: str) -> dict:
         shutil.copyfile(ROOT / source, destination)
         assets[f"assets/{name}"] = {"source": source, "bytes": destination.stat().st_size,
                                    "sha256": sha256(destination), "source_sha256": sha256(ROOT / source)}
+    guides, viewer_assets, viewer_source = build_viewer(output)
+    assets.update(viewer_assets)
+    subprocess.run(["node", str(SITE / "build-viewer.mjs"), str(output)], cwd=ROOT, check=True)
+    for name, original in (("viewer-engine.js", "site/viewer.js"),
+                           ("three-LICENSE.txt", "site/node_modules/three/LICENSE")):
+        destination = output / "assets" / name
+        assets[f"assets/{name}"] = {"source": original, "source_sha256": sha256(ROOT / original),
+                                   "sha256": sha256(destination), "bytes": destination.stat().st_size}
     comparison = json.loads((ROOT / "docs/ver3/comparison.json").read_text())
     records = comparison["designs"]
     if [r["comparison"]["prototype"] for r in records] != list("ABC"):
@@ -306,6 +320,18 @@ def build(output: Path, ref: str) -> dict:
         "{{source_commit}}": ref[:7],
         "{{repository_url}}": f"https://github.com/{REPOSITORY}",
         "{{source_tree}}": f"https://github.com/{REPOSITORY}/tree/{ref}",
+        "{{assembly_guides}}": static_guides(guides, viewer_source),
+        "{{viewer_revision}}": escape(viewer_source["label"]),
+        "{{viewer_revision_id}}": escape(viewer_source["revisionId"]),
+        "{{viewer_source}}": f"https://github.com/{REPOSITORY}/tree/{viewer_source['canonicalCommit']}",
+        "{{matrix_specs}}": '<div class="matrix-summary">' + "".join(
+            f'<article><h3>Ver.3 {r["comparison"]["prototype"]}案</h3>'
+            f'<p>風車 {r["comparison"]["rotor_diameter_mm"]:g} × {r["comparison"]["rotor_span_mm"]:g} mm<br>'
+            f'総減速比 {r["comparison"]["reduction"]:g} : 1<br>'
+            f'名目質量 {r["comparison"]["nominal_solid_and_hardware_mass_g"]/1000:.2f} kg</p>'
+            f'<p><strong>材料点残差 {r["comparison"]["maximum_single_episode_material_anchor_drift_mm"]:.2f} mm · 3 mm目標未達</strong></p>'
+            f'<a href="viewer.html?design={r["comparison"]["prototype"]}">{r["comparison"]["prototype"]}の360°と組立へ →</a></article>'
+            for r in records) + "</div>",
     }
     for name in PAGES:
         html = (SITE / name).read_text()
@@ -316,14 +342,16 @@ def build(output: Path, ref: str) -> dict:
         html = re.sub(r"\{\{(source|tree|download):([^}]+)\}\}",
                       lambda match: escape(source_url(match[1], match[2], ref), quote=True), html)
         (output / name).write_text(html)
-    for name in ("styles.css", "app.js", "favicon.svg"):
+    for name in ("styles.css", "viewer.css", "app.js", "viewer-loader.js", "favicon.svg"):
         shutil.copyfile(SITE / name, output / name)
     (output / ".nojekyll").write_text("")
     manifest = {"schema": 1, "repository": REPOSITORY, "source_commit": ref, "pages": list(PAGES),
                 "repository_subpath": f"/{SLUG}/",
                 "comparison_sha256": sha256(ROOT / "docs/ver3/comparison.json"),
                 "assets": assets, "bundle_budget_bytes": MAX_BUNDLE_BYTES,
-                "note": "Only selected display derivatives and existing media are deployed. CAD/STL/BOM downloads remain on GitHub."}
+                "static_budget_bytes": MAX_STATIC_BYTES, "on_demand_3d_budget_bytes": 18_000_000,
+                "engineering_source": viewer_source,
+                "note": "Only selected display derivatives and existing media are deployed. Exact-mesh GLBs are opt-in display data; native CAD/STL/BOM downloads remain on GitHub."}
     (output / "build-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     validate(output, manifest)
     return manifest

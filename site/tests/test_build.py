@@ -65,6 +65,12 @@ class PublicBuildTests(unittest.TestCase):
         cls.production = (OUTPUT / "production.html").read_text()
         cls.production_tags = Tags()
         cls.production_tags.feed(cls.production)
+        cls.extra_documents = [(OUTPUT / page).read_text() for page in ("comparison.html", "viewer.html")]
+        cls.extra_tags = []
+        for document in cls.extra_documents:
+            tags = Tags()
+            tags.feed(document)
+            cls.extra_tags.extend(tags.items)
         sections = Sections()
         sections.feed(cls.production)
         cls.sections = sections.sections
@@ -73,15 +79,19 @@ class PublicBuildTests(unittest.TestCase):
         forbidden = {".fcstd", ".step", ".stl", ".blend", ".py", ".log", ".tgz"}
         files = [p for p in OUTPUT.rglob("*") if p.is_file()]
         self.assertFalse(any(p.suffix.lower() in forbidden for p in files))
-        self.assertLess(sum(p.stat().st_size for p in files), 12_000_000)
-        self.assertEqual(len(self.manifest["assets"]), 53)
-        self.assertEqual(self.manifest["pages"], ["index.html", "production.html"])
+        total = sum(p.stat().st_size for p in files)
+        opt_in = sum(asset["bytes"] for asset in self.manifest["assets"].values() if asset.get("loading") == "on-demand")
+        self.assertLess(total, 30_000_000)
+        self.assertLess(total - opt_in, 12_000_000)
+        self.assertLess(opt_in, 18_000_000)
+        self.assertEqual(len(self.manifest["assets"]), 63)
+        self.assertEqual(self.manifest["pages"], ["index.html", "production.html", "comparison.html", "viewer.html"])
         for asset, data in self.manifest["assets"].items():
             self.assertEqual(hashlib.sha256((OUTPUT / asset).read_bytes()).hexdigest(), data["sha256"])
             self.assertEqual(hashlib.sha256((ROOT / data["source"]).read_bytes()).hexdigest(), data["source_sha256"])
 
     def test_no_private_metadata(self):
-        for document in (self.document, self.production):
+        for document in (self.document, self.production, *self.extra_documents):
             self.assertNotIn("/Users/", document)
             self.assertNotIn("file://", document)
         for path in (OUTPUT / "assets").glob("*.webp"):
@@ -92,7 +102,7 @@ class PublicBuildTests(unittest.TestCase):
 
     def test_safe_subpath_and_opt_in_media(self):
         videos = []
-        for name, attrs in self.tags.items + self.production_tags.items:
+        for name, attrs in self.tags.items + self.production_tags.items + self.extra_tags:
             for key in ("src", "href", "poster"):
                 if key in attrs:
                     url = urlsplit(attrs[key])

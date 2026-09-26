@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Ver.2の実物記録からVer.3第一カットへ、接合・保持・摩擦・風入力・脚・質量・組立・調達を画像付きMatrixで比較。設計変更と未検証性能を区別します。">
+  <title>Ver.2 → Ver.3 改良Matrix — リノセウス</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="viewer.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span>RHINOCEROS<small>風で歩く仕組みの探究</small></span></a><nav aria-label="メインナビゲーション"><a href="production.html#ver2">Ver.2の記録</a><a href="#matrix">Matrix</a><a href="viewer.html">360°・組立</a><a href="#sources">出典</a></nav></div></header>
+  <main id="main" tabindex="-1">
+    <section class="section viewer-intro" id="top" aria-labelledby="matrix-title">
+      <p class="eyebrow">VER.2 → VER.3 / CHANGE &amp; EVIDENCE MATRIX</p>
+      <h1 id="matrix-title">何を変えたか。<br><span>何が、まだ確かでないか。</span></h1>
+      <p>Ver.2の実物で残った課題から、Ver.3のA・B・Cはどこを変えたのか。写真・CAD由来のCG・部品を選べる3Dで、変更点と確認の範囲を見比べます。</p>
+      <aside class="warning"><h2>対象：{{viewer_revision}}。性能改善の実証一覧ではありません。</h2><p><strong>「設計に反映したこと」と「実物で改善したこと」は別です。</strong> Ver.2は作者の実物記録、Ver.3は設計・仮定計算・限定したCAD確認。Ver.2の未計測値とVer.3の計算値を、同じ実測値として比較していません。</p><p><strong>Ver.3の実機の風力歩行は未検証、全案の接地残差3 mm目標は未達、Bは名目トルク入力も不足。</strong> 全項目を満たす完成機とは表示しません。</p></aside>
+      {{matrix_specs}}
+      <p class="small-note">寸法・減速比・名目質量・材料点残差は正規comparison.jsonから生成。質量は全ソリッドCAD＋購入品の仮定／カタログ値で、実測やスライサー値ではありません。ここでのVer.3はVer.2のネイティブCAD復元や無加工差替え部品でもありません。</p>
+    </section>
+
+    <section class="section viewer-section" id="matrix" aria-labelledby="comparison-title">
+      <div class="section-heading"><p class="eyebrow">EIGHT QUESTIONS / THREE CONCEPTS</p><h2 id="comparison-title">Ver.2からの変更を、八つの観点で。</h2><p id="matrix-help">狭い画面では表を左右にスクロールできます。キーボードでは表の領域にフォーカスして左右キーを使います。「3Dで見る」は該当する部品群を強調するビューへのリンクです。</p></div>
+      <div class="matrix-scroll" role="region" aria-label="Ver.2からVer.3への改良比較表" aria-describedby="matrix-help" tabindex="0">
+        <table class="improvement-matrix">
+          <thead><tr><th scope="col">観点</th><th scope="col">Ver.2 · 実物と記録</th><th scope="col">Ver.3 · 何をどう変えるか</th><th scope="col">A / B / Cの違いと検証状態</th></tr></thead>
+          <tbody>
+            <tr id="matrix-connection">
+              <th scope="row">1<br>接合の空転</th>
+              <td>{{figure:v2-view-5|Ver.2完成実物の歯車側。黒い歯車と軸付近を正面から見ている。|Ver.2実写真 · 歯車側。滑りそのものを撮影した証拠ではありません。}}<p>後の作者の報告は「風車・歯車と棒の接合が滑って一体で回らない」。風車だけでなく、軸へ回転を渡す接合が課題でした。</p><a href="production.html#remaining">報告と、原因の区別を読む</a></td>
+              <td>{{figure:rex-connection|Ver.3の非円形REX軸、金属ハブ、出力歯車を分けて示すCAD由来CG。|設計CG · 接合を見せる説明用オフセット。周囲の部品は省略されています。}}<p>8 mm REX軸の平面と金属ハブを形状で係合。樹脂の歯車・クランク・風車端板は、実在する穴とM4ボルトでハブに結び付けます。接着剤を主トルク経路にしません。</p><a href="viewer.html?design=C&amp;focus=connection">3Dで軸・金属ハブを見る →</a></td>
+              <td><span class="status-tag">設計へ反映・限定CAD確認</span><p><strong>三案共通。</strong> ハブの非円形穴、取付穴、反転ハブのインデックスをモデルと照合しています。</p><p><strong>未確認：</strong>実購入ハブの締付条件、実物の滑りトルク、印刷部品の接合強度。CGの軸方向オフセットは、実際の挿入経路の証明ではありません。</p><a href="{{source:docs/ver3/assembly_access_C.json}}">Cの接合・装着経路の記録</a></td>
+            </tr>
+            <tr id="matrix-retention">
+              <th scope="row">2<br>歯車の軸方向抜け</th>
+              <td>{{figure:v2-view-6|Ver.2の歯車列と風車を斜めから見た実写真。軸方向の部品配置が分かる。|Ver.2実写真 · 歯車と風車の配置。保持力の測定写真ではありません。}}<p>公開設計ノートでは、歯車が軸方向へ抜けることも懸念として整理されています。Ver.1で脚のフックが外れた問題とは別の保持箇所です。</p></td>
+              <td>{{figure:drive|Ver.3のA左・A右・B・Cの駆動部を並べたCAD由来CG。|設計CG · 段別の駆動系比較。実物の耐久・保持試験ではありません。}}<p>軸端のM4ボルトと薄い止め座金、カラー、内輪専用スペーサで位置と抜け止めを扱います。<strong>カラーは軸方向保持であり、トルクキーの代わりではありません。</strong></p><a href="viewer.html?design=C&amp;focus=retention">3Dで保持部品を選ぶ →</a></td>
+              <td><span class="status-tag">保持部品・順序を具体化</span><p><strong>三案共通</strong>の方針ですが、軸とケースの長さ、スペーサは各案のBOMが正本です。</p><p><strong>未確認：</strong>実物の軸方向すきま、締付による抵抗、保持力。名目すきまを設けたことと、現物で適合することは同じではありません。</p><a href="viewer.html#guide-C-13">位置決め・抜け止めの工程</a></td>
+            </tr>
+            <tr id="matrix-bearings">
+              <th scope="row">3<br>軸受・摩擦・芯ずれ</th>
+              <td>{{figure:v2-drive-side|Ver.2の軸・歯車支持を横から示すFusion 360比較CG。|Ver.2設計CG · 実物写真ではありません。}}<p>Ver.2では支持を延長・補強。一方、原典の展望には細い丸棒のたわみ・ぶれ・摩擦ロスが残ったと記されています。<strong>軸受の焼付きが確定したわけではありません。</strong></p></td>
+              <td>{{figure:hero-C|Ver.3 C案の軸支持と生成フレームを含む全体のCAD由来CG。|Ver.3 C設計CG · 軸受・フレームを含む比較設計。}}<p>608軸受、外輪押さえ、内輪だけを扱うスペーサ、位置決め側と逃がす側を具体化。芯出しと、各軸受・関節の始動抵抗を分けて扱います。</p><a href="viewer.html?design=C&amp;focus=bearings">3Dで軸受・外輪押さえを見る →</a></td>
+              <td><span class="status-tag">構造と仮定を明示</span><p><strong>A：</strong>ベルト入力の三つのキャリッジを同じ芯へ。<strong>B：</strong>三段化で軸受と始動損失が増加。<strong>C：</strong>二段構成。</p><p><strong>未確認：</strong>実軸受の抵抗、穴・軸の適合、印刷収縮、芯ずれ。軸受を追加しただけで低摩擦が保証されるとは考えていません。</p><a href="viewer.html#guide-A-4">Aのキャリッジ準備</a></td>
+            </tr>
+            <tr id="matrix-input">
+              <th scope="row">4<br>風入力・減速・速度</th>
+              <td>{{figure:v2-view-2|Ver.2完成実物のサボニウス型風車と脚列を正面から撮影。|Ver.2実写真 · カップ形状の風車。}}<p>六枚羽からサボニウス型へ変更し、ギア比も見直して実際の動作を記録。ただし、風速・風向・ローター角をそろえた起動トルク表はありません。</p><a href="https://youtu.be/T3U7c1Mr3Y8">既存のVer.2実物テスト</a></td>
+              <td>{{figure:comparison|Ver.3のA・B・Cを同一実寸尺度で比較したCAD由来CG。|Ver.3設計CG · 同一尺度。大風車・高減速・中間案を比較。}}<p>風車の大きさと総減速比を三案で変え、入力と要求トルクを仮定条件で比較。<strong>減速によって入力エネルギー自体が増えるわけではありません。</strong></p><a href="viewer.html?design=A&amp;focus=drivetrain">3Dで各案の風車・段を見る →</a></td>
+              <td><span class="status-tag caution">Bは名目入力不足</span><p><strong>A：</strong>大風車、ベルト2:1＋歯車3:1。<strong>B：</strong>小風車、4:1を三段。<strong>C：</strong>中間風車、4:1を二段。正規値は上の三案カードに表示しています。</p><p>動画は規定120 rpm入力の可視化です。A1倍・B8倍・C2倍表示を実歩行速度と取り違えません。特定風速や全ローター角での自己始動は未実証です。</p><a href="index.html#prototype-B">Bの未達と規定動画</a></td>
+            </tr>
+            <tr id="matrix-support">
+              <th scope="row">5<br>脚・支持・重心</th>
+              <td>{{figure:hero|Ver.2の実物を風車円板側から見た写真。白い脚リンクと黒い足先が見える。|Ver.2実写真 · 脚の外観。接地荷重を測定した画像ではありません。}}<p>脚フックの受け止め面とクランク配置を見直し、外れにくい接続を目指しました。重心、支持余裕、材料点の滑りを定量的に計測した資料はありません。</p></td>
+              <td>{{figure:walking-C|Ver.3 C案の接地近似による規定歩行の静止CG。|Ver.3 C · 規定運動の可視化。風・接触動力学の実証ではありません。}}<p>三つの共有クランクと対向する六脚、金属スリーブ付き関節、可動靴・交換足裏を具体化。接地の材料点残差と重心・風の感度を数値で残しています。</p><a href="viewer.html?design=C&amp;focus=legs">3Dで脚・クランク・足裏を見る →</a></td>
+              <td><span class="status-tag caution">全案3 mm目標未達</span><p>残差は一つの継続する負荷区間内の最大水平偏差で、三周期の累積滑りではありません。上の三案カードも未達として表示します。</p><p><strong>B</strong>はCEFの軸方向位置がA/Cと異なり、スペーサを流用できません。小さい正の支持余裕は実用安定の保証ではなく、実測重心・転倒・足裏の挙動は確認待ちです。</p><a href="viewer.html#guide-B-10">Bの靴と足裏の工程</a></td>
+            </tr>
+            <tr id="matrix-mass">
+              <th scope="row">6<br>構造・質量</th>
+              <td>{{figure:v2-photo|Ver.2完成実物を斜めから見た写真。風車、フレーム、脚部の構成が見える。|Ver.2実写真 · 実物の構成。装置質量の測定記録ではありません。}}<p>メカニカルな外観と支持構造を試作・修正。原典は今後の軽量化やジェネレーティブデザイン検討にも触れていますが、Ver.2の完成装置質量は比較用の実測値として提示されていません。</p></td>
+              <td>{{figure:frame-c|Ver.3 C案の生成したフレームを示すCAD由来CG。軸受・締結用の領域とリブを含む。|Ver.3 C設計CG · 制約付きパラメトリック生成フレーム。}}<p>Cでは軸受・締結領域と可動域・工具・印刷寸法を制約に、リブ幅などを探索。部材加算体積の代理量は同条件候補間で約{{generation_reduction}}%減少しました。</p><a href="viewer.html?design=C&amp;focus=frame">3DでCのフレームを見る →</a></td>
+              <td><span class="status-tag">生成探索を実行・実物未確認</span><p><strong>A：</strong>風車と風荷重が大きい。<strong>B：</strong>小風車でも段数・支持部品が増える。<strong>C：</strong>中間風車・二段と生成リブを比較。</p><p><strong>装置全体がその割合で軽くなった、Ver.2より軽くなった、とは言えません。</strong> 質量は名目値、たわみも代理値です。Autodesk GD・連続体FEA・実機強度試験を実施したとの表示ではありません。</p><a href="{{source:docs/ver3/DESIGN_ja.md}}">生成探索の条件・根拠</a></td>
+            </tr>
+            <tr id="matrix-assembly">
+              <th scope="row">7<br>製作・組立・工具</th>
+              <td>{{figure:turbines-real|六枚羽型とカップ形状の風車試作を作業面に並べた実写真。|実写真 · Ver.2に向けた風車試作。}}<p>出力・研磨・洗浄・接着・塗装・組立を実施。Ver.2のSTLには分割風車・クランクなどが公開されていますが、専用の全工程ログ・番号付き詳細手順書は未整備です。</p><a href="production.html#v2-parts">実際に公開されたVer.2部品</a></td>
+              <td>{{figure:exploded|Ver.3のCAD部品を分けて示す既存の分解説明CG。|Ver.3設計CG · 同時オフセットは説明用。組立経路の証明ではありません。}}<p>正規部品ID・BOM・14の基本手順と、前側キャリア先行の取外し、窓の締結順を具体化。このサイトの3Dは、原典に対応する部品の段階表示です。</p><a href="viewer.html#assembly-guides">A/B/Cの具体的な組立手順 →</a></td>
+              <td><span class="status-tag">手順・一部経路を記録</span><p><strong>A：</strong>分割風車、三つのキャリッジ、ベルトと窓の順序。<strong>B：</strong>S1の窓を先に閉じてからS3。<strong>C：</strong>生成フレームと二段構成。</p><p>CAD経路確認は指定された部分組立での標本検査です。全手順の人手作業性・実物適合は未確認。Aの256 mm境界には印刷余白・ブリムを含みません。</p><a href="viewer.html?design=B&amp;focus=access">3Dでキャリアと窓を選ぶ →</a></td>
+            </tr>
+            <tr id="matrix-procurement">
+              <th scope="row">8<br>購入部品・調達</th>
+              <td>{{figure:gear-prototypes|Ver.2開発へ向けて試作した大小の歯車と金属丸棒。|実写真 · 歯車試作群。購入部品一式や在庫を示す写真ではありません。}}<p>作者はABS製の自作部品とステンレス丸棒を使い、原典に材料・工具のリンクを残しています。これを全購入品の確定BOMや現時点の在庫表とは扱いません。</p></td>
+              <td>{{figure:hero-A|Ver.3 A案のCAD由来CG。大風車と左右の伝達段、フレームを含む。|Ver.3 A設計CG · 購入品は正規CADの概略形状。}}<p>印刷品・購入品・切断加工品を分け、REXハブ・軸、ねじ、軸受、ベルト／プーリーなどを各案のBOMへ記載。3Dで部品を選ぶとID・数量・区分が分かります。</p><a href="viewer.html?design=A&amp;focus=procurement">3Dで購入・加工品を強調 →</a></td>
+              <td><span class="status-tag caution">調達完了ではない</span><p><strong>A：</strong>指定HTD5Mベルト／プーリー。<strong>B/C：</strong>印刷歯車と金属ハブ。各案とも長さ別の加工軸・チューブ・窓を含みます。</p><p>SKUの記載は、全地域での在庫・価格・納期・代替品の適合を保証しません。切断長さの在庫、軸端加工、締付仕様は確認待ちです。この更新で購入や新しい部材要求を追加していません。</p><div class="link-list"><a href="{{download:docs/ver3/BOM_A.csv}}">A BOM</a><a href="{{download:docs/ver3/BOM_B.csv}}">B BOM</a><a href="{{download:docs/ver3/BOM_C.csv}}">C BOM</a></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="section sources-section" id="sources" aria-labelledby="sources-title">
+      <div><p class="eyebrow">HOW TO READ THE EVIDENCE</p><h2 id="sources-title">変更した設計と、残る実測を分ける。</h2></div>
+      <div><p>Ver.2側の写真・CGは元READMEの版対応に従い、後の接合滑りの報告は公開済み設計ノートと照合しています。Ver.3側は{{viewer_revision}}の正規資料・既存CGです。CGの存在やCADチェックの成功だけを、物理・機械・調達の全条件合格とは呼びません。</p><p>確認待ちは、滑りトルク・関節と軸受の抵抗・実物のすきま・角度別風車入力・質量と重心・滑りと転倒・印刷適合・実購入品の条件です。別の機械設計改訂が出る場合は、古いCG・BOMと混ぜず、まとまった版として切り替えます。</p><div class="link-list"><a href="{{source:README_ja.md}}">Ver.1／Ver.2の原典</a><a href="{{source:docs/ver3/DESIGN_ja.md}}">Ver.3の設計・根拠・限界</a><a href="{{source:docs/ver3/comparison.json}}">正規比較値と定義</a><a href="{{source:docs/ver3/ASSEMBLY_ja.md}}">組立と未実施のベンチ確認票</a><a href="{{viewer_source}}">3Dと手順が参照する確定版</a></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>比較するのは、対策と根拠。その先は実測へ。</span></div><a href="#top">先頭へ ↑</a><a href="viewer.html">360°・組立ガイド</a><a href="index.html#ver3">三案の概要</a></footer>
+</body>
+</html>

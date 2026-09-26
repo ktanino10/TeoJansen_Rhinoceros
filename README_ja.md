@@ -561,3 +561,5 @@ Copilot を活用すると、開発スピードが向上するだけでなく、
 **作品紹介サイト：** [Ver.1・Ver.2・Ver.3の制作記録と資料をまとめて見る](https://ktanino10.github.io/TeoJansen_Rhinoceros/) — 実物写真と設計CGの区別、規定歩行動画、版ごとのダウンロードを掲載。Ver.3の実機未検証・接地目標未達の制限も併記しています。
 
 **写真でたどる製作記録：** [Ver.1の設計・出力・仕上げ・組立](https://ktanino10.github.io/TeoJansen_Rhinoceros/production.html#ver1) / [Ver.2への改良・完成写真・テスト](https://ktanino10.github.io/TeoJansen_Rhinoceros/production.html#ver2) — 本READMEの工程と版対応を整理し、各版6方向の実写真と参考図への導線をまとめています。未記録のVer.2専用工程やネイティブCADを復元したものではありません。
+
+**Ver.3第一カットを詳しく見る：** [Ver.2からの変更と確認状況の画像付きMatrix](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html) / [A・B・Cの360°・部品選択・具体的組立ガイド](https://ktanino10.github.io/TeoJansen_Rhinoceros/viewer.html) — 既存CADの全メッシュと部品IDを使う表示資料です。準備・部分組立・一時取外しを区別し、実機未検証・接地目標未達・Bの入力不足を保持しています。
