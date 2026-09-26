@@ -1,0 +1,546 @@
+{
+  "prototype": "A",
+  "assembly_sha256": "eb3dff9491bfa47d419815d908115c7cc73dae54b000b5829f56edb6643bfb1b",
+  "walking_sha256": "3f37087865a1df72b87df705c574c6b8b1a8da8129fb483210f8f28d3c71d896",
+  "method": "All geometrically near feet, regardless of computed normal load. One fixed sole material point per uninterrupted near-contact episode.",
+  "sampling": "Declared24fps rendered-frame poses, plus closing endpoint; physical frame spacing differs with explicitly declared playback scale. These are sampled maxima, not continuous-time friction measurements.",
+  "contact_gap_limit_mm": 0.27,
+  "fixed_floor_offset_mm": 0.02,
+  "contact_tolerance_above_lowest_surface_mm": 0.25,
+  "minimum_near_contact_feet": 3,
+  "maximum_absolute_ground_gap_of_near_feet_mm": 0.2683189849178289,
+  "max_anchor_offset_all_episodes_mm": 8.901534838211019,
+  "maximum_single_episode_path_mm": 14.479850683549925,
+  "worst_episode": {
+    "foot": 3,
+    "start_frame": 1,
+    "end_frame": 18,
+    "start_theta": 0.0,
+    "end_theta": 1.4835298641951802,
+    "local_material_point": [
+      0.0,
+      0.0,
+      -15.0
+    ],
+    "anchor_xy": [
+      128.5,
+      60.42415473374655
+    ],
+    "max_anchor_offset_mm": 8.901534838211019,
+    "horizontal_path_mm": 8.90159065257169,
+    "start_body_y": 0.0,
+    "end_body_y": -46.54313556413355,
+    "partial_at_clip_boundary": true,
+    "body_advance_same_episode_mm": 46.54313556413355,
+    "physical_seconds": 0.7083333333333334
+  },
+  "worst_complete_episode": {
+    "foot": 3,
+    "start_frame": 55,
+    "end_frame": 90,
+    "start_theta": 4.71238898038469,
+    "end_theta": 7.766715171374766,
+    "local_material_point": [
+      16.0,
+      -9.25,
+      -15.0
+    ],
+    "anchor_xy": [
+      144.50132253528108,
+      -136.64440485313713
+    ],
+    "max_anchor_offset_mm": 7.162990149329502,
+    "horizontal_path_mm": 14.479850683549925,
+    "start_body_y": -137.94131905546925,
+    "end_body_y": -224.79031136358347,
+    "partial_at_clip_boundary": false,
+    "body_advance_same_episode_mm": 86.84899230811422,
+    "physical_seconds": 1.4583333333333333
+  },
+  "episodes": [
+    {
+      "foot": 3,
+      "start_frame": 1,
+      "end_frame": 18,
+      "start_theta": 0.0,
+      "end_theta": 1.4835298641951802,
+      "local_material_point": [
+        0.0,
+        0.0,
+        -15.0
+      ],
+      "anchor_xy": [
+        128.5,
+        60.42415473374655
+      ],
+      "max_anchor_offset_mm": 8.901534838211019,
+      "horizontal_path_mm": 8.90159065257169,
+      "start_body_y": 0.0,
+      "end_body_y": -46.54313556413355,
+      "partial_at_clip_boundary": true,
+      "body_advance_same_episode_mm": 46.54313556413355,
+      "physical_seconds": 0.7083333333333334
+    },
+    {
+      "foot": 0,
+      "start_frame": 1,
+      "end_frame": 19,
+      "start_theta": 0.0,
+      "end_theta": 1.5707963267948966,
+      "local_material_point": [
+        0.0,
+        0.0,
+        -15.0
+      ],
+      "anchor_xy": [
+        40.5,
+        -60.42415473374655
+      ],
+      "max_anchor_offset_mm": 1.2154290220029584,
+      "horizontal_path_mm": 2.4033946290569927,
+      "start_body_y": 0.0,
+      "end_body_y": -49.63244754609554,
+      "partial_at_clip_boundary": true,
+      "body_advance_same_episode_mm": 49.63244754609554,
+      "physical_seconds": 0.75
+    },
+    {
+      "foot": 4,
+      "start_frame": 1,
+      "end_frame": 19,
+      "start_theta": 0.0,
+      "end_theta": 1.5707963267948966,
+      "local_material_point": [
+        0.0,
+        0.0,
+        -15.0
+      ],
+      "anchor_xy": [
+        208.5,
+        -60.42415473374655
+      ],
+      "max_anchor_offset_mm": 1.301801526985105,
+      "horizontal_path_mm": 2.574487317094941,
+      "start_body_y": 0.0,
+      "end_body_y": -49.63244754609554,
+      "partial_at_clip_boundary": true,
+      "body_advance_same_episode_mm": 49.63244754609554,
+      "physical_seconds": 0.75
+    },
+    {
+      "foot": 1,
+      "start_frame": 19,
+      "end_frame": 54,
+      "start_theta": 1.5707963267948966,
+      "end_theta": 4.625122517784973,
+      "local_material_point": [
+        0.0,
+        0.0,
+        -15.0
+      ],
+      "anchor_xy": [
+        44.499963403125115,
+        -38.86707830090647
+      ],
+      "max_anchor_offset_mm": 6.355297232132034,
+      "horizontal_path_mm": 13.293749864501654,
+      "start_body_y": -49.63244754609554,
+      "end_body_y": -135.8826252187064,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.25017767261087,
+      "physical_seconds": 1.4583333333333333
+    },
+    {
+      "foot": 5,
+      "start_frame": 19,
+      "end_frame": 54,
+      "start_theta": 1.5707963267948966,
+      "end_theta": 4.625122517784973,
+      "local_material_point": [
+        0.0,
+        0.0,
+        -15.0
+      ],
+      "anchor_xy": [
+        212.49996338371065,
+        -38.864524234528105
+      ],
+      "max_anchor_offset_mm": 5.867168392486558,
+      "horizontal_path_mm": 12.134868050668977,
+      "start_body_y": -49.63244754609554,
+      "end_body_y": -135.8826252187064,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.25017767261087,
+      "physical_seconds": 1.4583333333333333
+    },
+    {
+      "foot": 2,
+      "start_frame": 20,
+      "end_frame": 55,
+      "start_theta": 1.6580627893946132,
+      "end_theta": 4.71238898038469,
+      "local_material_point": [
+        0.0,
+        -9.5,
+        -15.0
+      ],
+      "anchor_xy": [
+        124.49087297671565,
+        -158.9363228752623
+      ],
+      "max_anchor_offset_mm": 5.316343998261916,
+      "horizontal_path_mm": 11.576785053707027,
+      "start_body_y": -51.415448741102374,
+      "end_body_y": -137.94131905546925,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.52587031436687,
+      "physical_seconds": 1.4583333333333333
+    },
+    {
+      "foot": 3,
+      "start_frame": 55,
+      "end_frame": 90,
+      "start_theta": 4.71238898038469,
+      "end_theta": 7.766715171374766,
+      "local_material_point": [
+        16.0,
+        -9.25,
+        -15.0
+      ],
+      "anchor_xy": [
+        144.50132253528108,
+        -136.64440485313713
+      ],
+      "max_anchor_offset_mm": 7.162990149329502,
+      "horizontal_path_mm": 14.479850683549925,
+      "start_body_y": -137.94131905546925,
+      "end_body_y": -224.79031136358347,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.84899230811422,
+      "physical_seconds": 1.4583333333333333
+    },
+    {
+      "foot": 0,
+      "start_frame": 55,
+      "end_frame": 91,
+      "start_theta": 4.71238898038469,
+      "end_theta": 7.853981633974484,
+      "local_material_point": [
+        16.0,
+        -9.25,
+        -15.0
+      ],
+      "anchor_xy": [
+        56.407787479739916,
+        -246.27770544842423
+      ],
+      "max_anchor_offset_mm": 4.650214538797682,
+      "horizontal_path_mm": 9.272448424085576,
+      "start_body_y": -137.94131905546925,
+      "end_body_y": -226.7032374483949,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 88.76191839292565,
+      "physical_seconds": 1.5000000000000004
+    },
+    {
+      "foot": 4,
+      "start_frame": 55,
+      "end_frame": 91,
+      "start_theta": 4.71238898038469,
+      "end_theta": 7.853981633974484,
+      "local_material_point": [
+        16.0,
+        -9.25,
+        -15.0
+      ],
+      "anchor_xy": [
+        224.407685459067,
+        -246.42082564333518
+      ],
+      "max_anchor_offset_mm": 6.292626732906113,
+      "horizontal_path_mm": 12.934450918270894,
+      "start_body_y": -137.94131905546925,
+      "end_body_y": -226.7032374483949,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 88.76191839292565,
+      "physical_seconds": 1.5000000000000004
+    },
+    {
+      "foot": 1,
+      "start_frame": 91,
+      "end_frame": 126,
+      "start_theta": 7.853981633974484,
+      "end_theta": 10.90830782496456,
+      "local_material_point": [
+        0.0,
+        0.0,
+        -15.0
+      ],
+      "anchor_xy": [
+        44.442248725546804,
+        -215.8532001222439
+      ],
+      "max_anchor_offset_mm": 6.356273406603892,
+      "horizontal_path_mm": 13.29467444550821,
+      "start_body_y": -226.7032374483949,
+      "end_body_y": -312.95186546337885,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.24862801498395,
+      "physical_seconds": 1.458333333333333
+    },
+    {
+      "foot": 5,
+      "start_frame": 91,
+      "end_frame": 126,
+      "start_theta": 7.853981633974484,
+      "end_theta": 10.90830782496456,
+      "local_material_point": [
+        0.0,
+        0.0,
+        -15.0
+      ],
+      "anchor_xy": [
+        212.44193961533958,
+        -215.53092549701117
+      ],
+      "max_anchor_offset_mm": 5.866067429016268,
+      "horizontal_path_mm": 12.133875459454574,
+      "start_body_y": -226.7032374483949,
+      "end_body_y": -312.95186546337885,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.24862801498395,
+      "physical_seconds": 1.458333333333333
+    },
+    {
+      "foot": 2,
+      "start_frame": 92,
+      "end_frame": 127,
+      "start_theta": 7.941248096574199,
+      "end_theta": 10.995574287564276,
+      "local_material_point": [
+        0.0,
+        -9.5,
+        -15.0
+      ],
+      "anchor_xy": [
+        124.65993008179748,
+        -335.77002557371867
+      ],
+      "max_anchor_offset_mm": 5.316336403650209,
+      "horizontal_path_mm": 11.57680379242982,
+      "start_body_y": -228.4844414057804,
+      "end_body_y": -315.01047081007556,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.52602940429517,
+      "physical_seconds": 1.4583333333333333
+    },
+    {
+      "foot": 3,
+      "start_frame": 127,
+      "end_frame": 162,
+      "start_theta": 10.995574287564276,
+      "end_theta": 14.049900478554353,
+      "local_material_point": [
+        16.0,
+        -9.25,
+        -15.0
+      ],
+      "anchor_xy": [
+        144.62876007430594,
+        -313.4402824283408
+      ],
+      "max_anchor_offset_mm": 7.162990149329425,
+      "horizontal_path_mm": 14.479850683549754,
+      "start_body_y": -315.01047081007556,
+      "end_body_y": -401.8593375478744,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.84886673779886,
+      "physical_seconds": 1.4583333333333333
+    },
+    {
+      "foot": 0,
+      "start_frame": 127,
+      "end_frame": 163,
+      "start_theta": 10.995574287564276,
+      "end_theta": 14.137166941154069,
+      "local_material_point": [
+        16.0,
+        -9.25,
+        -15.0
+      ],
+      "anchor_xy": [
+        56.742709488579585,
+        -423.2399801986061
+      ],
+      "max_anchor_offset_mm": 4.6502145387978135,
+      "horizontal_path_mm": 9.272448424085985,
+      "start_body_y": -315.01047081007556,
+      "end_body_y": -403.77228967238386,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 88.7618188623083,
+      "physical_seconds": 1.5
+    },
+    {
+      "foot": 4,
+      "start_frame": 127,
+      "end_frame": 163,
+      "start_theta": 10.995574287564276,
+      "end_theta": 14.137166941154069,
+      "local_material_point": [
+        16.0,
+        -9.25,
+        -15.0
+      ],
+      "anchor_xy": [
+        224.742577717582,
+        -423.0653964298064
+      ],
+      "max_anchor_offset_mm": 6.292626732906106,
+      "horizontal_path_mm": 12.934450918271096,
+      "start_body_y": -315.01047081007556,
+      "end_body_y": -403.77228967238386,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 88.7618188623083,
+      "physical_seconds": 1.5
+    },
+    {
+      "foot": 1,
+      "start_frame": 163,
+      "end_frame": 198,
+      "start_theta": 14.137166941154069,
+      "end_theta": 17.191493132144146,
+      "local_material_point": [
+        0.0,
+        0.0,
+        -15.0
+      ],
+      "anchor_xy": [
+        44.719656511053344,
+        -392.8381572414137
+      ],
+      "max_anchor_offset_mm": 6.35627340660287,
+      "horizontal_path_mm": 13.294674445507273,
+      "start_body_y": -403.77228967238386,
+      "end_body_y": -490.0204980021685,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.24820832978463,
+      "physical_seconds": 1.4583333333333333
+    },
+    {
+      "foot": 5,
+      "start_frame": 163,
+      "end_frame": 198,
+      "start_theta": 14.137166941154069,
+      "end_theta": 17.191493132144146,
+      "local_material_point": [
+        0.0,
+        0.0,
+        -15.0
+      ],
+      "anchor_xy": [
+        212.71843754523857,
+        -392.1981798762786
+      ],
+      "max_anchor_offset_mm": 5.866067429017274,
+      "horizontal_path_mm": 12.133875459456831,
+      "start_body_y": -403.77228967238386,
+      "end_body_y": -490.0204980021685,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.24820832978463,
+      "physical_seconds": 1.4583333333333333
+    },
+    {
+      "foot": 2,
+      "start_frame": 164,
+      "end_frame": 199,
+      "start_theta": 14.224433403753785,
+      "end_theta": 17.278759594743864,
+      "local_material_point": [
+        0.0,
+        -9.5,
+        -15.0
+      ],
+      "anchor_xy": [
+        125.1639684950943,
+        -512.6030690392636
+      ],
+      "max_anchor_offset_mm": 5.31633640365019,
+      "horizontal_path_mm": 11.576803792430642,
+      "start_body_y": -405.5534843943787,
+      "end_body_y": -492.0790598204242,
+      "partial_at_clip_boundary": false,
+      "body_advance_same_episode_mm": 86.52557542604552,
+      "physical_seconds": 1.4583333333333341
+    },
+    {
+      "foot": 0,
+      "start_frame": 199,
+      "end_frame": 217,
+      "start_theta": 17.278759594743864,
+      "end_theta": 18.84955592153876,
+      "local_material_point": [
+        16.0,
+        -9.25,
+        -15.0
+      ],
+      "anchor_xy": [
+        57.41228330906979,
+        -600.2013051495957
+      ],
+      "max_anchor_offset_mm": 4.65021453879763,
+      "horizontal_path_mm": 6.26337065092975,
+      "start_body_y": -492.0790598204242,
+      "end_body_y": -533.5119981314514,
+      "partial_at_clip_boundary": true,
+      "body_advance_same_episode_mm": 41.43293831102716,
+      "physical_seconds": 0.7499999999999991
+    },
+    {
+      "foot": 3,
+      "start_frame": 199,
+      "end_frame": 217,
+      "start_theta": 17.278759594743864,
+      "end_theta": 18.84955592153876,
+      "local_material_point": [
+        16.0,
+        -9.25,
+        -15.0
+      ],
+      "anchor_xy": [
+        145.09053512318184,
+        -490.23560287466074
+      ],
+      "max_anchor_offset_mm": 7.123389614394735,
+      "horizontal_path_mm": 8.018963984247453,
+      "start_body_y": -492.0790598204242,
+      "end_body_y": -533.5119981314514,
+      "partial_at_clip_boundary": true,
+      "body_advance_same_episode_mm": 41.43293831102716,
+      "physical_seconds": 0.7499999999999991
+    },
+    {
+      "foot": 4,
+      "start_frame": 199,
+      "end_frame": 217,
+      "start_theta": 17.278759594743864,
+      "end_theta": 18.84955592153876,
+      "local_material_point": [
+        16.0,
+        -9.25,
+        -15.0
+      ],
+      "anchor_xy": [
+        225.41152097953557,
+        -599.7090180414393
+      ],
+      "max_anchor_offset_mm": 6.2926267329063625,
+      "horizontal_path_mm": 8.057724270165279,
+      "start_body_y": -492.0790598204242,
+      "end_body_y": -533.5119981314514,
+      "partial_at_clip_boundary": true,
+      "body_advance_same_episode_mm": 41.43293831102716,
+      "physical_seconds": 0.7499999999999991
+    }
+  ],
+  "limitations": "Material-point movement includes rocking as well as contact-fit residual; it is not a measured Coulomb slip distance. Clip-entry partial episodes are explicitly marked. No trajectory, geometry or load weighting was changed by this audit."
+}

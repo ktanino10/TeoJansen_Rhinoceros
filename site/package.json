@@ -1,0 +1,14 @@
+{
+  "name": "rhinoceros-pages",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 build.py",
+    "test": "playwright test",
+    "test:static": "python3 -m unittest discover -s tests -p 'test_*.py'"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0"
+  }
+}

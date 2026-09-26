@@ -1,0 +1,1835 @@
+{
+  "prototype": "C",
+  "passed": true,
+  "checks": [
+    {
+      "check": "REX hub has a real non-round torque flat",
+      "part": "H_REX_HUB",
+      "local_point_mm": [
+        0,
+        3.8,
+        4
+      ],
+      "expected_material": true,
+      "measured_material": true,
+      "passed": true
+    },
+    {
+      "check": "REX hub centre is bored through",
+      "part": "H_REX_HUB",
+      "local_point_mm": [
+        0,
+        0,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Metal hub M4 flange hole",
+      "part": "H_REX_HUB",
+      "local_point_mm": [
+        -8,
+        -8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Metal hub M4 flange hole",
+      "part": "H_REX_HUB",
+      "local_point_mm": [
+        -8,
+        8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Metal hub M4 flange hole",
+      "part": "H_REX_HUB",
+      "local_point_mm": [
+        8,
+        -8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Metal hub M4 flange hole",
+      "part": "H_REX_HUB",
+      "local_point_mm": [
+        8,
+        8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "REX shaft flat removes round-bar material",
+      "part": "H_shaft_8_37p5",
+      "local_point_mm": [
+        0,
+        3.8,
+        18.75
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "REX shaft retains the supplier-clocked rounded corner",
+      "part": "H_shaft_8_37p5",
+      "local_point_mm": [
+        3.6705181398984594,
+        0.9835123713895788,
+        18.75
+      ],
+      "expected_material": true,
+      "measured_material": true,
+      "passed": true
+    },
+    {
+      "check": "REX shaft bounded by8mm cylinder",
+      "part": "H_shaft_8_37p5",
+      "local_point_mm": [
+        4.1,
+        0,
+        18.75
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_001",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_37p5_001",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_002",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_57_001",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_003",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_57_001",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_004",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_57_002",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_005",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_57_002",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_006",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_111p5_001",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_007",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_344_001",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_008",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_344_001",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_009",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_344_001",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_010",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_396_001",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_011",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_396_001",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "All supplier-clocked hubs fit their connected REX shafts",
+      "hub": "H_REX_HUB_012",
+      "shaft_pairs": [
+        [
+          "H_shaft_8_111p5_001",
+          0.0
+        ]
+      ],
+      "passed": true,
+      "interface_basis": "Supplier hole-square angles45/135/225/315; flat normals45+60k. Axis corner15deg; reflected hub indexed90deg; bolt pattern unchanged."
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_CEF",
+      "local_point_mm": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_CEF",
+      "local_point_mm": [
+        51.379999999999995,
+        1.0772951559932232e-14,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_CEF",
+      "local_point_mm": [
+        -10.845231607629465,
+        67.73729365258752,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_CEF_R",
+      "local_point_mm": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_CEF_R",
+      "local_point_mm": [
+        51.38000000000002,
+        5.4893135881820095e-15,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_CEF_R",
+      "local_point_mm": [
+        -10.845231607629406,
+        -67.73729365258754,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_PBD",
+      "local_point_mm": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_PBD",
+      "local_point_mm": [
+        58.09999999999998,
+        -6.060519989368678e-15,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_PBD",
+      "local_point_mm": [
+        3.6538313253012045,
+        56.02097032938868,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_DE",
+      "local_point_mm": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_DE",
+      "local_point_mm": [
+        55.160000000000004,
+        3.806831314434359e-15,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_PC",
+      "local_point_mm": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_PC",
+      "local_point_mm": [
+        55.019999999999996,
+        -3.77496316619575e-15,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_AC",
+      "local_point_mm": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_AC",
+      "local_point_mm": [
+        86.65999999999998,
+        -5.097008409261056e-15,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_AB",
+      "local_point_mm": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_AB",
+      "local_point_mm": [
+        69.99999999999999,
+        -1.3058243793669832e-14,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_PBD_R",
+      "local_point_mm": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_PBD_R",
+      "local_point_mm": [
+        58.1,
+        2.520992114218591e-16,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Link journal hole is actual CAD void",
+      "part": "L_PBD_R",
+      "local_point_mm": [
+        3.6538313253012156,
+        -56.02097032938868,
+        1.5
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Crank pin through-hole",
+      "part": "P_CRANK_CHEEK",
+      "local_point_mm": [
+        21,
+        0,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Crank pilot counterbore",
+      "part": "P_CRANK_CHEEK",
+      "local_point_mm": [
+        6.5,
+        0,
+        1
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Material behind pilot counterbore",
+      "part": "P_CRANK_CHEEK",
+      "local_point_mm": [
+        6.5,
+        0,
+        3
+      ],
+      "expected_material": true,
+      "measured_material": true,
+      "passed": true
+    },
+    {
+      "check": "Recessed shaft end-stop pocket",
+      "part": "P_CRANK_CHEEK",
+      "local_point_mm": [
+        6,
+        0,
+        6
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Bearing retainer clears inner ring",
+      "part": "P_BEARING_RETAINER",
+      "local_point_mm": [
+        0,
+        0,
+        1
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Bearing retainer outer-ring land",
+      "part": "P_BEARING_RETAINER",
+      "local_point_mm": [
+        10.5,
+        0,
+        1
+      ],
+      "expected_material": true,
+      "measured_material": true,
+      "passed": true
+    },
+    {
+      "check": "Printed gear central pilot bore",
+      "part": "P_S1_PINION",
+      "local_point_mm": [
+        0,
+        0,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S1_PINION",
+      "local_point_mm": [
+        -8,
+        -8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S1_PINION",
+      "local_point_mm": [
+        -8,
+        8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S1_PINION",
+      "local_point_mm": [
+        8,
+        -8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S1_PINION",
+      "local_point_mm": [
+        8,
+        8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear central pilot bore",
+      "part": "P_S1_WHEEL",
+      "local_point_mm": [
+        0,
+        0,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S1_WHEEL",
+      "local_point_mm": [
+        -8,
+        -8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S1_WHEEL",
+      "local_point_mm": [
+        -8,
+        8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S1_WHEEL",
+      "local_point_mm": [
+        8,
+        -8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S1_WHEEL",
+      "local_point_mm": [
+        8,
+        8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear central pilot bore",
+      "part": "P_S2_PINION",
+      "local_point_mm": [
+        0,
+        0,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S2_PINION",
+      "local_point_mm": [
+        -8,
+        -8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S2_PINION",
+      "local_point_mm": [
+        -8,
+        8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S2_PINION",
+      "local_point_mm": [
+        8,
+        -8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S2_PINION",
+      "local_point_mm": [
+        8,
+        8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear central pilot bore",
+      "part": "P_S2_WHEEL",
+      "local_point_mm": [
+        0,
+        0,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S2_WHEEL",
+      "local_point_mm": [
+        -8,
+        -8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S2_WHEEL",
+      "local_point_mm": [
+        -8,
+        8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S2_WHEEL",
+      "local_point_mm": [
+        8,
+        -8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Printed gear real M4 through-hole",
+      "part": "P_S2_WHEEL",
+      "local_point_mm": [
+        8,
+        8,
+        4
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        4.5,
+        0.0,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        3.897114317029974,
+        2.2499999999999996,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        2.2500000000000004,
+        3.8971143170299736,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        2.755455298081545e-16,
+        4.5,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        -2.249999999999999,
+        3.897114317029974,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        -3.897114317029974,
+        2.2499999999999996,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        -4.5,
+        5.51091059616309e-16,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        -3.8971143170299736,
+        -2.2500000000000004,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        -2.2500000000000018,
+        -3.8971143170299727,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        -8.266365894244633e-16,
+        -4.5,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        2.2500000000000004,
+        -3.8971143170299736,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Rotor clears an8mm shaft with radial margin",
+      "part": "P_ROTOR_CUP",
+      "local_point_mm": [
+        3.8971143170299727,
+        -2.2500000000000018,
+        79.0
+      ],
+      "expected_material": false,
+      "measured_material": false,
+      "passed": true
+    },
+    {
+      "check": "Window BOM description derives from this stage",
+      "part": "S_WINDOW_1",
+      "expected": "fourM3x35,10shaft apertures",
+      "passed": true
+    },
+    {
+      "check": "Window screw straight-tool path after carrier-first disassembly",
+      "screw": "H_bolt_3_35_007",
+      "tool": "2.5AF hex bit30mm outboard of actual socket",
+      "removed_parts": [
+        "H_608_009",
+        "H_608_010",
+        "H_bolt_3_10_017",
+        "H_bolt_3_10_018",
+        "H_bolt_3_10_019",
+        "H_bolt_3_10_020",
+        "H_button_4_8_009",
+        "H_button_4_8_011",
+        "H_endwasher_4_009",
+        "H_endwasher_4_011",
+        "H_locknut_4_009",
+        "H_locknut_4_011",
+        "H_locknut_4_013",
+        "H_locknut_4_015",
+        "H_nut_3_017",
+        "H_nut_3_018",
+        "H_nut_3_019",
+        "H_nut_3_020",
+        "H_washer_4_0p8_044",
+        "H_washer_4_0p8_046",
+        "H_washer_4_0p8_048",
+        "H_washer_4_0p8_050",
+        "P_BEARING_RETAINER_009",
+        "P_BEARING_RETAINER_010",
+        "P_FRAME_FRONT_LEFT_001"
+      ],
+      "intersections": [],
+      "passed": true,
+      "assembly_state": "Machine independently supported, shaft end stops and outboard carrier with its bearing/carriage/retainer fasteners removed. All farther-out stages on this side removed, with their windows and trays. Long shafts and main bearings remain."
+    },
+    {
+      "check": "Window screw straight-tool path after carrier-first disassembly",
+      "screw": "H_bolt_3_35_008",
+      "tool": "2.5AF hex bit30mm outboard of actual socket",
+      "removed_parts": [
+        "H_608_009",
+        "H_608_010",
+        "H_bolt_3_10_017",
+        "H_bolt_3_10_018",
+        "H_bolt_3_10_019",
+        "H_bolt_3_10_020",
+        "H_button_4_8_009",
+        "H_button_4_8_011",
+        "H_endwasher_4_009",
+        "H_endwasher_4_011",
+        "H_locknut_4_009",
+        "H_locknut_4_011",
+        "H_locknut_4_013",
+        "H_locknut_4_015",
+        "H_nut_3_017",
+        "H_nut_3_018",
+        "H_nut_3_019",
+        "H_nut_3_020",
+        "H_washer_4_0p8_044",
+        "H_washer_4_0p8_046",
+        "H_washer_4_0p8_048",
+        "H_washer_4_0p8_050",
+        "P_BEARING_RETAINER_009",
+        "P_BEARING_RETAINER_010",
+        "P_FRAME_FRONT_LEFT_001"
+      ],
+      "intersections": [],
+      "passed": true,
+      "assembly_state": "Machine independently supported, shaft end stops and outboard carrier with its bearing/carriage/retainer fasteners removed. All farther-out stages on this side removed, with their windows and trays. Long shafts and main bearings remain."
+    },
+    {
+      "check": "Window screw straight-tool path after carrier-first disassembly",
+      "screw": "H_bolt_3_35_009",
+      "tool": "2.5AF hex bit30mm outboard of actual socket",
+      "removed_parts": [
+        "H_608_009",
+        "H_608_010",
+        "H_bolt_3_10_017",
+        "H_bolt_3_10_018",
+        "H_bolt_3_10_019",
+        "H_bolt_3_10_020",
+        "H_button_4_8_009",
+        "H_button_4_8_011",
+        "H_endwasher_4_009",
+        "H_endwasher_4_011",
+        "H_locknut_4_009",
+        "H_locknut_4_011",
+        "H_locknut_4_013",
+        "H_locknut_4_015",
+        "H_nut_3_017",
+        "H_nut_3_018",
+        "H_nut_3_019",
+        "H_nut_3_020",
+        "H_washer_4_0p8_044",
+        "H_washer_4_0p8_046",
+        "H_washer_4_0p8_048",
+        "H_washer_4_0p8_050",
+        "P_BEARING_RETAINER_009",
+        "P_BEARING_RETAINER_010",
+        "P_FRAME_FRONT_LEFT_001"
+      ],
+      "intersections": [],
+      "passed": true,
+      "assembly_state": "Machine independently supported, shaft end stops and outboard carrier with its bearing/carriage/retainer fasteners removed. All farther-out stages on this side removed, with their windows and trays. Long shafts and main bearings remain."
+    },
+    {
+      "check": "Window screw straight-tool path after carrier-first disassembly",
+      "screw": "H_bolt_3_35_010",
+      "tool": "2.5AF hex bit30mm outboard of actual socket",
+      "removed_parts": [
+        "H_608_009",
+        "H_608_010",
+        "H_bolt_3_10_017",
+        "H_bolt_3_10_018",
+        "H_bolt_3_10_019",
+        "H_bolt_3_10_020",
+        "H_button_4_8_009",
+        "H_button_4_8_011",
+        "H_endwasher_4_009",
+        "H_endwasher_4_011",
+        "H_locknut_4_009",
+        "H_locknut_4_011",
+        "H_locknut_4_013",
+        "H_locknut_4_015",
+        "H_nut_3_017",
+        "H_nut_3_018",
+        "H_nut_3_019",
+        "H_nut_3_020",
+        "H_washer_4_0p8_044",
+        "H_washer_4_0p8_046",
+        "H_washer_4_0p8_048",
+        "H_washer_4_0p8_050",
+        "P_BEARING_RETAINER_009",
+        "P_BEARING_RETAINER_010",
+        "P_FRAME_FRONT_LEFT_001"
+      ],
+      "intersections": [],
+      "passed": true,
+      "assembly_state": "Machine independently supported, shaft end stops and outboard carrier with its bearing/carriage/retainer fasteners removed. All farther-out stages on this side removed, with their windows and trays. Long shafts and main bearings remain."
+    },
+    {
+      "check": "S1 cover nut rear access",
+      "moving": [
+        "H_nut_3_033"
+      ],
+      "assembly_state": "Guard off machine; cover screw removed; insert nut from open rear hex pocket.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "S1 cover nut rear access",
+      "moving": [
+        "H_nut_3_034"
+      ],
+      "assembly_state": "Guard off machine; cover screw removed; insert nut from open rear hex pocket.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "S1 cover nut rear access",
+      "moving": [
+        "H_nut_3_035"
+      ],
+      "assembly_state": "Guard off machine; cover screw removed; insert nut from open rear hex pocket.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "S1 cover nut rear access",
+      "moving": [
+        "H_nut_3_036"
+      ],
+      "assembly_state": "Guard off machine; cover screw removed; insert nut from open rear hex pocket.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "S1 gear/pulley and hub withdrawal",
+      "moving": [
+        "P_S1_PINION_001",
+        "P_S1_WHEEL_001",
+        "H_REX_HUB_009",
+        "H_REX_HUB_010"
+      ],
+      "assembly_state": "Window, end stops and front bearing carrier removed; any outer-stage gears AND tray removed first. Only this stage's open tray remains. Belt/pulleys removed together.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        24,
+        40,
+        60
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Window BOM description derives from this stage",
+      "part": "S_WINDOW_2",
+      "expected": "fourM3x35,10shaft apertures",
+      "passed": true
+    },
+    {
+      "check": "Window screw straight-tool path after carrier-first disassembly",
+      "screw": "H_bolt_3_35_011",
+      "tool": "2.5AF hex bit30mm outboard of actual socket",
+      "removed_parts": [
+        "H_608_011",
+        "H_608_012",
+        "H_bolt_3_10_021",
+        "H_bolt_3_10_022",
+        "H_bolt_3_10_023",
+        "H_bolt_3_10_024",
+        "H_button_4_8_008",
+        "H_button_4_8_012",
+        "H_endwasher_4_008",
+        "H_endwasher_4_012",
+        "H_locknut_4_017",
+        "H_locknut_4_019",
+        "H_locknut_4_021",
+        "H_locknut_4_023",
+        "H_nut_3_021",
+        "H_nut_3_022",
+        "H_nut_3_023",
+        "H_nut_3_024",
+        "H_washer_4_0p8_052",
+        "H_washer_4_0p8_054",
+        "H_washer_4_0p8_056",
+        "H_washer_4_0p8_058",
+        "P_BEARING_RETAINER_011",
+        "P_BEARING_RETAINER_012",
+        "P_FRAME_FRONT_RIGHT_001"
+      ],
+      "intersections": [],
+      "passed": true,
+      "assembly_state": "Machine independently supported, shaft end stops and outboard carrier with its bearing/carriage/retainer fasteners removed. All farther-out stages on this side removed, with their windows and trays. Long shafts and main bearings remain."
+    },
+    {
+      "check": "Window screw straight-tool path after carrier-first disassembly",
+      "screw": "H_bolt_3_35_012",
+      "tool": "2.5AF hex bit30mm outboard of actual socket",
+      "removed_parts": [
+        "H_608_011",
+        "H_608_012",
+        "H_bolt_3_10_021",
+        "H_bolt_3_10_022",
+        "H_bolt_3_10_023",
+        "H_bolt_3_10_024",
+        "H_button_4_8_008",
+        "H_button_4_8_012",
+        "H_endwasher_4_008",
+        "H_endwasher_4_012",
+        "H_locknut_4_017",
+        "H_locknut_4_019",
+        "H_locknut_4_021",
+        "H_locknut_4_023",
+        "H_nut_3_021",
+        "H_nut_3_022",
+        "H_nut_3_023",
+        "H_nut_3_024",
+        "H_washer_4_0p8_052",
+        "H_washer_4_0p8_054",
+        "H_washer_4_0p8_056",
+        "H_washer_4_0p8_058",
+        "P_BEARING_RETAINER_011",
+        "P_BEARING_RETAINER_012",
+        "P_FRAME_FRONT_RIGHT_001"
+      ],
+      "intersections": [],
+      "passed": true,
+      "assembly_state": "Machine independently supported, shaft end stops and outboard carrier with its bearing/carriage/retainer fasteners removed. All farther-out stages on this side removed, with their windows and trays. Long shafts and main bearings remain."
+    },
+    {
+      "check": "Window screw straight-tool path after carrier-first disassembly",
+      "screw": "H_bolt_3_35_013",
+      "tool": "2.5AF hex bit30mm outboard of actual socket",
+      "removed_parts": [
+        "H_608_011",
+        "H_608_012",
+        "H_bolt_3_10_021",
+        "H_bolt_3_10_022",
+        "H_bolt_3_10_023",
+        "H_bolt_3_10_024",
+        "H_button_4_8_008",
+        "H_button_4_8_012",
+        "H_endwasher_4_008",
+        "H_endwasher_4_012",
+        "H_locknut_4_017",
+        "H_locknut_4_019",
+        "H_locknut_4_021",
+        "H_locknut_4_023",
+        "H_nut_3_021",
+        "H_nut_3_022",
+        "H_nut_3_023",
+        "H_nut_3_024",
+        "H_washer_4_0p8_052",
+        "H_washer_4_0p8_054",
+        "H_washer_4_0p8_056",
+        "H_washer_4_0p8_058",
+        "P_BEARING_RETAINER_011",
+        "P_BEARING_RETAINER_012",
+        "P_FRAME_FRONT_RIGHT_001"
+      ],
+      "intersections": [],
+      "passed": true,
+      "assembly_state": "Machine independently supported, shaft end stops and outboard carrier with its bearing/carriage/retainer fasteners removed. All farther-out stages on this side removed, with their windows and trays. Long shafts and main bearings remain."
+    },
+    {
+      "check": "Window screw straight-tool path after carrier-first disassembly",
+      "screw": "H_bolt_3_35_014",
+      "tool": "2.5AF hex bit30mm outboard of actual socket",
+      "removed_parts": [
+        "H_608_011",
+        "H_608_012",
+        "H_bolt_3_10_021",
+        "H_bolt_3_10_022",
+        "H_bolt_3_10_023",
+        "H_bolt_3_10_024",
+        "H_button_4_8_008",
+        "H_button_4_8_012",
+        "H_endwasher_4_008",
+        "H_endwasher_4_012",
+        "H_locknut_4_017",
+        "H_locknut_4_019",
+        "H_locknut_4_021",
+        "H_locknut_4_023",
+        "H_nut_3_021",
+        "H_nut_3_022",
+        "H_nut_3_023",
+        "H_nut_3_024",
+        "H_washer_4_0p8_052",
+        "H_washer_4_0p8_054",
+        "H_washer_4_0p8_056",
+        "H_washer_4_0p8_058",
+        "P_BEARING_RETAINER_011",
+        "P_BEARING_RETAINER_012",
+        "P_FRAME_FRONT_RIGHT_001"
+      ],
+      "intersections": [],
+      "passed": true,
+      "assembly_state": "Machine independently supported, shaft end stops and outboard carrier with its bearing/carriage/retainer fasteners removed. All farther-out stages on this side removed, with their windows and trays. Long shafts and main bearings remain."
+    },
+    {
+      "check": "S2 cover nut rear access",
+      "moving": [
+        "H_nut_3_037"
+      ],
+      "assembly_state": "Guard off machine; cover screw removed; insert nut from open rear hex pocket.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "S2 cover nut rear access",
+      "moving": [
+        "H_nut_3_038"
+      ],
+      "assembly_state": "Guard off machine; cover screw removed; insert nut from open rear hex pocket.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "S2 cover nut rear access",
+      "moving": [
+        "H_nut_3_039"
+      ],
+      "assembly_state": "Guard off machine; cover screw removed; insert nut from open rear hex pocket.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "S2 cover nut rear access",
+      "moving": [
+        "H_nut_3_040"
+      ],
+      "assembly_state": "Guard off machine; cover screw removed; insert nut from open rear hex pocket.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "S2 gear/pulley and hub withdrawal",
+      "moving": [
+        "P_S2_PINION_001",
+        "P_S2_WHEEL_001",
+        "H_REX_HUB_011",
+        "H_REX_HUB_012"
+      ],
+      "assembly_state": "Window, end stops and front bearing carrier removed; any outer-stage gears AND tray removed first. Only this stage's open tray remains. Belt/pulleys removed together.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        24,
+        40,
+        60
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_4_001"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_4_002"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_4_003"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_4_004"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_3_025"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_3_026"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_3_027"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_3_028"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": 1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_4_005"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_4_006"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_4_007"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_4_008"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_3_029"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_3_030"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_3_031"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    },
+    {
+      "check": "Rotor nut access from cup interior",
+      "moving": [
+        "H_nut_3_032"
+      ],
+      "assembly_state": "Mating screw removed; move nut toward rotor interior. Other printed rotor parts remain; verifies pocket is not sealed by cup wall.",
+      "axis": "X",
+      "direction": -1,
+      "sample_distances_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20
+      ],
+      "maximum_intersection_mm3": 0.0,
+      "pass_limit_mm3": 0.05,
+      "passed": true
+    }
+  ],
+  "limitations": "Sampled native-solid paths in explicitly stated partial assemblies; not automated tool/hand ergonomics, a hardware trial, or a claim that parts pass through an assembled bearing carrier."
+}

@@ -1,0 +1,100 @@
+prototype,part_id,category,quantity,specification,nominal_unit_mass_g,nominal_total_mass_g,mass_basis
+A,H_608,purchased,12,"608-ZZ 8x22x7; ring/ shield envelopes, assumed12g, verify actual ring faces and starting drag.",12,144,assumed unit mass
+A,H_BELT520,purchased,1,"goBILDA3412-0009-0520, HTD5M,104teeth,520pitch length,9width; neoprene/fiberglass; CAD envelope excludes meshing-tooth detail.",21.3404,21.3404,nominal solid volume x assumed density
+A,H_BODY_TIE,cut_to_length,2,Steel M4 threaded rod x284; simplified thread.,28.0155,56.0309,nominal solid volume x assumed density
+A,H_CASE_TIE_LEFT,cut_to_length,4,Steel M4 case tie length96; front carrier and guard-tab supports.,9.47,37.8801,nominal solid volume x assumed density
+A,H_CASE_TIE_RIGHT,cut_to_length,4,Steel M4 case tie length84; front carrier and guard-tab supports.,8.2863,33.1451,nominal solid volume x assumed density
+A,H_COLLAR6,purchased,4,"Split collar6 ID, envelope16ODx8, M3 clamp; stationary pivot retention.",9.8606,39.4423,nominal solid volume x assumed density
+A,H_COLLAR8,purchased,5,"Split collar8 ID, envelope18ODx8, M3 clamp. Axial retention only; procurement and tightening spec pending.",11.768,58.8398,nominal solid volume x assumed density
+A,H_PIVOT_ROD6,cut_to_length,2,"Ground steel6 x282, h8 target; verify finish/straightness; supported at84 mm intervals.",62.5909,125.1818,nominal solid volume x assumed density
+A,H_PULLEY24,purchased,1,"goBILDA3411-0014-0024;24T HTD5M,14bore,38.9flanges,12width,9.25belt channel; use unthreaded/counterbored16-square pattern (clocked45deg from threaded pattern); tooth envelope only.",23,23,catalogue
+A,H_PULLEY48,purchased,1,"goBILDA3415-0014-0048;48T HTD5M,14bore,78.7flanges,12width,9.3channel;4mm clearance grid; simplified purchased tooth envelope.",42,42,catalogue
+A,H_REX_HUB,purchased,12,"goBILDA1309-0016-4008, REX8/7AF, 32ODx8 plus14pilotx2, 4xM4 on16square. REX corner datum15deg; reversed hub indexed90deg without moving bolt holes. Flexure and supplied clamp screws simplified.",14,168,catalogue
+A,H_SOLE_STRAP,purchased,12,"Replaceable nylon cable tie, nominal4 wide; two per sole/plate; lock head simplified; mechanical retention, not adhesive.",0.1166,1.3992,nominal solid volume x assumed density
+A,H_bolt_3_10,purchased,24,"ISO 4762 M3x10, socket head; simplified thread",1.0507,25.2158,nominal solid volume x assumed density
+A,H_bolt_3_16,purchased,8,"ISO 4762 M3x16, socket head; simplified thread",1.3836,11.0687,nominal solid volume x assumed density
+A,H_bolt_3_20,purchased,6,"ISO 4762 M3x20, socket head; simplified thread",1.6055,9.6332,nominal solid volume x assumed density
+A,H_bolt_3_25,purchased,9,"ISO 4762 M3x25, socket head; simplified thread",1.883,16.9468,nominal solid volume x assumed density
+A,H_bolt_3_30,purchased,3,"ISO 4762 M3x30, socket head; simplified thread",2.1604,6.4813,nominal solid volume x assumed density
+A,H_bolt_3_35,purchased,10,"ISO 4762 M3x35, socket head; simplified thread",2.4379,24.3787,nominal solid volume x assumed density
+A,H_bolt_3_40,purchased,4,"ISO 4762 M3x40, socket head; simplified thread",2.7153,10.8612,nominal solid volume x assumed density
+A,H_bolt_3_55,purchased,6,"ISO 4762 M3x55, socket head; simplified thread",3.5476,21.2858,nominal solid volume x assumed density
+A,H_bolt_4_12,purchased,8,"ISO 4762 M4x12, socket head; simplified thread",2.2698,18.1584,nominal solid volume x assumed density
+A,H_bolt_4_16,purchased,20,"ISO 4762 M4x16, socket head; simplified thread",2.6644,53.2876,nominal solid volume x assumed density
+A,H_bolt_4_20,purchased,4,"ISO 4762 M4x20, socket head; simplified thread",3.059,12.2359,nominal solid volume x assumed density
+A,H_bolt_4_45,purchased,3,"ISO 4762 M4x45, socket head; simplified thread",5.5251,16.5753,nominal solid volume x assumed density
+A,H_button_4_8,purchased,12,ISO 7380-1 M4x8; simplified thread,1.5259,18.3105,nominal solid volume x assumed density
+A,H_countersunk_4_16,purchased,24,"ISO 10642 M4x16, 90-degree countersunk, 2.5 mm hex; flush below cheek face; simplified thread",1.7777,42.6638,nominal solid volume x assumed density
+A,H_countersunk_4_30,purchased,12,"ISO 10642 M4x30, 90-degree countersunk, 2.5 mm hex; flush below cheek face; simplified thread",3.1587,37.9044,nominal solid volume x assumed density
+A,H_crank_sleeve_4_3p2,cut_to_length,12,Cut brass tube 4.2 ID x 6 OD x 3.2; crank journal/spacer,0.3922,4.7067,nominal solid volume x assumed density
+A,H_crank_sleeve_4_4p7,cut_to_length,3,Cut brass tube 4.2 ID x 6 OD x 4.7; crank journal/spacer,0.5761,1.7282,nominal solid volume x assumed density
+A,H_endwasher_4,purchased,12,Steel end-stop washer 4.2 ID x 12 OD x 0.8; positive shaft retention,0.6232,7.4789,nominal solid volume x assumed density
+A,H_inner_spacer_3_1p7,cut_to_length,3,Steel spacer/shim 8.1 ID x 10 OD x 1.7; INNER RING ONLY,0.3604,1.0813,nominal solid volume x assumed density
+A,H_inner_spacer_3_2p6,cut_to_length,2,Steel spacer/shim 8.1 ID x 10 OD x 2.6; INNER RING ONLY,0.5513,1.1025,nominal solid volume x assumed density
+A,H_inner_spacer_3_3p1,cut_to_length,1,Steel spacer/shim 8.1 ID x 10 OD x 3.1; INNER RING ONLY,0.6573,0.6573,nominal solid volume x assumed density
+A,H_locknut_3,purchased,30,ISO 10511 prevailing-torque M3 nut; simplified thread,0.6006,18.0192,nominal solid volume x assumed density
+A,H_locknut_4,purchased,35,ISO 10511 prevailing-torque M4 nut; simplified thread,1.1724,41.0324,nominal solid volume x assumed density
+A,H_nut_3,purchased,40,ISO 4032 M3 nut; simplified thread,0.3604,14.4154,nominal solid volume x assumed density
+A,H_nut_4,purchased,8,ISO 4032 M4 nut; simplified thread,0.7503,6.0024,nominal solid volume x assumed density
+A,H_pivot_sleeve_3_3p2,cut_to_length,12,Cut brass sleeve 6.1 ID x 8 OD x 3.2; stationary pivot journal,0.5723,6.8677,nominal solid volume x assumed density
+A,H_pivot_sleeve_3_4p7,cut_to_length,3,Cut brass sleeve 6.1 ID x 8 OD x 4.7; stationary pivot journal,0.8406,2.5217,nominal solid volume x assumed density
+A,H_pivot_sleeve_3_4p8,cut_to_length,6,Cut brass sleeve 6.1 ID x 8 OD x 4.8; stationary pivot journal,0.8585,5.1508,nominal solid volume x assumed density
+A,H_pivot_sleeve_3_55p7,cut_to_length,3,Cut brass sleeve 6.1 ID x 8 OD x 55.7; stationary pivot journal,9.9618,29.8853,nominal solid volume x assumed density
+A,H_pivot_sleeve_3_59p7,cut_to_length,3,Cut brass sleeve 6.1 ID x 8 OD x 59.7; stationary pivot journal,10.6772,32.0315,nominal solid volume x assumed density
+A,H_pivot_sleeve_3_8p7,cut_to_length,3,Cut brass sleeve 6.1 ID x 8 OD x 8.7; stationary pivot journal,1.556,4.6679,nominal solid volume x assumed density
+A,H_shaft_8_111p5,cut_to_length,1,"8 mm REX, 7 mm AF, corner datum15deg, cut to 111.5; M4x10 axial tapped holes both ends; machining/procurement verification pending",35.7839,35.7839,nominal solid volume x assumed density
+A,H_shaft_8_372,cut_to_length,1,"8 mm REX, 7 mm AF, corner datum15deg, cut to 372; M4x10 axial tapped holes both ends; machining/procurement verification pending",122.5239,122.5239,nominal solid volume x assumed density
+A,H_shaft_8_37p5,cut_to_length,1,"8 mm REX, 7 mm AF, corner datum15deg, cut to 37.5; M4x10 axial tapped holes both ends; machining/procurement verification pending",11.1437,11.1437,nominal solid volume x assumed density
+A,H_shaft_8_408,cut_to_length,1,"8 mm REX, 7 mm AF, corner datum15deg, cut to 408; M4x10 axial tapped holes both ends; machining/procurement verification pending",134.511,134.511,nominal solid volume x assumed density
+A,H_shaft_8_57,cut_to_length,2,"8 mm REX, 7 mm AF, corner datum15deg, cut to 57; M4x10 axial tapped holes both ends; machining/procurement verification pending",17.6368,35.2735,nominal solid volume x assumed density
+A,H_sleeve_3_10,cut_to_length,3,"Cut brass tube 3.2 ID x 4 OD x 10, deburred; bearing journal/rigid clamp stack",0.3845,1.1536,nominal solid volume x assumed density
+A,H_sleeve_3_12p3,cut_to_length,3,"Cut brass tube 3.2 ID x 4 OD x 12.3, deburred; bearing journal/rigid clamp stack",0.473,1.4189,nominal solid volume x assumed density
+A,H_sleeve_3_37p3,cut_to_length,6,"Cut brass tube 3.2 ID x 4 OD x 37.3, deburred; bearing journal/rigid clamp stack",1.4343,8.6058,nominal solid volume x assumed density
+A,H_sleeve_3_3p2,cut_to_length,60,"Cut brass tube 3.2 ID x 4 OD x 3.2, deburred; bearing journal/rigid clamp stack",0.123,7.383,nominal solid volume x assumed density
+A,H_sleeve_3_4p6,cut_to_length,3,"Cut brass tube 3.2 ID x 4 OD x 4.6, deburred; bearing journal/rigid clamp stack",0.1769,0.5307,nominal solid volume x assumed density
+A,H_sleeve_3_6p6,cut_to_length,3,"Cut brass tube 3.2 ID x 4 OD x 6.6, deburred; bearing journal/rigid clamp stack",0.2538,0.7614,nominal solid volume x assumed density
+A,H_sleeve_3_7p3,cut_to_length,6,"Cut brass tube 3.2 ID x 4 OD x 7.3, deburred; bearing journal/rigid clamp stack",0.2807,1.6842,nominal solid volume x assumed density
+A,H_sleeve_3_8,cut_to_length,3,"Cut brass tube 3.2 ID x 4 OD x 8, deburred; bearing journal/rigid clamp stack",0.3076,0.9229,nominal solid volume x assumed density
+A,H_sleeve_3_8p9,cut_to_length,3,"Cut brass tube 3.2 ID x 4 OD x 8.9, deburred; bearing journal/rigid clamp stack",0.3422,1.0267,nominal solid volume x assumed density
+A,H_tie_tube_3_14,cut_to_length,2,Cut aluminium tube 6 ID x 10 OD x 14; square ends,1.9,3.8001,nominal solid volume x assumed density
+A,H_tie_tube_3_36,cut_to_length,2,Cut aluminium tube 6 ID x 10 OD x 36; square ends,4.8858,9.7716,nominal solid volume x assumed density
+A,H_tie_tube_3_40,cut_to_length,2,Cut aluminium tube 6 ID x 10 OD x 40; square ends,5.4287,10.8573,nominal solid volume x assumed density
+A,H_tie_tube_3_44,cut_to_length,2,Cut aluminium tube 6 ID x 10 OD x 44; square ends,5.9715,11.9431,nominal solid volume x assumed density
+A,H_tie_tube_3_56,cut_to_length,2,Cut aluminium tube 6 ID x 10 OD x 56; square ends,7.6001,15.2003,nominal solid volume x assumed density
+A,H_tie_tube_3_6,cut_to_length,2,Cut aluminium tube 6 ID x 10 OD x 6; square ends,0.8143,1.6286,nominal solid volume x assumed density
+A,H_tie_tube_3_76,cut_to_length,6,Cut aluminium tube 6 ID x 10 OD x 76; square ends,10.3145,61.8869,nominal solid volume x assumed density
+A,H_washer_3_0p5,purchased,118,Washer 3.2 ID x 7 OD x 0.5; verify purchased thickness,0.1195,14.0992,nominal solid volume x assumed density
+A,H_washer_4_0p5,purchased,15,Washer 4.2 ID x 9 OD x 0.5; verify purchased thickness,0.1953,2.9298,nominal solid volume x assumed density
+A,H_washer_4_0p8,purchased,66,Washer 4.2 ID x 9 OD x 0.8; verify purchased thickness,0.3125,20.6257,nominal solid volume x assumed density
+A,L_AB,printed,6,"PETG Jansen L_AB; thickness3, web8; P bore8.2, A bore6.2, other joints4.2; mirrored triangles have_R suffix.",2.1741,13.0448,nominal solid volume x assumed density
+A,L_AC,printed,6,"PETG Jansen L_AC; thickness3, web7.5; P bore8.2, A bore6.2, other joints4.2; mirrored triangles have_R suffix.",2.5164,15.0982,nominal solid volume x assumed density
+A,L_CEF,printed,3,"PETG Jansen L_CEF; thickness3, web8; P bore8.2, A bore6.2, other joints4.2; mirrored triangles have_R suffix.",5.9561,17.8684,nominal solid volume x assumed density
+A,L_CEF_R,printed,3,"PETG Jansen L_CEF_R; thickness3, web8; P bore8.2, A bore6.2, other joints4.2; mirrored triangles have_R suffix.",5.9561,17.8684,nominal solid volume x assumed density
+A,L_DE,printed,6,"PETG Jansen L_DE; thickness3, web8; P bore8.2, A bore6.2, other joints4.2; mirrored triangles have_R suffix.",1.7255,10.3528,nominal solid volume x assumed density
+A,L_PBD,printed,3,"PETG Jansen L_PBD; thickness3, web8; P bore8.2, A bore6.2, other joints4.2; mirrored triangles have_R suffix.",5.4686,16.4057,nominal solid volume x assumed density
+A,L_PBD_R,printed,3,"PETG Jansen L_PBD_R; thickness3, web8; P bore8.2, A bore6.2, other joints4.2; mirrored triangles have_R suffix.",5.4686,16.4057,nominal solid volume x assumed density
+A,L_PC,printed,6,"PETG Jansen L_PC; thickness3, web8; P bore8.2, A bore6.2, other joints4.2; mirrored triangles have_R suffix.",1.8592,11.1552,nominal solid volume x assumed density
+A,P_BEARING_RETAINER,printed,12,"44ODx2,20.2aperture,twoM3 on32PCD; outer ring only.",2.9337,35.2046,nominal solid volume x assumed density
+A,P_CRANK_CHEEK,printed,6,"8 thick, crank21; metal flange4M4x16 countersunk; recessed M4 shaft end stops; M4 shared crank pin.",8.7269,52.3613,nominal solid volume x assumed density
+A,P_FRAME_CORE,printed,2,"PETG 8 thick x14 ribs; actual preserve seats/bolt holes; core; 22.2 bearing seats, 20.2 outer-ring shoulders.",71.0565,142.1129,nominal solid volume x assumed density
+A,P_FRAME_FRONT_LEFT,printed,1,"PETG 8 thick x14 ribs; actual preserve seats/bolt holes; front_left; 22.2 bearing seats, 20.2 outer-ring shoulders.",115.5547,115.5547,nominal solid volume x assumed density
+A,P_FRAME_FRONT_RIGHT,printed,1,"PETG 8 thick x14 ribs; actual preserve seats/bolt holes; front_right; 22.2 bearing seats, 20.2 outer-ring shoulders.",143.0748,143.0748,nominal solid volume x assumed density
+A,P_FRAME_LEFT,printed,1,"PETG 8 thick x14 ribs; actual preserve seats/bolt holes; left; 22.2 bearing seats, 20.2 outer-ring shoulders.",260.7298,260.7298,nominal solid volume x assumed density
+A,P_FRAME_RIGHT,printed,1,"PETG 8 thick x14 ribs; actual preserve seats/bolt holes; right; 22.2 bearing seats, 20.2 outer-ring shoulders.",267.9912,267.9912,nominal solid volume x assumed density
+A,P_GUARD_1,printed,1,"Per-stage guard35 deep,2back/2.5walls, two chassis-rod tabs, rear-accessible captiveM3 cover nuts; not certified containment.",175.8512,175.8512,nominal solid volume x assumed density
+A,P_GUARD_2,printed,1,"Per-stage guard31 deep,2back/2.5walls, two chassis-rod tabs, rear-accessible captiveM3 cover nuts; not certified containment.",198.6707,198.6707,nominal solid volume x assumed density
+A,P_INPUT_CARRIAGE_FLOAT,printed,2,"48x48x8 input bearing carriage, fourM4 countersunk mounts in real +/-1.5mm frame slots; align all3 carriages together before tensioning.",17.9563,35.9125,nominal solid volume x assumed density
+A,P_INPUT_CARRIAGE_LOC,printed,1,"48x48x8 input bearing carriage, fourM4 countersunk mounts in real +/-1.5mm frame slots; align all3 carriages together before tensioning.",17.9975,17.9975,nominal solid volume x assumed density
+A,P_ROTOR_CORE,printed,1,"Rotor core/endplate5 thick,14.2pilot,4M4 mounting; opposite end has mirrored hole pattern.",29.8147,29.8147,nominal solid volume x assumed density
+A,P_ROTOR_CORE_R,printed,1,"Rotor core/endplate5 thick,14.2pilot,4M4 mounting; opposite end has mirrored hole pattern.",29.8147,29.8147,nominal solid volume x assumed density
+A,P_ROTOR_CUP,printed,2,"Scoop for diameter300, span180, wall2.4; shaft clearance10; open-access M3 nuts.",122.1094,244.2188,nominal solid volume x assumed density
+A,P_ROTOR_YOKE,printed,2,"One fused fork per cup/end, thickness8,width16; twoM4 root fasteners and twoM3 cup fasteners; no overlapping separate spokes.",26.9676,53.9353,nominal solid volume x assumed density
+A,P_ROTOR_YOKE_R,printed,2,"One fused fork per cup/end, thickness8,width16; twoM4 root fasteners and twoM3 cup fasteners; no overlapping separate spokes.",26.9676,53.9353,nominal solid volume x assumed density
+A,P_S2_PINION,printed,1,"Involute20deg,m2.0,z29,8face,pair backlash0.30;4M4 bolted REX hub; phase follows actual stage axis vector.",23.4641,23.4641,nominal solid volume x assumed density
+A,P_S2_WHEEL,printed,1,"Involute20deg,m2.0,z87,8face,pair backlash0.30;4M4 bolted REX hub; phase follows actual stage axis vector.",148.9092,148.9092,nominal solid volume x assumed density
+A,P_SHOE,printed,6,"PETG shoe40.0x18.0x5.0, free M3/4mm-bush pitch hinge; replaceable sole; foot dimensions include drivetrain COG/foot-sweep tradeoff.",5.004,30.024,nominal solid volume x assumed density
+A,Q_BEARING_FIT,printed,0,Separate21.9/22.1/22.3 bearing seat coupon; assembly quantity0.,17.9759,0.0,nominal solid volume x assumed density
+A,Q_JOINT_FIT,printed,0,Separate4.0/4.2/6.0/6.2/8.2 bore coupon; assembly quantity0.,9.5127,0.0,nominal solid volume x assumed density
+A,S_SOLE,cut_to_length,6,"Rubber/foam sole40.0x18.0x3; two4.2-wide,0.5-deep strap recesses; grip/compliance unmeasured; density0.8 assumed.",1.6675,10.0051,nominal solid volume x assumed density
+A,S_WINDOW_1,cut_to_length,1,"Clear PETG sheet1, cut/drill from CAD, fourM3x40,13shaft apertures; not a printed part. Four additional8.4mm carriage-screw clearance holes on36mm square around input axis, including +/-1.5mm adjustment.",47.3859,47.3859,nominal solid volume x assumed density
+A,S_WINDOW_2,cut_to_length,1,"Clear PETG sheet1, cut/drill from CAD, fourM3x35,10shaft apertures; not a printed part.",60.8663,60.8663,nominal solid volume x assumed density

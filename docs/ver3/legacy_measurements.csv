@@ -1,0 +1,39 @@
+file,x_extent,y_extent,z_extent,faces,unit_assumption,sha256
+STL/Ver.2/Crankshaft_Part1.stl,40.702026,97.305611,37.386913,2328,raw STL coordinates interpreted as mm; no150% multiplier,423c0cbbe167e842408816b41c4ef23aa6bd1368adae113ff230181a51e3caff
+STL/Ver.2/Crankshaft_Part2.stl,14.996399,14.996857,11.342785,472,raw STL coordinates interpreted as mm; no150% multiplier,6a15db77ef2345e49c6bfa43d9ca0924d40500c9b91e4567f86d9a8f3740f8f6
+STL/Ver.2/Crankshaft_Part3.stl,14.997986,14.997238,14.401085,476,raw STL coordinates interpreted as mm; no150% multiplier,77fd57437e663232e11fe037a49ca6b186dcaf376385cf55338c2a445e0b73db
+STL/Ver.2/Savonius Low-Profile Wind Turbine Model (Part 1 of 3).stl,89.991333,89.988647,180.691895,1646,raw STL coordinates interpreted as mm; no150% multiplier,1ac6db404f5d23370e00738e70f7bf2cda44463df701228b5bb023f9a8c71ad5
+STL/Ver.2/Savonius Low-Profile Wind Turbine Model (Part 2 of 3).stl,89.980499,89.985672,8.308098,826,raw STL coordinates interpreted as mm; no150% multiplier,a91e70b4035a6fee475bcc78da1795956a4412e82f193fb0bb5a2c059643596c
+STL/Ver.2/Savonius Low-Profile Wind Turbine Model (Part 3 of 3).stl,89.979919,89.989922,4.5,628,raw STL coordinates interpreted as mm; no150% multiplier,387e49349cfd3b2b93c00b339e9392b3099e095d1fde7b6acae7f28635031ce9
+STL/Ver.2/Six-Blade Wind Turbine – Part 1 of 3.stl,89.964417,89.982208,182.143967,762,raw STL coordinates interpreted as mm; no150% multiplier,63eeb9da5745565db540a4d5fd6d9b44d97113530e5825e18d393131b289953e
+STL/Ver.2/Six-Blade Wind Turbine – Part 2 of 3.stl,89.964424,89.982216,3.85603,714,raw STL coordinates interpreted as mm; no150% multiplier,6414012dbff4ea15ede4de727dff265043efc25fcd7d0bef99a146e5d736b1a2
+STL/Ver.2/Six-Blade Wind Turbine – Part 3 of 3.stl,89.979858,89.989929,9.0,952,raw STL coordinates interpreted as mm; no150% multiplier,7dfdeab92127b54e11b71e6ae96a811cc6a4072861bfce228efa503e1ead4a1a
+STL/Ver.2/cap.stl,16.075851,14.77356,5.0,300,raw STL coordinates interpreted as mm; no150% multiplier,046672b54ec380f5791b9f245d65e9d50e05ed8f58d3c9e57447054a2bd48f74
+STL/Ver.2/cap2.stl,8.0,9.23761,6.0,352,raw STL coordinates interpreted as mm; no150% multiplier,6fd27501fa14cb642a8dbf709de9b169fa6e499ebc0ec76279cd159f78e14fdd
+STL/Ver.2/cap3.stl,8.0,9.237595,19.0,524,raw STL coordinates interpreted as mm; no150% multiplier,2d2b2e62ec27cd2c1dc1d408233f7a13d3b8cbff857bc7d876dea2132739ab70
+STL/Ver.2/edgev2A.stl,100.49353,158.040321,18.000021,1320,raw STL coordinates interpreted as mm; no150% multiplier,12b818755d470486572b4e31fbccc06b115a27459e95a1ea09e67548e49954ad
+STL/Ver.2/edgev2B.stl,100.541504,157.940331,16.612953,1970,raw STL coordinates interpreted as mm; no150% multiplier,550573a7ad9f57ac973cbef0cdd87e760c5697d7115c0cb2301ae66b1c415daa
+STL/Ver.2/edgev2C.stl,100.541504,157.940331,16.612953,2354,raw STL coordinates interpreted as mm; no150% multiplier,d3bd3e204a92834ee7211f565fec014a1736e2fc2a7148607330f915b4f05464
+STL/Ver.2/gear.stl,67.443592,67.485023,23.0,13546,raw STL coordinates interpreted as mm; no150% multiplier,c0e8dcc1d00b7f06a650334f36564654bb3418474fa6ab0ac6f75c115e9d8c76
+STL/Ver.2/gear2.stl,21.0,21.0,23.0,5466,raw STL coordinates interpreted as mm; no150% multiplier,198becc191f3262e029a80883942d2a5465c3f4f47ea1c4228d4cc8ad4484f8f
+STL/Ver.2/gear3.stl,67.443588,67.485016,12.0,9784,raw STL coordinates interpreted as mm; no150% multiplier,84226894d3bc631fce03f587ac1a94913bea7f69cd058cf10ccd4b343999256f
+STL/Ver.2/gear4.stl,47.99884,47.831177,17.0,7194,raw STL coordinates interpreted as mm; no150% multiplier,8c2d1b9d96b29e6acd1dad589c9a959c7e942979ae6b5e9ac85e2a5639233983
+STL/Ver.2/gear5.stl,38.999329,38.999329,14.000015,4972,raw STL coordinates interpreted as mm; no150% multiplier,47c711da5cb0873ae7a1a7bf90cc23ab504c684cffba0ff3df3bef6f3d8f1b32
+STL/Ver.2/hook1-2.stl,77.992737,17.690262,1.500007,904,raw STL coordinates interpreted as mm; no150% multiplier,d49acc367e67e231edaaae48cb98de992bc473fd3fe486fb35a2ad5146bc0c42
+STL/Ver.2/hook1.stl,77.997131,17.25,1.5,884,raw STL coordinates interpreted as mm; no150% multiplier,ef779577f9f6a66196704d1cb19102f12615fcf6ea88834065957ec30e5f4020
+STL/Ver.2/hook2-1.stl,62.885498,11.998901,1.500023,604,raw STL coordinates interpreted as mm; no150% multiplier,7f5f4f03bf99ab617f58d47a810450df2beeb885f11a81d25b6e81c4920590cb
+STL/Ver.2/hook2-2.stl,49.013367,46.166687,1.500048,628,raw STL coordinates interpreted as mm; no150% multiplier,d3a79178c9f8cdc1715cc9a9d84c964b17af552d022036139dfe13df0095dc32
+STL/Ver.2/support.stl,7.0,6.999084,6.0,582,raw STL coordinates interpreted as mm; no150% multiplier,40278373c9b7547772fa98d9f014d0d846accff5eddefbbf62b251f54a0a189c
+STL/Ver.2/ボディ.stl,71.256165,43.971848,13.2,1068,raw STL coordinates interpreted as mm; no150% multiplier,28c005e7025f135558247f5392ee522b16fe11687e66e30fe9dfe2fcad60f31f
+STL/Ver.2/ボディ2.stl,53.730164,63.971481,24.75,1196,raw STL coordinates interpreted as mm; no150% multiplier,5cd97c55d25d73a9f1080f547a49c44729b8fe77f21df972445790044488de8b
+STL/Ver.2/ボディ3.stl,86.080017,42.667297,8.0,882,raw STL coordinates interpreted as mm; no150% multiplier,7d72a5a7872325f814a4e6b4e7f1fda9d39e49b993f785fc1b2cadbcbce56b71
+STL/Ver.2/ボディ4.stl,86.077637,42.671341,24.0,1082,raw STL coordinates interpreted as mm; no150% multiplier,690d985d1d763e52065dab913853d18d868e3742d1520ec16c607aeeb8c4a559
+STL/Ver.2/ボディ5.stl,14.795044,46.471985,24.000004,660,raw STL coordinates interpreted as mm; no150% multiplier,4bd6cada7b9a7c3f7b09bbd872a4c662b8d0bea9d3d4b8e4cd6a9eaa453e6f63
+STL/Ver.2/ボディ6A.stl,9.592712,51.197617,12.0,562,raw STL coordinates interpreted as mm; no150% multiplier,850ab018ab0de1dc92e23668f978f01aff3939ebffcf49137878dc6b93edffe8
+STL/Ver.2/ボディ6B.stl,9.59198,51.194,12.0,694,raw STL coordinates interpreted as mm; no150% multiplier,d09f0e08031d39e8b75a8b3775e077a0384510cc61e768d68988bc15f2f880dd
+STL/Ver.2/背骨V2.2.stl,46.714966,100.525131,16.554611,1528,raw STL coordinates interpreted as mm; no150% multiplier,2f31056344bce7e1c38efb334d787b102873ca28954166dbf3de1978707e5e4f
+STL/Ver.2/背骨V2.stl,100.525146,46.714947,52.445084,1726,raw STL coordinates interpreted as mm; no150% multiplier,3bbe6967dca3bfe3f690c34a3f7f35b34ed850350045d29d43931ebeed840869
+STL/Ver.2/背骨v2A.stl,46.180908,100.511414,16.500809,1582,raw STL coordinates interpreted as mm; no150% multiplier,ea6ae60cd515b25b6590378292b9a7ed811ad45bcf05854b664c6c319d5abdd3
+STL/Ver.2/背骨v2B.stl,73.272278,73.27243,16.500809,1486,raw STL coordinates interpreted as mm; no150% multiplier,64fa1fce8915de41aa97b1a22930a2ded00f1efa0b98e24ce104871a03a35888
+STL/Ver.2/軸制御.stl,8.999756,10.493195,11.000014,1004,raw STL coordinates interpreted as mm; no150% multiplier,6579bee78b35d52ff64f629d3e8e637b821e0e87dfc9cbe8ad335ebcfc048313
+STL/Ver.2/軸制御short.stl,8.999634,10.493195,7.500014,938,raw STL coordinates interpreted as mm; no150% multiplier,3764bd86276f11a03eba2fd605ab1697339fbfac1b130fbfa722b5ecf374f720

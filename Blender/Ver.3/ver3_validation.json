@@ -1,0 +1,2079 @@
+{
+  "validated_utc": "2026-09-26T11:17:35.759303+00:00",
+  "status": "ENGINEERING REVIEW FIRST CUT / CONTACT RESIDUAL TARGETS NOT MET",
+  "production_video_rendered": true,
+  "available_designs": [
+    "A",
+    "B",
+    "C"
+  ],
+  "pending_designs": [],
+  "legacy_single_stage_or_one_end_preview_included": false,
+  "source_fingerprints": {
+    "A": {
+      "manifest": "docs/ver3/assembly_A.json",
+      "manifest_sha256": "eb3dff9491bfa47d419815d908115c7cc73dae54b000b5829f56edb6643bfb1b",
+      "meshes": "FreeCAD/Ver.3/A/render_geometry.json.gz",
+      "meshes_sha256": "bdc8e56c407e830d8edd50a960213f8b0a1acd91e424b3aa8d10676add6ac5fe"
+    },
+    "B": {
+      "manifest": "docs/ver3/assembly_B.json",
+      "manifest_sha256": "4d070ff8c721b8b1fcd8cc3f83da64310d22d4d4214b6129ddcf8f758a2f3488",
+      "meshes": "FreeCAD/Ver.3/B/render_geometry.json.gz",
+      "meshes_sha256": "6f89c463a3a3a236f6e9b9d9464492b09f9105b9b337e4359c87ac825daddae0"
+    },
+    "C": {
+      "manifest": "docs/ver3/assembly_C.json",
+      "manifest_sha256": "f70ed27902c914a0117fc61ad178971656769051fb51a08ecda9c85dc47bfd0f",
+      "meshes": "FreeCAD/Ver.3/C/render_geometry.json.gz",
+      "meshes_sha256": "d8806c0aafcefc1ce6873d55a266f28453a3fafde92fb7fe47121f7d7002ca74"
+    },
+    "core_sha256": "1572f2d2005e84a9b4929aa39f1dbdb2144dfac6f5333bfb85e1ddb3fb856033",
+    "design_config_sha256": "cdbf69689a31706893c4f8cb6464491bc5dedeebe4df6eea5cb78cc2a9a3122b",
+    "kinematic_config_sha256": "cbb85716f1d83988e5590fb584362613dc4eb0a7597c9cec39d09b1259e22980",
+    "visualization_profile": "system"
+  },
+  "source_renderer_sha256": "ca1bf2669dfb6fc60ab39bf54937c028876f0e934c1421228314cbc8caaba79c",
+  "system_helper_sha256": "64943ad9586fcabbc44a87b62c2900432445dd1fcc6ca454d84fc4dc18227cc4",
+  "reopened_with_scripts_disabled": true,
+  "native_portability": {
+    "external_dependencies": [],
+    "linked_libraries": 0,
+    "file_browser_directories": [
+      "//"
+    ],
+    "saved_cameras": {
+      "00 | SYSTEM - ACTUAL-SCALE COMPARISON": {
+        "camera": "00 | SYSTEM - ACTUAL-SCALE COMPARISON | Orthographic",
+        "world_matrix": [
+          [
+            0.8518748879432678,
+            -0.22889111936092377,
+            0.4710817337036133,
+            1.191994309425354
+          ],
+          [
+            0.5237452983856201,
+            0.3722928762435913,
+            -0.7662172317504883,
+            -1.9387859106063843
+          ],
+          [
+            -5.377770406767013e-08,
+            0.8994480967521667,
+            0.43702760338783264,
+            1.4001103639602661
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 2.879338026046753,
+        "frame_range": [
+          1,
+          2305
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "05 | ALL DISTRIBUTED DRIVES": {
+        "camera": "05 | ALL DISTRIBUTED DRIVES | Orthographic",
+        "world_matrix": [
+          [
+            0.8518748879432678,
+            -0.22889111936092377,
+            0.4710817337036133,
+            1.2110637426376343
+          ],
+          [
+            0.5237452983856201,
+            0.3722928762435913,
+            -0.7662172317504883,
+            -1.9635303020477295
+          ],
+          [
+            -5.377770406767013e-08,
+            0.8994480967521667,
+            0.43702760338783264,
+            1.3150272369384766
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 2.025177001953125,
+        "frame_range": [
+          1,
+          2305
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "1A | LARGE ROTOR / FEW STAGES": {
+        "camera": "1A | LARGE ROTOR / FEW STAGES | Orthographic",
+        "world_matrix": [
+          [
+            0.8518749475479126,
+            -0.22889107465744019,
+            0.4710817039012909,
+            0.4025725722312927
+          ],
+          [
+            0.5237452387809753,
+            0.3722929060459137,
+            -0.7662172913551331,
+            -2.4415128231048584
+          ],
+          [
+            -6.899261961734737e-08,
+            0.8994480967521667,
+            0.43702760338783264,
+            1.369943380355835
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 2.1390187740325928,
+        "frame_range": [
+          1,
+          73
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "1B | SMALL ROTOR / HIGH REDUCTION": {
+        "camera": "1B | SMALL ROTOR / HIGH REDUCTION | Orthographic",
+        "world_matrix": [
+          [
+            0.8518748879432678,
+            -0.22889111936092377,
+            0.4710817337036133,
+            1.0096514225006104
+          ],
+          [
+            0.5237452983856201,
+            0.3722928762435913,
+            -0.7662172317504883,
+            -2.109351396560669
+          ],
+          [
+            -5.377770406767013e-08,
+            0.8994480967521667,
+            0.43702760338783264,
+            1.3033146858215332
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.7999393939971924,
+        "frame_range": [
+          1,
+          769
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "1C | MID ROTOR / GENERATED FRAME": {
+        "camera": "1C | MID ROTOR / GENERATED FRAME | Orthographic",
+        "world_matrix": [
+          [
+            0.8518748879432678,
+            -0.22889111936092377,
+            0.4710817337036133,
+            1.5249316692352295
+          ],
+          [
+            0.5237452983856201,
+            0.3722928762435913,
+            -0.7662172317504883,
+            -1.7720102071762085
+          ],
+          [
+            -5.377770406767013e-08,
+            0.8994480967521667,
+            0.43702760338783264,
+            1.3276305198669434
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.876041054725647,
+        "frame_range": [
+          1,
+          193
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "2A | DRIVE AND SHAFTS - ISOLATED": {
+        "camera": "2A | DRIVE AND SHAFTS - ISOLATED | Orthographic",
+        "world_matrix": [
+          [
+            0.6000000238418579,
+            -0.243820458650589,
+            0.7619393467903137,
+            1.274268627166748
+          ],
+          [
+            0.800000011920929,
+            0.1828654259443283,
+            -0.5714545249938965,
+            -1.9772491455078125
+          ],
+          [
+            -6.286408194000614e-08,
+            0.952424168586731,
+            0.3047756254673004,
+            0.9789785146713257
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.5706894397735596,
+        "frame_range": [
+          1,
+          73
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "2B | DRIVE AND SHAFTS - ISOLATED": {
+        "camera": "2B | DRIVE AND SHAFTS - ISOLATED | Orthographic",
+        "world_matrix": [
+          [
+            0.6000000238418579,
+            -0.243820458650589,
+            0.7619393467903137,
+            1.8375905752182007
+          ],
+          [
+            0.800000011920929,
+            0.1828654259443283,
+            -0.5714545249938965,
+            -1.6505061388015747
+          ],
+          [
+            -6.286408194000614e-08,
+            0.952424168586731,
+            0.3047756254673004,
+            0.9757637977600098
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.5886486768722534,
+        "frame_range": [
+          1,
+          769
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "2C | DRIVE AND SHAFTS - ISOLATED": {
+        "camera": "2C | DRIVE AND SHAFTS - ISOLATED | Orthographic",
+        "world_matrix": [
+          [
+            0.6000000834465027,
+            -0.24382062256336212,
+            0.7619392275810242,
+            2.367764711380005
+          ],
+          [
+            0.7999998927116394,
+            0.18286558985710144,
+            -0.5714545249938965,
+            -1.2845772504806519
+          ],
+          [
+            -6.286407483457879e-08,
+            0.9524241089820862,
+            0.30477583408355713,
+            0.9761447906494141
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.5196399688720703,
+        "frame_range": [
+          1,
+          193
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "30 | GENERATED FRAME - ACTUAL CAD": {
+        "camera": "30 | GENERATED FRAME - ACTUAL CAD | Orthographic",
+        "world_matrix": [
+          [
+            0.1771528571844101,
+            -0.11543158441781998,
+            0.9773905873298645,
+            3.132779359817505
+          ],
+          [
+            0.9841833710670471,
+            0.020777666941285133,
+            -0.1759301722049713,
+            -0.25624018907546997
+          ],
+          [
+            1.0397086525060217e-09,
+            0.9930980801582336,
+            0.11728665977716446,
+            0.5486483573913574
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 0.7981626987457275,
+        "frame_range": [
+          1,
+          1
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "3A-left | LEFT DRIVE": {
+        "camera": "3A-left | LEFT DRIVE | Orthographic",
+        "world_matrix": [
+          [
+            0.5449884533882141,
+            0.2360900193452835,
+            -0.804517924785614,
+            -2.5928452014923096
+          ],
+          [
+            -0.8384435772895813,
+            0.1534585952758789,
+            -0.5229367613792419,
+            -1.6185261011123657
+          ],
+          [
+            3.481541455130355e-08,
+            0.9595373868942261,
+            0.281581312417984,
+            0.9816732406616211
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.1607301235198975,
+        "frame_range": [
+          1,
+          73
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "3A-right | RIGHT DRIVE": {
+        "camera": "3A-right | RIGHT DRIVE | Orthographic",
+        "world_matrix": [
+          [
+            0.5449884533882141,
+            -0.2360900193452835,
+            0.804517924785614,
+            1.398902177810669
+          ],
+          [
+            0.8384435772895813,
+            0.1534585952758789,
+            -0.5229367613792419,
+            -1.844855785369873
+          ],
+          [
+            -3.481541455130355e-08,
+            0.9595373868942261,
+            0.281581312417984,
+            0.9181533455848694
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.5230718851089478,
+        "frame_range": [
+          1,
+          73
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "3B-left | LEFT DRIVE": {
+        "camera": "3B-left | LEFT DRIVE | Orthographic",
+        "world_matrix": [
+          [
+            0.5449881553649902,
+            0.2360897958278656,
+            -0.8045182228088379,
+            -2.031647205352783
+          ],
+          [
+            -0.8384437561035156,
+            0.15345831215381622,
+            -0.5229365229606628,
+            -1.2000445127487183
+          ],
+          [
+            2.877051485938864e-08,
+            0.9595374464988708,
+            0.28158098459243774,
+            0.9618809819221497
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.2163364887237549,
+        "frame_range": [
+          1,
+          769
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "3B-right | RIGHT DRIVE": {
+        "camera": "3B-right | RIGHT DRIVE | Orthographic",
+        "world_matrix": [
+          [
+            0.5449884533882141,
+            -0.2360900193452835,
+            0.804517924785614,
+            1.9610320329666138
+          ],
+          [
+            0.8384435772895813,
+            0.1534585952758789,
+            -0.5229367613792419,
+            -1.5481812953948975
+          ],
+          [
+            -3.481541455130355e-08,
+            0.9595373868942261,
+            0.281581312417984,
+            0.9223385453224182
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.5609036684036255,
+        "frame_range": [
+          1,
+          769
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "3C-left | LEFT DRIVE": {
+        "camera": "3C-left | LEFT DRIVE | Orthographic",
+        "world_matrix": [
+          [
+            0.5449884533882141,
+            0.2360900193452835,
+            -0.804517924785614,
+            -1.5054893493652344
+          ],
+          [
+            -0.8384435772895813,
+            0.1534585952758789,
+            -0.5229367613792419,
+            -0.871634840965271
+          ],
+          [
+            3.481541455130355e-08,
+            0.9595373868942261,
+            0.281581312417984,
+            0.9693607687950134
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.1947077512741089,
+        "frame_range": [
+          1,
+          193
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "3C-right | RIGHT DRIVE": {
+        "camera": "3C-right | RIGHT DRIVE | Orthographic",
+        "world_matrix": [
+          [
+            0.5449884533882141,
+            -0.2360900193452835,
+            0.804517924785614,
+            2.493748426437378
+          ],
+          [
+            0.8384435772895813,
+            0.1534585952758789,
+            -0.5229367613792419,
+            -1.1715657711029053
+          ],
+          [
+            -3.481541455130355e-08,
+            0.9595373868942261,
+            0.281581312417984,
+            0.9124574661254883
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.4452626705169678,
+        "frame_range": [
+          1,
+          193
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "40 | REX OUTPUT CONNECTION": {
+        "camera": "40 | REX OUTPUT CONNECTION | Orthographic",
+        "world_matrix": [
+          [
+            0.7327934503555298,
+            -0.20901626348495483,
+            0.6475538015365601,
+            1.8834725618362427
+          ],
+          [
+            0.6804511547088623,
+            0.22509434819221497,
+            -0.6973655819892883,
+            -1.8099509477615356
+          ],
+          [
+            5.308599781983503e-08,
+            0.9516536593437195,
+            0.3071730136871338,
+            0.9263632893562317
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 0.8740402460098267,
+        "frame_range": [
+          1,
+          1
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "50 | A EXPLODED - NOT AN INSERTION PATH": {
+        "camera": "50 | A EXPLODED - NOT AN INSERTION PATH | Orthographic",
+        "world_matrix": [
+          [
+            0.8518748879432678,
+            -0.22889111936092377,
+            0.4710817337036133,
+            1.287008285522461
+          ],
+          [
+            0.5237452983856201,
+            0.3722928762435913,
+            -0.7662172317504883,
+            -1.8563461303710938
+          ],
+          [
+            -5.377770406767013e-08,
+            0.8994480967521667,
+            0.43702760338783264,
+            1.4453938007354736
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 2.917769432067871,
+        "frame_range": [
+          1,
+          121
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "60A | CANONICAL WALKING": {
+        "camera": "60A | CANONICAL WALKING | Orthographic",
+        "world_matrix": [
+          [
+            0.7071067094802856,
+            -0.18856699764728546,
+            0.681500256061554,
+            2.050523519515991
+          ],
+          [
+            0.7071068286895752,
+            0.1885668933391571,
+            -0.6815001368522644,
+            -1.7428501844406128
+          ],
+          [
+            5.223997945336123e-08,
+            0.963786780834198,
+            0.2666739225387573,
+            0.9674029350280762
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.9769549369812012,
+        "frame_range": [
+          1,
+          216
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "60B | CANONICAL WALKING": {
+        "camera": "60B | CANONICAL WALKING | Orthographic",
+        "world_matrix": [
+          [
+            0.7071067094802856,
+            -0.18856699764728546,
+            0.681500256061554,
+            2.050523519515991
+          ],
+          [
+            0.7071068286895752,
+            0.1885668933391571,
+            -0.6815001368522644,
+            -1.7428501844406128
+          ],
+          [
+            5.223997945336123e-08,
+            0.963786780834198,
+            0.2666739225387573,
+            0.9674029350280762
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.9769549369812012,
+        "frame_range": [
+          1,
+          288
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      },
+      "60C | CANONICAL WALKING": {
+        "camera": "60C | CANONICAL WALKING | Orthographic",
+        "world_matrix": [
+          [
+            0.7071067094802856,
+            -0.18856699764728546,
+            0.681500256061554,
+            2.050523519515991
+          ],
+          [
+            0.7071068286895752,
+            0.1885668933391571,
+            -0.6815001368522644,
+            -1.7428501844406128
+          ],
+          [
+            5.223997945336123e-08,
+            0.963786780834198,
+            0.2666739225387573,
+            0.9674029350280762
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orthographic_width_m": 1.9769549369812012,
+        "frame_range": [
+          1,
+          288
+        ],
+        "render_filepath": "//media/",
+        "render_threads": 4
+      }
+    }
+  },
+  "designs": {
+    "A": {
+      "rotor_diameter_mm": 300.0,
+      "rotor_span_mm": 180.0,
+      "stages": 2,
+      "ratio": 6,
+      "nominal_mass_kg": 4.064115775865071,
+      "instances": 791,
+      "period_frames": 72,
+      "frame_count": 73,
+      "signed_relative_speeds": [
+        -6.0,
+        -3.0,
+        1.0
+      ],
+      "signed_rotor_speed": -6.0,
+      "crank_rps": 0.3333333333333333,
+      "maximum_angular_step_degrees": 30.0,
+      "swept_bounds_m": [
+        [
+          -0.09500000627040862,
+          -0.16325045813701955,
+          -0.005240156489047576
+        ],
+        [
+          0.3270000144958496,
+          0.18992718459819638,
+          0.5299271974877008
+        ]
+      ],
+      "presentation_offset_m": [
+        -0.6239452958106995,
+        -0.3836108148097992,
+        -0.0
+      ],
+      "moving_objects": 541,
+      "mesh_datablocks": 99,
+      "max_vertex_error_mm": 1.1444091796875e-05,
+      "max_position_error_mm": 2.9802322387695312e-05,
+      "max_rotation_matrix_error": 2.980232238769531e-07,
+      "full_cycle_closes": true
+    },
+    "B": {
+      "rotor_diameter_mm": 90.0,
+      "rotor_span_mm": 180.0,
+      "stages": 3,
+      "ratio": 64,
+      "nominal_mass_kg": 4.66473971093501,
+      "instances": 796,
+      "period_frames": 768,
+      "frame_count": 769,
+      "signed_relative_speeds": [
+        -64.0,
+        -4.0,
+        1.0,
+        16.0
+      ],
+      "signed_rotor_speed": -64.0,
+      "crank_rps": 0.03125,
+      "maximum_angular_step_degrees": 30.0,
+      "swept_bounds_m": [
+        [
+          -0.07600000501871108,
+          -0.18187307749573617,
+          -0.005269245488647253
+        ],
+        [
+          0.36799999327659605,
+          0.16599720470477777,
+          0.4014641526421337
+        ]
+      ],
+      "presentation_offset_m": [
+        -0.08922113478183746,
+        -0.05485447496175766,
+        -0.0
+      ],
+      "moving_objects": 546,
+      "mesh_datablocks": 94,
+      "max_vertex_error_mm": 1.2874603271484375e-05,
+      "max_position_error_mm": 2.9802322387695312e-05,
+      "max_rotation_matrix_error": 3.5762786865234375e-07,
+      "full_cycle_closes": true
+    },
+    "C": {
+      "rotor_diameter_mm": 180.0,
+      "rotor_span_mm": 180.0,
+      "stages": 2,
+      "ratio": 16,
+      "nominal_mass_kg": 3.4198352429243255,
+      "instances": 755,
+      "period_frames": 192,
+      "frame_count": 193,
+      "signed_relative_speeds": [
+        -4.0,
+        1.0,
+        16.0
+      ],
+      "signed_rotor_speed": 16.0,
+      "crank_rps": 0.125,
+      "maximum_angular_step_degrees": 30.0,
+      "swept_bounds_m": [
+        [
+          -0.07500000299215316,
+          -0.16329515121003296,
+          -0.0052670617277286585
+        ],
+        [
+          0.3270000144958496,
+          0.163295151210033,
+          0.44902425832893805
+        ]
+      ],
+      "presentation_offset_m": [
+        0.45556506514549255,
+        0.2800881564617157,
+        0.0
+      ],
+      "moving_objects": 545,
+      "mesh_datablocks": 90,
+      "max_vertex_error_mm": 1.1682510375976562e-05,
+      "max_position_error_mm": 2.9802322387695312e-05,
+      "max_rotation_matrix_error": 3.5762786865234375e-07,
+      "full_cycle_closes": true
+    }
+  },
+  "camera_fit_verified": true,
+  "native_repeated_cycles_verified": true,
+  "comparison_layout": {
+    "heading_rows": 2,
+    "column_text_extents_px": {
+      "A/heading": [
+        285.76189041137695,
+        437.12493896484375
+      ],
+      "A/transmission": [
+        300.3218460083008,
+        420.0038528442383
+      ],
+      "A/diameter": [
+        270.9663391113281,
+        451.5744400024414
+      ],
+      "A/mass": [
+        255.2079200744629,
+        467.99190521240234
+      ],
+      "B/heading": [
+        557.6997375488281,
+        736.3867950439453
+      ],
+      "B/transmission": [
+        573.298225402832,
+        718.0182647705078
+      ],
+      "B/diameter": [
+        560.8792114257812,
+        732.562255859375
+      ],
+      "B/mass": [
+        540.6582260131836,
+        753.4422302246094
+      ],
+      "C/heading": [
+        823.7558746337891,
+        1027.4898529052734
+      ],
+      "C/transmission": [
+        851.3263702392578,
+        996.5863037109375
+      ],
+      "C/diameter": [
+        834.9848175048828,
+        1015.5928802490234
+      ],
+      "C/mass": [
+        819.2263031005859,
+        1032.0103454589844
+      ]
+    },
+    "nominal_rotor_sweeps": {
+      "A": {
+        "diameter_mm": 300.0,
+        "center_mm": [
+          216.0,
+          20.0,
+          360.0
+        ],
+        "projected_vertical_diameter_px": 119.95398759841919,
+        "column_center_px": 361.43184661865234,
+        "lane_px": [
+          40,
+          504.15700912475586
+        ]
+      },
+      "B": {
+        "diameter_mm": 90.0,
+        "center_mm": [
+          216.0,
+          0.0,
+          340.0
+        ],
+        "projected_vertical_diameter_px": 35.98618984222412,
+        "column_center_px": 646.8821716308594,
+        "lane_px": [
+          504.15700912475586,
+          786.1662292480469
+        ]
+      },
+      "C": {
+        "diameter_mm": 180.0,
+        "center_mm": [
+          216.0,
+          -10.0,
+          346.0
+        ],
+        "projected_vertical_diameter_px": 71.97240114212036,
+        "column_center_px": 925.4502868652344,
+        "lane_px": [
+          786.1662292480469,
+          1240
+        ]
+      }
+    },
+    "projected_vertical_pixels_per_mm": 0.399846625328064,
+    "annotation_only": true,
+    "common_orthographic_scale": true,
+    "common_ground_height": true
+  },
+  "canonical_instances": 2342,
+  "walking": {
+    "A": {
+      "verified_supplied_frames": 217,
+      "render_frame_end": 216,
+      "instances": 791,
+      "world_pose_contract": "body_matrix @ core.animated_transform",
+      "rotation_representation": "Canonical body parent + shared unwrapped-Euler shaft/crank axes",
+      "shared_axes": [
+        {
+          "object": "WALK::A::AXIS_00",
+          "center_yz_mm": [
+            0.0,
+            0.0
+          ],
+          "relative_speed": 1.0,
+          "expected_signed_turns": 3.0,
+          "baked_signed_turns": 3.000000007591615,
+          "max_degrees_per_video_frame": 5.000000000000198
+        },
+        {
+          "object": "WALK::A::AXIS_01",
+          "center_yz_mm": [
+            20.0,
+            210.0
+          ],
+          "relative_speed": -6.0,
+          "expected_signed_turns": -18.0,
+          "baked_signed_turns": -18.00000004554969,
+          "max_degrees_per_video_frame": 30.000000000001187
+        },
+        {
+          "object": "WALK::A::AXIS_02",
+          "center_yz_mm": [
+            -85.66734958551206,
+            78.21192501782363
+          ],
+          "relative_speed": -3.0,
+          "expected_signed_turns": -9.0,
+          "baked_signed_turns": -9.000000022774845,
+          "max_degrees_per_video_frame": 15.000000000000593
+        }
+      ],
+      "max_position_error_mm": 0.000476837158203125,
+      "max_rotation_matrix_error": 3.6479905247688293e-06,
+      "max_unwrapped_angle_error_radians": 7.0936832798906835e-06,
+      "roundoff_budget": "1 micrometre / 1e-5 matrix baseline plus two float32 Euler ULPs times the actual axis radius",
+      "subframes_verified": 648,
+      "subframe_offsets": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "subframe_rotating_instances": 187,
+      "subframe_max_position_error_mm": 0.0008940696716308594,
+      "subframe_max_rotation_matrix_error": 6.854534149169922e-06,
+      "subframe_direction_and_ratio_verified": true,
+      "time_scale": 1,
+      "physical_seconds": 9.0,
+      "video_seconds": 9.0,
+      "lead_residual_validation": {
+        "dense_solver_steps": 4321,
+        "mass_transform_error_mm": 3.979039320256561e-13,
+        "forward_axis": [
+          0,
+          -1,
+          0
+        ],
+        "forward_travel_mm": 533.5119981314514,
+        "lateral_drift_mm": 0.885239403743272,
+        "mean_physical_speed_mm_s": 59.2791109034946,
+        "max_stance_material_anchor_drift_mm": 9.551041403579733,
+        "strict_3mm_contact_target_pass": false,
+        "body_advance_per_crank_cycle_mm": 177.8373327104838,
+        "max_single_contact_episode_horizontal_path_mm": 17.05552938027547,
+        "total_material_horizontal_path_all_feet_three_cycles_mm": 254.85105872065662,
+        "worst_anchor_episode": {
+          "foot": 3,
+          "start_theta": 0.0,
+          "end_theta": 1.5227997723650524,
+          "start_body_y": 0.0,
+          "end_body_y": -47.669502274822975,
+          "max_anchor_drift_mm": 9.551041403579733,
+          "horizontal_path_mm": 10.219654841039125,
+          "material_point_body_relative_to_F": [
+            1.989309780883577,
+            9.311207318741463,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 47.669502274822975,
+          "physical_seconds": 0.7270833333333333,
+          "partial_at_clip_boundary": true
+        },
+        "slip_definition": "Maximum horizontal offset of one persistent material point from its touchdown anchor within one uninterrupted >=2%-weight contact episode, maximized over all feet/three cycles. Horizontal path is accumulated within each episode; it is not the same statistic.",
+        "loaded_foot_threshold_fraction": 0.02,
+        "max_active_foot_gap_mm": 0.24994632450303467,
+        "minimum_support_margin_mm": 6.150280173196521,
+        "minimum_active_feet": 2,
+        "max_body_tilt_deg": 0.6743130553889363,
+        "minimum_mesh_floor_clearance_mm": 0.01999999999999602,
+        "floor_checked_frames": 217,
+        "exact_mesh_floor_fallbacks": 288,
+        "opposed_stance_direction_sample_count": 0,
+        "opposed_stance_angles_deg": [],
+        "finite_contact_tolerance_mm": 0.25,
+        "fixed_pose_sensitivity": {
+          "cog_x_minus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 3.626869371728901,
+            "inside_fraction": 1.0
+          },
+          "cog_x_plus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 8.673690974664169,
+            "inside_fraction": 1.0
+          },
+          "cog_y_minus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 4.4028889702596885,
+            "inside_fraction": 1.0
+          },
+          "cog_y_plus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 1.8340160099925669,
+            "inside_fraction": 1.0
+          },
+          "wind_y_minus3": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 6.25110171333329,
+            "inside_fraction": 1.0
+          },
+          "wind_y_plus3": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 3.426171177895313,
+            "inside_fraction": 1.0
+          },
+          "wind_y_minus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.6479243676863575,
+            "inside_fraction": 1.0
+          },
+          "wind_y_plus5": {
+            "inside_samples": 4318,
+            "minimum_margin_mm": -1.4166892581957313,
+            "inside_fraction": 0.9993057162693821
+          },
+          "wind_y_minus8": {
+            "inside_samples": 3667,
+            "minimum_margin_mm": -13.00982041232804,
+            "inside_fraction": 0.848646146725295
+          },
+          "wind_y_plus8": {
+            "inside_samples": 4126,
+            "minimum_margin_mm": -13.22116157116767,
+            "inside_fraction": 0.9548715575098357
+          }
+        }
+      },
+      "scope": "All supplied world poses; shaft/crank direction and ratio also checked between frames. Between-frame body/link interpolation is not contact or physical validation.",
+      "strict_3mm_contact_target_pass": false,
+      "fixed_pose_sensitivity": {
+        "cog_x_minus5": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 3.626869371728901,
+          "inside_fraction": 1.0
+        },
+        "cog_x_plus5": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 8.673690974664169,
+          "inside_fraction": 1.0
+        },
+        "cog_y_minus5": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 4.4028889702596885,
+          "inside_fraction": 1.0
+        },
+        "cog_y_plus5": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 1.8340160099925669,
+          "inside_fraction": 1.0
+        },
+        "wind_y_minus3": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 6.25110171333329,
+          "inside_fraction": 1.0
+        },
+        "wind_y_plus3": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 3.426171177895313,
+          "inside_fraction": 1.0
+        },
+        "wind_y_minus5": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 0.6479243676863575,
+          "inside_fraction": 1.0
+        },
+        "wind_y_plus5": {
+          "inside_samples": 4318,
+          "minimum_margin_mm": -1.4166892581957313,
+          "inside_fraction": 0.9993057162693821
+        },
+        "wind_y_minus8": {
+          "inside_samples": 3667,
+          "minimum_margin_mm": -13.00982041232804,
+          "inside_fraction": 0.848646146725295
+        },
+        "wind_y_plus8": {
+          "inside_samples": 4126,
+          "minimum_margin_mm": -13.22116157116767,
+          "inside_fraction": 0.9548715575098357
+        }
+      }
+    },
+    "B": {
+      "verified_supplied_frames": 289,
+      "render_frame_end": 288,
+      "instances": 796,
+      "world_pose_contract": "body_matrix @ core.animated_transform",
+      "rotation_representation": "Canonical body parent + shared unwrapped-Euler shaft/crank axes",
+      "shared_axes": [
+        {
+          "object": "WALK::B::AXIS_00",
+          "center_yz_mm": [
+            0.0,
+            0.0
+          ],
+          "relative_speed": 1.0,
+          "expected_signed_turns": 3.0,
+          "baked_signed_turns": 3.000000007591615,
+          "max_degrees_per_video_frame": 3.750000000000123
+        },
+        {
+          "object": "WALK::B::AXIS_01",
+          "center_yz_mm": [
+            0.0,
+            190.0
+          ],
+          "relative_speed": -64.0,
+          "expected_signed_turns": -192.0,
+          "baked_signed_turns": -192.00000048586335,
+          "max_degrees_per_video_frame": 240.00000000000787
+        },
+        {
+          "object": "WALK::B::AXIS_02",
+          "center_yz_mm": [
+            -60.251862359880306,
+            104.00748240593232
+          ],
+          "relative_speed": 16.0,
+          "expected_signed_turns": 48.0,
+          "baked_signed_turns": 48.00000012146584,
+          "max_degrees_per_video_frame": 60.00000000000197
+        },
+        {
+          "object": "WALK::B::AXIS_03",
+          "center_yz_mm": [
+            44.37491748277344,
+            95.16231763884824
+          ],
+          "relative_speed": -4.0,
+          "expected_signed_turns": -12.0,
+          "baked_signed_turns": -12.00000003036646,
+          "max_degrees_per_video_frame": 15.000000000000492
+        }
+      ],
+      "max_position_error_mm": 0.002115964889526367,
+      "max_rotation_matrix_error": 5.836400669068098e-05,
+      "max_unwrapped_angle_error_radians": 0.00010379334412391472,
+      "roundoff_budget": "1 micrometre / 1e-5 matrix baseline plus two float32 Euler ULPs times the actual axis radius",
+      "subframes_verified": 864,
+      "subframe_offsets": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "subframe_rotating_instances": 192,
+      "subframe_max_position_error_mm": 0.0037550926208496094,
+      "subframe_max_rotation_matrix_error": 0.00010025384835898876,
+      "subframe_direction_and_ratio_verified": true,
+      "time_scale": 8,
+      "physical_seconds": 96.0,
+      "video_seconds": 12.0,
+      "lead_residual_validation": {
+        "dense_solver_steps": 4321,
+        "mass_transform_error_mm": 2.8421709430404007e-13,
+        "forward_axis": [
+          0,
+          -1,
+          0
+        ],
+        "forward_travel_mm": 535.0839250955652,
+        "lateral_drift_mm": 0.10043038648350822,
+        "mean_physical_speed_mm_s": 5.573790886412137,
+        "max_stance_material_anchor_drift_mm": 10.2998299222341,
+        "strict_3mm_contact_target_pass": false,
+        "body_advance_per_crank_cycle_mm": 178.3613083651884,
+        "max_single_contact_episode_horizontal_path_mm": 17.25789766245257,
+        "total_material_horizontal_path_all_feet_three_cycles_mm": 283.1065140792488,
+        "worst_anchor_episode": {
+          "foot": 3,
+          "start_theta": 0.0,
+          "end_theta": 1.5315264186250241,
+          "start_body_y": 0.0,
+          "end_body_y": -48.479486545884335,
+          "max_anchor_drift_mm": 10.2998299222341,
+          "horizontal_path_mm": 11.290413456678898,
+          "material_point_body_relative_to_F": [
+            4.370819842596454,
+            9.5,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 48.479486545884335,
+          "physical_seconds": 7.800000000000001,
+          "partial_at_clip_boundary": true
+        },
+        "slip_definition": "Maximum horizontal offset of one persistent material point from its touchdown anchor within one uninterrupted >=2%-weight contact episode, maximized over all feet/three cycles. Horizontal path is accumulated within each episode; it is not the same statistic.",
+        "loaded_foot_threshold_fraction": 0.02,
+        "max_active_foot_gap_mm": 0.24994632450303467,
+        "minimum_support_margin_mm": 0.18286651400515241,
+        "minimum_active_feet": 2,
+        "max_body_tilt_deg": 0.6101926265716995,
+        "minimum_mesh_floor_clearance_mm": 0.01999999999999602,
+        "floor_checked_frames": 289,
+        "exact_mesh_floor_fallbacks": 375,
+        "opposed_stance_direction_sample_count": 0,
+        "opposed_stance_angles_deg": [],
+        "finite_contact_tolerance_mm": 0.25,
+        "fixed_pose_sensitivity": {
+          "cog_x_minus5": {
+            "inside_samples": 4318,
+            "minimum_margin_mm": -0.5339703761052732,
+            "inside_fraction": 0.9993057162693821
+          },
+          "cog_x_plus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.2609775588244325,
+            "inside_fraction": 1.0
+          },
+          "cog_y_minus5": {
+            "inside_samples": 4315,
+            "minimum_margin_mm": -4.816240354428766,
+            "inside_fraction": 0.9986114325387642
+          },
+          "cog_y_plus5": {
+            "inside_samples": 4318,
+            "minimum_margin_mm": -2.3268237378416217,
+            "inside_fraction": 0.9993057162693821
+          },
+          "wind_y_minus3": {
+            "inside_samples": 4315,
+            "minimum_margin_mm": -0.5942450233690961,
+            "inside_fraction": 0.9986114325387642
+          },
+          "wind_y_plus3": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.959978051379401,
+            "inside_fraction": 1.0
+          },
+          "wind_y_minus5": {
+            "inside_samples": 4315,
+            "minimum_margin_mm": -1.975776645367761,
+            "inside_fraction": 0.9986114325387642
+          },
+          "wind_y_plus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.12506854835631032,
+            "inside_fraction": 1.0
+          },
+          "wind_y_minus8": {
+            "inside_samples": 4315,
+            "minimum_margin_mm": -5.343259973989505,
+            "inside_fraction": 0.9986114325387642
+          },
+          "wind_y_plus8": {
+            "inside_samples": 4318,
+            "minimum_margin_mm": -2.783351579773125,
+            "inside_fraction": 0.9993057162693821
+          }
+        }
+      },
+      "scope": "All supplied world poses; shaft/crank direction and ratio also checked between frames. Between-frame body/link interpolation is not contact or physical validation.",
+      "strict_3mm_contact_target_pass": false,
+      "fixed_pose_sensitivity": {
+        "cog_x_minus5": {
+          "inside_samples": 4318,
+          "minimum_margin_mm": -0.5339703761052732,
+          "inside_fraction": 0.9993057162693821
+        },
+        "cog_x_plus5": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 0.2609775588244325,
+          "inside_fraction": 1.0
+        },
+        "cog_y_minus5": {
+          "inside_samples": 4315,
+          "minimum_margin_mm": -4.816240354428766,
+          "inside_fraction": 0.9986114325387642
+        },
+        "cog_y_plus5": {
+          "inside_samples": 4318,
+          "minimum_margin_mm": -2.3268237378416217,
+          "inside_fraction": 0.9993057162693821
+        },
+        "wind_y_minus3": {
+          "inside_samples": 4315,
+          "minimum_margin_mm": -0.5942450233690961,
+          "inside_fraction": 0.9986114325387642
+        },
+        "wind_y_plus3": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 0.959978051379401,
+          "inside_fraction": 1.0
+        },
+        "wind_y_minus5": {
+          "inside_samples": 4315,
+          "minimum_margin_mm": -1.975776645367761,
+          "inside_fraction": 0.9986114325387642
+        },
+        "wind_y_plus5": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 0.12506854835631032,
+          "inside_fraction": 1.0
+        },
+        "wind_y_minus8": {
+          "inside_samples": 4315,
+          "minimum_margin_mm": -5.343259973989505,
+          "inside_fraction": 0.9986114325387642
+        },
+        "wind_y_plus8": {
+          "inside_samples": 4318,
+          "minimum_margin_mm": -2.783351579773125,
+          "inside_fraction": 0.9993057162693821
+        }
+      }
+    },
+    "C": {
+      "verified_supplied_frames": 289,
+      "render_frame_end": 288,
+      "instances": 755,
+      "world_pose_contract": "body_matrix @ core.animated_transform",
+      "rotation_representation": "Canonical body parent + shared unwrapped-Euler shaft/crank axes",
+      "shared_axes": [
+        {
+          "object": "WALK::C::AXIS_00",
+          "center_yz_mm": [
+            0.0,
+            0.0
+          ],
+          "relative_speed": 1.0,
+          "expected_signed_turns": 3.0,
+          "baked_signed_turns": 3.000000007591615,
+          "max_degrees_per_video_frame": 3.750000000000123
+        },
+        {
+          "object": "WALK::C::AXIS_01",
+          "center_yz_mm": [
+            -10.0,
+            196.0
+          ],
+          "relative_speed": 16.0,
+          "expected_signed_turns": 48.0,
+          "baked_signed_turns": 48.00000012146584,
+          "max_degrees_per_video_frame": 60.00000000000197
+        },
+        {
+          "object": "WALK::C::AXIS_02",
+          "center_yz_mm": [
+            32.31454853333133,
+            99.90380349659854
+          ],
+          "relative_speed": -4.0,
+          "expected_signed_turns": -12.0,
+          "baked_signed_turns": -12.00000003036646,
+          "max_degrees_per_video_frame": 15.000000000000492
+        }
+      ],
+      "max_position_error_mm": 0.0010728836059570312,
+      "max_rotation_matrix_error": 1.4590448699891567e-05,
+      "max_unwrapped_angle_error_radians": 2.594833603097868e-05,
+      "roundoff_budget": "1 micrometre / 1e-5 matrix baseline plus two float32 Euler ULPs times the actual axis radius",
+      "subframes_verified": 864,
+      "subframe_offsets": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "subframe_rotating_instances": 191,
+      "subframe_max_position_error_mm": 0.0019073486328125,
+      "subframe_max_rotation_matrix_error": 2.5063753128051758e-05,
+      "subframe_direction_and_ratio_verified": true,
+      "time_scale": 2,
+      "physical_seconds": 24.0,
+      "video_seconds": 12.0,
+      "lead_residual_validation": {
+        "dense_solver_steps": 4321,
+        "mass_transform_error_mm": 3.410605131648481e-13,
+        "forward_axis": [
+          0,
+          -1,
+          0
+        ],
+        "forward_travel_mm": 548.980636771328,
+        "lateral_drift_mm": 9.038364885835485,
+        "mean_physical_speed_mm_s": 22.874193198805333,
+        "max_stance_material_anchor_drift_mm": 8.880272199655488,
+        "strict_3mm_contact_target_pass": false,
+        "body_advance_per_crank_cycle_mm": 182.99354559044266,
+        "max_single_contact_episode_horizontal_path_mm": 15.877356279573927,
+        "total_material_horizontal_path_all_feet_three_cycles_mm": 252.65876514174892,
+        "worst_anchor_episode": {
+          "foot": 3,
+          "start_theta": 0.0,
+          "end_theta": 1.5533430342749532,
+          "start_body_y": 0.0,
+          "end_body_y": -46.96376136407438,
+          "max_anchor_drift_mm": 8.880272199655488,
+          "horizontal_path_mm": 11.104199963196699,
+          "material_point_body_relative_to_F": [
+            -0.3338413177548624,
+            9.499999999999996,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 46.96376136407438,
+          "physical_seconds": 1.9777777777777779,
+          "partial_at_clip_boundary": true
+        },
+        "slip_definition": "Maximum horizontal offset of one persistent material point from its touchdown anchor within one uninterrupted >=2%-weight contact episode, maximized over all feet/three cycles. Horizontal path is accumulated within each episode; it is not the same statistic.",
+        "loaded_foot_threshold_fraction": 0.02,
+        "max_active_foot_gap_mm": 0.24976082853787318,
+        "minimum_support_margin_mm": 0.3297340923522061,
+        "minimum_active_feet": 1,
+        "max_body_tilt_deg": 0.70658619722786,
+        "minimum_mesh_floor_clearance_mm": 0.01999999999999602,
+        "floor_checked_frames": 289,
+        "exact_mesh_floor_fallbacks": 371,
+        "opposed_stance_direction_sample_count": 0,
+        "opposed_stance_angles_deg": [],
+        "finite_contact_tolerance_mm": 0.25,
+        "fixed_pose_sensitivity": {
+          "cog_x_minus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.3297340923522061,
+            "inside_fraction": 1.0
+          },
+          "cog_x_plus5": {
+            "inside_samples": 4312,
+            "minimum_margin_mm": -0.4097814779769138,
+            "inside_fraction": 0.9979171488081463
+          },
+          "cog_y_minus5": {
+            "inside_samples": 4312,
+            "minimum_margin_mm": -2.235829584701648,
+            "inside_fraction": 0.9979171488081463
+          },
+          "cog_y_plus5": {
+            "inside_samples": 4240,
+            "minimum_margin_mm": -4.670140057257952,
+            "inside_fraction": 0.9812543392733164
+          },
+          "wind_y_minus3": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.2226241177999455,
+            "inside_fraction": 1.0
+          },
+          "wind_y_plus3": {
+            "inside_samples": 4285,
+            "minimum_margin_mm": -1.8320257757716218,
+            "inside_fraction": 0.9916685952325851
+          },
+          "wind_y_minus5": {
+            "inside_samples": 4312,
+            "minimum_margin_mm": -3.1017432147327426,
+            "inside_fraction": 0.9979171488081463
+          },
+          "wind_y_plus5": {
+            "inside_samples": 4240,
+            "minimum_margin_mm": -5.675154430213982,
+            "inside_fraction": 0.9812543392733164
+          },
+          "wind_y_minus8": {
+            "inside_samples": 4294,
+            "minimum_margin_mm": -11.204888587781184,
+            "inside_fraction": 0.9937514464244388
+          },
+          "wind_y_plus8": {
+            "inside_samples": 4051,
+            "minimum_margin_mm": -15.042780525417236,
+            "inside_fraction": 0.9375144642443879
+          }
+        }
+      },
+      "scope": "All supplied world poses; shaft/crank direction and ratio also checked between frames. Between-frame body/link interpolation is not contact or physical validation.",
+      "strict_3mm_contact_target_pass": false,
+      "fixed_pose_sensitivity": {
+        "cog_x_minus5": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 0.3297340923522061,
+          "inside_fraction": 1.0
+        },
+        "cog_x_plus5": {
+          "inside_samples": 4312,
+          "minimum_margin_mm": -0.4097814779769138,
+          "inside_fraction": 0.9979171488081463
+        },
+        "cog_y_minus5": {
+          "inside_samples": 4312,
+          "minimum_margin_mm": -2.235829584701648,
+          "inside_fraction": 0.9979171488081463
+        },
+        "cog_y_plus5": {
+          "inside_samples": 4240,
+          "minimum_margin_mm": -4.670140057257952,
+          "inside_fraction": 0.9812543392733164
+        },
+        "wind_y_minus3": {
+          "inside_samples": 4321,
+          "minimum_margin_mm": 0.2226241177999455,
+          "inside_fraction": 1.0
+        },
+        "wind_y_plus3": {
+          "inside_samples": 4285,
+          "minimum_margin_mm": -1.8320257757716218,
+          "inside_fraction": 0.9916685952325851
+        },
+        "wind_y_minus5": {
+          "inside_samples": 4312,
+          "minimum_margin_mm": -3.1017432147327426,
+          "inside_fraction": 0.9979171488081463
+        },
+        "wind_y_plus5": {
+          "inside_samples": 4240,
+          "minimum_margin_mm": -5.675154430213982,
+          "inside_fraction": 0.9812543392733164
+        },
+        "wind_y_minus8": {
+          "inside_samples": 4294,
+          "minimum_margin_mm": -11.204888587781184,
+          "inside_fraction": 0.9937514464244388
+        },
+        "wind_y_plus8": {
+          "inside_samples": 4051,
+          "minimum_margin_mm": -15.042780525417236,
+          "inside_fraction": 0.9375144642443879
+        }
+      }
+    }
+  },
+  "exploded_stages_verified": [
+    1,
+    29,
+    49,
+    65,
+    101,
+    121
+  ],
+  "missing_media": [],
+  "media_refresh_pending": false,
+  "assets": {
+    "Blender/Ver.3/ver3_ABC.blend": {
+      "bytes": 28303908,
+      "sha256": "2b6eedfbbbed94394233946d5b25157175f32739eb2a841934392d8d37b19b29"
+    },
+    "docs/ver3/media/comparison.png": {
+      "bytes": 975654,
+      "sha256": "1aa59c13d6ef056c4712a4a8126289d381a8746f4051b96fc57ca04b8bb49b0a",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/drivetrain_A.png": {
+      "bytes": 813435,
+      "sha256": "bee58aefb6679e22134a458c932a71daab0e9de45932227cd02f61f4d0d98be2",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/drivetrain_A_left.png": {
+      "bytes": 791107,
+      "sha256": "41ef11cebf25469b3e9280a4b8744dcee328c7afb59f8edd802617341dc9d0af",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/drivetrain_A_right.png": {
+      "bytes": 781926,
+      "sha256": "a28fda26290c31c4f01942cd741751240761607033b32603269eccdd0e8365e4",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/drivetrain_B.png": {
+      "bytes": 843592,
+      "sha256": "6f33ca8899bbe68faa81857f9986933aa27629bd226acda4ca55d038b799eaf4",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/drivetrain_B_left.png": {
+      "bytes": 798456,
+      "sha256": "2bdb5333bc23104e09233f26ed4e8157ee17ea07cf16c820eeadcdb184f66f63",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/drivetrain_B_right.png": {
+      "bytes": 809414,
+      "sha256": "28e4737f871806ba94080b65ea3488d83993dadee5394492767f374e01dd47c1",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/drivetrain_C.png": {
+      "bytes": 822084,
+      "sha256": "aa6d58677acee45f85dd6285086859d525f55de0daabae028ab2e11fd7da10ca",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/drivetrain_C_left.png": {
+      "bytes": 790849,
+      "sha256": "d0bd99cbc7a19c0bb23f66d9aa41bb7e03ed0aecc36811663bc7237b05659df5",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/drivetrain_C_right.png": {
+      "bytes": 785252,
+      "sha256": "f97a937f7c2910bd59db7adf9eff5c846c39ecee650e63c071ba62221c0f06d0",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/drivetrain_detail.png": {
+      "bytes": 688328,
+      "sha256": "16b15bc67ba21a1367a8719ce74d77799ae43c24e6a01572339361c6f37d5413",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/exploded.mp4": {
+      "bytes": 234286,
+      "sha256": "1c0d59f4d0971963fff7408dc5299e1c6637c332b90059b88810d8f104cb9221",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 960,
+            "height": 540,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "24/1",
+            "nb_frames": "120"
+          }
+        ],
+        "format": {
+          "duration": "5.000000",
+          "size": "234286"
+        }
+      },
+      "complete_decode_verified": true
+    },
+    "docs/ver3/media/exploded_A.png": {
+      "bytes": 870827,
+      "sha256": "ed9a0d09cbfc00aa4b37d7a0888810a4c318cf385013f08c0e3dc40acdbc8c50",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/frame_C.png": {
+      "bytes": 805009,
+      "sha256": "f25895398c5021e8f08cf314c7b941cbe1278d6a77ab05400d05241ffb0fbb5f",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/hero_A.png": {
+      "bytes": 881871,
+      "sha256": "04e0ad3a9a3fbda004f5fa0c07520a27ecb0f0ed95399831cdf20fb465be7841",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/hero_B.png": {
+      "bytes": 932118,
+      "sha256": "e0e367a435cf0dc6920de271f2294d18d97bceccd341b45ce425a2be21d0a657",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/hero_C.png": {
+      "bytes": 917303,
+      "sha256": "cd6317d3b1271deb73befe7bc068b9cfd11a7a449bf0dc22a91e0019c908869a",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/operation.mp4": {
+      "bytes": 945860,
+      "sha256": "5650222789ec6b6b28fb3edf079424ca42444a352d66f092a07b0165fe96b4bb",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 960,
+            "height": 540,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "24/1",
+            "nb_frames": "288"
+          }
+        ],
+        "format": {
+          "duration": "12.000000",
+          "size": "945860"
+        }
+      },
+      "complete_decode_verified": true
+    },
+    "docs/ver3/media/review_metrics.json": {
+      "bytes": 88905,
+      "sha256": "c44c3fa6a6fa2c377862f0c5811586f793f284ab9d2bb4ca6971eca9fedb2a23"
+    },
+    "docs/ver3/media/rex_connection.png": {
+      "bytes": 830590,
+      "sha256": "8f04f20bee1a1356832662bca65d91b6fddc2ab8521c399abb2b2f433dcf2ef9",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/walk_preview.gif": {
+      "bytes": 2870499,
+      "sha256": "52781dcef9b75e553935749af5046ad6ed3fc5793fa403f142fba1d8a2ac684f",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "width": 600,
+            "height": 338,
+            "pix_fmt": "bgra",
+            "r_frame_rate": "6/1",
+            "nb_frames": "198"
+          }
+        ],
+        "format": {
+          "duration": "33.000000",
+          "size": "2870499"
+        }
+      },
+      "complete_decode_verified": true
+    },
+    "docs/ver3/media/walking_A.gif": {
+      "bytes": 1814121,
+      "sha256": "326e475b2765f84846127254061e33ae935e50c6eb3deb790b7f2de922ab6caf",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "width": 600,
+            "height": 338,
+            "pix_fmt": "bgra",
+            "r_frame_rate": "10/1",
+            "nb_frames": "90"
+          }
+        ],
+        "format": {
+          "duration": "9.000000",
+          "size": "1814121"
+        }
+      },
+      "complete_decode_verified": true
+    },
+    "docs/ver3/media/walking_A.mp4": {
+      "bytes": 675246,
+      "sha256": "2a6fc9b36c8ca2f848cd03da34578fc67982ce3c240bbef9f5da4c480259a398",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 960,
+            "height": 540,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "24/1",
+            "nb_frames": "216"
+          }
+        ],
+        "format": {
+          "duration": "9.000000",
+          "size": "675246"
+        }
+      },
+      "complete_decode_verified": true
+    },
+    "docs/ver3/media/walking_A.png": {
+      "bytes": 1001673,
+      "sha256": "8a19e55e9b785a92c5152a44482594d507315be36dbc486c569946e83e2d24d7",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/walking_B.gif": {
+      "bytes": 1844706,
+      "sha256": "a6d9c89d379673907516be08ac69afb42444e232ba19d98775122f11372bfc93",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "width": 600,
+            "height": 338,
+            "pix_fmt": "bgra",
+            "r_frame_rate": "10/1",
+            "nb_frames": "120"
+          }
+        ],
+        "format": {
+          "duration": "12.000000",
+          "size": "1844706"
+        }
+      },
+      "complete_decode_verified": true
+    },
+    "docs/ver3/media/walking_B.mp4": {
+      "bytes": 826611,
+      "sha256": "fcda99ba5fce485476098289506613dc0845d55c85dbb4348f981b076f90d497",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 960,
+            "height": 540,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "24/1",
+            "nb_frames": "288"
+          }
+        ],
+        "format": {
+          "duration": "12.000000",
+          "size": "826611"
+        }
+      },
+      "complete_decode_verified": true
+    },
+    "docs/ver3/media/walking_B.png": {
+      "bytes": 1013186,
+      "sha256": "869d3f0cb2c33e9052ffc15864277b203224e4690db49eb47f0b8d957c1aafa0",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    "docs/ver3/media/walking_C.gif": {
+      "bytes": 1831362,
+      "sha256": "4565fbce86268f5ad29f3e2d2892976f24dd81715fa62d708863e49d1c302c1c",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "width": 600,
+            "height": 338,
+            "pix_fmt": "bgra",
+            "r_frame_rate": "10/1",
+            "nb_frames": "120"
+          }
+        ],
+        "format": {
+          "duration": "12.000000",
+          "size": "1831362"
+        }
+      },
+      "complete_decode_verified": true
+    },
+    "docs/ver3/media/walking_C.mp4": {
+      "bytes": 909494,
+      "sha256": "d8eb0ce6c74442bd5dcc8e8d5fa9b76ca68ae2dc71520761acaad74504dc120c",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 960,
+            "height": 540,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "24/1",
+            "nb_frames": "288"
+          }
+        ],
+        "format": {
+          "duration": "12.000000",
+          "size": "909494"
+        }
+      },
+      "complete_decode_verified": true
+    },
+    "docs/ver3/media/walking_C.png": {
+      "bytes": 999086,
+      "sha256": "9b2223381ecd0ca897a882ca0f53da7c87af0fa482b7e949c2baf873416c8a30",
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  },
+  "media_generation_receipt": {
+    "native_sha256": "2b6eedfbbbed94394233946d5b25157175f32739eb2a841934392d8d37b19b29",
+    "rendered_frames_by_segment": {
+      "operation-comparison": 144,
+      "operation-drives": 144,
+      "exploded": 120,
+      "walking-A": 216,
+      "walking-B": 288,
+      "walking-C": 288
+    },
+    "total_fresh_video_frames": 1200,
+    "all_segments_from_same_native": true,
+    "walk_sha256": {
+      "A": "3f37087865a1df72b87df705c574c6b8b1a8da8129fb483210f8f28d3c71d896",
+      "B": "62753335f21d4cf97df017a01b1c01a4c43c96e51dd3d9402bf7688194923c25",
+      "C": "d8ddfe08fb4506ec5afed15a8dca74dd90f7ad64abc8405d76a3b97fb9a15186"
+    },
+    "input_change_recovery": "Detected the later A S_WINDOW_1 carriage-clearance-hole revision; rebuilt native/stills and rendered all six segments again. No interrupted frame cache was reused."
+  },
+  "final_refreeze_confirmation": {
+    "all_canonical_and_global_config_hashes_match_saved_native": true,
+    "serialized_assembly_and_walk_equal_for_all_designs": true,
+    "rerender_required": false,
+    "all_existing_native_and_media_bytes_preserved": true,
+    "B_C_completed_media_reused": true,
+    "A_window_clearance_bore_mm": 8.4,
+    "A_window_clearance_centers": [
+      [
+        2.0,
+        192.0
+      ],
+      [
+        2.0,
+        228.0
+      ],
+      [
+        38.0,
+        192.0
+      ],
+      [
+        38.0,
+        228.0
+      ]
+    ],
+    "global_design_sha256": "cdbf69689a31706893c4f8cb6464491bc5dedeebe4df6eea5cb78cc2a9a3122b",
+    "R4_conditions": "COG +/-5 mm; Wind-COP @5 m/s (+/-Y)",
+    "A_Wind_COP_5m_s_minimum_margin_mm": -1.4166892581957313
+  }
+}

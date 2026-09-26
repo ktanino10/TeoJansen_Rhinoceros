@@ -472,3 +472,38 @@ it speeds up development and broadens your creative options. 🚀
 
 
 🦏 **Happy Building & Learning!**
+
+---
+
+## Ver.3 — Three inspectable engineering concepts
+
+**This first-cut package includes real FreeCAD/STEP assemblies, custom printable parts, BOMs, assembly instructions and Blender visualizations. It is not a manufacturing release or a demonstration of autonomous wind-powered walking.**
+
+The confirmed failure was **slip at the turbine/gear-to-shaft joint**, not proven bearing seizure. The new load path uses metal 8 mm REX shafts and form-fitting metal hubs, bolted printed components, explicit axial retention, inner-ring spacers and removable guards. A collar is not treated as a torque key.
+
+![Ver.3 designs at a common physical scale](./docs/ver3/media/comparison.png)
+
+| Design | Rotor diameter × span | Drivetrain | CAD and parts |
+|---|---:|---|---|
+| **A — Large rotor** | 300 × 180 mm | Purchased 2:1 toothed belt + 3:1 spur stage, **6:1 total** | [FCStd](./FreeCAD/Ver.3/A/Ver3_A.FCStd) · [STEP](./FreeCAD/Ver.3/A/Ver3_A.step) · [STL](./STL/Ver.3/A) · [BOM](./docs/ver3/BOM_A.csv) |
+| **B — Small rotor, high reduction** | 90 × 180 mm | Three 4:1 spur stages, **64:1**; slower motion and more starting losses | [FCStd](./FreeCAD/Ver.3/B/Ver3_B.FCStd) · [STEP](./FreeCAD/Ver.3/B/Ver3_B.step) · [STL](./STL/Ver.3/B) · [BOM](./docs/ver3/BOM_B.csv) |
+| **C — Intermediate, generated frame** | 180 × 180 mm | Two spur stages, **16:1**, constrained parametric rib generation | [FCStd](./FreeCAD/Ver.3/C/Ver3_C.FCStd) · [STEP](./FreeCAD/Ver.3/C/Ver3_C.step) · [STL](./STL/Ver.3/C) · [BOM](./docs/ver3/BOM_C.csv) |
+
+Nominal all-solid CAD plus catalog/assumed hardware masses are approximately **4.06 / 4.66 / 3.42 kg**—not measured or slicer masses. C is the suggested first **assembly and joint-resistance test**, not a validated wind-walking recommendation.
+
+[![Contact-derived walking preview](./docs/ver3/media/walk_preview.gif)](./docs/ver3/media/walking_C.mp4)
+
+**Walking:** [A, 1×](./docs/ver3/media/walking_A.mp4) · [B, 8×](./docs/ver3/media/walking_B.mp4) · [C, 2×](./docs/ver3/media/walking_C.mp4)  
+**Mechanism and assembly:** [Operation](./docs/ver3/media/operation.mp4) · [Exploded illustration](./docs/ver3/media/exploded.mp4) · [Native Blender](./Blender/Ver.3/ver3_ABC.blend)
+
+The walking scenes use the actual linkage lengths, phases and ratios. Body motion is derived from foot-contact geometry and material-point anchors, not an arbitrary sliding translation. At the common **prescribed rotor input of 120 rpm**, three crank cycles take A 9 s, B 96 s and C 24 s; the playback multipliers are explicit. This is **kinematic visualization with contact approximations**, not wind/contact dynamics.
+
+The strict 3 mm contact target remains **unmet**: maximum material-anchor drift **within one uninterrupted ≥2%-load episode**, including clip-entry partial episodes, is approximately **9.55 / 10.30 / 8.88 mm**. These are not three-cycle accumulated slip distances. Small positive support margins are not practical stability guarantees. See the [results and definitions](./docs/ver3/comparison.json) for the separate all-near-foot audit, interval-specific drift/path metrics, floor checks and CG/wind sensitivity.
+
+Under the common nominal friction assumptions, peak required input torques are about **0.0478 / 0.00690 / 0.0155 Nm**. Even the optimistic assumed 8 m/s, torque-coefficient-0.20 input is insufficient for B's nominal startup case. No design is promised to start at a particular wind speed or every rotor angle.
+
+[Design, evidence and regeneration](./docs/ver3/DESIGN_ja.md) · [Assembly and bench checklist](./docs/ver3/ASSEMBLY_ja.md) · [Actual CAD sections](./docs/ver3/drawings) · [Comparison CSV](./docs/ver3/comparison.csv) · [Independent review](./docs/ver3/REVIEW_ja.md)
+
+“Generative Design” here means an **executed, reproducible parametric design-space search**, not Autodesk Generative Design, CFD, continuum FEA or topology optimization. Print Ver.3 STLs at **100% in millimetres**; do not reapply the historical 150% scaling. These are new concepts, not reconstructed native Ver.2 CAD or guaranteed drop-in replacements.
+
+**Project showcase:** [Explore Ver.1, Ver.2 and Ver.3](https://ktanino10.github.io/TeoJansen_Rhinoceros/) — a Japanese-language overview of the physical build records, explicitly labelled concept renders, prescribed walking videos and version-specific downloads. Ver.3's unvalidated physical performance and unmet contact targets remain prominent.

@@ -1,0 +1,189 @@
+{
+  "prototype": "A",
+  "closure_samples_per_hand": 721,
+  "link_closure_error_mm": 4.263256414560601e-14,
+  "ac_pivot_clearance_min_mm": 0.5227661385155216,
+  "ac_closest_angle_deg": 191.59959422936143,
+  "foot_stride_mm": 95.07152644661042,
+  "foot_lift_mm": 31.439716775080115,
+  "stage_reports": [
+    {
+      "stage": "S1",
+      "kind": "purchased HTD5M",
+      "pitch_length_error_mm": 1.1368683772161603e-13,
+      "small_wrap_deg": 167.0161129463603,
+      "engaged_teeth": 11.134407529757354
+    },
+    {
+      "stage": "S2",
+      "kind": "involute spur",
+      "contact_ratio": 1.7411245892021372,
+      "mesh_samples": 721,
+      "overlap_max_mm2": 0,
+      "root_web_mm": 12.986291501015238,
+      "tip_thickness_mm": 1.3082714441893692
+    }
+  ],
+  "axis_speed_per_crank": {
+    "O": 1.0,
+    "M1": -3.0,
+    "I": -6.0
+  },
+  "moving_link_overlap_mm2": 0,
+  "tie_rail_clearance_mm": 19.901202328730065,
+  "continuous_foreign_shaft_clearance_mm": 28.761129494754613,
+  "shoe_separating_aabb_gap_mm": 2.529385445796578,
+  "rotor_foreign_shaft_clearance_mm": 14.91916846804142,
+  "transform_cycle_error": 2.2737367544323206e-13,
+  "bom_count_consistent": true,
+  "native_instance_count": 791,
+  "stl_results": [
+    {
+      "part": "L_AB",
+      "watertight": true,
+      "volume_relative_error": 7.995940319475898e-05
+    },
+    {
+      "part": "L_AC",
+      "watertight": true,
+      "volume_relative_error": 8.742370037859508e-05
+    },
+    {
+      "part": "L_PC",
+      "watertight": true,
+      "volume_relative_error": 0.00021271945256974754
+    },
+    {
+      "part": "L_PBD",
+      "watertight": true,
+      "volume_relative_error": 4.5909132020799936e-05
+    },
+    {
+      "part": "L_DE",
+      "watertight": true,
+      "volume_relative_error": 6.348688571132412e-05
+    },
+    {
+      "part": "L_CEF",
+      "watertight": true,
+      "volume_relative_error": 7.405763572416553e-06
+    },
+    {
+      "part": "L_PBD_R",
+      "watertight": true,
+      "volume_relative_error": 4.590913202121237e-05
+    },
+    {
+      "part": "L_CEF_R",
+      "watertight": true,
+      "volume_relative_error": 7.405763572037861e-06
+    },
+    {
+      "part": "P_CRANK_CHEEK",
+      "watertight": true,
+      "volume_relative_error": 0.0008708336987857094
+    },
+    {
+      "part": "P_FRAME_CORE",
+      "watertight": true,
+      "volume_relative_error": 0.00012443468852508087
+    },
+    {
+      "part": "P_FRAME_LEFT",
+      "watertight": true,
+      "volume_relative_error": 1.6304441347272804e-06
+    },
+    {
+      "part": "P_FRAME_RIGHT",
+      "watertight": true,
+      "volume_relative_error": 1.5578134459969897e-05
+    },
+    {
+      "part": "P_FRAME_FRONT_LEFT",
+      "watertight": true,
+      "volume_relative_error": 1.495162234960871e-05
+    },
+    {
+      "part": "P_FRAME_FRONT_RIGHT",
+      "watertight": true,
+      "volume_relative_error": 5.536123186927218e-05
+    },
+    {
+      "part": "P_INPUT_CARRIAGE_FLOAT",
+      "watertight": true,
+      "volume_relative_error": 0.00039214882362740845
+    },
+    {
+      "part": "P_INPUT_CARRIAGE_LOC",
+      "watertight": true,
+      "volume_relative_error": 0.0003881693310994427
+    },
+    {
+      "part": "P_BEARING_RETAINER",
+      "watertight": true,
+      "volume_relative_error": 0.0013422547762566824
+    },
+    {
+      "part": "P_S2_PINION",
+      "watertight": true,
+      "volume_relative_error": 0.00012438257974580275
+    },
+    {
+      "part": "P_S2_WHEEL",
+      "watertight": true,
+      "volume_relative_error": 0.0007717728409972077
+    },
+    {
+      "part": "P_ROTOR_CUP",
+      "watertight": true,
+      "volume_relative_error": 3.290482850456202e-05
+    },
+    {
+      "part": "P_ROTOR_CORE",
+      "watertight": true,
+      "volume_relative_error": 0.0013422734747611863
+    },
+    {
+      "part": "P_ROTOR_YOKE",
+      "watertight": true,
+      "volume_relative_error": 0.00013343127343188533
+    },
+    {
+      "part": "P_ROTOR_CORE_R",
+      "watertight": true,
+      "volume_relative_error": 0.0013422734747611863
+    },
+    {
+      "part": "P_ROTOR_YOKE_R",
+      "watertight": true,
+      "volume_relative_error": 0.00013343127343171807
+    },
+    {
+      "part": "P_GUARD_1",
+      "watertight": true,
+      "volume_relative_error": 9.477396282336941e-07
+    },
+    {
+      "part": "P_GUARD_2",
+      "watertight": true,
+      "volume_relative_error": 5.942678265404576e-06
+    },
+    {
+      "part": "P_SHOE",
+      "watertight": true,
+      "volume_relative_error": 3.081701564980876e-05
+    },
+    {
+      "part": "Q_BEARING_FIT",
+      "watertight": true,
+      "volume_relative_error": 0.0008384621279198179
+    },
+    {
+      "part": "Q_JOINT_FIT",
+      "watertight": true,
+      "volume_relative_error": 0.00012046362743816604
+    }
+  ],
+  "structure_limits_pass": true,
+  "config_sha256": "cdbf69689a31706893c4f8cb6464491bc5dedeebe4df6eea5cb78cc2a9a3122b"
+}
