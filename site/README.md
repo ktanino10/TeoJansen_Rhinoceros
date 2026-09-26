@@ -33,6 +33,10 @@ npm test
 
 公開後は `SITE_URL` にデプロイが返した実URLを指定して `npm --prefix site test` を実行できます。公開URLのGET、主要画像・MP4、GitHub側の代表ダウンロードも確認します。CI成功だけを実配信の確認として扱いません。
 
+公開済みファイルのGET・出典・ハッシュ・画像メタデータは、ビルド後に `python3 site/verify_live.py --expected-commit <配信コミットの40文字SHA>` で確認できます。接続先はこのプロジェクトの既存Pages URLだけです。
+
+ローカルでブラウザを起動できない場合も、既存の **Showcase Pages** workflowを`main`から`verify_live=true`で手動実行できます（`gh workflow run pages.yml --ref main -f verify_live=true`）。このモードは全配信アセットのGET/hashと、公開URLでのdesktop／375pxブラウザ検査を行い、PNG証跡を1日保持します。通常PR／pushの全検査は維持し、live検証モードではPages artifactのuploadとdeployを両方スキップします。別workflow・別ホスト・追加権限・ローカルの利用者ブラウザ操作は不要です。
+
 ## 保持する制限
 
 Ver.3は実機未検証、全案の接地残差3 mm目標は未達、Bは名目トルク入力不足です。規定120 rpm入力の映像にはA1×／B8×／C2×を表示します。Cは組立・接合・抵抗測定候補であり、風力完成機の推奨ではありません。パラメトリック生成設計の体積代理量の改善を、装置全体の軽量化率と混同しません。

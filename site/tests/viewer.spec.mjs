@@ -30,7 +30,7 @@ function expectedVisible(guide, position) {
   return names;
 }
 
-test("3D is opt-in and A/B/C load exact source-bound instances independently", async ({ page }) => {
+test("3D is opt-in and A/B/C load exact source-bound instances independently", async ({ page }, testInfo) => {
   test.setTimeout(120_000);
   const requests = [];
   const errors = [];
@@ -79,6 +79,10 @@ test("3D is opt-in and A/B/C load exact source-bound instances independently", a
     const loaded = requests.filter((url) => /\.glb$/.test(url)).map((url) => url.split("/").at(-1));
     expect(loaded).toEqual(["A", "B", "C"].slice(0, "ABC".indexOf(design) + 1).map((id) => `ver3-${id}.glb`));
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
+    await page.locator("#reset-view").click();
+    await expect.poll(async () => Number(await diagnostic(page, "angle"))).toBeCloseTo(Math.atan2(1.1, 1.3), 3);
+    await page.locator("#canvas-host canvas").screenshot({ path: testInfo.outputPath(`published-${design}-model.png`) });
+    await page.screenshot({ path: testInfo.outputPath(`published-${design}-viewport.png`) });
   }
   expect(errors).toEqual([]);
 });
@@ -243,6 +247,7 @@ test("Matrix is complete, its assets load and it links to exact part-group views
   }
   const results = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze();
   expect(results.violations).toEqual([]);
+  await page.screenshot({ path: testInfo.outputPath("published-matrix.png") });
   await page.getByRole("link", { name: "3Dで軸・金属ハブを見る →" }).click();
   await expect(page).toHaveURL(/viewer\.html\?design=C&focus=connection$/);
   await page.locator("#load-viewer").click();
