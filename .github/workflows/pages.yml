@@ -21,6 +21,11 @@ on:
       - STL/**
       - Blender/**
   workflow_dispatch:
+    inputs:
+      verify_live:
+        description: Verify the published Pages site without deploying again
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -59,9 +64,27 @@ jobs:
       - name: Check content, asset budget, metadata and links
         run: npm --prefix site run test:static
       - name: Check real desktop and mobile browsers
-        run: npm --prefix site test
+        env:
+          VERIFY_LIVE: ${{ inputs.verify_live }}
+          SITE_URL: ${{ inputs.verify_live && 'https://ktanino10.github.io/TeoJansen_Rhinoceros/' || '' }}
+          EXPECTED_COMMIT: ${{ github.sha }}
+        run: |
+          if [ "$VERIFY_LIVE" = "true" ]; then
+            python site/verify_live.py --expected-commit "$EXPECTED_COMMIT"
+            npm --prefix site test -- --grep 'versions, source-bound|production journey|3D is opt-in|mobile touch|Matrix is complete|all three concrete guides'
+          else
+            npm --prefix site test
+          fi
+      - name: Save public-browser screenshots
+        if: always() && inputs.verify_live
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: published-browser-evidence
+          path: site/test-results/**/*.png
+          if-no-files-found: warn
+          retention-days: 1
       - name: Upload only the validated Pages bundle
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && !inputs.verify_live
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: site/dist/TeoJansen_Rhinoceros
@@ -69,7 +92,7 @@ jobs:
 
   deploy:
     name: Deploy verified showcase
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && !inputs.verify_live
     needs: validate
     runs-on: ubuntu-latest
     timeout-minutes: 10
