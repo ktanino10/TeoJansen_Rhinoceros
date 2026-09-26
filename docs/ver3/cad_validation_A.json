@@ -1,0 +1,22 @@
+{
+  "prototype": "A",
+  "native_objects": 791,
+  "native_valid": true,
+  "step_solids": 827,
+  "step_volume_relative_error": 1.7316953533768344e-08,
+  "printed_unique_parts": 29,
+  "printed_instances": 81,
+  "nominal_total_mass_g": 4064.1157758650684,
+  "nominal_center_of_mass_mm": [
+    127.92805086738575,
+    -10.027249767489955,
+    228.15877281103226
+  ],
+  "nominal_printed_mass_g": 2177.7762337771846,
+  "frame_printed_mass_g": 929.4633781585899,
+  "files_bytes": {
+    "Ver3_A.FCStd": 2643951,
+    "render_geometry.json.gz": 2670302,
+    "Ver3_A.step": 17072857
+  }
+}

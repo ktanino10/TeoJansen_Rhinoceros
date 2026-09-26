@@ -1,0 +1,2352 @@
+{
+  "scope": "Lead-provided review metrics, not physical validation",
+  "failure_policy": "Failed 3 mm targets remain failures; no pose or geometry is adjusted",
+  "prototypes": {
+    "A": {
+      "assembly_sha256": "eb3dff9491bfa47d419815d908115c7cc73dae54b000b5829f56edb6643bfb1b",
+      "geometry_sha256": "bdc8e56c407e830d8edd50a960213f8b0a1acd91e424b3aa8d10676add6ac5fe",
+      "core_sha256": "1572f2d2005e84a9b4929aa39f1dbdb2144dfac6f5333bfb85e1ddb3fb856033",
+      "video_seconds": 9.0,
+      "physical_seconds": 9.0,
+      "time_scale": 1,
+      "render_frame_end": 216,
+      "validation": {
+        "dense_solver_steps": 4321,
+        "mass_transform_error_mm": 3.979039320256561e-13,
+        "forward_axis": [
+          0,
+          -1,
+          0
+        ],
+        "forward_travel_mm": 533.5119981314514,
+        "lateral_drift_mm": 0.885239403743272,
+        "mean_physical_speed_mm_s": 59.2791109034946,
+        "max_stance_material_anchor_drift_mm": 9.551041403579733,
+        "strict_3mm_contact_target_pass": false,
+        "body_advance_per_crank_cycle_mm": 177.8373327104838,
+        "max_single_contact_episode_horizontal_path_mm": 17.05552938027547,
+        "total_material_horizontal_path_all_feet_three_cycles_mm": 254.85105872065662,
+        "worst_anchor_episode": {
+          "foot": 3,
+          "start_theta": 0.0,
+          "end_theta": 1.5227997723650524,
+          "start_body_y": 0.0,
+          "end_body_y": -47.669502274822975,
+          "max_anchor_drift_mm": 9.551041403579733,
+          "horizontal_path_mm": 10.219654841039125,
+          "material_point_body_relative_to_F": [
+            1.989309780883577,
+            9.311207318741463,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 47.669502274822975,
+          "physical_seconds": 0.7270833333333333,
+          "partial_at_clip_boundary": true
+        },
+        "slip_definition": "Maximum horizontal offset of one persistent material point from its touchdown anchor within one uninterrupted >=2%-weight contact episode, maximized over all feet/three cycles. Horizontal path is accumulated within each episode; it is not the same statistic.",
+        "loaded_foot_threshold_fraction": 0.02,
+        "max_active_foot_gap_mm": 0.24994632450303467,
+        "minimum_support_margin_mm": 6.150280173196521,
+        "minimum_active_feet": 2,
+        "max_body_tilt_deg": 0.6743130553889363,
+        "minimum_mesh_floor_clearance_mm": 0.01999999999999602,
+        "floor_checked_frames": 217,
+        "exact_mesh_floor_fallbacks": 288,
+        "opposed_stance_direction_sample_count": 0,
+        "opposed_stance_angles_deg": [],
+        "finite_contact_tolerance_mm": 0.25,
+        "fixed_pose_sensitivity": {
+          "cog_x_minus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 3.626869371728901,
+            "inside_fraction": 1.0
+          },
+          "cog_x_plus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 8.673690974664169,
+            "inside_fraction": 1.0
+          },
+          "cog_y_minus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 4.4028889702596885,
+            "inside_fraction": 1.0
+          },
+          "cog_y_plus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 1.8340160099925669,
+            "inside_fraction": 1.0
+          },
+          "wind_y_minus3": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 6.25110171333329,
+            "inside_fraction": 1.0
+          },
+          "wind_y_plus3": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 3.426171177895313,
+            "inside_fraction": 1.0
+          },
+          "wind_y_minus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.6479243676863575,
+            "inside_fraction": 1.0
+          },
+          "wind_y_plus5": {
+            "inside_samples": 4318,
+            "minimum_margin_mm": -1.4166892581957313,
+            "inside_fraction": 0.9993057162693821
+          },
+          "wind_y_minus8": {
+            "inside_samples": 3667,
+            "minimum_margin_mm": -13.00982041232804,
+            "inside_fraction": 0.848646146725295
+          },
+          "wind_y_plus8": {
+            "inside_samples": 4126,
+            "minimum_margin_mm": -13.22116157116767,
+            "inside_fraction": 0.9548715575098357
+          }
+        }
+      },
+      "contact_episodes": [
+        {
+          "foot": 3,
+          "start_theta": 0.0,
+          "end_theta": 1.5227997723650524,
+          "start_body_y": 0.0,
+          "end_body_y": -47.669502274822975,
+          "max_anchor_drift_mm": 9.551041403579733,
+          "horizontal_path_mm": 10.219654841039125,
+          "material_point_body_relative_to_F": [
+            1.989309780883577,
+            9.311207318741463,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 47.669502274822975,
+          "physical_seconds": 0.7270833333333333,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 0,
+          "start_theta": 0.0,
+          "end_theta": 1.614429558094755,
+          "start_body_y": 0.0,
+          "end_body_y": -50.47868216451214,
+          "max_anchor_drift_mm": 1.2222858468018325,
+          "horizontal_path_mm": 3.318241736846099,
+          "material_point_body_relative_to_F": [
+            2.137001240625911,
+            9.312824422216577,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 50.47868216451214,
+          "physical_seconds": 0.7708333333333335,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 4,
+          "start_theta": 0.0,
+          "end_theta": 1.614429558094755,
+          "start_body_y": 0.0,
+          "end_body_y": -50.47868216451214,
+          "max_anchor_drift_mm": 1.3124816449850039,
+          "horizontal_path_mm": 3.5415393993394066,
+          "material_point_body_relative_to_F": [
+            2.0536685510766244,
+            9.313109199541794,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 50.47868216451214,
+          "physical_seconds": 0.7708333333333335,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 1,
+          "start_theta": 1.5271630954950384,
+          "end_theta": 4.437499623195583,
+          "start_body_y": -48.73898852065393,
+          "end_body_y": -131.44585343131726,
+          "max_anchor_drift_mm": 6.30911071349552,
+          "horizontal_path_mm": 11.820735302141598,
+          "material_point_body_relative_to_F": [
+            5.0218950169901815,
+            9.000000000000002,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 82.70686491066333,
+          "physical_seconds": 1.3895833333333334,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 4.454952915715526,
+          "end_theta": 4.537856055185257,
+          "start_body_y": -130.40121336598554,
+          "end_body_y": -132.65820127348516,
+          "max_anchor_drift_mm": 0.8184724399520625,
+          "horizontal_path_mm": 0.8188067146376398,
+          "material_point_body_relative_to_F": [
+            19.24749573634691,
+            9.000000000000004,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 2.256987907499621,
+          "physical_seconds": 0.039583333333333415,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 4.564035993965172,
+          "end_theta": 4.60766922526503,
+          "start_body_y": -133.96064030275878,
+          "end_body_y": -135.071868490319,
+          "max_anchor_drift_mm": 0.455912985575623,
+          "horizontal_path_mm": 0.455985970550733,
+          "material_point_body_relative_to_F": [
+            19.999999999999954,
+            9.000000000000002,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 1.111228187560215,
+          "physical_seconds": 0.020833333333333308,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 1.5271630954950384,
+          "end_theta": 4.664392425954845,
+          "start_body_y": -48.73898852065393,
+          "end_body_y": -136.8784309651407,
+          "max_anchor_drift_mm": 5.825915909361001,
+          "horizontal_path_mm": 14.754480405848359,
+          "material_point_body_relative_to_F": [
+            5.1677099751922695,
+            9.0,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 88.13944244448676,
+          "physical_seconds": 1.4979166666666663,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 4.638212487174931,
+          "end_theta": 4.664392425954845,
+          "start_body_y": -136.25021401136414,
+          "end_body_y": -136.8784309651407,
+          "max_anchor_drift_mm": 0.28308506546685686,
+          "horizontal_path_mm": 0.2830930675385868,
+          "material_point_body_relative_to_F": [
+            19.99999999999996,
+            9.000000000000002,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 0.6282169537765583,
+          "physical_seconds": 0.012499999999999647,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 4.681845718474789,
+          "end_theta": 4.69057236473476,
+          "start_body_y": -137.33115696857078,
+          "end_body_y": -137.57575258327898,
+          "max_anchor_drift_mm": 0.07167919309194135,
+          "horizontal_path_mm": 0.07168470119294085,
+          "material_point_body_relative_to_F": [
+            -11.999999999999922,
+            -9.499999999999908,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 0.2445956147082029,
+          "physical_seconds": 0.004166666666666407,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 4.6687557490848315,
+          "end_theta": 4.703662334124719,
+          "start_body_y": -136.9956337850558,
+          "end_body_y": -137.85090187490226,
+          "max_anchor_drift_mm": 0.03139185422740618,
+          "horizontal_path_mm": 0.03304837481583211,
+          "material_point_body_relative_to_F": [
+            5.354339613832345,
+            9.000000000000004,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.8552680898464757,
+          "physical_seconds": 0.016666666666666902,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 4.71238898038469,
+          "end_theta": 4.721115626644661,
+          "start_body_y": -137.94131905546925,
+          "end_body_y": -138.12393538999322,
+          "max_anchor_drift_mm": 0.08889416810385363,
+          "horizontal_path_mm": 0.08908366442847207,
+          "material_point_body_relative_to_F": [
+            -19.999999999999844,
+            -9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.18261633452397064,
+          "physical_seconds": 0.004166666666666407,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 1.6013395887047974,
+          "end_theta": 4.756022211684548,
+          "start_body_y": -50.21850493934685,
+          "end_body_y": -138.99867063364437,
+          "max_anchor_drift_mm": 5.850645726430208,
+          "horizontal_path_mm": 13.982876335488857,
+          "material_point_body_relative_to_F": [
+            1.836204107510887,
+            6.944873287338996,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.78016569429752,
+          "physical_seconds": 1.50625,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 4.71238898038469,
+          "end_theta": 7.805985079544639,
+          "start_body_y": -137.94131905546925,
+          "end_body_y": -225.69550573433324,
+          "max_anchor_drift_mm": 7.1780221315968875,
+          "horizontal_path_mm": 17.05552938027529,
+          "material_point_body_relative_to_F": [
+            17.330488036785475,
+            -9.166844497700907,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 87.75418667886399,
+          "physical_seconds": 1.4770833333333333,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 4.708025657254704,
+          "end_theta": 7.897614865274341,
+          "start_body_y": -137.8095051835554,
+          "end_body_y": -227.54856584250606,
+          "max_anchor_drift_mm": 6.08215794976106,
+          "horizontal_path_mm": 14.616763859620185,
+          "material_point_body_relative_to_F": [
+            -11.999999999999952,
+            9.5,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 89.73906065895068,
+          "physical_seconds": 1.5229166666666667,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 4.738568919164605,
+          "end_theta": 7.897614865274341,
+          "start_body_y": -138.6871517447553,
+          "end_body_y": -227.54856584250606,
+          "max_anchor_drift_mm": 4.16997342855548,
+          "horizontal_path_mm": 10.176042540229513,
+          "material_point_body_relative_to_F": [
+            3.713682013214088,
+            9.499999999999998,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 88.86141409775075,
+          "physical_seconds": 1.5083333333333333,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 7.810348402674624,
+          "end_theta": 10.72068493037517,
+          "start_body_y": -225.8077569157588,
+          "end_body_y": -308.515042934,
+          "max_anchor_drift_mm": 6.308810664696827,
+          "horizontal_path_mm": 11.822513173062587,
+          "material_point_body_relative_to_F": [
+            5.021895017005086,
+            8.999999999999998,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 82.7072860182412,
+          "physical_seconds": 1.3895833333333338,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 10.738138222895113,
+          "end_theta": 10.821041362364843,
+          "start_body_y": -307.47033410053467,
+          "end_body_y": -309.72736536771464,
+          "max_anchor_drift_mm": 0.8184730669939372,
+          "horizontal_path_mm": 0.818807504522273,
+          "material_point_body_relative_to_F": [
+            19.247495736396196,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 2.2570312671799684,
+          "physical_seconds": 0.03958333333333299,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 10.847221301144758,
+          "end_theta": 10.890854532444616,
+          "start_body_y": -311.02980584275247,
+          "end_body_y": -312.1410500099792,
+          "max_anchor_drift_mm": 0.4559149022847235,
+          "horizontal_path_mm": 0.4559879596018356,
+          "material_point_body_relative_to_F": [
+            19.99999999999993,
+            9.000000000000002,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 1.1112441672267437,
+          "physical_seconds": 0.020833333333332885,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 7.810348402674624,
+          "end_theta": 10.947577733134432,
+          "start_body_y": -225.8077569157588,
+          "end_body_y": -313.94760951655167,
+          "max_anchor_drift_mm": 5.826293437738542,
+          "horizontal_path_mm": 14.752508931039424,
+          "material_point_body_relative_to_F": [
+            5.167709975170004,
+            9.000000000000002,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.13985260079286,
+          "physical_seconds": 1.4979166666666672,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 10.921397794354517,
+          "end_theta": 10.947577733134432,
+          "start_body_y": -313.3193880855877,
+          "end_body_y": -313.94760951655167,
+          "max_anchor_drift_mm": 0.2830874385294729,
+          "horizontal_path_mm": 0.2830954634622077,
+          "material_point_body_relative_to_F": [
+            19.9999999999996,
+            9.000000000000007,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.6282214309639471,
+          "physical_seconds": 0.01250000000000007,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 10.965031025654376,
+          "end_theta": 10.973757671914345,
+          "start_body_y": -314.400284308716,
+          "end_body_y": -314.6448733496902,
+          "max_anchor_drift_mm": 0.07167919309181191,
+          "horizontal_path_mm": 0.0716847011928111,
+          "material_point_body_relative_to_F": [
+            -11.999999999999758,
+            -9.499999999999828,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 0.24458904097423328,
+          "physical_seconds": 0.00416666666666556,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 10.951941056264417,
+          "end_theta": 10.986847641304305,
+          "start_body_y": -314.0647650428061,
+          "end_body_y": -314.9200251400555,
+          "max_anchor_drift_mm": 0.031391854227386995,
+          "horizontal_path_mm": 0.0330483748158615,
+          "material_point_body_relative_to_F": [
+            5.354339613833687,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.8552600972494133,
+          "physical_seconds": 0.016666666666667326,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 10.995574287564276,
+          "end_theta": 11.004300933824247,
+          "start_body_y": -315.01047081007556,
+          "end_body_y": -315.1930874377941,
+          "max_anchor_drift_mm": 0.08889416810374796,
+          "horizontal_path_mm": 0.08908366442836456,
+          "material_point_body_relative_to_F": [
+            -19.999999999999925,
+            -9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.1826166277185166,
+          "physical_seconds": 0.004166666666666407,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 7.884524895884383,
+          "end_theta": 11.039207518864135,
+          "start_body_y": -227.28828218117354,
+          "end_body_y": -316.0678248518709,
+          "max_anchor_drift_mm": 5.850679726895176,
+          "horizontal_path_mm": 13.983083840740433,
+          "material_point_body_relative_to_F": [
+            1.836204107491986,
+            6.944873287310676,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.77954267069737,
+          "physical_seconds": 1.5062500000000003,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 10.995574287564276,
+          "end_theta": 14.089170386724225,
+          "start_body_y": -315.01047081007556,
+          "end_body_y": -402.7645310623895,
+          "max_anchor_drift_mm": 7.178022131596956,
+          "horizontal_path_mm": 17.05552938027547,
+          "material_point_body_relative_to_F": [
+            17.330488036780622,
+            -9.16684449770121,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 87.75406025231393,
+          "physical_seconds": 1.4770833333333333,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 10.99121096443429,
+          "end_theta": 14.180800172453928,
+          "start_body_y": -314.8786476033893,
+          "end_body_y": -404.61761355378184,
+          "max_anchor_drift_mm": 6.0821579497610765,
+          "horizontal_path_mm": 14.61676385962034,
+          "material_point_body_relative_to_F": [
+            -11.999999999999993,
+            9.499999999999982,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 89.73896595039253,
+          "physical_seconds": 1.5229166666666671,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 11.021754226344191,
+          "end_theta": 14.180800172453928,
+          "start_body_y": -315.75632502779644,
+          "end_body_y": -404.61761355378184,
+          "max_anchor_drift_mm": 4.16997342855549,
+          "horizontal_path_mm": 10.176042540229512,
+          "material_point_body_relative_to_F": [
+            3.7136820132066255,
+            9.499999999999986,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.8612885259854,
+          "physical_seconds": 1.5083333333333337,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 14.093533709854212,
+          "end_theta": 17.003870237554754,
+          "start_body_y": -402.87681443013514,
+          "end_body_y": -485.58366860705354,
+          "max_anchor_drift_mm": 6.30881066469573,
+          "horizontal_path_mm": 11.82251317306005,
+          "material_point_body_relative_to_F": [
+            5.021895017051789,
+            9.0,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 82.7068541769184,
+          "physical_seconds": 1.3895833333333323,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 17.0213235300747,
+          "end_theta": 17.104226669544428,
+          "start_body_y": -484.53888814254066,
+          "end_body_y": -486.79595493282926,
+          "max_anchor_drift_mm": 0.8184730669937349,
+          "horizontal_path_mm": 0.8188075045220699,
+          "material_point_body_relative_to_F": [
+            19.247495736382177,
+            9.000000000000002,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 2.2570667902886044,
+          "physical_seconds": 0.03958333333333214,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 17.130406608324346,
+          "end_theta": 17.174039839624204,
+          "start_body_y": -488.0983961146506,
+          "end_body_y": -489.20965151074984,
+          "max_anchor_drift_mm": 0.45591490228462284,
+          "horizontal_path_mm": 0.4559879596017341,
+          "material_point_body_relative_to_F": [
+            19.9999999999998,
+            9.000000000000002,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 1.1112553960992386,
+          "physical_seconds": 0.020833333333332885,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 14.093533709854212,
+          "end_theta": 17.230763040314017,
+          "start_body_y": -402.87681443013514,
+          "end_body_y": -491.016203529435,
+          "max_anchor_drift_mm": 5.826293437739939,
+          "horizontal_path_mm": 14.752508931042062,
+          "material_point_body_relative_to_F": [
+            5.167709975096417,
+            9.000000000000002,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 88.13938909929988,
+          "physical_seconds": 1.4979166666666655,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 17.204583101534105,
+          "end_theta": 17.230763040314017,
+          "start_body_y": -490.38798104333483,
+          "end_body_y": -491.016203529435,
+          "max_anchor_drift_mm": 0.28308743852942625,
+          "horizontal_path_mm": 0.2830954634621609,
+          "material_point_body_relative_to_F": [
+            19.999999999999957,
+            9.0,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 0.628222486100185,
+          "physical_seconds": 0.012499999999998374,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 17.248216332833962,
+          "end_theta": 17.25694297909393,
+          "start_body_y": -491.46885108677816,
+          "end_body_y": -491.7134326793094,
+          "max_anchor_drift_mm": 0.071679193092025,
+          "horizontal_path_mm": 0.07168470119302546,
+          "material_point_body_relative_to_F": [
+            -11.999999999999876,
+            -9.499999999999922,
+            -15.000000000000004
+          ],
+          "body_advance_in_episode_mm": 0.24458159253123313,
+          "physical_seconds": 0.00416666666666556,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 17.235126363444003,
+          "end_theta": 17.27003294848389,
+          "start_body_y": -491.13333693837177,
+          "end_body_y": -491.9885859844067,
+          "max_anchor_drift_mm": 0.031391854227433624,
+          "horizontal_path_mm": 0.03304837481583437,
+          "material_point_body_relative_to_F": [
+            5.35433961383366,
+            9.0,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 0.8552490460349418,
+          "physical_seconds": 0.016666666666667326,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 17.278759594743864,
+          "end_theta": 17.287486241003833,
+          "start_body_y": -492.0790598204242,
+          "end_body_y": -492.261676088256,
+          "max_anchor_drift_mm": 0.08889416810374794,
+          "horizontal_path_mm": 0.08908366442836713,
+          "material_point_body_relative_to_F": [
+            -20.0,
+            -9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.18261626783180418,
+          "physical_seconds": 0.00416666666666556,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 14.16771020306397,
+          "end_theta": 17.32239282604372,
+          "start_body_y": -404.3573314608598,
+          "end_body_y": -493.1364125444857,
+          "max_anchor_drift_mm": 5.850679726895184,
+          "horizontal_path_mm": 13.98308384074152,
+          "material_point_body_relative_to_F": [
+            1.836204107515763,
+            6.94487328734118,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.7790810836259,
+          "physical_seconds": 1.50625,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 17.274396271613874,
+          "end_theta": 18.84955592153876,
+          "start_body_y": -491.94722775039713,
+          "end_body_y": -533.5119981314514,
+          "max_anchor_drift_mm": 6.082157949761238,
+          "horizontal_path_mm": 9.843918992835036,
+          "material_point_body_relative_to_F": [
+            -11.999999999999954,
+            9.500000000000002,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 41.564770381054245,
+          "physical_seconds": 0.7520833333333345,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 3,
+          "start_theta": 17.278759594743864,
+          "end_theta": 18.84955592153876,
+          "start_body_y": -492.0790598204242,
+          "end_body_y": -533.5119981314514,
+          "max_anchor_drift_mm": 7.112250775993767,
+          "horizontal_path_mm": 10.104636981694554,
+          "material_point_body_relative_to_F": [
+            17.330488036785987,
+            -9.166844497700877,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 41.43293831102716,
+          "physical_seconds": 0.7499999999999991,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 0,
+          "start_theta": 17.304939533523775,
+          "end_theta": 18.84955592153876,
+          "start_body_y": -492.8249328992247,
+          "end_body_y": -533.5119981314514,
+          "max_anchor_drift_mm": 4.1699734285554095,
+          "horizontal_path_mm": 7.1969734462764645,
+          "material_point_body_relative_to_F": [
+            3.713682013206227,
+            9.499999999999984,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 40.6870652322267,
+          "physical_seconds": 0.7375000000000008,
+          "partial_at_clip_boundary": true
+        }
+      ],
+      "method": "Support poses from actual shoe/sole CAD contact geometry; nonnegative normal-force/moment balance. Horizontal translation/yaw fitted to persistent, load-weighted stance-material anchors with outgoing-contact handoff. No arbitrary forward velocity.",
+      "limitations": [
+        "Prescribed rotor input and rigid-link kinematics, not wind-powered self-starting or contact dynamics.",
+        "0.25mm near-contact tolerance is a numerical/sole-compliance assumption; sole force-deflection and foot-hinge dynamics unmeasured.",
+        "The3mm target is an engineering target, not a user requirement or a pass claimed for manufacturing. Failed targets remain reported; links are never stretched to hide residuals.",
+        "CG support polygons are necessary geometric checks, not proof of stability of flexible members or passive foot hinges.",
+        "Small positive geometric margins do not cover print/assembly/mass uncertainty. The +/-5mm COG and wind-COP sensitivities keep the nominal poses fixed, and exclude yaw dynamics.",
+        "No wind force, inertia, impact, rolling contact or ground friction dynamics in the rendered walking scene.",
+        "Frames include one closing endpoint; render1 through render_frame_end for the declared video duration."
+      ]
+    },
+    "B": {
+      "assembly_sha256": "4d070ff8c721b8b1fcd8cc3f83da64310d22d4d4214b6129ddcf8f758a2f3488",
+      "geometry_sha256": "6f89c463a3a3a236f6e9b9d9464492b09f9105b9b337e4359c87ac825daddae0",
+      "core_sha256": "1572f2d2005e84a9b4929aa39f1dbdb2144dfac6f5333bfb85e1ddb3fb856033",
+      "video_seconds": 12.0,
+      "physical_seconds": 96.0,
+      "time_scale": 8,
+      "render_frame_end": 288,
+      "validation": {
+        "dense_solver_steps": 4321,
+        "mass_transform_error_mm": 2.8421709430404007e-13,
+        "forward_axis": [
+          0,
+          -1,
+          0
+        ],
+        "forward_travel_mm": 535.0839250955652,
+        "lateral_drift_mm": 0.10043038648350822,
+        "mean_physical_speed_mm_s": 5.573790886412137,
+        "max_stance_material_anchor_drift_mm": 10.2998299222341,
+        "strict_3mm_contact_target_pass": false,
+        "body_advance_per_crank_cycle_mm": 178.3613083651884,
+        "max_single_contact_episode_horizontal_path_mm": 17.25789766245257,
+        "total_material_horizontal_path_all_feet_three_cycles_mm": 283.1065140792488,
+        "worst_anchor_episode": {
+          "foot": 3,
+          "start_theta": 0.0,
+          "end_theta": 1.5315264186250241,
+          "start_body_y": 0.0,
+          "end_body_y": -48.479486545884335,
+          "max_anchor_drift_mm": 10.2998299222341,
+          "horizontal_path_mm": 11.290413456678898,
+          "material_point_body_relative_to_F": [
+            4.370819842596454,
+            9.5,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 48.479486545884335,
+          "physical_seconds": 7.800000000000001,
+          "partial_at_clip_boundary": true
+        },
+        "slip_definition": "Maximum horizontal offset of one persistent material point from its touchdown anchor within one uninterrupted >=2%-weight contact episode, maximized over all feet/three cycles. Horizontal path is accumulated within each episode; it is not the same statistic.",
+        "loaded_foot_threshold_fraction": 0.02,
+        "max_active_foot_gap_mm": 0.24994632450303467,
+        "minimum_support_margin_mm": 0.18286651400515241,
+        "minimum_active_feet": 2,
+        "max_body_tilt_deg": 0.6101926265716995,
+        "minimum_mesh_floor_clearance_mm": 0.01999999999999602,
+        "floor_checked_frames": 289,
+        "exact_mesh_floor_fallbacks": 375,
+        "opposed_stance_direction_sample_count": 0,
+        "opposed_stance_angles_deg": [],
+        "finite_contact_tolerance_mm": 0.25,
+        "fixed_pose_sensitivity": {
+          "cog_x_minus5": {
+            "inside_samples": 4318,
+            "minimum_margin_mm": -0.5339703761052732,
+            "inside_fraction": 0.9993057162693821
+          },
+          "cog_x_plus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.2609775588244325,
+            "inside_fraction": 1.0
+          },
+          "cog_y_minus5": {
+            "inside_samples": 4315,
+            "minimum_margin_mm": -4.816240354428766,
+            "inside_fraction": 0.9986114325387642
+          },
+          "cog_y_plus5": {
+            "inside_samples": 4318,
+            "minimum_margin_mm": -2.3268237378416217,
+            "inside_fraction": 0.9993057162693821
+          },
+          "wind_y_minus3": {
+            "inside_samples": 4315,
+            "minimum_margin_mm": -0.5942450233690961,
+            "inside_fraction": 0.9986114325387642
+          },
+          "wind_y_plus3": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.959978051379401,
+            "inside_fraction": 1.0
+          },
+          "wind_y_minus5": {
+            "inside_samples": 4315,
+            "minimum_margin_mm": -1.975776645367761,
+            "inside_fraction": 0.9986114325387642
+          },
+          "wind_y_plus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.12506854835631032,
+            "inside_fraction": 1.0
+          },
+          "wind_y_minus8": {
+            "inside_samples": 4315,
+            "minimum_margin_mm": -5.343259973989505,
+            "inside_fraction": 0.9986114325387642
+          },
+          "wind_y_plus8": {
+            "inside_samples": 4318,
+            "minimum_margin_mm": -2.783351579773125,
+            "inside_fraction": 0.9993057162693821
+          }
+        }
+      },
+      "contact_episodes": [
+        {
+          "foot": 3,
+          "start_theta": 0.0,
+          "end_theta": 1.5315264186250241,
+          "start_body_y": 0.0,
+          "end_body_y": -48.479486545884335,
+          "max_anchor_drift_mm": 10.2998299222341,
+          "horizontal_path_mm": 11.290413456678898,
+          "material_point_body_relative_to_F": [
+            4.370819842596454,
+            9.5,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 48.479486545884335,
+          "physical_seconds": 7.800000000000001,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 3,
+          "start_theta": 1.540253064884996,
+          "end_theta": 1.5533430342749532,
+          "start_body_y": -48.86965794362733,
+          "end_body_y": -49.148338343881605,
+          "max_anchor_drift_mm": 0.13240882710039437,
+          "horizontal_path_mm": 0.13240885836280164,
+          "material_point_body_relative_to_F": [
+            20.0,
+            9.000000000000002,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.27868040025427376,
+          "physical_seconds": 0.06666666666666592,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 0.0,
+          "end_theta": 1.614429558094755,
+          "start_body_y": 0.0,
+          "end_body_y": -50.29951352668743,
+          "max_anchor_drift_mm": 1.797057462754634,
+          "horizontal_path_mm": 4.516517028005087,
+          "material_point_body_relative_to_F": [
+            5.687581073362495,
+            9.5,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 50.29951352668743,
+          "physical_seconds": 8.222222222222223,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 4,
+          "start_theta": 0.0,
+          "end_theta": 1.614429558094755,
+          "start_body_y": 0.0,
+          "end_body_y": -50.29951352668743,
+          "max_anchor_drift_mm": 1.8814080036203178,
+          "horizontal_path_mm": 4.696578647552458,
+          "material_point_body_relative_to_F": [
+            5.678337687517442,
+            9.499999999999998,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 50.29951352668743,
+          "physical_seconds": 8.222222222222223,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 1,
+          "start_theta": 1.5271630954950384,
+          "end_theta": 4.664392425954845,
+          "start_body_y": -48.376632856001386,
+          "end_body_y": -136.95976844745985,
+          "max_anchor_drift_mm": 5.609194981980956,
+          "horizontal_path_mm": 16.27516157930291,
+          "material_point_body_relative_to_F": [
+            8.365624812462173,
+            9.0,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 88.58313559145847,
+          "physical_seconds": 15.977777777777774,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 4.694935687864747,
+          "end_theta": 4.694935687864747,
+          "start_body_y": -137.8582212097861,
+          "end_body_y": -137.8582212097861,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            19.999999999999993,
+            9.0,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 1.5271630954950384,
+          "end_theta": 4.703662334124719,
+          "start_body_y": -48.376632856001386,
+          "end_body_y": -138.12357787530755,
+          "max_anchor_drift_mm": 5.2170086780746345,
+          "horizontal_path_mm": 15.388870852936456,
+          "material_point_body_relative_to_F": [
+            8.346742655375603,
+            9.0,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 89.74694501930617,
+          "physical_seconds": 16.17777777777778,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 4.716752303514675,
+          "end_theta": 4.721115626644661,
+          "start_body_y": -138.00581114382996,
+          "end_body_y": -138.133746291539,
+          "max_anchor_drift_mm": 0.03721303747912442,
+          "horizontal_path_mm": 0.03721303747912442,
+          "material_point_body_relative_to_F": [
+            -2.106966429313643,
+            9.499999999999996,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.1279351477090529,
+          "physical_seconds": 0.02222222222222084,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 1.6013395887047974,
+          "end_theta": 4.756022211684548,
+          "start_body_y": -50.04692247916596,
+          "end_body_y": -138.84792178862298,
+          "max_anchor_drift_mm": 6.284118087863273,
+          "horizontal_path_mm": 15.86750707002347,
+          "material_point_body_relative_to_F": [
+            6.281401581484161,
+            9.5,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.80099930945703,
+          "physical_seconds": 16.066666666666666,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 4.6687557490848315,
+          "end_theta": 7.814711725804611,
+          "start_body_y": -137.0960885371778,
+          "end_body_y": -225.6421770885536,
+          "max_anchor_drift_mm": 6.985836008929627,
+          "horizontal_path_mm": 17.25789766245257,
+          "material_point_body_relative_to_F": [
+            3.65525877250564,
+            9.0,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 88.54608855137582,
+          "physical_seconds": 16.022222222222226,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 7.823438372064582,
+          "end_theta": 7.83652834145454,
+          "start_body_y": -225.8287959006781,
+          "end_body_y": -226.10596398069046,
+          "max_anchor_drift_mm": 0.13238808645979178,
+          "horizontal_path_mm": 0.13238808900407367,
+          "material_point_body_relative_to_F": [
+            19.999999999999982,
+            8.999999999999998,
+            -14.999999999999996
+          ],
+          "body_advance_in_episode_mm": 0.27716808001235904,
+          "physical_seconds": 0.06666666666666704,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 4.738568919164605,
+          "end_theta": 7.897614865274341,
+          "start_body_y": -138.48125100657958,
+          "end_body_y": -227.2918944212379,
+          "max_anchor_drift_mm": 5.890745946953721,
+          "horizontal_path_mm": 14.112403470696286,
+          "material_point_body_relative_to_F": [
+            12.000000000000005,
+            9.499999999999972,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 88.81064341465833,
+          "physical_seconds": 16.08888888888889,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 4.738568919164605,
+          "end_theta": 7.897614865274341,
+          "start_body_y": -138.48125100657958,
+          "end_body_y": -227.2918944212379,
+          "max_anchor_drift_mm": 5.608561492106412,
+          "horizontal_path_mm": 13.477715995343754,
+          "material_point_body_relative_to_F": [
+            11.99999999999996,
+            9.499999999999982,
+            -15.000000000000004
+          ],
+          "body_advance_in_episode_mm": 88.81064341465833,
+          "physical_seconds": 16.08888888888889,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 7.810348402674624,
+          "end_theta": 10.947577733134432,
+          "start_body_y": -225.5477922090876,
+          "end_body_y": -313.9605377857744,
+          "max_anchor_drift_mm": 5.72115162659289,
+          "horizontal_path_mm": 16.460026947031036,
+          "material_point_body_relative_to_F": [
+            8.365624812473497,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.41274557668683,
+          "physical_seconds": 15.977777777777781,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 10.978120995044332,
+          "end_theta": 10.978120995044332,
+          "start_body_y": -314.7046969946038,
+          "end_body_y": -314.7046969946038,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            19.99999999999996,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 7.810348402674624,
+          "end_theta": 10.986847641304305,
+          "start_body_y": -225.5477922090876,
+          "end_body_y": -314.970971614266,
+          "max_anchor_drift_mm": 5.318889458587269,
+          "horizontal_path_mm": 15.6118082825295,
+          "material_point_body_relative_to_F": [
+            8.34674265535669,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 89.42317940517839,
+          "physical_seconds": 16.177777777777784,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 10.999937610694262,
+          "end_theta": 11.004300933824247,
+          "start_body_y": -314.8863678827889,
+          "end_body_y": -315.01432116047664,
+          "max_anchor_drift_mm": 0.03721983042402855,
+          "horizontal_path_mm": 0.03721983042402855,
+          "material_point_body_relative_to_F": [
+            -2.1069664293087595,
+            9.49999999999996,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 0.12795327768776588,
+          "physical_seconds": 0.022222222222216318,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 7.884524895884383,
+          "end_theta": 11.039207518864135,
+          "start_body_y": -227.0224608219355,
+          "end_body_y": -315.72907606541474,
+          "max_anchor_drift_mm": 6.405546193073009,
+          "horizontal_path_mm": 16.1263749992455,
+          "material_point_body_relative_to_F": [
+            6.281401581487163,
+            9.499999999999998,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.70661524347923,
+          "physical_seconds": 16.06666666666667,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 10.951941056264417,
+          "end_theta": 14.097897032984196,
+          "start_body_y": -313.9429767772352,
+          "end_body_y": -402.52312144001576,
+          "max_anchor_drift_mm": 6.987854965615206,
+          "horizontal_path_mm": 17.23547073894963,
+          "material_point_body_relative_to_F": [
+            3.655258772516137,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.58014466278058,
+          "physical_seconds": 16.022222222222226,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 14.10662367924417,
+          "end_theta": 14.119713648634125,
+          "start_body_y": -402.70967043615616,
+          "end_body_y": -402.986838557004,
+          "max_anchor_drift_mm": 0.13238803796905502,
+          "horizontal_path_mm": 0.13238804051331876,
+          "material_point_body_relative_to_F": [
+            19.999999999999993,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.2771681208478185,
+          "physical_seconds": 0.06666666666665799,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 11.021754226344191,
+          "end_theta": 14.180800172453928,
+          "start_body_y": -315.3620521593192,
+          "end_body_y": -404.1727813341434,
+          "max_anchor_drift_mm": 5.892845544679486,
+          "horizontal_path_mm": 14.119344467595248,
+          "material_point_body_relative_to_F": [
+            11.999999999999968,
+            9.499999999999956,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.81072917482419,
+          "physical_seconds": 16.088888888888892,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 11.021754226344191,
+          "end_theta": 14.180800172453928,
+          "start_body_y": -315.3620521593192,
+          "end_body_y": -404.1727813341434,
+          "max_anchor_drift_mm": 5.610394503462366,
+          "horizontal_path_mm": 13.483937157414681,
+          "material_point_body_relative_to_F": [
+            11.999999999999979,
+            9.499999999999972,
+            -14.999999999999996
+          ],
+          "body_advance_in_episode_mm": 88.81072917482419,
+          "physical_seconds": 16.088888888888892,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 14.093533709854212,
+          "end_theta": 17.230763040314017,
+          "start_body_y": -402.428739311784,
+          "end_body_y": -490.84143978084865,
+          "max_anchor_drift_mm": 5.721184724006389,
+          "horizontal_path_mm": 16.460083829579656,
+          "material_point_body_relative_to_F": [
+            8.365624812473683,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 88.41270046906465,
+          "physical_seconds": 15.977777777777765,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 17.261306302223918,
+          "end_theta": 17.261306302223918,
+          "start_body_y": -491.5855593063809,
+          "end_body_y": -491.5855593063809,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            20.0,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 14.093533709854212,
+          "end_theta": 17.27003294848389,
+          "start_body_y": -402.428739311784,
+          "end_body_y": -491.85183754352175,
+          "max_anchor_drift_mm": 5.318916802705933,
+          "horizontal_path_mm": 15.61189789884187,
+          "material_point_body_relative_to_F": [
+            8.346742655337524,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 89.42309823173775,
+          "physical_seconds": 16.177777777777777,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 17.28312291787385,
+          "end_theta": 17.287486241003833,
+          "start_body_y": -491.76723575569883,
+          "end_body_y": -491.89518924897885,
+          "max_anchor_drift_mm": 0.03721983223630339,
+          "horizontal_path_mm": 0.03721983223630339,
+          "material_point_body_relative_to_F": [
+            -2.106966429332843,
+            9.499999999999934,
+            -14.999999999999996
+          ],
+          "body_advance_in_episode_mm": 0.12795349328001748,
+          "physical_seconds": 0.02222222222220727,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 14.16771020306397,
+          "end_theta": 17.32239282604372,
+          "start_body_y": -403.90334159778723,
+          "end_body_y": -492.6099458025532,
+          "max_anchor_drift_mm": 6.40558054717828,
+          "horizontal_path_mm": 16.126514130802036,
+          "material_point_body_relative_to_F": [
+            6.281401581491064,
+            9.499999999999996,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 88.706604204766,
+          "physical_seconds": 16.066666666666666,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 17.235126363444003,
+          "end_theta": 18.84955592153876,
+          "start_body_y": -490.8238345515289,
+          "end_body_y": -535.0839250955652,
+          "max_anchor_drift_mm": 6.552013481104973,
+          "horizontal_path_mm": 9.862828653401337,
+          "material_point_body_relative_to_F": [
+            3.6552587725019174,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 44.2600905440363,
+          "physical_seconds": 8.222222222222227,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 0,
+          "start_theta": 17.304939533523775,
+          "end_theta": 18.84955592153876,
+          "start_body_y": -492.2429217615351,
+          "end_body_y": -535.0839250955652,
+          "max_anchor_drift_mm": 5.892846104828756,
+          "horizontal_path_mm": 9.49338350322532,
+          "material_point_body_relative_to_F": [
+            11.999999999999945,
+            9.49999999999999,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 42.84100333403006,
+          "physical_seconds": 7.866666666666676,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 4,
+          "start_theta": 17.304939533523775,
+          "end_theta": 18.84955592153876,
+          "start_body_y": -492.2429217615351,
+          "end_body_y": -535.0839250955652,
+          "max_anchor_drift_mm": 5.610394992487531,
+          "horizontal_path_mm": 9.122940019621497,
+          "material_point_body_relative_to_F": [
+            11.999999999999952,
+            9.499999999999982,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 42.84100333403006,
+          "physical_seconds": 7.866666666666676,
+          "partial_at_clip_boundary": true
+        }
+      ],
+      "method": "Support poses from actual shoe/sole CAD contact geometry; nonnegative normal-force/moment balance. Horizontal translation/yaw fitted to persistent, load-weighted stance-material anchors with outgoing-contact handoff. No arbitrary forward velocity.",
+      "limitations": [
+        "Prescribed rotor input and rigid-link kinematics, not wind-powered self-starting or contact dynamics.",
+        "0.25mm near-contact tolerance is a numerical/sole-compliance assumption; sole force-deflection and foot-hinge dynamics unmeasured.",
+        "The3mm target is an engineering target, not a user requirement or a pass claimed for manufacturing. Failed targets remain reported; links are never stretched to hide residuals.",
+        "CG support polygons are necessary geometric checks, not proof of stability of flexible members or passive foot hinges.",
+        "Small positive geometric margins do not cover print/assembly/mass uncertainty. The +/-5mm COG and wind-COP sensitivities keep the nominal poses fixed, and exclude yaw dynamics.",
+        "No wind force, inertia, impact, rolling contact or ground friction dynamics in the rendered walking scene.",
+        "Frames include one closing endpoint; render1 through render_frame_end for the declared video duration."
+      ]
+    },
+    "C": {
+      "assembly_sha256": "f70ed27902c914a0117fc61ad178971656769051fb51a08ecda9c85dc47bfd0f",
+      "geometry_sha256": "d8806c0aafcefc1ce6873d55a266f28453a3fafde92fb7fe47121f7d7002ca74",
+      "core_sha256": "1572f2d2005e84a9b4929aa39f1dbdb2144dfac6f5333bfb85e1ddb3fb856033",
+      "video_seconds": 12.0,
+      "physical_seconds": 24.0,
+      "time_scale": 2,
+      "render_frame_end": 288,
+      "validation": {
+        "dense_solver_steps": 4321,
+        "mass_transform_error_mm": 3.410605131648481e-13,
+        "forward_axis": [
+          0,
+          -1,
+          0
+        ],
+        "forward_travel_mm": 548.980636771328,
+        "lateral_drift_mm": 9.038364885835485,
+        "mean_physical_speed_mm_s": 22.874193198805333,
+        "max_stance_material_anchor_drift_mm": 8.880272199655488,
+        "strict_3mm_contact_target_pass": false,
+        "body_advance_per_crank_cycle_mm": 182.99354559044266,
+        "max_single_contact_episode_horizontal_path_mm": 15.877356279573927,
+        "total_material_horizontal_path_all_feet_three_cycles_mm": 252.65876514174892,
+        "worst_anchor_episode": {
+          "foot": 3,
+          "start_theta": 0.0,
+          "end_theta": 1.5533430342749532,
+          "start_body_y": 0.0,
+          "end_body_y": -46.96376136407438,
+          "max_anchor_drift_mm": 8.880272199655488,
+          "horizontal_path_mm": 11.104199963196699,
+          "material_point_body_relative_to_F": [
+            -0.3338413177548624,
+            9.499999999999996,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 46.96376136407438,
+          "physical_seconds": 1.9777777777777779,
+          "partial_at_clip_boundary": true
+        },
+        "slip_definition": "Maximum horizontal offset of one persistent material point from its touchdown anchor within one uninterrupted >=2%-weight contact episode, maximized over all feet/three cycles. Horizontal path is accumulated within each episode; it is not the same statistic.",
+        "loaded_foot_threshold_fraction": 0.02,
+        "max_active_foot_gap_mm": 0.24976082853787318,
+        "minimum_support_margin_mm": 0.3297340923522061,
+        "minimum_active_feet": 1,
+        "max_body_tilt_deg": 0.70658619722786,
+        "minimum_mesh_floor_clearance_mm": 0.01999999999999602,
+        "floor_checked_frames": 289,
+        "exact_mesh_floor_fallbacks": 371,
+        "opposed_stance_direction_sample_count": 0,
+        "opposed_stance_angles_deg": [],
+        "finite_contact_tolerance_mm": 0.25,
+        "fixed_pose_sensitivity": {
+          "cog_x_minus5": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.3297340923522061,
+            "inside_fraction": 1.0
+          },
+          "cog_x_plus5": {
+            "inside_samples": 4312,
+            "minimum_margin_mm": -0.4097814779769138,
+            "inside_fraction": 0.9979171488081463
+          },
+          "cog_y_minus5": {
+            "inside_samples": 4312,
+            "minimum_margin_mm": -2.235829584701648,
+            "inside_fraction": 0.9979171488081463
+          },
+          "cog_y_plus5": {
+            "inside_samples": 4240,
+            "minimum_margin_mm": -4.670140057257952,
+            "inside_fraction": 0.9812543392733164
+          },
+          "wind_y_minus3": {
+            "inside_samples": 4321,
+            "minimum_margin_mm": 0.2226241177999455,
+            "inside_fraction": 1.0
+          },
+          "wind_y_plus3": {
+            "inside_samples": 4285,
+            "minimum_margin_mm": -1.8320257757716218,
+            "inside_fraction": 0.9916685952325851
+          },
+          "wind_y_minus5": {
+            "inside_samples": 4312,
+            "minimum_margin_mm": -3.1017432147327426,
+            "inside_fraction": 0.9979171488081463
+          },
+          "wind_y_plus5": {
+            "inside_samples": 4240,
+            "minimum_margin_mm": -5.675154430213982,
+            "inside_fraction": 0.9812543392733164
+          },
+          "wind_y_minus8": {
+            "inside_samples": 4294,
+            "minimum_margin_mm": -11.204888587781184,
+            "inside_fraction": 0.9937514464244388
+          },
+          "wind_y_plus8": {
+            "inside_samples": 4051,
+            "minimum_margin_mm": -15.042780525417236,
+            "inside_fraction": 0.9375144642443879
+          }
+        }
+      },
+      "contact_episodes": [
+        {
+          "foot": 3,
+          "start_theta": 0.0,
+          "end_theta": 1.5533430342749532,
+          "start_body_y": 0.0,
+          "end_body_y": -46.96376136407438,
+          "max_anchor_drift_mm": 8.880272199655488,
+          "horizontal_path_mm": 11.104199963196699,
+          "material_point_body_relative_to_F": [
+            -0.3338413177548624,
+            9.499999999999996,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 46.96376136407438,
+          "physical_seconds": 1.9777777777777779,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 2,
+          "start_theta": 1.6013395887047974,
+          "end_theta": 1.6013395887047974,
+          "start_body_y": -49.3055340605306,
+          "end_body_y": -49.3055340605306,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            -1.9750889699688905,
+            9.499999999999975,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 0.0,
+          "end_theta": 1.614429558094755,
+          "start_body_y": 0.0,
+          "end_body_y": -49.470005761387036,
+          "max_anchor_drift_mm": 2.7294281732037353,
+          "horizontal_path_mm": 7.49009098125412,
+          "material_point_body_relative_to_F": [
+            -0.6216945223091662,
+            9.499999999999991,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 49.470005761387036,
+          "physical_seconds": 2.055555555555556,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 4,
+          "start_theta": 0.0,
+          "end_theta": 1.614429558094755,
+          "start_body_y": 0.0,
+          "end_body_y": -49.470005761387036,
+          "max_anchor_drift_mm": 2.91966222660693,
+          "horizontal_path_mm": 7.87487759661792,
+          "material_point_body_relative_to_F": [
+            -0.6184303774561412,
+            9.499999999999996,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 49.470005761387036,
+          "physical_seconds": 2.055555555555556,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 2,
+          "start_theta": 1.6187928812247405,
+          "end_theta": 1.7322392826043722,
+          "start_body_y": -48.86247807851113,
+          "end_body_y": -51.55940617240105,
+          "max_anchor_drift_mm": 1.1613629934192486,
+          "horizontal_path_mm": 1.1821755514051842,
+          "material_point_body_relative_to_F": [
+            -4.388360832621631,
+            9.49999999999999,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 2.696928093889916,
+          "physical_seconds": 0.1444444444444448,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 1.5271630954950384,
+          "end_theta": 4.694935687864747,
+          "start_body_y": -46.99897470861182,
+          "end_body_y": -137.5102007905105,
+          "max_anchor_drift_mm": 3.984203195090954,
+          "horizontal_path_mm": 15.515163938156213,
+          "material_point_body_relative_to_F": [
+            -0.7856263855216677,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 90.51122608189868,
+          "physical_seconds": 4.033333333333333,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 1.7627825445142726,
+          "end_theta": 4.71238898038469,
+          "start_body_y": -52.51275437092172,
+          "end_body_y": -139.12073262617886,
+          "max_anchor_drift_mm": 5.887281740953425,
+          "horizontal_path_mm": 14.275147309855722,
+          "material_point_body_relative_to_F": [
+            -3.503399301845694,
+            9.499999999999988,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 86.60797825525714,
+          "physical_seconds": 3.755555555555556,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 4.716752303514675,
+          "end_theta": 4.716752303514675,
+          "start_body_y": -139.2426555965312,
+          "end_body_y": -139.2426555965312,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            -19.99999999999988,
+            9.000000000000002,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 1.5271630954950384,
+          "end_theta": 4.729842272904633,
+          "start_body_y": -46.99897470861182,
+          "end_body_y": -139.6468757467241,
+          "max_anchor_drift_mm": 3.662542382004094,
+          "horizontal_path_mm": 15.877356279573927,
+          "material_point_body_relative_to_F": [
+            -0.7813628730275346,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 92.64790103811228,
+          "physical_seconds": 4.0777777777777775,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 4.734205596034619,
+          "end_theta": 4.738568919164605,
+          "start_body_y": -139.61079756152677,
+          "end_body_y": -139.70066376651172,
+          "max_anchor_drift_mm": 0.04327612554073131,
+          "horizontal_path_mm": 0.04327612554073131,
+          "material_point_body_relative_to_F": [
+            0.1158845933794867,
+            9.499999999999972,
+            -14.999999999999996
+          ],
+          "body_advance_in_episode_mm": 0.08986620498495768,
+          "physical_seconds": 0.00555555555555521,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 4.734205596034619,
+          "end_theta": 4.738568919164605,
+          "start_body_y": -139.61079756152677,
+          "end_body_y": -139.70066376651172,
+          "max_anchor_drift_mm": 0.0460649407076504,
+          "horizontal_path_mm": 0.0460649407076504,
+          "material_point_body_relative_to_F": [
+            -20.0,
+            8.999999999999995,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.08986620498495768,
+          "physical_seconds": 0.00555555555555521,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 4.734205596034619,
+          "end_theta": 4.751658888554562,
+          "start_body_y": -139.61079756152677,
+          "end_body_y": -140.0380054580245,
+          "max_anchor_drift_mm": 0.02094208970368804,
+          "horizontal_path_mm": 0.021008758363281567,
+          "material_point_body_relative_to_F": [
+            0.008537252158246212,
+            9.499999999999993,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.42720789649771973,
+          "physical_seconds": 0.02222222222222197,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 4.756022211684548,
+          "end_theta": 4.756022211684548,
+          "start_body_y": -140.15145396963223,
+          "end_body_y": -140.15145396963223,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            -2.4134815709676305,
+            9.499999999999751,
+            -14.999999999999995
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 4.756022211684548,
+          "end_theta": 4.930555136883981,
+          "start_body_y": -140.15145396963223,
+          "end_body_y": -144.26044035403862,
+          "max_anchor_drift_mm": 1.6406347385447182,
+          "horizontal_path_mm": 1.6604919764078494,
+          "material_point_body_relative_to_F": [
+            -19.999999999999893,
+            8.999999999999924,
+            -14.999999999999996
+          ],
+          "body_advance_in_episode_mm": 4.108986384406393,
+          "physical_seconds": 0.22222222222222196,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 4.769112181074505,
+          "end_theta": 4.930555136883981,
+          "start_body_y": -140.52515363595154,
+          "end_body_y": -144.26044035403862,
+          "max_anchor_drift_mm": 1.407265161795833,
+          "horizontal_path_mm": 1.4072673908964626,
+          "material_point_body_relative_to_F": [
+            -8.739646904020058,
+            9.499999999999844,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 3.7352867180870817,
+          "physical_seconds": 0.2055555555555552,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 4.6687557490848315,
+          "end_theta": 7.83652834145454,
+          "start_body_y": -137.4543845230798,
+          "end_body_y": -229.5722280114258,
+          "max_anchor_drift_mm": 4.466392045149896,
+          "horizontal_path_mm": 13.349737659363145,
+          "material_point_body_relative_to_F": [
+            -8.83955097233539,
+            9.0,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 92.11784348834601,
+          "physical_seconds": 4.033333333333333,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 7.884524895884383,
+          "end_theta": 7.884524895884383,
+          "start_body_y": -230.90621320268875,
+          "end_body_y": -230.90621320268875,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            -1.9750889699645966,
+            9.49999999999997,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 5.000368306963755,
+          "end_theta": 7.897614865274341,
+          "start_body_y": -146.570100733675,
+          "end_body_y": -231.1581234568464,
+          "max_anchor_drift_mm": 4.106541142920771,
+          "horizontal_path_mm": 10.543504109860773,
+          "material_point_body_relative_to_F": [
+            -6.277752596674911,
+            9.499999999999936,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 84.5880227231714,
+          "physical_seconds": 3.6888888888888878,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 5.000368306963755,
+          "end_theta": 7.897614865274341,
+          "start_body_y": -146.570100733675,
+          "end_body_y": -231.1581234568464,
+          "max_anchor_drift_mm": 4.177107071003373,
+          "horizontal_path_mm": 10.68259536381639,
+          "material_point_body_relative_to_F": [
+            -6.300814795652455,
+            9.499999999999993,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 84.5880227231714,
+          "physical_seconds": 3.6888888888888878,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 7.9019781884043265,
+          "end_theta": 8.015424589783958,
+          "start_body_y": -231.06275771561894,
+          "end_body_y": -233.7595361606763,
+          "max_anchor_drift_mm": 1.1613629934192788,
+          "horizontal_path_mm": 1.1821755514051808,
+          "material_point_body_relative_to_F": [
+            -4.388360832629858,
+            9.499999999999996,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 2.6967784450573618,
+          "physical_seconds": 0.14444444444444451,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 7.810348402674624,
+          "end_theta": 10.978120995044332,
+          "start_body_y": -229.1993970021098,
+          "end_body_y": -319.70352886985586,
+          "max_anchor_drift_mm": 3.984203195090825,
+          "horizontal_path_mm": 13.312118998795754,
+          "material_point_body_relative_to_F": [
+            -0.7856263855190453,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 90.50413186774605,
+          "physical_seconds": 4.033333333333333,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 8.04596785169386,
+          "end_theta": 10.995574287564276,
+          "start_body_y": -234.71278502178296,
+          "end_body_y": -321.312268342004,
+          "max_anchor_drift_mm": 5.887281740953355,
+          "horizontal_path_mm": 14.275147289482003,
+          "material_point_body_relative_to_F": [
+            -3.503399301845911,
+            9.499999999999991,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 86.59948332022105,
+          "physical_seconds": 3.7555555555555555,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 10.999937610694262,
+          "end_theta": 10.999937610694262,
+          "start_body_y": -321.4331228282961,
+          "end_body_y": -321.4331228282961,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            -19.999999999999964,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 7.810348402674624,
+          "end_theta": 11.013027580084218,
+          "start_body_y": -229.1993970021098,
+          "end_body_y": -321.83682864048404,
+          "max_anchor_drift_mm": 3.6625423820040344,
+          "horizontal_path_mm": 13.513035999470363,
+          "material_point_body_relative_to_F": [
+            -0.7813628730351706,
+            9.000000000000002,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 92.63743163837424,
+          "physical_seconds": 4.0777777777777775,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 11.017390903214206,
+          "end_theta": 11.021754226344191,
+          "start_body_y": -321.8012635416304,
+          "end_body_y": -321.89111211555183,
+          "max_anchor_drift_mm": 0.04327612554074973,
+          "horizontal_path_mm": 0.04327612554074973,
+          "material_point_body_relative_to_F": [
+            0.11588459342541983,
+            9.499999999999993,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.08984857392141521,
+          "physical_seconds": 0.0055555555555540795,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 11.017390903214206,
+          "end_theta": 11.021754226344191,
+          "start_body_y": -321.8012635416304,
+          "end_body_y": -321.89111211555183,
+          "max_anchor_drift_mm": 0.04606494070762324,
+          "horizontal_path_mm": 0.04606494070762324,
+          "material_point_body_relative_to_F": [
+            -19.999999999999975,
+            8.99999999999997,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 0.08984857392141521,
+          "physical_seconds": 0.0055555555555540795,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 11.017390903214206,
+          "end_theta": 11.034844195734147,
+          "start_body_y": -321.8012635416304,
+          "end_body_y": -322.2283298566084,
+          "max_anchor_drift_mm": 0.02094208970379714,
+          "horizontal_path_mm": 0.02100875836338861,
+          "material_point_body_relative_to_F": [
+            0.008537252159750547,
+            9.499999999999993,
+            -15.000000000000004
+          ],
+          "body_advance_in_episode_mm": 0.4270663149779921,
+          "physical_seconds": 0.022222222222218577,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 11.039207518864135,
+          "end_theta": 11.039207518864135,
+          "start_body_y": -322.34171977297854,
+          "end_body_y": -322.34171977297854,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            -2.413481570948892,
+            9.499999999999869,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 11.039207518864135,
+          "end_theta": 11.213740444063568,
+          "start_body_y": -322.34171977297854,
+          "end_body_y": -326.4498405212575,
+          "max_anchor_drift_mm": 1.6406347385449123,
+          "horizontal_path_mm": 1.6604919764080477,
+          "material_point_body_relative_to_F": [
+            -19.999999999999872,
+            8.999999999999932,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 4.108120748278964,
+          "physical_seconds": 0.22222222222222196,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 11.05229748825409,
+          "end_theta": 11.213740444063568,
+          "start_body_y": -322.715305306446,
+          "end_body_y": -326.4498405212575,
+          "max_anchor_drift_mm": 1.4072651617954461,
+          "horizontal_path_mm": 1.4072673908960758,
+          "material_point_body_relative_to_F": [
+            -8.739646904080114,
+            9.49999999999981,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 3.734535214811501,
+          "physical_seconds": 0.20555555555555746,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 10.951941056264417,
+          "end_theta": 14.119713648634125,
+          "start_body_y": -319.64699734413915,
+          "end_body_y": -411.74388885786806,
+          "max_anchor_drift_mm": 4.466392045149894,
+          "horizontal_path_mm": 13.3497376667776,
+          "material_point_body_relative_to_F": [
+            -8.83955097231717,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 92.0968915137289,
+          "physical_seconds": 4.033333333333333,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 14.16771020306397,
+          "end_theta": 14.16771020306397,
+          "start_body_y": -413.077574179121,
+          "end_body_y": -413.077574179121,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            -1.9750889699566179,
+            9.499999999999988,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 11.28355361414334,
+          "end_theta": 14.180800172453928,
+          "start_body_y": -328.759135559926,
+          "end_body_y": -413.32942946493796,
+          "max_anchor_drift_mm": 4.1065411429200145,
+          "horizontal_path_mm": 10.543504512285399,
+          "material_point_body_relative_to_F": [
+            -6.277752596655375,
+            9.49999999999979,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 84.57029390501197,
+          "physical_seconds": 3.68888888888889,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 11.28355361414334,
+          "end_theta": 14.180800172453928,
+          "start_body_y": -328.759135559926,
+          "end_body_y": -413.32942946493796,
+          "max_anchor_drift_mm": 4.177107071004014,
+          "horizontal_path_mm": 10.682594953088593,
+          "material_point_body_relative_to_F": [
+            -6.300814795693198,
+            9.499999999999991,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 84.57029390501197,
+          "physical_seconds": 3.68888888888889,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 14.185163495583913,
+          "end_theta": 14.298609896963544,
+          "start_body_y": -413.23409410886563,
+          "end_body_y": -415.93036269324216,
+          "max_anchor_drift_mm": 1.1613629934192498,
+          "horizontal_path_mm": 1.182175551405342,
+          "material_point_body_relative_to_F": [
+            -4.388360832637026,
+            9.499999999999993,
+            -15.000000000000004
+          ],
+          "body_advance_in_episode_mm": 2.6962685843765257,
+          "physical_seconds": 0.14444444444444451,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 14.093533709854212,
+          "end_theta": 17.261306302223918,
+          "start_body_y": -411.3711249430146,
+          "end_body_y": -501.8560738539552,
+          "max_anchor_drift_mm": 3.9842031950906063,
+          "horizontal_path_mm": 13.312119024089151,
+          "material_point_body_relative_to_F": [
+            -0.785626385511343,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 90.4849489109406,
+          "physical_seconds": 4.033333333333331,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 14.329153158873444,
+          "end_theta": 17.278759594743864,
+          "start_body_y": -416.88338489037034,
+          "end_body_y": -503.4628060813716,
+          "max_anchor_drift_mm": 5.887281740953491,
+          "horizontal_path_mm": 14.275147290738039,
+          "material_point_body_relative_to_F": [
+            -3.5033993018323506,
+            9.499999999999993,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 86.57942119100125,
+          "physical_seconds": 3.7555555555555595,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 1,
+          "start_theta": 17.28312291787385,
+          "end_theta": 17.28312291787385,
+          "start_body_y": -503.5825759409287,
+          "end_body_y": -503.5825759409287,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            -19.999999999999904,
+            9.000000000000002,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 5,
+          "start_theta": 14.093533709854212,
+          "end_theta": 17.296212887263806,
+          "start_body_y": -411.3711249430146,
+          "end_body_y": -503.9857134916547,
+          "max_anchor_drift_mm": 3.6625423820044025,
+          "horizontal_path_mm": 13.513035977384604,
+          "material_point_body_relative_to_F": [
+            -0.7813628730414911,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 92.61458854864009,
+          "physical_seconds": 4.0777777777777775,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 17.300576210393793,
+          "end_theta": 17.304939533523775,
+          "start_body_y": -503.9506662296164,
+          "end_body_y": -504.04048517129536,
+          "max_anchor_drift_mm": 0.043276125540830344,
+          "horizontal_path_mm": 0.043276125540830344,
+          "material_point_body_relative_to_F": [
+            0.11588459343499286,
+            9.499999999999856,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.08981894167897053,
+          "physical_seconds": 0.0055555555555518174,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 17.300576210393793,
+          "end_theta": 17.304939533523775,
+          "start_body_y": -503.9506662296164,
+          "end_body_y": -504.04048517129536,
+          "max_anchor_drift_mm": 0.046064940707660276,
+          "horizontal_path_mm": 0.046064940707660276,
+          "material_point_body_relative_to_F": [
+            -19.99999999999997,
+            8.999999999999957,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.08981894167897053,
+          "physical_seconds": 0.0055555555555518174,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 2,
+          "start_theta": 17.300576210393793,
+          "end_theta": 17.318029502913735,
+          "start_body_y": -503.9506662296164,
+          "end_body_y": -504.37753391932824,
+          "max_anchor_drift_mm": 0.020942089703815336,
+          "horizontal_path_mm": 0.021008758363406398,
+          "material_point_body_relative_to_F": [
+            0.008537252159889788,
+            9.5,
+            -14.999999999999998
+          ],
+          "body_advance_in_episode_mm": 0.4268676897118553,
+          "physical_seconds": 0.02222222222222084,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 17.32239282604372,
+          "end_theta": 17.32239282604372,
+          "start_body_y": -504.49085009483696,
+          "end_body_y": -504.49085009483696,
+          "max_anchor_drift_mm": 0.0,
+          "horizontal_path_mm": 0.0,
+          "material_point_body_relative_to_F": [
+            -2.41348157092963,
+            9.499999999999922,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 0.0,
+          "physical_seconds": 0.0,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 4,
+          "start_theta": 17.32239282604372,
+          "end_theta": 17.496925751243154,
+          "start_body_y": -504.49085009483696,
+          "end_body_y": -508.59755648050066,
+          "max_anchor_drift_mm": 1.640634738544835,
+          "horizontal_path_mm": 1.6604919764079324,
+          "material_point_body_relative_to_F": [
+            -19.99999999999977,
+            8.999999999999893,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 4.106706385663699,
+          "physical_seconds": 0.22222222222222196,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 0,
+          "start_theta": 17.335482795433677,
+          "end_theta": 17.496925751243154,
+          "start_body_y": -504.86427159519644,
+          "end_body_y": -508.59755648050066,
+          "max_anchor_drift_mm": 1.4072651617956518,
+          "horizontal_path_mm": 1.4072673908962818,
+          "material_point_body_relative_to_F": [
+            -8.7396469040431,
+            9.499999999999948,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 3.733284885304215,
+          "physical_seconds": 0.20555555555555746,
+          "partial_at_clip_boundary": false
+        },
+        {
+          "foot": 3,
+          "start_theta": 17.235126363444003,
+          "end_theta": 18.84955592153876,
+          "start_body_y": -501.7988346209343,
+          "end_body_y": -548.980636771328,
+          "max_anchor_drift_mm": 4.146515556341319,
+          "horizontal_path_mm": 5.915769198473383,
+          "material_point_body_relative_to_F": [
+            -8.83955097232651,
+            9.0,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 47.18180215039371,
+          "physical_seconds": 2.0555555555555567,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 0,
+          "start_theta": 17.566738921322926,
+          "end_theta": 18.84955592153876,
+          "start_body_y": -510.9061777229642,
+          "end_body_y": -548.980636771328,
+          "max_anchor_drift_mm": 4.106541142920713,
+          "horizontal_path_mm": 5.04180195171674,
+          "material_point_body_relative_to_F": [
+            -6.277752596675242,
+            9.499999999999986,
+            -15.000000000000002
+          ],
+          "body_advance_in_episode_mm": 38.07445904836385,
+          "physical_seconds": 1.6333333333333335,
+          "partial_at_clip_boundary": true
+        },
+        {
+          "foot": 4,
+          "start_theta": 17.566738921322926,
+          "end_theta": 18.84955592153876,
+          "start_body_y": -510.9061777229642,
+          "end_body_y": -548.980636771328,
+          "max_anchor_drift_mm": 4.177107071003514,
+          "horizontal_path_mm": 5.1312248477886975,
+          "material_point_body_relative_to_F": [
+            -6.300814795639263,
+            9.49999999999991,
+            -15.0
+          ],
+          "body_advance_in_episode_mm": 38.07445904836385,
+          "physical_seconds": 1.6333333333333335,
+          "partial_at_clip_boundary": true
+        }
+      ],
+      "method": "Support poses from actual shoe/sole CAD contact geometry; nonnegative normal-force/moment balance. Horizontal translation/yaw fitted to persistent, load-weighted stance-material anchors with outgoing-contact handoff. No arbitrary forward velocity.",
+      "limitations": [
+        "Prescribed rotor input and rigid-link kinematics, not wind-powered self-starting or contact dynamics.",
+        "0.25mm near-contact tolerance is a numerical/sole-compliance assumption; sole force-deflection and foot-hinge dynamics unmeasured.",
+        "The3mm target is an engineering target, not a user requirement or a pass claimed for manufacturing. Failed targets remain reported; links are never stretched to hide residuals.",
+        "CG support polygons are necessary geometric checks, not proof of stability of flexible members or passive foot hinges.",
+        "Small positive geometric margins do not cover print/assembly/mass uncertainty. The +/-5mm COG and wind-COP sensitivities keep the nominal poses fixed, and exclude yaw dynamics.",
+        "No wind force, inertia, impact, rolling contact or ground friction dynamics in the rendered walking scene.",
+        "Frames include one closing endpoint; render1 through render_frame_end for the declared video duration."
+      ]
+    }
+  }
+}

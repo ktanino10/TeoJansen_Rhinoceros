@@ -1,0 +1,7 @@
+{
+  "prototype": "C",
+  "native_printed_vs_all_pairs_tested": 624,
+  "intersections_over_0_05_mm3": [],
+  "seconds": 17.175925207993714,
+  "scope": "Assembled theta=0; every printed part versus every CAD solid with intersecting AABB. Excludes purchased/purchased thread-envelope interference. Full motion checked separately."
+}

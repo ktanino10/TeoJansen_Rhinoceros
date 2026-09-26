@@ -1,0 +1,518 @@
+[
+  {
+    "plate_thickness_mm": 6.0,
+    "rib_width_mm": 8.0,
+    "volume_proxy_mm3": 534843.1237644287,
+    "axial_truss_displacement_mm": 0.05127907943537908,
+    "axial_truss_stress_mpa": 0.8119814560868055,
+    "out_of_plane_cantilever_proxy_mm": 1.6060298576958327,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": false,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.020940601500768298
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.05127907943537908
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.02823617203152826
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.0471751251213253
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.04891176114397868
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 6.0,
+    "rib_width_mm": 10.0,
+    "volume_proxy_mm3": 631401.4299841824,
+    "axial_truss_displacement_mm": 0.041023263548303296,
+    "axial_truss_stress_mpa": 0.6495851648694453,
+    "out_of_plane_cantilever_proxy_mm": 1.2848238861566663,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": false,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.01675248120061464
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.041023263548303296
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.02258893762522262
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.03774010009706031
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.03912940891518298
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 6.0,
+    "rib_width_mm": 12.0,
+    "volume_proxy_mm3": 728449.8246578969,
+    "axial_truss_displacement_mm": 0.03418605295691939,
+    "axial_truss_stress_mpa": 0.5413209707245371,
+    "out_of_plane_cantilever_proxy_mm": 1.0706865717972218,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": false,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.013960401000512197
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.03418605295691939
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.018824114687685505
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.031450083414216894
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.0326078407626525
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 6.0,
+    "rib_width_mm": 14.0,
+    "volume_proxy_mm3": 825988.3077855711,
+    "axial_truss_displacement_mm": 0.029302331105930907,
+    "axial_truss_stress_mpa": 0.4639894034781742,
+    "out_of_plane_cantilever_proxy_mm": 0.9177313472547616,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": false,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.011966058000439027
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.029302331105930907
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.01613495544658758
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.026957214355043047
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.027949577796559287
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 8.0,
+    "rib_width_mm": 8.0,
+    "volume_proxy_mm3": 713124.1650192379,
+    "axial_truss_displacement_mm": 0.03845930957653432,
+    "axial_truss_stress_mpa": 0.6089860920651033,
+    "out_of_plane_cantilever_proxy_mm": 0.6775438462154295,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": true,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.015705451125576222
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.03845930957653432
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.021177129023646202
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.035381343840994006
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.03668382085798405
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 8.0,
+    "rib_width_mm": 10.0,
+    "volume_proxy_mm3": 841868.5733122433,
+    "axial_truss_displacement_mm": 0.030767447661227444,
+    "axial_truss_stress_mpa": 0.48718887365208335,
+    "out_of_plane_cantilever_proxy_mm": 0.5420350769723435,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": true,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.01256436090046098
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.030767447661227444
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.016941703218916956
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.028305075072795234
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.029347056686387218
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 8.0,
+    "rib_width_mm": 12.0,
+    "volume_proxy_mm3": 971266.4328771959,
+    "axial_truss_displacement_mm": 0.02563953971768954,
+    "axial_truss_stress_mpa": 0.40599072804340275,
+    "out_of_plane_cantilever_proxy_mm": 0.451695897476953,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": true,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.010470300750384149
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.02563953971768954
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.01411808601576413
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.02358756256066265
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.02445588057198934
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 8.0,
+    "rib_width_mm": 14.0,
+    "volume_proxy_mm3": 1101317.743714095,
+    "axial_truss_displacement_mm": 0.02197674832944818,
+    "axial_truss_stress_mpa": 0.34799205260863075,
+    "out_of_plane_cantilever_proxy_mm": 0.38716791212310253,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": true,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.008974543500329269
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.02197674832944818
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.012101216584940696
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.02021791076628228
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.02096218334741946
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 10.0,
+    "rib_width_mm": 8.0,
+    "volume_proxy_mm3": 891405.206274047,
+    "axial_truss_displacement_mm": 0.030767447661227444,
+    "axial_truss_stress_mpa": 0.48718887365208335,
+    "out_of_plane_cantilever_proxy_mm": 0.3469024492622999,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": true,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.01256436090046098
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.030767447661227444
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.016941703218916956
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.028305075072795234
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.029347056686387218
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 10.0,
+    "rib_width_mm": 10.0,
+    "volume_proxy_mm3": 1052335.7166403048,
+    "axial_truss_displacement_mm": 0.024613958128981955,
+    "axial_truss_stress_mpa": 0.3897510989216663,
+    "out_of_plane_cantilever_proxy_mm": 0.2775219594098399,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": true,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.010051488720368783
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.024613958128981955
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.013553362575133567
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.022644060058236163
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.023477645349109802
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 10.0,
+    "rib_width_mm": 12.0,
+    "volume_proxy_mm3": 1214083.0410964943,
+    "axial_truss_displacement_mm": 0.020511631774151648,
+    "axial_truss_stress_mpa": 0.32479258243472264,
+    "out_of_plane_cantilever_proxy_mm": 0.23126829950819994,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": true,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.00837624060030732
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.020511631774151648
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.01129446881261131
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.018870050048530155
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.01956470445759149
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  },
+  {
+    "plate_thickness_mm": 10.0,
+    "rib_width_mm": 14.0,
+    "volume_proxy_mm3": 1376647.1796426186,
+    "axial_truss_displacement_mm": 0.017581398663558557,
+    "axial_truss_stress_mpa": 0.27839364208690526,
+    "out_of_plane_cantilever_proxy_mm": 0.19822997100702852,
+    "longest_free_rib_mm": 105.6563072395726,
+    "feasible": true,
+    "cases": [
+      {
+        "frame": "core",
+        "nodes": 5,
+        "members": 8,
+        "maximum_displacement_mm": 0.007179634800263415
+      },
+      {
+        "frame": "left",
+        "nodes": 14,
+        "members": 30,
+        "maximum_displacement_mm": 0.017581398663558557
+      },
+      {
+        "frame": "right",
+        "nodes": 15,
+        "members": 35,
+        "maximum_displacement_mm": 0.009680973267952548
+      },
+      {
+        "frame": "front_left",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.016174328613025854
+      },
+      {
+        "frame": "front_right",
+        "nodes": 9,
+        "members": 16,
+        "maximum_displacement_mm": 0.01676974667793557
+      }
+    ],
+    "surrogate": "Executed axial-member network plus longest free-rib cantilever; no continuum FEA, fatigue or topology optimization."
+  }
+]

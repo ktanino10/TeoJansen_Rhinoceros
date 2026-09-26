@@ -1,0 +1,13 @@
+{
+  "prototype": "B",
+  "samples": 361,
+  "role": "Auxiliary point-foot diagnostic, not the final finite-shoe walking solver. See walk_*.json and contact_review_*.json.",
+  "assembly_sha256": "4d070ff8c721b8b1fcd8cc3f83da64310d22d4d4214b6129ddcf8f758a2f3488",
+  "unsupported_angles_deg": [],
+  "opposed_stance_direction_angles_deg": [],
+  "supported_fraction": 1.0,
+  "minimum_cog_margin_mm": 0.6478051703533088,
+  "maximum_required_body_tilt_deg": 0.7646493336502723,
+  "model": "Rigid plane / six point feet; all lower-hull triangles tested; nonnegative barycentric normal forces; least-tilt feasible pose chosen per phase, limited to10deg.",
+  "limitations": "Geometric quasi-static support only. Body pitch/roll and contact triangle may switch; no inertia or contact stabilization. Uses F joint centers as point feet, not detailed rounded-toe solids. Wind force/overturning excluded. Slicer masses and actual COG must replace nominal CAD."
+}

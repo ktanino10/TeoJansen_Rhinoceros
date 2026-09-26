@@ -1,0 +1,298 @@
+{
+  "prototype": "A",
+  "assembly_sha256": "eb3dff9491bfa47d419815d908115c7cc73dae54b000b5829f56edb6643bfb1b",
+  "walking_sha256": "3f37087865a1df72b87df705c574c6b8b1a8da8129fb483210f8f28d3c71d896",
+  "mass_g_solid_cad_plus_catalog_assumptions": 4064.115775865074,
+  "bearing_counts_by_axis": {
+    "O": 5,
+    "I": 3,
+    "M1": 4
+  },
+  "upstream_efficiency_by_axis": {
+    "I": 1.0,
+    "M1": 0.95,
+    "O": 0.855
+  },
+  "nominal_total_transmission_efficiency_assumed": 0.855,
+  "maximum_equilibrium_residual_n_nmm": 1.9807513059608257e-13,
+  "maximum_model_joint_force_n": 30.99213567994805,
+  "ac_compression_max_n": 19.697691938256504,
+  "ac_pinned_euler_proxy_n": 37.70119176952937,
+  "ac_euler_proxy_ratio": 1.9139903237245168,
+  "scenarios": [
+    {
+      "case": "low",
+      "journal_static_mu": 0.05,
+      "bearing_breakaway_nmm_each": 0.1,
+      "effective_horizontal_resistance_coefficient": 0.005,
+      "peak_required_input_nm": 0.041757960004055475,
+      "peak_angle_deg": 273,
+      "peak_joint_friction_at_crank_nm": 0.016983934526260826,
+      "input_equivalent_bearing_breakaway_nm": 0.0006079922027290448,
+      "load_torque_range_nm": [
+        -0.168557229906798,
+        0.19467122685794816
+      ],
+      "equivalent_rotor_diameter_mm_at_same_span": {
+        "3.0": [
+          648.7226824387764,
+          1297.4453648775527
+        ],
+        "5.0": [
+          389.2336094632658,
+          778.4672189265316
+        ],
+        "8.0": [
+          243.27100591454115,
+          486.5420118290823
+        ]
+      }
+    },
+    {
+      "case": "nominal",
+      "journal_static_mu": 0.1,
+      "bearing_breakaway_nmm_each": 0.3,
+      "effective_horizontal_resistance_coefficient": 0.015,
+      "peak_required_input_nm": 0.04783957593497165,
+      "peak_angle_deg": 273,
+      "peak_joint_friction_at_crank_nm": 0.034044304763697235,
+      "input_equivalent_bearing_breakaway_nm": 0.0018239766081871345,
+      "load_torque_range_nm": [
+        -0.15978334028998678,
+        0.20257873032349244
+      ],
+      "equivalent_rotor_diameter_mm_at_same_span": {
+        "3.0": [
+          694.3574616543109,
+          1388.7149233086218
+        ],
+        "5.0": [
+          416.6144769925865,
+          833.228953985173
+        ],
+        "8.0": [
+          260.3840481203666,
+          520.7680962407331
+        ]
+      }
+    },
+    {
+      "case": "high",
+      "journal_static_mu": 0.18,
+      "bearing_breakaway_nmm_each": 1.0,
+      "effective_horizontal_resistance_coefficient": 0.03,
+      "peak_required_input_nm": 0.05995814195991407,
+      "peak_angle_deg": 273,
+      "peak_joint_friction_at_crank_nm": 0.061988713184556204,
+      "input_equivalent_bearing_breakaway_nm": 0.006079922027290448,
+      "load_torque_range_nm": [
+        -0.14662250586476983,
+        0.21443998552180885
+      ],
+      "equivalent_rotor_diameter_mm_at_same_span": {
+        "3.0": [
+          777.3444984276389,
+          1554.6889968552778
+        ],
+        "5.0": [
+          466.40669905658325,
+          932.8133981131665
+        ],
+        "8.0": [
+          291.5041869103646,
+          583.0083738207292
+        ]
+      }
+    }
+  ],
+  "rotor_input_nm_range": {
+    "3.0": [
+      0.0022325625,
+      0.00893025
+    ],
+    "5.0": [
+      0.0062015625000000005,
+      0.024806250000000002
+    ],
+    "8.0": [
+      0.015876,
+      0.063504
+    ]
+  },
+  "budget": [
+    {
+      "case": "low",
+      "wind_m_s": 3.0,
+      "assumed_cq": 0.05,
+      "available_input_nm": 0.0022325625,
+      "required_peak_nm": 0.041757960004055475,
+      "available_to_required_ratio": 0.05346435744905107,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "low",
+      "wind_m_s": 3.0,
+      "assumed_cq": 0.2,
+      "available_input_nm": 0.00893025,
+      "required_peak_nm": 0.041757960004055475,
+      "available_to_required_ratio": 0.21385742979620428,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "low",
+      "wind_m_s": 5.0,
+      "assumed_cq": 0.05,
+      "available_input_nm": 0.0062015625000000005,
+      "required_peak_nm": 0.041757960004055475,
+      "available_to_required_ratio": 0.14851210402514187,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "low",
+      "wind_m_s": 5.0,
+      "assumed_cq": 0.2,
+      "available_input_nm": 0.024806250000000002,
+      "required_peak_nm": 0.041757960004055475,
+      "available_to_required_ratio": 0.5940484161005675,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "low",
+      "wind_m_s": 8.0,
+      "assumed_cq": 0.05,
+      "available_input_nm": 0.015876,
+      "required_peak_nm": 0.041757960004055475,
+      "available_to_required_ratio": 0.3801909863043632,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "low",
+      "wind_m_s": 8.0,
+      "assumed_cq": 0.2,
+      "available_input_nm": 0.063504,
+      "required_peak_nm": 0.041757960004055475,
+      "available_to_required_ratio": 1.5207639452174528,
+      "numerical_budget_closed": true
+    },
+    {
+      "case": "nominal",
+      "wind_m_s": 3.0,
+      "assumed_cq": 0.05,
+      "available_input_nm": 0.0022325625,
+      "required_peak_nm": 0.04783957593497165,
+      "available_to_required_ratio": 0.046667690011189124,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "nominal",
+      "wind_m_s": 3.0,
+      "assumed_cq": 0.2,
+      "available_input_nm": 0.00893025,
+      "required_peak_nm": 0.04783957593497165,
+      "available_to_required_ratio": 0.1866707600447565,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "nominal",
+      "wind_m_s": 5.0,
+      "assumed_cq": 0.05,
+      "available_input_nm": 0.0062015625000000005,
+      "required_peak_nm": 0.04783957593497165,
+      "available_to_required_ratio": 0.12963247225330313,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "nominal",
+      "wind_m_s": 5.0,
+      "assumed_cq": 0.2,
+      "available_input_nm": 0.024806250000000002,
+      "required_peak_nm": 0.04783957593497165,
+      "available_to_required_ratio": 0.5185298890132125,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "nominal",
+      "wind_m_s": 8.0,
+      "assumed_cq": 0.05,
+      "available_input_nm": 0.015876,
+      "required_peak_nm": 0.04783957593497165,
+      "available_to_required_ratio": 0.331859128968456,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "nominal",
+      "wind_m_s": 8.0,
+      "assumed_cq": 0.2,
+      "available_input_nm": 0.063504,
+      "required_peak_nm": 0.04783957593497165,
+      "available_to_required_ratio": 1.327436515873824,
+      "numerical_budget_closed": true
+    },
+    {
+      "case": "high",
+      "wind_m_s": 3.0,
+      "assumed_cq": 0.05,
+      "available_input_nm": 0.0022325625,
+      "required_peak_nm": 0.05995814195991407,
+      "available_to_required_ratio": 0.03723535164736449,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "high",
+      "wind_m_s": 3.0,
+      "assumed_cq": 0.2,
+      "available_input_nm": 0.00893025,
+      "required_peak_nm": 0.05995814195991407,
+      "available_to_required_ratio": 0.14894140658945795,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "high",
+      "wind_m_s": 5.0,
+      "assumed_cq": 0.05,
+      "available_input_nm": 0.0062015625000000005,
+      "required_peak_nm": 0.05995814195991407,
+      "available_to_required_ratio": 0.10343153235379024,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "high",
+      "wind_m_s": 5.0,
+      "assumed_cq": 0.2,
+      "available_input_nm": 0.024806250000000002,
+      "required_peak_nm": 0.05995814195991407,
+      "available_to_required_ratio": 0.41372612941516096,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "high",
+      "wind_m_s": 8.0,
+      "assumed_cq": 0.05,
+      "available_input_nm": 0.015876,
+      "required_peak_nm": 0.05995814195991407,
+      "available_to_required_ratio": 0.26478472282570303,
+      "numerical_budget_closed": false
+    },
+    {
+      "case": "high",
+      "wind_m_s": 8.0,
+      "assumed_cq": 0.2,
+      "available_input_nm": 0.063504,
+      "required_peak_nm": 0.05995814195991407,
+      "available_to_required_ratio": 1.0591388913028121,
+      "numerical_budget_closed": true
+    }
+  ],
+  "sampling": "360 poses at1deg spacing from the second cycle of the common0.25deg prescribed walking/load-allocation model.",
+  "model": "Six rigid planar bodies per leg; conditional nonnegative normal-load allocation; explicit journal and F-hinge friction; every bearing converted through actual upstream ratios/losses. A belt nominal efficiency0.95; spur stage0.90.",
+  "limitations": [
+    "All material, static friction, bearing drag, aerodynamic coefficients and contact normal allocation are provisional.",
+    "Walking load allocation is a kinematic support assumption, not validated passive-shoe/ground dynamics or a complete3D internal-force solution.",
+    "The local leg solve omits small pin masses and out-of-plane reactions. Full CAD mass enters gravity and global support.",
+    "Euler buckling is a pinned straight-member screening proxy, not an FEA or printed-link strength certificate.",
+    "Belt10N/span pretension means about20N additional radial load; actual tension/drag must be measured. No lossless belt assumption.",
+    "Static Cq may be zero/negative at an unfavorable angle. Positive-coefficient budget closure is not self-starting proof.",
+    "No inertia, impacts, wind field, coasting-through-stalls or running-efficiency experiment was simulated.",
+    "Equivalent diameters are scaling comparisons, not supplied larger interchangeable CAD."
+  ]
+}

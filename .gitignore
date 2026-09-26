@@ -29,3 +29,7 @@ $RECYCLE.BIN/
 .idea/
 *.swp
 *.swo
+
+# Ver.3 Python regeneration cache
+__pycache__/
+*.pyc
