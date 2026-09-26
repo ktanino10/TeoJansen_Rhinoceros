@@ -3,12 +3,13 @@
 import json
 import math
 from pathlib import Path
+import tempfile
 import unittest
 
 import numpy as np
 
 from beam import circle_section, d_section, rectangle_section, solve_beam, twist_bound
-from study_r2 import GaitStudy, INPUT, coupled_startup, gear_check, phase_map, reflect_loads, rotor_mass_proxy, static_jet_proxy
+from study_r2 import GaitStudy, INPUT, coupled_startup, gear_check, phase_map, reflect_loads, rotor_mass_proxy, static_jet_proxy, write_csv
 
 
 class BeamTests(unittest.TestCase):
@@ -174,6 +175,12 @@ class StudyTests(unittest.TestCase):
             GaitStudy(self.common, step_deg=0)
         with self.assertRaises(ValueError):
             GaitStudy(self.common, step_deg=10).pose(0, 0)
+
+    def test_generated_csv_has_portable_lf_endings(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)/"data.csv"
+            write_csv(path, ["a", "b"], [[1, 2]])
+            self.assertEqual(path.read_bytes(), b"a,b\n1,2\n")
 
 
 if __name__ == "__main__":

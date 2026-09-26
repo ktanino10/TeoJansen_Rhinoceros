@@ -51,7 +51,7 @@ def status(passed):
 
 def write_csv(path, columns, rows):
     with path.open("w", newline="") as stream:
-        writer = csv.writer(stream)
+        writer = csv.writer(stream, lineterminator="\n")
         writer.writerow(columns)
         writer.writerows(rows)
 
