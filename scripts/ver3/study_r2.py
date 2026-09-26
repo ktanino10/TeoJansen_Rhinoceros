@@ -1190,7 +1190,12 @@ def run(cfg, output):
             "designId": design, "loadcaseId": case,
             "file": str(DEFAULT_OUTPUT.relative_to(ROOT)/f"{name}.svg"),
             "dataFile": str(DEFAULT_OUTPUT.relative_to(ROOT)/f"{name}.json"),
-            "method": method, "units": "see labelled axes and JSON", "displayAmplification": 1,
+            "method": method,
+            "units": {"synchronization_comparison": "Nm,N,mm/rad",
+                      "reference_support_span": "mm,N,MPa",
+                      "rib_section_screen_C": "mm,N,MPa,mm^3"}[name],
+            "figureUnits": "scenario_index,mN*m" if name == "synchronization_comparison" else "mm,mm",
+            "displayAmplification": 1,
             "resultStatus": "UNKNOWN", "isFinalCadGeometry": False,
             "sourceHashes": {**hashes, f"{name}.json": digest(output/f"{name}.json")},
         })
@@ -1226,7 +1231,7 @@ def verify(output):
             raise ValueError(f"Stale artifact: {relative}")
     for figure in manifest["figures"]:
         ET.parse(output/Path(figure["file"]).name)
-        if figure["resultStatus"] != "UNKNOWN" or figure["isFinalCadGeometry"]:
+        if figure["resultStatus"] != "UNKNOWN" or figure["isFinalCadGeometry"] or not figure["figureUnits"]:
             raise ValueError("Study figure must not claim a final prototype")
     for ident in "ABC":
         record = json.loads((output/f"candidate_{ident}.json").read_text())
