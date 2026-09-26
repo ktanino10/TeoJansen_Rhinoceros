@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="リノセウスVer.1・Ver.2の製作記録。Fusion 360設計、ABS出力、研磨・洗浄・接着・塗装・デカール、金属軸と組立、失敗から改良へ。作者の実写真と参考図で工程をたどります。">
+  <title>Ver.1・Ver.2 製作記録 — リノセウス</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html#top"><span>RHINOCEROS<small>風で歩く仕組みの探究</small></span></a>
+      <nav aria-label="メインナビゲーション">
+        <a href="index.html">全体紹介</a><a href="#ver1">Ver.1の工程</a><a href="#ver2">Ver.2の改良</a><a href="#resources">資料</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="section production-intro" id="top" aria-labelledby="production-title">
+      <p class="eyebrow">VER.1 / VER.2 — THE MAKING JOURNEY</p>
+      <h1 id="production-title">一つずつ、つくる。<br><span>動かなかった理由も、残す。</span></h1>
+      <p class="intro">動画から仕組みを読み取り、CADで形を起こし、印刷した部品を磨き、色を重ねて組み上げる。最初の実物から見えた課題を、次の風車・歯車・支持構造へ。このページでは、作者が残した製作と改良の道のりを写真とともにたどります。</p>
+      <div class="record-scope"><strong>この記録の読み方</strong><p>工程の詳しい写真と説明は、主に原典の「Ver.1 製作過程」に基づきます。Ver.2については、その経験を引き継いだ改良点・公開部品・完成写真・テストを紹介します。<strong>独立したVer.2の全工程ログや、新しい番号付き組立図を再現したものではありません。</strong></p><p>実写真は当時の製作の証拠、CGは形状を伝える設計資料です。性能の実測、再現性、安全性を今回新たに保証するものではありません。</p></div>
+      <nav class="journey-nav" aria-label="製作記録の目次">
+        <a href="#ver1">01 · Ver.1をつくる</a><a href="#ver1-gallery">Ver.1完成写真</a><a href="#ver2">02 · Ver.2へ直す</a><a href="#ver2-gallery">Ver.2完成写真</a><a href="#remaining">残った課題</a><a href="#resources">版別の資料</a>
+      </nav>
+    </section>
+
+    <section class="section production-chapter" id="ver1" aria-labelledby="ver1-title">
+      <div class="chapter-heading"><span class="chapter-number" aria-hidden="true">01</span><div><p class="eyebrow">VER.1 / FROM OBSERVATION TO A PHYSICAL BUILD</p><h2 id="ver1-title">観察から、最初の実物へ。</h2><p>最初は力学計算よりも、形を自分で起こして動かしてみることを優先。その選択が、後の試作と修正につながりました。</p></div></div>
+      <nav class="stage-index" aria-label="Ver.1工程一覧">
+        <a href="#research">1 情報収集</a><a href="#design">2 設計</a><a href="#printing">3 出力</a><a href="#sanding">4 研磨</a><a href="#cleaning">5 洗浄・接着</a><a href="#painting">6 塗装</a><a href="#decals">7 デカール</a><a href="#assembly">8 金属軸・組立</a><a href="#ver1-test">動作確認</a>
+      </nav>
+
+      <article class="making-stage" id="research" aria-labelledby="research-title">
+        <div class="stage-heading"><span class="step-number">1</span><h3 id="research-title">情報収集 — 動きの美しさから、内部の仕組みへ。</h3></div>
+        <div class="stage-copy">
+          <p>きっかけはYouTubeで見たテオ・ヤンセンのストランビーストでした。風だけで生き物のように動く姿と、その内側で働く機構に惹かれ、「自分の手で再現してみたい」と考えたのが出発点です。動画や世界の制作者が公開した画像を観察し、構造と動作原理を推測していきました。</p>
+          <p>同時に、完全な模倣ではなく、メカニカルな造形と自分の好みを組み合わせる方針を立てています。白・黒・黄を中心とする配色や構造的なニュアンスは、作者が好きなν（ニュー）ガンダムからの着想。見たい外観と動かしたい仕組みを、次のCAD設計へ持ち込みました。</p>
+          <div class="link-list"><a href="https://youtu.be/MYGJ9jrbpvg">着想の原点：ストランビーストの参考動画 ↗</a><a href="https://youtu.be/TQ98cSiHVVs">配色・造形の参考：原典が紹介する公式プロモーション動画 ↗</a></div>
+          <p class="small-note">参考動画は本模型の実機テストではありません。クリックしたときだけYouTubeで開き、第三者動画の画像をこのサイトへ転載していません。</p>
+        </div>
+      </article>
+
+      <article class="making-stage" id="design" aria-labelledby="design-title">
+        <div class="stage-heading"><span class="step-number">2</span><h3 id="design-title">Fusion 360設計 — まず形を起こし、動きのつながりを見る。</h3></div>
+        <div class="stage-copy"><p>各部品はFusion 360で3Dモデリングしました。初期は実際の作品の形を観察して写し取ることが中心で、細かな力学計算はほとんど行っていません。歯車からクランク、脚へとつながる構成を形にできた一方、回すのに必要な力や支持の弱さは、後の実物で確かめ直すことになりました。</p><p>完成予想CGでは形状・構造・色味・陰影を確認しています。屋外背景もレンダリングの一部で、実物がその場所を歩いた写真ではありません。設計と試作・微調整の往復は、作者が特に時間と労力を費やした工程です。</p></div>
+        <div class="photo-grid">
+          {{figure:v1-concept-angle|Ver.1のFusion 360完成予想CG。斜めから風車と白い脚リンクが見える。|設計CG · Ver.1の斜めビュー。出力前の外観検討であり、実物写真ではありません。}}
+          {{figure:v1-concept-side|Ver.1のFusion 360設計CG。風車の円板と脚のリンクを側面から示す。|設計CG · Ver.1の側面。形と配色を確認するためのレンダリング。}}
+        </div>
+        <div class="document-strip"><strong>設計と組立の参考</strong><a href="{{download:docs/テオヤンセン2Dv1.pdf}}">テオヤンセン2Dv1.pdf</a><a href="{{download:docs/テオヤンセン2D図面最新.pdf}}">テオヤンセン2D図面最新.pdf</a><a href="https://youtu.be/Q7d0sq1SNJ0">組立イメージ動画</a><a href="https://www.youtube.com/watch?v=RxUTcOTfPt0">動作シミュレーション</a></div>
+        <p class="small-note">二つのPDFはVer.1の参考資料です。組立イメージと動作シミュレーションは、完成実機のテストと分けて見てください。Fusion360フォルダーにネイティブの.f3dは含まれていません。</p>
+      </article>
+
+      <article class="making-stage" id="printing" aria-labelledby="printing-title">
+        <div class="stage-heading"><span class="step-number">3</span><h3 id="printing-title">3Dプリント — 向き・分割・サポートを選ぶ。</h3></div>
+        <div class="stage-pair">
+          {{figure:making-printer|作者の製作記録にある、ケースに囲われたBambu Lab製FDMプリンター。|実写真 · 当時の出力設備。印刷条件の測定画面ではありません。}}
+          <div><p>作者はBambu Lab製FDMプリンターでABS樹脂を出力し、印刷方向や分割を工夫しました。形を一体で出すか、分けて後から接着するかは、精度・強度だけでなく、サポート材の消費と印刷時間にも関わります。</p><p>原典では、基本的にクランクシャフト以外は分割方式を採用。クランクシャフトではサポートが接した面の粗さが残り、次の研磨工程が必要になりました。「分割すれば作業がなくなる」のではなく、出力後の接着へ手間を移す選択でもあります。</p><div class="record-scope"><strong>当時の倍率を、別の版へ持ち込まない。</strong><p>製作記録の指示は<strong>150%（脚部は160%推奨）</strong>。原典の工程章はVer.1、概要表ではVer.2を150%と紹介しています。写真ごとの適用倍率までは記録されていません。これは過去のVer.1/2の記載で、<strong>Ver.3のmm・100%とは別</strong>です。</p></div><p>ノズル温度・充填率・細かなサポート設定を、このページで新しい検証済みレシピとして補ってはいません。ABSの出力と後処理は、使用機器・材料の取扱説明と換気条件を確認してください。</p><a href="https://www.youtube.com/watch?v=6YfYPoaMa58">当時の3Dプリント動画を開く ↗</a></div>
+        </div>
+      </article>
+
+      <article class="making-stage" id="sanding" aria-labelledby="sanding-title">
+        <div class="stage-heading"><span class="step-number">4</span><h3 id="sanding-title">研磨 — サポート跡と積層の表面を整える。</h3></div>
+        <div class="stage-pair">
+          {{figure:making-sanding|作業面に並べた赤いクランクシャフト部品。原典の研磨工程の写真。|実写真 · 研磨工程のクランクシャフト。原典「4. 研磨」より。}}
+          <div><p>サポート材が接した面は粗くなりやすく、作者は電動やすりを使ってクランクシャフトの表面を研磨しました。記録された順序は<strong>#400 → #600 → #800</strong>。番手を上げて表面を整え、後の塗装で見える積層跡を滑らかにしていきます。</p><p>形が整っても、表面には削り粉が残ります。そのまま塗装や接着へ進むのではなく、次に洗浄工程を挟んでいるのが、この製作記録の流れです。これは作者が行った仕上げであり、軸穴の公差や摩擦低減量を測定した記録ではありません。</p><a href="https://www.youtube.com/watch?v=w-jB8-OUFfA">研磨工程の動画を開く ↗</a></div>
+        </div>
+      </article>
+
+      <article class="making-stage" id="cleaning" aria-labelledby="cleaning-title">
+        <div class="stage-heading"><span class="step-number">5</span><h3 id="cleaning-title">超音波洗浄と接着 — 粉を落とし、分割した形をつなぐ。</h3></div>
+        <div class="stage-pair">
+          {{figure:making-cleaning|超音波洗浄機のかごに入れられた赤いクランクシャフト部品。|実写真 · 研磨後の部品を超音波洗浄している記録。}}
+          <div><p>研磨した部品は超音波洗浄機へ。作者は少量の洗剤を加えた洗浄水を使い、細部に残る粉や削りカスを落としたと記しています。ここでは濃度・温度・洗浄時間を推定せず、当時の方法として紹介します。</p><h4 id="bonding">分割出力の後に必要だった接着</h4><p>洗浄後、一部の部品を接着して仮組みしました。原典に記載された接着剤は、タミヤのABS用セメント（品番87137）。印刷しやすい形へ分割した部品をつなぎ、塗装・最終組立へ進める工程です。接着作業そのものの写真は原典にないため、洗浄写真を「接着中」として扱っていません。</p><p class="small-note">接着・乾燥・完全硬化は別の状態です。原典の待ち時間を硬化保証として使わず、材料への適合、硬化時間、換気と保護具は各製品の表示・取扱説明を優先してください。</p><div class="link-list"><a href="https://www.youtube.com/watch?v=2DyWBz1phlA">超音波洗浄の動画を開く ↗</a><a href="https://www.tamiya.com/japan/products/87137/index.html">原典記載のABS用セメント・メーカー情報 ↗</a></div></div>
+        </div>
+      </article>
+
+      <article class="making-stage" id="painting" aria-labelledby="painting-title">
+        <div class="stage-heading"><span class="step-number">6</span><h3 id="painting-title">塗装 — 形だけでなく、色と陰影をつくる。</h3></div>
+        <div class="stage-copy"><p>作者は塗装ブースの中でエアブラシ塗装を行い、防毒マスクを着用したと記録しています。設計CGで考えた配色を実物へ移し、印刷したままの樹脂の表面から、メカニカルな模型の質感へと仕上げました。</p><p>部品を保持して塗装し、乾燥させる工程が写真に残っています。組み上がった状態だけでは届きにくい面も、部品の段階で扱っています。下のクランク比較は研磨・洗浄・塗装を通した仕上がりの違いであり、一つの処理だけの効果を数値評価したものではありません。</p></div>
+        <div class="photo-grid">
+          {{figure:making-booth|前面が開いた卓上塗装ブースと内部の回転台。|実写真 · 作者が使用した塗装ブース。}}
+          {{figure:making-airbrush|赤い本体のエアブラシと金属製カップ。|実写真 · 原典に掲載された使用エアブラシ。}}
+          {{figure:making-paint-prep|照明をつけた塗装ブース内に、持ち手付きの部品を並べた状態。|実写真 · 部品を保持して塗装を進めるための準備。}}
+          {{figure:making-drying|クリップの持ち手に取り付けた白いリンク部品が、台に立てて並べられている。|実写真 · 塗装済み部品の乾燥。手元の部品を見やすくトリミング。}}
+        </div>
+        <div class="stage-pair finish-comparison">
+          {{figure:making-finish|二組の赤いクランクシャフトを並べた、表面仕上げ前後の比較。|実写真 · 原典は左を処理前、右を研磨・超音波洗浄・塗装後と説明しています。}}
+          <div><h4>仕上げる面と、動く機構は別に確認する。</h4><p>きれいな表面になったことは、必要なトルクや機構のすきまが確認できたこととは別です。塗装後にはデカールとトップコートで外観を整え、最後に組み上げて動きを確認しています。</p><p class="small-note">写真は作者の当時の作業環境です。塗料・溶剤に適した換気と保護具を各製品の指定に従って確認してください。写真だけから設備の安全性能を保証しません。</p></div>
+        </div>
+      </article>
+
+      <article class="making-stage" id="decals" aria-labelledby="decals-title">
+        <div class="stage-heading"><span class="step-number">7</span><h3 id="decals-title">デカールとトップコート — 小さな表示まで仕上げる。</h3></div>
+        <div class="stage-copy"><p>塗装した部品へ専用剤を使ってデカールを貼り、綿棒で位置を整えました。白いリンクや黒い足先に小さな表示が加わり、最初に思い描いた配色と機械らしいディテールがつながっていきます。</p><p>最後はトップコートで艶消し仕上げに。原典は貼付作業中と仕上げ直後を同じ工程で紹介しており、すべての写真を「塗布中」とは区別していません。ここでも作業の記録として掲載し、薬剤の配合や乾燥条件は付け加えていません。</p></div>
+        <div class="photo-grid three-up">
+          {{figure:making-decals|黒い足先部品に白い文字と小さな色付きマークを貼った状態。|実写真 · 黒い足先へのデカール貼付の記録。}}
+          {{figure:making-topcoat|ブース内で並べた、デカール付きの黒い足先部品。|実写真 · 原典のデカール・艶消し仕上げ工程に掲載された部品。}}
+          {{figure:making-finished-panels|白い三角リンクと黄色い連結部に赤いマークなどを入れた二組の部品。|実写真 · 白・黄の部品も表示を加えて仕上げ、組立へ。}}
+        </div>
+      </article>
+
+      <article class="making-stage" id="assembly" aria-labelledby="assembly-title">
+        <div class="stage-heading"><span class="step-number">8</span><h3 id="assembly-title">金属軸の準備と最終組立 — 部品を、力の通り道にする。</h3></div>
+        <div class="stage-copy"><p>風車と歯車の回転軸にはステンレス丸棒を使用しました。作者は必要な長さへ切るため金切りばさみを併用したと記しています。ただし、棒の寸法別の切断手順や切断中の写真は残っていません。この記述をすべての径・工具に適用できる加工指示とはせず、材料と工具の適合を取扱説明で確認してください。</p><p>仕上げた歯車、クランク、脚部をつなぎ、風車から歯車、クランク、脚へ回転が伝わるかを確認しました。ここで見たかったのは完成した外観だけでなく、歯車の噛み合い、クランクの回転、風力での駆動です。組立位置は前掲のVer.1参考PDFと組立イメージ動画で補えますが、完全な番号付き手順書ではありません。</p><p>動かして初めて、形を写すだけでは解決できなかった問題が見えてきます。まずは完成した実物を、風車側・脚側・歯車側から見てみます。</p></div>
+        <div class="document-strip"><strong>原典の加工・組立記録</strong><a href="{{source:README_ja.md}}">8. 最終組立と動作確認（丸棒・工具の記載）</a><a href="https://youtu.be/Q7d0sq1SNJ0">Ver.1組立イメージ</a><a href="{{tree:STL/Ver.1}}">Ver.1の公開部品</a></div>
+      </article>
+
+      <section class="completion-gallery" id="ver1-gallery" aria-labelledby="ver1-gallery-title">
+        <p class="eyebrow">VER.1 / PHYSICAL MODEL</p><h3 id="ver1-gallery-title">Ver.1完成写真 — 六枚羽の風車と、最初の脚。</h3>
+        <p>原典が「Ver.1 完成時の外観」として掲載した六方向です。設計CGではなく、塗装・デカール・組立を終えた実物の写真。歯車側と反対側では、見えている部品が異なります。</p>
+        <div class="photo-grid three-up">
+          {{figure:v1-photo|完成したVer.1の斜め写真。六枚羽型風車の円板と白・黄・黒の脚が見える。|Ver.1実物 · 斜め。風車と脚部を含む全体の構成。}}
+          {{figure:v1-view-2|Ver.1の脚列を正面から見た実写真。黄色い部品と黒い足先が並ぶ。|Ver.1実物 · 正面。脚列とクランク周辺を見る。}}
+          {{figure:v1-view-3|Ver.1の風車円板側から見た実写真。白いリンクが交差している。|Ver.1実物 · 側面。風車の円板と脚リンクの重なり。}}
+          {{figure:v1-view-4|Ver.1を反対の脚列側から撮影。横に長い六枚羽型の風車が上にある。|Ver.1実物 · 裏面。風車の幅と左右の脚配置。}}
+          {{figure:v1-view-5|Ver.1の歯車側を近くから撮影。歯車と白い交差リンク、黒い足先が見える。|Ver.1実物 · 反対側面。歯車から脚への伝達側。}}
+          {{figure:v1-view-6|Ver.1を上から斜めに撮影。風車の羽と緑色の内部構造が見える。|Ver.1実物 · 逆斜め。風車の羽と本体内部の配置。}}
+        </div>
+      </section>
+
+      <article class="making-stage" id="ver1-test" aria-labelledby="ver1-test-title">
+        <p class="eyebrow">THE FIRST FUNCTIONAL CHECK</p><h3 id="ver1-test-title">動作確認 — 完成したのに、思うようには回らない。</h3>
+        <div class="stage-copy"><p>作者の観察は三つ。<strong>風力では風車がうまく回らない、手で回すと一部の部品が外れる、風車が安定せず軸がぶれる</strong>。外観を仕上げた段階と、安定して駆動できる段階は同じではありませんでした。</p><p>この失敗から、風を受ける形だけでなく、回転を伝えるギア比、金属軸を支える位置、脚のフックが力を受ける面を考え直すことになります。次の節では「起きたこと」「作者の考察」「実際の変更」を分けて整理します。</p><a class="button" href="https://youtu.be/Ic3GasmMlio">Ver.1の実物テスト記録をYouTubeで見る ↗</a><p class="small-note">当時の実機映像です。風速・起動トルク・連続運転時間をそろえた比較試験の記録ではありません。</p></div>
+      </article>
+    </section>
+
+    <section class="chapter-tinted" id="ver2" aria-labelledby="ver2-title">
+      <div class="section production-chapter">
+        <div class="chapter-heading"><span class="chapter-number" aria-hidden="true">02</span><div><p class="eyebrow">VER.2 / ITERATE, NOT JUST ENLARGE</p><h2 id="ver2-title">失敗を、四つの改良へ。</h2><p>当時の製作工程を土台に、風車・歯車・軸支持・フックをつくり直す。ここからは、原典に記録されたVer.2への変更です。</p></div></div>
+        <div class="record-scope"><strong>Ver.2の記録がある範囲</strong><p>原典はVer.1の出力・仕上げの経験に続けて、歯車の試作群、比較CG、風車の試作品、フックの形状、完成写真と動画を掲載しています。以下はその改良記録であり、Ver.2専用の研磨・塗装の全工程が別に撮影されていた、と補完してはいません。</p></div>
+
+        <article class="revision-card" id="v2-gears" aria-labelledby="v2-gears-title">
+          <h3 id="v2-gears-title">改良1 · 歯車 — 速さよりも、回し始める力を考える。</h3>
+          <dl class="change-record"><div><dt>観察</dt><dd>Ver.1は風で十分に回らず、回転が不安定でした。</dd></div><div><dt>作者の考察</dt><dd>クランクシャフトに対するギア比が小さすぎ、必要なトルクを得られなかったと整理。自転車の変速を手掛かりに、力と速度の関係を考え直しました。</dd></div><div><dt>実際の変更</dt><dd>大小の歯車の組合せを何度も試作し、ギア比・歯形とクランク配置を再検討。完成写真と比較CGに変更が残っています。</dd></div></dl>
+          <div class="photo-grid">
+            {{figure:gear-trial|台の上で大小二枚の歯車を組み合わせた、Ver.2に向けた実物試作。|実写真 · Ver.2開発に向けたギア比検討の一例。トルク測定器の記録ではありません。}}
+            {{figure:gear-prototypes|大きさや厚さの異なる試作歯車と、金属丸棒が作業面に並ぶ。|実写真 · 繰り返した歯車試作と金属丸棒。完成版の部品表ではありません。}}
+            {{figure:v1-drive-front|Ver.1の歯車側を示すFusion 360比較CG。黒い大小の歯車と脚リンクがある。|設計CG · 原典の比較表でVer.1に対応する歯車側。}}
+            {{figure:v2-drive-front|Ver.2の歯車側を示すFusion 360比較CG。変更後の歯車配置が見える。|設計CG · 原典の比較表でVer.2に対応する歯車側。}}
+          </div>
+          <p class="small-note">原典は噛み合い・動作の改善を述べていますが、確定ギア比や効率・起動トルクの測定表はありません。CGや歯車の数だけから、検証済みの数値を作ってはいません。</p>
+        </article>
+
+        <article class="revision-card" id="v2-turbine" aria-labelledby="v2-turbine-title">
+          <h3 id="v2-turbine-title">改良2 · 風車 — 六枚羽から、サボニウス型へ。</h3>
+          <dl class="change-record"><div><dt>観察</dt><dd>初期の六枚羽型風車では、風を受けても十分なトルクが得られませんでした。</dd></div><div><dt>作者の考察</dt><dd>公園で見た風車をきっかけに、風を受け止めるだけでなく、どう逃がすかにも注目しました。</dd></div><div><dt>実際の変更</dt><dd>カップ形状のサボニウス型風車を採用。形状比較画像と複数の実物試作を残し、Ver.2完成機に組み込んでいます。</dd></div></dl>
+          <div class="photo-grid">
+            {{figure:turbines-real|作業面に並べた複数の実物風車。左に六枚羽型、中央から右にカップ形状の試作がある。|実写真 · 左の六枚羽型と、サボニウス型を含む風車試作。原典の実物比較。}}
+            {{figure:turbines-angle|スライサー画面の灰色モデル。左に六枚羽型、右にカップ型の風車を配置。|形状表示 · 六枚羽型とサボニウス型の比較。実物写真・流体解析ではありません。}}
+          </div>
+          <details class="image-detail"><summary>風車を上から見た形状の違い</summary>{{figure:turbines-top|上から見たスライサー画面。左の六枚羽と右の二つの曲面による断面形状が異なる。|形状表示 · 上面からの比較。風の流れを計算した画像ではありません。}}</details>
+          <p>原典は弱い風での回転や安定性が改善したと述べています。一方、風速・風向・風車角をそろえた測定値は載っていません。ここで「どの風速でも必ず始動する」と一般化せず、形状を変えて実物を試したという記録として読みます。</p>
+          <a href="https://youtube.com/shorts/n7MyLVN-XGA">原典が改良の着想として紹介する風車動画 ↗</a>
+        </article>
+
+        <article class="revision-card" id="v2-support" aria-labelledby="v2-support-title">
+          <h3 id="v2-support-title">改良3 · 軸支持 — 細い棒を、水平に支える。</h3>
+          <dl class="change-record"><div><dt>観察</dt><dd>ステンレス丸棒がたわみ、風車の軸がぶれていました。</dd></div><div><dt>作者の考察</dt><dd>たわみや支持のずれが余分な摩擦を生み、回転を妨げると整理しました。</dd></div><div><dt>実際の変更</dt><dd>丸棒を水平に保つため、支持構造を延長・補強。歯車と軸の配置を含めて見直しています。</dd></div></dl>
+          <div class="photo-grid">
+            {{figure:v1-drive-side|Ver.1の歯車とその支持を横から示すFusion 360設計CG。|設計CG · Ver.1の軸・歯車支持の側面。}}
+            {{figure:v2-drive-side|Ver.2の歯車と支持構造を横から示すFusion 360設計CG。|設計CG · Ver.2で見直した支持と歯車配置の側面。}}
+          </div>
+          <p>比較の章では支持の改善が述べられていますが、同じ原典の「今後の展望」には、Ver.2でも細い軸のたわみ・摩擦ロス・ぶれが残ったと記されています。したがって、ここでは<strong>支持を改良したこと</strong>と<strong>問題が完全になくなったこと</strong>を同一視しません。</p>
+        </article>
+
+        <article class="revision-card" id="v2-hooks" aria-labelledby="v2-hooks-title">
+          <h3 id="v2-hooks-title">改良4 · フック — 抜ける方向の力を受け止める。</h3>
+          <dl class="change-record"><div><dt>観察</dt><dd>クランクと脚をつなぐフックが、駆動中に頻繁に外れました。</dd></div><div><dt>作者の考察</dt><dd>回転に伴う力が抜ける方向へ働き、それを受け止める構造がないと整理しました。</dd></div><div><dt>実際の変更</dt><dd>力を受ける支持面を追加し、フック形状を再設計。単に部品を大きくするのではなく、力がかかる向きに対処した変更です。</dd></div></dl>
+          <div class="photo-grid detail-pair">
+            {{figure:hook-front|二つの脚リンクのフックを正面から比較するスライサー画像。左がVer.1、右がVer.2。|形状表示 · 左Ver.1／右Ver.2。原典のフック比較1。}}
+            {{figure:hook-side|フック部品を別の視点から比較した小さなスライサー画像。左がVer.1、右がVer.2。|形状表示 · 左Ver.1／右Ver.2。原典のフック比較2。}}
+          </div>
+          <p class="small-note">原図の解像度を超える細部を描き足していません。外れにくさの改善は作者の観察であり、保持力・疲労寿命の測定結果ではありません。</p>
+        </article>
+
+        <article class="revision-card" id="v2-parts" aria-labelledby="v2-parts-title">
+          <h3 id="v2-parts-title">製造の試行錯誤は、公開された分割部品にも残る。</h3>
+          <p>Ver.2のSTL一覧には、クランクの<strong>Crankshaft_Part1〜3</strong>、サボニウス型風車の<strong>Part 1 of 3〜Part 3 of 3</strong>、さらに比較対象の六枚羽型風車の三分割ファイルもあります。フック、歯車、支持部品なども別ファイルになっています。</p>
+          <p>これは実際に公開されている部品構成です。ただし、「Ver.1の工程ではクランク以外を基本的に分割」とする記述と、後のVer.2ファイル構成は区別します。公開ファイルだけから、すべての試作が同じ分割・向き・接着順で造形されたと断定したり、新しいVer.2組立図を復元したりはしていません。</p>
+          <div class="document-strip"><a href="{{tree:STL/Ver.2}}">Ver.2の全STLを確認</a><a href="{{source:STL/Ver.2/Crankshaft_Part1.stl}}">クランク分割部品の例</a><a href="{{source:STL/Ver.2/Savonius Low-Profile Wind Turbine Model (Part 1 of 3).stl}}">サボニウス分割部品の例</a><a href="https://makerworld.com/ja/models/1971139-n-gundam-style-strandbeest-ver-2">原典のMakerWorld掲載</a></div>
+        </article>
+
+        <section class="completion-gallery" id="ver2-gallery" aria-labelledby="ver2-gallery-title">
+          <p class="eyebrow">VER.2 / PHYSICAL MODEL</p><h3 id="ver2-gallery-title">Ver.2完成写真 — 形を変え、もう一度組む。</h3>
+          <p>原典が「Ver.2 完成時の外観」として掲載した六方向。カップ形状の風車、歯車側、脚列、内部のクランクを見比べられます。表示画像は背景の画面が写る範囲を抑えてトリミングし、原本へのリンクを残しています。</p>
+          <div class="photo-grid three-up">
+            {{figure:v2-photo|Ver.2完成実物を斜めから見た写真。カップ型風車と白い脚リンクが見える。|Ver.2実物 · 斜め。カップ型風車を組み込んだ全体。}}
+            {{figure:v2-view-2|Ver.2の脚列側から撮影した写真。風車の下に白と黄の部品が並ぶ。|Ver.2実物 · 正面。脚列と中央のクランク周辺。}}
+            {{figure:hero|Ver.2の風車円板側からの実写真。風車と交差する脚リンクが見える。|Ver.2実物 · 側面。風車と脚部の位置関係。}}
+            {{figure:v2-view-4|Ver.2を反対側の脚列から撮影した実写真。カップの開口と足先が見える。|Ver.2実物 · 裏面。風車の開口と左右の脚配置。}}
+            {{figure:v2-view-5|Ver.2の歯車側からの実写真。黒い大小の歯車と脚リンクが見える。|Ver.2実物 · 反対側面。実際に組み付けた歯車列。}}
+            {{figure:v2-view-6|Ver.2の歯車側を斜めから撮影。風車、歯車、内部のクランクが見える。|Ver.2実物 · 逆斜め。駆動側と本体内部をまとめて見る。}}
+          </div>
+        </section>
+
+        <article class="revision-card" id="ver2-test" aria-labelledby="ver2-test-title">
+          <h3 id="ver2-test-title">実物テスト — 動いた瞬間と、その後の見直し。</h3>
+          <p>作者は初回テストを「初めて実際に動作した瞬間」として公開し、紹介・再検証動画も残しました。これはVer.2の実物の動作記録です。初期の観察、CAD、出力、仕上げ、組立、失敗からの修正が、一つの動きにつながった段階といえます。</p>
+          <div class="two-column">
+            <div class="record-scope"><h4>初回動作テスト</h4><p>作者が最初に実際の動作を記録した映像。設計CGのシミュレーションとは別です。</p><a class="button" href="https://youtu.be/T3U7c1Mr3Y8">Ver.2初回動作テスト ↗</a></div>
+            <div class="record-scope"><h4>紹介・再検証</h4><p>完成したVer.2を紹介し、改めて動きを見る既存の映像です。</p><a class="button" href="https://youtu.be/JzXOxTJvHzw">Ver.2紹介・再検証 ↗</a></div>
+          </div>
+          <p class="small-note">公開映像を、今回実施した風速別の試験や長時間運転の検証と読み替えてはいません。風速、風向、起動角度、効率、寿命のそろった実測データは提示されていません。</p>
+        </article>
+
+        <aside class="bridge-note" id="remaining" aria-labelledby="remaining-title">
+          <p class="eyebrow">WHAT REMAINED / WHY VER.3 BEGAN</p><h3 id="remaining-title">動いた後にも残った、始動と接合の問題。</h3>
+          <p>後の作者の報告では、<strong>風車・歯車と棒の接合が滑って一体で回らなくなること</strong>、始動の難しさが課題として残りました。これは、Ver.1で脚のフックが外れたことや軸のたわみとは分けて考える必要があります。</p><p>公開済みのVer.3設計ノートは、この接合の滑りを出発点として記録しています。<strong>軸受の焼付きが確認された、と原因を置き換えてはいません。</strong>摩擦・芯ずれ・起動トルクの内訳は、測定して確かめるべき事項です。</p><p>現在のVer.3は第一カットの比較設計。実機の風力歩行は未検証、全案の接地残差3 mm目標は未達、Bは名目トルク入力も不足しています。この製作記録の追加によって、その制限は変わりません。</p><div class="link-list"><a href="{{source:docs/ver3/DESIGN_ja.md}}">接合の滑り・仮説・残る測定を区別した公開設計ノート ↗</a><a href="index.html#ver3">Ver.3の三案と、現在の検証限界へ</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="downloads-section" id="resources" aria-labelledby="resources-title">
+      <div class="section">
+        <div class="section-heading"><p class="eyebrow">VERSION-SPECIFIC RESOURCES</p><h2 id="resources-title">同じ工程でも、資料と版を混ぜない。</h2><p>原本はGitHubの確定コミットへリンクしています。全CAD・STLをPagesへコピーせず、必要な版を選んで確認できる構成です。</p></div>
+        <div class="two-column">
+          <article class="download-card"><h3>Ver.1 · 構造を理解するための原典</h3><ul><li><a href="{{tree:STL/Ver.1}}">Ver.1のSTL一覧</a></li><li><a href="{{download:docs/テオヤンセン2Dv1.pdf}}">テオヤンセン2Dv1.pdf · 組立参考図</a></li><li><a href="{{download:docs/テオヤンセン2D図面最新.pdf}}">テオヤンセン2D図面最新.pdf · 詳細参考図</a></li><li><a href="https://youtu.be/Q7d0sq1SNJ0">組立イメージ動画</a></li><li><a href="https://www.youtube.com/watch?v=RxUTcOTfPt0">動作シミュレーション</a></li></ul><p>PDFはVer.1／参考用。すべての公差・部品番号・作業順を網羅する新しい組立設計図ではありません。</p></article>
+          <article class="download-card"><h3>Ver.2 · 改良点と公開された部品</h3><ul><li><a href="{{tree:STL/Ver.2}}">Ver.2のSTL一覧 · 分割風車・クランク・フックなど</a></li><li><a href="https://makerworld.com/ja/models/1971139-n-gundam-style-strandbeest-ver-2">原典にあるMakerWorld掲載ページ</a></li><li><a href="https://youtu.be/T3U7c1Mr3Y8">初回実物テスト</a></li><li><a href="https://youtu.be/JzXOxTJvHzw">紹介・再検証動画</a></li><li><a href="{{source:README_ja.md}}">改良の原文と比較資料</a></li></ul><p>専用の組立PDF・詳細な手順書は未整備です。Ver.1参考図をVer.2専用図面と表示していません。</p></article>
+        </div>
+        <div class="record-scope resource-limits"><h3>材料・倍率・編集可能なデータについて</h3><p>この製作ログにおける作者の使用材料はABS、倍率の記載は150%／脚160%。一方、<a href="{{source:STL/README.md}}">STLフォルダーの一般案内</a>にはPLA・PETGの推奨もあります。一般案内と個別製作の実績を区別し、すべての材料で同じ適合・強度を検証済みとは扱いません。<strong>Ver.3のSTLはmm・100%</strong>であり、旧版の拡大率は重ねません。</p><p><a href="{{tree:Fusion360}}">Fusion360フォルダー</a>にあるのはREADMEのみで、元の.f3dは公開されていません。このページはVer.2ネイティブCADを復元したものでも、設定済みのスライス／G-codeを追加したものでもありません。</p></div>
+      </div>
+    </section>
+    <section class="section sources-section" id="sources" aria-labelledby="sources-title">
+      <div><p class="eyebrow">SOURCES &amp; CREDITS</p><h2 id="sources-title">作者の記録から、次の読者へ。</h2></div>
+      <div><p>本文と画像の版対応は、公開済みの日本語・英語READMEを照合して整理しました。ファイル名中の「v2joint」「v4joint」は写真の版名として使わず、原典の比較表が示すVer.1／Ver.2に従っています。風車比較表に重複していたクランク写真は、風車の写真として転用していません。</p><p>掲載する実写真・Fusion 360レンダリング・形状表示は、このプロジェクトの既存公開メディアです。派生画像は縮小・必要範囲のトリミング・EXIF/XMP/ICC除去を行い、元写真は変更していません。塗装時の着用写真など、個人の外見を掲載し直す必要のない画像は使わず、工程を伝える部品・設備を選びました。</p><p>テオ・ヤンセン氏のストランビーストと、作者が挙げるνガンダムの配色・造形への着想を明示しています。本プロジェクトは個人の試作記録で、これらの公式製品や提携作品ではありません。原典の出典・利用条件は各リンクとリポジトリのLICENSEを確認してください。</p><div class="link-list"><a href="{{source:README_ja.md}}">日本語README · 製作過程とVer.2の比較</a><a href="{{source:README.md}}">English README · Build Process &amp; Review</a><a href="{{source:LICENSE}}">リポジトリのLICENSE</a><a href="{{source_tree}}">参照する確定コミット {{source_commit}}</a></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>Ver.1 / Ver.2 · 観察、試作、仕上げ、改良。</span></div><a href="#top">製作記録の先頭へ ↑</a><a href="index.html#versions">三つの版の紹介へ</a><a href="{{repository_url}}">GitHubリポジトリ ↗</a></footer>
+</body>
+</html>

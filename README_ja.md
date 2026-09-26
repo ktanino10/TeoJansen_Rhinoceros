@@ -559,3 +559,5 @@ Copilot を活用すると、開発スピードが向上するだけでなく、
 ここで実行した GD は**パラメトリック生成設計**です。Autodesk Generative Design、CFD、トポロジー最適化や実機試験を実行したとは称しません。Ver.3 の STL は **実寸 mm・100%**で、過去の 150% 設定を重ねません。Ver.2 の未提供ネイティブ CAD を復元したものでも、無加工の差替え部品でもありません。
 
 **作品紹介サイト：** [Ver.1・Ver.2・Ver.3の制作記録と資料をまとめて見る](https://ktanino10.github.io/TeoJansen_Rhinoceros/) — 実物写真と設計CGの区別、規定歩行動画、版ごとのダウンロードを掲載。Ver.3の実機未検証・接地目標未達の制限も併記しています。
+
+**写真でたどる製作記録：** [Ver.1の設計・出力・仕上げ・組立](https://ktanino10.github.io/TeoJansen_Rhinoceros/production.html#ver1) / [Ver.2への改良・完成写真・テスト](https://ktanino10.github.io/TeoJansen_Rhinoceros/production.html#ver2) — 本READMEの工程と版対応を整理し、各版6方向の実写真と参考図への導線をまとめています。未記録のVer.2専用工程やネイティブCADを復元したものではありません。
