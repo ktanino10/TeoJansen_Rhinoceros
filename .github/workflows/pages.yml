@@ -1,0 +1,86 @@
+name: Showcase Pages
+
+on:
+  pull_request:
+    paths:
+      - site/**
+      - .github/workflows/pages.yml
+      - README*.md
+      - docs/**
+      - FreeCAD/**
+      - STL/**
+      - Blender/**
+  push:
+    branches: [main]
+    paths:
+      - site/**
+      - .github/workflows/pages.yml
+      - README*.md
+      - docs/**
+      - FreeCAD/**
+      - STL/**
+      - Blender/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: showcase-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'pages' }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Build and browser checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install small site-only dependencies
+        run: |
+          python -m pip install --disable-pip-version-check -r site/requirements.txt
+          npm ci --prefix site --ignore-scripts
+          cd site
+          npx playwright install --with-deps chromium
+      - name: Build allowlisted static output
+        env:
+          SOURCE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python site/build.py --ref "$SOURCE_COMMIT"
+      - name: Check content, asset budget, metadata and links
+        run: npm --prefix site run test:static
+      - name: Check real desktop and mobile browsers
+        run: npm --prefix site test
+      - name: Upload only the validated Pages bundle
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: site/dist/TeoJansen_Rhinoceros
+          retention-days: 1
+
+  deploy:
+    name: Deploy verified showcase
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

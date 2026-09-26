@@ -33,3 +33,9 @@ $RECYCLE.BIN/
 # Ver.3 Python regeneration cache
 __pycache__/
 *.pyc
+
+# Showcase build and browser-test output
+site/dist/
+site/node_modules/
+site/test-results/
+site/playwright-report/

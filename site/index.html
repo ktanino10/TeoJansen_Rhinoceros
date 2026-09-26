@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="テオ・ヤンセン機構に着想を得たリノセウス。Ver.1・Ver.2の実物制作記録と、Ver.3の三つの比較設計、歩行可視化、CAD・STL・組立資料を紹介します。">
+  <title>リノセウス — 風と、試作と。Ver.1 / Ver.2 / Ver.3</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="リノセウス・ページ先頭">
+        <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="m4 28 12-20 13 20M4 28l19-13M16 8l-2 20M14 28h15" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="8" r="3" fill="currentColor"/><circle cx="14" cy="28" r="2.5" fill="currentColor"/></svg>
+        <span>RHINOCEROS<small>風で歩く仕組みの探究</small></span>
+      </a>
+      <nav aria-label="メインナビゲーション">
+        <a href="#ver1">Ver.1</a><a href="#ver2">Ver.2</a><a href="#ver3">Ver.3</a><a href="#downloads">資料・ダウンロード</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero section" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">A KINETIC SCULPTURE / MAKING NOTES</p>
+        <h1 id="hero-title">風と、試作と。<br><span>歩く仕組みをつくる。</span></h1>
+        <p class="intro">テオ・ヤンセンのストランビーストに着想を得た、3Dプリントの歩行模型「リノセウス」。形にする、動きを見直す、接合から考え直す。三つの版に、その試行錯誤を残しています。</p>
+        <div class="hero-actions"><a class="button primary" href="#versions">三つの版を見比べる <span aria-hidden="true">↓</span></a><a class="text-link" href="{{source:README_ja.md}}">制作記録の原文 ↗</a></div>
+        <p class="small-note"><strong>Ver.1 / Ver.2 は実物の制作記録。</strong><br>Ver.3 は比較検討用の設計・CGで、実機の風力歩行は未検証です。</p>
+      </div>
+      <div class="hero-visual">{{hero}}</div>
+    </section>
+
+    <section class="version-overview section" id="versions" aria-labelledby="versions-title">
+      <div class="section-heading"><p class="eyebrow">THE EVOLUTION</p><h2 id="versions-title">三つの版、三つの問い。</h2></div>
+      <div class="version-grid">
+        <a class="version-link" href="#ver1"><span class="version-number">01</span><span class="status-tag">実物・制作記録</span><h3>まず、形にする。</h3><p>六枚羽の風車、歯車、脚リンク。自分の手で機構をつくる。</p><span class="link-arrow">Ver.1を読む <span aria-hidden="true">↗</span></span></a>
+        <a class="version-link" href="#ver2"><span class="version-number">02</span><span class="status-tag">実物・改良記録</span><h3>動きから、見直す。</h3><p>風車・ギア比・軸の支持・フックを再検討し、試作を重ねる。</p><span class="link-arrow">Ver.2を読む <span aria-hidden="true">↗</span></span></a>
+        <a class="version-link concept" href="#ver3"><span class="version-number">03</span><span class="status-tag caution">比較設計・実機未検証</span><h3>力の伝わり方を、変える。</h3><p>金属軸と正係合。風車と減速の三案を、実CADと共通条件で比較。</p><span class="link-arrow">Ver.3を読む <span aria-hidden="true">↗</span></span></a>
+      </div>
+    </section>
+
+    <section class="chapter section" id="ver1" aria-labelledby="ver1-title">
+      <div class="chapter-heading"><span class="chapter-number" aria-hidden="true">01</span><div><p class="eyebrow">VER.1 / FIRST PROTOTYPE</p><h2 id="ver1-title">つくって初めて、分かったこと。</h2><p>Fusion 360で形を起こし、出力・研磨・塗装・組立まで進めた初期試作。</p></div></div>
+      <div class="story-grid">
+        {{v1_photo}}
+        <div class="story-copy">
+          <span class="status-tag">実物あり・過去の記録</span>
+          <h3>風車から、脚の動きへ。</h3>
+          <p>六枚羽型の風車と歯車、クランク、リンク機構で構成。観察した形をまず自分で再現し、メカニカルな外観にも工夫を加えました。</p>
+          <p>一方、制作記録には、風でうまく回らない、軸がぶれる、手で回すとフックなどが外れる課題が残っています。ギア比や支持の考え方を学び直すきっかけになりました。</p>
+          <ul class="feature-list"><li>初期の六枚羽型風車と歯車伝達</li><li>3Dプリント・表面仕上げ・塗装までの実物制作</li><li>トルク、軸支持、抜けるフックが次の改良課題</li></ul>
+          <div class="link-list"><a href="https://youtu.be/Q7d0sq1SNJ0">既存の組立動画をYouTubeで見る ↗</a><a href="https://www.youtube.com/watch?v=RxUTcOTfPt0">既存の動作シミュレーションを見る ↗</a><a href="https://youtu.be/Ic3GasmMlio">Ver.1のテスト記録を見る ↗</a></div>
+          <p class="small-note">外部動画はクリック時にYouTubeで開きます。ここでは動画を新規投稿せず、過去の記録を今回の実測結果とも扱っていません。</p>
+        </div>
+      </div>
+      <details class="image-detail"><summary>Ver.1の設計CGと実物の違いを見る</summary>{{v1_cg}}</details>
+      <div class="document-strip"><strong>Ver.1の原典</strong><a href="{{download:docs/テオヤンセン2Dv1.pdf}}">組立参考図PDF</a><a href="{{download:docs/テオヤンセン2D図面最新.pdf}}">詳細参考図PDF</a><a href="{{tree:STL/Ver.1}}">STL一覧</a></div>
+    </section>
+
+    <section class="chapter chapter-tinted" id="ver2" aria-labelledby="ver2-title">
+      <div class="section">
+        <div class="chapter-heading"><span class="chapter-number" aria-hidden="true">02</span><div><p class="eyebrow">VER.2 / LEARNING FROM MOTION</p><h2 id="ver2-title">風を受ける形、支える構造。</h2><p>動かなかった理由を、風車・伝達・支持・接続の四つから見直しました。</p></div></div>
+        <div class="story-grid reverse">
+          <div class="story-copy">
+            <span class="status-tag">実物あり・改良と動作の記録</span>
+            <h3>サボニウス型へ。ギアと支持も再設計。</h3>
+            <p>カップ形状の風車を採用し、ギア比と歯形、ステンレス棒を支える構造を改良。フックには力を受け止める面を設け、外れにくい接続を目指しました。</p>
+            <p>READMEには初動と紹介・再検証の映像が記録されています。ここでの説明は当時の制作記録の要約で、特定の風速・効率・寿命を新たに検証したものではありません。</p>
+            <div class="improvements"><div><strong>風車</strong><span>六枚羽 → カップ形状</span></div><div><strong>伝達</strong><span>ギア比・歯形を再検討</span></div><div><strong>支持</strong><span>軸のたわみとぶれへ対処</span></div><div><strong>接続</strong><span>フックに受け止め面を追加</span></div></div>
+            <div class="link-list"><a href="https://youtu.be/T3U7c1Mr3Y8">既存の初回動作テストを見る ↗</a><a href="https://youtu.be/JzXOxTJvHzw">既存の紹介・再検証動画を見る ↗</a><a href="https://makerworld.com/ja/models/1971139-n-gundam-style-strandbeest-ver-2">MakerWorldの既存掲載ページ ↗</a></div>
+          </div>
+          {{v2_photo}}
+        </div>
+        <aside class="bridge-note"><span class="eyebrow">NEXT QUESTION</span><h3>それでも残った「接合の滑り」。</h3><p>その後、風車・歯車と棒の接合が滑り、一体で回らなくなることや始動の難しさが報告されました。これがVer.3の出発点です。軸受の焼付きが確認された、と原因を置き換えてはいません。</p></aside>
+        <div class="document-strip"><strong>Ver.2の資料</strong><a href="{{tree:STL/Ver.2}}">STL一覧</a><a href="{{source:README_ja.md}}">改良の記録を読む</a><span>専用の組立PDF・詳細な手順書は未整備です。</span></div>
+      </div>
+    </section>
+
+    <section class="chapter section" id="ver3" aria-labelledby="ver3-title">
+      <div class="chapter-heading"><span class="chapter-number" aria-hidden="true">03</span><div><p class="eyebrow">VER.3 / THREE ENGINEERING CONCEPTS</p><h2 id="ver3-title">接合から考え直す、三つの案。</h2><p>実形状・共通条件・明示した限界。CGを、実機の完成と取り違えないために。</p></div></div>
+      <aside class="warning" aria-labelledby="ver3-warning"><h3 id="ver3-warning">Ver.3は比較設計です。実機の風力歩行は未検証です。</h3><p><strong>全3案で接地残差3 mm目標は未達。Bは名目条件でも入力トルクが不足。</strong> Cは組立・接合・抵抗測定の候補であって、風力で動く完成機としての推奨ではありません。部材強度、印刷公差、重心、転倒、悪い風車角での自己始動は確認待ちです。</p></aside>
+      {{comparison}}
+      <div class="principles"><div><span class="principle-index">01</span><h3>接着剤頼みの接合から</h3><p>金属REX軸の平面と金属ハブを形状で係合し、樹脂部品は実在する穴とボルトで結合。接着剤を主トルク経路にしません。</p></div><div><span class="principle-index">02</span><h3>抜け止め・支持・組立順まで</h3><p>軸端止め、内輪専用スペーサ、ベアリング、脱着ガードを具体化。キャリアを先に外す工具経路と、ねじの逃げも是正しました。</p></div><div><span class="principle-index">03</span><h3>一つの機械データから</h3><p>CAD、BOM、CG、規定歩行を同じ部品・寸法・配置へ結び付け、別コンテキストのAIレビューで4件を是正。人の有資格者による設計承認ではありません。</p></div></div>
+      <p class="small-note">以下の寸法・比率・質量・残差は <a href="{{source:docs/ver3/comparison.json}}">正規のcomparison.json</a> から生成しています。名目質量は全ソリッドCADと購入品の仮定／カタログ値の合計で、実測・スライサー質量ではありません。</p>
+      <div class="prototype-grid">{{design_cards}}</div>
+
+      <div class="contact-note"><h3>「前進する動画」と「実機で歩ける」は別です。</h3><p>本体の並進・姿勢は接地靴の形状と持続する材料点アンカーから求め、棒を伸縮させたり任意の前進速度を足したりしていません。ただし、規定入力と接地近似による可視化であり、風・摩擦・衝撃を含む接触動力学ではありません。</p><p>表示する残差は、総荷重の2%以上を受け持つ一つの継続区間内の最大水平偏差です。動画開始時の部分区間を含み、三周期の合計滑り量ではありません。近接足と負荷足は区別され、小さい正の支持余裕も実用安定を保証しません。</p><a href="{{source:docs/ver3/comparison.json}}">指標の定義・重心と風の感度を見る ↗</a></div>
+
+      <div class="gif-panel media">
+        <div><p class="eyebrow">AT A GLANCE</p><h3>三案の歩行をまとめて見る</h3><p>GIFは操作するまで読み込みません。自動再生しない静止プレビューです。</p><button class="button" id="gif-toggle" type="button" aria-controls="gif-preview" aria-pressed="false" data-animation="assets/walk_preview.gif" hidden>歩行GIFを再生（33秒・約2.9 MB）</button><p id="motion-preference" class="small-note" hidden>動きを減らす設定を尊重し、自動では再生しません。ボタンを押した場合だけ動きます。</p><p><a href="{{source:docs/ver3/media/walk_preview.gif}}">GIFをGitHubで開く ↗</a></p></div>
+        <div><img id="gif-preview" src="assets/comparison.webp" alt="Ver.3三案の静止比較。ボタン操作後は規定歩行のGIFを表示。" width="1280" height="720" loading="lazy"><p class="media-error" role="status" hidden>プレビューを読み込めませんでした。GitHubへのリンクをご利用ください。</p></div>
+      </div>
+
+      <div class="section-heading subsection-heading"><p class="eyebrow">DRIVE &amp; ASSEMBLY</p><h3>動かし方と、組み方を切り分ける。</h3></div>
+      <div class="two-column">{{operation}}{{exploded}}</div>
+      <div class="generation-block">
+        {{frame_c}}
+        <div><p class="eyebrow">PARAMETRIC GENERATIVE DESIGN</p><h3>必要な領域を残し、条件の中で探す。</h3><p>軸受・ボルト座の保存領域、風車と脚の可動域、他の貫通軸、印刷寸法を制約に、歯数・軸位置・リブ幅・厚さを実際に探索しました。</p><p>Cの同じ軸配置・荷重条件では、8 × 14 mmリブ候補から8 × 8 mm候補へ、<strong>部材加算体積の代理量が約{{generation_reduction}}%減少</strong>。変位の代理値は増えています。<strong>装置全体の質量がこの割合で減った、という意味ではありません。</strong></p><p>これはパラメトリック生成設計です。Autodesk Generative Design、CFD、連続体FEA、トポロジー最適化、実機試験を実施したとは称しません。</p><a href="{{source:docs/ver3/DESIGN_ja.md}}">探索条件・比較値・根拠を読む ↗</a></div>
+      </div>
+    </section>
+
+    <section class="downloads-section" id="downloads" aria-labelledby="downloads-title">
+      <div class="section">
+        <div class="section-heading"><p class="eyebrow">FILES &amp; SOURCES</p><h2 id="downloads-title">つくる前に、資料を確かめる。</h2><p>大きなCADファイルはGitHubへ直接リンクしています。版と用途を選んで保存してください。</p></div>
+        <div class="scale-warning"><strong>拡大率を混ぜないでください。</strong><p>Ver.1/2の過去の制作記録には150%（脚160%推奨）の指示があります。<strong>新しいVer.3のSTLはmm・100%</strong>です。過去の倍率を重ねず、まずフィット試験片と購入部品を照合してください。設定済みのスライス／G-codeは提供していません。</p></div>
+        <div class="two-column">
+          <article class="download-card"><h3>Ver.1 · 初期試作</h3><ul><li><a href="{{tree:STL/Ver.1}}">印刷部品 · STL一覧</a></li><li><a href="{{download:docs/テオヤンセン2Dv1.pdf}}">組立参考図 · PDF</a></li><li><a href="{{download:docs/テオヤンセン2D図面最新.pdf}}">詳細参考図 · PDF</a></li><li><a href="{{source:README_ja.md}}">原典の制作記録</a></li></ul><p>参考図と既存映像を併用する資料です。完全な工程別キットではありません。</p></article>
+          <article class="download-card"><h3>Ver.2 · 改良試作</h3><ul><li><a href="{{tree:STL/Ver.2}}">印刷部品 · STL一覧</a></li><li><a href="https://makerworld.com/ja/models/1971139-n-gundam-style-strandbeest-ver-2">MakerWorld既存ページ</a></li><li><a href="{{source:README_ja.md}}">改良内容と過去の動画</a></li></ul><p>専用図面PDFと詳細な番号付き手順書、編集可能な旧Fusionモデルは提供されていません。</p></article>
+        </div>
+        <h3 class="download-heading">Ver.3 · 実CADと比較検討資料</h3>
+        <div class="download-grid">{{download_cards}}</div>
+        <div class="shared-downloads">
+          <a href="{{source:docs/ver3/ASSEMBLY_ja.md}}">番号付き組立手順・ベンチ確認票</a>
+          <a href="{{source:docs/ver3/DESIGN_ja.md}}">設計・計算・再生成方法</a>
+          <a href="{{source:docs/ver3/REVIEW_ja.md}}">独立AIレビューと是正記録</a>
+          <a href="{{tree:docs/ver3/drawings}}">実断面・段別カバー型紙</a>
+          <a href="{{download:docs/ver3/comparison.csv}}">三案の比較CSV</a>
+          <a href="{{download:Blender/Ver.3/ver3_ABC.blend}}">Blenderネイティブ（約28.3 MB）</a>
+          <a href="{{tree:scripts/ver3}}">生成スクリプトと設定</a>
+          <a href="{{tree:docs/ver3/media}}">すべてのCG・GIF・MP4</a>
+        </div>
+        <p class="small-note">Ver.3はVer.2の無加工差替え部品ではありません。Aの最大フレームは256 mm境界に達し、造形面の余白・ブリムを保証しません。実物での滑りトルク、軸方向すきま、全周手回し、重心、転倒の確認が必要です。</p>
+      </div>
+    </section>
+
+    <section class="section sources-section" id="sources" aria-labelledby="sources-title">
+      <div><p class="eyebrow">ABOUT THIS RECORD</p><h2 id="sources-title">記録の出典と、まだ分からないこと。</h2></div>
+      <div><p>このサイトは、同じリポジトリの公開済みREADME・写真・CGと、是正済みVer.3の機械可読データを要約しています。Ver.1/2の実物記録とVer.3のデジタル確認は別の証拠です。写真の表示用派生にはトリミングとメタデータ除去を行い、原本は保持しています。</p><p>テオ・ヤンセン氏の機構から着想した個人の試作プロジェクトで、公式製品・玩具認証・有資格者による設計承認ではありません。第三者のCAD原本や無関係な作品をこのサイトへ再配布していません。素材の出典と利用条件はリポジトリの原典を確認してください。</p><div class="link-list"><a href="{{source:README_ja.md}}">日本語の原典README</a><a href="{{source:README.md}}">English README</a><a href="{{source:LICENSE}}">リポジトリのLICENSE</a><a href="{{source_tree}}">このサイトが参照する確定コミット {{source_commit}}</a></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>Ver.1 → Ver.2 → Ver.3 · つくる、見直す、記録する。</span></div><a href="#top">ページ先頭へ ↑</a><a href="{{repository_url}}">GitHubリポジトリ ↗</a></footer>
+</body>
+</html>

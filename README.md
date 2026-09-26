@@ -505,3 +505,5 @@ Under the common nominal friction assumptions, peak required input torques are a
 [Design, evidence and regeneration](./docs/ver3/DESIGN_ja.md) · [Assembly and bench checklist](./docs/ver3/ASSEMBLY_ja.md) · [Actual CAD sections](./docs/ver3/drawings) · [Comparison CSV](./docs/ver3/comparison.csv) · [Independent review](./docs/ver3/REVIEW_ja.md)
 
 “Generative Design” here means an **executed, reproducible parametric design-space search**, not Autodesk Generative Design, CFD, continuum FEA or topology optimization. Print Ver.3 STLs at **100% in millimetres**; do not reapply the historical 150% scaling. These are new concepts, not reconstructed native Ver.2 CAD or guaranteed drop-in replacements.
+
+**Project showcase:** [Explore Ver.1, Ver.2 and Ver.3](https://ktanino10.github.io/TeoJansen_Rhinoceros/) — a Japanese-language overview of the physical build records, explicitly labelled concept renders, prescribed walking videos and version-specific downloads. Ver.3's unvalidated physical performance and unmet contact targets remain prominent.
