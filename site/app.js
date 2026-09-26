@@ -52,40 +52,43 @@ for (const button of document.querySelectorAll(".video-toggle")) {
 
 const gifButton = document.getElementById("gif-toggle");
 const preview = document.getElementById("gif-preview");
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const stillImage = preview.getAttribute("src");
-const stillAlt = preview.getAttribute("alt");
+if (gifButton || preview) {
+  if (!gifButton || !preview) throw new Error("Incomplete GIF preview controls");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const stillImage = preview.getAttribute("src");
+  const stillAlt = preview.getAttribute("alt");
 
-function stopPreview() {
-  if (gifButton.getAttribute("aria-pressed") !== "true") return;
-  preview.src = stillImage;
-  preview.alt = stillAlt;
-  gifButton.setAttribute("aria-pressed", "false");
-  gifButton.textContent = "歩行GIFを再生（33秒・約2.9 MB）";
-}
-
-gifButton.hidden = false;
-gifButton.addEventListener("click", () => {
-  if (gifButton.getAttribute("aria-pressed") === "true") {
-    stopPreview();
-    return;
+  function stopPreview() {
+    if (gifButton.getAttribute("aria-pressed") !== "true") return;
+    preview.src = stillImage;
+    preview.alt = stillAlt;
+    gifButton.setAttribute("aria-pressed", "false");
+    gifButton.textContent = "歩行GIFを再生（33秒・約2.9 MB）";
   }
-  for (const video of videos) video.pause();
-  preview.src = gifButton.dataset.animation;
-  preview.alt = "Ver.3 A・B・Cの規定入力による歩行GIF。実機未検証、接触目標未達。";
-  gifButton.setAttribute("aria-pressed", "true");
-  gifButton.textContent = "GIFを停止して静止画に戻す";
-});
 
-function applyMotionPreference() {
-  document.getElementById("motion-preference").hidden = !reducedMotion.matches;
-  if (reducedMotion.matches) stopPreview();
-}
-applyMotionPreference();
-reducedMotion.addEventListener("change", applyMotionPreference);
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden) {
-    videos.forEach((video) => video.pause());
-    stopPreview();
+  gifButton.hidden = false;
+  gifButton.addEventListener("click", () => {
+    if (gifButton.getAttribute("aria-pressed") === "true") {
+      stopPreview();
+      return;
+    }
+    for (const video of videos) video.pause();
+    preview.src = gifButton.dataset.animation;
+    preview.alt = "Ver.3 A・B・Cの規定入力による歩行GIF。実機未検証、接触目標未達。";
+    gifButton.setAttribute("aria-pressed", "true");
+    gifButton.textContent = "GIFを停止して静止画に戻す";
+  });
+
+  function applyMotionPreference() {
+    document.getElementById("motion-preference").hidden = !reducedMotion.matches;
+    if (reducedMotion.matches) stopPreview();
   }
-});
+  applyMotionPreference();
+  reducedMotion.addEventListener("change", applyMotionPreference);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      videos.forEach((video) => video.pause());
+      stopPreview();
+    }
+  });
+}

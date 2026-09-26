@@ -21,6 +21,7 @@ REPOSITORY = "ktanino10/TeoJansen_Rhinoceros"
 SLUG = "TeoJansen_Rhinoceros"
 DEFAULT_OUTPUT = SITE / "dist" / SLUG
 MAX_BUNDLE_BYTES = 12_000_000
+PAGES = ("index.html", "production.html")
 IMAGES = {
     "hero": ("docs/images/テオヤンセンver2完成3.jpg", (320, 0, 1240, 1100), 1100),
     "v1-photo": ("docs/images/テオヤンセンver1完成1.jpg", (70, 0, 1240, 1090), 1050),
@@ -32,6 +33,35 @@ IMAGES = {
     "exploded": ("docs/ver3/media/exploded_A.png", None, 1000),
     **{f"hero-{i}": (f"docs/ver3/media/hero_{i}.png", None, 900) for i in "ABC"},
     **{f"walking-{i}": (f"docs/ver3/media/walking_{i}.png", None, 1000) for i in "ABC"},
+    "making-printer": ("docs/images/88187.jpg", (20, 0, 920, 1110), 700),
+    "making-sanding": ("docs/images/88075_0.jpg", (190, 210, 1450, 1050), 850),
+    "making-cleaning": ("docs/images/88073_0.jpg", (90, 170, 1080, 1380), 700),
+    "making-booth": ("docs/images/88072.jpg", (130, 100, 1350, 1020), 800),
+    "making-airbrush": ("docs/images/2339528.jpg", (400, 20, 3420, 2950), 800),
+    "making-paint-prep": ("docs/images/88208_0.jpg", (290, 25, 1360, 1090), 800),
+    "making-drying": ("docs/images/88089_0.jpg", (565, 30, 1310, 780), 700),
+    "making-finish": ("docs/images/88209_0.jpg", (135, 100, 1410, 1070), 850),
+    "making-decals": ("docs/images/88060_0.jpg", (210, 235, 1360, 1000), 800),
+    "making-topcoat": ("docs/images/88061_0.jpg", (130, 130, 1440, 1080), 800),
+    "making-finished-panels": ("docs/images/88059_0.jpg", (90, 270, 1400, 980), 800),
+    "v1-concept-angle": ("docs/images/テオヤンセン1.png", None, 800),
+    "v1-concept-side": ("docs/images/テオヤンセン3.png", None, 800),
+    **{f"v1-view-{i}": (f"docs/images/テオヤンセンver1完成{i}.jpg", None, 800) for i in range(2, 7)},
+    "v2-view-2": ("docs/images/テオヤンセンver2完成2.jpg", (285, 0, 1270, 1070), 800),
+    "v2-view-4": ("docs/images/テオヤンセンver2完成4.jpg", (295, 0, 1250, 1090), 800),
+    "v2-view-5": ("docs/images/テオヤンセンver2完成5.jpg", (395, 0, 1230, 1080), 800),
+    "v2-view-6": ("docs/images/テオヤンセンver2完成6.jpg", (275, 0, 1270, 1080), 800),
+    "gear-trial": ("docs/images/88476.jpg", (140, 100, 1000, 1240), 700),
+    "gear-prototypes": ("docs/images/87813.jpg", (0, 130, 1370, 1110), 850),
+    "turbines-real": ("docs/images/87816.jpg", (45, 205, 1215, 1090), 850),
+    "turbines-angle": ("docs/images/Wheel2.jpg", None, 800),
+    "turbines-top": ("docs/images/Wheel3.jpg", None, 650),
+    "hook-front": ("docs/images/hook.jpg", None, 400),
+    "hook-side": ("docs/images/hook2.jpg", None, 400),
+    "v1-drive-front": ("docs/images/テオヤンセンv2joint v32.png", None, 800),
+    "v1-drive-side": ("docs/images/テオヤンセンv2joint v322.png", None, 800),
+    "v2-drive-front": ("docs/images/テオヤンセンv4joint v15.1.png", None, 800),
+    "v2-drive-side": ("docs/images/テオヤンセンv4joint v15.png", None, 800),
 }
 COPIES = {
     **{f"walking_{i}.mp4": f"docs/ver3/media/walking_{i}.mp4" for i in "ABC"},
@@ -58,14 +88,26 @@ def link(kind: str, path: str, label: str, ref: str, classes: str = "") -> str:
     return f'<a class="{classes}" href="{escape(href, quote=True)}">{escape(label)}</a>'
 
 
+def display_image(name: str) -> Image.Image:
+    source, crop, width = IMAGES[name]
+    with Image.open(ROOT / source) as original:
+        oriented = ImageOps.exif_transpose(original)
+        if crop:
+            oriented = oriented.crop(crop)
+        oriented.thumbnail((width, width * 2), Image.Resampling.LANCZOS)
+        clean = Image.new("RGB", oriented.size, "#eee9dd")
+        if "A" in oriented.getbands():
+            clean.paste(oriented.convert("RGB"), mask=oriented.getchannel("A"))
+        else:
+            clean.paste(oriented.convert("RGB"))
+    return clean
+
+
 def image(name: str, alt: str, eager: bool = False) -> str:
     loading = "eager" if eager else "lazy"
     priority = ' fetchpriority="high"' if eager else ""
-    source, crop, limit = IMAGES[name]
-    with Image.open(ROOT / source) as original:
-        width, height = (crop[2] - crop[0], crop[3] - crop[1]) if crop else original.size
-    factor = min(1, limit / width, limit * 2 / height)
-    width, height = round(width * factor), round(height * factor)
+    with display_image(name) as photo:
+        width, height = photo.size
     return (f'<img src="assets/{name}.webp" alt="{escape(alt, quote=True)}" '
             f'width="{width}" height="{height}" loading="{loading}" decoding="async"{priority}>')
 
@@ -170,31 +212,39 @@ class DocumentLinks(HTMLParser):
 
 
 def validate(output: Path, manifest: dict) -> None:
-    parser = DocumentLinks()
-    text = (output / "index.html").read_text()
-    parser.feed(text)
-    if "{{" in text or "/Users/" in text:
-        raise ValueError("Unresolved template or private path in site")
-    for url in parser.links:
-        split = urlsplit(url)
-        if split.scheme or split.netloc:
-            if split.scheme != "https":
-                raise ValueError(f"Insecure or unsupported external link: {url}")
-            continue
-        if split.path.startswith("/"):
-            raise ValueError(f"Repository-subpath unsafe link: {url}")
-        if split.path and not (output / unquote(split.path)).is_file():
-            raise ValueError(f"Missing bundled asset: {url}")
-        if split.fragment and not split.path and split.fragment not in parser.ids:
-            raise ValueError(f"Missing anchor: {url}")
-    for tag, attrs in parser.elements:
-        if tag == "video" and not ({"controls", "playsinline"} <= attrs.keys()
-                                    and attrs.get("preload") == "none" and "autoplay" not in attrs):
-            raise ValueError("Video must be opt-in, accessible and not preload payloads")
-        if tag == "img" and not attrs.get("alt"):
-            raise ValueError("Every content image needs alt text")
+    output = output.resolve()
+    documents = {}
+    for name in PAGES:
+        text = (output / name).read_text()
+        if "{{" in text or "/Users/" in text or "file://" in text:
+            raise ValueError(f"Unresolved template or private path in {name}")
+        parser = DocumentLinks()
+        parser.feed(text)
+        documents[name] = parser
+    for name, parser in documents.items():
+        for url in parser.links:
+            split = urlsplit(url)
+            if split.scheme or split.netloc:
+                if split.scheme != "https":
+                    raise ValueError(f"Insecure or unsupported external link: {url}")
+                continue
+            target = (output / unquote(split.path or name)).resolve()
+            if split.path.startswith("/") or not target.is_relative_to(output):
+                raise ValueError(f"Repository-subpath unsafe link: {url}")
+            if not target.is_file():
+                raise ValueError(f"Missing bundled asset: {url}")
+            if split.fragment and target.suffix == ".html":
+                target_page = documents[str(target.relative_to(output))]
+                if unquote(split.fragment) not in target_page.ids:
+                    raise ValueError(f"Missing anchor in {name}: {url}")
+        for tag, attrs in parser.elements:
+            if tag == "video" and not ({"controls", "playsinline"} <= attrs.keys()
+                                        and attrs.get("preload") == "none" and "autoplay" not in attrs):
+                raise ValueError("Video must be opt-in, accessible and not preload payloads")
+            if tag == "img" and not (attrs.get("alt") and attrs.get("width") and attrs.get("height")):
+                raise ValueError("Every content image needs alt text and dimensions")
     actual = {str(path.relative_to(output)) for path in output.rglob("*") if path.is_file()}
-    expected = {"index.html", "styles.css", "app.js", "favicon.svg", ".nojekyll", "build-manifest.json",
+    expected = {*PAGES, "styles.css", "app.js", "favicon.svg", ".nojekyll", "build-manifest.json",
                 *manifest["assets"].keys()}
     if actual != expected:
         raise ValueError(f"Unexpected output files: {actual ^ expected}")
@@ -220,17 +270,8 @@ def build(output: Path, ref: str) -> dict:
         shutil.rmtree(output)
     (output / "assets").mkdir(parents=True)
     assets = {}
-    for name, (source, crop, width) in IMAGES.items():
-        with Image.open(ROOT / source) as original:
-            oriented = ImageOps.exif_transpose(original)
-            if crop:
-                oriented = oriented.crop(crop)
-            oriented.thumbnail((width, width * 2), Image.Resampling.LANCZOS)
-            clean = Image.new("RGB", oriented.size, "#eee9dd")
-            if "A" in oriented.getbands():
-                clean.paste(oriented.convert("RGB"), mask=oriented.getchannel("A"))
-            else:
-                clean.paste(oriented.convert("RGB"))
+    for name, (source, crop, _) in IMAGES.items():
+        with display_image(name) as clean:
             destination = output / "assets" / f"{name}.webp"
             clean.save(destination, "WEBP", quality=88, method=6)
             assets[f"assets/{name}.webp"] = {"source": source, "source_sha256": sha256(ROOT / source),
@@ -250,7 +291,6 @@ def build(output: Path, ref: str) -> dict:
     selected = records[2]["design"]["structure"]
     baseline = next(t for t in trials if t["plate_thickness_mm"] == 8 and t["rib_width_mm"] == 14)
     reduction = 100 * (1 - selected["volume_proxy_mm3"] / baseline["volume_proxy_mm3"])
-    html = (SITE / "index.html").read_text()
     replacements = {
         "{{hero}}": figure("hero", "サボニウス型風車を備えたVer.2の実物。白いフレームと黒い足を持つ歩行模型。", "Ver.2 · 実物の制作記録（表示用トリミング）", ref, True),
         "{{v1_photo}}": figure("v1-photo", "六枚羽の風車を備えたVer.1実物の斜めからの写真。", "Ver.1 · 実物の完成写真", ref),
@@ -267,15 +307,19 @@ def build(output: Path, ref: str) -> dict:
         "{{repository_url}}": f"https://github.com/{REPOSITORY}",
         "{{source_tree}}": f"https://github.com/{REPOSITORY}/tree/{ref}",
     }
-    for token, value in replacements.items():
-        html = html.replace(token, value)
-    html = re.sub(r"\{\{(source|tree|download):([^}]+)\}\}",
-                  lambda match: escape(source_url(match[1], match[2], ref), quote=True), html)
-    (output / "index.html").write_text(html)
+    for name in PAGES:
+        html = (SITE / name).read_text()
+        for token, value in replacements.items():
+            html = html.replace(token, value)
+        html = re.sub(r"\{\{figure:([\w-]+)\|([^|{}]+)\|([^|{}]+)\}\}",
+                      lambda match: figure(match[1], match[2], match[3], ref), html)
+        html = re.sub(r"\{\{(source|tree|download):([^}]+)\}\}",
+                      lambda match: escape(source_url(match[1], match[2], ref), quote=True), html)
+        (output / name).write_text(html)
     for name in ("styles.css", "app.js", "favicon.svg"):
         shutil.copyfile(SITE / name, output / name)
     (output / ".nojekyll").write_text("")
-    manifest = {"schema": 1, "repository": REPOSITORY, "source_commit": ref,
+    manifest = {"schema": 1, "repository": REPOSITORY, "source_commit": ref, "pages": list(PAGES),
                 "repository_subpath": f"/{SLUG}/",
                 "comparison_sha256": sha256(ROOT / "docs/ver3/comparison.json"),
                 "assets": assets, "bundle_budget_bytes": MAX_BUNDLE_BYTES,
