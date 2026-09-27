@@ -712,7 +712,7 @@ def run(output, optimize_only=False):
         "sourceCommit": commit, "sourceCommitContainsInputs": contained,
         "sourceHashes": source_hashes,
         "previousManifestSha256": sha(R2/"manifest.json"),
-        "artifactHashes": {str((OUT/p.name).relative_to(ROOT)): sha(p) for p in output.iterdir()
+        "artifactHashes": {str((OUT/p.name).relative_to(ROOT)): sha(p) for p in sorted(output.iterdir())
                            if p.is_file() and p.name != "manifest.json"},
         "geometryStatus": "skeleton_and_member_calculation_only", "qualifiedPrototypeCount": 0,
         "siteMappingToFirstCutCadPermitted": False, "figures": figures,
