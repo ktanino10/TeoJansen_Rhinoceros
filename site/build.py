@@ -22,7 +22,7 @@ SLUG = "TeoJansen_Rhinoceros"
 DEFAULT_OUTPUT = SITE / "dist" / SLUG
 MAX_BUNDLE_BYTES = 30_000_000
 MAX_STATIC_BYTES = 12_000_000
-PAGES = ("index.html", "production.html", "comparison.html", "viewer.html")
+PAGES = ("index.html", "production.html", "comparison.html", "viewer.html", "calculations.html")
 IMAGES = {
     "hero": ("docs/images/テオヤンセンver2完成3.jpg", (320, 0, 1240, 1100), 1100),
     "v1-photo": ("docs/images/テオヤンセンver1完成1.jpg", (70, 0, 1240, 1090), 1050),
@@ -246,7 +246,8 @@ def validate(output: Path, manifest: dict) -> None:
             if tag == "img" and not (attrs.get("alt") and attrs.get("width") and attrs.get("height")):
                 raise ValueError("Every content image needs alt text and dimensions")
     actual = {str(path.relative_to(output)) for path in output.rglob("*") if path.is_file()}
-    expected = {*PAGES, "styles.css", "viewer.css", "app.js", "viewer-loader.js", "favicon.svg", ".nojekyll", "build-manifest.json",
+    expected = {*PAGES, "styles.css", "viewer.css", "calculations.css", "app.js", "viewer-loader.js", "calculations.js",
+                "favicon.svg", ".nojekyll", "build-manifest.json",
                 *manifest["assets"].keys()}
     if actual != expected:
         raise ValueError(f"Unexpected output files: {actual ^ expected}")
@@ -260,9 +261,13 @@ def validate(output: Path, manifest: dict) -> None:
             with Image.open(path) as photo:
                 if photo.getexif() or any(key in photo.info for key in ("exif", "xmp", "icc_profile")):
                     raise ValueError(f"Display derivative retained metadata: {name}")
+        if path.suffix == ".svg":
+            from calculation_data import svg_dimensions
+            svg_dimensions(path.read_bytes())
 
 
 def build(output: Path, ref: str) -> dict:
+    from calculation_data import build_calculations
     from viewer_data import build_viewer, static_guides
 
     if not re.fullmatch(r"[0-9a-f]{40}", ref):
@@ -291,6 +296,8 @@ def build(output: Path, ref: str) -> dict:
                                    "sha256": sha256(destination), "source_sha256": sha256(ROOT / source)}
     guides, viewer_assets, viewer_source = build_viewer(output)
     assets.update(viewer_assets)
+    calculation_html, calculation_assets, calculation_source = build_calculations(output)
+    assets.update(calculation_assets)
     subprocess.run(["node", str(SITE / "build-viewer.mjs"), str(output)], cwd=ROOT, check=True)
     for name, original in (("viewer-engine.js", "site/viewer.js"),
                            ("three-LICENSE.txt", "site/node_modules/three/LICENSE")):
@@ -306,6 +313,7 @@ def build(output: Path, ref: str) -> dict:
     baseline = next(t for t in trials if t["plate_thickness_mm"] == 8 and t["rib_width_mm"] == 14)
     reduction = 100 * (1 - selected["volume_proxy_mm3"] / baseline["volume_proxy_mm3"])
     replacements = {
+        **calculation_html,
         "{{hero}}": figure("hero", "サボニウス型風車を備えたVer.2の実物。白いフレームと黒い足を持つ歩行模型。", "Ver.2 · 実物の制作記録（表示用トリミング）", ref, True),
         "{{v1_photo}}": figure("v1-photo", "六枚羽の風車を備えたVer.1実物の斜めからの写真。", "Ver.1 · 実物の完成写真", ref),
         "{{v1_cg}}": figure("v1-cg", "Ver.1設計CG。屋外の背景を使ったレンダリングで、実物の屋外撮影ではない。", "Ver.1 · Fusion 360設計CG／実物写真ではありません", ref),
@@ -342,7 +350,7 @@ def build(output: Path, ref: str) -> dict:
         html = re.sub(r"\{\{(source|tree|download):([^}]+)\}\}",
                       lambda match: escape(source_url(match[1], match[2], ref), quote=True), html)
         (output / name).write_text(html)
-    for name in ("styles.css", "viewer.css", "app.js", "viewer-loader.js", "favicon.svg"):
+    for name in ("styles.css", "viewer.css", "calculations.css", "app.js", "viewer-loader.js", "calculations.js", "favicon.svg"):
         shutil.copyfile(SITE / name, output / name)
     (output / ".nojekyll").write_text("")
     manifest = {"schema": 1, "repository": REPOSITORY, "source_commit": ref, "pages": list(PAGES),
@@ -351,6 +359,7 @@ def build(output: Path, ref: str) -> dict:
                 "assets": assets, "bundle_budget_bytes": MAX_BUNDLE_BYTES,
                 "static_budget_bytes": MAX_STATIC_BYTES, "on_demand_3d_budget_bytes": 18_000_000,
                 "engineering_source": viewer_source,
+                "calculation_source": calculation_source,
                 "note": "Only selected display derivatives and existing media are deployed. Exact-mesh GLBs are opt-in display data; native CAD/STL/BOM downloads remain on GitHub."}
     (output / "build-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     validate(output, manifest)
