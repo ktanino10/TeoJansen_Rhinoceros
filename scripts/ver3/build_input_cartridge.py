@@ -532,7 +532,9 @@ def export(a, report):
     a.doc.saveAs(str(temporary))
     temporary.replace(native)
     features = [o for o in a.doc.Objects if o.TypeId == "Part::Feature"]
-    Part.export(features, str(CAD/"CommonInputR4.step"))
+    step_path = CAD/"CommonInputR4.step"
+    Part.export(features, str(step_path))
+    step_path.write_text("\n".join(line.rstrip() for line in step_path.read_text().splitlines())+"\n")
     meshes, definitions, printed_mass = {}, {}, 0.0
     for pid, d in a.defs.items():
         vertices, faces = d["shape"].tessellate(0.10)
