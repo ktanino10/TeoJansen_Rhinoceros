@@ -1,0 +1,2053 @@
+{
+  "revisionId": "v3-common-input-r4-01",
+  "id": "COMMON_INPUT_R4",
+  "units": "mm",
+  "coordinates": "X shaft, Y lateral, Z up; row-major rigid transforms, no scale",
+  "design": {
+    "revisionId": "v3-common-input-r4-01",
+    "researchBaseCommit": "a7bffb47fbdb4e278c26edeb899bd7ef6c4e41d4",
+    "scope": "One common input cartridge; no rotor, gearbox or walking mechanism. Not a manufacturing or low-drag certification.",
+    "checkedDateJst": "2026-09-27",
+    "layout": {
+      "shaftLengthMm": 120,
+      "axisHeightMm": 30,
+      "fixedBearingStartMm": 14,
+      "floatingBearingStartMm": 94,
+      "bearingWidthMm": 5,
+      "bearingBodyDiameterMm": 14,
+      "bearingFlangeDiameterMm": 15,
+      "bearingFlangeThicknessMm": 1,
+      "bearingSeatDiameterMm": 14.2,
+      "flangePocketDiameterMm": 15.2,
+      "fixedHolderStartMm": 13.7,
+      "fixedHolderEndMm": 22,
+      "fixedFlangeShoulderMm": 15,
+      "fixedBodyBoreEndMm": 19.2,
+      "floatHolderStartMm": 91,
+      "floatHolderEndMm": 100,
+      "floatBodyBoreStartMm": 92.8,
+      "floatFlangePocketStartMm": 97,
+      "retainerCentralBoreMm": 10.2,
+      "coverThicknessMm": 3,
+      "coverBoltHalfPitchMm": 18,
+      "coverBoltBoreMm": 4.5,
+      "baseRailWidthMm": 6,
+      "baseRailThicknessMm": 4,
+      "baseRailHalfPitchMm": 18,
+      "holderLegWidthMm": 8,
+      "holderBossRadiusMm": 6,
+      "bearingBossRadiusMm": 12,
+      "mountingHoleDiameterMm": 4.5,
+      "mountingXmm": [
+        6,
+        114
+      ],
+      "mountingYmm": [
+        -18,
+        18
+      ],
+      "outerCollarBossFaceMm": 9.9,
+      "innerCollarBossFaceMm": 23.1,
+      "outerSpacerStartMm": 10,
+      "innerSpacerStartMm": 19,
+      "spacerLengthMm": 4,
+      "spacerReferenceInnerDiameterMm": 6.05,
+      "spacerReferenceOuterDiameterMm": 7.95,
+      "hubBodyStartMm": 35,
+      "hubBodyWidthMm": 8,
+      "hubPilotLengthMm": 2,
+      "hubPilotDiameterMm": 14,
+      "hubFlatNormalAngleDeg": 45,
+      "shaftFlatFromCenterMm": 2.5,
+      "referenceClampedHubFlatFromCenterMm": 2.48,
+      "hubHoleSquareMm": 16,
+      "flangeDiameterMm": 40,
+      "flangeThicknessMm": 4,
+      "flangePilotBoreMm": 14.3,
+      "flangePilotDepthMm": 2.15,
+      "flangeShaftBoreMm": 6.5,
+      "flangeBoltBoreMm": 4.5,
+      "washerThicknessMm": 1,
+      "washerInnerDiameterMm": 4,
+      "washerOuterDiameterMm": 8,
+      "locknutEnvelopeHeightMm": 5.2,
+      "locknutAcrossFlatsMm": 7,
+      "capsScrewLengthMm": 20,
+      "flangeScrewLengthMm": 12
+    },
+    "acceptanceScenarios": {
+      "kind": "design acceptance limits to check on the actual purchased/printed parts; NOT supplier guaranteed tolerances",
+      "fixedPocketDepthErrorMm": [
+        -0.1,
+        0.1
+      ],
+      "flangeThicknessErrorMm": [
+        -0.05,
+        0.05
+      ],
+      "floatingPocketLengthErrorMm": [
+        -0.1,
+        0.1
+      ],
+      "collarGapTotalMm": [
+        0.1,
+        0.3
+      ],
+      "supportSpacingErrorMm": [
+        -0.2,
+        0.2
+      ],
+      "additionalAxialThermalOrHousingDeflectionBudgetMm": 0.05,
+      "capCompressionAllowanceMm": 0.05,
+      "minimumVerifiedRadialRunningClearanceMm": 0.15,
+      "minimumThreadProjectionMm": 0.7,
+      "printerEnvelopeStudyMm": [
+        230,
+        230,
+        230
+      ],
+      "fitCouponDiametersMm": [
+        14.0,
+        14.15,
+        14.3,
+        14.45
+      ],
+      "productionAllowedWithoutFitMeasurement": false,
+      "note": "Caps seat on separate printed lands, not the bearing face. Collar screws clamp onto the shaft; they are not axial preload adjusters. Right outer ring has explicit float travel; the left collars bracket only the locating bearing."
+    },
+    "materials": {
+      "printedMaterial": "PETG suggested, not selected or tested; solid density input retained separately from FDM stiffness",
+      "printedDensityGPerCm3": 1.27,
+      "printedElasticModulusMpaCases": [
+        800,
+        1700,
+        2600
+      ],
+      "steelElasticModulusMpa": 193000,
+      "steelShearModulusMpa": 74000,
+      "filamentPriceJpyPerKgAssumptions": [
+        2000,
+        3000,
+        4000
+      ],
+      "supportWasteFactorAssumption": 1.2,
+      "mechanicalPropertyEvidence": "screening assumptions, not measured anisotropic printed-part properties"
+    },
+    "parts": [
+      {
+        "id": "H_SHAFT",
+        "sku": "2101-0006-0120",
+        "quantity": 1,
+        "massG": 25,
+        "pack": 1,
+        "packPriceUsd": 4.69,
+        "url": "https://www.gobilda.com/2101-series-stainless-steel-d-shaft-6mm-diameter-120mm-length/",
+        "spec": "Ready-length120mm stainless6mmD shaft,5.5mm flat-to-opposite; no cut,drill,tap"
+      },
+      {
+        "id": "H_BEARING",
+        "sku": "1611-0514-0006",
+        "quantity": 2,
+        "massG": 3,
+        "pack": 2,
+        "packPriceUsd": 3.99,
+        "url": "https://www.gobilda.com/1611-series-flanged-ball-bearing-6mm-id-x-14mm-od-5mm-thickness-2-pack/",
+        "spec": "6x14x5 high-carbon-steel flanged bearing,flange15x1; grease/drag not specified"
+      },
+      {
+        "id": "H_COLLAR",
+        "sku": "2910-0919-0006",
+        "quantity": 2,
+        "massG": 7,
+        "pack": 1,
+        "packPriceUsd": 4.49,
+        "url": "https://www.gobilda.com/2910-series-aluminum-clamping-collar-6mm-id-x-19mm-od-9mm-length/",
+        "spec": "6mm clamp collar,19mm body,9mm body length,9mm boss x0.5; included clamp screw"
+      },
+      {
+        "id": "H_HUB",
+        "sku": "1309-0016-1006",
+        "quantity": 1,
+        "massG": 14,
+        "pack": 1,
+        "packPriceUsd": 7.99,
+        "url": "https://www.gobilda.com/1309-series-sonic-hub-6mm-d-bore/",
+        "spec": "Metal6mmD hub,16mm-square M4 holes,14x2 pilot; two included pinch bolts"
+      },
+      {
+        "id": "H_SPACER",
+        "sku": "1521-0008-0040",
+        "quantity": 2,
+        "massG": 0.64,
+        "pack": 4,
+        "packPriceUsd": 2.49,
+        "url": "https://www.gobilda.com/1521-series-6mm-id-spacer-8mm-od-4mm-length-4-pack/",
+        "spec": "Zinc steel6ID/8ODx4 stock spacer; reference CAD6.05/7.95"
+      },
+      {
+        "id": "H_BOLT12",
+        "sku": "2800-0004-0012",
+        "quantity": 4,
+        "massG": 2.0,
+        "pack": 25,
+        "packPriceUsd": 3.59,
+        "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-12mm-length/",
+        "spec": "M4x0.7x12 socket-head zinc steel,3mm hex"
+      },
+      {
+        "id": "H_BOLT20",
+        "sku": "2800-0004-0020",
+        "quantity": 4,
+        "massG": 2.6,
+        "pack": 25,
+        "packPriceUsd": 3.99,
+        "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-20mm-length-25-pack/",
+        "spec": "M4x0.7x20 socket-head zinc steel,3mm hex"
+      },
+      {
+        "id": "H_WASHER",
+        "sku": "2801-0004-0008",
+        "quantity": 12,
+        "massG": 0.29,
+        "pack": 25,
+        "packPriceUsd": 1.99,
+        "url": "https://www.gobilda.com/2801-series-zinc-plated-steel-washer-4mm-id-x-8mm-od/",
+        "spec": "4IDx8ODx1 zinc-steel washer; thickness from exact vendor CAD"
+      },
+      {
+        "id": "H_LOCKNUT",
+        "sku": "2812-0004-0007",
+        "quantity": 4,
+        "massG": 0.78,
+        "pack": 25,
+        "packPriceUsd": 2.99,
+        "url": "https://www.gobilda.com/m4-x-0-7mm-nylock-nut/",
+        "spec": "M4x0.7 nylock,7mm hex,zinc steel;5.2mm conservative reference envelope"
+      }
+    ],
+    "procurement": {
+      "jpyPerUsdAssumptions": [
+        140,
+        160,
+        180
+      ],
+      "stock": "manufacturer page/Offer InStock or current purchase options observed; no reservation/delivery guarantee",
+      "shippingJpy": null,
+      "importTaxJpy": null,
+      "paymentFeesJpy": null,
+      "machineMountingFasteners": "not part of cartridge; base has4 mounting holes but external substrate/bolts must be specified before operation",
+      "oneCartridgeOnly": true,
+      "wholeMachineBudgetJpy": 20000,
+      "wholeMachineBudgetStatus": "UNKNOWN",
+      "historicalFourSkuSubtotalUsd": 25.65,
+      "historicalFourSkuCatalogueMassG": 59,
+      "hubMassDiscrepancy": "current product page14g vs linked spec-sheet9.6g. Keep14g as recorded purchased-assembly reference; body/bolt or revision explanation not verified."
+    },
+    "compatibility": {
+      "hubShaftManufacturerSpecified": true,
+      "manufacturerStatement": "Made for6mm D-shaft; two pinch bolts; releases grip for disassembly",
+      "numericFitTolerancePublished": null,
+      "referenceCadClampStateSpecified": null,
+      "referenceFlatOverlapMm3": 0.6687235528789128,
+      "action": "do not scale either vendor solid; distinguish specified pair from untested physical fit/clamp torque",
+      "vendorCadRedistributed": false
+    },
+    "loadScreen": {
+      "radialLoadN": 2,
+      "radialLoadXmm": 67,
+      "appliedInputTorqueNmm": 12,
+      "axialStopScreenLoadN": 1,
+      "source": "rounded screening envelope around R3 maximum rotor weight+air force and high input target; not a permitted test load or measured rating",
+      "bearingStartTorqueNmmEachSensitivity": [
+        0.1,
+        0.3,
+        1.0
+      ],
+      "catalogueBearingStartTorqueNmm": null,
+      "catalogueBearingRunningTorqueNmm": null,
+      "physicalMeasurement": null
+    }
+  },
+  "parts": {
+    "P_CARRIER": {
+      "category": "printed",
+      "description": "One-piece rail carrier; locating flange clearance0.30mm and separate floating flange groove2mm travel. Horizontal bearing seats require fit coupon and inspection.",
+      "mass_g": 29.534846874552965,
+      "mass_basis": "original CAD solid volume x assumed PETG density; not sliced/measured",
+      "solid_volume_mm3": 23255.784940592886,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        58.50166721077738,
+        8.444953058595183e-16,
+        15.748752319794269
+      ]
+    },
+    "P_CAP": {
+      "category": "printed",
+      "description": "3mm cover,central10.2 bore; bolts land on carrier,not bearing. No clamping contact with inner ring.",
+      "mass_g": 2.3182368732633267,
+      "mass_basis": "original CAD solid volume x assumed PETG density; not sliced/measured",
+      "solid_volume_mm3": 1825.383364774273,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        -2.491242988525307e-15,
+        1.1867899753741785e-15,
+        1.5
+      ]
+    },
+    "P_FLANGE": {
+      "category": "printed",
+      "description": "Original40mm test flange4mm thick;14.3x2.15 pilot pocket,M4 four-hole16mm square. Index flat; no load hook or wind rotor.",
+      "mass_g": 5.524400484869501,
+      "mass_basis": "original CAD solid volume x assumed PETG density; not sliced/measured",
+      "solid_volume_mm3": 4349.9216416295285,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        -0.06927327849989838,
+        3.239722238381269e-16,
+        2.0582567936181135
+      ]
+    },
+    "Q_BEARING_FIT": {
+      "category": "printed",
+      "description": "Quantity0 coupon;14.0/14.15/14.3/14.45mm seats;100% scale only.",
+      "mass_g": 12.921493430679634,
+      "mass_basis": "original CAD solid volume x assumed PETG density; not sliced/measured",
+      "solid_volume_mm3": 10174.404276125697,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        43.970955789720804,
+        12.043344061040974,
+        3.4672112981903984
+      ]
+    },
+    "H_SHAFT": {
+      "category": "purchased",
+      "description": "2101-0006-0120: Ready-length120mm stainless6mmD shaft,5.5mm flat-to-opposite; no cut,drill,tap",
+      "mass_g": 25,
+      "mass_basis": "catalogue purchased assembly",
+      "solid_volume_mm3": 3257.873397496557,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        -0.07918443576982712,
+        -0.07918443576982896,
+        60.0
+      ]
+    },
+    "H_BEARING": {
+      "category": "purchased",
+      "description": "1611-0514-0006: 6x14x5 high-carbon-steel flanged bearing,flange15x1; grease/drag not specified",
+      "mass_g": 3,
+      "mass_basis": "catalogue purchased assembly",
+      "solid_volume_mm3": 345.7668698874507,
+      "solids": 4,
+      "local_center_of_mass_mm": [
+        4.2127014909853626e-16,
+        5.202964707081897e-16,
+        2.631745107597729
+      ]
+    },
+    "H_COLLAR": {
+      "category": "purchased",
+      "description": "2910-0919-0006: 6mm clamp collar,19mm body,9mm body length,9mm boss x0.5; included clamp screw",
+      "mass_g": 7,
+      "mass_basis": "catalogue purchased assembly",
+      "solid_volume_mm3": 2379.723582483255,
+      "solids": 2,
+      "local_center_of_mass_mm": [
+        -0.3383149014707584,
+        0.11966376676561213,
+        -4.966988681148148
+      ]
+    },
+    "H_HUB": {
+      "category": "purchased",
+      "description": "1309-0016-1006: Metal6mmD hub,16mm-square M4 holes,14x2 pilot; two included pinch bolts",
+      "mass_g": 14,
+      "mass_basis": "catalogue purchased assembly",
+      "solid_volume_mm3": 6299.129738069176,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        0.0035998884464853373,
+        0.003599888446483241,
+        4.133518812979108
+      ]
+    },
+    "H_SPACER": {
+      "category": "purchased",
+      "description": "1521-0008-0040: Zinc steel6ID/8ODx4 stock spacer; reference CAD6.05/7.95",
+      "mass_g": 0.64,
+      "mass_basis": "catalogue purchased assembly",
+      "solid_volume_mm3": 83.56636458548849,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        7.652462391491169e-16,
+        2.426587300818984e-16,
+        2.000000000000001
+      ]
+    },
+    "H_BOLT12": {
+      "category": "purchased",
+      "description": "2800-0004-0012: M4x0.7x12 socket-head zinc steel,3mm hex",
+      "mass_g": 2.0,
+      "mass_basis": "catalogue purchased assembly",
+      "solid_volume_mm3": 289.14603013008997,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        1.1614977552969019e-17,
+        6.182596533293977e-17,
+        2.2260999941684387
+      ]
+    },
+    "H_BOLT20": {
+      "category": "purchased",
+      "description": "2800-0004-0020: M4x0.7x20 socket-head zinc steel,3mm hex",
+      "mass_g": 2.6,
+      "mass_basis": "catalogue purchased assembly",
+      "solid_volume_mm3": 389.6769950449633,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        4.1454192096795735e-17,
+        6.632895049581613e-17,
+        5.7795647247909185
+      ]
+    },
+    "H_WASHER": {
+      "category": "purchased",
+      "description": "2801-0004-0008: 4IDx8ODx1 zinc-steel washer; thickness from exact vendor CAD",
+      "mass_g": 0.29,
+      "mass_basis": "catalogue purchased assembly",
+      "solid_volume_mm3": 37.699111843077524,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        3.180554681463516e-16,
+        2.1124810819980677e-16,
+        0.5000000000000001
+      ]
+    },
+    "H_LOCKNUT": {
+      "category": "purchased",
+      "description": "2812-0004-0007: M4x0.7 nylock,7mm hex,zinc steel;5.2mm conservative reference envelope",
+      "mass_g": 0.78,
+      "mass_basis": "catalogue purchased assembly",
+      "solid_volume_mm3": 176.18774568740432,
+      "solids": 1,
+      "local_center_of_mass_mm": [
+        -6.175336201094467e-17,
+        1.0473067376695821e-16,
+        2.6
+      ]
+    }
+  },
+  "instances": [
+    {
+      "name": "CARRIER",
+      "part_id": "P_CARRIER",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "group": "carrier",
+      "rotating": false
+    },
+    {
+      "name": "BEARING_LOC",
+      "part_id": "H_BEARING",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          19
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_support",
+      "rotating": false
+    },
+    {
+      "name": "BEARING_FLOAT",
+      "part_id": "H_BEARING",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          94
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "floating_support",
+      "rotating": false
+    },
+    {
+      "name": "CAP_LOC",
+      "part_id": "P_CAP",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          10.7
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_support",
+      "rotating": false
+    },
+    {
+      "name": "CAP_FLOAT",
+      "part_id": "P_CAP",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          100
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "floating_support",
+      "rotating": false
+    },
+    {
+      "name": "SCREW_LOC_N",
+      "part_id": "H_BOLT20",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          9.7
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          -18
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "HEAD_WASHER_LOC_N",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          9.7
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          -18
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "NUT_WASHER_LOC_N",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          22
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          -18
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "NUT_LOC_N",
+      "part_id": "H_LOCKNUT",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          23
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          -18
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "SCREW_LOC_P",
+      "part_id": "H_BOLT20",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          9.7
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          18
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "HEAD_WASHER_LOC_P",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          9.7
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          18
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "NUT_WASHER_LOC_P",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          22
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          18
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "NUT_LOC_P",
+      "part_id": "H_LOCKNUT",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          23
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          18
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "SCREW_FLOAT_N",
+      "part_id": "H_BOLT20",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          104
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          -18
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "floating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "HEAD_WASHER_FLOAT_N",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          104
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          -18
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "floating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "NUT_WASHER_FLOAT_N",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          91
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          -18
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "floating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "NUT_FLOAT_N",
+      "part_id": "H_LOCKNUT",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          90
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          -18
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "floating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "SCREW_FLOAT_P",
+      "part_id": "H_BOLT20",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          104
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          18
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "floating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "HEAD_WASHER_FLOAT_P",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          104
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          18
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "floating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "NUT_WASHER_FLOAT_P",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          91
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          18
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "floating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "NUT_FLOAT_P",
+      "part_id": "H_LOCKNUT",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          90
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          18
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "floating_fasteners",
+      "rotating": false
+    },
+    {
+      "name": "SHAFT",
+      "part_id": "H_SHAFT",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "shaft",
+      "rotating": true
+    },
+    {
+      "name": "SPACER_OUT",
+      "part_id": "H_SPACER",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          10
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_rotating",
+      "rotating": true
+    },
+    {
+      "name": "SPACER_IN",
+      "part_id": "H_SPACER",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          19
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_rotating",
+      "rotating": true
+    },
+    {
+      "name": "COLLAR_OUT",
+      "part_id": "H_COLLAR",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          9.9
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_rotating",
+      "rotating": true
+    },
+    {
+      "name": "COLLAR_IN",
+      "part_id": "H_COLLAR",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          23.1
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "locating_rotating",
+      "rotating": true
+    },
+    {
+      "name": "D_HUB",
+      "part_id": "H_HUB",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          35
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "flange_unit",
+      "rotating": true
+    },
+    {
+      "name": "TEST_FLANGE",
+      "part_id": "P_FLANGE",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          43
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "flange_unit",
+      "rotating": true
+    },
+    {
+      "name": "FLANGE_WASHER_0",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          47
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          -8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          22.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "flange_unit",
+      "rotating": true
+    },
+    {
+      "name": "FLANGE_SCREW_0",
+      "part_id": "H_BOLT12",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          48
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          -8.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          22.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "flange_unit",
+      "rotating": true
+    },
+    {
+      "name": "FLANGE_WASHER_1",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          47
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          -8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          38.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "flange_unit",
+      "rotating": true
+    },
+    {
+      "name": "FLANGE_SCREW_1",
+      "part_id": "H_BOLT12",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          48
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          -8.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          38.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "flange_unit",
+      "rotating": true
+    },
+    {
+      "name": "FLANGE_WASHER_2",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          47
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          22.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "flange_unit",
+      "rotating": true
+    },
+    {
+      "name": "FLANGE_SCREW_2",
+      "part_id": "H_BOLT12",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          48
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          8.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          22.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "flange_unit",
+      "rotating": true
+    },
+    {
+      "name": "FLANGE_WASHER_3",
+      "part_id": "H_WASHER",
+      "transform": [
+        [
+          0,
+          0,
+          1,
+          47
+        ],
+        [
+          1.0,
+          -0.0,
+          0,
+          8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0,
+          38.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "flange_unit",
+      "rotating": true
+    },
+    {
+      "name": "FLANGE_SCREW_3",
+      "part_id": "H_BOLT12",
+      "transform": [
+        [
+          0,
+          0,
+          -1,
+          48
+        ],
+        [
+          1.0,
+          0.0,
+          0,
+          8.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0,
+          38.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "group": "flange_unit",
+      "rotating": true
+    }
+  ],
+  "cad_meshes": "FreeCAD/Ver.3/common_input_r4/render_geometry.json.gz",
+  "assemblyStages": [
+    {
+      "id": "01",
+      "title": "試験片とキャリア確認",
+      "kind": "fixture",
+      "add": [
+        "CARRIER"
+      ],
+      "temporarily_removed": [],
+      "reinserted": [],
+      "tools": [],
+      "approachFromDirection": null,
+      "direction": null,
+      "directionMeaning": "travel toward the final assembly position; access JSON separately records reverse/removal travel",
+      "externalFastenersAdded": {},
+      "cautions": [
+        "Quantity0 fit coupon first. Mounting holes are not a bench fixation authorization."
+      ]
+    },
+    {
+      "id": "02",
+      "title": "固定側軸受と押さえ",
+      "kind": "fasteners",
+      "add": [
+        "BEARING_LOC",
+        "CAP_LOC",
+        "SCREW_LOC_N",
+        "HEAD_WASHER_LOC_N",
+        "NUT_WASHER_LOC_N",
+        "NUT_LOC_N",
+        "SCREW_LOC_P",
+        "HEAD_WASHER_LOC_P",
+        "NUT_WASHER_LOC_P",
+        "NUT_LOC_P"
+      ],
+      "temporarily_removed": [],
+      "reinserted": [],
+      "tools": [
+        "3mm hex key",
+        "7mm nut driver/wrench"
+      ],
+      "approachFromDirection": [
+        -1,
+        0,
+        0
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "directionMeaning": "travel toward the final assembly position; access JSON separately records reverse/removal travel",
+      "externalFastenersAdded": {
+        "H_BOLT20": 2,
+        "H_WASHER": 4,
+        "H_LOCKNUT": 2
+      },
+      "cautions": [
+        "Bearing first from-X, cap next. Cap contacts carrier lands, not the inner ring. Bolt torque is not a bearing-preload setting."
+      ]
+    },
+    {
+      "id": "03",
+      "title": "浮動側軸受と押さえ",
+      "kind": "fasteners",
+      "add": [
+        "BEARING_FLOAT",
+        "CAP_FLOAT",
+        "SCREW_FLOAT_N",
+        "HEAD_WASHER_FLOAT_N",
+        "NUT_WASHER_FLOAT_N",
+        "NUT_FLOAT_N",
+        "SCREW_FLOAT_P",
+        "HEAD_WASHER_FLOAT_P",
+        "NUT_WASHER_FLOAT_P",
+        "NUT_FLOAT_P"
+      ],
+      "temporarily_removed": [],
+      "reinserted": [],
+      "tools": [
+        "3mm hex key",
+        "7mm nut driver/wrench"
+      ],
+      "approachFromDirection": [
+        1,
+        0,
+        0
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "directionMeaning": "travel toward the final assembly position; access JSON separately records reverse/removal travel",
+      "externalFastenersAdded": {
+        "H_BOLT20": 2,
+        "H_WASHER": 4,
+        "H_LOCKNUT": 2
+      },
+      "cautions": [
+        "Bearing from+X; flange stays free in its longer groove. Verify float rather than tightening away the gap."
+      ]
+    },
+    {
+      "id": "04",
+      "title": "ハブと試験フランジを先組み",
+      "kind": "bench_subassembly_at_final_pose",
+      "add": [
+        "D_HUB",
+        "TEST_FLANGE",
+        "FLANGE_WASHER_0",
+        "FLANGE_SCREW_0",
+        "FLANGE_WASHER_1",
+        "FLANGE_SCREW_1",
+        "FLANGE_WASHER_2",
+        "FLANGE_SCREW_2",
+        "FLANGE_WASHER_3",
+        "FLANGE_SCREW_3"
+      ],
+      "temporarily_removed": [],
+      "reinserted": [],
+      "tools": [
+        "3mm hex key"
+      ],
+      "approachFromDirection": [
+        0,
+        0,
+        1
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "directionMeaning": "travel toward the final assembly position; access JSON separately records reverse/removal travel",
+      "externalFastenersAdded": {
+        "H_WASHER": 4,
+        "H_BOLT12": 4
+      },
+      "cautions": [
+        "FourM4x12 and washers before placing between supports. Shown at final position, not pre-attached to shaft."
+      ]
+    },
+    {
+      "id": "05",
+      "title": "固定側だけへ2スペーサーと2カラー",
+      "kind": "loose_subassembly",
+      "add": [
+        "SPACER_OUT",
+        "SPACER_IN",
+        "COLLAR_OUT",
+        "COLLAR_IN"
+      ],
+      "temporarily_removed": [],
+      "reinserted": [],
+      "tools": [],
+      "approachFromDirection": null,
+      "direction": null,
+      "directionMeaning": "travel toward the final assembly position; access JSON separately records reverse/removal travel",
+      "externalFastenersAdded": {},
+      "cautions": [
+        "Do not put the second collar at the floating bearing. Pieces are supported while the shaft is absent."
+      ]
+    },
+    {
+      "id": "06",
+      "title": "左から軸を挿入",
+      "kind": "shaft_insertion",
+      "add": [
+        "SHAFT"
+      ],
+      "temporarily_removed": [],
+      "reinserted": [],
+      "tools": [
+        "2.5mm hub clamp key",
+        "3mm collar clamp key"
+      ],
+      "approachFromDirection": [
+        -1,
+        0,
+        0
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "directionMeaning": "travel toward the final assembly position; access JSON separately records reverse/removal travel",
+      "externalFastenersAdded": {},
+      "cautions": [
+        "Release both hub pinch screws and collars. Follow the vendor D-profile index; do not force or resize the supplied hub."
+      ]
+    },
+    {
+      "id": "07",
+      "title": "すきまと工具経路を確認",
+      "kind": "inspection",
+      "add": [],
+      "temporarily_removed": [],
+      "reinserted": [],
+      "tools": [
+        "2.5mm hub clamp key",
+        "3mm collar clamp key"
+      ],
+      "approachFromDirection": null,
+      "direction": null,
+      "directionMeaning": "travel toward the final assembly position; access JSON separately records reverse/removal travel",
+      "externalFastenersAdded": {},
+      "cautions": [
+        "Set0.10–0.30mm total locating inner-stack play and confirm outer-ring float after tightening. No powered or string-load test authorized."
+      ]
+    },
+    {
+      "id": "08",
+      "title": "逆順で脱着",
+      "kind": "removal_reference",
+      "add": [],
+      "temporarily_removed": [],
+      "reinserted": [],
+      "tools": [
+        "2.5mm hub clamp key",
+        "3mm collar clamp key"
+      ],
+      "approachFromDirection": null,
+      "direction": null,
+      "directionMeaning": "travel toward the final assembly position; access JSON separately records reverse/removal travel",
+      "externalFastenersAdded": {},
+      "cautions": [
+        "Release clamps, withdraw shaft toward-X, then lift flange unit+Z. Never try to pass the32mm hub through a6mm bearing."
+      ]
+    }
+  ],
+  "printCoupons": [
+    "Q_BEARING_FIT"
+  ],
+  "mass": {
+    "purchasedRows": [
+      {
+        "id": "H_SHAFT",
+        "sku": "2101-0006-0120",
+        "quantity": 1,
+        "massG": 25,
+        "pack": 1,
+        "packPriceUsd": 4.69,
+        "url": "https://www.gobilda.com/2101-series-stainless-steel-d-shaft-6mm-diameter-120mm-length/",
+        "spec": "Ready-length120mm stainless6mmD shaft,5.5mm flat-to-opposite; no cut,drill,tap",
+        "purchasePacks": 1,
+        "purchaseQuantity": 1,
+        "unusedPieces": 0,
+        "subtotalUsd": 4.69
+      },
+      {
+        "id": "H_BEARING",
+        "sku": "1611-0514-0006",
+        "quantity": 2,
+        "massG": 3,
+        "pack": 2,
+        "packPriceUsd": 3.99,
+        "url": "https://www.gobilda.com/1611-series-flanged-ball-bearing-6mm-id-x-14mm-od-5mm-thickness-2-pack/",
+        "spec": "6x14x5 high-carbon-steel flanged bearing,flange15x1; grease/drag not specified",
+        "purchasePacks": 1,
+        "purchaseQuantity": 2,
+        "unusedPieces": 0,
+        "subtotalUsd": 3.99
+      },
+      {
+        "id": "H_COLLAR",
+        "sku": "2910-0919-0006",
+        "quantity": 2,
+        "massG": 7,
+        "pack": 1,
+        "packPriceUsd": 4.49,
+        "url": "https://www.gobilda.com/2910-series-aluminum-clamping-collar-6mm-id-x-19mm-od-9mm-length/",
+        "spec": "6mm clamp collar,19mm body,9mm body length,9mm boss x0.5; included clamp screw",
+        "purchasePacks": 2,
+        "purchaseQuantity": 2,
+        "unusedPieces": 0,
+        "subtotalUsd": 8.98
+      },
+      {
+        "id": "H_HUB",
+        "sku": "1309-0016-1006",
+        "quantity": 1,
+        "massG": 14,
+        "pack": 1,
+        "packPriceUsd": 7.99,
+        "url": "https://www.gobilda.com/1309-series-sonic-hub-6mm-d-bore/",
+        "spec": "Metal6mmD hub,16mm-square M4 holes,14x2 pilot; two included pinch bolts",
+        "purchasePacks": 1,
+        "purchaseQuantity": 1,
+        "unusedPieces": 0,
+        "subtotalUsd": 7.99
+      },
+      {
+        "id": "H_SPACER",
+        "sku": "1521-0008-0040",
+        "quantity": 2,
+        "massG": 0.64,
+        "pack": 4,
+        "packPriceUsd": 2.49,
+        "url": "https://www.gobilda.com/1521-series-6mm-id-spacer-8mm-od-4mm-length-4-pack/",
+        "spec": "Zinc steel6ID/8ODx4 stock spacer; reference CAD6.05/7.95",
+        "purchasePacks": 1,
+        "purchaseQuantity": 4,
+        "unusedPieces": 2,
+        "subtotalUsd": 2.49
+      },
+      {
+        "id": "H_BOLT12",
+        "sku": "2800-0004-0012",
+        "quantity": 4,
+        "massG": 2.0,
+        "pack": 25,
+        "packPriceUsd": 3.59,
+        "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-12mm-length/",
+        "spec": "M4x0.7x12 socket-head zinc steel,3mm hex",
+        "purchasePacks": 1,
+        "purchaseQuantity": 25,
+        "unusedPieces": 21,
+        "subtotalUsd": 3.59
+      },
+      {
+        "id": "H_BOLT20",
+        "sku": "2800-0004-0020",
+        "quantity": 4,
+        "massG": 2.6,
+        "pack": 25,
+        "packPriceUsd": 3.99,
+        "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-20mm-length-25-pack/",
+        "spec": "M4x0.7x20 socket-head zinc steel,3mm hex",
+        "purchasePacks": 1,
+        "purchaseQuantity": 25,
+        "unusedPieces": 21,
+        "subtotalUsd": 3.99
+      },
+      {
+        "id": "H_WASHER",
+        "sku": "2801-0004-0008",
+        "quantity": 12,
+        "massG": 0.29,
+        "pack": 25,
+        "packPriceUsd": 1.99,
+        "url": "https://www.gobilda.com/2801-series-zinc-plated-steel-washer-4mm-id-x-8mm-od/",
+        "spec": "4IDx8ODx1 zinc-steel washer; thickness from exact vendor CAD",
+        "purchasePacks": 1,
+        "purchaseQuantity": 25,
+        "unusedPieces": 13,
+        "subtotalUsd": 1.99
+      },
+      {
+        "id": "H_LOCKNUT",
+        "sku": "2812-0004-0007",
+        "quantity": 4,
+        "massG": 0.78,
+        "pack": 25,
+        "packPriceUsd": 2.99,
+        "url": "https://www.gobilda.com/m4-x-0-7mm-nylock-nut/",
+        "spec": "M4x0.7 nylock,7mm hex,zinc steel;5.2mm conservative reference envelope",
+        "purchasePacks": 1,
+        "purchaseQuantity": 25,
+        "unusedPieces": 21,
+        "subtotalUsd": 2.99
+      }
+    ],
+    "purchasedMinimumLotUsd": 40.7,
+    "purchasedCatalogueMassG": 85.28000000000002,
+    "historicalFourSkuSubtotalUsd": 25.65,
+    "historicalFourSkuMassG": 59,
+    "printedSolidMassG": 39.69572110594912,
+    "couponSolidMassG": 12.921493430679634,
+    "couponCostBasis": "one quantity0 fit coupon included in first-print material estimate, not in assembled mass",
+    "wholeCartridgeNominalMassG": 124.97572110594913,
+    "jpyScenarios": [
+      {
+        "fxJpyPerUsd": 140,
+        "purchasedSubsetJpy": 5698.0,
+        "filamentPriceJpyPerKgAssumed": 2000,
+        "solidFilamentPlusWasteCostJpy": 95.27,
+        "firstPrintIncludingCouponAndWasteCostJpy": 126.28,
+        "materialSubtotalExShippingTaxFeesJpy": 5824.28
+      },
+      {
+        "fxJpyPerUsd": 140,
+        "purchasedSubsetJpy": 5698.0,
+        "filamentPriceJpyPerKgAssumed": 3000,
+        "solidFilamentPlusWasteCostJpy": 142.9,
+        "firstPrintIncludingCouponAndWasteCostJpy": 189.42,
+        "materialSubtotalExShippingTaxFeesJpy": 5887.42
+      },
+      {
+        "fxJpyPerUsd": 140,
+        "purchasedSubsetJpy": 5698.0,
+        "filamentPriceJpyPerKgAssumed": 4000,
+        "solidFilamentPlusWasteCostJpy": 190.54,
+        "firstPrintIncludingCouponAndWasteCostJpy": 252.56,
+        "materialSubtotalExShippingTaxFeesJpy": 5950.56
+      },
+      {
+        "fxJpyPerUsd": 160,
+        "purchasedSubsetJpy": 6512.0,
+        "filamentPriceJpyPerKgAssumed": 2000,
+        "solidFilamentPlusWasteCostJpy": 95.27,
+        "firstPrintIncludingCouponAndWasteCostJpy": 126.28,
+        "materialSubtotalExShippingTaxFeesJpy": 6638.28
+      },
+      {
+        "fxJpyPerUsd": 160,
+        "purchasedSubsetJpy": 6512.0,
+        "filamentPriceJpyPerKgAssumed": 3000,
+        "solidFilamentPlusWasteCostJpy": 142.9,
+        "firstPrintIncludingCouponAndWasteCostJpy": 189.42,
+        "materialSubtotalExShippingTaxFeesJpy": 6701.42
+      },
+      {
+        "fxJpyPerUsd": 160,
+        "purchasedSubsetJpy": 6512.0,
+        "filamentPriceJpyPerKgAssumed": 4000,
+        "solidFilamentPlusWasteCostJpy": 190.54,
+        "firstPrintIncludingCouponAndWasteCostJpy": 252.56,
+        "materialSubtotalExShippingTaxFeesJpy": 6764.56
+      },
+      {
+        "fxJpyPerUsd": 180,
+        "purchasedSubsetJpy": 7326.0,
+        "filamentPriceJpyPerKgAssumed": 2000,
+        "solidFilamentPlusWasteCostJpy": 95.27,
+        "firstPrintIncludingCouponAndWasteCostJpy": 126.28,
+        "materialSubtotalExShippingTaxFeesJpy": 7452.28
+      },
+      {
+        "fxJpyPerUsd": 180,
+        "purchasedSubsetJpy": 7326.0,
+        "filamentPriceJpyPerKgAssumed": 3000,
+        "solidFilamentPlusWasteCostJpy": 142.9,
+        "firstPrintIncludingCouponAndWasteCostJpy": 189.42,
+        "materialSubtotalExShippingTaxFeesJpy": 7515.42
+      },
+      {
+        "fxJpyPerUsd": 180,
+        "purchasedSubsetJpy": 7326.0,
+        "filamentPriceJpyPerKgAssumed": 4000,
+        "solidFilamentPlusWasteCostJpy": 190.54,
+        "firstPrintIncludingCouponAndWasteCostJpy": 252.56,
+        "materialSubtotalExShippingTaxFeesJpy": 7578.56
+      }
+    ],
+    "shippingJpy": null,
+    "importTaxJpy": null,
+    "paymentFeesJpy": null,
+    "measuredMassG": null,
+    "slicedMassG": null,
+    "externalMountingFastenersIncluded": false
+  },
+  "geometryOrigin": "original procedural solids and dimensional envelopes; no vendor B-rep copied",
+  "qualifiedWalkingPrototypeCount": 0,
+  "physicalLowDragCertification": false
+}

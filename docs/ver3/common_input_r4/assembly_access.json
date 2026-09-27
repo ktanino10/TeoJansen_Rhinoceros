@@ -1,0 +1,508 @@
+{
+  "revisionId": "v3-common-input-r4-01",
+  "static_pairs_checked": 630,
+  "documented_nominal_interface_overlaps": [
+    {
+      "first": "SCREW_LOC_N",
+      "second": "NUT_LOC_N",
+      "volume_mm3": 20.86959999779698
+    },
+    {
+      "first": "SCREW_LOC_P",
+      "second": "NUT_LOC_P",
+      "volume_mm3": 20.86959999779698
+    },
+    {
+      "first": "SCREW_FLOAT_N",
+      "second": "NUT_FLOAT_N",
+      "volume_mm3": 20.869599997797007
+    },
+    {
+      "first": "SCREW_FLOAT_P",
+      "second": "NUT_FLOAT_P",
+      "volume_mm3": 20.869599997797007
+    },
+    {
+      "first": "SHAFT",
+      "second": "D_HUB",
+      "volume_mm3": 0.669303261299157
+    },
+    {
+      "first": "D_HUB",
+      "second": "FLANGE_SCREW_0",
+      "volume_mm3": 16.395061089864146
+    },
+    {
+      "first": "D_HUB",
+      "second": "FLANGE_SCREW_1",
+      "volume_mm3": 16.391461186277738
+    },
+    {
+      "first": "D_HUB",
+      "second": "FLANGE_SCREW_2",
+      "volume_mm3": 16.39181758953198
+    },
+    {
+      "first": "D_HUB",
+      "second": "FLANGE_SCREW_3",
+      "volume_mm3": 16.394606800408617
+    }
+  ],
+  "unexpected_intersections": [],
+  "rotation_samples_deg": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    120,
+    135,
+    150,
+    165,
+    180,
+    195,
+    210,
+    225,
+    240,
+    255,
+    270,
+    285,
+    300,
+    315,
+    330,
+    345
+  ],
+  "rotation_pair_checks": 7560,
+  "minimum_rotating_to_printed_clearance": {
+    "mm": 1.0796411440844396,
+    "moving": "COLLAR_OUT",
+    "fixed": "CAP_LOC",
+    "angle_deg": 105
+  },
+  "floating_ring_positions": [
+    {
+      "bearing_dx_mm": -1,
+      "overlap_mm3": 0.0
+    },
+    {
+      "bearing_dx_mm": -0.5,
+      "overlap_mm3": 0.0
+    },
+    {
+      "bearing_dx_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "bearing_dx_mm": 0.5,
+      "overlap_mm3": 0.0
+    },
+    {
+      "bearing_dx_mm": 1,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "locating_ring_positions": [
+    {
+      "bearing_dx_mm": -0.3,
+      "overlap_mm3": 0.0
+    },
+    {
+      "bearing_dx_mm": -0.15,
+      "overlap_mm3": 0.0
+    },
+    {
+      "bearing_dx_mm": 0,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "insertion_paths": [
+    {
+      "id": "fixed_bearing_before_cap",
+      "moving": [
+        "BEARING_LOC"
+      ],
+      "remaining": [
+        "CARRIER"
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "offsets_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "maximum_unintended_overlap_mm3": 0.0,
+      "excluded_manufacturer_fit_interfaces": [],
+      "method": "sampled rigid insertion/removal using actual vendor B-rep where available"
+    },
+    {
+      "id": "floating_bearing_before_cap",
+      "moving": [
+        "BEARING_FLOAT"
+      ],
+      "remaining": [
+        "CARRIER"
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "offsets_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "maximum_unintended_overlap_mm3": 0.0,
+      "excluded_manufacturer_fit_interfaces": [],
+      "method": "sampled rigid insertion/removal using actual vendor B-rep where available"
+    },
+    {
+      "id": "fixed_cap_before_shaft_stack",
+      "moving": [
+        "CAP_LOC"
+      ],
+      "remaining": [
+        "CARRIER",
+        "BEARING_LOC"
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "offsets_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "maximum_unintended_overlap_mm3": 0.0,
+      "excluded_manufacturer_fit_interfaces": [],
+      "method": "sampled rigid insertion/removal using actual vendor B-rep where available"
+    },
+    {
+      "id": "float_cap_before_shaft",
+      "moving": [
+        "CAP_FLOAT"
+      ],
+      "remaining": [
+        "CARRIER",
+        "BEARING_FLOAT"
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "offsets_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "maximum_unintended_overlap_mm3": 0.0,
+      "excluded_manufacturer_fit_interfaces": [],
+      "method": "sampled rigid insertion/removal using actual vendor B-rep where available"
+    },
+    {
+      "id": "shaft_left_with_clamps_released",
+      "moving": [
+        "SHAFT"
+      ],
+      "remaining": [
+        "CARRIER",
+        "BEARING_LOC",
+        "BEARING_FLOAT",
+        "CAP_LOC",
+        "CAP_FLOAT",
+        "SCREW_LOC_N",
+        "HEAD_WASHER_LOC_N",
+        "NUT_WASHER_LOC_N",
+        "NUT_LOC_N",
+        "SCREW_LOC_P",
+        "HEAD_WASHER_LOC_P",
+        "NUT_WASHER_LOC_P",
+        "NUT_LOC_P",
+        "SCREW_FLOAT_N",
+        "HEAD_WASHER_FLOAT_N",
+        "NUT_WASHER_FLOAT_N",
+        "NUT_FLOAT_N",
+        "SCREW_FLOAT_P",
+        "HEAD_WASHER_FLOAT_P",
+        "NUT_WASHER_FLOAT_P",
+        "NUT_FLOAT_P",
+        "SPACER_OUT",
+        "SPACER_IN",
+        "COLLAR_OUT",
+        "COLLAR_IN",
+        "D_HUB",
+        "TEST_FLANGE",
+        "FLANGE_WASHER_0",
+        "FLANGE_SCREW_0",
+        "FLANGE_WASHER_1",
+        "FLANGE_SCREW_1",
+        "FLANGE_WASHER_2",
+        "FLANGE_SCREW_2",
+        "FLANGE_WASHER_3",
+        "FLANGE_SCREW_3"
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "offsets_mm": [
+        0,
+        2,
+        5,
+        10,
+        20,
+        40,
+        60,
+        90,
+        122
+      ],
+      "maximum_unintended_overlap_mm3": 0.0,
+      "excluded_manufacturer_fit_interfaces": [
+        [
+          "SHAFT",
+          "D_HUB"
+        ]
+      ],
+      "method": "sampled rigid insertion/removal using actual vendor B-rep where available"
+    },
+    {
+      "id": "preassembled_flange_unit_up_after_shaft_removal",
+      "moving": [
+        "D_HUB",
+        "TEST_FLANGE",
+        "FLANGE_WASHER_0",
+        "FLANGE_SCREW_0",
+        "FLANGE_WASHER_1",
+        "FLANGE_SCREW_1",
+        "FLANGE_WASHER_2",
+        "FLANGE_SCREW_2",
+        "FLANGE_WASHER_3",
+        "FLANGE_SCREW_3"
+      ],
+      "remaining": [
+        "CARRIER",
+        "BEARING_LOC",
+        "BEARING_FLOAT",
+        "CAP_LOC",
+        "CAP_FLOAT",
+        "SCREW_LOC_N",
+        "HEAD_WASHER_LOC_N",
+        "NUT_WASHER_LOC_N",
+        "NUT_LOC_N",
+        "SCREW_LOC_P",
+        "HEAD_WASHER_LOC_P",
+        "NUT_WASHER_LOC_P",
+        "NUT_LOC_P",
+        "SCREW_FLOAT_N",
+        "HEAD_WASHER_FLOAT_N",
+        "NUT_WASHER_FLOAT_N",
+        "NUT_FLOAT_N",
+        "SCREW_FLOAT_P",
+        "HEAD_WASHER_FLOAT_P",
+        "NUT_WASHER_FLOAT_P",
+        "NUT_FLOAT_P",
+        "SPACER_OUT",
+        "SPACER_IN",
+        "COLLAR_OUT",
+        "COLLAR_IN"
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "offsets_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "maximum_unintended_overlap_mm3": 0.0,
+      "excluded_manufacturer_fit_interfaces": [],
+      "method": "sampled rigid insertion/removal using actual vendor B-rep where available"
+    }
+  ],
+  "tool_access": [
+    {
+      "stage": "caps_before_rotating_stack",
+      "side": "LOC",
+      "y_mm": -18,
+      "tool": "12mm OD x28mm axial nut-driver clearance envelope",
+      "overlap_mm3": 0.0
+    },
+    {
+      "stage": "caps_before_rotating_stack",
+      "side": "LOC",
+      "y_mm": 18,
+      "tool": "12mm OD x28mm axial nut-driver clearance envelope",
+      "overlap_mm3": 0.0
+    },
+    {
+      "stage": "caps_before_rotating_stack",
+      "side": "FLOAT",
+      "y_mm": -18,
+      "tool": "12mm OD x28mm axial nut-driver clearance envelope",
+      "overlap_mm3": 0.0
+    },
+    {
+      "stage": "caps_before_rotating_stack",
+      "side": "FLOAT",
+      "y_mm": 18,
+      "tool": "12mm OD x28mm axial nut-driver clearance envelope",
+      "overlap_mm3": 0.0
+    },
+    {
+      "stage": "assembled_flange",
+      "fastener": "FLANGE_SCREW_0",
+      "tool": "4mm diameter x26mm axial key-shank envelope",
+      "overlap_mm3": 0.0
+    },
+    {
+      "stage": "assembled_flange",
+      "fastener": "FLANGE_SCREW_1",
+      "tool": "4mm diameter x26mm axial key-shank envelope",
+      "overlap_mm3": 0.0
+    },
+    {
+      "stage": "assembled_flange",
+      "fastener": "FLANGE_SCREW_2",
+      "tool": "4mm diameter x26mm axial key-shank envelope",
+      "overlap_mm3": 0.0
+    },
+    {
+      "stage": "assembled_flange",
+      "fastener": "FLANGE_SCREW_3",
+      "tool": "4mm diameter x26mm axial key-shank envelope",
+      "overlap_mm3": 0.0
+    },
+    {
+      "stage": "supported_stopped_shaft",
+      "purchased_assembly": "D_HUB",
+      "included_screw_index": 1,
+      "shaft_angle_deg": 150,
+      "tool": "4mm diameter x28mm key-shank envelope toward upper half-space",
+      "overlap_mm3": 0.0,
+      "requires_all_rotating_parts_turned_together": true
+    },
+    {
+      "stage": "supported_stopped_shaft",
+      "purchased_assembly": "D_HUB",
+      "included_screw_index": 2,
+      "shaft_angle_deg": 0,
+      "tool": "4mm diameter x28mm key-shank envelope toward upper half-space",
+      "overlap_mm3": 0.0,
+      "requires_all_rotating_parts_turned_together": true
+    },
+    {
+      "stage": "supported_stopped_shaft",
+      "purchased_assembly": "COLLAR_OUT",
+      "included_screw_index": 1,
+      "shaft_angle_deg": 225,
+      "tool": "4mm diameter x28mm key-shank envelope toward upper half-space",
+      "overlap_mm3": 0.0,
+      "requires_all_rotating_parts_turned_together": true
+    },
+    {
+      "stage": "supported_stopped_shaft",
+      "purchased_assembly": "COLLAR_IN",
+      "included_screw_index": 1,
+      "shaft_angle_deg": 195,
+      "tool": "4mm diameter x28mm key-shank envelope toward upper half-space",
+      "overlap_mm3": 0.0,
+      "requires_all_rotating_parts_turned_together": true
+    }
+  ],
+  "spacer_inner_contacts": [
+    {
+      "spacer": "SPACER_OUT",
+      "bearing_end_x_mm": 14,
+      "inner_end_contact_area_mm2": 13.908173111041396,
+      "minimum_to_non_inner_axial_faces_mm": 0.6609738572742477
+    },
+    {
+      "spacer": "SPACER_IN",
+      "bearing_end_x_mm": 19,
+      "inner_end_contact_area_mm2": 13.908173111041165,
+      "minimum_to_non_inner_axial_faces_mm": 0.6341943235318356
+    }
+  ],
+  "rotating_axial_extrema": [
+    {
+      "whole_rotating_stack_dx_mm": -0.6,
+      "angle_step_deg": 30,
+      "minimum_printed_clearance_mm": 0.8662058018950536
+    },
+    {
+      "whole_rotating_stack_dx_mm": 0,
+      "angle_step_deg": 30,
+      "minimum_printed_clearance_mm": 1.0796411440844418
+    },
+    {
+      "whole_rotating_stack_dx_mm": 0.15,
+      "angle_step_deg": 30,
+      "minimum_printed_clearance_mm": 0.9722717955131525
+    }
+  ],
+  "fit": {
+    "manufacturer_designated_d_pair": true,
+    "d_hub_geometry_rescaled": false,
+    "reference_state_or_tolerances_published": null,
+    "physical_hub_fit": "UNKNOWN",
+    "clamp_screws_released_for_removal": true
+  },
+  "vendorSourceHashes": {
+    "bearing.step": "7dcf5ba5caa8c9406a7519f31d5a62cb452658286fb977122575cbec6880462a",
+    "shaft.step": "052af9f682b24cf719788ab2d115c7f2963b2fcf2889947934c799c365e042e3",
+    "collar.step": "8be1a13c316c09c5bb03d22b6a4f9f4c6f4760bbcea228b20869e1b619d30af9",
+    "hub.step": "fa6e83056fbf2c4dc99c67ac12a6f76012f84fd0c0be5207f16f33737a91b627",
+    "spacer.step": "928a259dd7c986f98644ed03d2a6766d2586fb8a435db448aba0f3ac737871cd"
+  },
+  "supplierCadRedistributed": false,
+  "limits": [
+    "Samples are not continuous collision proof.",
+    "Tool envelopes are acceptance sizes, not every tool.",
+    "Thread engagement and the manufacturer-specified D clamp interface are not validated as slip fits by nominal overlap.",
+    "No physical preload, printed-seat fit, drag, strength, rotor or walking qualification."
+  ]
+}

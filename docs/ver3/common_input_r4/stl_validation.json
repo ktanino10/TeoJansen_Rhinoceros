@@ -1,0 +1,46 @@
+[
+  {
+    "partId": "P_CARRIER",
+    "singleClosedSolid": true,
+    "extentsMm": [
+      120.0,
+      47.998300552368164,
+      41.99462890625
+    ],
+    "meshToBrepVolumeRelativeError": 0.00010052129310096157,
+    "assemblyQuantity": 1
+  },
+  {
+    "partId": "P_CAP",
+    "singleClosedSolid": true,
+    "extentsMm": [
+      47.997365951538086,
+      23.9892578125,
+      3.0
+    ],
+    "meshToBrepVolumeRelativeError": 0.0002924174691315277,
+    "assemblyQuantity": 2
+  },
+  {
+    "partId": "P_FLANGE",
+    "singleClosedSolid": true,
+    "extentsMm": [
+      39.89974784851074,
+      39.99178695678711,
+      4.0
+    ],
+    "meshToBrepVolumeRelativeError": 0.0005722692320668419,
+    "assemblyQuantity": 1
+  },
+  {
+    "partId": "Q_BEARING_FIT",
+    "singleClosedSolid": true,
+    "extentsMm": [
+      88.0,
+      24.0,
+      7.0
+    ],
+    "meshToBrepVolumeRelativeError": 0.0002678862836971893,
+    "assemblyQuantity": 0
+  }
+]

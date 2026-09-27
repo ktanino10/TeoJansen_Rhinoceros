@@ -1,0 +1,85 @@
+{
+  "fixed_outer_ring_axial_play_nominal_mm": 0.3000000000000007,
+  "floating_outer_ring_total_travel_nominal_mm": 2,
+  "collar_inner_ring_stack_play_nominal_mm": 0.20000000000000107,
+  "fixed_screw_projection_mm": 1.5,
+  "floating_screw_projection_mm": 0.8000000000000007,
+  "hub_flange_thread_engagement_mm": 7,
+  "hub_flange_remaining_to_back_face_mm": 1,
+  "scenarios": [
+    {
+      "pocket_error_mm": -0.1,
+      "flange_error_mm": -0.05,
+      "floating_pocket_error_mm": -0.1,
+      "fixed_outer_clearance_min_mm": 0.20000000000000073,
+      "floating_total_travel_min_mm": 1.9,
+      "required_one_sided_float_budget_mm": 0.8500000000000008,
+      "one_sided_float_remaining_mm": 0.0999999999999992
+    },
+    {
+      "pocket_error_mm": -0.1,
+      "flange_error_mm": -0.05,
+      "floating_pocket_error_mm": 0.1,
+      "fixed_outer_clearance_min_mm": 0.20000000000000073,
+      "floating_total_travel_min_mm": 2.1,
+      "required_one_sided_float_budget_mm": 0.8500000000000008,
+      "one_sided_float_remaining_mm": 0.1999999999999993
+    },
+    {
+      "pocket_error_mm": -0.1,
+      "flange_error_mm": 0.05,
+      "floating_pocket_error_mm": -0.1,
+      "fixed_outer_clearance_min_mm": 0.10000000000000069,
+      "floating_total_travel_min_mm": 1.7999999999999998,
+      "required_one_sided_float_budget_mm": 0.8500000000000008,
+      "one_sided_float_remaining_mm": 0.049999999999999156
+    },
+    {
+      "pocket_error_mm": -0.1,
+      "flange_error_mm": 0.05,
+      "floating_pocket_error_mm": 0.1,
+      "fixed_outer_clearance_min_mm": 0.10000000000000069,
+      "floating_total_travel_min_mm": 2.0000000000000004,
+      "required_one_sided_float_budget_mm": 0.8500000000000008,
+      "one_sided_float_remaining_mm": 0.14999999999999947
+    },
+    {
+      "pocket_error_mm": 0.1,
+      "flange_error_mm": -0.05,
+      "floating_pocket_error_mm": -0.1,
+      "fixed_outer_clearance_min_mm": 0.4000000000000007,
+      "floating_total_travel_min_mm": 1.9,
+      "required_one_sided_float_budget_mm": 0.8500000000000008,
+      "one_sided_float_remaining_mm": 0.0999999999999992
+    },
+    {
+      "pocket_error_mm": 0.1,
+      "flange_error_mm": -0.05,
+      "floating_pocket_error_mm": 0.1,
+      "fixed_outer_clearance_min_mm": 0.4000000000000007,
+      "floating_total_travel_min_mm": 2.1,
+      "required_one_sided_float_budget_mm": 0.8500000000000008,
+      "one_sided_float_remaining_mm": 0.1999999999999993
+    },
+    {
+      "pocket_error_mm": 0.1,
+      "flange_error_mm": 0.05,
+      "floating_pocket_error_mm": -0.1,
+      "fixed_outer_clearance_min_mm": 0.3000000000000007,
+      "floating_total_travel_min_mm": 1.7999999999999998,
+      "required_one_sided_float_budget_mm": 0.8500000000000008,
+      "one_sided_float_remaining_mm": 0.049999999999999156
+    },
+    {
+      "pocket_error_mm": 0.1,
+      "flange_error_mm": 0.05,
+      "floating_pocket_error_mm": 0.1,
+      "fixed_outer_clearance_min_mm": 0.3000000000000007,
+      "floating_total_travel_min_mm": 2.0000000000000004,
+      "required_one_sided_float_budget_mm": 0.8500000000000008,
+      "one_sided_float_remaining_mm": 0.14999999999999947
+    }
+  ],
+  "scope": "acceptance dimensions only; actual prints, bearing tolerance and tightening deflection not measured",
+  "physicalPreloadStatus": "UNKNOWN"
+}
