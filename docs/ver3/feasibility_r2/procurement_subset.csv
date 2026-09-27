@@ -1,0 +1,22 @@
+design,sku,assembly_quantity_provisional,purchase_quantity,currency,subtotal,tax_basis,source
+A,686ZZ,14,14,JPY,2618,included,https://e-seki.net/products/detail1821.html
+A,SC0606C,10,10,JPY,1780,included,https://www.torano-te.jp/p/i52-31856/
+A,CE-308N,12,50,JPY,1045,10% added to ex-tax list price,https://hirosugi.co.jp/shop/g/gCE-301N/
+A,CE-2007N,18,50,JPY,1100,10% added to ex-tax list price,https://hirosugi.co.jp/shop/g/gCE-301N/
+A,CE-2011N,6,50,JPY,1265,10% added to ex-tax list price,https://hirosugi.co.jp/shop/g/gCE-301N/
+A,2101-0006-0140,4,4,USD,20.36,Japan landed tax unknown,https://www.gobilda.com/stainless-steel-d-shafting/
+A,2101-0006-0120,1,1,USD,4.69,Japan landed tax unknown,https://www.gobilda.com/stainless-steel-d-shafting/
+B,686ZZ,16,16,JPY,2992,included,https://e-seki.net/products/detail1821.html
+B,SC0606C,12,12,JPY,2136,included,https://www.torano-te.jp/p/i52-31856/
+B,CE-308N,12,50,JPY,1045,10% added to ex-tax list price,https://hirosugi.co.jp/shop/g/gCE-301N/
+B,CE-2007N,18,50,JPY,1100,10% added to ex-tax list price,https://hirosugi.co.jp/shop/g/gCE-301N/
+B,CE-2011N,6,50,JPY,1265,10% added to ex-tax list price,https://hirosugi.co.jp/shop/g/gCE-301N/
+B,2101-0006-0140,4,4,USD,20.36,Japan landed tax unknown,https://www.gobilda.com/stainless-steel-d-shafting/
+B,2101-0006-0120,2,2,USD,9.38,Japan landed tax unknown,https://www.gobilda.com/stainless-steel-d-shafting/
+C,686ZZ,14,14,JPY,2618,included,https://e-seki.net/products/detail1821.html
+C,SC0606C,10,10,JPY,1780,included,https://www.torano-te.jp/p/i52-31856/
+C,CE-308N,12,50,JPY,1045,10% added to ex-tax list price,https://hirosugi.co.jp/shop/g/gCE-301N/
+C,CE-2007N,18,50,JPY,1100,10% added to ex-tax list price,https://hirosugi.co.jp/shop/g/gCE-301N/
+C,CE-2011N,6,50,JPY,1265,10% added to ex-tax list price,https://hirosugi.co.jp/shop/g/gCE-301N/
+C,2101-0006-0140,4,4,USD,20.36,Japan landed tax unknown,https://www.gobilda.com/stainless-steel-d-shafting/
+C,2101-0006-0120,1,1,USD,4.69,Japan landed tax unknown,https://www.gobilda.com/stainless-steel-d-shafting/

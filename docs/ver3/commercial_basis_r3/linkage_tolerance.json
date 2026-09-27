@@ -1,0 +1,172 @@
+{
+  "method": "one-at-a-time +/-0.1mm pitch perturbations; not a worst-case tolerance stack",
+  "cases": [
+    {
+      "dimension": "QP",
+      "physical_pitch_error_mm": -0.1,
+      "metrics": {
+        "samples": 1440,
+        "peak_stance_vertical_rate_mm_per_rad": 0.6042321754501891,
+        "rms_stance_vertical_rate_mm_per_rad": 0.28578258211440843,
+        "body_bounce_mm": 0.29974560437396747,
+        "swing_gap_max_mm": 8.989998923092301,
+        "stance_stride_mm": 45.35756424038369,
+        "minimum_forward_rate_mm_per_rad": 7.924434544021859,
+        "horizontal_handoff_jump_mm_per_rad": 1.7984287760248678,
+        "stance_switch_count": 2,
+        "circle_tangency_margin_mm": 1.4828881199534365
+      }
+    },
+    {
+      "dimension": "QP",
+      "physical_pitch_error_mm": 0.1,
+      "metrics": {
+        "samples": 1440,
+        "peak_stance_vertical_rate_mm_per_rad": 0.48806256312951235,
+        "rms_stance_vertical_rate_mm_per_rad": 0.3047852326301845,
+        "body_bounce_mm": 0.41240594078530535,
+        "swing_gap_max_mm": 7.567392236980808,
+        "stance_stride_mm": 44.76530052389493,
+        "minimum_forward_rate_mm_per_rad": 7.080060731551647,
+        "horizontal_handoff_jump_mm_per_rad": 2.565513178804027,
+        "stance_switch_count": 2,
+        "circle_tangency_margin_mm": 1.6757290977625132
+      }
+    },
+    {
+      "dimension": "OQ",
+      "physical_pitch_error_mm": -0.1,
+      "metrics": {
+        "samples": 1440,
+        "peak_stance_vertical_rate_mm_per_rad": 0.5850180488668657,
+        "rms_stance_vertical_rate_mm_per_rad": 0.31124134617352994,
+        "body_bounce_mm": 0.4167230536363036,
+        "swing_gap_max_mm": 8.44296619942699,
+        "stance_stride_mm": 44.26688501468771,
+        "minimum_forward_rate_mm_per_rad": 4.376304115589269,
+        "horizontal_handoff_jump_mm_per_rad": 6.636599706314538,
+        "stance_switch_count": 2,
+        "circle_tangency_margin_mm": 1.5529374485921643
+      }
+    },
+    {
+      "dimension": "OQ",
+      "physical_pitch_error_mm": 0.1,
+      "metrics": {
+        "samples": 1440,
+        "peak_stance_vertical_rate_mm_per_rad": 0.7017098572503453,
+        "rms_stance_vertical_rate_mm_per_rad": 0.29888123371274394,
+        "body_bounce_mm": 0.32385968950045196,
+        "swing_gap_max_mm": 8.061536833497307,
+        "stance_stride_mm": 44.99666110807895,
+        "minimum_forward_rate_mm_per_rad": 5.992849022238415,
+        "horizontal_handoff_jump_mm_per_rad": 5.5997198137105055,
+        "stance_switch_count": 2,
+        "circle_tangency_margin_mm": 1.6059895773561017
+      }
+    },
+    {
+      "dimension": "DE",
+      "physical_pitch_error_mm": -0.1,
+      "metrics": {
+        "samples": 1440,
+        "peak_stance_vertical_rate_mm_per_rad": 0.5109575791110319,
+        "rms_stance_vertical_rate_mm_per_rad": 0.3176020656337127,
+        "body_bounce_mm": 0.43684065340445954,
+        "swing_gap_max_mm": 8.03331413399306,
+        "stance_stride_mm": 44.488269342135666,
+        "minimum_forward_rate_mm_per_rad": 5.306033007422207,
+        "horizontal_handoff_jump_mm_per_rad": 5.281377569264941,
+        "stance_switch_count": 2,
+        "circle_tangency_margin_mm": 1.579319335534013
+      }
+    },
+    {
+      "dimension": "DE",
+      "physical_pitch_error_mm": 0.1,
+      "metrics": {
+        "samples": 1440,
+        "peak_stance_vertical_rate_mm_per_rad": 0.6593552494844179,
+        "rms_stance_vertical_rate_mm_per_rad": 0.28094353131568445,
+        "body_bounce_mm": 0.27660429115420015,
+        "swing_gap_max_mm": 8.471644814952931,
+        "stance_stride_mm": 45.18506048272592,
+        "minimum_forward_rate_mm_per_rad": 7.022281550590917,
+        "horizontal_handoff_jump_mm_per_rad": 3.598661216146735,
+        "stance_switch_count": 2,
+        "circle_tangency_margin_mm": 1.579319335534013
+      }
+    },
+    {
+      "dimension": "CF",
+      "physical_pitch_error_mm": -0.1,
+      "metrics": {
+        "samples": 1440,
+        "peak_stance_vertical_rate_mm_per_rad": 0.6587667912130167,
+        "rms_stance_vertical_rate_mm_per_rad": 0.28763584650406415,
+        "body_bounce_mm": 0.29021485940967295,
+        "swing_gap_max_mm": 8.359094839223928,
+        "stance_stride_mm": 45.11526438780619,
+        "minimum_forward_rate_mm_per_rad": 7.023950127250014,
+        "horizontal_handoff_jump_mm_per_rad": 3.5803862136434876,
+        "stance_switch_count": 2,
+        "circle_tangency_margin_mm": 1.579319335534013
+      }
+    },
+    {
+      "dimension": "CF",
+      "physical_pitch_error_mm": 0.1,
+      "metrics": {
+        "samples": 1440,
+        "peak_stance_vertical_rate_mm_per_rad": 0.5070647247248666,
+        "rms_stance_vertical_rate_mm_per_rad": 0.3092856982948786,
+        "body_bounce_mm": 0.42161984460854285,
+        "swing_gap_max_mm": 8.143729841201676,
+        "stance_stride_mm": 44.59245721032694,
+        "minimum_forward_rate_mm_per_rad": 5.4482547873164995,
+        "horizontal_handoff_jump_mm_per_rad": 5.107425989630184,
+        "stance_switch_count": 2,
+        "circle_tangency_margin_mm": 1.579319335534013
+      }
+    },
+    {
+      "dimension": "EF",
+      "physical_pitch_error_mm": -0.1,
+      "metrics": {
+        "samples": 1440,
+        "peak_stance_vertical_rate_mm_per_rad": 0.5009017727325479,
+        "rms_stance_vertical_rate_mm_per_rad": 0.3109444666274014,
+        "body_bounce_mm": 0.4290624388118971,
+        "swing_gap_max_mm": 8.107166047096932,
+        "stance_stride_mm": 44.28282048635805,
+        "minimum_forward_rate_mm_per_rad": 4.611487879365071,
+        "horizontal_handoff_jump_mm_per_rad": 6.306542433159085,
+        "stance_switch_count": 2,
+        "circle_tangency_margin_mm": 1.579319335534013
+      }
+    },
+    {
+      "dimension": "EF",
+      "physical_pitch_error_mm": 0.1,
+      "metrics": {
+        "samples": 1440,
+        "peak_stance_vertical_rate_mm_per_rad": 0.6861401473441695,
+        "rms_stance_vertical_rate_mm_per_rad": 0.29007288709667023,
+        "body_bounce_mm": 0.28407508832815154,
+        "swing_gap_max_mm": 8.396458083843612,
+        "stance_stride_mm": 45.16272608949628,
+        "minimum_forward_rate_mm_per_rad": 6.772520948328816,
+        "horizontal_handoff_jump_mm_per_rad": 4.098433484891808,
+        "stance_switch_count": 2,
+        "circle_tangency_margin_mm": 1.579319335534013
+      }
+    }
+  ],
+  "all_combined_errors_status": "UNKNOWN",
+  "maximum_bounce_mm": 0.43684065340445954,
+  "minimum_swing_gap_mm": 7.567392236980808,
+  "maximum_handoff_rate_jump_mm_per_rad": 6.636599706314538,
+  "more_than_two_handoffs_cases": [],
+  "conditional_swing_clearance_status": "FAIL",
+  "handoff_no_worse_than_r2_nominal_status": "FAIL"
+}

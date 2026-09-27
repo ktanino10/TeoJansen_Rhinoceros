@@ -1,0 +1,264 @@
+{
+  "revisionId": "v3-r2-feasibility-02",
+  "sourceCommit": "5d436bef355db8a0c374f125a2eb12b5ec1eac38",
+  "sourceCommitContainsInputs": true,
+  "sourceHashes": {
+    "scripts/ver3/study_r2.json": "d09cd6a3c4f3e2c919c10de9cf8b5f6dfcecb8c70388a243029fdde4e44eff0b",
+    "scripts/ver3/study_r2.py": "5e477d4dedacf0ae7de164c6d0386562eb77a924ea9147cdeb0f1c35578635f4",
+    "scripts/ver3/beam.py": "59a1964a2b33de0aea13ba51c403f1cbbd46038e57cbf65b36ca7a92ccdc327e",
+    "scripts/ver3/core.py": "1572f2d2005e84a9b4929aa39f1dbdb2144dfac6f5333bfb85e1ddb3fb856033",
+    "scripts/ver3/design.json": "cdbf69689a31706893c4f8cb6464491bc5dedeebe4df6eea5cb78cc2a9a3122b",
+    "scripts/ver3/test_study_r2.py": "bad4a56cd278d7e72c8060ffb9829885d45a694b7226674b32ccf4276ebe18e3"
+  },
+  "resultStatus": "UNKNOWN",
+  "qualifiedPrototypeCount": 0,
+  "operatingEnvelope": {
+    "brandReported": "rifa",
+    "brandInterpreted": "ReFa",
+    "mode": "cold air",
+    "motion": "dryer follows the freely walking model, approximately constant distance",
+    "targetTravelMm": 300,
+    "ground": "level floor",
+    "externalPush": false,
+    "model": null,
+    "nozzle": null,
+    "distanceMm": null,
+    "measuredVelocityField": null,
+    "measuredStaticTorqueCurve": null,
+    "measuredRunningTorqueCurve": null,
+    "maximumDemoDurationS": null
+  },
+  "budget": {
+    "materialsAndPurchasedPartsJpyPerPrototype": 20000,
+    "excluded": [
+      "dryer",
+      "tools"
+    ],
+    "shipping": "separate, unknown",
+    "regionAssumption": "Japan; individual buyer; domestic retail preferred",
+    "foreignExchangeJpyPerUsdSensitivity": [
+      140,
+      160,
+      180
+    ],
+    "liveForeignExchangeJpyPerUsd": null,
+    "importTaxJpy": null
+  },
+  "criteria": {
+    "statusVocabulary": [
+      "PASS",
+      "FAIL",
+      "UNKNOWN"
+    ],
+    "closureResidualMm": 1e-06,
+    "nearContactMm": 0.25,
+    "stanceMaterialPointAuditMm": 3.0,
+    "centerOfMassUncertaintyMm": 5.0,
+    "assemblyClearanceReserveMm": 0.5,
+    "gearTangentialBacklashMm": 0.3,
+    "maximumBacklashConsumptionFraction": 0.5,
+    "printedCouponStrengthScreenMpa": 8.0,
+    "bucklingScreenRatio": 3.0,
+    "minimumTipThicknessMm": 0.7,
+    "minimumContactRatio": 1.4,
+    "maximumPartSpanStudyMm": 230,
+    "measuredTorqueMarginTarget": 2.0,
+    "note": "Engineering screening targets, not confirmed material properties or certification. Support clearance budgets must still include final CAD, tolerances and measured deflection. No compound PASS with missing inputs."
+  },
+  "candidates": [
+    {
+      "revisionId": "v3-r2-feasibility-02",
+      "designId": "A",
+      "resultStatus": "UNKNOWN",
+      "qualifiedPrototype": false,
+      "part_count_architecture_lower_bound": 198,
+      "actual_mass_kg": null,
+      "mass_assumption_range_kg": [
+        0.4,
+        0.55,
+        0.75
+      ],
+      "verified_shaft_subtotal_usd": 25.05,
+      "complete_purchased_plus_printed_cost_jpy": null,
+      "measurement_target_static_net_input_nm": 0.02996273418969234,
+      "uncalibrated_proxy_peak_speed_for_target_m_s": null,
+      "target_cog_wind_and_5mm_margin_min_mm": 8.58470974633132,
+      "matrix": [
+        {
+          "criterion": "剛リンク閉路",
+          "resultStatus": "PASS",
+          "scope": "candidate skeleton only"
+        },
+        {
+          "criterion": "機械的な位相経路",
+          "resultStatus": "UNKNOWN",
+          "evidence": "5-gear 1:1 bus and indexed D-cranks defined; complete CAD sweep pending"
+        },
+        {
+          "criterion": "接地・30cm連続歩行",
+          "resultStatus": "UNKNOWN",
+          "evidence": "kinematic tripod compatibility only; handoff impacts and friction unknown"
+        },
+        {
+          "criterion": "全角度自己始動",
+          "resultStatus": "UNKNOWN",
+          "evidence": "measured supply lower bound is null"
+        },
+        {
+          "criterion": "仮の噴流HYP_8_20・高抵抗ケース",
+          "resultStatus": "FAIL",
+          "scope": "hypothetical cell only; momentum ceiling is necessary, not a measured ReFa result"
+        },
+        {
+          "criterion": "軸のみの噛合い変形予算",
+          "resultStatus": "PASS",
+          "scope": "assumed sections/loads; excludes frame, bearing fits and print tolerances"
+        },
+        {
+          "criterion": "印刷材・構造全体",
+          "resultStatus": "UNKNOWN",
+          "evidence": "beam/column screens not final assembly or measured FDM properties"
+        },
+        {
+          "criterion": "全周干渉・工具・組立",
+          "resultStatus": "UNKNOWN"
+        },
+        {
+          "criterion": "調達・税込2万円",
+          "resultStatus": "UNKNOWN",
+          "evidence": "only shaft list-price subtotal verified; complete BOM not priced"
+        }
+      ]
+    },
+    {
+      "revisionId": "v3-r2-feasibility-02",
+      "designId": "B",
+      "resultStatus": "UNKNOWN",
+      "qualifiedPrototype": false,
+      "part_count_architecture_lower_bound": 205,
+      "actual_mass_kg": null,
+      "mass_assumption_range_kg": [
+        0.45,
+        0.65,
+        0.85
+      ],
+      "verified_shaft_subtotal_usd": 29.740000000000002,
+      "complete_purchased_plus_printed_cost_jpy": null,
+      "measurement_target_static_net_input_nm": 0.006387475423637021,
+      "uncalibrated_proxy_peak_speed_for_target_m_s": null,
+      "target_cog_wind_and_5mm_margin_min_mm": 7.349308590502234,
+      "matrix": [
+        {
+          "criterion": "剛リンク閉路",
+          "resultStatus": "PASS",
+          "scope": "candidate skeleton only"
+        },
+        {
+          "criterion": "機械的な位相経路",
+          "resultStatus": "UNKNOWN",
+          "evidence": "5-gear 1:1 bus and indexed D-cranks defined; complete CAD sweep pending"
+        },
+        {
+          "criterion": "接地・30cm連続歩行",
+          "resultStatus": "UNKNOWN",
+          "evidence": "kinematic tripod compatibility only; handoff impacts and friction unknown"
+        },
+        {
+          "criterion": "全角度自己始動",
+          "resultStatus": "UNKNOWN",
+          "evidence": "measured supply lower bound is null"
+        },
+        {
+          "criterion": "仮の噴流HYP_8_20・高抵抗ケース",
+          "resultStatus": "FAIL",
+          "scope": "hypothetical cell only; momentum ceiling is necessary, not a measured ReFa result"
+        },
+        {
+          "criterion": "軸のみの噛合い変形予算",
+          "resultStatus": "PASS",
+          "scope": "assumed sections/loads; excludes frame, bearing fits and print tolerances"
+        },
+        {
+          "criterion": "印刷材・構造全体",
+          "resultStatus": "UNKNOWN",
+          "evidence": "beam/column screens not final assembly or measured FDM properties"
+        },
+        {
+          "criterion": "全周干渉・工具・組立",
+          "resultStatus": "UNKNOWN"
+        },
+        {
+          "criterion": "調達・税込2万円",
+          "resultStatus": "UNKNOWN",
+          "evidence": "only shaft list-price subtotal verified; complete BOM not priced"
+        }
+      ]
+    },
+    {
+      "revisionId": "v3-r2-feasibility-02",
+      "designId": "C",
+      "resultStatus": "UNKNOWN",
+      "qualifiedPrototype": false,
+      "part_count_architecture_lower_bound": 198,
+      "actual_mass_kg": null,
+      "mass_assumption_range_kg": [
+        0.35,
+        0.5,
+        0.7
+      ],
+      "verified_shaft_subtotal_usd": 25.05,
+      "complete_purchased_plus_printed_cost_jpy": null,
+      "measurement_target_static_net_input_nm": 0.014225442424584508,
+      "uncalibrated_proxy_peak_speed_for_target_m_s": null,
+      "target_cog_wind_and_5mm_margin_min_mm": 8.7227132378552,
+      "matrix": [
+        {
+          "criterion": "剛リンク閉路",
+          "resultStatus": "PASS",
+          "scope": "candidate skeleton only"
+        },
+        {
+          "criterion": "機械的な位相経路",
+          "resultStatus": "UNKNOWN",
+          "evidence": "5-gear 1:1 bus and indexed D-cranks defined; complete CAD sweep pending"
+        },
+        {
+          "criterion": "接地・30cm連続歩行",
+          "resultStatus": "UNKNOWN",
+          "evidence": "kinematic tripod compatibility only; handoff impacts and friction unknown"
+        },
+        {
+          "criterion": "全角度自己始動",
+          "resultStatus": "UNKNOWN",
+          "evidence": "measured supply lower bound is null"
+        },
+        {
+          "criterion": "仮の噴流HYP_8_20・高抵抗ケース",
+          "resultStatus": "FAIL",
+          "scope": "hypothetical cell only; momentum ceiling is necessary, not a measured ReFa result"
+        },
+        {
+          "criterion": "軸のみの噛合い変形予算",
+          "resultStatus": "PASS",
+          "scope": "assumed sections/loads; excludes frame, bearing fits and print tolerances"
+        },
+        {
+          "criterion": "印刷材・構造全体",
+          "resultStatus": "UNKNOWN",
+          "evidence": "beam/column screens not final assembly or measured FDM properties"
+        },
+        {
+          "criterion": "全周干渉・工具・組立",
+          "resultStatus": "UNKNOWN"
+        },
+        {
+          "criterion": "調達・税込2万円",
+          "resultStatus": "UNKNOWN",
+          "evidence": "only shaft list-price subtotal verified; complete BOM not priced"
+        }
+      ]
+    }
+  ],
+  "releaseDecision": "STOP_BEFORE_FULL_CAD_RENDER; complete measurable input and mechanical/procurement gates first",
+  "oldFirstCut": "Preserved in docs/ver3, FreeCAD/Ver.3, STL/Ver.3 and Blender/Ver.3; not superseded by this study"
+}

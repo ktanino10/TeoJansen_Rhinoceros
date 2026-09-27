@@ -1,0 +1,104 @@
+{
+  "method": "co-oriented Jansen legs, mechanically phased 0/180, rigid circular-sole rolling constraints",
+  "samples": 724,
+  "step_deg": 0.5,
+  "switch_one_sided_angles_deg": [
+    95.22765464348682,
+    95.22766610264271,
+    275.2276546434869,
+    275.22766610264284
+  ],
+  "phase_map": [
+    {
+      "id": "LEG_0_LEFT",
+      "shaft": "MAIN_0",
+      "crankPartId": "P_CRANK_INDEX_0",
+      "phase_deg": 0,
+      "x_mm": -64.0,
+      "y_mm": -84.0,
+      "orientation": "same sagittal direction"
+    },
+    {
+      "id": "LEG_0_RIGHT",
+      "shaft": "MAIN_0",
+      "crankPartId": "P_CRANK_INDEX_180",
+      "phase_deg": 180,
+      "x_mm": 64.0,
+      "y_mm": -84.0,
+      "orientation": "same sagittal direction"
+    },
+    {
+      "id": "LEG_1_LEFT",
+      "shaft": "MAIN_1",
+      "crankPartId": "P_CRANK_INDEX_180",
+      "phase_deg": 180,
+      "x_mm": -64.0,
+      "y_mm": 0,
+      "orientation": "same sagittal direction"
+    },
+    {
+      "id": "LEG_1_RIGHT",
+      "shaft": "MAIN_1",
+      "crankPartId": "P_CRANK_INDEX_0",
+      "phase_deg": 0,
+      "x_mm": 64.0,
+      "y_mm": 0,
+      "orientation": "same sagittal direction"
+    },
+    {
+      "id": "LEG_2_LEFT",
+      "shaft": "MAIN_2",
+      "crankPartId": "P_CRANK_INDEX_0",
+      "phase_deg": 0,
+      "x_mm": -64.0,
+      "y_mm": 84.0,
+      "orientation": "same sagittal direction"
+    },
+    {
+      "id": "LEG_2_RIGHT",
+      "shaft": "MAIN_2",
+      "crankPartId": "P_CRANK_INDEX_180",
+      "phase_deg": 180,
+      "x_mm": 64.0,
+      "y_mm": 84.0,
+      "orientation": "same sagittal direction"
+    }
+  ],
+  "closure_residual_mm": 2.1316282072803006e-14,
+  "body_height_range_mm": [
+    66.56746070210374,
+    67.78371573843317
+  ],
+  "body_bounce_mm": 1.2162550363294287,
+  "target_cog_minimum_support_margin_mm": 15.674145447156885,
+  "target_cog_minimum_normal_fraction": 0.11159466293157,
+  "minimum_forward_rate_mm_per_rad": 5.715825609903016,
+  "forward_axis": [
+    0,
+    -1,
+    0
+  ],
+  "advance_per_cycle_quadrature_mm": 93.60812671521359,
+  "handoff_velocity_discontinuities": [
+    {
+      "crank_deg": 95.22766037306576,
+      "horizontal_velocity_jump_mm_per_rad": 5.191132973446336,
+      "vertical_velocity_jump_mm_per_rad": 5.543382228623273
+    },
+    {
+      "crank_deg": 275.22766037306593,
+      "horizontal_velocity_jump_mm_per_rad": 5.191132971458153,
+      "vertical_velocity_jump_mm_per_rad": 5.543382228978544
+    }
+  ],
+  "within_tripod_constraint_mismatch_mm": 0.0,
+  "within_tripod_mismatch_basis": "identical orientation/phase/geometry; an algebraic compatibility, NOT measured slip",
+  "finite_sole_contact_audit_mm": null,
+  "physical_continuous_walk_status": "UNKNOWN",
+  "limitations": [
+    "The required CG target is not a new CAD mass measurement.",
+    "Zero within-tripod mismatch does not prove passive contact, floor friction or the inherited 3mm material-point target.",
+    "Velocity jumps need compliance/impact validation; there is no dynamic or no-slip success claim.",
+    "Outboard crank geometry, drive-bus backlash and swept parts still need final CAD."
+  ]
+}

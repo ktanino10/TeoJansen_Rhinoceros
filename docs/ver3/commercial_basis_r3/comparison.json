@@ -1,0 +1,1686 @@
+{
+  "revisionId": "v3-commercial-r3-01",
+  "referenceData": {
+    "operatingReference": {
+      "manufacturer": "Panasonic",
+      "model": "EH-NE5L",
+      "officialProductUrl": "https://panasonic.jp/hair/products/EH-NE5L.html",
+      "officialSpecUrl": "https://panasonic.jp/hair/products/EH-NE5L/spec.html",
+      "manufacturerManualHostedByRetailer": "https://aeonretail.com/Contents/careproducts/pdf/P-4549980746394.pdf",
+      "manualDocumentId": "SEHNE5L03 A1123-0",
+      "mode": "COLD, described in the manual as strong cold air",
+      "nozzle": "built-in quick-dry nozzle, described as a combination of strong and weak streams",
+      "catalogueFlowM3Min": [
+        1.6,
+        3.0
+      ],
+      "catalogueFlowNotes": "1.6 JIS at outlet and 3.0 proprietary hair-reaching metric are not a measured cold velocity profile",
+      "coldVelocityAt150MmMS": null,
+      "manufacturerApprovedModelDrivingUse": false,
+      "scopeWarning": "The manual restricts use to human hair drying/styling. Used here as an operating-specification reference for calculations, not authorization to operate the appliance outside its instructions."
+    },
+    "publishedColdExperiment": {
+      "authors": "Timothy C. Scott; Lemuel T. Curran",
+      "title": "Laboratory Fixture for Heat Transfer Using a Hair Drier",
+      "publisher": "ASEE 2025, paper 46692",
+      "url": "https://peer.asee.org/laboratory-fixture-for-heat-transfer-using-a-hair-drier.pdf",
+      "location": "section 2.2 and Figure 8, PDF pages 7-8",
+      "mode": "cold air over a heated 19mm disc",
+      "dryerModel": null,
+      "localVelocityRows": [
+        {
+          "fan": "Hi",
+          "distanceMm": 100,
+          "velocityMS": 7.3
+        },
+        {
+          "fan": "Hi",
+          "distanceMm": 150,
+          "velocityMS": 6.4
+        },
+        {
+          "fan": "Low",
+          "distanceMm": 100,
+          "velocityMS": 5.8
+        },
+        {
+          "fan": "Low",
+          "distanceMm": 200,
+          "velocityMS": 4.5
+        },
+        {
+          "fan": "Low",
+          "distanceMm": 300,
+          "velocityMS": 3.6
+        },
+        {
+          "fan": "Low",
+          "distanceMm": 400,
+          "velocityMS": 2.9
+        }
+      ],
+      "velocityInterpretation": "reported air velocity at the disc test location; the table does not establish the cross-section maximum, area average or radial Gaussian width",
+      "temperatureNote": "Cold-air tests only. The paper's separate 73C hot-air mass-flow/16.8m/s example is not used.",
+      "transferToReferencePanasonic": "not measured; adopting the local velocity as a Gaussian peak is explicitly a modeling assumption",
+      "measurementUncertainty": null
+    },
+    "coinReference": {
+      "url": "https://www.mint.go.jp/operations/production/operations_coin_presently-minted.html",
+      "nominalOneYenMassG": 1.0,
+      "diameterMm": 20,
+      "material": "pure aluminum",
+      "usedCoinMassToleranceG": null,
+      "note": "A circulation coin is not a calibrated mass; batch mint tolerances must not be converted to individual bounds."
+    },
+    "checkedDateJst": "2026-09-27"
+  },
+  "modelAssumptions": {
+    "distanceMm": 150,
+    "fanSetting": "COLD on the reference appliance; analogous Hi cold airflow for the published example, not an equality of actual fan outputs",
+    "nominalGaussianPeakMS": 6.4,
+    "velocityMultipliers": [
+      0.8,
+      1.0,
+      1.2
+    ],
+    "nominalVelocitySigmaMm": 20,
+    "velocitySigmaMmCases": [
+      15,
+      20,
+      25
+    ],
+    "aimErrorMmCases": [
+      -10,
+      0,
+      10
+    ],
+    "airDensityKgM3": 1.225,
+    "airKinematicViscosityM2S": 1.5e-05,
+    "retainedProxyForceFractions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "measuredGuarantee": false,
+    "profileWarning": "The Gaussian peak, axisymmetry, sigma, +/-20% and +/-10mm are design sensitivity inputs, not measured confidence bounds for any dryer.",
+    "distanceModel": "No extrapolation outside the adopted 150mm plane. Published other distances are reference data, not a fitted Panasonic/ReFa law.",
+    "availableTorqueLowerBoundNm": null
+  },
+  "requirements": {
+    "source": "User accepted a representative commercial hair dryer as a common design basis on 2026-09-27",
+    "coldAir": true,
+    "followModelAtFixedDistance": true,
+    "unpushedStart": true,
+    "levelFloorTravelMm": 300,
+    "materialsBudgetJpyPerMachine": 20000,
+    "shipping": "separate",
+    "requiresUserMeasurementBeforeDesign": false,
+    "requiresReFaModelBeforeDesign": false,
+    "realMachineValidation": "UNKNOWN"
+  },
+  "boundedSearch": {
+    "functionEvaluations": 2440,
+    "originalMetrics": {
+      "samples": 1440,
+      "peak_stance_vertical_rate_mm_per_rad": 3.2235666229769318,
+      "rms_stance_vertical_rate_mm_per_rad": 1.1813549945720698,
+      "body_bounce_mm": 1.2150016827981815,
+      "swing_gap_max_mm": 15.674482851824429,
+      "stance_stride_mm": 44.44194724596195,
+      "minimum_forward_rate_mm_per_rad": 5.7225956557703075,
+      "horizontal_handoff_jump_mm_per_rad": 5.257898758677085,
+      "stance_switch_count": 2,
+      "circle_tangency_margin_mm": 0.8346129537293265
+    },
+    "selectedMetrics": {
+      "samples": 1440,
+      "peak_stance_vertical_rate_mm_per_rad": 0.47728722888661346,
+      "rms_stance_vertical_rate_mm_per_rad": 0.28836903387898877,
+      "body_bounce_mm": 0.3537791536001862,
+      "swing_gap_max_mm": 8.251620427631522,
+      "stance_stride_mm": 45.15186754669196,
+      "minimum_forward_rate_mm_per_rad": 8.638913274823485,
+      "horizontal_handoff_jump_mm_per_rad": 0.09619636327513348,
+      "stance_switch_count": 2,
+      "circle_tangency_margin_mm": 1.579319335534013
+    }
+  },
+  "linkageTolerance": {
+    "method": "one-at-a-time +/-0.1mm pitch perturbations; not a worst-case tolerance stack",
+    "all_combined_errors_status": "UNKNOWN",
+    "maximum_bounce_mm": 0.43684065340445954,
+    "minimum_swing_gap_mm": 7.567392236980808,
+    "maximum_handoff_rate_jump_mm_per_rad": 6.636599706314538,
+    "more_than_two_handoffs_cases": [],
+    "conditional_swing_clearance_status": "FAIL",
+    "handoff_no_worse_than_r2_nominal_status": "FAIL"
+  },
+  "bearingInterfaceUpdate": {
+    "manufacturerSource": "https://www.nskmicro.co.jp/products/bearing/bearing_size_pdf/single_row_mm.pdf",
+    "cataloguePages": [
+      42,
+      43
+    ],
+    "catalogueExactDesignation": "686A open / 686AZZ1 shielded",
+    "retailerDesignation": "ISC 686ZZ, not proven identical to the catalogue 686AZZ1",
+    "catalogueShieldedDimensionsMm": [
+      6,
+      13,
+      5
+    ],
+    "catalogueOpenDimensionsMm": [
+      6,
+      13,
+      3.5
+    ],
+    "openShaftShoulderMinimumMm": 7.2,
+    "shieldedShaftShoulderMaximumMm": 7.4,
+    "shieldedHousingShoulderMinimumMm": 11.7,
+    "maximumFilletMm": 0.15,
+    "candidateSpacerRetail": {
+      "sku": "c-sus-06-08-01",
+      "url": "https://store.shopping.yahoo.co.jp/neji-701/c-sus-06-08-01.html",
+      "dimensionsMm": [
+        6.2,
+        8,
+        1
+      ],
+      "material": "SUS303",
+      "packQuantity": 2,
+      "priceJpyDisplayed": 1400,
+      "taxBasis": "retail displayed price, no separately stated tax amount extracted",
+      "shippingJpyDisplayed": 300,
+      "availabilityText": "structured data InStock; Tokyo earliest arrival 2026-09-29 displayed, not a stock guarantee",
+      "manufacturingTolerances": null
+    },
+    "decision": "REJECT this 8mm-OD spacer for a 7.4mm maximum shielded shoulder. Catalogue/retailer suffix mismatch must be closed. Do not silently install it or change to open bearings.",
+    "requiredDesignChange": "Keep direct 15mm collar contact forbidden. Select a ring-compatible standard spacer or a different fully documented bearing/retention set before final CAD release.",
+    "qualification": "UNKNOWN"
+  },
+  "documentedSupportFallback": {
+    "bearing": {
+      "manufacturer": "NSK (Nippon Seiko), not identified as NSK Micro",
+      "retailerExactSku": "626ZZ",
+      "url": "https://e-seki.net/products/detail1825.html",
+      "dimensionsMm": [
+        6,
+        19,
+        6
+      ],
+      "material": "high-carbon chromium bearing steel",
+      "unitPriceJpyTaxIncluded": 198,
+      "availabilityText": "lead time 1-2 days displayed; not a reservation"
+    },
+    "collar": {
+      "manufacturer": "IWATA",
+      "sku": "SC0607CB2",
+      "manufacturerCatalogue": "https://www.iwata-fa.jp/contents/assets/pdf/general.pdf",
+      "printedPages": [
+        84,
+        85
+      ],
+      "catalogueDate": "2022-09; current dimensions must be confirmed before release",
+      "listedSuitableBearing": "626ZZ",
+      "boreMm": 6,
+      "boreTolerance": "H8",
+      "bodyDiameterMm": 13,
+      "bodyDiameterToleranceMm": 0.1,
+      "bossDiameterMm": 9.2,
+      "bossDiameterToleranceMm": [
+        -0.2,
+        0
+      ],
+      "totalWidthMm": 7.5,
+      "bossLengthMm": 2.5,
+      "screws": "2 x M3x3, 120 degrees apart",
+      "material": "S45C, black oxide",
+      "currentCataloguePriceJpyExTax": 430,
+      "currentPriceSource": "https://www.orange-book.com/ja/c/products/index.html?itemCd=SC0607CB2%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%201004",
+      "retailPurchasePriceJpy": null
+    },
+    "decision": "One documented candidate set, NOT selected into the R3 calculations. Larger 19mm housing, exact NSK 626ZZ inner-face dimensions, current collar revision, drag, added mass and retail price still need to close.",
+    "spacerSubstitution": "No loose 8mm spacer is added; the integrated boss is intended to contact the inner ring.",
+    "whyNotAutomaticPass": "NSK Micro 626ZZ1 shielded shoulder table has max8.5mm, different from collar boss9.2mm. This does not prove a conflict for NSK 626ZZ, but proves suffix/brand identity cannot be assumed.",
+    "physicalOrProcurementQualification": "UNKNOWN",
+    "notAppliedToBaseline": true
+  },
+  "candidates": [
+    {
+      "designId": "A",
+      "candidate": {
+        "id": "A",
+        "direction": "large rotor, few stages",
+        "rotorDiameterMm": 150,
+        "stageRatios": [
+          4,
+          4
+        ],
+        "axisCentersYzMm": {
+          "O": [
+            0,
+            0
+          ],
+          "M1": [
+            -50,
+            37.5
+          ],
+          "I": [
+            -50,
+            100
+          ]
+        },
+        "stages": [
+          [
+            "I",
+            "M1"
+          ],
+          [
+            "M1",
+            "O"
+          ]
+        ],
+        "massCasesKg": [
+          0.4482785569171365,
+          0.5982785569171365,
+          0.7982785569171365
+        ],
+        "shafts140mm": 4,
+        "shafts120mm": 1,
+        "structure": "short-span windowed frame; final solid geometry pending"
+      },
+      "startup": [
+        {
+          "id": "low",
+          "mass_kg_assumed": 0.4482785569171365,
+          "journal_mu_assumed": 0.05,
+          "bearing_drag_nmm_each_assumed": 0.1,
+          "old_geometry_ratio_gearbus_peak_nm_at_same_force": 0.00239804859170236,
+          "new_ratio_only_peak_nm": 0.0012990243213250872,
+          "ratio_only_definition": "same R2 mass, wind-application position and link geometry; change the numeric ratio only",
+          "optimized_linkage_gearbus_peak_nm": 0.0007563789897203202,
+          "optimized_linkage_rod_bus_peak_nm": 0.000695914284043366,
+          "proposed_rod_peak_reduction_fraction": 0.7097997569976926,
+          "gross_aero_design_target_nm": 0.0011918285680867322,
+          "net_after_same_two_input_bearings_target_nm": 0.000991828568086732,
+          "proxy_min_raw_nm": 0.0016864924321005209,
+          "conditional_budget_by_retained_fraction": [
+            {
+              "retained_fraction_assumed": 0.25,
+              "minimum_proxy_nm": 0.0004216231080251302,
+              "margin_to_design_target": 0.35376153862628984,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.5,
+              "minimum_proxy_nm": 0.0008432462160502604,
+              "margin_to_design_target": 0.7075230772525797,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.75,
+              "minimum_proxy_nm": 0.0012648693240753907,
+              "margin_to_design_target": 1.0612846158788696,
+              "status": "PASS"
+            }
+          ],
+          "required_input_profile_peak_phase_deg": 11.0,
+          "minimum_support_margin_mm_at_target_cog": 14.79488298225389,
+          "gear_bus": {
+            "total_reduction": 16,
+            "reducer_efficiency_assumption": 0.9025,
+            "bus_efficiency_upper_loss_model": 0.9025,
+            "input_equivalent_bearing_drag_nm": 0.000329365182894545,
+            "bearing_count": 14,
+            "note": "Every reducer and bus bearing counted; two extra bus meshes included. No lossless synchronization.",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 2.3350191138277188e-14,
+            "support_drive_couple_definition": "required signed external input torque enters whole-body moment balance; fixed point with reaction/friction calculation, not the uncalibrated available wind torque"
+          },
+          "rod_bus": {
+            "method": "same R2 quartered-rod force/friction feedback upper-loss bound",
+            "input_equivalent_bearing_drag_nm": 0.0002957057265789714,
+            "bearing_count": 10,
+            "coupling_efficiency_bound_assumed": 0.9646446609406726,
+            "extra_rod_friction_nmm": 0.009806022374400002,
+            "preload_each_n_assumed": 0.0,
+            "full_mechanism_qualification": "UNKNOWN",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 1.8547175514166403e-14
+          },
+          "loads": {
+            "joint_n": 3.096302402718015,
+            "crank_pin_n": 1.7431281901228874,
+            "fixed_pivot_n": 3.801380436528174,
+            "ac_compression_n": 1.429078916864008,
+            "crank_pin_force_sum_n": 2.3886495501204177,
+            "fixed_pivot_force_sum_n": 3.8747633752603763,
+            "equilibrium_residual": 2.1316282072803006e-14,
+            "virtual_work_residual_nmm": 8.823599961793605e-09
+          },
+          "torque_decomposition_at_same_peak": {
+            "same_resistance_case": "low",
+            "same_peak_crank_angle_deg": 11.0,
+            "crank_load_nmm": 4.608938797353499,
+            "crank_joint_friction_nmm": 0.9559478365804044,
+            "positive_crank_demand_nmm": 5.564886633933903,
+            "ideal_input_after_ratio_nm": 0.00034780541462086896,
+            "reducer_mesh_loss_input_nm": 3.757454617787784e-05,
+            "coupling_load_friction_input_nm": 1.4124619906591697e-05,
+            "coupling_preload_selfweight_loss_input_nm": 7.039767590561793e-07,
+            "downstream_bearing_loss_input_nm": 9.57057265789714e-05,
+            "input_two_bearing_loss_nm": 0.0002,
+            "total_required_input_nm": 0.000695914284043366,
+            "downstream_required_after_input_bearings_nm": 0.000495914284043366,
+            "designer_downstream_margin_multiplier": 2.0,
+            "net_output_target_nm": 0.000991828568086732,
+            "gross_aerodynamic_target_nm": 0.0011918285680867322,
+            "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+          },
+          "load_components_nmm_at_crank": {
+            "gravity_plus_external_peak": 4.625104602487381,
+            "gravity_plus_external_min": -3.471215595319122,
+            "joint_friction_peak": 1.9581765976772623,
+            "peak_total": 5.564886631934184,
+            "note": "individual maxima need not occur at the same angle; do not add peaks to reproduce peak_total"
+          },
+          "actual_self_start_status": "UNKNOWN"
+        },
+        {
+          "id": "nominal",
+          "mass_kg_assumed": 0.5982785569171365,
+          "journal_mu_assumed": 0.1,
+          "bearing_drag_nmm_each_assumed": 0.3,
+          "old_geometry_ratio_gearbus_peak_nm_at_same_force": 0.005452667327399937,
+          "new_ratio_only_peak_nm": 0.003026333725182451,
+          "ratio_only_definition": "same R2 mass, wind-application position and link geometry; change the numeric ratio only",
+          "optimized_linkage_gearbus_peak_nm": 0.00184480203709784,
+          "optimized_linkage_rod_bus_peak_nm": 0.0017080343385461113,
+          "proposed_rod_peak_reduction_fraction": 0.6867525128549197,
+          "gross_aero_design_target_nm": 0.0028160686770922223,
+          "net_after_same_two_input_bearings_target_nm": 0.0022160686770922224,
+          "proxy_min_raw_nm": 0.0016864924321005209,
+          "conditional_budget_by_retained_fraction": [
+            {
+              "retained_fraction_assumed": 0.25,
+              "minimum_proxy_nm": 0.0004216231080251302,
+              "margin_to_design_target": 0.14972046365732958,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.5,
+              "minimum_proxy_nm": 0.0008432462160502604,
+              "margin_to_design_target": 0.29944092731465916,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.75,
+              "minimum_proxy_nm": 0.0012648693240753907,
+              "margin_to_design_target": 0.4491613909719887,
+              "status": "FAIL"
+            }
+          ],
+          "required_input_profile_peak_phase_deg": 191.5,
+          "minimum_support_margin_mm_at_target_cog": 15.188847886691057,
+          "gear_bus": {
+            "total_reduction": 16,
+            "reducer_efficiency_assumption": 0.81,
+            "bus_efficiency_upper_loss_model": 0.81,
+            "input_equivalent_bearing_drag_nm": 0.0010524462734339277,
+            "bearing_count": 14,
+            "note": "Every reducer and bus bearing counted; two extra bus meshes included. No lossless synchronization.",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 2.936602783859543e-13,
+            "support_drive_couple_definition": "required signed external input torque enters whole-body moment balance; fixed point with reaction/friction calculation, not the uncalibrated available wind torque"
+          },
+          "rod_bus": {
+            "method": "same R2 quartered-rod force/friction feedback upper-loss bound",
+            "input_equivalent_bearing_drag_nm": 0.0009161237685816101,
+            "bearing_count": 10,
+            "coupling_efficiency_bound_assumed": 0.9292893218813453,
+            "extra_rod_friction_nmm": 1.2196120447488,
+            "preload_each_n_assumed": 1.0,
+            "full_mechanism_qualification": "UNKNOWN",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 2.103987557094955e-13
+          },
+          "loads": {
+            "joint_n": 4.236367889812795,
+            "crank_pin_n": 2.3835773944831433,
+            "fixed_pivot_n": 5.17225377779684,
+            "ac_compression_n": 1.8961407503196168,
+            "crank_pin_force_sum_n": 3.1138829686754796,
+            "fixed_pivot_force_sum_n": 5.270146532199362,
+            "equilibrium_residual": 2.1316282072803006e-14,
+            "virtual_work_residual_nmm": 1.1708652936093245e-08
+          },
+          "torque_decomposition_at_same_peak": {
+            "same_resistance_case": "nominal",
+            "same_peak_crank_angle_deg": 191.5,
+            "crank_load_nmm": 5.936602763081718,
+            "crank_joint_friction_nmm": 2.3812311058961164,
+            "positive_crank_demand_nmm": 8.317833868977836,
+            "ideal_input_after_ratio_nm": 0.0005198646168111148,
+            "reducer_mesh_loss_input_nm": 0.00012194355209149602,
+            "coupling_load_friction_input_nm": 4.883591124593844e-05,
+            "coupling_preload_selfweight_loss_input_nm": 0.00010126648981595216,
+            "downstream_bearing_loss_input_nm": 0.0003161237685816101,
+            "input_two_bearing_loss_nm": 0.0006,
+            "total_required_input_nm": 0.0017080343385461115,
+            "downstream_required_after_input_bearings_nm": 0.0011080343385461116,
+            "designer_downstream_margin_multiplier": 2.0,
+            "net_output_target_nm": 0.0022160686770922233,
+            "gross_aerodynamic_target_nm": 0.002816068677092223,
+            "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+          },
+          "load_components_nmm_at_crank": {
+            "gravity_plus_external_peak": 6.017998152643521,
+            "gravity_plus_external_min": -3.598491914071948,
+            "joint_friction_peak": 5.082168080103547,
+            "peak_total": 8.317833864638287,
+            "note": "individual maxima need not occur at the same angle; do not add peaks to reproduce peak_total"
+          },
+          "actual_self_start_status": "UNKNOWN"
+        },
+        {
+          "id": "high",
+          "mass_kg_assumed": 0.7982785569171365,
+          "journal_mu_assumed": 0.18,
+          "bearing_drag_nmm_each_assumed": 1.0,
+          "old_geometry_ratio_gearbus_peak_nm_at_same_force": 0.01694121695827198,
+          "new_ratio_only_peak_nm": 0.009470608711123785,
+          "ratio_only_definition": "same R2 mass, wind-application position and link geometry; change the numeric ratio only",
+          "optimized_linkage_gearbus_peak_nm": 0.00640657368048111,
+          "optimized_linkage_rod_bus_peak_nm": 0.00567963344537088,
+          "proposed_rod_peak_reduction_fraction": 0.6647446603534787,
+          "gross_aero_design_target_nm": 0.00935926689074176,
+          "net_after_same_two_input_bearings_target_nm": 0.00735926689074176,
+          "proxy_min_raw_nm": 0.0016864924321005209,
+          "conditional_budget_by_retained_fraction": [
+            {
+              "retained_fraction_assumed": 0.25,
+              "minimum_proxy_nm": 0.0004216231080251302,
+              "margin_to_design_target": 0.045048732229465774,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.5,
+              "minimum_proxy_nm": 0.0008432462160502604,
+              "margin_to_design_target": 0.09009746445893155,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.75,
+              "minimum_proxy_nm": 0.0012648693240753907,
+              "margin_to_design_target": 0.13514619668839734,
+              "status": "FAIL"
+            }
+          ],
+          "required_input_profile_peak_phase_deg": 31.5,
+          "minimum_support_margin_mm_at_target_cog": 15.766611529489662,
+          "gear_bus": {
+            "total_reduction": 16,
+            "reducer_efficiency_assumption": 0.6400000000000001,
+            "bus_efficiency_upper_loss_model": 0.6400000000000001,
+            "input_equivalent_bearing_drag_nm": 0.004150878906249999,
+            "bearing_count": 14,
+            "note": "Every reducer and bus bearing counted; two extra bus meshes included. No lossless synchronization.",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 5.602783861857752e-12,
+            "support_drive_couple_definition": "required signed external input torque enters whole-body moment balance; fixed point with reaction/friction calculation, not the uncalibrated available wind torque"
+          },
+          "rod_bus": {
+            "method": "same R2 quartered-rod force/friction feedback upper-loss bound",
+            "input_equivalent_bearing_drag_nm": 0.0032963917140966343,
+            "bearing_count": 10,
+            "coupling_efficiency_bound_assumed": 0.8727207793864215,
+            "extra_rod_friction_nmm": 6.515301680547839,
+            "preload_each_n_assumed": 3.0,
+            "full_mechanism_qualification": "UNKNOWN",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 2.7533982038807636e-12
+          },
+          "loads": {
+            "joint_n": 5.842616725172148,
+            "crank_pin_n": 3.2961413823341497,
+            "fixed_pivot_n": 7.064250572781018,
+            "ac_compression_n": 2.489550714455763,
+            "crank_pin_force_sum_n": 4.16430719355851,
+            "fixed_pivot_force_sum_n": 7.194071440750909,
+            "equilibrium_residual": 2.1316282072803006e-14,
+            "virtual_work_residual_nmm": 1.5364184591248886e-08
+          },
+          "torque_decomposition_at_same_peak": {
+            "same_resistance_case": "high",
+            "same_peak_crank_angle_deg": 31.5,
+            "crank_load_nmm": 8.997225764416418,
+            "crank_joint_friction_nmm": 5.785695466358923,
+            "positive_crank_demand_nmm": 14.78292123077534,
+            "ideal_input_after_ratio_nm": 0.0009239325769234588,
+            "reducer_mesh_loss_input_nm": 0.0005197120745194454,
+            "coupling_load_friction_input_nm": 0.00021054381930472586,
+            "coupling_preload_selfweight_loss_input_nm": 0.0007290532605266157,
+            "downstream_bearing_loss_input_nm": 0.0012963917140966343,
+            "input_two_bearing_loss_nm": 0.002,
+            "total_required_input_nm": 0.005679633445370881,
+            "downstream_required_after_input_bearings_nm": 0.0036796334453708807,
+            "designer_downstream_margin_multiplier": 2.0,
+            "net_output_target_nm": 0.007359266890741761,
+            "gross_aerodynamic_target_nm": 0.009359266890741761,
+            "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+          },
+          "load_components_nmm_at_crank": {
+            "gravity_plus_external_peak": 9.0762857219836,
+            "gravity_plus_external_min": -3.2560418440724965,
+            "joint_friction_peak": 11.730263943365467,
+            "peak_total": 14.782921272401019,
+            "note": "individual maxima need not occur at the same angle; do not add peaks to reproduce peak_total"
+          },
+          "actual_self_start_status": "UNKNOWN"
+        }
+      ],
+      "gears": {
+        "stages": [
+          {
+            "axes": [
+              "I",
+              "M1"
+            ],
+            "module": 1.25,
+            "pinion_teeth": 20,
+            "wheel_teeth": 80,
+            "ratio": 4.0,
+            "center_distance_mm": 62.5,
+            "pitch_diameters_mm": [
+              25.0,
+              100.0
+            ],
+            "tip_diameters_mm": [
+              27.5,
+              102.5
+            ],
+            "root_diameters_mm": [
+              21.875,
+              96.875
+            ],
+            "contact_ratio": 1.6912923264235955,
+            "tip_thickness_mm": 0.7035999807140508,
+            "involute_interference_margin_mm": 0.9065997984721497,
+            "radial_tip_root_clearance_mm": 0.3125,
+            "total_tangential_backlash_mm": 0.3,
+            "face_width_mm": 5.0,
+            "pressure_angle_deg": 20.0,
+            "volume_proxy_mm3": 66758.8438887831,
+            "root_web_to_provisional_12mm_boss_mm": 4.9375
+          },
+          {
+            "axes": [
+              "M1",
+              "O"
+            ],
+            "module": 1.25,
+            "pinion_teeth": 20,
+            "wheel_teeth": 80,
+            "ratio": 4.0,
+            "center_distance_mm": 62.5,
+            "pitch_diameters_mm": [
+              25.0,
+              100.0
+            ],
+            "tip_diameters_mm": [
+              27.5,
+              102.5
+            ],
+            "root_diameters_mm": [
+              21.875,
+              96.875
+            ],
+            "contact_ratio": 1.6912923264235955,
+            "tip_thickness_mm": 0.7035999807140508,
+            "involute_interference_margin_mm": 0.9065997984721497,
+            "radial_tip_root_clearance_mm": 0.3125,
+            "total_tangential_backlash_mm": 0.3,
+            "face_width_mm": 5.0,
+            "pressure_angle_deg": 20.0,
+            "volume_proxy_mm3": 66758.8438887831,
+            "root_web_to_provisional_12mm_boss_mm": 4.9375
+          }
+        ],
+        "total_reduction": 16,
+        "input_speed_sign_for_positive_crank": 1,
+        "full_mesh_collision_status": "UNKNOWN",
+        "bearing_and_frame_relative_displacement_status": "UNKNOWN"
+      },
+      "matrix": [
+        {
+          "criterion": "丸めたリンクの閉路・尺度・交互三脚",
+          "status": "PASS",
+          "scope": "kinematic skeleton"
+        },
+        {
+          "criterion": "上下動と必要入力の低減",
+          "status": "PASS",
+          "scope": "same unmeasured mass/friction inputs; comparison not physical validation"
+        },
+        {
+          "criterion": "±0.1mm単独寸法誤差で足上げ8mm",
+          "status": "FAIL",
+          "scope": "one-at-a-time hypothetical manufacturing errors, not measured print tolerance"
+        },
+        {
+          "criterion": "±0.1mm単独誤差で切替速度差をR2名目以下に維持",
+          "status": "FAIL",
+          "scope": "kinematic robustness diagnostic, not impact dynamics"
+        },
+        {
+          "criterion": "名目風・名目抵抗・保持係数0.5のトルク予算",
+          "status": "FAIL",
+          "scope": "defined uncalibrated static proxy, not all-angle measured supply"
+        },
+        {
+          "criterion": "高抵抗・全感度ケースでの成立",
+          "status": "FAIL",
+          "scope": "27 hypothetical samples only"
+        },
+        {
+          "criterion": "実自己始動・30cm歩行",
+          "status": "UNKNOWN"
+        },
+        {
+          "criterion": "最終フレーム／ロッドの全周干渉・工具・組立",
+          "status": "UNKNOWN"
+        },
+        {
+          "criterion": "購入軸受・内輪スペーサの適合と全2万円BOM",
+          "status": "UNKNOWN"
+        }
+      ],
+      "dominantTerms": {
+        "case": "nominal, same peak angle as torque_decomposition",
+        "all_bearing_fraction_of_total": 0.5363614465511389,
+        "fixed_peak_zero_bearing_loss_input_nm": 0.0007919105699645014,
+        "fixed_peak_zero_bearing_loss_2x_target_nm": 0.0015838211399290029,
+        "half_capture_proxy_minimum_nm": 0.0008432462160502604,
+        "bearing_only_improvement_can_close_at_this_fixed_peak": false,
+        "warning": "algebraic diagnostic at the existing peak/load, not a new zero-friction simulation or proposed bearing specification"
+      },
+      "physicalStatus": "UNKNOWN",
+      "qualifiedPrototype": false
+    },
+    {
+      "designId": "B",
+      "candidate": {
+        "id": "B",
+        "direction": "small rotor, high reduction/slower",
+        "rotorDiameterMm": 70,
+        "stageRatios": [
+          5,
+          5,
+          5
+        ],
+        "axisCentersYzMm": {
+          "O": [
+            0,
+            0
+          ],
+          "M2": [
+            -60,
+            45
+          ],
+          "M1": [
+            -120,
+            90
+          ],
+          "I": [
+            -60,
+            135
+          ]
+        },
+        "stages": [
+          [
+            "I",
+            "M1"
+          ],
+          [
+            "M1",
+            "M2"
+          ],
+          [
+            "M2",
+            "O"
+          ]
+        ],
+        "massCasesKg": [
+          0.4595482864897539,
+          0.6595482864897539,
+          0.8595482864897539
+        ],
+        "shafts140mm": 4,
+        "shafts120mm": 2,
+        "structure": "short-span windowed frame; one additional compound shaft; final solid geometry pending"
+      },
+      "startup": [
+        {
+          "id": "low",
+          "mass_kg_assumed": 0.4595482864897539,
+          "journal_mu_assumed": 0.05,
+          "bearing_drag_nmm_each_assumed": 0.1,
+          "old_geometry_ratio_gearbus_peak_nm_at_same_force": 0.0005772865957235191,
+          "new_ratio_only_peak_nm": 0.000410101484505307,
+          "ratio_only_definition": "same R2 mass, wind-application position and link geometry; change the numeric ratio only",
+          "optimized_linkage_gearbus_peak_nm": 0.00031818346206127166,
+          "optimized_linkage_rod_bus_peak_nm": 0.0003100791187776977,
+          "proposed_rod_peak_reduction_fraction": 0.4628679739409636,
+          "gross_aero_design_target_nm": 0.0004201582375553954,
+          "net_after_same_two_input_bearings_target_nm": 0.0002201582375553954,
+          "proxy_min_raw_nm": 0.0005785191683035531,
+          "conditional_budget_by_retained_fraction": [
+            {
+              "retained_fraction_assumed": 0.25,
+              "minimum_proxy_nm": 0.00014462979207588826,
+              "margin_to_design_target": 0.3442269581988611,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.5,
+              "minimum_proxy_nm": 0.00028925958415177653,
+              "margin_to_design_target": 0.6884539163977222,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.75,
+              "minimum_proxy_nm": 0.0004338893762276648,
+              "margin_to_design_target": 1.0326808745965834,
+              "status": "PASS"
+            }
+          ],
+          "required_input_profile_peak_phase_deg": 11.0,
+          "minimum_support_margin_mm_at_target_cog": 14.739981188438263,
+          "gear_bus": {
+            "total_reduction": 125,
+            "reducer_efficiency_assumption": 0.8573749999999999,
+            "bus_efficiency_upper_loss_model": 0.9025,
+            "input_equivalent_bearing_drag_nm": 0.0002613083725650711,
+            "bearing_count": 16,
+            "note": "Every reducer and bus bearing counted; two extra bus meshes included. No lossless synchronization.",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 2.4947491988891457e-16,
+            "support_drive_couple_definition": "required signed external input torque enters whole-body moment balance; fixed point with reaction/friction calculation, not the uncalibrated available wind torque"
+          },
+          "rod_bus": {
+            "method": "same R2 quartered-rod force/friction feedback upper-loss bound",
+            "input_equivalent_bearing_drag_nm": 0.00025677320371413065,
+            "bearing_count": 12,
+            "coupling_efficiency_bound_assumed": 0.9646446609406726,
+            "extra_rod_friction_nmm": 0.009806022374400002,
+            "preload_each_n_assumed": 0.0,
+            "full_mechanism_qualification": "UNKNOWN",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 2.141841391745114e-16
+          },
+          "loads": {
+            "joint_n": 3.1648145901351725,
+            "crank_pin_n": 1.7799032518713838,
+            "fixed_pivot_n": 3.8905763254134005,
+            "ac_compression_n": 1.4683351388190373,
+            "crank_pin_force_sum_n": 2.4568339921447206,
+            "fixed_pivot_force_sum_n": 3.9658647894897943,
+            "equilibrium_residual": 2.1316282072803006e-14,
+            "virtual_work_residual_nmm": 9.067675610374692e-09
+          },
+          "torque_decomposition_at_same_peak": {
+            "same_resistance_case": "low",
+            "same_peak_crank_angle_deg": 11.0,
+            "crank_load_nmm": 4.529552686256735,
+            "crank_joint_friction_nmm": 0.9715548223260182,
+            "positive_crank_demand_nmm": 5.501107508582753,
+            "ideal_input_after_ratio_nm": 4.4008860068662024e-05,
+            "reducer_mesh_loss_input_nm": 7.320908199204462e-06,
+            "coupling_load_friction_input_nm": 1.8812951902697984e-06,
+            "coupling_preload_selfweight_loss_input_nm": 9.485160543072732e-08,
+            "downstream_bearing_loss_input_nm": 5.677320371413064e-05,
+            "input_two_bearing_loss_nm": 0.0002,
+            "total_required_input_nm": 0.00031007911877769764,
+            "downstream_required_after_input_bearings_nm": 0.00011007911877769763,
+            "designer_downstream_margin_multiplier": 2.0,
+            "net_output_target_nm": 0.00022015823755539525,
+            "gross_aerodynamic_target_nm": 0.0004201582375553953,
+            "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+          },
+          "load_components_nmm_at_crank": {
+            "gravity_plus_external_peak": 4.5489761987273925,
+            "gravity_plus_external_min": -3.5690589978591802,
+            "joint_friction_peak": 2.0111671453499347,
+            "peak_total": 5.50110750884581,
+            "note": "individual maxima need not occur at the same angle; do not add peaks to reproduce peak_total"
+          },
+          "actual_self_start_status": "UNKNOWN"
+        },
+        {
+          "id": "nominal",
+          "mass_kg_assumed": 0.6595482864897539,
+          "journal_mu_assumed": 0.1,
+          "bearing_drag_nmm_each_assumed": 0.3,
+          "old_geometry_ratio_gearbus_peak_nm_at_same_force": 0.0015474474837294048,
+          "new_ratio_only_peak_nm": 0.0011390190364473705,
+          "ratio_only_definition": "same R2 mass, wind-application position and link geometry; change the numeric ratio only",
+          "optimized_linkage_gearbus_peak_nm": 0.0009216545673457255,
+          "optimized_linkage_rod_bus_peak_nm": 0.0009015155298113899,
+          "proposed_rod_peak_reduction_fraction": 0.4174176899117089,
+          "gross_aero_design_target_nm": 0.00120303105962278,
+          "net_after_same_two_input_bearings_target_nm": 0.0006030310596227801,
+          "proxy_min_raw_nm": 0.0005785191683035531,
+          "conditional_budget_by_retained_fraction": [
+            {
+              "retained_fraction_assumed": 0.25,
+              "minimum_proxy_nm": 0.00014462979207588826,
+              "margin_to_design_target": 0.12022116213794022,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.5,
+              "minimum_proxy_nm": 0.00028925958415177653,
+              "margin_to_design_target": 0.24044232427588044,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.75,
+              "minimum_proxy_nm": 0.0004338893762276648,
+              "margin_to_design_target": 0.3606634864138207,
+              "status": "FAIL"
+            }
+          ],
+          "required_input_profile_peak_phase_deg": 203.0,
+          "minimum_support_margin_mm_at_target_cog": 14.975879465209266,
+          "gear_bus": {
+            "total_reduction": 125,
+            "reducer_efficiency_assumption": 0.7290000000000001,
+            "bus_efficiency_upper_loss_model": 0.81,
+            "input_equivalent_bearing_drag_nm": 0.0008036071737031957,
+            "bearing_count": 16,
+            "note": "Every reducer and bus bearing counted; two extra bus meshes included. No lossless synchronization.",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 2.8956871622742852e-15,
+            "support_drive_couple_definition": "required signed external input torque enters whole-body moment balance; fixed point with reaction/friction calculation, not the uncalibrated available wind torque"
+          },
+          "rod_bus": {
+            "method": "same R2 quartered-rod force/friction feedback upper-loss bound",
+            "input_equivalent_bearing_drag_nm": 0.0007842190841241994,
+            "bearing_count": 12,
+            "coupling_efficiency_bound_assumed": 0.9292893218813453,
+            "extra_rod_friction_nmm": 1.2196120447488,
+            "preload_each_n_assumed": 1.0,
+            "full_mechanism_qualification": "UNKNOWN",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 2.170789589750477e-15
+          },
+          "loads": {
+            "joint_n": 4.6649868435666955,
+            "crank_pin_n": 2.62032231320454,
+            "fixed_pivot_n": 5.703571077636624,
+            "ac_compression_n": 2.097886659667998,
+            "crank_pin_force_sum_n": 3.444080222106253,
+            "fixed_pivot_force_sum_n": 5.8116999632252435,
+            "equilibrium_residual": 2.1316282072803006e-14,
+            "virtual_work_residual_nmm": 1.2958664585838164e-08
+          },
+          "torque_decomposition_at_same_peak": {
+            "same_resistance_case": "nominal",
+            "same_peak_crank_angle_deg": 203.0,
+            "crank_load_nmm": 6.133089048143654,
+            "crank_joint_friction_nmm": 2.580136635844978,
+            "positive_crank_demand_nmm": 8.713225683988632,
+            "ideal_input_after_ratio_nm": 6.970580547190906e-05,
+            "reducer_mesh_loss_input_nm": 2.591258337844629e-05,
+            "coupling_load_friction_input_nm": 7.27571161856645e-06,
+            "coupling_preload_selfweight_loss_input_nm": 1.4402345218268753e-05,
+            "downstream_bearing_loss_input_nm": 0.00018421908412419947,
+            "input_two_bearing_loss_nm": 0.0006,
+            "total_required_input_nm": 0.0009015155298113899,
+            "downstream_required_after_input_bearings_nm": 0.00030151552981139,
+            "designer_downstream_margin_multiplier": 2.0,
+            "net_output_target_nm": 0.00060303105962278,
+            "gross_aerodynamic_target_nm": 0.00120303105962278,
+            "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+          },
+          "load_components_nmm_at_crank": {
+            "gravity_plus_external_peak": 6.196210895453829,
+            "gravity_plus_external_min": -3.8572928113086262,
+            "joint_friction_peak": 5.604485234659743,
+            "peak_total": 8.71322568399718,
+            "note": "individual maxima need not occur at the same angle; do not add peaks to reproduce peak_total"
+          },
+          "actual_self_start_status": "UNKNOWN"
+        },
+        {
+          "id": "high",
+          "mass_kg_assumed": 0.8595482864897539,
+          "journal_mu_assumed": 0.18,
+          "bearing_drag_nmm_each_assumed": 1.0,
+          "old_geometry_ratio_gearbus_peak_nm_at_same_force": 0.0051893620188777,
+          "new_ratio_only_peak_nm": 0.003837953346843098,
+          "ratio_only_definition": "same R2 mass, wind-application position and link geometry; change the numeric ratio only",
+          "optimized_linkage_gearbus_peak_nm": 0.0032503349191829356,
+          "optimized_linkage_rod_bus_peak_nm": 0.0031286157583160826,
+          "proposed_rod_peak_reduction_fraction": 0.39710975126905745,
+          "gross_aero_design_target_nm": 0.004257231516632165,
+          "net_after_same_two_input_bearings_target_nm": 0.002257231516632165,
+          "proxy_min_raw_nm": 0.0005785191683035531,
+          "conditional_budget_by_retained_fraction": [
+            {
+              "retained_fraction_assumed": 0.25,
+              "minimum_proxy_nm": 0.00014462979207588826,
+              "margin_to_design_target": 0.03397273357364948,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.5,
+              "minimum_proxy_nm": 0.00028925958415177653,
+              "margin_to_design_target": 0.06794546714729896,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.75,
+              "minimum_proxy_nm": 0.0004338893762276648,
+              "margin_to_design_target": 0.10191820072094845,
+              "status": "FAIL"
+            }
+          ],
+          "required_input_profile_peak_phase_deg": 32.5,
+          "minimum_support_margin_mm_at_target_cog": 14.939681306048424,
+          "gear_bus": {
+            "total_reduction": 125,
+            "reducer_efficiency_assumption": 0.5120000000000001,
+            "bus_efficiency_upper_loss_model": 0.6400000000000001,
+            "input_equivalent_bearing_drag_nm": 0.002869140625,
+            "bearing_count": 16,
+            "note": "Every reducer and bus bearing counted; two extra bus meshes included. No lossless synchronization.",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 6.81160856885743e-14,
+            "support_drive_couple_definition": "required signed external input torque enters whole-body moment balance; fixed point with reaction/friction calculation, not the uncalibrated available wind torque"
+          },
+          "rod_bus": {
+            "method": "same R2 quartered-rod force/friction feedback upper-loss bound",
+            "input_equivalent_bearing_drag_nm": 0.0027324226742554613,
+            "bearing_count": 12,
+            "coupling_efficiency_bound_assumed": 0.8727207793864215,
+            "extra_rod_friction_nmm": 6.515301680547839,
+            "preload_each_n_assumed": 3.0,
+            "full_mechanism_qualification": "UNKNOWN",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 3.5743543541633116e-14
+          },
+          "loads": {
+            "joint_n": 6.284352174246265,
+            "crank_pin_n": 3.541768949440163,
+            "fixed_pivot_n": 7.605332389465397,
+            "ac_compression_n": 2.68680526983705,
+            "crank_pin_force_sum_n": 4.473623720934246,
+            "fixed_pivot_force_sum_n": 7.745292559047845,
+            "equilibrium_residual": 2.1316282072803006e-14,
+            "virtual_work_residual_nmm": 1.6585047113437668e-08
+          },
+          "torque_decomposition_at_same_peak": {
+            "same_resistance_case": "high",
+            "same_peak_crank_angle_deg": 32.5,
+            "crank_load_nmm": 9.428398652016138,
+            "crank_joint_friction_nmm": 6.185319642405328,
+            "positive_crank_demand_nmm": 15.613718294421467,
+            "ideal_input_after_ratio_nm": 0.00012490974635537174,
+            "reducer_mesh_loss_input_nm": 0.00011905460199496363,
+            "coupling_load_friction_input_nm": 3.5580214026027364e-05,
+            "coupling_preload_selfweight_loss_input_nm": 0.00011664852168425851,
+            "downstream_bearing_loss_input_nm": 0.0007324226742554613,
+            "input_two_bearing_loss_nm": 0.002,
+            "total_required_input_nm": 0.0031286157583160826,
+            "downstream_required_after_input_bearings_nm": 0.0011286157583160826,
+            "designer_downstream_margin_multiplier": 2.0,
+            "net_output_target_nm": 0.002257231516632165,
+            "gross_aerodynamic_target_nm": 0.004257231516632165,
+            "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+          },
+          "load_components_nmm_at_crank": {
+            "gravity_plus_external_peak": 9.489201279555925,
+            "gravity_plus_external_min": -3.436763896339354,
+            "joint_friction_peak": 12.637558307022775,
+            "peak_total": 15.61371828973305,
+            "note": "individual maxima need not occur at the same angle; do not add peaks to reproduce peak_total"
+          },
+          "actual_self_start_status": "UNKNOWN"
+        }
+      ],
+      "gears": {
+        "stages": [
+          {
+            "axes": [
+              "I",
+              "M1"
+            ],
+            "module": 1.25,
+            "pinion_teeth": 20,
+            "wheel_teeth": 100,
+            "ratio": 5.0,
+            "center_distance_mm": 75.0,
+            "pitch_diameters_mm": [
+              25.0,
+              125.0
+            ],
+            "tip_diameters_mm": [
+              27.5,
+              127.5
+            ],
+            "root_diameters_mm": [
+              21.875,
+              121.875
+            ],
+            "contact_ratio": 1.704674299516535,
+            "tip_thickness_mm": 0.7035999807140508,
+            "involute_interference_margin_mm": 0.8572181191998238,
+            "radial_tip_root_clearance_mm": 0.3125,
+            "total_tangential_backlash_mm": 0.3,
+            "face_width_mm": 5.0,
+            "pressure_angle_deg": 20.0,
+            "volume_proxy_mm3": 102101.76124166828,
+            "root_web_to_provisional_12mm_boss_mm": 4.9375
+          },
+          {
+            "axes": [
+              "M1",
+              "M2"
+            ],
+            "module": 1.25,
+            "pinion_teeth": 20,
+            "wheel_teeth": 100,
+            "ratio": 5.0,
+            "center_distance_mm": 75.0,
+            "pitch_diameters_mm": [
+              25.0,
+              125.0
+            ],
+            "tip_diameters_mm": [
+              27.5,
+              127.5
+            ],
+            "root_diameters_mm": [
+              21.875,
+              121.875
+            ],
+            "contact_ratio": 1.704674299516535,
+            "tip_thickness_mm": 0.7035999807140508,
+            "involute_interference_margin_mm": 0.8572181191998238,
+            "radial_tip_root_clearance_mm": 0.3125,
+            "total_tangential_backlash_mm": 0.3,
+            "face_width_mm": 5.0,
+            "pressure_angle_deg": 20.0,
+            "volume_proxy_mm3": 102101.76124166828,
+            "root_web_to_provisional_12mm_boss_mm": 4.9375
+          },
+          {
+            "axes": [
+              "M2",
+              "O"
+            ],
+            "module": 1.25,
+            "pinion_teeth": 20,
+            "wheel_teeth": 100,
+            "ratio": 5.0,
+            "center_distance_mm": 75.0,
+            "pitch_diameters_mm": [
+              25.0,
+              125.0
+            ],
+            "tip_diameters_mm": [
+              27.5,
+              127.5
+            ],
+            "root_diameters_mm": [
+              21.875,
+              121.875
+            ],
+            "contact_ratio": 1.704674299516535,
+            "tip_thickness_mm": 0.7035999807140508,
+            "involute_interference_margin_mm": 0.8572181191998238,
+            "radial_tip_root_clearance_mm": 0.3125,
+            "total_tangential_backlash_mm": 0.3,
+            "face_width_mm": 5.0,
+            "pressure_angle_deg": 20.0,
+            "volume_proxy_mm3": 102101.76124166828,
+            "root_web_to_provisional_12mm_boss_mm": 4.9375
+          }
+        ],
+        "total_reduction": 125,
+        "input_speed_sign_for_positive_crank": -1,
+        "full_mesh_collision_status": "UNKNOWN",
+        "bearing_and_frame_relative_displacement_status": "UNKNOWN"
+      },
+      "matrix": [
+        {
+          "criterion": "丸めたリンクの閉路・尺度・交互三脚",
+          "status": "PASS",
+          "scope": "kinematic skeleton"
+        },
+        {
+          "criterion": "上下動と必要入力の低減",
+          "status": "PASS",
+          "scope": "same unmeasured mass/friction inputs; comparison not physical validation"
+        },
+        {
+          "criterion": "±0.1mm単独寸法誤差で足上げ8mm",
+          "status": "FAIL",
+          "scope": "one-at-a-time hypothetical manufacturing errors, not measured print tolerance"
+        },
+        {
+          "criterion": "±0.1mm単独誤差で切替速度差をR2名目以下に維持",
+          "status": "FAIL",
+          "scope": "kinematic robustness diagnostic, not impact dynamics"
+        },
+        {
+          "criterion": "名目風・名目抵抗・保持係数0.5のトルク予算",
+          "status": "FAIL",
+          "scope": "defined uncalibrated static proxy, not all-angle measured supply"
+        },
+        {
+          "criterion": "高抵抗・全感度ケースでの成立",
+          "status": "FAIL",
+          "scope": "27 hypothetical samples only"
+        },
+        {
+          "criterion": "実自己始動・30cm歩行",
+          "status": "UNKNOWN"
+        },
+        {
+          "criterion": "最終フレーム／ロッドの全周干渉・工具・組立",
+          "status": "UNKNOWN"
+        },
+        {
+          "criterion": "購入軸受・内輪スペーサの適合と全2万円BOM",
+          "status": "UNKNOWN"
+        }
+      ],
+      "dominantTerms": {
+        "case": "nominal, same peak angle as torque_decomposition",
+        "all_bearing_fraction_of_total": 0.86988971148203,
+        "fixed_peak_zero_bearing_loss_input_nm": 0.00011729644568719052,
+        "fixed_peak_zero_bearing_loss_2x_target_nm": 0.00023459289137438104,
+        "half_capture_proxy_minimum_nm": 0.00028925958415177653,
+        "bearing_only_improvement_can_close_at_this_fixed_peak": true,
+        "warning": "algebraic diagnostic at the existing peak/load, not a new zero-friction simulation or proposed bearing specification"
+      },
+      "physicalStatus": "UNKNOWN",
+      "qualifiedPrototype": false
+    },
+    {
+      "designId": "C",
+      "candidate": {
+        "id": "C",
+        "direction": "intermediate rotor and generated lightweight structure",
+        "rotorDiameterMm": 100,
+        "stageRatios": [
+          5,
+          5
+        ],
+        "axisCentersYzMm": {
+          "O": [
+            0,
+            0
+          ],
+          "M1": [
+            -60,
+            45
+          ],
+          "I": [
+            -60,
+            120
+          ]
+        },
+        "stages": [
+          [
+            "I",
+            "M1"
+          ],
+          [
+            "M1",
+            "O"
+          ]
+        ],
+        "massCasesKg": [
+          0.36235310041087887,
+          0.5123531004108789,
+          0.7123531004108788
+        ],
+        "shafts140mm": 4,
+        "shafts120mm": 1,
+        "structure": "bounded rib width/thickness screening; preserves shaft/pivot seats; final obstacle-aware network pending"
+      },
+      "startup": [
+        {
+          "id": "low",
+          "mass_kg_assumed": 0.36235310041087887,
+          "journal_mu_assumed": 0.05,
+          "bearing_drag_nmm_each_assumed": 0.1,
+          "old_geometry_ratio_gearbus_peak_nm_at_same_force": 0.001159050869854316,
+          "new_ratio_only_peak_nm": 0.000822213616579421,
+          "ratio_only_definition": "same R2 mass, wind-application position and link geometry; change the numeric ratio only",
+          "optimized_linkage_gearbus_peak_nm": 0.0005477650560104487,
+          "optimized_linkage_rod_bus_peak_nm": 0.000510145980857601,
+          "proposed_rod_peak_reduction_fraction": 0.5598588516466732,
+          "gross_aero_design_target_nm": 0.0008202919617152021,
+          "net_after_same_two_input_bearings_target_nm": 0.0006202919617152021,
+          "proxy_min_raw_nm": 0.0010158160503076293,
+          "conditional_budget_by_retained_fraction": [
+            {
+              "retained_fraction_assumed": 0.25,
+              "minimum_proxy_nm": 0.0002539540125769073,
+              "margin_to_design_target": 0.3095897856244968,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.5,
+              "minimum_proxy_nm": 0.0005079080251538146,
+              "margin_to_design_target": 0.6191795712489936,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.75,
+              "minimum_proxy_nm": 0.000761862037730722,
+              "margin_to_design_target": 0.9287693568734903,
+              "status": "FAIL"
+            }
+          ],
+          "required_input_profile_peak_phase_deg": 10.0,
+          "minimum_support_margin_mm_at_target_cog": 14.538827753151699,
+          "gear_bus": {
+            "total_reduction": 25,
+            "reducer_efficiency_assumption": 0.9025,
+            "bus_efficiency_upper_loss_model": 0.9025,
+            "input_equivalent_bearing_drag_nm": 0.00029121476968408777,
+            "bearing_count": 14,
+            "note": "Every reducer and bus bearing counted; two extra bus meshes included. No lossless synchronization.",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 1.0898671288367412e-14,
+            "support_drive_couple_definition": "required signed external input torque enters whole-body moment balance; fixed point with reaction/friction calculation, not the uncalibrated available wind torque"
+          },
+          "rod_bus": {
+            "method": "same R2 quartered-rod force/friction feedback upper-loss bound",
+            "input_equivalent_bearing_drag_nm": 0.00026967271764212063,
+            "bearing_count": 10,
+            "coupling_efficiency_bound_assumed": 0.9646446609406726,
+            "extra_rod_friction_nmm": 0.009806022374400002,
+            "preload_each_n_assumed": 0.0,
+            "full_mechanism_qualification": "UNKNOWN",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 8.853269679864884e-15
+          },
+          "loads": {
+            "joint_n": 2.4878171786783843,
+            "crank_pin_n": 1.406588917402014,
+            "fixed_pivot_n": 3.0487729723801014,
+            "ac_compression_n": 1.1454231120576865,
+            "crank_pin_force_sum_n": 1.9259730069025296,
+            "fixed_pivot_force_sum_n": 3.107738815535565,
+            "equilibrium_residual": 2.1316282072803006e-14,
+            "virtual_work_residual_nmm": 7.066509155606582e-09
+          },
+          "torque_decomposition_at_same_peak": {
+            "same_resistance_case": "low",
+            "same_peak_crank_angle_deg": 10.0,
+            "crank_load_nmm": 4.386509166985059,
+            "crank_joint_friction_nmm": 0.8375361265771466,
+            "positive_crank_demand_nmm": 5.224045293562206,
+            "ideal_input_after_ratio_nm": 0.00020896181174248824,
+            "reducer_mesh_loss_input_nm": 2.2574821767194038e-05,
+            "coupling_load_friction_input_nm": 8.486084580002166e-06,
+            "coupling_preload_selfweight_loss_input_nm": 4.5054512579595476e-07,
+            "downstream_bearing_loss_input_nm": 6.967271764212062e-05,
+            "input_two_bearing_loss_nm": 0.0002,
+            "total_required_input_nm": 0.000510145980857601,
+            "downstream_required_after_input_bearings_nm": 0.00031014598085760104,
+            "designer_downstream_margin_multiplier": 2.0,
+            "net_output_target_nm": 0.0006202919617152021,
+            "gross_aerodynamic_target_nm": 0.0008202919617152021,
+            "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+          },
+          "load_components_nmm_at_crank": {
+            "gravity_plus_external_peak": 4.397991983933669,
+            "gravity_plus_external_min": -3.126125282545007,
+            "joint_friction_peak": 1.59187474709976,
+            "peak_total": 5.2240452913027635,
+            "note": "individual maxima need not occur at the same angle; do not add peaks to reproduce peak_total"
+          },
+          "actual_self_start_status": "UNKNOWN"
+        },
+        {
+          "id": "nominal",
+          "mass_kg_assumed": 0.5123531004108789,
+          "journal_mu_assumed": 0.1,
+          "bearing_drag_nmm_each_assumed": 0.3,
+          "old_geometry_ratio_gearbus_peak_nm_at_same_force": 0.0028293269083807518,
+          "new_ratio_only_peak_nm": 0.0020534359044655213,
+          "ratio_only_definition": "same R2 mass, wind-application position and link geometry; change the numeric ratio only",
+          "optimized_linkage_gearbus_peak_nm": 0.001385044575987243,
+          "optimized_linkage_rod_bus_peak_nm": 0.001302429082454804,
+          "proposed_rod_peak_reduction_fraction": 0.5396682233513287,
+          "gross_aero_design_target_nm": 0.002004858164909608,
+          "net_after_same_two_input_bearings_target_nm": 0.0014048581649096083,
+          "proxy_min_raw_nm": 0.0010158160503076293,
+          "conditional_budget_by_retained_fraction": [
+            {
+              "retained_fraction_assumed": 0.25,
+              "minimum_proxy_nm": 0.0002539540125769073,
+              "margin_to_design_target": 0.12666931607521334,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.5,
+              "minimum_proxy_nm": 0.0005079080251538146,
+              "margin_to_design_target": 0.2533386321504267,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.75,
+              "minimum_proxy_nm": 0.000761862037730722,
+              "margin_to_design_target": 0.38000794822564,
+              "status": "FAIL"
+            }
+          ],
+          "required_input_profile_peak_phase_deg": 190.5,
+          "minimum_support_margin_mm_at_target_cog": 15.033948203565435,
+          "gear_bus": {
+            "total_reduction": 25,
+            "reducer_efficiency_assumption": 0.81,
+            "bus_efficiency_upper_loss_model": 0.81,
+            "input_equivalent_bearing_drag_nm": 0.0009162322816643804,
+            "bearing_count": 14,
+            "note": "Every reducer and bus bearing counted; two extra bus meshes included. No lossless synchronization.",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 1.2396897744459956e-13,
+            "support_drive_couple_definition": "required signed external input torque enters whole-body moment balance; fixed point with reaction/friction calculation, not the uncalibrated available wind torque"
+          },
+          "rod_bus": {
+            "method": "same R2 quartered-rod force/friction feedback upper-loss bound",
+            "input_equivalent_bearing_drag_nm": 0.000828985878558897,
+            "bearing_count": 10,
+            "coupling_efficiency_bound_assumed": 0.9292893218813453,
+            "extra_rod_friction_nmm": 1.2196120447488,
+            "preload_each_n_assumed": 1.0,
+            "full_mechanism_qualification": "UNKNOWN",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 9.020735547426995e-14
+          },
+          "loads": {
+            "joint_n": 3.615530840264865,
+            "crank_pin_n": 2.0386793872474023,
+            "fixed_pivot_n": 4.410455741554388,
+            "ac_compression_n": 1.616716469684629,
+            "crank_pin_force_sum_n": 2.6637695951898896,
+            "fixed_pivot_force_sum_n": 4.494022413157144,
+            "equilibrium_residual": 2.1316282072803006e-14,
+            "virtual_work_residual_nmm": 9.978994963688592e-09
+          },
+          "torque_decomposition_at_same_peak": {
+            "same_resistance_case": "nominal",
+            "same_peak_crank_angle_deg": 190.5,
+            "crank_load_nmm": 5.539863992235446,
+            "crank_joint_friction_nmm": 2.14982966944537,
+            "positive_crank_demand_nmm": 7.689693661680816,
+            "ideal_input_after_ratio_nm": 0.00030758774646723265,
+            "reducer_mesh_loss_input_nm": 7.215021213428912e-05,
+            "coupling_load_friction_input_nm": 2.8894691812175727e-05,
+            "coupling_preload_selfweight_loss_input_nm": 6.481055348220939e-05,
+            "downstream_bearing_loss_input_nm": 0.0002289858785588971,
+            "input_two_bearing_loss_nm": 0.0006,
+            "total_required_input_nm": 0.001302429082454804,
+            "downstream_required_after_input_bearings_nm": 0.000702429082454804,
+            "designer_downstream_margin_multiplier": 2.0,
+            "net_output_target_nm": 0.001404858164909608,
+            "gross_aerodynamic_target_nm": 0.002004858164909608,
+            "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+          },
+          "load_components_nmm_at_crank": {
+            "gravity_plus_external_peak": 5.603494715236492,
+            "gravity_plus_external_min": -3.3268848120200523,
+            "joint_friction_peak": 4.3667396328458645,
+            "peak_total": 7.689693657630752,
+            "note": "individual maxima need not occur at the same angle; do not add peaks to reproduce peak_total"
+          },
+          "actual_self_start_status": "UNKNOWN"
+        },
+        {
+          "id": "high",
+          "mass_kg_assumed": 0.7123531004108788,
+          "journal_mu_assumed": 0.18,
+          "bearing_drag_nmm_each_assumed": 1.0,
+          "old_geometry_ratio_gearbus_peak_nm_at_same_force": 0.009094092300958714,
+          "new_ratio_only_peak_nm": 0.006640219134379619,
+          "ratio_only_definition": "same R2 mass, wind-application position and link geometry; change the numeric ratio only",
+          "optimized_linkage_gearbus_peak_nm": 0.004787078735701133,
+          "optimized_linkage_rod_bus_peak_nm": 0.004357337171891625,
+          "proposed_rod_peak_reduction_fraction": 0.520860683211642,
+          "gross_aero_design_target_nm": 0.0067146743437832505,
+          "net_after_same_two_input_bearings_target_nm": 0.00471467434378325,
+          "proxy_min_raw_nm": 0.0010158160503076293,
+          "conditional_budget_by_retained_fraction": [
+            {
+              "retained_fraction_assumed": 0.25,
+              "minimum_proxy_nm": 0.0002539540125769073,
+              "margin_to_design_target": 0.03782074894101595,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.5,
+              "minimum_proxy_nm": 0.0005079080251538146,
+              "margin_to_design_target": 0.0756414978820319,
+              "status": "FAIL"
+            },
+            {
+              "retained_fraction_assumed": 0.75,
+              "minimum_proxy_nm": 0.000761862037730722,
+              "margin_to_design_target": 0.11346224682304784,
+              "status": "FAIL"
+            }
+          ],
+          "required_input_profile_peak_phase_deg": 30.5,
+          "minimum_support_margin_mm_at_target_cog": 15.612453298824715,
+          "gear_bus": {
+            "total_reduction": 25,
+            "reducer_efficiency_assumption": 0.6400000000000001,
+            "bus_efficiency_upper_loss_model": 0.6400000000000001,
+            "input_equivalent_bearing_drag_nm": 0.0034765624999999996,
+            "bearing_count": 14,
+            "note": "Every reducer and bus bearing counted; two extra bus meshes included. No lossless synchronization.",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 2.417384001307532e-12,
+            "support_drive_couple_definition": "required signed external input torque enters whole-body moment balance; fixed point with reaction/friction calculation, not the uncalibrated available wind torque"
+          },
+          "rod_bus": {
+            "method": "same R2 quartered-rod force/friction feedback upper-loss bound",
+            "input_equivalent_bearing_drag_nm": 0.002929690697021846,
+            "bearing_count": 10,
+            "coupling_efficiency_bound_assumed": 0.8727207793864215,
+            "extra_rod_friction_nmm": 6.515301680547839,
+            "preload_each_n_assumed": 3.0,
+            "full_mechanism_qualification": "UNKNOWN",
+            "support_drive_couple_iterations": 3,
+            "support_drive_couple_residual_nm": 1.213405244337995e-12
+          },
+          "loads": {
+            "joint_n": 5.2032481350229345,
+            "crank_pin_n": 2.9386626697122535,
+            "fixed_pivot_n": 6.288655319332901,
+            "ac_compression_n": 2.216454351890628,
+            "crank_pin_force_sum_n": 3.7119513753570734,
+            "fixed_pivot_force_sum_n": 6.404299155267353,
+            "equilibrium_residual": 2.1316282072803006e-14,
+            "virtual_work_residual_nmm": 1.3675676147073546e-08
+          },
+          "torque_decomposition_at_same_peak": {
+            "same_resistance_case": "high",
+            "same_peak_crank_angle_deg": 30.5,
+            "crank_load_nmm": 8.197877341317364,
+            "crank_joint_friction_nmm": 5.2218088859209,
+            "positive_crank_demand_nmm": 13.419686227238264,
+            "ideal_input_after_ratio_nm": 0.0005367874490895306,
+            "reducer_mesh_loss_input_nm": 0.00030194294011286085,
+            "coupling_load_friction_input_nm": 0.00012232199893035434,
+            "coupling_preload_selfweight_loss_input_nm": 0.00046659408673703403,
+            "downstream_bearing_loss_input_nm": 0.000929690697021846,
+            "input_two_bearing_loss_nm": 0.002,
+            "total_required_input_nm": 0.004357337171891626,
+            "downstream_required_after_input_bearings_nm": 0.002357337171891626,
+            "designer_downstream_margin_multiplier": 2.0,
+            "net_output_target_nm": 0.004714674343783252,
+            "gross_aerodynamic_target_nm": 0.006714674343783252,
+            "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+          },
+          "load_components_nmm_at_crank": {
+            "gravity_plus_external_peak": 8.345223835436606,
+            "gravity_plus_external_min": -3.094659558103931,
+            "joint_friction_peak": 10.488890420596634,
+            "peak_total": 13.419686253579611,
+            "note": "individual maxima need not occur at the same angle; do not add peaks to reproduce peak_total"
+          },
+          "actual_self_start_status": "UNKNOWN"
+        }
+      ],
+      "gears": {
+        "stages": [
+          {
+            "axes": [
+              "I",
+              "M1"
+            ],
+            "module": 1.25,
+            "pinion_teeth": 20,
+            "wheel_teeth": 100,
+            "ratio": 5.0,
+            "center_distance_mm": 75.0,
+            "pitch_diameters_mm": [
+              25.0,
+              125.0
+            ],
+            "tip_diameters_mm": [
+              27.5,
+              127.5
+            ],
+            "root_diameters_mm": [
+              21.875,
+              121.875
+            ],
+            "contact_ratio": 1.704674299516535,
+            "tip_thickness_mm": 0.7035999807140508,
+            "involute_interference_margin_mm": 0.8572181191998238,
+            "radial_tip_root_clearance_mm": 0.3125,
+            "total_tangential_backlash_mm": 0.3,
+            "face_width_mm": 5.0,
+            "pressure_angle_deg": 20.0,
+            "volume_proxy_mm3": 102101.76124166828,
+            "root_web_to_provisional_12mm_boss_mm": 4.9375
+          },
+          {
+            "axes": [
+              "M1",
+              "O"
+            ],
+            "module": 1.25,
+            "pinion_teeth": 20,
+            "wheel_teeth": 100,
+            "ratio": 5.0,
+            "center_distance_mm": 75.0,
+            "pitch_diameters_mm": [
+              25.0,
+              125.0
+            ],
+            "tip_diameters_mm": [
+              27.5,
+              127.5
+            ],
+            "root_diameters_mm": [
+              21.875,
+              121.875
+            ],
+            "contact_ratio": 1.704674299516535,
+            "tip_thickness_mm": 0.7035999807140508,
+            "involute_interference_margin_mm": 0.8572181191998238,
+            "radial_tip_root_clearance_mm": 0.3125,
+            "total_tangential_backlash_mm": 0.3,
+            "face_width_mm": 5.0,
+            "pressure_angle_deg": 20.0,
+            "volume_proxy_mm3": 102101.76124166828,
+            "root_web_to_provisional_12mm_boss_mm": 4.9375
+          }
+        ],
+        "total_reduction": 25,
+        "input_speed_sign_for_positive_crank": 1,
+        "full_mesh_collision_status": "UNKNOWN",
+        "bearing_and_frame_relative_displacement_status": "UNKNOWN"
+      },
+      "matrix": [
+        {
+          "criterion": "丸めたリンクの閉路・尺度・交互三脚",
+          "status": "PASS",
+          "scope": "kinematic skeleton"
+        },
+        {
+          "criterion": "上下動と必要入力の低減",
+          "status": "PASS",
+          "scope": "same unmeasured mass/friction inputs; comparison not physical validation"
+        },
+        {
+          "criterion": "±0.1mm単独寸法誤差で足上げ8mm",
+          "status": "FAIL",
+          "scope": "one-at-a-time hypothetical manufacturing errors, not measured print tolerance"
+        },
+        {
+          "criterion": "±0.1mm単独誤差で切替速度差をR2名目以下に維持",
+          "status": "FAIL",
+          "scope": "kinematic robustness diagnostic, not impact dynamics"
+        },
+        {
+          "criterion": "名目風・名目抵抗・保持係数0.5のトルク予算",
+          "status": "FAIL",
+          "scope": "defined uncalibrated static proxy, not all-angle measured supply"
+        },
+        {
+          "criterion": "高抵抗・全感度ケースでの成立",
+          "status": "FAIL",
+          "scope": "27 hypothetical samples only"
+        },
+        {
+          "criterion": "実自己始動・30cm歩行",
+          "status": "UNKNOWN"
+        },
+        {
+          "criterion": "最終フレーム／ロッドの全周干渉・工具・組立",
+          "status": "UNKNOWN"
+        },
+        {
+          "criterion": "購入軸受・内輪スペーサの適合と全2万円BOM",
+          "status": "UNKNOWN"
+        }
+      ],
+      "dominantTerms": {
+        "case": "nominal, same peak angle as torque_decomposition",
+        "all_bearing_fraction_of_total": 0.636492143584842,
+        "fixed_peak_zero_bearing_loss_input_nm": 0.0004734432038959069,
+        "fixed_peak_zero_bearing_loss_2x_target_nm": 0.0009468864077918139,
+        "half_capture_proxy_minimum_nm": 0.0005079080251538146,
+        "bearing_only_improvement_can_close_at_this_fixed_peak": false,
+        "warning": "algebraic diagnostic at the existing peak/load, not a new zero-friction simulation or proposed bearing specification"
+      },
+      "physicalStatus": "UNKNOWN",
+      "qualifiedPrototype": false
+    }
+  ],
+  "sourceHashes": {
+    "scripts/ver3/commercial_r3.json": "56c46b7fe038429904208da25712956b17dd60cfe78faf0e55cbe1c0856b8849",
+    "scripts/ver3/commercial_r3.py": "a12e753c4d3d2d74c1b99503fde6aafde3fd877d32b66f2c2b0effb7135cc97a",
+    "scripts/ver3/study_r2.py": "5e477d4dedacf0ae7de164c6d0386562eb77a924ea9147cdeb0f1c35578635f4",
+    "scripts/ver3/study_r2.json": "d09cd6a3c4f3e2c919c10de9cf8b5f6dfcecb8c70388a243029fdde4e44eff0b",
+    "scripts/ver3/core.py": "1572f2d2005e84a9b4929aa39f1dbdb2144dfac6f5333bfb85e1ddb3fb856033",
+    "scripts/ver3/design.json": "cdbf69689a31706893c4f8cb6464491bc5dedeebe4df6eea5cb78cc2a9a3122b",
+    "scripts/ver3/beam.py": "59a1964a2b33de0aea13ba51c403f1cbbd46038e57cbf65b36ca7a92ccdc327e",
+    "scripts/ver3/test_commercial_r3.py": "52e9a7956a5bf22932036380395a6745a483c372864813f19bbdafb8fa825e7e"
+  },
+  "qualifiedPrototypeCount": 0,
+  "requiresUserMeasurementToContinueDesign": false,
+  "reasonForNotReleasing": "conditional static torque budget, complete assembly/interfaces/procurement and contact dynamics must qualify; not blocked solely on ReFa measurements"
+}

@@ -1,0 +1,2 @@
+record_status,apparatus,video_reference,viewpoint,start_angle_description,start_angle_deg_if_known,mode,nozzle_condition,distance_mm_if_known,distance_reference,flow_direction,rotor_motion,shaft_motion,gear_motion,leg_motion,relative_mark_shift,vibration_or_axial_escape,notes
+NOT_PERFORMED,USER_OWNED_V2_WITH_ROTOR,,,,,,,,,,,,,,,,

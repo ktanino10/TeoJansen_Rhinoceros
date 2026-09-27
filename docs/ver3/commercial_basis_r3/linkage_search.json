@@ -1,0 +1,133 @@
+{
+  "revisionId": "v3-commercial-r3-01",
+  "method": "bounded five-length differential-evolution kinematic search, not commercial generative design",
+  "bounds": {
+    "seed": 27,
+    "maximumIterations": 60,
+    "populationMultiplier": 8,
+    "angleSamples": 360,
+    "refinedAngleSamples": 1440,
+    "variableBoundsUnscaledMm": {
+      "QP": [
+        34.0,
+        42.0
+      ],
+      "OQ": [
+        4.5,
+        11.0
+      ],
+      "DE": [
+        35.0,
+        44.0
+      ],
+      "CF": [
+        45.0,
+        54.0
+      ],
+      "EF": [
+        61.0,
+        70.0
+      ]
+    },
+    "fixed": "all other original Jansen dimensions; scale 0.7; physically defined 0/180 tripod phasing; no arbitrary body translation or leg stretching",
+    "minimumSwingGapMm": 8,
+    "minimumStrideMm": 38,
+    "minimumForwardRateMmPerRad": 3,
+    "minimumCircleTangencyMarginMm": 0.3,
+    "objective": "reduce active-stance vertical speed and horizontal handoff mismatch while preserving stride, lift, closure and forward direction",
+    "collisionStatus": "UNKNOWN until swept real parts and axial layers are built"
+  },
+  "functionEvaluations": 2440,
+  "rejectedCounts": {
+    "closure": 121,
+    "lift_stride_direction_clearance": 1743
+  },
+  "optimizerConverged": false,
+  "optimizerTermination": "Maximum number of iterations has been exceeded.",
+  "originalUnscaledMm": {
+    "QP": 38.0,
+    "OQ": 7.8,
+    "OA": 15.0,
+    "AB": 50.0,
+    "BP": 41.5,
+    "AC": 61.9,
+    "PC": 39.3,
+    "BD": 55.8,
+    "PD": 40.1,
+    "CE": 36.7,
+    "DE": 39.4,
+    "CF": 49.0,
+    "EF": 65.7
+  },
+  "continuousBestUnscaledMm": {
+    "QP": 38.56812252480567,
+    "OQ": 10.46009200558005,
+    "OA": 15.0,
+    "AB": 50.0,
+    "BP": 41.5,
+    "AC": 61.9,
+    "PC": 39.3,
+    "BD": 55.8,
+    "PD": 40.1,
+    "CE": 36.7,
+    "DE": 43.29426378595199,
+    "CF": 52.99200569562893,
+    "EF": 61.907845320293035
+  },
+  "selectedUnscaledMm": {
+    "QP": 38.42857142857143,
+    "OQ": 10.571428571428573,
+    "OA": 15.0,
+    "AB": 50.0,
+    "BP": 41.5,
+    "AC": 61.9,
+    "PC": 39.3,
+    "BD": 55.8,
+    "PD": 40.1,
+    "CE": 36.7,
+    "DE": 43.142857142857146,
+    "CF": 53.00000000000001,
+    "EF": 61.857142857142854
+  },
+  "physicalPitchRoundingMm": 0.1,
+  "roundingAdmissibleCandidates": 550,
+  "originalMetrics": {
+    "samples": 1440,
+    "peak_stance_vertical_rate_mm_per_rad": 3.2235666229769318,
+    "rms_stance_vertical_rate_mm_per_rad": 1.1813549945720698,
+    "body_bounce_mm": 1.2150016827981815,
+    "swing_gap_max_mm": 15.674482851824429,
+    "stance_stride_mm": 44.44194724596195,
+    "minimum_forward_rate_mm_per_rad": 5.7225956557703075,
+    "horizontal_handoff_jump_mm_per_rad": 5.257898758677085,
+    "stance_switch_count": 2,
+    "circle_tangency_margin_mm": 0.8346129537293265
+  },
+  "selectedMetrics": {
+    "samples": 1440,
+    "peak_stance_vertical_rate_mm_per_rad": 0.47728722888661346,
+    "rms_stance_vertical_rate_mm_per_rad": 0.28836903387898877,
+    "body_bounce_mm": 0.3537791536001862,
+    "swing_gap_max_mm": 8.251620427631522,
+    "stance_stride_mm": 45.15186754669196,
+    "minimum_forward_rate_mm_per_rad": 8.638913274823485,
+    "horizontal_handoff_jump_mm_per_rad": 0.09619636327513348,
+    "stance_switch_count": 2,
+    "circle_tangency_margin_mm": 1.579319335534013
+  },
+  "geometryScreen": "PASS",
+  "completeMechanicalStatus": "UNKNOWN",
+  "trialColumns": [
+    "QP",
+    "OQ",
+    "DE",
+    "CF",
+    "EF",
+    "objective",
+    "constraint_deficit"
+  ],
+  "limitations": [
+    "No CAD clearance or manufactured link strength is inferred from foot-curve improvement.",
+    "No mass reduction, independent phase assignment, body-translation offset or leg stretching was used."
+  ]
+}

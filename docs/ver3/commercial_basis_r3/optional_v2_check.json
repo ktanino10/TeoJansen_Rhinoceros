@@ -1,0 +1,30 @@
+{
+  "revisionId": "v3-commercial-r3-01",
+  "apparatusId": "USER_OWNED_V2_WITH_ROTOR",
+  "apparatusExistence": "user-confirmed",
+  "actualPhotosReviewed": false,
+  "reportedWindStrength": {
+    "statement": "stronger than an ordinary commercial hair dryer",
+    "evidenceClass": "user qualitative report",
+    "velocityMS": null
+  },
+  "anemometerAvailable": false,
+  "purchaseNewMeasurementTools": false,
+  "requiredForDesignContinuation": false,
+  "firstStep": "optional stopped photos and non-invasive motion observation, not a new load",
+  "loadFixtureMountVerified": null,
+  "permittedTestMassG": null,
+  "loadTestStatus": "BLOCKED_UNTIL_ACTUAL_MOUNT_RETENTION_AND_CAPACITY_REVIEW",
+  "torqueObservations": [],
+  "measuredNetTorqueLowerBoundNm": null,
+  "coinMassSource": {
+    "url": "https://www.mint.go.jp/operations/production/operations_coin_presently-minted.html",
+    "nominalOneYenMassG": 1.0,
+    "diameterMm": 20,
+    "material": "pure aluminum",
+    "usedCoinMassToleranceG": null,
+    "note": "A circulation coin is not a calibrated mass; batch mint tolerances must not be converted to individual bounds."
+  },
+  "outputTransferToRevisedRotors": "not permitted without an explicit measured/model transfer",
+  "rotationSpeedAloneIsTorqueEvidence": false
+}
