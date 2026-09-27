@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="材料・構造・流体の計算途中資料。部材たわみ、リンク上下動と公差、風車の供給と要求トルク、軸受適合・調達を、固定版の16計算図で読む。三案とも未合格、最終CADなし。">
+  <title>材料・構造・流体の計算 — リノセウス研究資料</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="calculations.css">
+  <script src="app.js" defer></script>
+  <script src="calculations.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span>RHINOCEROS<small>風で歩く仕組みの探究</small></span></a>
+    <nav aria-label="メインナビゲーション"><a href="#study">計算図</a><a href="#shared-linkage">リンク・公差</a><a href="#shared-interface">適合・調達</a><a href="viewer.html">旧版360°</a></nav>
+  </div></header>
+  <main id="main" tabindex="-1">
+    <section class="section calculation-intro" id="top" aria-labelledby="calculation-title">
+      <p class="eyebrow">MATERIALS / STRUCTURES / FLUID MODEL — RESEARCH NOTES</p>
+      <h1 id="calculation-title">曲がり方と、力の収支。<br><span>計算から、残る課題を見る。</span></h1>
+      <p>部材をどこで支えるか。脚の上下動を減らすと何を失うか。冷風の供給と、軸受・歯車・関節の抵抗は釣り合うか。固定済みの計算図16点を、条件と結果を切り分けて紹介します。ここでは新しい物理計算・CFD・CGは生成していません。</p>
+      <aside class="warning" id="calculation-gate" aria-labelledby="gate-title">
+        <h2 id="gate-title">解析途中 · 三案とも未合格。完成CADの性能実証ではありません。</h2>
+        <p><strong>qualifiedPrototypeCount = 0。</strong>名目・高抵抗ケースとも、各案27風場セルで設計側トルク目標の達成は<strong>0/27（FAIL）</strong>。
+        実自己始動・30 cm連続歩行は<strong>UNKNOWN（未実測）</strong>です。</p>
+      </aside>
+      <div class="version-boundary">
+        <h2>既存の360°とは、別の骨格・別の版です。</h2>
+        <p>このページ：<strong>{{calculation_revision}}</strong>。Aは150 × 48 mm・16:1、Bは70 × 48 mm・125:1、Cは100 × 48 mm・25:1の条件付き解析です。<strong>最終mesh・組立・全BOMはありません。</strong></p>
+        <p>公開360°：<strong>ver3-first-cut-2026-09-26</strong>。A300／B90／C180 mmの第一カットです。
+        新しい解析色・たわみ・寸法を旧GLBに貼り付けてはいません。旧モデルが新たに合格したという意味でもありません。</p>
+        <a href="viewer.html">第一カットの360°・組立ガイドへ（別版） →</a>
+      </div>
+      <p class="small-note">図・比較値は<a href="{{calculation_gate_url}}">設計ゲート原文</a>と<a href="{{calculation_manifest_url}}">図の版・出典ハッシュ契約</a>に固定。
+      入力commit <code>{{calculation_input_commit}}</code>／成果物commit <code>{{calculation_artifact_commit}}</code>。</p>
+    </section>
+
+    <section class="section calculation-basis" id="basis" aria-labelledby="basis-title">
+      <div class="section-heading"><p class="eyebrow">SPECIFICATION ≠ MEASUREMENT ≠ ASSUMPTION</p><h2 id="basis-title">冷風の条件は、三種類の根拠から。</h2></div>
+      <div class="basis-grid">
+        <article><span class="status-tag">操作仕様</span><h3>Panasonic EH-NE5L</h3><p>メーカー取説のCOLD＝強い冷風、内蔵速乾ノズルを操作仕様の参照にしています。150 mm先の流速・幅がメーカー確認済みという意味ではなく、模型駆動をメーカーが認めたともしていません。</p><a href="https://panasonic.jp/hair/products/EH-NE5L.html">メーカー製品情報 ↗</a></article>
+        <article><span class="status-tag">別機種の公開実験</span><h3>冷風・150 mm・6.4 m/s</h3><p>Scott / Curran、ASEE 2025の別機種の実験値です。Panasonicや手元ReFaの測定ではありません。値が断面最大・平均・Gaussianピークのどれかを表が保証しているわけでもありません。</p><a href="https://peer.asee.org/laboratory-fixture-for-heat-transfer-using-a-hair-drier.pdf">実験論文 §2.2・図8 ↗</a></article>
+        <article><span class="status-tag caution">設計上の仮定</span><h3>Gaussian風場と感度範囲</h3><p>6.4 m/sをピークへ置く操作も仮定。距離150 mm、速度σ20 mm、模型へ同じ向きで追従する条件です。ピーク倍率0.8／1.0／1.2、σ15／20／25 mm、照準ずれ−10／0／＋10 mmを各案27セルで比較しました。</p><p class="small-note">±20%・σ・照準範囲は実測の信頼区間や全市販機の保証範囲ではありません。CFD・校正された流速場・流線の図はありません。</p></article>
+      </div>
+      <p>供給への減率<strong>0.5は設計上の減率</strong>であり、実証された供給下限ではありません。要求の設計余裕は<strong>入力軸受後の下流だけ2倍＋入力軸受一回分</strong>。
+      係数を省略したり「総要求の単純2倍」と読み替えたりせず、各案の同一角・同一ケースの内訳で確認します。</p>
+    </section>
+
+    <section class="section" id="study" aria-labelledby="study-title">
+      <div class="section-heading"><p class="eyebrow">SELECT A DESIGN / FOLLOW THE EVIDENCE</p><h2 id="study-title">A・B・Cを選んで、図と条件を読む。</h2><p>①部材たわみ → ②リンクと公差 → ③風・駆動と損失 → ④支持の適合 → ⑤調達の順に並べています。小さい文字は「図を拡大して読む」または元SVGで確認できます。</p></div>
+      <div id="analysis-choice" class="analysis-choice" hidden><label for="analysis-select">表示する解析案</label><select id="analysis-select"><option value="A">A · 大風車・少段（150 × 48 mm／16:1）</option><option value="B">B · 小風車・高減速（70 × 48 mm／125:1）</option><option value="C">C · 中間・軽量検討（100 × 48 mm／25:1）</option></select><p id="analysis-status" role="status" aria-live="polite"></p></div>
+      <noscript><p class="record-scope">JavaScriptなしでも各案の見出しを開いて全資料を読めます。図の拡大は元SVGのリンクをご利用ください。</p></noscript>
+      <div id="analysis-designs">{{calculation_designs}}</div>
+    </section>
+
+    <section class="chapter-tinted" id="shared-linkage" aria-labelledby="shared-linkage-title"><div class="section">
+      <div class="section-heading"><p class="eyebrow">SHARED LINKAGE / NOMINAL IMPROVEMENT &amp; TOLERANCE</p><h2 id="shared-linkage-title">共通リンク：小さな上下動の、代償も残す。</h2></div>
+      <p>同じ尺度0.7・同じ脚の向き・0/180°の位相で、QP・OQ・DE・CF・EFの五つのピン間寸法を有限探索しました。
+      比較相手は<strong>旧解析 v3-r2-feasibility-02</strong>であり、Ver.2実物や公開第一カットの測定ではありません。</p>
+      {{calculation_gait_table}}
+      <p>2,440評価の限定探索から実ピッチ0.1 mmへ丸めた候補を選び直しています。大域最適への収束や、公差を含む完成機の成立を主張していません。
+      誤差感度は一変数ずつの±0.1 mmで、全誤差の同時最悪ケースではありません。<a href="{{calculation_tolerance_url}}">公差感度の正規JSON</a>でFAILの条件を確認できます。</p>
+      <div class="calculation-figure-grid">{{calculation_linkage_layout}}{{calculation_gait_improvement}}</div>
+    </div></section>
+
+    <section class="section" id="shared-interface" aria-labelledby="shared-interface-title">
+      <div class="section-heading"><p class="eyebrow">INTERFACES &amp; PROCUREMENT / STILL OPEN</p><h2 id="shared-interface-title">当たり面と、調達の未確定。</h2></div>
+      {{calculation_bearing_interface}}
+      <div class="basis-grid two">
+        <article><h3>採用しない組合せ</h3><p>内径6.2 × 外径8 × 厚さ1 mmのスペーサ <code>c-sus-06-08-01</code> は、686AZZ1シールド側の軸肩外径上限7.4 mmを0.6 mm超過。
+        この組合せを採用したり、断りなく開放軸受へ変えたりしていません。「ISC 686ZZ」とメーカー表の形式の同一性も未確定です。</p><a href="https://www.nskmicro.co.jp/products/bearing/bearing_size_pdf/single_row_mm.pdf">NSKマイクロ寸法表・冊子42–43ページ ↗</a></article>
+        <article><h3>資料照合候補も、未採用</h3><p>NSK 626ZZ（6 × 19 × 6 mm）＋IWATA SC0607CB2は別候補です。購入する正確な形式と当たり面、最新寸法、19 mm座への変更、増量・摩擦・価格が未確定。
+        626ZZと626ZZ1を同一視せず、今回の計算には代入していません。</p><a href="https://www.iwata-fa.jp/contents/assets/pdf/general.pdf">IWATAカタログ・冊子84–85ページ ↗</a></article>
+      </div>
+      <p>旧部分表の見積額を完成BOMの合計と見なさず、<strong>材料費2万円／台・送料別は未確認</strong>のままです。
+      表示価格・納期も在庫確保や最新見積を保証しません。風速計・測定器の購入や、未確認治具への荷重をこのページで指示していません。</p>
+    </section>
+
+    <section class="downloads-section" id="sources" aria-labelledby="sources-title"><div class="section">
+      <div class="section-heading"><p class="eyebrow">FIXED EVIDENCE / ORIGINAL FIGURES</p><h2 id="sources-title">図の原本と、数値へ戻れるように。</h2></div>
+      <p>16図は元のSVGから一切再描画せず、そのまま配信しています。各図にrevision・design・loadcase・method・単位・変形倍率・出典を付け、
+      参照データと入力のSHA256を照合しています。完成CADに基づかないことは全図共通で、図中の色を新しい実測結果として扱いません。</p>
+      <div class="shared-downloads"><a href="{{calculation_gate_url}}">DESIGN_GATE_ja.md · 設計判断と残る条件</a>
+        <a href="assets/calculation-manifest.json">原manifest JSON · 版と図・データのハッシュ</a>
+        <a href="assets/calculation-comparison.json">原比較JSON</a><a href="assets/calculation-comparison.csv">原比較CSV</a>
+        <a href="assets/calculation-torque-decomposition.csv">原トルク内訳CSV · 全案・全抵抗ケース</a>
+        <a href="comparison.html">第一カットのV2→V3 Matrix（別版）</a></div>
+      <p class="small-note">実自己始動・30 cm連続歩行、最終CAD・全BOM・工具経路・実接地は未確認です。仮定モデル内での数値改善、予算のFAIL、実物のUNKNOWNを別々に残しています。</p>
+    </div></section>
+  </main>
+  <dialog id="figure-dialog" aria-labelledby="figure-dialog-title">
+    <div class="figure-dialog-heading"><h2 id="figure-dialog-title">計算図の拡大</h2><button class="button" id="close-figure" type="button">閉じる</button></div>
+    <div class="figure-actions" role="group" aria-label="画像の表示倍率"><button class="button" type="button" data-zoom="fit">全体表示</button><button class="button" type="button" data-zoom="1">100%</button><button class="button" type="button" data-zoom="2">200%</button><a id="dialog-svg" href="assets/calculation-deflection-A.svg" target="_blank" rel="noopener">元SVGを別タブで開く ↗</a></div>
+    <p id="figure-zoom-status" class="small-note" role="status">画像の表示倍率と、図に記された変形拡大倍率は別です。</p>
+    <div id="figure-viewport" class="figure-viewport" role="region" aria-label="拡大図。横・縦にスクロールできます" tabindex="0"></div>
+  </dialog>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>研究資料 · 数値の改善と、完成機の合格は別。</span></div><a href="#top">先頭へ ↑</a><a href="production.html">Ver.1・Ver.2製作記録</a><a href="viewer.html">第一カット360°</a></footer>
+</body>
+</html>

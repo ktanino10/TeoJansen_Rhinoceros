@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "revisionId": "v3-commercial-r3-01",
+  "artifactCommit": "adfa92298f637dadd2a9f798e48f7d4e76ca912b",
+  "inputCommit": "c192be074ba557f4b5436eb8b15d3cbe4a5ae3ea",
+  "manifest": "docs/ver3/commercial_basis_r3/manifest.json",
+  "manifestSha256": "1f55bd0541fb9404cd9d24f0ac60aa46c49b7c66ced12ba342bc2dd3dd64997e"
+}

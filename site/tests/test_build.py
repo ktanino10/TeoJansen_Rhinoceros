@@ -65,7 +65,7 @@ class PublicBuildTests(unittest.TestCase):
         cls.production = (OUTPUT / "production.html").read_text()
         cls.production_tags = Tags()
         cls.production_tags.feed(cls.production)
-        cls.extra_documents = [(OUTPUT / page).read_text() for page in ("comparison.html", "viewer.html")]
+        cls.extra_documents = [(OUTPUT / page).read_text() for page in ("comparison.html", "viewer.html", "calculations.html")]
         cls.extra_tags = []
         for document in cls.extra_documents:
             tags = Tags()
@@ -84,8 +84,8 @@ class PublicBuildTests(unittest.TestCase):
         self.assertLess(total, 30_000_000)
         self.assertLess(total - opt_in, 12_000_000)
         self.assertLess(opt_in, 18_000_000)
-        self.assertEqual(len(self.manifest["assets"]), 63)
-        self.assertEqual(self.manifest["pages"], ["index.html", "production.html", "comparison.html", "viewer.html"])
+        self.assertEqual(len(self.manifest["assets"]), 83)
+        self.assertEqual(self.manifest["pages"], ["index.html", "production.html", "comparison.html", "viewer.html", "calculations.html"])
         for asset, data in self.manifest["assets"].items():
             self.assertEqual(hashlib.sha256((OUTPUT / asset).read_bytes()).hexdigest(), data["sha256"])
             self.assertEqual(hashlib.sha256((ROOT / data["source"]).read_bytes()).hexdigest(), data["source_sha256"])
@@ -117,9 +117,14 @@ class PublicBuildTests(unittest.TestCase):
             if name == "img":
                 self.assertTrue(attrs.get("alt"))
                 self.assertFalse(attrs["src"].endswith(".gif"))
-                with Image.open(OUTPUT / attrs["src"]) as image:
-                    self.assertEqual(int(attrs["width"]), image.width)
-                    self.assertEqual(int(attrs["height"]), image.height)
+                if attrs["src"].endswith(".svg"):
+                    from calculation_data import svg_dimensions
+                    self.assertEqual((int(attrs["width"]), int(attrs["height"])),
+                                     svg_dimensions((OUTPUT / attrs["src"]).read_bytes()))
+                else:
+                    with Image.open(OUTPUT / attrs["src"]) as image:
+                        self.assertEqual(int(attrs["width"]), image.width)
+                        self.assertEqual(int(attrs["height"]), image.height)
             self.assertNotEqual(name, "iframe")
         self.assertEqual(len(videos), 5)
 
