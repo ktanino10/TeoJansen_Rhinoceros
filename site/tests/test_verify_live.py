@@ -17,6 +17,8 @@ class LiveVerificationTests(unittest.TestCase):
         cls.manifest = json.loads((cls.output / "build-manifest.json").read_text())
 
     def fixture_fetch(self, url):
+        if url in self.manifest.get("external_images", {}):
+            return (ROOT / self.manifest["external_images"][url]["source"]).read_bytes()
         self.assertTrue(url.startswith(verify_live.PUBLIC_URL))
         path = url.removeprefix(verify_live.PUBLIC_URL)
         return (self.output / path).read_bytes()
@@ -27,7 +29,8 @@ class LiveVerificationTests(unittest.TestCase):
         self.assertEqual(report["pages"], 5)
         self.assertEqual(report["assets"], len(self.manifest["assets"]))
         self.assertEqual(report["all_gets"], 200)
-        self.assertEqual(fetch.call_count, 1 + 5 + 7 + len(self.manifest["assets"]))
+        self.assertEqual(report["external_images"], 1)
+        self.assertEqual(fetch.call_count, 1 + 5 + 7 + len(self.manifest["assets"]) + 1)
 
     def test_stale_commit_and_external_paths_are_rejected(self):
         with self.assertRaisesRegex(ValueError, "Published commit differs"):

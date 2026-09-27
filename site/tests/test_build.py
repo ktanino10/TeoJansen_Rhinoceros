@@ -117,12 +117,18 @@ class PublicBuildTests(unittest.TestCase):
             if name == "img":
                 self.assertTrue(attrs.get("alt"))
                 self.assertFalse(attrs["src"].endswith(".gif"))
+                image_path = OUTPUT / attrs["src"]
+                if urlsplit(attrs["src"]).scheme:
+                    self.assertIn(attrs["src"], self.manifest["external_images"])
+                    reference = self.manifest["external_images"][attrs["src"]]
+                    image_path = ROOT / reference["source"]
+                    self.assertEqual(hashlib.sha256(image_path.read_bytes()).hexdigest(), reference["source_sha256"])
                 if attrs["src"].endswith(".svg"):
                     from calculation_data import svg_dimensions
                     self.assertEqual((int(attrs["width"]), int(attrs["height"])),
-                                     svg_dimensions((OUTPUT / attrs["src"]).read_bytes()))
+                                     svg_dimensions(image_path.read_bytes()))
                 else:
-                    with Image.open(OUTPUT / attrs["src"]) as image:
+                    with Image.open(image_path) as image:
                         self.assertEqual(int(attrs["width"]), image.width)
                         self.assertEqual(int(attrs["height"]), image.height)
             self.assertNotEqual(name, "iframe")

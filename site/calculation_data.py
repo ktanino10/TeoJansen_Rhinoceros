@@ -57,7 +57,7 @@ def svg_dimensions(data: bytes) -> tuple[int, int]:
     if re.search(r"<!|/Users/|file://|https?://(?!www\.w3\.org/2000/svg)", text, re.I):
         raise ValueError("Unexpected declaration, private path or external SVG resource")
     tree = ET.fromstring(data)
-    tags = {"svg", "rect", "text", "path", "polyline", "circle"}
+    tags = {"svg", "rect", "text", "path", "polyline", "polygon", "circle"}
     attributes = {"width", "height", "viewBox", "x", "y", "cx", "cy", "r", "d", "points",
                   "fill", "stroke", "stroke-width", "stroke-dasharray", "font-family", "font-size"}
     if tree.tag != "{http://www.w3.org/2000/svg}svg":

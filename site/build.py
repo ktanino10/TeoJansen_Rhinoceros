@@ -194,6 +194,66 @@ def download_cards(records: list[dict], ref: str) -> str:
     return "".join(result)
 
 
+def cartridge_card() -> tuple[str, dict, dict]:
+    from calculation_data import safe_source, svg_dimensions
+
+    source = json.loads((SITE / "cartridge-source.json").read_text())
+    manifest_path = safe_source(source["manifest"])
+    if (source["schemaVersion"] != 1 or source["revisionId"] != "v3-common-input-r4-01"
+            or not re.fullmatch(r"[a-f0-9]{40}", source["artifactCommit"])
+            or sha256(manifest_path) != source["manifestSha256"]):
+        raise ValueError("Cartridge reference changed; review its complete source contract")
+    manifest = json.loads(manifest_path.read_text())
+    if (manifest["revisionId"] != source["revisionId"] or manifest["sourceCommit"] != source["inputCommit"]
+            or manifest["manufacturingRelease"] is not False or manifest["qualifiedWalkingPrototypeCount"] != 0
+            or manifest["measuredStartingTorqueNmm"] is not None):
+        raise ValueError("Cartridge scope or qualification differs from the reviewed reference")
+    for name, expected in {**manifest["sourceHashes"], **manifest["artifactHashes"]}.items():
+        if sha256(safe_source(name)) != expected:
+            raise ValueError(f"Cartridge source hash differs: {name}")
+    base = "docs/ver3/common_input_r4/"
+    procurement = json.loads(safe_source(base + "procurement.json").read_text())
+    scenario = next(row for row in procurement["jpyScenarios"]
+                    if row["fxJpyPerUsd"] == 160 and row["filamentPriceJpyPerKgAssumed"] == 3000)
+    original = base + "cad_preview.svg"
+    preview = safe_source(original)
+    width, height = svg_dimensions(preview.read_bytes())
+    href = f"https://raw.githubusercontent.com/{REPOSITORY}/{source['artifactCommit']}/{quote(original, safe='/')}"
+    external = {href: {"source": original, "source_sha256": sha256(preview), "bytes": preview.stat().st_size,
+                       "width": width, "height": height, "loading": "on-open", "revision": source["revisionId"]}}
+    links = [
+        ("source", base + "README_ja.md", "資料と検証範囲"),
+        ("source", base + "ASSEMBLY_ja.md", "組立手順"),
+        ("download", manifest["cadNative"], "FreeCAD原本"),
+        ("download", manifest["cadStep"], "STEP原本"),
+        ("tree", "STL/Ver.3/common_input_r4", "印刷STL一覧"),
+        ("download", manifest["bom"], "部品表CSV"),
+    ]
+    source_links = "".join(link(kind, path, label, source["artifactCommit"]) for kind, path, label in links)
+    html = f'''<section class="section" id="common-input" aria-labelledby="common-input-title">
+      <article class="making-preview">
+        <p class="eyebrow">NEXT SUBASSEMBLY / {escape(source["revisionId"])}</p>
+        <h2 id="common-input-title">次に実体化した共通入力軸</h2>
+        <p>入力軸1本・軸受・金属Dハブ・保持部を、実寸法のCADにしたカートリッジです。
+        <strong>ローター・脚を含む全歩行機ではありません。</strong>購入部は独自の寸法モデルです。</p>
+        <p><strong>名目 {procurement["wholeCartridgeNominalMassG"]:.2f} g</strong>（実測・スライス値ではない）、
+        <strong>概算 {scenario["materialSubtotalExShippingTaxFeesJpy"]:,.0f}円</strong>。
+        1 USD＝160円・材料3,000円/kgの仮定で、最低購入ロットと初回試験片・材料余裕を含み、送料・輸入税・決済手数料は別です。</p>
+        <p class="small-note">別版 {escape(source["revisionId"])} · 製造リリースではなく、始動抵抗は未測定・歩行性能は未合格。
+        上のR3計算図や第一カット360°への置換・解析結果の貼付はしていません。</p>
+        <details class="image-detail"><summary>実CADプレビューを開く（原SVG・約{preview.stat().st_size / 1e6:.1f} MB、操作時にGitHubから取得）</summary>
+          <figure class="media"><img src="{href}" alt="共通入力軸カートリッジの実CAD由来プレビュー。キャリア、外輪押さえ、試験フランジ、D軸と金属ハブを示す。歩行機全体ではない。"
+            width="{width}" height="{height}" loading="lazy" decoding="async">
+            <p class="media-error" role="status" hidden>プレビューを読み込めませんでした。原SVGまたは資料リンクをご利用ください。</p>
+            <figcaption>{escape(source["revisionId"])} · 配布SVGを変更せず表示。
+            <a href="{href}" target="_blank" rel="noopener">原SVGを別タブで拡大 ↗</a></figcaption>
+          </figure>
+        </details>
+        <div class="document-strip">{source_links}</div>
+      </article></section>'''
+    return html, external, source
+
+
 class DocumentLinks(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -245,6 +305,10 @@ def validate(output: Path, manifest: dict) -> None:
                 raise ValueError("Video must be opt-in, accessible and not preload payloads")
             if tag == "img" and not (attrs.get("alt") and attrs.get("width") and attrs.get("height")):
                 raise ValueError("Every content image needs alt text and dimensions")
+            if tag == "img" and urlsplit(attrs["src"]).scheme:
+                reference = manifest.get("external_images", {}).get(attrs["src"])
+                if not reference or (int(attrs["width"]), int(attrs["height"])) != (reference["width"], reference["height"]):
+                    raise ValueError("External image is not a fixed, dimensioned source reference")
     actual = {str(path.relative_to(output)) for path in output.rglob("*") if path.is_file()}
     expected = {*PAGES, "styles.css", "viewer.css", "calculations.css", "app.js", "viewer-loader.js", "calculations.js",
                 "favicon.svg", ".nojekyll", "build-manifest.json",
@@ -298,6 +362,7 @@ def build(output: Path, ref: str) -> dict:
     assets.update(viewer_assets)
     calculation_html, calculation_assets, calculation_source = build_calculations(output)
     assets.update(calculation_assets)
+    cartridge_html, external_images, cartridge_source = cartridge_card()
     subprocess.run(["node", str(SITE / "build-viewer.mjs"), str(output)], cwd=ROOT, check=True)
     for name, original in (("viewer-engine.js", "site/viewer.js"),
                            ("three-LICENSE.txt", "site/node_modules/three/LICENSE")):
@@ -314,6 +379,7 @@ def build(output: Path, ref: str) -> dict:
     reduction = 100 * (1 - selected["volume_proxy_mm3"] / baseline["volume_proxy_mm3"])
     replacements = {
         **calculation_html,
+        "{{cartridge_card}}": cartridge_html,
         "{{hero}}": figure("hero", "サボニウス型風車を備えたVer.2の実物。白いフレームと黒い足を持つ歩行模型。", "Ver.2 · 実物の制作記録（表示用トリミング）", ref, True),
         "{{v1_photo}}": figure("v1-photo", "六枚羽の風車を備えたVer.1実物の斜めからの写真。", "Ver.1 · 実物の完成写真", ref),
         "{{v1_cg}}": figure("v1-cg", "Ver.1設計CG。屋外の背景を使ったレンダリングで、実物の屋外撮影ではない。", "Ver.1 · Fusion 360設計CG／実物写真ではありません", ref),
@@ -360,6 +426,7 @@ def build(output: Path, ref: str) -> dict:
                 "static_budget_bytes": MAX_STATIC_BYTES, "on_demand_3d_budget_bytes": 18_000_000,
                 "engineering_source": viewer_source,
                 "calculation_source": calculation_source,
+                "cartridge_source": cartridge_source, "external_images": external_images,
                 "note": "Only selected display derivatives and existing media are deployed. Exact-mesh GLBs are opt-in display data; native CAD/STL/BOM downloads remain on GitHub."}
     (output / "build-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     validate(output, manifest)

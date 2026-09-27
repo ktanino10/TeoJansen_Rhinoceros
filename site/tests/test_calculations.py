@@ -40,7 +40,7 @@ class CalculationTests(unittest.TestCase):
             self.assertTrue(entry["unchanged_original"])
 
     def test_every_figure_exposes_its_exact_contract_and_source(self):
-        images = [attrs for tag, attrs in self.tags if tag == "img"]
+        images = [attrs for tag, attrs in self.tags if tag == "img" and attrs["src"].startswith("assets/calculation-")]
         self.assertEqual(len(images), 16)
         self.assertEqual(len({attrs["src"] for attrs in images}), 16)
         for stem, contract in self.figures.items():
@@ -81,11 +81,34 @@ class CalculationTests(unittest.TestCase):
             self.assertIn('href="calculations.html"', content)
         for tag, attrs in self.tags:
             if tag in ("script", "img"):
-                self.assertFalse(attrs["src"].startswith(("http", "/", "//")))
+                if attrs["src"].startswith("https://raw.githubusercontent.com/"):
+                    self.assertIn(attrs["src"], json.loads((OUTPUT / "build-manifest.json").read_text())["external_images"])
+                else:
+                    self.assertFalse(attrs["src"].startswith(("http", "/", "//")))
         for ident in "ABC":
             guide = json.loads((OUTPUT / f"assets/assembly-{ident}.json").read_text())
             self.assertEqual(guide["revision"]["revisionId"], "ver3-first-cut-2026-09-26")
             self.assertNotIn("calculation", guide["modelUrl"])
+
+    def test_cartridge_card_has_separate_fixed_source_mass_cost_and_original_preview(self):
+        from build import cartridge_card
+        html, images, source = cartridge_card()
+        self.assertEqual(source["revisionId"], "v3-common-input-r4-01")
+        self.assertEqual(len(images), 1)
+        link, image = next(iter(images.items()))
+        self.assertIn(source["artifactCommit"], link)
+        self.assertEqual(image["source_sha256"], hashlib.sha256((ROOT / image["source"]).read_bytes()).hexdigest())
+        self.assertEqual(image["loading"], "on-open")
+        self.assertNotIn("common-input", " ".join(json.loads((OUTPUT / "build-manifest.json").read_text())["assets"]))
+        for text in ("124.98 g", "6,701円", "1 USD＝160円", "材料3,000円/kg", "送料・輸入税・決済手数料",
+                     "ローター・脚を含む全歩行機ではありません", "始動抵抗は未測定", "歩行性能は未合格"):
+            self.assertIn(text, html)
+        for suffix in ("README_ja.md", "ASSEMBLY_ja.md", "CommonInputR4.FCStd", "CommonInputR4.step", "BOM.csv"):
+            self.assertTrue(any(suffix in href for href in self.sections["common-input"]["links"]))
+        self.assertIn("STL/Ver.3/common_input_r4", html)
+        with patch("build.sha256", return_value="0" * 64):
+            with self.assertRaisesRegex(ValueError, "Cartridge reference changed"):
+                cartridge_card()
 
     def test_revision_mismatch_and_unsafe_svg_fail_closed(self):
         real_digest = calculation.digest
