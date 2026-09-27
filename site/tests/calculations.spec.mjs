@@ -121,3 +121,37 @@ test("calculation data remains usable without scripts and figure failures expose
   await expect(staticPage.locator("#analysis-B a[target='_blank']")).toHaveCount(4);
   await context.close();
 });
+
+test("calculation cartridge card keeps the original preview opt-in and the revision separate", async ({ page, request }, testInfo) => {
+  const source = JSON.parse(await readFile(path.resolve(import.meta.dirname, "../cartridge-source.json"), "utf8"));
+  const imageUrl = `https://raw.githubusercontent.com/ktanino10/TeoJansen_Rhinoceros/${source.artifactCommit}/docs/ver3/common_input_r4/cad_preview.svg`;
+  const requested = [];
+  const errors = [];
+  page.on("request", (r) => requested.push(r.url()));
+  page.on("pageerror", (error) => errors.push(error.message));
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("calculations.html#common-input");
+  const card = page.locator("#common-input");
+  await expect(card).toContainText(source.revisionId);
+  await expect(card).toContainText("124.98 g");
+  await expect(card).toContainText("6,701円");
+  await expect(card).toContainText("始動抵抗は未測定");
+  expect(requested).not.toContain(imageUrl);
+  await card.locator("summary").click();
+  const image = card.locator("img");
+  await expect.poll(() => image.evaluate((e) => e.complete && e.naturalWidth === 1200)).toBe(true);
+  expect(requested).toContain(imageUrl);
+  const original = await readFile(path.resolve(import.meta.dirname, "../../docs/ver3/common_input_r4/cad_preview.svg"));
+  const response = await request.get(imageUrl);
+  expect(response.status()).toBe(200);
+  expect(createHash("sha256").update(await response.body()).digest("hex"))
+    .toBe(createHash("sha256").update(original).digest("hex"));
+  for (const link of await card.locator(".document-strip a").all()) {
+    await expect(link).toHaveAttribute("href", new RegExp(source.artifactCommit));
+  }
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
+  const results = await new AxeBuilder({ page }).include("#common-input").withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze();
+  expect(results.violations).toEqual([]);
+  expect(errors).toEqual([]);
+  await card.screenshot({ path: testInfo.outputPath("calculation-cartridge-card.png"), style: ".site-header, .skip-link { visibility: hidden; }" });
+});

@@ -44,6 +44,8 @@ def verify(expected_commit):
     validate_manifest(remote, expected_commit)
     if set(remote["assets"]) != set(local["assets"]):
         raise ValueError("Published assets differ from the local build allowlist")
+    if remote.get("external_images", {}) != local.get("external_images", {}):
+        raise ValueError("Published external image references differ from the fixed local source")
     for page in sorted(PAGES):
         text = fetch_bytes(PUBLIC_URL + page).decode("utf-8")
         if '<html lang="ja">' not in text or "{{" in text or "/Users/" in text:
@@ -73,8 +75,15 @@ def verify(expected_commit):
 
     with ThreadPoolExecutor(max_workers=4) as pool:
         sizes = list(pool.map(check_asset, remote["assets"].items()))
+    for url, entry in local.get("external_images", {}).items():
+        data = fetch_bytes(url)
+        if len(data) != entry["bytes"] or hashlib.sha256(data).hexdigest() != entry["source_sha256"]:
+            raise ValueError(f"External reference size/hash differs: {url}")
+        from calculation_data import svg_dimensions
+        svg_dimensions(data)
     return {"url": PUBLIC_URL, "source_commit": expected_commit, "pages": len(PAGES),
             "assets": len(sizes), "asset_bytes": sum(sizes), "all_gets": 200,
+            "external_images": len(local.get("external_images", {})),
             "asset_hashes": "matched", "display_metadata": "removed"}
 
 

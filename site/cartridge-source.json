@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "revisionId": "v3-common-input-r4-01",
+  "artifactCommit": "51231caba2f6d325d16cdcb3d721af0433daf7c6",
+  "inputCommit": "8e17a9c002fb6c0c5c59ebf5c3767303b9380c19",
+  "manifest": "docs/ver3/common_input_r4/manifest.json",
+  "manifestSha256": "9f71d63963da8e4e429a8b681c3adc6629f1999cb2b387a143f4b8d81c00602b"
+}

@@ -77,3 +77,5 @@ Ver.3は実機未検証、全案の接地残差3 mm目標は未達、Bは名目�
 - 合格案0、名目・高抵抗の各27セルで0/27、実始動・30 cm歩行UNKNOWNを上部と結果近傍に明示。供給減率0.5は設計仮定、要求の2倍は入力軸受後の下流だけに適用し、入力軸受を一回戻す定義です。
 - Panasonicの操作仕様、別機種の文献冷風6.4 m/s、Gaussianピーク・σ・±20%などの仮定を分けます。未校正パネル抗力はCFDではありません。部材図は1D梁／偏心圧縮、Cの16断面はリブ試験片の探索であり、最終FEM・全フレーム生成設計ではありません。
 - `test_calculations.py` は図・データの原本ハッシュ、全16図の契約、同一ピークトルクと実たわみ値、版分離、メタデータ・不正SVG拒否を検査します。`calculations.spec.mjs` は1440px／375pxで全案の表示・非選択案の遅延取得、SVG拡大と元サイズ、単位・版、リンクのGET/hash、無JS、エラー、axeを確認します。既存workflowのliveモードにも同じ計算ページ検査を含めます。
+
+`calculations.html#common-input` の短いカードは、別版 `v3-common-input-r4-01` の共通入力軸だけを紹介します。`cartridge-source.json` で入力・成果物commitとmanifestハッシュを固定し、質量と概算費用はその版の調達JSONから読みます。約3.94 MBの原CADプレビューSVGは、detailsを開いた時だけ固定commitのGitHubから取得します。原本を加工せず、Pagesへの巨大画像追加・新ページ・新GLB・予算上限の緩和もありません。外部参照は `build-manifest.json` の `external_images` に限定記録し、live検証でも原本ハッシュを照合します。R3の16図と第一カットは変更しません。
