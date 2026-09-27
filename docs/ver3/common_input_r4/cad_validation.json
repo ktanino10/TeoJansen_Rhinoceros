@@ -1,0 +1,18 @@
+{
+  "revisionId": "v3-common-input-r4-01",
+  "nativeObjectCount": 36,
+  "nativeSolidCount": 44,
+  "stepSolidCount": 44,
+  "stepRelativeVolumeError": 2.0249554910795894e-15,
+  "parts": 13,
+  "instances": 36,
+  "nativePlacementMaxBoundErrorMm": 8.881784197001252e-16,
+  "printedBodyCount": 4,
+  "printedSolidMassG": 39.69572110594912,
+  "purchasedCatalogueMassG": 85.28000000000002,
+  "totalNominalMassG": 124.97572110594913,
+  "originalFourSkuReferenceMassG": 59,
+  "purchasedMinimumLotUsd": 40.7,
+  "isManufacturingRelease": false,
+  "measuredDragNmm": null
+}

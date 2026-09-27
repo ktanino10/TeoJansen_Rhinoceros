@@ -1,0 +1,93 @@
+{
+  "revisionId": "v3-common-input-r4-01",
+  "sourceCommit": "8e17a9c002fb6c0c5c59ebf5c3767303b9380c19",
+  "sourceCommitContainsInputs": true,
+  "sourceHashes": {
+    "scripts/ver3/input_cartridge.json": "e2b14855a1b2981a30e54970b3f6eee2aa0ace82c6a5cd6603cef3f0e0e71f3c",
+    "scripts/ver3/cartridge_report.py": "cb76c314aea7d3f039d6c43a7d69dc35c0342d52c936ac61d5454bfcd550da62",
+    "scripts/ver3/build_input_cartridge.py": "6ea54f134cc603b7f7b9f82b795bc9a6ad6e68f95f4fd7ca58066d127e339c23",
+    "scripts/ver3/input_cartridge.py": "1a9f97cd3106909cb55efc0f3b343a5756c8975072807dcd3b3bd20044646c5d",
+    "scripts/ver3/test_input_cartridge.py": "4fa1d1b5f074bb6904d361d754ddb6fc60f181bdf47c2d5553584a370addab38",
+    "scripts/ver3/cad_parts.py": "b5cfd14e569b260c6b36c3b43bc822d82d715aaca8421c1b9fa54ee5d76b902a",
+    "scripts/ver3/core.py": "1572f2d2005e84a9b4929aa39f1dbdb2144dfac6f5333bfb85e1ddb3fb856033",
+    "scripts/ver3/design.json": "cdbf69689a31706893c4f8cb6464491bc5dedeebe4df6eea5cb78cc2a9a3122b",
+    "scripts/ver3/beam.py": "59a1964a2b33de0aea13ba51c403f1cbbd46038e57cbf65b36ca7a92ccdc327e"
+  },
+  "artifactHashes": {
+    "docs/ver3/common_input_r4/ASSEMBLY_ja.md": "75095ecd6051ff8c18796e634a3bb7f79c1be22b6fe8187d0f0531d7dced68d0",
+    "docs/ver3/common_input_r4/BOM.csv": "1dff98bac0aef0ab2f432993ab72b9db061d77820ade72eeb771cead263f7929",
+    "docs/ver3/common_input_r4/README_ja.md": "85509d69ae32ea690813f2ff591a5b669c379f4e1ef80a25ecb1a6807ac23db8",
+    "docs/ver3/common_input_r4/assembly.json": "2a0e74b19614d6a940fc794b712a2e072682b7907cc661f22734fe91cd6d9788",
+    "docs/ver3/common_input_r4/assembly_access.json": "abc6a34ae350da2b2e60394f89fe08f2bbff84eb370f158a9b1884ce600b05ce",
+    "docs/ver3/common_input_r4/bearing_sections.svg": "bcf1b0646f3d0ffc32c9cae8a087df007ed923bbbcadda226c803460e2e600ba",
+    "docs/ver3/common_input_r4/cad_preview.svg": "f0bed635dcbd698701fc80e8500b6caab241b81bd99563cfd3e47d305936e9f0",
+    "docs/ver3/common_input_r4/cad_validation.json": "e6088acf77018b4cb9892b2505e2cff5b2db4338a177952d2835b4ff87d3db6e",
+    "docs/ver3/common_input_r4/procurement.json": "85c964da22208f2d2d0ab681ef84a7c19542acc45bff8cc86a551e2217cf4ad5",
+    "docs/ver3/common_input_r4/removal_sequence.svg": "f6192aeb15a2c3a5cf2e661c6860c1ef6e3e9b128f2a349b5fe53a46285dd9e8",
+    "docs/ver3/common_input_r4/shaft_mechanics.json": "56b33f1b5d6174c3b9f9c0a5eb2c40e5a880687173710af978c4efc6722c38bc",
+    "docs/ver3/common_input_r4/stl_validation.json": "786ae1b35a450ae95cfce8c068e83431ddb564800e3aefdcd342e6bb7c0232d3",
+    "docs/ver3/common_input_r4/tolerance_stack.json": "afdcf80eecf86cdc8f367fafcc72da537d9b1841300b47a4ffa1fb0d0df9f384",
+    "FreeCAD/Ver.3/common_input_r4/CommonInputR4.FCStd": "dab6a5fac58710ab70a7626b515812f7cf6e7662d1c71bc31683d258da5ff25e",
+    "FreeCAD/Ver.3/common_input_r4/CommonInputR4.step": "6d2a186fe24147babf6da218291703099b3537d9e4d8af47bbb2075d9a4f66ec",
+    "FreeCAD/Ver.3/common_input_r4/render_geometry.json.gz": "0e8f3ddbc7f98d5a83cc4a379f25c01bf75bee4e201ef69291a4ba2c76947a53",
+    "STL/Ver.3/common_input_r4/P_CAP.stl": "e3fe57229a3c7e18f6532d55ddc2147249e0219cd1421be4105149d0c8fcecc2",
+    "STL/Ver.3/common_input_r4/P_CARRIER.stl": "84cfb7a98bf331562dd4d13db819b6a988e9bfc4618cd66b42200476886e6eb5",
+    "STL/Ver.3/common_input_r4/P_FLANGE.stl": "ecc5c20b89169fb7263e29a90d400f3bb5360fdca77844d7ae33ef7d434a23ca",
+    "STL/Ver.3/common_input_r4/Q_BEARING_FIT.stl": "1f5caf8afa5116ab39b6dc27f097e62cb5e62a5c2efd89e343b6413576fff973"
+  },
+  "geometryStatus": "original actual cartridge CAD, purchased dimensional envelopes",
+  "cadNative": "FreeCAD/Ver.3/common_input_r4/CommonInputR4.FCStd",
+  "cadStep": "FreeCAD/Ver.3/common_input_r4/CommonInputR4.step",
+  "assembly": "docs/ver3/common_input_r4/assembly.json",
+  "bom": "docs/ver3/common_input_r4/BOM.csv",
+  "access": "docs/ver3/common_input_r4/assembly_access.json",
+  "cadMeshes": "FreeCAD/Ver.3/common_input_r4/render_geometry.json.gz",
+  "figures": [
+    {
+      "file": "docs/ver3/common_input_r4/cad_preview.svg",
+      "revisionId": "v3-common-input-r4-01",
+      "sourceGeometryRevision": "v3-common-input-r4-01",
+      "method": "actual mesh orthographic projection",
+      "units": "mm",
+      "displayAmplification": 1,
+      "isCartridgeCadGeometry": true,
+      "isWalkingPrototypeGeometry": false,
+      "sourceHashes": {
+        "assembly.json": "2a0e74b19614d6a940fc794b712a2e072682b7907cc661f22734fe91cd6d9788",
+        "render_geometry.json.gz": "0e8f3ddbc7f98d5a83cc4a379f25c01bf75bee4e201ef69291a4ba2c76947a53"
+      }
+    },
+    {
+      "file": "docs/ver3/common_input_r4/removal_sequence.svg",
+      "revisionId": "v3-common-input-r4-01",
+      "sourceGeometryRevision": "v3-common-input-r4-01",
+      "method": "same mesh in labelled sequential-removal explanation poses",
+      "units": "mm",
+      "displayAmplification": 1,
+      "isCartridgeCadGeometry": true,
+      "isWalkingPrototypeGeometry": false,
+      "sourceHashes": {
+        "assembly.json": "2a0e74b19614d6a940fc794b712a2e072682b7907cc661f22734fe91cd6d9788",
+        "render_geometry.json.gz": "0e8f3ddbc7f98d5a83cc4a379f25c01bf75bee4e201ef69291a4ba2c76947a53"
+      }
+    },
+    {
+      "file": "docs/ver3/common_input_r4/bearing_sections.svg",
+      "revisionId": "v3-common-input-r4-01",
+      "sourceGeometryRevision": "v3-common-input-r4-01",
+      "method": "actual triangulated-CAD section, dimensioned nominal stack",
+      "units": "mm",
+      "displayAmplification": 1,
+      "isCartridgeCadGeometry": true,
+      "isWalkingPrototypeGeometry": false,
+      "sourceHashes": {
+        "assembly.json": "2a0e74b19614d6a940fc794b712a2e072682b7907cc661f22734fe91cd6d9788",
+        "render_geometry.json.gz": "0e8f3ddbc7f98d5a83cc4a379f25c01bf75bee4e201ef69291a4ba2c76947a53"
+      }
+    }
+  ],
+  "supplierCadRedistributed": false,
+  "manufacturingRelease": false,
+  "qualifiedWalkingPrototypeCount": 0,
+  "measuredStartingTorqueNmm": null
+}

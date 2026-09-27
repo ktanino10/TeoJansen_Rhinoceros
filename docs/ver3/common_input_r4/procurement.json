@@ -1,0 +1,218 @@
+{
+  "purchasedRows": [
+    {
+      "id": "H_SHAFT",
+      "sku": "2101-0006-0120",
+      "quantity": 1,
+      "massG": 25,
+      "pack": 1,
+      "packPriceUsd": 4.69,
+      "url": "https://www.gobilda.com/2101-series-stainless-steel-d-shaft-6mm-diameter-120mm-length/",
+      "spec": "Ready-length120mm stainless6mmD shaft,5.5mm flat-to-opposite; no cut,drill,tap",
+      "purchasePacks": 1,
+      "purchaseQuantity": 1,
+      "unusedPieces": 0,
+      "subtotalUsd": 4.69
+    },
+    {
+      "id": "H_BEARING",
+      "sku": "1611-0514-0006",
+      "quantity": 2,
+      "massG": 3,
+      "pack": 2,
+      "packPriceUsd": 3.99,
+      "url": "https://www.gobilda.com/1611-series-flanged-ball-bearing-6mm-id-x-14mm-od-5mm-thickness-2-pack/",
+      "spec": "6x14x5 high-carbon-steel flanged bearing,flange15x1; grease/drag not specified",
+      "purchasePacks": 1,
+      "purchaseQuantity": 2,
+      "unusedPieces": 0,
+      "subtotalUsd": 3.99
+    },
+    {
+      "id": "H_COLLAR",
+      "sku": "2910-0919-0006",
+      "quantity": 2,
+      "massG": 7,
+      "pack": 1,
+      "packPriceUsd": 4.49,
+      "url": "https://www.gobilda.com/2910-series-aluminum-clamping-collar-6mm-id-x-19mm-od-9mm-length/",
+      "spec": "6mm clamp collar,19mm body,9mm body length,9mm boss x0.5; included clamp screw",
+      "purchasePacks": 2,
+      "purchaseQuantity": 2,
+      "unusedPieces": 0,
+      "subtotalUsd": 8.98
+    },
+    {
+      "id": "H_HUB",
+      "sku": "1309-0016-1006",
+      "quantity": 1,
+      "massG": 14,
+      "pack": 1,
+      "packPriceUsd": 7.99,
+      "url": "https://www.gobilda.com/1309-series-sonic-hub-6mm-d-bore/",
+      "spec": "Metal6mmD hub,16mm-square M4 holes,14x2 pilot; two included pinch bolts",
+      "purchasePacks": 1,
+      "purchaseQuantity": 1,
+      "unusedPieces": 0,
+      "subtotalUsd": 7.99
+    },
+    {
+      "id": "H_SPACER",
+      "sku": "1521-0008-0040",
+      "quantity": 2,
+      "massG": 0.64,
+      "pack": 4,
+      "packPriceUsd": 2.49,
+      "url": "https://www.gobilda.com/1521-series-6mm-id-spacer-8mm-od-4mm-length-4-pack/",
+      "spec": "Zinc steel6ID/8ODx4 stock spacer; reference CAD6.05/7.95",
+      "purchasePacks": 1,
+      "purchaseQuantity": 4,
+      "unusedPieces": 2,
+      "subtotalUsd": 2.49
+    },
+    {
+      "id": "H_BOLT12",
+      "sku": "2800-0004-0012",
+      "quantity": 4,
+      "massG": 2.0,
+      "pack": 25,
+      "packPriceUsd": 3.59,
+      "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-12mm-length/",
+      "spec": "M4x0.7x12 socket-head zinc steel,3mm hex",
+      "purchasePacks": 1,
+      "purchaseQuantity": 25,
+      "unusedPieces": 21,
+      "subtotalUsd": 3.59
+    },
+    {
+      "id": "H_BOLT20",
+      "sku": "2800-0004-0020",
+      "quantity": 4,
+      "massG": 2.6,
+      "pack": 25,
+      "packPriceUsd": 3.99,
+      "url": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-20mm-length-25-pack/",
+      "spec": "M4x0.7x20 socket-head zinc steel,3mm hex",
+      "purchasePacks": 1,
+      "purchaseQuantity": 25,
+      "unusedPieces": 21,
+      "subtotalUsd": 3.99
+    },
+    {
+      "id": "H_WASHER",
+      "sku": "2801-0004-0008",
+      "quantity": 12,
+      "massG": 0.29,
+      "pack": 25,
+      "packPriceUsd": 1.99,
+      "url": "https://www.gobilda.com/2801-series-zinc-plated-steel-washer-4mm-id-x-8mm-od/",
+      "spec": "4IDx8ODx1 zinc-steel washer; thickness from exact vendor CAD",
+      "purchasePacks": 1,
+      "purchaseQuantity": 25,
+      "unusedPieces": 13,
+      "subtotalUsd": 1.99
+    },
+    {
+      "id": "H_LOCKNUT",
+      "sku": "2812-0004-0007",
+      "quantity": 4,
+      "massG": 0.78,
+      "pack": 25,
+      "packPriceUsd": 2.99,
+      "url": "https://www.gobilda.com/m4-x-0-7mm-nylock-nut/",
+      "spec": "M4x0.7 nylock,7mm hex,zinc steel;5.2mm conservative reference envelope",
+      "purchasePacks": 1,
+      "purchaseQuantity": 25,
+      "unusedPieces": 21,
+      "subtotalUsd": 2.99
+    }
+  ],
+  "purchasedMinimumLotUsd": 40.7,
+  "purchasedCatalogueMassG": 85.28000000000002,
+  "historicalFourSkuSubtotalUsd": 25.65,
+  "historicalFourSkuMassG": 59,
+  "printedSolidMassG": 39.69572110594912,
+  "couponSolidMassG": 12.921493430679634,
+  "couponCostBasis": "one quantity0 fit coupon included in first-print material estimate, not in assembled mass",
+  "wholeCartridgeNominalMassG": 124.97572110594913,
+  "jpyScenarios": [
+    {
+      "fxJpyPerUsd": 140,
+      "purchasedSubsetJpy": 5698.0,
+      "filamentPriceJpyPerKgAssumed": 2000,
+      "solidFilamentPlusWasteCostJpy": 95.27,
+      "firstPrintIncludingCouponAndWasteCostJpy": 126.28,
+      "materialSubtotalExShippingTaxFeesJpy": 5824.28
+    },
+    {
+      "fxJpyPerUsd": 140,
+      "purchasedSubsetJpy": 5698.0,
+      "filamentPriceJpyPerKgAssumed": 3000,
+      "solidFilamentPlusWasteCostJpy": 142.9,
+      "firstPrintIncludingCouponAndWasteCostJpy": 189.42,
+      "materialSubtotalExShippingTaxFeesJpy": 5887.42
+    },
+    {
+      "fxJpyPerUsd": 140,
+      "purchasedSubsetJpy": 5698.0,
+      "filamentPriceJpyPerKgAssumed": 4000,
+      "solidFilamentPlusWasteCostJpy": 190.54,
+      "firstPrintIncludingCouponAndWasteCostJpy": 252.56,
+      "materialSubtotalExShippingTaxFeesJpy": 5950.56
+    },
+    {
+      "fxJpyPerUsd": 160,
+      "purchasedSubsetJpy": 6512.0,
+      "filamentPriceJpyPerKgAssumed": 2000,
+      "solidFilamentPlusWasteCostJpy": 95.27,
+      "firstPrintIncludingCouponAndWasteCostJpy": 126.28,
+      "materialSubtotalExShippingTaxFeesJpy": 6638.28
+    },
+    {
+      "fxJpyPerUsd": 160,
+      "purchasedSubsetJpy": 6512.0,
+      "filamentPriceJpyPerKgAssumed": 3000,
+      "solidFilamentPlusWasteCostJpy": 142.9,
+      "firstPrintIncludingCouponAndWasteCostJpy": 189.42,
+      "materialSubtotalExShippingTaxFeesJpy": 6701.42
+    },
+    {
+      "fxJpyPerUsd": 160,
+      "purchasedSubsetJpy": 6512.0,
+      "filamentPriceJpyPerKgAssumed": 4000,
+      "solidFilamentPlusWasteCostJpy": 190.54,
+      "firstPrintIncludingCouponAndWasteCostJpy": 252.56,
+      "materialSubtotalExShippingTaxFeesJpy": 6764.56
+    },
+    {
+      "fxJpyPerUsd": 180,
+      "purchasedSubsetJpy": 7326.0,
+      "filamentPriceJpyPerKgAssumed": 2000,
+      "solidFilamentPlusWasteCostJpy": 95.27,
+      "firstPrintIncludingCouponAndWasteCostJpy": 126.28,
+      "materialSubtotalExShippingTaxFeesJpy": 7452.28
+    },
+    {
+      "fxJpyPerUsd": 180,
+      "purchasedSubsetJpy": 7326.0,
+      "filamentPriceJpyPerKgAssumed": 3000,
+      "solidFilamentPlusWasteCostJpy": 142.9,
+      "firstPrintIncludingCouponAndWasteCostJpy": 189.42,
+      "materialSubtotalExShippingTaxFeesJpy": 7515.42
+    },
+    {
+      "fxJpyPerUsd": 180,
+      "purchasedSubsetJpy": 7326.0,
+      "filamentPriceJpyPerKgAssumed": 4000,
+      "solidFilamentPlusWasteCostJpy": 190.54,
+      "firstPrintIncludingCouponAndWasteCostJpy": 252.56,
+      "materialSubtotalExShippingTaxFeesJpy": 7578.56
+    }
+  ],
+  "shippingJpy": null,
+  "importTaxJpy": null,
+  "paymentFeesJpy": null,
+  "measuredMassG": null,
+  "slicedMassG": null,
+  "externalMountingFastenersIncluded": false
+}
