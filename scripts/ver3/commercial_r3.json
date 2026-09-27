@@ -1,0 +1,191 @@
+{
+  "revisionId": "v3-commercial-r3-01",
+  "previousRevisionId": "v3-r2-feasibility-02",
+  "requirements": {
+    "source": "User accepted a representative commercial hair dryer as a common design basis on 2026-09-27",
+    "coldAir": true,
+    "followModelAtFixedDistance": true,
+    "unpushedStart": true,
+    "levelFloorTravelMm": 300,
+    "materialsBudgetJpyPerMachine": 20000,
+    "shipping": "separate",
+    "requiresUserMeasurementBeforeDesign": false,
+    "requiresReFaModelBeforeDesign": false,
+    "realMachineValidation": "UNKNOWN"
+  },
+  "referenceData": {
+    "operatingReference": {
+      "manufacturer": "Panasonic",
+      "model": "EH-NE5L",
+      "officialProductUrl": "https://panasonic.jp/hair/products/EH-NE5L.html",
+      "officialSpecUrl": "https://panasonic.jp/hair/products/EH-NE5L/spec.html",
+      "manufacturerManualHostedByRetailer": "https://aeonretail.com/Contents/careproducts/pdf/P-4549980746394.pdf",
+      "manualDocumentId": "SEHNE5L03 A1123-0",
+      "mode": "COLD, described in the manual as strong cold air",
+      "nozzle": "built-in quick-dry nozzle, described as a combination of strong and weak streams",
+      "catalogueFlowM3Min": [1.6, 3.0],
+      "catalogueFlowNotes": "1.6 JIS at outlet and 3.0 proprietary hair-reaching metric are not a measured cold velocity profile",
+      "coldVelocityAt150MmMS": null,
+      "manufacturerApprovedModelDrivingUse": false,
+      "scopeWarning": "The manual restricts use to human hair drying/styling. Used here as an operating-specification reference for calculations, not authorization to operate the appliance outside its instructions."
+    },
+    "publishedColdExperiment": {
+      "authors": "Timothy C. Scott; Lemuel T. Curran",
+      "title": "Laboratory Fixture for Heat Transfer Using a Hair Drier",
+      "publisher": "ASEE 2025, paper 46692",
+      "url": "https://peer.asee.org/laboratory-fixture-for-heat-transfer-using-a-hair-drier.pdf",
+      "location": "section 2.2 and Figure 8, PDF pages 7-8",
+      "mode": "cold air over a heated 19mm disc",
+      "dryerModel": null,
+      "localVelocityRows": [
+        {"fan": "Hi", "distanceMm": 100, "velocityMS": 7.3},
+        {"fan": "Hi", "distanceMm": 150, "velocityMS": 6.4},
+        {"fan": "Low", "distanceMm": 100, "velocityMS": 5.8},
+        {"fan": "Low", "distanceMm": 200, "velocityMS": 4.5},
+        {"fan": "Low", "distanceMm": 300, "velocityMS": 3.6},
+        {"fan": "Low", "distanceMm": 400, "velocityMS": 2.9}
+      ],
+      "velocityInterpretation": "reported air velocity at the disc test location; the table does not establish the cross-section maximum, area average or radial Gaussian width",
+      "temperatureNote": "Cold-air tests only. The paper's separate 73C hot-air mass-flow/16.8m/s example is not used.",
+      "transferToReferencePanasonic": "not measured; adopting the local velocity as a Gaussian peak is explicitly a modeling assumption",
+      "measurementUncertainty": null
+    },
+    "coinReference": {
+      "url": "https://www.mint.go.jp/operations/production/operations_coin_presently-minted.html",
+      "nominalOneYenMassG": 1.0,
+      "diameterMm": 20,
+      "material": "pure aluminum",
+      "usedCoinMassToleranceG": null,
+      "note": "A circulation coin is not a calibrated mass; batch mint tolerances must not be converted to individual bounds."
+    },
+    "checkedDateJst": "2026-09-27"
+  },
+  "modelAssumptions": {
+    "distanceMm": 150,
+    "fanSetting": "COLD on the reference appliance; analogous Hi cold airflow for the published example, not an equality of actual fan outputs",
+    "nominalGaussianPeakMS": 6.4,
+    "velocityMultipliers": [0.8, 1.0, 1.2],
+    "nominalVelocitySigmaMm": 20,
+    "velocitySigmaMmCases": [15, 20, 25],
+    "aimErrorMmCases": [-10, 0, 10],
+    "airDensityKgM3": 1.225,
+    "airKinematicViscosityM2S": 0.000015,
+    "retainedProxyForceFractions": [0.25, 0.50, 0.75],
+    "measuredGuarantee": false,
+    "profileWarning": "The Gaussian peak, axisymmetry, sigma, +/-20% and +/-10mm are design sensitivity inputs, not measured confidence bounds for any dryer.",
+    "distanceModel": "No extrapolation outside the adopted 150mm plane. Published other distances are reference data, not a fitted Panasonic/ReFa law.",
+    "availableTorqueLowerBoundNm": null
+  },
+  "boundedLinkageSearch": {
+    "seed": 27,
+    "maximumIterations": 60,
+    "populationMultiplier": 8,
+    "angleSamples": 360,
+    "refinedAngleSamples": 1440,
+    "variableBoundsUnscaledMm": {
+      "QP": [34.0, 42.0],
+      "OQ": [4.5, 11.0],
+      "DE": [35.0, 44.0],
+      "CF": [45.0, 54.0],
+      "EF": [61.0, 70.0]
+    },
+    "fixed": "all other original Jansen dimensions; scale 0.7; physically defined 0/180 tripod phasing; no arbitrary body translation or leg stretching",
+    "minimumSwingGapMm": 8,
+    "minimumStrideMm": 38,
+    "minimumForwardRateMmPerRad": 3,
+    "minimumCircleTangencyMarginMm": 0.3,
+    "objective": "reduce active-stance vertical speed and horizontal handoff mismatch while preserving stride, lift, closure and forward direction",
+    "collisionStatus": "UNKNOWN until swept real parts and axial layers are built"
+  },
+  "candidates": [
+    {
+      "id": "A",
+      "direction": "large rotor, few stages",
+      "rotorDiameterMm": 150,
+      "stageRatios": [4, 4],
+      "axisCentersYzMm": {"O": [0, 0], "M1": [-50, 37.5], "I": [-50, 100]},
+      "stages": [["I", "M1"], ["M1", "O"]]
+    },
+    {
+      "id": "B",
+      "direction": "small rotor, high reduction/slower",
+      "rotorDiameterMm": 70,
+      "stageRatios": [5, 5, 5],
+      "axisCentersYzMm": {"O": [0, 0], "M2": [-60, 45], "M1": [-120, 90], "I": [-60, 135]},
+      "stages": [["I", "M1"], ["M1", "M2"], ["M2", "O"]]
+    },
+    {
+      "id": "C",
+      "direction": "intermediate rotor and generated lightweight structure",
+      "rotorDiameterMm": 100,
+      "stageRatios": [5, 5],
+      "axisCentersYzMm": {"O": [0, 0], "M1": [-60, 45], "I": [-60, 120]},
+      "stages": [["I", "M1"], ["M1", "O"]]
+    }
+  ],
+  "massAndResistancePolicy": "Carry over identical R2 mass bounds and friction/drag ranges for isolated comparisons. Larger rotor proxy mass is added to each design's load, never silently reduced by an unbuilt lightweight frame.",
+  "bearingInterfaceUpdate": {
+    "manufacturerSource": "https://www.nskmicro.co.jp/products/bearing/bearing_size_pdf/single_row_mm.pdf",
+    "cataloguePages": [42, 43],
+    "catalogueExactDesignation": "686A open / 686AZZ1 shielded",
+    "retailerDesignation": "ISC 686ZZ, not proven identical to the catalogue 686AZZ1",
+    "catalogueShieldedDimensionsMm": [6, 13, 5],
+    "catalogueOpenDimensionsMm": [6, 13, 3.5],
+    "openShaftShoulderMinimumMm": 7.2,
+    "shieldedShaftShoulderMaximumMm": 7.4,
+    "shieldedHousingShoulderMinimumMm": 11.7,
+    "maximumFilletMm": 0.15,
+    "candidateSpacerRetail": {
+      "sku": "c-sus-06-08-01",
+      "url": "https://store.shopping.yahoo.co.jp/neji-701/c-sus-06-08-01.html",
+      "dimensionsMm": [6.2, 8, 1],
+      "material": "SUS303",
+      "packQuantity": 2,
+      "priceJpyDisplayed": 1400,
+      "taxBasis": "retail displayed price, no separately stated tax amount extracted",
+      "shippingJpyDisplayed": 300,
+      "availabilityText": "structured data InStock; Tokyo earliest arrival 2026-09-29 displayed, not a stock guarantee",
+      "manufacturingTolerances": null
+    },
+    "decision": "REJECT this 8mm-OD spacer for a 7.4mm maximum shielded shoulder. Catalogue/retailer suffix mismatch must be closed. Do not silently install it or change to open bearings.",
+    "requiredDesignChange": "Keep direct 15mm collar contact forbidden. Select a ring-compatible standard spacer or a different fully documented bearing/retention set before final CAD release.",
+    "qualification": "UNKNOWN"
+  },
+  "documentedSupportFallback": {
+    "bearing": {
+      "manufacturer": "NSK (Nippon Seiko), not identified as NSK Micro",
+      "retailerExactSku": "626ZZ",
+      "url": "https://e-seki.net/products/detail1825.html",
+      "dimensionsMm": [6, 19, 6],
+      "material": "high-carbon chromium bearing steel",
+      "unitPriceJpyTaxIncluded": 198,
+      "availabilityText": "lead time 1-2 days displayed; not a reservation"
+    },
+    "collar": {
+      "manufacturer": "IWATA",
+      "sku": "SC0607CB2",
+      "manufacturerCatalogue": "https://www.iwata-fa.jp/contents/assets/pdf/general.pdf",
+      "printedPages": [84, 85],
+      "catalogueDate": "2022-09; current dimensions must be confirmed before release",
+      "listedSuitableBearing": "626ZZ",
+      "boreMm": 6,
+      "boreTolerance": "H8",
+      "bodyDiameterMm": 13,
+      "bodyDiameterToleranceMm": 0.1,
+      "bossDiameterMm": 9.2,
+      "bossDiameterToleranceMm": [-0.2, 0],
+      "totalWidthMm": 7.5,
+      "bossLengthMm": 2.5,
+      "screws": "2 x M3x3, 120 degrees apart",
+      "material": "S45C, black oxide",
+      "currentCataloguePriceJpyExTax": 430,
+      "currentPriceSource": "https://www.orange-book.com/ja/c/products/index.html?itemCd=SC0607CB2%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%201004",
+      "retailPurchasePriceJpy": null
+    },
+    "decision": "One documented candidate set, NOT selected into the R3 calculations. Larger 19mm housing, exact NSK 626ZZ inner-face dimensions, current collar revision, drag, added mass and retail price still need to close.",
+    "spacerSubstitution": "No loose 8mm spacer is added; the integrated boss is intended to contact the inner ring.",
+    "whyNotAutomaticPass": "NSK Micro 626ZZ1 shielded shoulder table has max8.5mm, different from collar boss9.2mm. This does not prove a conflict for NSK 626ZZ, but proves suffix/brand identity cannot be assumed.",
+    "physicalOrProcurementQualification": "UNKNOWN",
+    "notAppliedToBaseline": true
+  }
+}
