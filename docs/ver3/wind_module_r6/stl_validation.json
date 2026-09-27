@@ -1,0 +1,46 @@
+[
+  {
+    "part": "P_CARRIER",
+    "singleClosedSolid": true,
+    "dimensionsMm": [
+      120.0,
+      48.0,
+      67.0
+    ],
+    "volumeRelativeError": 0.00010515084787534854,
+    "assemblyQuantity": 1
+  },
+  {
+    "part": "P_CAP",
+    "singleClosedSolid": true,
+    "dimensionsMm": [
+      48.0,
+      24.0,
+      3.0
+    ],
+    "volumeRelativeError": 0.00046142177537364387,
+    "assemblyQuantity": 2
+  },
+  {
+    "part": "Q_BEARING_FIT",
+    "singleClosedSolid": true,
+    "dimensionsMm": [
+      88.0,
+      24.0,
+      7.0
+    ],
+    "volumeRelativeError": 0.0002678862836971893,
+    "assemblyQuantity": 0
+  },
+  {
+    "part": "P_ROTOR",
+    "singleClosedSolid": true,
+    "dimensionsMm": [
+      100.0,
+      100.0,
+      38.0
+    ],
+    "volumeRelativeError": 0.0006399833712291256,
+    "assemblyQuantity": 1
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "freezeId": "r6-1-limited-recheck-20260927-01",
+  "workspaceHead": "2fade27e5b9d3d8b0cfec838d88924b3bf87aa4e",
+  "initialReviewIndexTree": "08e3beb17abd3db8ee1e26cd3dd36138e60e146a",
+  "originalReviewerId": "dae672f2-99c0-495a-a6ca-059e1bfbf790",
+  "initialReviewTextSha256": "2d1f7797a354252856ee6532d48a8b55a60aeb8d02e9d204bbb600138242d734",
+  "correctionDiffSha256": "c7fc0ebd49089ce39d6d8ee8e4e6a58cc9fcffc366a6f54b2800500d0901c265",
+  "targets": [
+    {
+      "path": "scripts/ver3/wind_module.py",
+      "afterSha256": "4bb0f06fae1a3518552f0fa2208c51cbbb9a871b1ee8de9acac94c57d0874160",
+      "beforeSha256": "45885869c5d25ca0d869111fe8c539b5c9b972f43a3e51f7c3f094fb9a48d706"
+    },
+    {
+      "path": "scripts/ver3/test_frame3d.py",
+      "afterSha256": "508d0896254e03845c1c4da10840f997099b58e4a064f760a1a7daf55f511fef",
+      "beforeSha256": "f7851d6478036e3b3791e4267ff77cbaddd2e9d741824f62893dfa391041f03f"
+    },
+    {
+      "path": "scripts/ver3/report_wind_module.py",
+      "afterSha256": "3866b0c5f103171634ef83b999770e1e4a545c9a22a1ee65f1041064d93fcdfe",
+      "beforeSha256": "18e642b3fe29c8410143d2ea799a92b592fb46d8c956a9bfff0e7effca8171a6"
+    },
+    {
+      "path": "scripts/ver3/frame3d.py",
+      "afterSha256": "f675a521a5328d10bd0dabafa7b68fcf37593a0414dddd161ac9b07080593b9d",
+      "beforeSha256": "f675a521a5328d10bd0dabafa7b68fcf37593a0414dddd161ac9b07080593b9d"
+    },
+    {
+      "path": "scripts/ver3/analyze_wind_module.py",
+      "afterSha256": "0f0a0f316e75b3b247f06270cfdc751b537407e0aa84503cad588203de06091b",
+      "beforeSha256": "0f0a0f316e75b3b247f06270cfdc751b537407e0aa84503cad588203de06091b"
+    },
+    {
+      "path": "scripts/ver3/beam.py",
+      "afterSha256": "59a1964a2b33de0aea13ba51c403f1cbbd46038e57cbf65b36ca7a92ccdc327e",
+      "beforeSha256": "59a1964a2b33de0aea13ba51c403f1cbbd46038e57cbf65b36ca7a92ccdc327e"
+    },
+    {
+      "path": "scripts/ver3/wind_module.json",
+      "afterSha256": "d59d170ac859513f82a74db17ee1d5990197c5b049fd30d27110f9efec3b358b",
+      "beforeSha256": "d59d170ac859513f82a74db17ee1d5990197c5b049fd30d27110f9efec3b358b"
+    },
+    {
+      "path": "scripts/ver3/input_cartridge.py",
+      "afterSha256": "1a9f97cd3106909cb55efc0f3b343a5756c8975072807dcd3b3bd20044646c5d",
+      "beforeSha256": "1a9f97cd3106909cb55efc0f3b343a5756c8975072807dcd3b3bd20044646c5d"
+    },
+    {
+      "path": "docs/ver3/common_input_r4/assembly.json",
+      "afterSha256": "2a0e74b19614d6a940fc794b712a2e072682b7907cc661f22734fe91cd6d9788",
+      "beforeSha256": "2a0e74b19614d6a940fc794b712a2e072682b7907cc661f22734fe91cd6d9788"
+    },
+    {
+      "path": "docs/ver3/wind_module_r6/holder_sizing.json",
+      "afterSha256": "658ed384081ce5ea2b5e45d9947e890ee75545b66f3392f6ac5cc8a3fa9ee874",
+      "beforeSha256": "c411456dca414744fa15d11d7dd7dcf31adb79a9975208547417dc0df4ff75d7"
+    },
+    {
+      "path": "docs/ver3/wind_module_r6/actual_mass_support.json",
+      "afterSha256": "ac94bcb82e79e693ecf530c32612b835da16af5a93cfdc739997a7b2b47d0a37",
+      "beforeSha256": "b5d9f6b978dfdad4db150a2bcda833d7b444c915edb6f2e27a5e31e8aae93eab"
+    },
+    {
+      "path": "docs/ver3/wind_module_r6/rotor_strength_screens.json",
+      "afterSha256": "8f443b62480f818e31bcb91900ea548669fcf0625b5e7e848440e06c66a8de70",
+      "beforeSha256": "cdaed76bfb32795be39d9af5dbc5811022d1565ec2b3192357d5f8d7c0f1e799"
+    },
+    {
+      "path": "docs/ver3/wind_module_r6/holder_deflection.svg",
+      "afterSha256": "76e46d1168aaf636c03e083e3ffb6376b6744e653a71af2ad02f4d9c619bf11c",
+      "beforeSha256": "3c70847b5219e515959e57903582cdd5bc140423f16d9c89f592266f9862edab"
+    },
+    {
+      "path": "docs/ver3/wind_module_r6/README_ja.md",
+      "afterSha256": "f1550046a291b00a4cecfe70681cbd2b3350d0b37262ad428dd38123a59ace5e",
+      "beforeSha256": "492c5bdbb47ada2e6d1e9f8ec6be1aa05a61651079352c67915560de07f8a49d"
+    },
+    {
+      "path": "docs/ver3/wind_module_r6/REVIEW_ja.md",
+      "afterSha256": "ca8dd899fc5e827037b4ca92581785c8e43aeff5ed42c99df29b3fc0b47ef468",
+      "beforeSha256": null
+    },
+    {
+      "path": "docs/ver3/wind_module_r6/manifest.json",
+      "afterSha256": "9d7d7a49c97ebb50b333f7565ad063d11f9157cc46405bfb672d80e992166bfc",
+      "beforeSha256": "d8598d08dcce55459f012f90a37e2ed55b1632c2dac8b02fc68ff8735af7d034"
+    }
+  ],
+  "unchangedGeometry": [
+    {
+      "path": "FreeCAD/Ver.3/wind_module_r6/WindModuleR6.FCStd",
+      "sha256": "9d310d3e40ac8506eda8564af77a64b5055310275288f0c8880a61c9023fb9b1",
+      "unchangedFromInitialReview": true
+    },
+    {
+      "path": "FreeCAD/Ver.3/wind_module_r6/WindModuleR6.step",
+      "sha256": "9d2597aa4d7c8255735b57e591a277efed9bd1afa9e3692c10864363b0df809e",
+      "unchangedFromInitialReview": true
+    },
+    {
+      "path": "FreeCAD/Ver.3/wind_module_r6/analysis_geometry.json.gz",
+      "sha256": "4e5e27c597d3b7eb3c64cc9015feca9284c0207eee43ae89a9939058831a71c7",
+      "unchangedFromInitialReview": true
+    },
+    {
+      "path": "FreeCAD/Ver.3/wind_module_r6/render_geometry.json.gz",
+      "sha256": "98e8579cde31b62d2e2872f2b6517ad82486770d9b93528f3d7f0a41d12936e2",
+      "unchangedFromInitialReview": true
+    },
+    {
+      "path": "STL/Ver.3/wind_module_r6/P_CAP.stl",
+      "sha256": "2759e42d3190201aaa050dbb455c3d55ce9e5f059bed258a7a01524a3b156b6f",
+      "unchangedFromInitialReview": true
+    },
+    {
+      "path": "STL/Ver.3/wind_module_r6/P_CARRIER.stl",
+      "sha256": "21105438a9d3c1dd5bbc500f3598150861b087730ae782d102a96c77211cf4a3",
+      "unchangedFromInitialReview": true
+    },
+    {
+      "path": "STL/Ver.3/wind_module_r6/P_ROTOR.stl",
+      "sha256": "dae2dcce28ae92703d3ff6641886e835cef96df679ab0e0bbca98af247f8cdab",
+      "unchangedFromInitialReview": true
+    },
+    {
+      "path": "STL/Ver.3/wind_module_r6/Q_BEARING_FIT.stl",
+      "sha256": "1f5caf8afa5116ab39b6dc27f097e62cb5e62a5c2efd89e343b6413576fff973",
+      "unchangedFromInitialReview": true
+    }
+  ],
+  "scope": "Only R6-1 displacement mapping/work-conjugacy and corresponding data/figure/document consistency. No full mechanical/aero reapproval."
+}

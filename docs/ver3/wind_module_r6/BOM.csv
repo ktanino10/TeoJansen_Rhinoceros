@@ -1,0 +1,14 @@
+part_id,category,assembly_quantity,sku,purchase_pieces,minimum_lot_usd,unit_nominal_mass_g,total_nominal_mass_g,basis,description
+P_CARRIER,printed,1,,,,42.03773827299009,42.03773827299009,actual new solid CAD x assumed PETG density; not sliced/measured,55mm axis carrier; unchanged R4 bearing seats/axial stack; four6x6mm3D braces selected by absolute-load frame screening
+P_CAP,printed,2,,,,2.3182368732633276,4.636473746526655,actual new solid CAD x assumed PETG density; not sliced/measured,"3mm cover,central10.2 bore; bolts land on carrier,not bearing. No clamping contact with inner ring."
+Q_BEARING_FIT,printed,0,,,,12.921493430679634,0.0,original CAD solid volume x assumed PETG density; not sliced/measured,Quantity0 coupon;14.0/14.15/14.3/14.45mm seats;100% scale only.
+H_SHAFT,purchased,1,2101-0006-0120,1,4.69,25,25,catalogue purchased assembly,"2101-0006-0120: Ready-length120mm stainless6mmD shaft,5.5mm flat-to-opposite; no cut,drill,tap"
+H_BEARING,purchased,2,1611-0514-0006,2,3.99,3,6,catalogue purchased assembly,"1611-0514-0006: 6x14x5 high-carbon-steel flanged bearing,flange15x1; grease/drag not specified"
+H_COLLAR,purchased,2,2910-0919-0006,2,8.98,7,14,catalogue purchased assembly,"2910-0919-0006: 6mm clamp collar,19mm body,9mm body length,9mm boss x0.5; included clamp screw"
+H_HUB,purchased,1,1309-0016-1006,1,7.99,14,14,catalogue purchased assembly,"1309-0016-1006: Metal6mmD hub,16mm-square M4 holes,14x2 pilot; two included pinch bolts"
+H_SPACER,purchased,2,1521-0008-0040,4,2.49,0.64,1.28,catalogue purchased assembly,1521-0008-0040: Zinc steel6ID/8ODx4 stock spacer; reference CAD6.05/7.95
+H_BOLT12,purchased,4,2800-0004-0012,25,3.59,2.0,8.0,catalogue purchased assembly,"2800-0004-0012: M4x0.7x12 socket-head zinc steel,3mm hex"
+H_BOLT20,purchased,4,2800-0004-0020,25,3.99,2.6,10.4,catalogue purchased assembly,"2800-0004-0020: M4x0.7x20 socket-head zinc steel,3mm hex"
+H_WASHER,purchased,12,2801-0004-0008,25,1.99,0.29,3.4799999999999995,catalogue purchased assembly,2801-0004-0008: 4IDx8ODx1 zinc-steel washer; thickness from exact vendor CAD
+H_LOCKNUT,purchased,4,2812-0004-0007,25,2.99,0.78,3.12,catalogue purchased assembly,"2812-0004-0007: M4x0.7 nylock,7mm hex,zinc steel;5.2mm conservative reference envelope"
+P_ROTOR,printed,1,,,,81.30722253229212,81.30722253229212,actual new solid CAD x assumed PETG density; not sliced/measured,"100mmODx38mm overall,32mm active;16 curved blades, tapered roots,4mm hub root,2mm end ring with40mm access bore; no validated aerodynamic performance"
