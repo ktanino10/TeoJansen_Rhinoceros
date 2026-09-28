@@ -55,7 +55,9 @@ def main():
                      "unitSolidVolumeMm3":shape.Volume,"purpose":description,
                      "stl":str((stl/(pid+".stl")).relative_to(root))})
     doc.recompute();doc.saveAs(str(cad/"AssemblyAccessories.FCStd"))
-    b.Part.export([obj for obj in doc.Objects if obj.TypeId=="Part::Feature"],str(cad/"AssemblyAccessories.step"))
+    step=cad/"AssemblyAccessories.step"
+    b.Part.export([obj for obj in doc.Objects if obj.TypeId=="Part::Feature"],str(step))
+    step.write_text("\n".join(line.rstrip() for line in step.read_text().splitlines())+"\n")
     b.App.closeDocument(doc.Name)
     reopened=b.App.openDocument(str(cad/"AssemblyAccessories.FCStd"))
     if len([o for o in reopened.Objects if o.TypeId=="Part::Feature" and o.Shape.isValid()])!=len(rows):

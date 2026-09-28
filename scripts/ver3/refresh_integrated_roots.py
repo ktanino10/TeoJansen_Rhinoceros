@@ -92,7 +92,9 @@ def refresh(design,b,backup):
         data.update(nominalTotalMassG=total,nominalPrintedMassG=printed,nominalCenterOfMassMm=(moment/total).tolist())
         temporary=cad/f"Walker_{design}.root-update.FCStd";doc.saveAs(str(temporary));temporary.replace(native)
         print("STAGE_END root-native",design,flush=True)
-        b.Part.export([o for o in doc.Objects if o.TypeId=="Part::Feature"],str(cad/f"Walker_{design}.step"))
+        step=cad/f"Walker_{design}.step"
+        b.Part.export([o for o in doc.Objects if o.TypeId=="Part::Feature"],str(step))
+        step.write_text("\n".join(line.rstrip() for line in step.read_text().splitlines())+"\n")
         print("STAGE_END root-step",design,flush=True)
         (cad/"render_geometry.json.gz").write_bytes(gzip.compress(json.dumps(meshes,separators=(",",":")).encode(),mtime=0))
         (folder/"assembly.json").write_text(json.dumps(data,indent=2)+"\n")
