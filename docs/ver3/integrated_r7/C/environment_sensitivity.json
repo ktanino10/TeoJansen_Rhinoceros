@@ -1,0 +1,389 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-15",
+  "designId": "C",
+  "windCases": [
+    {
+      "airCase": {
+        "id": "speed80percent",
+        "peakMS": 5.12,
+        "sigmaMm": 20,
+        "aimShiftMm": 0
+      },
+      "wholeJetPowerW": 0.06887071328349784,
+      "supportWindEnvelope": {
+        "sideN": 0.080707867129099,
+        "downN": 0.0403539335645495,
+        "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
+      },
+      "nominalSupport": true,
+      "cases": [
+        {
+          "case": "low",
+          "rawSupplyMinimumNm": 0.0009362766456974959,
+          "requiredInputMaximumNm": 0.0007186296068477465,
+          "rawPhaseMinimumMarginNm": 0.00021778834240900795,
+          "rawEnvelopeMarginNm": 0.00021764703884974944,
+          "halfProxyPhaseMinimumMarginNm": -0.0002503499804397401,
+          "downstream2xPhaseMinimumMarginNm": -0.00030069996087948034,
+          "maximumInputBearingPairForRawBalanceNm": 0.00041778834240900793,
+          "rawReferenceBudgetStatus": "PASS"
+        },
+        {
+          "case": "nominal",
+          "rawSupplyMinimumNm": 0.0009362766456974959,
+          "requiredInputMaximumNm": 0.0013537612152403535,
+          "rawPhaseMinimumMarginNm": -0.00041725897079477464,
+          "rawEnvelopeMarginNm": -0.0004174845695428576,
+          "halfProxyPhaseMinimumMarginNm": -0.0008853972936435227,
+          "downstream2xPhaseMinimumMarginNm": -0.0011707945872870456,
+          "maximumInputBearingPairForRawBalanceNm": 0.0001827410292052253,
+          "rawReferenceBudgetStatus": "FAIL"
+        },
+        {
+          "case": "high",
+          "rawSupplyMinimumNm": 0.0009362766456974959,
+          "requiredInputMaximumNm": 0.0035622536533230185,
+          "rawPhaseMinimumMarginNm": -0.0026254805725206723,
+          "rawEnvelopeMarginNm": -0.0026259770076255224,
+          "halfProxyPhaseMinimumMarginNm": -0.0030936188953694203,
+          "downstream2xPhaseMinimumMarginNm": -0.004187237790738841,
+          "maximumInputBearingPairForRawBalanceNm": -0.0006254805725206722,
+          "rawReferenceBudgetStatus": "FAIL"
+        }
+      ]
+    },
+    {
+      "airCase": {
+        "id": "speed120percent",
+        "peakMS": 7.68,
+        "sigmaMm": 20,
+        "aimShiftMm": 0
+      },
+      "wholeJetPowerW": 0.2324386573318051,
+      "supportWindEnvelope": {
+        "sideN": 0.1815927010404727,
+        "downN": 0.09079635052023635,
+        "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
+      },
+      "nominalSupport": true,
+      "cases": [
+        {
+          "case": "low",
+          "rawSupplyMinimumNm": 0.0021066224528193656,
+          "requiredInputMaximumNm": 0.0007253023889101754,
+          "rawPhaseMinimumMarginNm": 0.001381555777960875,
+          "rawEnvelopeMarginNm": 0.0013813200639091901,
+          "halfProxyPhaseMinimumMarginNm": 0.00032824455155118894,
+          "downstream2xPhaseMinimumMarginNm": 0.0008564891031023778,
+          "maximumInputBearingPairForRawBalanceNm": 0.001581555777960875,
+          "rawReferenceBudgetStatus": "PASS"
+        },
+        {
+          "case": "nominal",
+          "rawSupplyMinimumNm": 0.0021066224528193656,
+          "requiredInputMaximumNm": 0.0013616631016890562,
+          "rawPhaseMinimumMarginNm": 0.0007453511653410434,
+          "rawEnvelopeMarginNm": 0.0007449593511303094,
+          "halfProxyPhaseMinimumMarginNm": -0.0003079600610686427,
+          "downstream2xPhaseMinimumMarginNm": -1.5920122137285525e-05,
+          "maximumInputBearingPairForRawBalanceNm": 0.0013453511653410432,
+          "rawReferenceBudgetStatus": "PASS"
+        },
+        {
+          "case": "high",
+          "rawSupplyMinimumNm": 0.0021066224528193656,
+          "requiredInputMaximumNm": 0.0035737403971645497,
+          "rawPhaseMinimumMarginNm": -0.0014663088781216175,
+          "rawEnvelopeMarginNm": -0.001467117944345184,
+          "halfProxyPhaseMinimumMarginNm": -0.0025196201045313005,
+          "downstream2xPhaseMinimumMarginNm": -0.003039240209062601,
+          "maximumInputBearingPairForRawBalanceNm": 0.0005336911218783826,
+          "rawReferenceBudgetStatus": "FAIL"
+        }
+      ]
+    },
+    {
+      "airCase": {
+        "id": "narrowJet",
+        "peakMS": 6.4,
+        "sigmaMm": 15,
+        "aimShiftMm": 0
+      },
+      "wholeJetPowerW": 0.07566362543353032,
+      "supportWindEnvelope": {
+        "sideN": 0.07093464884393468,
+        "downN": 0.03546732442196734,
+        "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
+      },
+      "nominalSupport": true,
+      "cases": [
+        {
+          "case": "low",
+          "rawSupplyMinimumNm": 0.0009678046964688126,
+          "requiredInputMaximumNm": 0.0007179135809973665,
+          "rawPhaseMinimumMarginNm": 0.0002499896957100197,
+          "rawEnvelopeMarginNm": 0.0002498911154714461,
+          "halfProxyPhaseMinimumMarginNm": -0.0002339126525243867,
+          "downstream2xPhaseMinimumMarginNm": -0.00026782530504877353,
+          "maximumInputBearingPairForRawBalanceNm": 0.0004499896957100197,
+          "rawReferenceBudgetStatus": "PASS"
+        },
+        {
+          "case": "nominal",
+          "rawSupplyMinimumNm": 0.0009678046964688126,
+          "requiredInputMaximumNm": 0.0013529695056081073,
+          "rawPhaseMinimumMarginNm": -0.0003849798964810358,
+          "rawEnvelopeMarginNm": -0.00038516480913929475,
+          "halfProxyPhaseMinimumMarginNm": -0.0008688822447154422,
+          "downstream2xPhaseMinimumMarginNm": -0.0011377644894308846,
+          "maximumInputBearingPairForRawBalanceNm": 0.00021502010351896414,
+          "rawReferenceBudgetStatus": "FAIL"
+        },
+        {
+          "case": "high",
+          "rawSupplyMinimumNm": 0.0009678046964688126,
+          "requiredInputMaximumNm": 0.0035612782093267835,
+          "rawPhaseMinimumMarginNm": -0.002593004947133906,
+          "rawEnvelopeMarginNm": -0.002593473512857971,
+          "halfProxyPhaseMinimumMarginNm": -0.0030769072953683125,
+          "downstream2xPhaseMinimumMarginNm": -0.004153814590736625,
+          "maximumInputBearingPairForRawBalanceNm": -0.0005930049471339059,
+          "rawReferenceBudgetStatus": "FAIL"
+        }
+      ]
+    },
+    {
+      "airCase": {
+        "id": "wideJet",
+        "peakMS": 6.4,
+        "sigmaMm": 25,
+        "aimShiftMm": 0
+      },
+      "wholeJetPowerW": 0.21017673731536204,
+      "supportWindEnvelope": {
+        "sideN": 0.19704069123315193,
+        "downN": 0.09852034561657597,
+        "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
+      },
+      "nominalSupport": true,
+      "cases": [
+        {
+          "case": "low",
+          "rawSupplyMinimumNm": 0.0019209869802846759,
+          "requiredInputMaximumNm": 0.0007262153582824882,
+          "rawPhaseMinimumMarginNm": 0.0011950703047169955,
+          "rawEnvelopeMarginNm": 0.0011947716220021877,
+          "halfProxyPhaseMinimumMarginNm": 0.0002345768145746572,
+          "downstream2xPhaseMinimumMarginNm": 0.0006691536291493143,
+          "maximumInputBearingPairForRawBalanceNm": 0.0013950703047169956,
+          "rawReferenceBudgetStatus": "PASS"
+        },
+        {
+          "case": "nominal",
+          "rawSupplyMinimumNm": 0.0019209869802846759,
+          "requiredInputMaximumNm": 0.001362824729954712,
+          "rawPhaseMinimumMarginNm": 0.0005585632623648937,
+          "rawEnvelopeMarginNm": 0.0005581622503299639,
+          "halfProxyPhaseMinimumMarginNm": -0.00040193022777744447,
+          "downstream2xPhaseMinimumMarginNm": -0.0002038604555548891,
+          "maximumInputBearingPairForRawBalanceNm": 0.0011585632623648937,
+          "rawReferenceBudgetStatus": "PASS"
+        },
+        {
+          "case": "high",
+          "rawSupplyMinimumNm": 0.0019209869802846759,
+          "requiredInputMaximumNm": 0.003575680239845217,
+          "rawPhaseMinimumMarginNm": -0.0016541851253376637,
+          "rawEnvelopeMarginNm": -0.001654693259560541,
+          "halfProxyPhaseMinimumMarginNm": -0.0026146786154800017,
+          "downstream2xPhaseMinimumMarginNm": -0.0032293572309600037,
+          "maximumInputBearingPairForRawBalanceNm": 0.0003458148746623363,
+          "rawReferenceBudgetStatus": "FAIL"
+        }
+      ]
+    },
+    {
+      "airCase": {
+        "id": "aim10mmInward",
+        "peakMS": 6.4,
+        "sigmaMm": 20,
+        "aimShiftMm": -10
+      },
+      "wholeJetPowerW": 0.1345131118818317,
+      "supportWindEnvelope": {
+        "sideN": 0.12610604238921722,
+        "downN": 0.06305302119460861,
+        "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
+      },
+      "nominalSupport": true,
+      "cases": [
+        {
+          "case": "low",
+          "rawSupplyMinimumNm": 0.0013032266300424134,
+          "requiredInputMaximumNm": 0.0007217901454734629,
+          "rawPhaseMinimumMarginNm": 0.0005816078932208121,
+          "rawEnvelopeMarginNm": 0.0005814364845689506,
+          "halfProxyPhaseMinimumMarginNm": -7.0005421800395e-05,
+          "downstream2xPhaseMinimumMarginNm": 5.9989156399209865e-05,
+          "maximumInputBearingPairForRawBalanceNm": 0.0007816078932208121,
+          "rawReferenceBudgetStatus": "PASS"
+        },
+        {
+          "case": "nominal",
+          "rawSupplyMinimumNm": 0.0013032266300424134,
+          "requiredInputMaximumNm": 0.0013573815969677744,
+          "rawPhaseMinimumMarginNm": -5.3943063973264276e-05,
+          "rawEnvelopeMarginNm": -5.415496692536101e-05,
+          "halfProxyPhaseMinimumMarginNm": -0.0007055563789944714,
+          "downstream2xPhaseMinimumMarginNm": -0.000811112757988943,
+          "maximumInputBearingPairForRawBalanceNm": 0.0005460569360267357,
+          "rawReferenceBudgetStatus": "FAIL"
+        },
+        {
+          "case": "high",
+          "rawSupplyMinimumNm": 0.0013032266300424134,
+          "requiredInputMaximumNm": 0.003567134725788328,
+          "rawPhaseMinimumMarginNm": -0.0022635799445204184,
+          "rawEnvelopeMarginNm": -0.0022639080957459145,
+          "halfProxyPhaseMinimumMarginNm": -0.0029151932595416256,
+          "downstream2xPhaseMinimumMarginNm": -0.003830386519083251,
+          "maximumInputBearingPairForRawBalanceNm": -0.00026357994452041837,
+          "rawReferenceBudgetStatus": "FAIL"
+        }
+      ]
+    },
+    {
+      "airCase": {
+        "id": "aim10mmOutward",
+        "peakMS": 6.4,
+        "sigmaMm": 20,
+        "aimShiftMm": 10
+      },
+      "wholeJetPowerW": 0.1345131118818317,
+      "supportWindEnvelope": {
+        "sideN": 0.12610604238921722,
+        "downN": 0.06305302119460861,
+        "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
+      },
+      "nominalSupport": true,
+      "cases": [
+        {
+          "case": "low",
+          "rawSupplyMinimumNm": 0.001578652525368082,
+          "requiredInputMaximumNm": 0.0007217901454734629,
+          "rawPhaseMinimumMarginNm": 0.0008569817411276517,
+          "rawEnvelopeMarginNm": 0.0008568623798946191,
+          "halfProxyPhaseMinimumMarginNm": 6.765547844360756e-05,
+          "downstream2xPhaseMinimumMarginNm": 0.000335310956887215,
+          "maximumInputBearingPairForRawBalanceNm": 0.0010569817411276517,
+          "rawReferenceBudgetStatus": "PASS"
+        },
+        {
+          "case": "nominal",
+          "rawSupplyMinimumNm": 0.001578652525368082,
+          "requiredInputMaximumNm": 0.0013573815969677744,
+          "rawPhaseMinimumMarginNm": 0.00022143543128066686,
+          "rawEnvelopeMarginNm": 0.00022127092840030756,
+          "halfProxyPhaseMinimumMarginNm": -0.0005678908314033773,
+          "downstream2xPhaseMinimumMarginNm": -0.0005357816628067547,
+          "maximumInputBearingPairForRawBalanceNm": 0.0008214354312806668,
+          "rawReferenceBudgetStatus": "PASS"
+        },
+        {
+          "case": "high",
+          "rawSupplyMinimumNm": 0.001578652525368082,
+          "requiredInputMaximumNm": 0.003567134725788328,
+          "rawPhaseMinimumMarginNm": -0.0019881693683918445,
+          "rawEnvelopeMarginNm": -0.001988482200420246,
+          "halfProxyPhaseMinimumMarginNm": -0.0027774956310758886,
+          "downstream2xPhaseMinimumMarginNm": -0.0035549912621517772,
+          "maximumInputBearingPairForRawBalanceNm": 1.1830631608155534e-05,
+          "rawReferenceBudgetStatus": "FAIL"
+        }
+      ]
+    }
+  ],
+  "staticRotorImbalance": [
+    {
+      "rotorComOffsetMm": 0,
+      "worstStaticGravityAmplitudeNm": 0.0,
+      "cases": [
+        {
+          "case": "low",
+          "minimumMarginWithAdverseOrientationNm": 0.000741473248482495
+        },
+        {
+          "case": "nominal",
+          "minimumMarginWithAdverseOrientationNm": 0.00010595992431780533
+        },
+        {
+          "case": "high",
+          "minimumMarginWithAdverseOrientationNm": -0.0021035689373535248
+        }
+      ]
+    },
+    {
+      "rotorComOffsetMm": 0.05,
+      "worstStaticGravityAmplitudeNm": 5.7808506483297434e-05,
+      "cases": [
+        {
+          "case": "low",
+          "minimumMarginWithAdverseOrientationNm": 0.0006836647419991975
+        },
+        {
+          "case": "nominal",
+          "minimumMarginWithAdverseOrientationNm": 4.815141783450789e-05
+        },
+        {
+          "case": "high",
+          "minimumMarginWithAdverseOrientationNm": -0.0021613774438368222
+        }
+      ]
+    },
+    {
+      "rotorComOffsetMm": 0.1,
+      "worstStaticGravityAmplitudeNm": 0.00011561701296659487,
+      "cases": [
+        {
+          "case": "low",
+          "minimumMarginWithAdverseOrientationNm": 0.0006258562355159001
+        },
+        {
+          "case": "nominal",
+          "minimumMarginWithAdverseOrientationNm": -9.657088648789541e-06
+        },
+        {
+          "case": "high",
+          "minimumMarginWithAdverseOrientationNm": -0.0022191859503201197
+        }
+      ]
+    },
+    {
+      "rotorComOffsetMm": 0.25,
+      "worstStaticGravityAmplitudeNm": 0.00028904253241648713,
+      "cases": [
+        {
+          "case": "low",
+          "minimumMarginWithAdverseOrientationNm": 0.00045243071606600784
+        },
+        {
+          "case": "nominal",
+          "minimumMarginWithAdverseOrientationNm": -0.0001830826080986818
+        },
+        {
+          "case": "high",
+          "minimumMarginWithAdverseOrientationNm": -0.0023926114697700117
+        }
+      ]
+    }
+  ],
+  "measuredAirOrResistance": false,
+  "limits": [
+    "The same six sensitivity inputs are applied to every design,not optimized per candidate.",
+    "Wind support force,COM/contact solution,slip work and demand are recomputed with each jet,not only available torque scaled.",
+    "Gaussian width,20% speed and10mm aim bounds are design sensitivities,not measured product tolerances or confidence intervals.",
+    "Rotor eccentricity is a static adverse-orientation bound using actual nominal rotor mass; centrifugal loads and running dynamics remain uncalculated.",
+    "Nominal collar clocking is not a claim that a printed rotor has zero real eccentricity.",
+    "Arbitrary factor0.5 and2x-downstream design margins remain separate from raw proxy results."
+  ]
+}

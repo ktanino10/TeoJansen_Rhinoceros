@@ -1,0 +1,176 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-15",
+  "designId": "B",
+  "nativeSha256": "dd6a68352a5fab903d5d9adb594b7bf1429a039a187ca375a344576e88ba9f02",
+  "status": "PASS",
+  "continuousClearanceProof": false,
+  "actualGearFaceProfiles": [
+    {
+      "stage": 0,
+      "role": "pinion",
+      "partId": "P_INPUT_PINION",
+      "actualBrepSections": [
+        {
+          "xMm": -34.9,
+          "excessAreaMm2": 7.574159631928995e-08,
+          "missingToothAreaMm2": 8.554757453657794e-08
+        },
+        {
+          "xMm": -33.4,
+          "excessAreaMm2": 7.574159631928995e-08,
+          "missingToothAreaMm2": 8.554757453657794e-08
+        },
+        {
+          "xMm": -31.9,
+          "excessAreaMm2": 7.574159631928995e-08,
+          "missingToothAreaMm2": 8.554757453657794e-08
+        }
+      ],
+      "curveChordDeflectionMm": 0.0001,
+      "coordinateRoundoffGridMm": 1e-08,
+      "maximumExcessAreaMm2": 7.574159631928995e-08,
+      "maximumMissingToothAreaMm2": 8.554757453657794e-08,
+      "status": "PASS"
+    },
+    {
+      "stage": 0,
+      "role": "wheel",
+      "partId": "P_COMPOUND_1",
+      "actualBrepSections": [
+        {
+          "xMm": -34.9,
+          "excessAreaMm2": 6.473659417940944e-07,
+          "missingToothAreaMm2": 6.368178778100814e-07
+        },
+        {
+          "xMm": -33.4,
+          "excessAreaMm2": 6.473659417940944e-07,
+          "missingToothAreaMm2": 6.368178778100814e-07
+        },
+        {
+          "xMm": -31.9,
+          "excessAreaMm2": 6.473659417940944e-07,
+          "missingToothAreaMm2": 6.368178778100814e-07
+        }
+      ],
+      "curveChordDeflectionMm": 0.0001,
+      "coordinateRoundoffGridMm": 1e-08,
+      "maximumExcessAreaMm2": 6.473659417940944e-07,
+      "maximumMissingToothAreaMm2": 6.368178778100814e-07,
+      "status": "PASS"
+    },
+    {
+      "stage": 1,
+      "role": "pinion",
+      "partId": "P_COMPOUND_1",
+      "actualBrepSections": [
+        {
+          "xMm": -24.9,
+          "excessAreaMm2": 7.752332408521933e-08,
+          "missingToothAreaMm2": 8.27208251483216e-08
+        },
+        {
+          "xMm": -23.4,
+          "excessAreaMm2": 7.752332408521933e-08,
+          "missingToothAreaMm2": 8.27208251483216e-08
+        },
+        {
+          "xMm": -21.9,
+          "excessAreaMm2": 7.752332408521933e-08,
+          "missingToothAreaMm2": 8.27208251483216e-08
+        }
+      ],
+      "curveChordDeflectionMm": 0.0001,
+      "coordinateRoundoffGridMm": 1e-08,
+      "maximumExcessAreaMm2": 7.752332408521933e-08,
+      "maximumMissingToothAreaMm2": 8.27208251483216e-08,
+      "status": "PASS"
+    },
+    {
+      "stage": 1,
+      "role": "wheel",
+      "partId": "P_COMPOUND_2",
+      "actualBrepSections": [
+        {
+          "xMm": -24.9,
+          "excessAreaMm2": 6.509812164993619e-07,
+          "missingToothAreaMm2": 6.183481694981632e-07
+        },
+        {
+          "xMm": -23.4,
+          "excessAreaMm2": 6.509812164993619e-07,
+          "missingToothAreaMm2": 6.183481694981632e-07
+        },
+        {
+          "xMm": -21.9,
+          "excessAreaMm2": 6.509812164993619e-07,
+          "missingToothAreaMm2": 6.183481694981632e-07
+        }
+      ],
+      "curveChordDeflectionMm": 0.0001,
+      "coordinateRoundoffGridMm": 1e-08,
+      "maximumExcessAreaMm2": 6.509812164993619e-07,
+      "maximumMissingToothAreaMm2": 6.183481694981632e-07,
+      "status": "PASS"
+    },
+    {
+      "stage": 2,
+      "role": "pinion",
+      "partId": "P_COMPOUND_2",
+      "actualBrepSections": [
+        {
+          "xMm": -14.9,
+          "excessAreaMm2": 1.1954902159730408e-07,
+          "missingToothAreaMm2": 1.0356125611015884e-07
+        },
+        {
+          "xMm": -13.4,
+          "excessAreaMm2": 1.1954902159730408e-07,
+          "missingToothAreaMm2": 1.0356125611015884e-07
+        },
+        {
+          "xMm": -11.9,
+          "excessAreaMm2": 1.1954902159730408e-07,
+          "missingToothAreaMm2": 1.0356125611015884e-07
+        }
+      ],
+      "curveChordDeflectionMm": 0.0001,
+      "coordinateRoundoffGridMm": 1e-08,
+      "maximumExcessAreaMm2": 1.1954902159730408e-07,
+      "maximumMissingToothAreaMm2": 1.0356125611015884e-07,
+      "status": "PASS"
+    },
+    {
+      "stage": 2,
+      "role": "wheel",
+      "partId": "P_OUTPUT_WHEEL",
+      "actualBrepSections": [
+        {
+          "xMm": -14.9,
+          "excessAreaMm2": 8.257983706287609e-07,
+          "missingToothAreaMm2": 8.660849994214735e-07
+        },
+        {
+          "xMm": -13.4,
+          "excessAreaMm2": 8.257983706287609e-07,
+          "missingToothAreaMm2": 8.660849994214735e-07
+        },
+        {
+          "xMm": -11.9,
+          "excessAreaMm2": 8.257983706287609e-07,
+          "missingToothAreaMm2": 8.660849994214735e-07
+        }
+      ],
+      "curveChordDeflectionMm": 0.0001,
+      "coordinateRoundoffGridMm": 1e-08,
+      "maximumExcessAreaMm2": 8.257983706287609e-07,
+      "maximumMissingToothAreaMm2": 8.660849994214735e-07,
+      "status": "PASS"
+    }
+  ],
+  "envelopeIntersections": [],
+  "unsupportedAnalyticCurveBounds": [],
+  "exactEnvelopePairs": 342,
+  "elapsedSeconds": 484.65208891700604,
+  "scope": "Finite axial-section radial envelopes of input,reducer and synchronous gears against stationary real solids. Crank/leg/foot motion has separate216-pose checks. Actual tooth-face material is checked; axial section sampling and unsupported curves are not a continuous-clearance proof. Envelope hits are candidates,not proof of real collision."
+}

@@ -1,0 +1,35 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-15",
+  "designId": "B",
+  "oldNativeSha256": "be8790f426430fd43f380040f033075719ca7e02f58253b7eef3ae8d36ae99d9",
+  "reason": "18-tooth pinion tip clears M3 across-flats but not its corner; retainer bolt half-pitch13->14mm,not a gear-profile or collision-threshold change",
+  "rows": [
+    {
+      "name": "H_NUT_M3_062",
+      "oldSweptIntersectionMm3": 0.0016753607579060466,
+      "newRadialTranslationMm": -1,
+      "correctedIntersectionMm3": 0,
+      "correctedMinimumRadialClearanceMm": 0.9745735194570582,
+      "verifiedOnUpdatedNativeClearanceMm": 0.9745735194570582
+    },
+    {
+      "name": "H_NUT_M3_064",
+      "oldSweptIntersectionMm3": 0.0016753607579055039,
+      "newRadialTranslationMm": 1,
+      "correctedIntersectionMm3": 0,
+      "correctedMinimumRadialClearanceMm": 0.9745735194570582,
+      "verifiedOnUpdatedNativeClearanceMm": 0.9745735194570582
+    }
+  ],
+  "requiresUpdatedNativeVerification": false,
+  "newHardwareQuantity": 0,
+  "updatedNativeSha256": "dd6a68352a5fab903d5d9adb594b7bf1429a039a187ca375a344576e88ba9f02",
+  "updatedNativeMassG": 1112.3296448040544,
+  "massChangeG": 0.24052405256975362,
+  "purchasedQuantitiesUnchanged": true,
+  "updatedStaticStatus": "PASS",
+  "updatedMotionStatus": "PASS",
+  "updatedAccessStatus": "PASS",
+  "updatedRotationScreenStatus": "PASS",
+  "finalClearanceMeasuredFromUpdatedBrep": true
+}

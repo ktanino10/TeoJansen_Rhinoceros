@@ -1,0 +1,21 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-15",
+  "designId": "A",
+  "status": "PASS",
+  "poses": 216,
+  "exactOrConservativePairs": 10757,
+  "crankStepDeg": 10.0,
+  "compressionSamplesMm": [
+    0.0,
+    6.0
+  ],
+  "rockerSamplesDeg": [
+    -5,
+    0,
+    5
+  ],
+  "unintendedIntersections": [],
+  "elapsedSeconds": 465.0239899579974,
+  "scope": "actual saved B-reps for gait/feet/frame/mainshafts. Springs use conservative annuli; fast rotor/reducer and manufacturing error are separate checks. Finite samples,not continuous proof.",
+  "parametersFromSavedAssembly": true
+}

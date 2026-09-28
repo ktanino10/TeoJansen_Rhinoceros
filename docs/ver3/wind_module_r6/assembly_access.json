@@ -1,0 +1,467 @@
+{
+  "revisionId": "v3-wind-module-r6-01",
+  "static_pairs": 630,
+  "intentional_reference_interfaces": [
+    {
+      "a": "SCREW_LOC_N",
+      "b": "NUT_LOC_N",
+      "volume_mm3": 20.869599997796985
+    },
+    {
+      "a": "SCREW_LOC_P",
+      "b": "NUT_LOC_P",
+      "volume_mm3": 20.869599997796985
+    },
+    {
+      "a": "SCREW_FLOAT_N",
+      "b": "NUT_FLOAT_N",
+      "volume_mm3": 20.86959999779702
+    },
+    {
+      "a": "SCREW_FLOAT_P",
+      "b": "NUT_FLOAT_P",
+      "volume_mm3": 20.86959999779702
+    },
+    {
+      "a": "SHAFT",
+      "b": "D_HUB",
+      "volume_mm3": 0.6693032612991262
+    },
+    {
+      "a": "D_HUB",
+      "b": "FLANGE_SCREW_0",
+      "volume_mm3": 16.39506076839043
+    },
+    {
+      "a": "D_HUB",
+      "b": "FLANGE_SCREW_1",
+      "volume_mm3": 16.391461222994543
+    },
+    {
+      "a": "D_HUB",
+      "b": "FLANGE_SCREW_2",
+      "volume_mm3": 16.391817592093556
+    },
+    {
+      "a": "D_HUB",
+      "b": "FLANGE_SCREW_3",
+      "volume_mm3": 16.3946068113792
+    }
+  ],
+  "unintended_static_intersections": [],
+  "rotation_angles_deg": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    120,
+    135,
+    150,
+    165,
+    180,
+    195,
+    210,
+    225,
+    240,
+    255,
+    270,
+    285,
+    300,
+    315,
+    330,
+    345
+  ],
+  "rotation_pair_checks": 7560,
+  "rotor_to_fixed_minimum_sampled_clearance_mm": 3.0,
+  "full_circular_envelope_clear_of_fixed_parts": true,
+  "rotor_to_mounting_plane_mm": 5,
+  "rotor_axial_acceptance_extrema": [
+    {
+      "dx_mm": -0.6,
+      "minimum_rigid_envelope_clearance_mm": 3.160135440008053
+    },
+    {
+      "dx_mm": 0,
+      "minimum_rigid_envelope_clearance_mm": 3.0
+    },
+    {
+      "dx_mm": 0.15,
+      "minimum_rigid_envelope_clearance_mm": 2.8499999999999943
+    }
+  ],
+  "rotor_clearance_basis": "conservative100x38 full cylinder, valid for all angles; root holes checked separately. Active/end-ring center void radius20 verified by canonical profile, not a sampled visibility shortcut.",
+  "tools": [
+    {
+      "stage": "before_caps",
+      "mounting_hole_xy_mm": [
+        6,
+        -18
+      ],
+      "tool": "8mm OD vertical access envelope",
+      "carrier_overlap_mm3": 0.0,
+      "blocked_after_caps_by": [
+        "SCREW_LOC_N",
+        "HEAD_WASHER_LOC_N"
+      ],
+      "foundation_and_external_fasteners": "UNSPECIFIED; no powered-use approval"
+    },
+    {
+      "stage": "before_caps",
+      "mounting_hole_xy_mm": [
+        6,
+        18
+      ],
+      "tool": "8mm OD vertical access envelope",
+      "carrier_overlap_mm3": 0.0,
+      "blocked_after_caps_by": [
+        "SCREW_LOC_P",
+        "HEAD_WASHER_LOC_P"
+      ],
+      "foundation_and_external_fasteners": "UNSPECIFIED; no powered-use approval"
+    },
+    {
+      "stage": "before_caps",
+      "mounting_hole_xy_mm": [
+        114,
+        -18
+      ],
+      "tool": "8mm OD vertical access envelope",
+      "carrier_overlap_mm3": 0.0,
+      "blocked_after_caps_by": [],
+      "foundation_and_external_fasteners": "UNSPECIFIED; no powered-use approval"
+    },
+    {
+      "stage": "before_caps",
+      "mounting_hole_xy_mm": [
+        114,
+        18
+      ],
+      "tool": "8mm OD vertical access envelope",
+      "carrier_overlap_mm3": 0.0,
+      "blocked_after_caps_by": [],
+      "foundation_and_external_fasteners": "UNSPECIFIED; no powered-use approval"
+    },
+    {
+      "stage": "rotor_root_fastening",
+      "fastener": "FLANGE_SCREW_0",
+      "tool": "4mm envelope for3mm L-key,35.7mm axial shank+65mm upper handle",
+      "through_end_ring_bore_mm": 40,
+      "unexpected_overlap": []
+    },
+    {
+      "stage": "rotor_root_fastening",
+      "fastener": "FLANGE_SCREW_1",
+      "tool": "4mm envelope for3mm L-key,35.7mm axial shank+65mm upper handle",
+      "through_end_ring_bore_mm": 40,
+      "unexpected_overlap": []
+    },
+    {
+      "stage": "rotor_root_fastening",
+      "fastener": "FLANGE_SCREW_2",
+      "tool": "4mm envelope for3mm L-key,35.7mm axial shank+65mm upper handle",
+      "through_end_ring_bore_mm": 40,
+      "unexpected_overlap": []
+    },
+    {
+      "stage": "rotor_root_fastening",
+      "fastener": "FLANGE_SCREW_3",
+      "tool": "4mm envelope for3mm L-key,35.7mm axial shank+65mm upper handle",
+      "through_end_ring_bore_mm": 40,
+      "unexpected_overlap": []
+    },
+    {
+      "stage": "caps_before_rotor_and_collars",
+      "side": "LOC",
+      "y_mm": -18,
+      "tool": "12mm OD x28mm nut-driver envelope",
+      "unexpected_overlap": []
+    },
+    {
+      "stage": "caps_before_rotor_and_collars",
+      "side": "LOC",
+      "y_mm": 18,
+      "tool": "12mm OD x28mm nut-driver envelope",
+      "unexpected_overlap": []
+    },
+    {
+      "stage": "caps_before_rotor_and_collars",
+      "side": "FLOAT",
+      "y_mm": -18,
+      "tool": "12mm OD x28mm nut-driver envelope",
+      "unexpected_overlap": []
+    },
+    {
+      "stage": "caps_before_rotor_and_collars",
+      "side": "FLOAT",
+      "y_mm": 18,
+      "tool": "12mm OD x28mm nut-driver envelope",
+      "unexpected_overlap": []
+    },
+    {
+      "stage": "stopped_supported_module",
+      "purchased_assembly": "D_HUB",
+      "included_screw_index": 1,
+      "shaft_angle_deg": 150,
+      "tool": "4mm OD x28mm clamp-key envelope into upper half-space",
+      "maximum_overlap_mm3": 0.0
+    },
+    {
+      "stage": "stopped_supported_module",
+      "purchased_assembly": "D_HUB",
+      "included_screw_index": 2,
+      "shaft_angle_deg": 0,
+      "tool": "4mm OD x28mm clamp-key envelope into upper half-space",
+      "maximum_overlap_mm3": 0.0
+    },
+    {
+      "stage": "stopped_supported_module",
+      "purchased_assembly": "COLLAR_OUT",
+      "included_screw_index": 1,
+      "shaft_angle_deg": 225,
+      "tool": "4mm OD x28mm clamp-key envelope into upper half-space",
+      "maximum_overlap_mm3": 0.0
+    },
+    {
+      "stage": "stopped_supported_module",
+      "purchased_assembly": "COLLAR_IN",
+      "included_screw_index": 1,
+      "shaft_angle_deg": 195,
+      "tool": "4mm OD x28mm clamp-key envelope into upper half-space",
+      "maximum_overlap_mm3": 0.0
+    }
+  ],
+  "paths": [
+    {
+      "id": "shaft_with_clamps_released",
+      "moving": [
+        "SHAFT"
+      ],
+      "remaining": [
+        "CARRIER",
+        "BEARING_LOC",
+        "BEARING_FLOAT",
+        "CAP_LOC",
+        "CAP_FLOAT",
+        "SCREW_LOC_N",
+        "HEAD_WASHER_LOC_N",
+        "NUT_WASHER_LOC_N",
+        "NUT_LOC_N",
+        "SCREW_LOC_P",
+        "HEAD_WASHER_LOC_P",
+        "NUT_WASHER_LOC_P",
+        "NUT_LOC_P",
+        "SCREW_FLOAT_N",
+        "HEAD_WASHER_FLOAT_N",
+        "NUT_WASHER_FLOAT_N",
+        "NUT_FLOAT_N",
+        "SCREW_FLOAT_P",
+        "HEAD_WASHER_FLOAT_P",
+        "NUT_WASHER_FLOAT_P",
+        "NUT_FLOAT_P",
+        "SPACER_OUT",
+        "SPACER_IN",
+        "COLLAR_OUT",
+        "COLLAR_IN",
+        "D_HUB",
+        "ROTOR",
+        "FLANGE_WASHER_0",
+        "FLANGE_SCREW_0",
+        "FLANGE_WASHER_1",
+        "FLANGE_SCREW_1",
+        "FLANGE_WASHER_2",
+        "FLANGE_SCREW_2",
+        "FLANGE_WASHER_3",
+        "FLANGE_SCREW_3"
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "samples_mm": [
+        0,
+        1,
+        5,
+        12,
+        24,
+        48,
+        72,
+        100,
+        124
+      ],
+      "maximum_overlap_mm3": 0.0,
+      "separate_vendor_fit_exclusions": [
+        [
+          "SHAFT",
+          "D_HUB"
+        ]
+      ]
+    },
+    {
+      "id": "whole_rotor_unit_after_shaft",
+      "moving": [
+        "D_HUB",
+        "ROTOR",
+        "FLANGE_WASHER_0",
+        "FLANGE_SCREW_0",
+        "FLANGE_WASHER_1",
+        "FLANGE_SCREW_1",
+        "FLANGE_WASHER_2",
+        "FLANGE_SCREW_2",
+        "FLANGE_WASHER_3",
+        "FLANGE_SCREW_3"
+      ],
+      "remaining": [
+        "CARRIER",
+        "BEARING_LOC",
+        "BEARING_FLOAT",
+        "CAP_LOC",
+        "CAP_FLOAT",
+        "SCREW_LOC_N",
+        "HEAD_WASHER_LOC_N",
+        "NUT_WASHER_LOC_N",
+        "NUT_LOC_N",
+        "SCREW_LOC_P",
+        "HEAD_WASHER_LOC_P",
+        "NUT_WASHER_LOC_P",
+        "NUT_LOC_P",
+        "SCREW_FLOAT_N",
+        "HEAD_WASHER_FLOAT_N",
+        "NUT_WASHER_FLOAT_N",
+        "NUT_FLOAT_N",
+        "SCREW_FLOAT_P",
+        "HEAD_WASHER_FLOAT_P",
+        "NUT_WASHER_FLOAT_P",
+        "NUT_FLOAT_P",
+        "SPACER_OUT",
+        "SPACER_IN",
+        "COLLAR_OUT",
+        "COLLAR_IN"
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "samples_mm": [
+        0,
+        1,
+        5,
+        10,
+        25,
+        50,
+        110
+      ],
+      "maximum_overlap_mm3": 0.0,
+      "separate_vendor_fit_exclusions": []
+    },
+    {
+      "id": "BEARING_LOC_before_cap",
+      "moving": [
+        "BEARING_LOC"
+      ],
+      "remaining": [
+        "CARRIER"
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "samples_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        5,
+        15,
+        30
+      ],
+      "maximum_overlap_mm3": 0.0,
+      "separate_vendor_fit_exclusions": []
+    },
+    {
+      "id": "BEARING_FLOAT_before_cap",
+      "moving": [
+        "BEARING_FLOAT"
+      ],
+      "remaining": [
+        "CARRIER"
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "samples_mm": [
+        0,
+        0.5,
+        1,
+        2,
+        5,
+        15,
+        30
+      ],
+      "maximum_overlap_mm3": 0.0,
+      "separate_vendor_fit_exclusions": []
+    },
+    {
+      "id": "BEARING_LOC_axial_freedom",
+      "moving": [
+        "BEARING_LOC"
+      ],
+      "remaining": [
+        "CARRIER",
+        "CAP_LOC"
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "samples_mm": [
+        -0.3,
+        0
+      ],
+      "maximum_overlap_mm3": 0.0,
+      "separate_vendor_fit_exclusions": []
+    },
+    {
+      "id": "BEARING_FLOAT_axial_freedom",
+      "moving": [
+        "BEARING_FLOAT"
+      ],
+      "remaining": [
+        "CARRIER",
+        "CAP_FLOAT"
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "samples_mm": [
+        -1,
+        0,
+        1
+      ],
+      "maximum_overlap_mm3": 0.0,
+      "separate_vendor_fit_exclusions": []
+    }
+  ],
+  "vendorSourceHashes": {
+    "shaft.step": "052af9f682b24cf719788ab2d115c7f2963b2fcf2889947934c799c365e042e3",
+    "bearing.step": "7dcf5ba5caa8c9406a7519f31d5a62cb452658286fb977122575cbec6880462a",
+    "collar.step": "8be1a13c316c09c5bb03d22b6a4f9f4c6f4760bbcea228b20869e1b619d30af9",
+    "hub.step": "fa6e83056fbf2c4dc99c67ac12a6f76012f84fd0c0be5207f16f33737a91b627",
+    "spacer.step": "928a259dd7c986f98644ed03d2a6766d2586fb8a435db448aba0f3ac737871cd"
+  },
+  "supplierCadRedistributed": false,
+  "manufacturerDClampFit": "specified compatible pair; physical fit/tolerance/state and torque remain unknown",
+  "operatingBaseFixation": "UNQUALIFIED",
+  "limitations": "Sampled paths/tools plus bounding rotor envelope; not all tools/continuous tolerances, physical spinning or strength certification"
+}

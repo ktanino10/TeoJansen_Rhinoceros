@@ -1,0 +1,196 @@
+{
+  "revisionId": "v3-wind-module-r6-01",
+  "bare_module": [
+    {
+      "bearing_pair_nmm_assumed": 0.2,
+      "rotating_system_cog_eccentricity_mm_assumed": 0,
+      "rotating_nominal_mass_kg": 0.1447472225322921,
+      "raw_minimum_difference_nm": 0.0006126728756097643,
+      "derated_minimum_difference_nm": 0.0002063364378048821,
+      "gravity_unbalance_amplitude_nm": 0.0,
+      "downstream_torque_nm": 0,
+      "physical_start_status": "UNKNOWN"
+    },
+    {
+      "bearing_pair_nmm_assumed": 0.2,
+      "rotating_system_cog_eccentricity_mm_assumed": 0.1,
+      "rotating_nominal_mass_kg": 0.1447472225322921,
+      "raw_minimum_difference_nm": 0.00047228352272898113,
+      "derated_minimum_difference_nm": 6.566467513629518e-05,
+      "gravity_unbalance_amplitude_nm": 0.00014194853498463022,
+      "downstream_torque_nm": 0,
+      "physical_start_status": "UNKNOWN"
+    },
+    {
+      "bearing_pair_nmm_assumed": 0.2,
+      "rotating_system_cog_eccentricity_mm_assumed": 0.5,
+      "rotating_nominal_mass_kg": 0.1447472225322921,
+      "raw_minimum_difference_nm": -9.227251990132665e-05,
+      "derated_minimum_difference_nm": -0.0005005134766497941,
+      "gravity_unbalance_amplitude_nm": 0.0007097426749231511,
+      "downstream_torque_nm": 0,
+      "physical_start_status": "UNKNOWN"
+    },
+    {
+      "bearing_pair_nmm_assumed": 0.6,
+      "rotating_system_cog_eccentricity_mm_assumed": 0,
+      "rotating_nominal_mass_kg": 0.1447472225322921,
+      "raw_minimum_difference_nm": 0.0002126728756097643,
+      "derated_minimum_difference_nm": -0.00019366356219511783,
+      "gravity_unbalance_amplitude_nm": 0.0,
+      "downstream_torque_nm": 0,
+      "physical_start_status": "UNKNOWN"
+    },
+    {
+      "bearing_pair_nmm_assumed": 0.6,
+      "rotating_system_cog_eccentricity_mm_assumed": 0.1,
+      "rotating_nominal_mass_kg": 0.1447472225322921,
+      "raw_minimum_difference_nm": 7.228352272898122e-05,
+      "derated_minimum_difference_nm": -0.00033433532486370473,
+      "gravity_unbalance_amplitude_nm": 0.00014194853498463022,
+      "downstream_torque_nm": 0,
+      "physical_start_status": "UNKNOWN"
+    },
+    {
+      "bearing_pair_nmm_assumed": 0.6,
+      "rotating_system_cog_eccentricity_mm_assumed": 0.5,
+      "rotating_nominal_mass_kg": 0.1447472225322921,
+      "raw_minimum_difference_nm": -0.0004922725199013266,
+      "derated_minimum_difference_nm": -0.0009005134766497942,
+      "gravity_unbalance_amplitude_nm": 0.0007097426749231511,
+      "downstream_torque_nm": 0,
+      "physical_start_status": "UNKNOWN"
+    },
+    {
+      "bearing_pair_nmm_assumed": 2.0,
+      "rotating_system_cog_eccentricity_mm_assumed": 0,
+      "rotating_nominal_mass_kg": 0.1447472225322921,
+      "raw_minimum_difference_nm": -0.0011873271243902357,
+      "derated_minimum_difference_nm": -0.0015936635621951179,
+      "gravity_unbalance_amplitude_nm": 0.0,
+      "downstream_torque_nm": 0,
+      "physical_start_status": "UNKNOWN"
+    },
+    {
+      "bearing_pair_nmm_assumed": 2.0,
+      "rotating_system_cog_eccentricity_mm_assumed": 0.1,
+      "rotating_nominal_mass_kg": 0.1447472225322921,
+      "raw_minimum_difference_nm": -0.0013277164772710192,
+      "derated_minimum_difference_nm": -0.0017343353248637048,
+      "gravity_unbalance_amplitude_nm": 0.00014194853498463022,
+      "downstream_torque_nm": 0,
+      "physical_start_status": "UNKNOWN"
+    },
+    {
+      "bearing_pair_nmm_assumed": 2.0,
+      "rotating_system_cog_eccentricity_mm_assumed": 0.5,
+      "rotating_nominal_mass_kg": 0.1447472225322921,
+      "raw_minimum_difference_nm": -0.0018922725199013268,
+      "derated_minimum_difference_nm": -0.002300513476649794,
+      "gravity_unbalance_amplitude_nm": 0.0007097426749231511,
+      "downstream_torque_nm": 0,
+      "physical_start_status": "UNKNOWN"
+    }
+  ],
+  "conditional_C_downstream": [
+    {
+      "case": "low",
+      "whole_machine_mass_kg_assumed": 0.37487270788496146,
+      "decomposition_at_peak": {
+        "same_resistance_case": "low",
+        "same_peak_crank_angle_deg": 10.25,
+        "crank_load_nmm": 4.464462531079008,
+        "crank_joint_friction_nmm": 0.8538066509851345,
+        "positive_crank_demand_nmm": 5.318269182064142,
+        "ideal_input_after_ratio_nm": 0.00021273076728256567,
+        "reducer_mesh_loss_input_nm": 2.2981994249363066e-05,
+        "coupling_load_friction_input_nm": 8.639144487095523e-06,
+        "coupling_preload_selfweight_loss_input_nm": 4.5054512579595476e-07,
+        "downstream_bearing_loss_input_nm": 6.967271764212062e-05,
+        "input_two_bearing_loss_nm": 0.0002,
+        "total_required_input_nm": 0.0005144751687869408,
+        "downstream_required_after_input_bearings_nm": 0.00031447516878694085,
+        "designer_downstream_margin_multiplier": 2.0,
+        "net_output_target_nm": 0.0006289503375738817,
+        "gross_aerodynamic_target_nm": 0.0008289503375738817,
+        "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+      },
+      "phase_relation": "input_deg=25*crank_deg,zero mounting index;16-blade90deg indices are equivalent",
+      "phase_samples": 18808,
+      "raw_one_times_minimum_difference_nm": 0.00029820435936143725,
+      "raw_design_target_minimum_difference_nm": -1.6264156886889973e-05,
+      "derated_design_target_minimum_difference_nm": -0.0004226005946917722,
+      "physical_walking_status": "UNKNOWN"
+    },
+    {
+      "case": "nominal",
+      "whole_machine_mass_kg_assumed": 0.5248727078849614,
+      "decomposition_at_peak": {
+        "same_resistance_case": "nominal",
+        "same_peak_crank_angle_deg": 10.75,
+        "crank_load_nmm": 5.645052836439829,
+        "crank_joint_friction_nmm": 2.180784167942996,
+        "positive_crank_demand_nmm": 7.825837004382825,
+        "ideal_input_after_ratio_nm": 0.000313033480175313,
+        "reducer_mesh_loss_input_nm": 7.342760646087586e-05,
+        "coupling_load_friction_input_nm": 2.9406262246932696e-05,
+        "coupling_preload_selfweight_loss_input_nm": 6.481055348220939e-05,
+        "downstream_bearing_loss_input_nm": 0.0002289858785588971,
+        "input_two_bearing_loss_nm": 0.0006,
+        "total_required_input_nm": 0.001309663780924228,
+        "downstream_required_after_input_bearings_nm": 0.0007096637809242281,
+        "designer_downstream_margin_multiplier": 2.0,
+        "net_output_target_nm": 0.0014193275618484562,
+        "gross_aerodynamic_target_nm": 0.0020193275618484562,
+        "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+      },
+      "phase_relation": "input_deg=25*crank_deg,zero mounting index;16-blade90deg indices are equivalent",
+      "phase_samples": 18808,
+      "raw_one_times_minimum_difference_nm": -0.0004969484282246716,
+      "raw_design_target_minimum_difference_nm": -0.001206569732059108,
+      "derated_design_target_minimum_difference_nm": -0.0016129061698639902,
+      "physical_walking_status": "UNKNOWN"
+    },
+    {
+      "case": "high",
+      "whole_machine_mass_kg_assumed": 0.7248727078849615,
+      "decomposition_at_peak": {
+        "same_resistance_case": "high",
+        "same_peak_crank_angle_deg": 30.5,
+        "crank_load_nmm": 8.362087930389077,
+        "crank_joint_friction_nmm": 5.3008188615995255,
+        "positive_crank_demand_nmm": 13.662906791988602,
+        "ideal_input_after_ratio_nm": 0.0005465162716795441,
+        "reducer_mesh_loss_input_nm": 0.00030741540281974345,
+        "coupling_load_friction_input_nm": 0.00012453898263306153,
+        "coupling_preload_selfweight_loss_input_nm": 0.00046659408673703403,
+        "downstream_bearing_loss_input_nm": 0.000929690697021846,
+        "input_two_bearing_loss_nm": 0.002,
+        "total_required_input_nm": 0.004374755440891229,
+        "downstream_required_after_input_bearings_nm": 0.002374755440891229,
+        "designer_downstream_margin_multiplier": 2.0,
+        "net_output_target_nm": 0.004749510881782458,
+        "gross_aerodynamic_target_nm": 0.006749510881782458,
+        "definition": "2x is applied ONLY to downstream demand after the same two input bearings; input-bearing resistance is added once, not doubled or subtracted from measured output again."
+      },
+      "phase_relation": "input_deg=25*crank_deg,zero mounting index;16-blade90deg indices are equivalent",
+      "phase_samples": 18808,
+      "raw_one_times_minimum_difference_nm": -0.0035620613406307845,
+      "raw_design_target_minimum_difference_nm": -0.005936795556871333,
+      "derated_design_target_minimum_difference_nm": -0.006343131994676216,
+      "physical_walking_status": "UNKNOWN"
+    }
+  ],
+  "balance_scope": "Eccentricity is a prescribed sensitivity of the ENTIRE rotating mass, including purchased hardware. Ideal geometric rotor symmetry does not establish real assembled balance. Loaded C rows use ideal balance.",
+  "mass_ledger": {
+    "r4_input_without_test_flange_kg": 0.11945132062107963,
+    "r3_rotor_proxy_removed_kg": 0.08129050645664664,
+    "unbuilt_remaining_assembly_allowance_kg": [
+      0.16161127333315262,
+      0.3116112733331526,
+      0.5116112733331526
+    ],
+    "actual_nominal_module_inserted_once_kg": 0.21326143455180885
+  },
+  "load_coupling_limits": "R3 link,gear ratio,target COM and friction assumptions retained; no actual downstreamCAD, gear alignment or ground-contact proof. Additional wind is a support-load envelope, not phase-resolved full airflow."
+}

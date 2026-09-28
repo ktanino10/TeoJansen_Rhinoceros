@@ -1,0 +1,41 @@
+{
+  "revisionId": "v3-wind-module-r6-01",
+  "rawMinimumNm": 0.0008126728756097642,
+  "rawMaximumNm": 0.000823185131575529,
+  "angularStepDeg": 0.5,
+  "rays": 512,
+  "refinementMinTorqueRelativeChange": 0.0009080875662459409,
+  "additionalDrag": {
+    "method": "rasterized CAD/swept-part projected area under the same prescribed Gaussian q; flat-drag upper load proxy",
+    "pixel_mm": 0.25,
+    "loads": {
+      "rotating_extra": {
+        "side_force_n": 0.005674273385795775,
+        "cop_x_mm": 56.29087090173097,
+        "cop_z_mm": 40.160877087936264,
+        "silhouette_area_mm2": 2064.625
+      },
+      "fixed": {
+        "side_force_n": 0.0017317101589900412,
+        "cop_x_mm": 73.16464299459928,
+        "cop_z_mm": 19.834188156682988,
+        "silhouette_area_mm2": 2250.5625
+      }
+    },
+    "not_credited_to_drive_torque": true,
+    "limitations": "No solved airflow/pressure. Adding to vane proxy can double count shadowed flow; intentionally conservative support load, not additional captured power."
+  },
+  "source": {
+    "peakMS": 6.4,
+    "sigmaMm": 20,
+    "aimRadiusFraction": -0.5,
+    "rhoKgM3": 1.225,
+    "nuM2S": 1.5e-05,
+    "panelCoefficientAssumed": 1.2,
+    "deratingAssumed": 0.5,
+    "distanceMm": 150,
+    "status": "R3 adopted common cold-air design field, not measured on this module"
+  },
+  "method": "same uncalibrated first-hit normal panel drag, now using the canonical33-segment blade centerline. Taper thickness,pressure recovery,endplate torque and running flow not solved.",
+  "measuredOrCertifiedLowerBoundNm": null
+}

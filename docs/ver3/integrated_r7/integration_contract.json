@@ -1,0 +1,758 @@
+{
+  "schemaVersion": 2,
+  "revisionId": "v3-integrated-walkers-r7-15",
+  "sourceCommit": "49d1186130ae7ec3e23610490ae2e376bd9d31a5",
+  "sourceHash": "54cead48c4f60f37b9422efdd905b3aabad12c4c1b425cd26589b811a3591168",
+  "sourceFiles": [
+    {
+      "path": "scripts/ver3/walker_r7.json",
+      "bytes": 13992,
+      "sha256": "6b6b3e0105d17d6e1bf9325cb80457aae6392774528ec2cdd11690cd39461d6a"
+    },
+    {
+      "path": "scripts/ver3/design.json",
+      "bytes": 6197,
+      "sha256": "cdbf69689a31706893c4f8cb6464491bc5dedeebe4df6eea5cb78cc2a9a3122b"
+    },
+    {
+      "path": "scripts/ver3/input_cartridge.json",
+      "bytes": 7821,
+      "sha256": "e2b14855a1b2981a30e54970b3f6eee2aa0ace82c6a5cd6603cef3f0e0e71f3c"
+    },
+    {
+      "path": "scripts/ver3/requirements.txt",
+      "bytes": 57,
+      "sha256": "8418f67253c8276126bd99fe693e50c55d08aee93766a7965dd86928594000be"
+    },
+    {
+      "path": "scripts/ver3/requirements_integrated_r7.txt",
+      "bytes": 47,
+      "sha256": "4269be2d7ee5fe84b5aa9bae33e541da04074abba98fc135fc9e30e06a33b94f"
+    },
+    {
+      "path": "scripts/ver3/walker_geometry.py",
+      "bytes": 8814,
+      "sha256": "4453d3410d2d47a35e4eb39e20e53ddc967e6a486b48960946157c43d795ae2f"
+    },
+    {
+      "path": "scripts/ver3/walker_kinematics.py",
+      "bytes": 1293,
+      "sha256": "50111228441a217670513bbb15d21a1454026891c38febfc9ae9319b48e32a37"
+    },
+    {
+      "path": "scripts/ver3/walker_contact.py",
+      "bytes": 20774,
+      "sha256": "1eaf09338afb0f2b3f556a026e2f7aa4b660f60edadd75ccd71e8170100bfd56"
+    },
+    {
+      "path": "scripts/ver3/walker_air.py",
+      "bytes": 6233,
+      "sha256": "e125aa8ed99ae7c6dc6cb9febd2352b486bb92fc26bc0209ebbe9e3564bec208"
+    },
+    {
+      "path": "scripts/ver3/build_integrated_walkers.py",
+      "bytes": 76509,
+      "sha256": "c42b909cdb3ff5580986243262cc8141c246b8ebf03187cf3155b22e44a84622"
+    },
+    {
+      "path": "scripts/ver3/build_integrated_accessories.py",
+      "bytes": 4838,
+      "sha256": "46e35cf7ef55e69550b191444df8034e2ce80c568c2d84b5e026c5fd66c28723"
+    },
+    {
+      "path": "scripts/ver3/refresh_integrated_roots.py",
+      "bytes": 7729,
+      "sha256": "a84bae8b60bb7ad44f80ca61c1051a553831a90e06f4fd8f07e6777be058844a"
+    },
+    {
+      "path": "scripts/ver3/analyze_integrated_walkers.py",
+      "bytes": 42142,
+      "sha256": "171de1a6b8630aede21139c90d37c2424148aee73ed9e17d32b230b6da998953"
+    },
+    {
+      "path": "scripts/ver3/analyze_integrated_structure.py",
+      "bytes": 12020,
+      "sha256": "e0d7a4a228e558b7f772f724a92843b7d451f9bdc08eaee8541e4b9cc225a84c"
+    },
+    {
+      "path": "scripts/ver3/analyze_integrated_sensitivities.py",
+      "bytes": 3918,
+      "sha256": "be77ea513910a2fd5af378d440f94d4ed8fb10af37a92bca9201cce2839ebf4a"
+    },
+    {
+      "path": "scripts/ver3/price_integrated_walkers.py",
+      "bytes": 12923,
+      "sha256": "1f949ecf9d391d33662c8bfe17055a50deb7470efa8dd43f8db039a4f69082e4"
+    },
+    {
+      "path": "scripts/ver3/run_cad_bounded.py",
+      "bytes": 3190,
+      "sha256": "d4b7715e5a9d9ce7ad2728a15d50d60ff3c44ec79db8961892eacd29eec9765b"
+    },
+    {
+      "path": "scripts/ver3/verify_integrated_exports.py",
+      "bytes": 5239,
+      "sha256": "54a5dac77b299f5404e2f0bf132b34867c7ffde760c676572ad613d6a85a0f9b"
+    },
+    {
+      "path": "scripts/ver3/check_integrated_collisions.py",
+      "bytes": 4322,
+      "sha256": "212ad2fbf72be872ce83c40fadfeeba8ede96d8d6f488f97d821c42afb2975db"
+    },
+    {
+      "path": "scripts/ver3/check_integrated_motion.py",
+      "bytes": 8758,
+      "sha256": "91207f2390079733f6e3a8c6e006f5ccc8e70fdf74c7b98a57ffa5b4fd75fcce"
+    },
+    {
+      "path": "scripts/ver3/check_integrated_access.py",
+      "bytes": 5212,
+      "sha256": "f7e2dc367f9286953210989a07b9b9d547097e444cdb94c65a42f578f2a2c055"
+    },
+    {
+      "path": "scripts/ver3/check_integrated_contact.py",
+      "bytes": 5384,
+      "sha256": "91898b4842ce2fc559ff5be7593d58944a7b270e056660efa9a2ae1255a0d5a8"
+    },
+    {
+      "path": "scripts/ver3/check_integrated_rotations.py",
+      "bytes": 11230,
+      "sha256": "bc9eb7f913d61b3eef2f556b20b580a536cbe265e757ebf4bb88bea8086fef18"
+    },
+    {
+      "path": "scripts/ver3/check_retainer_tool_access.py",
+      "bytes": 4542,
+      "sha256": "a4a655ddf6d59a2bc8d116f40ffddfbd27cbcc0a95fe1d81435752075e78bbed"
+    },
+    {
+      "path": "scripts/ver3/check_walker_cad_components.py",
+      "bytes": 13521,
+      "sha256": "c0dd354b2656553e0f834c013e74d1117daef9b2d27e4200bd92ab6690b25136"
+    },
+    {
+      "path": "scripts/ver3/test_walker_math.py",
+      "bytes": 10768,
+      "sha256": "11589b2799f5f0ec3c775bf98fc4bdd09964dd19c3039cec9002b7d56f304972"
+    },
+    {
+      "path": "scripts/ver3/test_assembly_contract.py",
+      "bytes": 6924,
+      "sha256": "b07c1a00b1ac4ab97de00d850b6fe6244afe6e955ec7935ab297fd5a03a801bb"
+    },
+    {
+      "path": "scripts/ver3/export_integrated_prints.py",
+      "bytes": 7944,
+      "sha256": "ca53d8ef4751b4b27e56e2cbf5845c405955a6e16651d642a2901d4629d41271"
+    },
+    {
+      "path": "scripts/ver3/report_integrated_walkers.py",
+      "bytes": 26017,
+      "sha256": "fa694d45656e7a582991ed37e36dbbc0d2fcee1e21a2feac5b71bde5fb38edfe"
+    },
+    {
+      "path": "scripts/ver3/build_integrated_contract.py",
+      "bytes": 26865,
+      "sha256": "9c5ae7488bd99e10a31dc7afac92b14169c402c4282e0934982e9a1e84f5ce81"
+    },
+    {
+      "path": "scripts/ver3/verify_integrated_package.py",
+      "bytes": 11953,
+      "sha256": "368fdf4cd21f258ccf9b77f298d70205572e07745a62787fe733436d5fa0a786"
+    },
+    {
+      "path": "scripts/ver3/beam.py",
+      "bytes": 7505,
+      "sha256": "59a1964a2b33de0aea13ba51c403f1cbbd46038e57cbf65b36ca7a92ccdc327e"
+    },
+    {
+      "path": "scripts/ver3/frame3d.py",
+      "bytes": 6031,
+      "sha256": "f675a521a5328d10bd0dabafa7b68fcf37593a0414dddd161ac9b07080593b9d"
+    },
+    {
+      "path": "scripts/ver3/cad_parts.py",
+      "bytes": 42236,
+      "sha256": "b5cfd14e569b260c6b36c3b43bc822d82d715aaca8421c1b9fa54ee5d76b902a"
+    },
+    {
+      "path": "scripts/ver3/core.py",
+      "bytes": 18090,
+      "sha256": "1572f2d2005e84a9b4929aa39f1dbdb2144dfac6f5333bfb85e1ddb3fb856033"
+    },
+    {
+      "path": "scripts/ver3/commercial_r3.py",
+      "bytes": 51056,
+      "sha256": "a12e753c4d3d2d74c1b99503fde6aafde3fd877d32b66f2c2b0effb7135cc97a"
+    },
+    {
+      "path": "scripts/ver3/study_r2.py",
+      "bytes": 80973,
+      "sha256": "5e477d4dedacf0ae7de164c6d0386562eb77a924ea9147cdeb0f1c35578635f4"
+    },
+    {
+      "path": "scripts/ver3/input_cartridge.py",
+      "bytes": 7152,
+      "sha256": "1a9f97cd3106909cb55efc0f3b343a5756c8975072807dcd3b3bd20044646c5d"
+    },
+    {
+      "path": "scripts/ver3/slice_integrated_representatives.py",
+      "bytes": 8949,
+      "sha256": "bb6ece15df36fe509da17a0a9e0908a8d70f48bac30223a4b46016ac262ce79d"
+    },
+    {
+      "path": "scripts/ver3/inspect_integrated_toolpaths.py",
+      "bytes": 20699,
+      "sha256": "b5c95589d41378a7504f8fb7a2a09c1e9920f6a9c0967a27c1b7933f0e29ae74"
+    },
+    {
+      "path": "scripts/ver3/test_slicing_inspection.py",
+      "bytes": 4162,
+      "sha256": "1884909e47b0934bd9d2aaa6982b134f890fe8e3ba36a6f833b90f94b60d9bce"
+    },
+    {
+      "path": "scripts/ver3/test_contact_frames.py",
+      "bytes": 4099,
+      "sha256": "caf2717ba1855d652d5bab199a4a4686d657f08224c73a90158e23329f63bd9f"
+    }
+  ],
+  "requirements": {
+    "coldAirReference": "preserve R3 adopted6.4m/s local-reference-as-Gaussian-peak, sigma20mm,150mm plane; not a measured product guarantee",
+    "floor": "level indoor floor; adopted local height departure +/-0.3mm, not measured",
+    "travelMm": 300,
+    "unpushedStart": true,
+    "materialBudgetJpy": 23000,
+    "budgetApprovalDateJst": "2026-09-28",
+    "budgetApproval": "User approved approximately JPY23000 per machine via the coordinating parent; includes guards,all fasteners,assembly cradles and initial fit pieces. Shipping and unquoted taxes separate. No purchasing authorized.",
+    "shipping": "separate",
+    "importedPartsScope": "input shaft/bearings/hub/collars and their already-counted fastener packs only",
+    "noMachineOperationOrPurchasing": true
+  },
+  "readOnlyExistingDependencies": [
+    {
+      "path": "docs/ver3/common_input_r4/assembly.json",
+      "bytes": 46033,
+      "sha256": "2a0e74b19614d6a940fc794b712a2e072682b7907cc661f22734fe91cd6d9788"
+    },
+    {
+      "path": "FreeCAD/Ver.3/common_input_r4/CommonInputR4.FCStd",
+      "bytes": 77466,
+      "sha256": "dab6a5fac58710ab70a7626b515812f7cf6e7662d1c71bc31683d258da5ff25e"
+    },
+    {
+      "path": "scripts/ver3/commercial_r3.json",
+      "bytes": 9761,
+      "sha256": "56c46b7fe038429904208da25712956b17dd60cfe78faf0e55cbe1c0856b8849"
+    }
+  ],
+  "requirementsApproval": {
+    "path": "docs/ver3/integrated_r7/requirements_approval.json",
+    "bytes": 1064,
+    "sha256": "04bbe772d44bfeb32c46a5796ac5592c7d9256ef5d6925ff36b30c85fa8d31bc"
+  },
+  "designs": [
+    {
+      "id": "A",
+      "revisionId": "v3-integrated-walkers-r7-15",
+      "direction": "large rotor, few stages",
+      "native": {
+        "path": "FreeCAD/Ver.3/integrated_r7/A/Walker_A.FCStd",
+        "bytes": 8224505,
+        "sha256": "f093fdfcdfd1c860d3feaff24a95d7ec836b7ae39c8d740c1e94422a157cb304"
+      },
+      "step": {
+        "path": "FreeCAD/Ver.3/integrated_r7/A/Walker_A.step",
+        "bytes": 45702448,
+        "sha256": "1d2a9daa6330b7374896507f6b84146cd4195c93a8725d6ba996a959d857089f"
+      },
+      "mesh": {
+        "path": "FreeCAD/Ver.3/integrated_r7/A/render_geometry.json.gz",
+        "bytes": 6175114,
+        "sha256": "bb95429d1eba8690e32e314d6866e3e8a2923a567a75fffa722c804e9b6a7080"
+      },
+      "assembly": {
+        "path": "docs/ver3/integrated_r7/A/assembly.json",
+        "bytes": 543150,
+        "sha256": "5a2915b46b4d928a558f1ca5311182d9752166bc8079e02430c48484dacaa0fe"
+      },
+      "bom": {
+        "path": "docs/ver3/integrated_r7/A/BOM.csv",
+        "bytes": 14356,
+        "sha256": "903aee3458236ea343f2a4a28e90952864f56b940d06aa2ec7ef72eb91703808"
+      },
+      "purchaseLots": {
+        "path": "docs/ver3/integrated_r7/A/purchase_lots.json",
+        "bytes": 13047,
+        "sha256": "32c99e0a48baa93b12d7a18cbdf85fb0c51ef693e5f40284301cbf5bdcce3be8"
+      },
+      "stages": {
+        "path": "docs/ver3/integrated_r7/A/assembly_stages.json",
+        "bytes": 170878,
+        "sha256": "a973381002d31e6538728dc20cc9ade56d4abeae03cccb06f58ac282a5d3af2c"
+      },
+      "printAndSheetTemplates": {
+        "path": "docs/ver3/integrated_r7/A/print_geometry.json",
+        "bytes": 39236,
+        "sha256": "55f7719ff5e576d21aa83506f41328e3238a9b379f6023111af4d65fefa3c373"
+      },
+      "contactFrames": {
+        "path": "docs/ver3/integrated_r7/A/contact_frames.json",
+        "bytes": 181055,
+        "sha256": "ca1a75dc273a9bece2fd9326a7ca465934dc56fdf3ba08b75c93abdec0791acf"
+      },
+      "validationFiles": [
+        {
+          "path": "docs/ver3/integrated_r7/A/static_collisions.json",
+          "bytes": 25480,
+          "sha256": "1cb501792b98767341640736c4f5262309f45ec79f0dd27337645e7e5d744d7e"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/A/gait_motion.json",
+          "bytes": 577,
+          "sha256": "fd77f5b06c8158f325a1e8f5e6d279b8b35c0085cf6c8f3d05b712728080cdce"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/A/assembly_access.json",
+          "bytes": 114183,
+          "sha256": "57244215888b877e214f6c2102036767adcffbe23bea354f85aef0f8876776f0"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/A/contact_sensitivity.json",
+          "bytes": 130136,
+          "sha256": "8cf5a75174114eaa9bf7936c0def707780d37ec1984acac7f9f4fd5047e072bb"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/A/rotating_clearance.json",
+          "bytes": 3907,
+          "sha256": "2a8d826b3aceaf3f5e84a6868395c859a4a88f93e02a6ee35403f66d52418525"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/A/structure.json",
+          "bytes": 144710,
+          "sha256": "71c5da35d30f0eebc1cfc2035b18d07bcd4c8168fc2384d3b5a8f813ee48cc58"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/A/work_budget.json",
+          "bytes": 64635,
+          "sha256": "f75ad2bf983a58654e86a25cf8c2a3a41dd131eaec90e5661c5e403d885fd2f9"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/A/environment_sensitivity.json",
+          "bytes": 15211,
+          "sha256": "98286b2092be1bc95a26c8fb670c374d03a161959e2d656c6079ca795f18173f"
+        }
+      ],
+      "generationBuildInputSha256": {
+        "scripts/ver3/build_integrated_walkers.py": "2f9b56d5532ff7e589f8565dff73bab839b14cd5a560af1a11d63c2fad5d8114",
+        "scripts/ver3/walker_r7.json": "1fa585625d4e9016d4ab92a2c86a06ec1eb97f64c07010825446f15015edbb4c",
+        "scripts/ver3/walker_geometry.py": "4453d3410d2d47a35e4eb39e20e53ddc967e6a486b48960946157c43d795ae2f",
+        "scripts/ver3/walker_kinematics.py": "50111228441a217670513bbb15d21a1454026891c38febfc9ae9319b48e32a37",
+        "scripts/ver3/walker_contact.py": "1eaf09338afb0f2b3f556a026e2f7aa4b660f60edadd75ccd71e8170100bfd56"
+      },
+      "instanceCount": 756,
+      "partClasses": [
+        "printed",
+        "purchased",
+        "cut_to_length",
+        "sheet_cut"
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "crankReferenceDeg": 0,
+      "mainShaftPhasesDeg": [
+        [
+          0,
+          180
+        ],
+        [
+          180,
+          0
+        ],
+        [
+          0,
+          180
+        ]
+      ],
+      "signedInputRevolutionsPerCrank": 144.0,
+      "nominalMassG": 1076.3474319017914,
+      "nominalCogMm": [
+        3.260496335305114,
+        -16.883710709766483,
+        118.25398623852169
+      ]
+    },
+    {
+      "id": "B",
+      "revisionId": "v3-integrated-walkers-r7-15",
+      "direction": "small rotor, high reduction/slower",
+      "native": {
+        "path": "FreeCAD/Ver.3/integrated_r7/B/Walker_B.FCStd",
+        "bytes": 9063405,
+        "sha256": "dd6a68352a5fab903d5d9adb594b7bf1429a039a187ca375a344576e88ba9f02"
+      },
+      "step": {
+        "path": "FreeCAD/Ver.3/integrated_r7/B/Walker_B.step",
+        "bytes": 46325783,
+        "sha256": "d9ec0ae6206d3005d2255670a1fae9fbe8138f47f94fd9524b790e48a02ec80d"
+      },
+      "mesh": {
+        "path": "FreeCAD/Ver.3/integrated_r7/B/render_geometry.json.gz",
+        "bytes": 6388133,
+        "sha256": "dd58fe9dba3222f28fcd5dc0d189ebbdc87c24e27635dcbc8079f423d196b323"
+      },
+      "assembly": {
+        "path": "docs/ver3/integrated_r7/B/assembly.json",
+        "bytes": 565247,
+        "sha256": "7e06187cf5d9561ee277bcad581e46bca64654356c481d0d2cea0a677760a8d5"
+      },
+      "bom": {
+        "path": "docs/ver3/integrated_r7/B/BOM.csv",
+        "bytes": 15054,
+        "sha256": "0ef46ac0f680c899764e43cc22aee06a59c8f6df24b087e862b0df8c20ea7c18"
+      },
+      "purchaseLots": {
+        "path": "docs/ver3/integrated_r7/B/purchase_lots.json",
+        "bytes": 13058,
+        "sha256": "4d6ff43cf08f4064d6c0ebd7ffe0b306dd358c2b4876857d57a70f57185c98c9"
+      },
+      "stages": {
+        "path": "docs/ver3/integrated_r7/B/assembly_stages.json",
+        "bytes": 182926,
+        "sha256": "3999fcd0bfa84f75e93102275339eff50f2bf6c4f4bc7993489b70e37fd68fc6"
+      },
+      "printAndSheetTemplates": {
+        "path": "docs/ver3/integrated_r7/B/print_geometry.json",
+        "bytes": 41285,
+        "sha256": "047e0d1f5d58f1108769b5671ca04ef0599d98f6b3cc5c23f629de4fa645b21a"
+      },
+      "contactFrames": {
+        "path": "docs/ver3/integrated_r7/B/contact_frames.json",
+        "bytes": 182135,
+        "sha256": "63068c2273a065e442d595e1fde0ab851d92b7ea23b36e36db641a97dc251227"
+      },
+      "validationFiles": [
+        {
+          "path": "docs/ver3/integrated_r7/B/static_collisions.json",
+          "bytes": 26851,
+          "sha256": "4d11bc9b2ace287243274c7da45ba8f33e12e6839526dafe14d40758caaa78b3"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/B/gait_motion.json",
+          "bytes": 578,
+          "sha256": "c62e227c93eee7e277058384ae8240ae0e195a160486295e953ec6481a710d1d"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/B/assembly_access.json",
+          "bytes": 128252,
+          "sha256": "fc87bd8b719292132fcfbf0be59347f5111418eecc59ce2997ce5ee952f16722"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/B/contact_sensitivity.json",
+          "bytes": 130098,
+          "sha256": "d6191648ce9db7821bc47f2b9649f317a5070c0de7de98f1e5a5f4c8744e9a16"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/B/rotating_clearance.json",
+          "bytes": 5492,
+          "sha256": "6bd9eef9e916fbbe51b663a52cd4d0c8435e86d059d1097057a187398ba98de0"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/B/structure.json",
+          "bytes": 145473,
+          "sha256": "2747e790ddd2c540fadd9f117c30e8db33fb74cb66c809e230eed4b0ef7d2d3d"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/B/work_budget.json",
+          "bytes": 65489,
+          "sha256": "4639c77967813e841832211b6a062aa97ea12bf5c215a7ccae35e3d27c13a9ce"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/B/environment_sensitivity.json",
+          "bytes": 15224,
+          "sha256": "920cab8375c487013567625cfad7994f3e30dc405deda27b1c3fcc3559253945"
+        }
+      ],
+      "generationBuildInputSha256": {
+        "scripts/ver3/build_integrated_walkers.py": "c42b909cdb3ff5580986243262cc8141c246b8ebf03187cf3155b22e44a84622",
+        "scripts/ver3/walker_r7.json": "6b6b3e0105d17d6e1bf9325cb80457aae6392774528ec2cdd11690cd39461d6a",
+        "scripts/ver3/walker_geometry.py": "4453d3410d2d47a35e4eb39e20e53ddc967e6a486b48960946157c43d795ae2f",
+        "scripts/ver3/walker_kinematics.py": "50111228441a217670513bbb15d21a1454026891c38febfc9ae9319b48e32a37",
+        "scripts/ver3/walker_contact.py": "1eaf09338afb0f2b3f556a026e2f7aa4b660f60edadd75ccd71e8170100bfd56"
+      },
+      "instanceCount": 791,
+      "partClasses": [
+        "printed",
+        "purchased",
+        "cut_to_length",
+        "sheet_cut"
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "crankReferenceDeg": 0,
+      "mainShaftPhasesDeg": [
+        [
+          0,
+          180
+        ],
+        [
+          180,
+          0
+        ],
+        [
+          0,
+          180
+        ]
+      ],
+      "signedInputRevolutionsPerCrank": -512.0,
+      "nominalMassG": 1112.3296448040544,
+      "nominalCogMm": [
+        -0.4089414322844308,
+        -14.520040627091866,
+        131.56707453071564
+      ]
+    },
+    {
+      "id": "C",
+      "revisionId": "v3-integrated-walkers-r7-15",
+      "direction": "intermediate rotor, material-constrained light frame",
+      "native": {
+        "path": "FreeCAD/Ver.3/integrated_r7/C/Walker_C.FCStd",
+        "bytes": 8236273,
+        "sha256": "c4180d6e48ff99d7135f209560f787b635cdcd430f17b2a083b111cd108af26c"
+      },
+      "step": {
+        "path": "FreeCAD/Ver.3/integrated_r7/C/Walker_C.step",
+        "bytes": 44076338,
+        "sha256": "07673bd3a1de1efbf7f7dff96f7cdbf55abab303edc39401288327c657f76df0"
+      },
+      "mesh": {
+        "path": "FreeCAD/Ver.3/integrated_r7/C/render_geometry.json.gz",
+        "bytes": 6173673,
+        "sha256": "61fed4a99b99342f30e140bcf3bd39c734a59cca40edb4bafce74ce91421b80a"
+      },
+      "assembly": {
+        "path": "docs/ver3/integrated_r7/C/assembly.json",
+        "bytes": 540766,
+        "sha256": "3bf25e84abc0bc08c523e4beea9eb8770ebc87e29d54193dd4f3d59d0d2736d3"
+      },
+      "bom": {
+        "path": "docs/ver3/integrated_r7/C/BOM.csv",
+        "bytes": 14352,
+        "sha256": "bcd37a767a9553ccf73634943d22232df710b8ffaa57db5173a2040078c9fe73"
+      },
+      "purchaseLots": {
+        "path": "docs/ver3/integrated_r7/C/purchase_lots.json",
+        "bytes": 13044,
+        "sha256": "22a15e54f03dfa8f9c5bf113288b36de554814340b9d550acf61df36427ac59c"
+      },
+      "stages": {
+        "path": "docs/ver3/integrated_r7/C/assembly_stages.json",
+        "bytes": 170876,
+        "sha256": "7284a19e07167d18cf61e841087ce54ed89a10bca41fb7503e9a7bf033895398"
+      },
+      "printAndSheetTemplates": {
+        "path": "docs/ver3/integrated_r7/C/print_geometry.json",
+        "bytes": 39119,
+        "sha256": "11f4dd7bffefcfe8a9e82d28a29f9fc7a232c5591fb421e4b254be4993c552f2"
+      },
+      "contactFrames": {
+        "path": "docs/ver3/integrated_r7/C/contact_frames.json",
+        "bytes": 181705,
+        "sha256": "c21179ebfbe5c989a0087664d9ab0b995504070ca7cdc138aee50a23bec0847d"
+      },
+      "validationFiles": [
+        {
+          "path": "docs/ver3/integrated_r7/C/static_collisions.json",
+          "bytes": 25480,
+          "sha256": "90bf2e9c34191d5f90ae6da0aa3ca5e3bdebefbb17929e50151d19d1c7c48906"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/C/gait_motion.json",
+          "bytes": 578,
+          "sha256": "54ddbf7663a63a65695e51076bc19f9050b594a07f71f5bf6fb67366cdb5f473"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/C/assembly_access.json",
+          "bytes": 114177,
+          "sha256": "36b323d86732b51509691fead7ce9931cd705c56326689d516b2b1a5349b4547"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/C/contact_sensitivity.json",
+          "bytes": 130123,
+          "sha256": "d3d323c7964c48d0f622810cd4a07fe2063cc7700ae6635aa976ffb5c1cd0055"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/C/rotating_clearance.json",
+          "bytes": 3901,
+          "sha256": "3d4af03711667b74496df07688b5c2ef7d080150a12ae56cb39210b8601957f7"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/C/structure.json",
+          "bytes": 144573,
+          "sha256": "9bbd84ef59c3b98f1786089a5f53038e01bfa14e4428bce4952815980f970e12"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/C/work_budget.json",
+          "bytes": 64702,
+          "sha256": "9926ae89d3d7a58a59c53cff61e147f06004de20308de749df5128c33ae466d3"
+        },
+        {
+          "path": "docs/ver3/integrated_r7/C/environment_sensitivity.json",
+          "bytes": 15238,
+          "sha256": "9172a5ee7e080a87cd64a992374f2ae10493f178581d3de36c03faf66759979a"
+        }
+      ],
+      "generationBuildInputSha256": {
+        "scripts/ver3/build_integrated_walkers.py": "2f9b56d5532ff7e589f8565dff73bab839b14cd5a560af1a11d63c2fad5d8114",
+        "scripts/ver3/walker_r7.json": "1fa585625d4e9016d4ab92a2c86a06ec1eb97f64c07010825446f15015edbb4c",
+        "scripts/ver3/walker_geometry.py": "4453d3410d2d47a35e4eb39e20e53ddc967e6a486b48960946157c43d795ae2f",
+        "scripts/ver3/walker_kinematics.py": "50111228441a217670513bbb15d21a1454026891c38febfc9ae9319b48e32a37",
+        "scripts/ver3/walker_contact.py": "1eaf09338afb0f2b3f556a026e2f7aa4b660f60edadd75ccd71e8170100bfd56"
+      },
+      "instanceCount": 756,
+      "partClasses": [
+        "printed",
+        "purchased",
+        "cut_to_length",
+        "sheet_cut"
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "crankReferenceDeg": 0,
+      "mainShaftPhasesDeg": [
+        [
+          0,
+          180
+        ],
+        [
+          180,
+          0
+        ],
+        [
+          0,
+          180
+        ]
+      ],
+      "signedInputRevolutionsPerCrank": 156.0,
+      "nominalMassG": 1049.2401540565288,
+      "nominalCogMm": [
+        2.5851620925565113,
+        -16.8774332127113,
+        117.44336624191853
+      ]
+    }
+  ],
+  "sharedAccessories": {
+    "path": "docs/ver3/integrated_r7/common/accessories.json",
+    "bytes": 3064,
+    "sha256": "79b25d961f619e1230d87cfaefaee5c2c3a0c7bdad2c39ad031b419bdc87ba37"
+  },
+  "slicingStatus": {
+    "path": "docs/ver3/integrated_r7/slicing_status.json",
+    "bytes": 4897,
+    "sha256": "b314856ddca33cb26621b4c344a0db22953b9d84c67f21b51889484c73cfa1cf"
+  },
+  "sharedOrder": {
+    "path": "docs/ver3/integrated_r7/purchase_lots.json",
+    "bytes": 14354,
+    "sha256": "ae0b2ea70bf9602449d58ce9eff88fd4000988bd3a67b2df85e5d6b5658ad557"
+  },
+  "meshEncoding": "gzip JSON,local vertices in millimetres and triangle indices",
+  "transformConvention": "row-major4x4 matrices multiplied by homogeneous column vectors; millimetres",
+  "handedness": "Left-hand geometry is already mirrored in its mesh; do not mirror it again.",
+  "stageTools": [
+    {
+      "id": "HEX_1P5",
+      "torqueNm": null
+    },
+    {
+      "id": "HEX_2P5",
+      "torqueNm": null
+    },
+    {
+      "id": "HEX_3",
+      "torqueNm": null
+    },
+    {
+      "id": "WRENCH_4",
+      "torqueNm": null
+    },
+    {
+      "id": "WRENCH_5P5",
+      "torqueNm": null
+    },
+    {
+      "id": "WRENCH_7",
+      "torqueNm": null
+    }
+  ],
+  "renderingLimits": [
+    "Assembly reference is uncompressed and not a solved floor-contact pose; do not impose a floor atZ=0 as a performance claim.",
+    "Camera orbit and stated assembly paths are allowed representations; no self-start or dynamic walking animation is validated.",
+    "Generation hashes describe the actual build history,including incremental root-only updates. The current source hash also includes the approved budget-only metadata update.",
+    "Old first-cut GLB,r3 calculations andr4/r6 data remain separately versioned; do not merge their numbers or geometry.",
+    "Contact frames are decimated converged small-angle quasi-static states,not dynamics. Missing independent rocker angles remain null; never replace them with zero or arbitrary poses."
+  ],
+  "manufacturingRelease": false,
+  "qualifiedWalkingPrototypeCount": 0,
+  "physicalSelfStart": "UNKNOWN",
+  "real30cmTravel": "UNKNOWN",
+  "publicationAuthorized": true,
+  "publicationScope": {
+    "repository": "https://github.com/ktanino10/TeoJansen_Rhinoceros",
+    "pages": "https://ktanino10.github.io/TeoJansen_Rhinoceros/",
+    "manufacturingOrMachineOperationAuthorized": false
+  },
+  "assemblyReviewCorrection": {
+    "findingId": "R7-I1",
+    "reviewedSnapshotCommit": "922a47c5ab815fc186dd1486726123ab08552ede",
+    "geometryChanged": false,
+    "pathInventoryDerivedFromOrderedOperations": true
+  },
+  "candidateRevision": "v3-integrated-walkers-r7-15-slice1",
+  "reviewedGeometryArtifactCommit": "f50978e55384d1b03417ed7115395e6e2c010e85",
+  "geometryChangedSinceReviewedArtifact": false,
+  "slicingReport": {
+    "path": "docs/ver3/integrated_r7/SLICING_ja.md",
+    "bytes": 8558,
+    "sha256": "32e31ea0b53ff8b6a89e8e9688e678e71fbf560347c7e1fc2d50001c9bca111b"
+  },
+  "representativeToolpathChecks": {
+    "path": "docs/ver3/integrated_r7/slicing/toolpath_checks.json",
+    "bytes": 26446,
+    "sha256": "ec82959d6d626e03cb5aa7f91c465e5be6dd1e06f03ed26bdc74d73607467ded"
+  },
+  "slicingProfileProvenance": {
+    "path": "docs/ver3/integrated_r7/slicing/profile_provenance.json",
+    "bytes": 9440,
+    "sha256": "e77520d6abbeb448e8e507ce75b950ba5df2616de33b1590f146c187fc2a2db8"
+  },
+  "integrationReview": {
+    "summary": {
+      "path": "docs/ver3/integrated_r7/REVIEW_ja.md",
+      "bytes": 6811,
+      "sha256": "d2da34056c1151ee1c571c7c7c7c49cbe765e4fae29b360a2dee451280e7f909"
+    },
+    "initialReview": {
+      "path": "docs/ver3/integrated_r7/review/initial_review_record.json",
+      "bytes": 17003,
+      "sha256": "1b7b5dffadda16876c8da4043a58445b040891edf2e67191928f15a617f80359"
+    },
+    "correction": {
+      "path": "docs/ver3/integrated_r7/review/correction_status.json",
+      "bytes": 2800,
+      "sha256": "707b3b832f2f8fc9fb443c468aec595c5d0bdebde9e568bbd565d08d084a84b4"
+    }
+  },
+  "bRetainerCorrection": {
+    "path": "docs/ver3/integrated_r7/B/retainer_corner_correction.json",
+    "bytes": 1407,
+    "sha256": "e11f7d5e1d7e615983a124de2219ef4c7429162d846a83330eee1a2d4ba78892"
+  },
+  "bRequiredToolEnvelope": {
+    "path": "docs/ver3/integrated_r7/B/retainer_tool_access.json",
+    "bytes": 1789,
+    "sha256": "9ce81652134d6dec4275b396bab172057de1ab8394308f27d3601bd0aadc7712"
+  },
+  "stage04DocumentationCorrection": {
+    "path": "docs/ver3/integrated_r7/review/stage04_documentation_correction.json",
+    "bytes": 734,
+    "sha256": "774d51d23f43a9d2fdf6ed173de7815302acab12cd0d8f9624a35cca4023a20b"
+  }
+}

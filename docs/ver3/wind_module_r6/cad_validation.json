@@ -1,0 +1,26 @@
+{
+  "revisionId": "v3-wind-module-r6-01",
+  "nativeObjects": 36,
+  "nativeSolids": 44,
+  "stepSolids": 44,
+  "relativeVolumeError": 2.0767573049966236e-14,
+  "placementErrorMm": 2.842170943040401e-14,
+  "rotorOverallMm": [
+    38,
+    100,
+    100
+  ],
+  "rotorActiveSpanMm": 32,
+  "axisHeightMm": 55,
+  "rotorActualSolidMassG": 81.30722253229212,
+  "carrierActualSolidMassG": 42.03773827299009,
+  "totalPrintedSolidMassG": 127.98143455180886,
+  "totalNominalModuleMassG": 213.26143455180886,
+  "originalR4NominalMassG": 124.97572110594913,
+  "rotorRadialCadEccentricityMm": 9.474890730546574e-15,
+  "minimum_neighboring_blade_gap_mm": 6.41496227731374,
+  "rotorPolarMassInertiaKgM2": 0.00010894381251881092,
+  "frame_material_centerline_samples": 200,
+  "physicalBalanceOrMassMeasured": false,
+  "matingFoundationQualified": false
+}

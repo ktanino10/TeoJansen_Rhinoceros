@@ -1,0 +1,528 @@
+{
+  "designs": [
+    "A",
+    "B",
+    "C"
+  ],
+  "cadNominalMassG": {
+    "A": 1076.3474319017914,
+    "B": 1112.3296448040544,
+    "C": 1049.2401540565288
+  },
+  "rows": [
+    {
+      "sku": "12-0721",
+      "neededQuantity": 36,
+      "checkedJst": "2026-09-27",
+      "costJpy": 1980,
+      "displayedCostJpy": 1800,
+      "taxUnclearReserveJpy": 180,
+      "purchaseQuantity": 50,
+      "unused": 14,
+      "unitPriceJpy": 36,
+      "tax": "displayed row does not state treatment;10%reserve,not claimed tax charge",
+      "source": "https://www.spring-net.com/search/?q=12-0721"
+    },
+    {
+      "sku": "1309-0016-1006",
+      "neededQuantity": 3,
+      "checkedJst": "2026-09-27",
+      "costJpy": 3835.2,
+      "purchaseQuantity": 3,
+      "unused": 0,
+      "packPriceUsd": 7.99,
+      "purchasePacks": 3,
+      "fxAssumed": 160,
+      "source": "https://www.gobilda.com/1309-series-sonic-hub-6mm-d-bore/",
+      "tax": "Japanese import tax and shipping not quoted"
+    },
+    {
+      "sku": "1521-0008-0040",
+      "neededQuantity": 6,
+      "checkedJst": "2026-09-27",
+      "costJpy": 796.8000000000001,
+      "purchaseQuantity": 8,
+      "unused": 2,
+      "packPriceUsd": 2.49,
+      "purchasePacks": 2,
+      "fxAssumed": 160,
+      "source": "https://www.gobilda.com/1521-series-6mm-id-spacer-8mm-od-4mm-length-4-pack/",
+      "tax": "Japanese import tax and shipping not quoted"
+    },
+    {
+      "sku": "1611-0514-0006",
+      "neededQuantity": 6,
+      "checkedJst": "2026-09-27",
+      "costJpy": 1915.2,
+      "purchaseQuantity": 6,
+      "unused": 0,
+      "packPriceUsd": 3.99,
+      "purchasePacks": 3,
+      "fxAssumed": 160,
+      "source": "https://www.gobilda.com/1611-series-flanged-ball-bearing-6mm-id-x-14mm-od-5mm-thickness-2-pack/",
+      "tax": "Japanese import tax and shipping not quoted"
+    },
+    {
+      "sku": "2101-0006-0140",
+      "neededQuantity": 3,
+      "checkedJst": "2026-09-27",
+      "costJpy": 2443.2,
+      "purchaseQuantity": 3,
+      "unused": 0,
+      "packPriceUsd": 5.09,
+      "purchasePacks": 3,
+      "fxAssumed": 160,
+      "source": "https://www.gobilda.com/2101-series-stainless-steel-d-shaft-6mm-diameter-140mm-length/",
+      "tax": "Japanese import tax and shipping not quoted"
+    },
+    {
+      "sku": "2812-0004-0007",
+      "neededQuantity": 30,
+      "checkedJst": "2026-09-27",
+      "costJpy": 956.8000000000001,
+      "purchaseQuantity": 50,
+      "unused": 20,
+      "packPriceUsd": 2.99,
+      "purchasePacks": 2,
+      "fxAssumed": 160,
+      "source": "https://www.gobilda.com/m4-x-0-7mm-nylock-nut/",
+      "tax": "Japanese import tax and shipping not quoted"
+    },
+    {
+      "sku": "2910-0919-0006",
+      "neededQuantity": 6,
+      "checkedJst": "2026-09-27",
+      "costJpy": 4310.400000000001,
+      "purchaseQuantity": 6,
+      "unused": 0,
+      "packPriceUsd": 4.49,
+      "purchasePacks": 6,
+      "fxAssumed": 160,
+      "source": "https://www.gobilda.com/2910-series-aluminum-clamping-collar-6mm-id-x-19mm-od-9mm-length/",
+      "tax": "Japanese import tax and shipping not quoted"
+    },
+    {
+      "sku": "BOLT_M2_16",
+      "neededQuantity": 60,
+      "checkedJst": "2026-09-27",
+      "costJpy": 1430,
+      "purchaseQuantity": 100,
+      "unused": 40,
+      "lots": [
+        {
+          "packs": 1,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 1430,
+          "url": "https://www.nejinejikun.com/products/detail/371467"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "BOLT_M2_25",
+      "neededQuantity": 54,
+      "checkedJst": "2026-09-27",
+      "costJpy": 2640,
+      "purchaseQuantity": 60,
+      "unused": 6,
+      "lots": [
+        {
+          "packs": 6,
+          "packSize": 10,
+          "packPriceTaxIncludedJpy": 440,
+          "url": "https://www.nejinejikun.com/products/detail/371478"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "BOLT_M2_30",
+      "neededQuantity": 36,
+      "checkedJst": "2026-09-27",
+      "costJpy": 1936,
+      "purchaseQuantity": 40,
+      "unused": 4,
+      "lots": [
+        {
+          "packs": 4,
+          "packSize": 10,
+          "packPriceTaxIncludedJpy": 484,
+          "url": "https://www.nejinejikun.com/products/detail/371481"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "BOLT_M3_16",
+      "neededQuantity": 57,
+      "checkedJst": "2026-09-27",
+      "costJpy": 550,
+      "purchaseQuantity": 100,
+      "unused": 43,
+      "lots": [
+        {
+          "packs": 1,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 550,
+          "url": "https://www.nejinejikun.com/products/detail/285470"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "BOLT_M3_20",
+      "neededQuantity": 50,
+      "checkedJst": "2026-09-27",
+      "costJpy": 561,
+      "purchaseQuantity": 100,
+      "unused": 50,
+      "lots": [
+        {
+          "packs": 1,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 561,
+          "url": "https://www.nejinejikun.com/products/detail/285476"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "BOLT_M4_12",
+      "neededQuantity": 12,
+      "checkedJst": "2026-09-27",
+      "costJpy": 550,
+      "purchaseQuantity": 100,
+      "unused": 88,
+      "lots": [
+        {
+          "packs": 1,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 550,
+          "url": "https://www.nejinejikun.com/products/detail/285560"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "BOLT_M4_20",
+      "neededQuantity": 30,
+      "checkedJst": "2026-09-27",
+      "costJpy": 1276.8000000000002,
+      "purchaseQuantity": 50,
+      "unused": 20,
+      "packPriceUsd": 3.99,
+      "purchasePacks": 2,
+      "fxAssumed": 160,
+      "source": "https://www.gobilda.com/m4-x-0-7mm-zinc-plated-socket-head-screw-20mm-length-25-pack/",
+      "tax": "Japanese import tax and shipping not quoted"
+    },
+    {
+      "sku": "CE-2008N",
+      "neededQuantity": 60,
+      "checkedJst": "2026-09-27",
+      "costJpy": 2420.0,
+      "purchaseQuantity": 100,
+      "unused": 40,
+      "unitExTaxJpy": 22,
+      "tax": "10% added to posted unit price",
+      "source": "https://hirosugi.co.jp/shop/g/gCE-301N/",
+      "minimumOrder": 50,
+      "purchaseMultiple": "conservative whole50-piece multiples; no fractional purchase"
+    },
+    {
+      "sku": "CE-2020N",
+      "neededQuantity": 90,
+      "checkedJst": "2026-09-27",
+      "costJpy": 3410.0000000000005,
+      "purchaseQuantity": 100,
+      "unused": 10,
+      "unitExTaxJpy": 31,
+      "tax": "10% added to posted unit price",
+      "source": "https://hirosugi.co.jp/shop/g/gCE-301N/",
+      "minimumOrder": 50,
+      "purchaseMultiple": "conservative whole50-piece multiples; no fractional purchase"
+    },
+    {
+      "sku": "DDL-1680HH",
+      "neededQuantity": 32,
+      "checkedJst": "2026-09-27",
+      "costJpy": 7040,
+      "purchaseQuantity": 32,
+      "unused": 0,
+      "tax": "included",
+      "source": "https://e-seki.net/products/detail1750.html",
+      "availability": "page1-2days,not reserved"
+    },
+    {
+      "sku": "NUT_M2",
+      "neededQuantity": 300,
+      "checkedJst": "2026-09-27",
+      "costJpy": 1320,
+      "purchaseQuantity": 300,
+      "unused": 0,
+      "lots": [
+        {
+          "packs": 3,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 440,
+          "url": "https://www.nejinejikun.com/products/detail/361365"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "NUT_M3",
+      "neededQuantity": 214,
+      "checkedJst": "2026-09-27",
+      "costJpy": 1320,
+      "purchaseQuantity": 300,
+      "unused": 86,
+      "lots": [
+        {
+          "packs": 3,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 440,
+          "url": "https://www.nejinejikun.com/products/detail/361377"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "THRUST4",
+      "neededQuantity": 360,
+      "checkedJst": "2026-09-27",
+      "costJpy": 1320,
+      "purchaseQuantity": 400,
+      "unused": 40,
+      "lots": [
+        {
+          "packs": 4,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 330,
+          "url": "https://www.nejinejikun.com/products/detail/202180"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "THRUST6",
+      "neededQuantity": 18,
+      "checkedJst": "2026-09-27",
+      "costJpy": 330,
+      "purchaseQuantity": 100,
+      "unused": 82,
+      "lots": [
+        {
+          "packs": 1,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 330,
+          "url": "https://www.nejinejikun.com/products/detail/94380"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "WASHER_M2",
+      "neededQuantity": 264,
+      "checkedJst": "2026-09-27",
+      "costJpy": 990,
+      "purchaseQuantity": 300,
+      "unused": 36,
+      "lots": [
+        {
+          "packs": 3,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 330,
+          "url": "https://www.nejinejikun.com/products/detail/202153"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "WASHER_M3",
+      "neededQuantity": 204,
+      "checkedJst": "2026-09-27",
+      "costJpy": 990,
+      "purchaseQuantity": 300,
+      "unused": 96,
+      "lots": [
+        {
+          "packs": 3,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 330,
+          "url": "https://www.nejinejikun.com/products/detail/202174"
+        }
+      ],
+      "tax": "included"
+    },
+    {
+      "sku": "PAC34-05",
+      "neededQuantity": 9,
+      "neededQuantityUnit": "cut blanks; some produce multiple mounted pieces",
+      "installedPanelQuantity": 10,
+      "purchaseQuantity": 3,
+      "purchaseQuantityUnit": "300x450x0.5mm sheets",
+      "costJpy": 2040,
+      "tax": "included",
+      "source": "https://www.dcm-ekurashi.com/goods/217260",
+      "sheetNesting": {
+        "sheetCount": 3,
+        "stockMm": [
+          300,
+          450
+        ],
+        "edgeMarginMm": 2,
+        "kerfAllowanceMm": 2,
+        "layouts": [
+          [
+            {
+              "partId": "B_S_GUARD_LEFT",
+              "x": 0,
+              "y": 0,
+              "w": 295,
+              "h": 221
+            },
+            {
+              "partId": "C_S_GUARD_LEFT",
+              "x": 0,
+              "y": 221,
+              "w": 257,
+              "h": 221
+            }
+          ],
+          [
+            {
+              "partId": "A_S_GUARD_LEFT",
+              "x": 0,
+              "y": 0,
+              "w": 246,
+              "h": 221
+            },
+            {
+              "partId": "B_S_GUARD_UPPER_RIGHT",
+              "x": 0,
+              "y": 221,
+              "w": 168,
+              "h": 199
+            },
+            {
+              "partId": "C_S_GUARD_LOWER_RIGHT",
+              "x": 168,
+              "y": 221,
+              "w": 124,
+              "h": 221
+            }
+          ],
+          [
+            {
+              "partId": "A_S_GUARD_LOWER_RIGHT",
+              "x": 0,
+              "y": 0,
+              "w": 221,
+              "h": 118
+            },
+            {
+              "partId": "B_S_GUARD_LOWER_RIGHT",
+              "x": 0,
+              "y": 118,
+              "w": 118,
+              "h": 221
+            },
+            {
+              "partId": "C_S_GUARD_UPPER_RIGHT",
+              "x": 118,
+              "y": 118,
+              "w": 168,
+              "h": 155
+            },
+            {
+              "partId": "A_S_GUARD_UPPER_RIGHT",
+              "x": 118,
+              "y": 273,
+              "w": 168,
+              "h": 150
+            }
+          ]
+        ],
+        "method": "bounded rectangle blank nesting with rotation; hole scraps are not recovered as structural sheet"
+      }
+    }
+  ],
+  "shaftStockOrder": {
+    "displayedPriceJpy": 1770,
+    "taxUnclearReserveJpy": 177,
+    "orderedLengthsMm": [
+      1000,
+      200
+    ],
+    "cutLayoutMm": [
+      [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        58
+      ],
+      [
+        58,
+        58,
+        58
+      ]
+    ],
+    "remainingAfterKerfsMm": [
+      20,
+      18
+    ],
+    "kerfPerPieceMm": 2,
+    "stockNegativeLengthAllowanceMm": 2,
+    "source": "https://www.yokoyama-techno.net/detail/596.html"
+  },
+  "purchasedSubtotalJpy": 48308.4,
+  "printedSolidMassG": 1659.4112388767512,
+  "firstBuildAccessoryMassG": 118.36397372840563,
+  "commonAccessoriesSetsPurchased": 1,
+  "firstBuildAccessoriesIncluded": true,
+  "filamentJpyKgAssumed": 3000,
+  "printWasteFactorAssumed": 1.2,
+  "printedMaterialEstimateJpy": 6399.99,
+  "representedBomSubtotalJpy": 54708.39,
+  "optionalImportTaxReserve10PercentJpy": 1553.44,
+  "representedBomWithImportReserveJpy": 56261.83,
+  "includedUnclearDomesticTaxReserveJpy": 357.0,
+  "shippingJpy": null,
+  "paymentFeesJpy": null,
+  "guardsAndFitCouponsFullyIncluded": true,
+  "sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy": 54351.39,
+  "completeMachineBudgetStatus": "CONDITIONAL_WITHIN_APPROVED_BUDGET",
+  "targetMaterialCostApproxJpy": 69000,
+  "approvedBudgetDateJst": "2026-09-28",
+  "representedCostDifferenceFromTargetJpy": -14648.61,
+  "approvedReferenceBudgetCeilingJpy": 69000,
+  "note": "Quoted minimum purchase lots,real cut-sheet blanks,cage and first-build coupons/cradles are counted when present. A complete bill is not safety,material,airflow or budget approval. Single-build and joint-order lots remain distinct.",
+  "budgetCondition": "Reference FX160JPY/USD and1.2x solid+accessory print material; no measured slice cost. Shipping and unquoted tax/fees excluded from the approved comparison.",
+  "printMaterialSensitivity": [
+    {
+      "solidPlusAccessoriesMassG": 1777.7752126051569,
+      "materialFactor": 1.0,
+      "partsAndMaterialWithoutUncertainTaxReservesJpy": 53284.73,
+      "notSlicerMeasured": true
+    },
+    {
+      "solidPlusAccessoriesMassG": 1777.7752126051569,
+      "materialFactor": 1.2,
+      "partsAndMaterialWithoutUncertainTaxReservesJpy": 54351.39,
+      "notSlicerMeasured": true
+    },
+    {
+      "solidPlusAccessoriesMassG": 1777.7752126051569,
+      "materialFactor": 1.5,
+      "partsAndMaterialWithoutUncertainTaxReservesJpy": 55951.39,
+      "notSlicerMeasured": true
+    }
+  ]
+}

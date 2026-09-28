@@ -1,0 +1,27 @@
+{
+  "designId": "A",
+  "nativeObjects": 756,
+  "nativeSolids": 794,
+  "stepSolids": 794,
+  "nativeVolumeBySolidsMm3": 547399.9576916342,
+  "stepVolumeBySolidsMm3": 547399.9569033294,
+  "totalRelativeVolumeDifference": 1.4400893300689286e-09,
+  "maximumBoundsDifferenceMm": 9.632117325963918e-11,
+  "surfaceChecks": [],
+  "massG": 1076.3474319017914,
+  "printedMassG": 566.9788199681872,
+  "nominalCogMm": [
+    3.260496335305114,
+    -16.883710709766483,
+    118.25398623852169
+  ],
+  "tolerances": {
+    "totalVolumeRelative": 1e-05,
+    "perSolidVolumeRelative": 5e-05,
+    "boundsAndSurfaceMm": 0.0001
+  },
+  "reasonForIntegrationTolerance": "Captured valid native and STEP chassis have coincident B-rep surfaces but differ by about1.76mm3 in default volume integration; all bodies,dimensions and representative surfaces are checked separately.",
+  "nativeStepStatus": "PASS",
+  "assemblyInterferenceStatus": "NOT_YET_QUALIFIED",
+  "manufacturingOrPhysicalApproval": false
+}

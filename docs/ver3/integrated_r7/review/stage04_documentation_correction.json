@@ -1,0 +1,15 @@
+{
+  "reviewedArtifactCommit": "f50978e55384d1b03417ed7115395e6e2c010e85",
+  "scope": "Documentation and generated stage note only; the verified path was already Y=-4 to 0 mm.",
+  "stageId": "04_upper_sheets",
+  "upperPetDescentConstantOffsetMm": [0, -4, 0],
+  "upperPetSeatingDirection": [0, -1, 0],
+  "upperPetSeatingDistancesMm": [4, 3, 2, 1, 0],
+  "mainShaftTemporaryTranslationMm": [-53, 0, 0],
+  "stage07StillUsesXPlus4ToZero": true,
+  "geometryChanged": false,
+  "pathDefinitionChanged": false,
+  "physicalValuesOrBomChanged": false,
+  "independentReviewOfNewWordingPerformed": false,
+  "verification": "Source-note/document regression and unchanged ordered path inventory; not a new independent review or physical assembly."
+}

@@ -1,0 +1,826 @@
+{
+  "reviewedArtifactCommit": "f50978e55384d1b03417ed7115395e6e2c010e85",
+  "orcaVersion": "2.4.2",
+  "sourceScriptSha256": "b5c95589d41378a7504f8fb7a2a09c1e9920f6a9c0967a27c1b7933f0e29ae74",
+  "coordinateConvention": "Model-bed XY equals emitted G-code XY plus the declared single-nozzle offset; source STL placement comes from the saved 3MF. First-layer bounds are checked against Orca's own plate metadata.",
+  "coordinateSource": "https://github.com/OrcaSlicer/OrcaSlicer/blob/v2.4.2/src/libslic3r/GCode.cpp#L8123-L8134",
+  "scope": "Selected actual toolpaths only; center-open checks do not certify bore diameter, support removal, material strength or any physical walking.",
+  "modelAndSupportSeparated": true,
+  "machineStartupAndPurgeExcludedFromBedAndBoreChecks": true,
+  "physicalPrintingPerformed": false,
+  "parts": [
+    {
+      "partId": "P_INPUT_PINION",
+      "stl": "STL/Ver.3/integrated_r7/A/P_INPUT_PINION.stl",
+      "stlSha256": "2fb2bbbcc73bd44189a0cdc6ffaa82aca8cd2f05f4ce1fe8f07999a1d3b1fa53",
+      "processSha256": "c431fe03ca38bf2964589b4fa5d0cd214d8f96baa60f16a9615654cea5927c70",
+      "effectiveSettingsSha256": "5ca2eee75b25738eaa7c265e99ba33b80f5f28e6acbd86ecaeb846406f4cdf59",
+      "supportEnabled": true,
+      "exitCode": 0,
+      "orientationPolicy": "Preserve the exported build Z; arrange may rotate about Z only",
+      "scale": 1,
+      "layerInspectionStatus": "EXTRUSION_CHECKS_COMPUTED",
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          0.829890524,
+          -0.557926266,
+          0.0,
+          128.0
+        ],
+        [
+          0.557926266,
+          0.829890524,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 33.9125061909817,
+      "privateProjectSha256": "b3404197a0b70eadea97efa674fde035055e5e95916c2a2324105b40e6e40f39",
+      "gcodeSha256": "d64da067358699f93dc1501b5c9c34bca48109217ea9863ea3c2e91fc52f2309",
+      "estimates": {
+        "timeEstimate": "model printing time: 17m 45s; total estimated time: 24m 26s",
+        "reportedLayerCount": 254,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 564.51,
+        "filament used [cm3]": 1.36,
+        "filament used [g]": 1.72
+      },
+      "modelLayerCount": 219,
+      "firstLayerBoundingBoxAgreementWithOrcaMm": 0.021735999999989986,
+      "allLayerCountIncludingSeparateSupportLayers": 254,
+      "featureSegmentCounts": {
+        "Support": 2454,
+        "Outer wall": 17617,
+        "Inner wall": 7489,
+        "Support interface": 368,
+        "Overhang wall": 404,
+        "Top surface": 70
+      },
+      "bores": [
+        {
+          "sourceCenterXYMm": [
+            0,
+            0
+          ],
+          "nominalInscribedRadiusMm": 2.6,
+          "checkedModelLayerCount": 219,
+          "minimumModelToolpathClearRadiusMm": 2.593093696978393,
+          "minimumSupportToolpathClearRadiusMm": -0.25,
+          "supportIntrusionLayers": [
+            {
+              "zMm": 0.2,
+              "heightMm": 0.2,
+              "clearRadiusMm": -0.25
+            }
+          ],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        }
+      ],
+      "gearLayers": [
+        {
+          "zMm": 10.12,
+          "layerHeightMm": 0.16,
+          "expectedTeeth": 12,
+          "nominalSectionTeeth": 12,
+          "depositedEnvelopeTeeth": 12,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 4.749908210236188,
+          "maximumTipRadialSetbackMm": 0.039331587794056766,
+          "tipPathWidthRangeMm": [
+            0.419999,
+            0.419999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        },
+        {
+          "zMm": 11.08,
+          "layerHeightMm": 0.16,
+          "expectedTeeth": 12,
+          "nominalSectionTeeth": 12,
+          "depositedEnvelopeTeeth": 12,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 4.748384773071202,
+          "maximumTipRadialSetbackMm": 0.003367584313612504,
+          "tipPathWidthRangeMm": [
+            0.419999,
+            0.419999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        }
+      ],
+      "supportInterfaceLayerHeightsMm": [
+        8.94057,
+        9.21371,
+        9.48686,
+        9.76
+      ],
+      "bridgeLayerHeightsMm": [],
+      "depositionBoundsXYMm": [
+        [
+          117.15,
+          117.15
+        ],
+        [
+          138.85,
+          138.85
+        ]
+      ],
+      "minimumBedEdgeMarginIncludingSupportAndBrimMm": 117.15,
+      "layerImages": [
+        {
+          "path": "P_INPUT_PINION_layers.png",
+          "sha256": "fe328f68dbe1a05d067567e2d5269154360228e6fc69294b1c7ad41cb094bdd1"
+        },
+        {
+          "path": "P_INPUT_PINION_support_bore.png",
+          "sha256": "b742bc7145f76829996a06d054f703ac8311a14faa286970cb536ae42005cef3"
+        },
+        {
+          "path": "P_INPUT_PINION_tooth_detail.png",
+          "sha256": "c7b77a591a7d758766b18fc3d3124bc0d818b266e0a39a73c0d98f606d48309b"
+        }
+      ]
+    },
+    {
+      "partId": "P_COMPOUND_1",
+      "stl": "STL/Ver.3/integrated_r7/A/P_COMPOUND_1.stl",
+      "stlSha256": "9a714fc4fd4b4c9f7155263161ac8e81a4bd52da27d7eedfede92a068c5dc6c2",
+      "processSha256": "c431fe03ca38bf2964589b4fa5d0cd214d8f96baa60f16a9615654cea5927c70",
+      "effectiveSettingsSha256": "5ca2eee75b25738eaa7c265e99ba33b80f5f28e6acbd86ecaeb846406f4cdf59",
+      "supportEnabled": true,
+      "exitCode": 0,
+      "orientationPolicy": "Preserve the exported build Z; arrange may rotate about Z only",
+      "scale": 1,
+      "layerInspectionStatus": "EXTRUSION_CHECKS_COMPUTED",
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          0.930976156,
+          -0.365079987,
+          0.0,
+          128.0
+        ],
+        [
+          0.365079987,
+          0.930976156,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 21.41250532279667,
+      "privateProjectSha256": "2f2a834a015988decf546584b269a95e13af1d419de2ea68cb1da291d7ecc20a",
+      "gcodeSha256": "0fed5401f67e2ca36bb7140277af8c56ed4ee812803be4506f9ef28e5429805e",
+      "estimates": {
+        "timeEstimate": "model printing time: 2h 39m 40s; total estimated time: 2h 46m 22s",
+        "reportedLayerCount": 342,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 16117.2,
+        "filament used [cm3]": 38.77,
+        "filament used [g]": 49.23
+      },
+      "modelLayerCount": 275,
+      "firstLayerBoundingBoxAgreementWithOrcaMm": 0.021486999999993373,
+      "allLayerCountIncludingSeparateSupportLayers": 342,
+      "featureSegmentCounts": {
+        "Support": 34008,
+        "Outer wall": 44415,
+        "Inner wall": 110306,
+        "Support interface": 5748,
+        "Overhang wall": 6201,
+        "Bridge": 309,
+        "Internal solid infill": 4648,
+        "Top surface": 1658
+      },
+      "bores": [
+        {
+          "sourceCenterXYMm": [
+            0,
+            0
+          ],
+          "nominalInscribedRadiusMm": 2.56,
+          "checkedModelLayerCount": 275,
+          "minimumModelToolpathClearRadiusMm": 2.550004962588381,
+          "minimumSupportToolpathClearRadiusMm": -0.25,
+          "supportIntrusionLayers": [
+            {
+              "zMm": 0.2,
+              "heightMm": 0.2,
+              "clearRadiusMm": -0.25
+            }
+          ],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        }
+      ],
+      "gearLayers": [
+        {
+          "zMm": 20.2,
+          "layerHeightMm": 0.16,
+          "expectedTeeth": 144,
+          "nominalSectionTeeth": 144,
+          "depositedEnvelopeTeeth": 144,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 70.74999117386008,
+          "maximumTipRadialSetbackMm": 0.032434875405130015,
+          "tipPathWidthRangeMm": [
+            0.419999,
+            0.419999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        },
+        {
+          "zMm": 21.0,
+          "layerHeightMm": 0.16,
+          "expectedTeeth": 144,
+          "nominalSectionTeeth": 144,
+          "depositedEnvelopeTeeth": 144,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 70.74996549277343,
+          "maximumTipRadialSetbackMm": 0.000781313627200575,
+          "tipPathWidthRangeMm": [
+            0.419999,
+            0.419999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        },
+        {
+          "zMm": 30.92,
+          "layerHeightMm": 0.16,
+          "expectedTeeth": 12,
+          "nominalSectionTeeth": 12,
+          "depositedEnvelopeTeeth": 12,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 4.748534666386633,
+          "maximumTipRadialSetbackMm": 0.004176286628035264,
+          "tipPathWidthRangeMm": [
+            0.419999,
+            0.419999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        }
+      ],
+      "supportInterfaceLayerHeightsMm": [
+        4.12,
+        4.4,
+        4.68,
+        4.96,
+        19.0133,
+        19.2889,
+        19.5644,
+        19.84
+      ],
+      "bridgeLayerHeightsMm": [
+        20.2
+      ],
+      "depositionBoundsXYMm": [
+        [
+          50.78,
+          50.78
+        ],
+        [
+          205.22,
+          205.22
+        ]
+      ],
+      "minimumBedEdgeMarginIncludingSupportAndBrimMm": 50.78,
+      "layerImages": [
+        {
+          "path": "P_COMPOUND_1_layers.png",
+          "sha256": "f6f21485f5689260612591607d80f52eaeb27783247ebec676fd06895adc3da9"
+        },
+        {
+          "path": "P_COMPOUND_1_support_bore.png",
+          "sha256": "81cf0becf6775c510032ca73d3cd99de8c6cb6e01bbcf97d42531e719993aa0d"
+        },
+        {
+          "path": "P_COMPOUND_1_tooth_detail.png",
+          "sha256": "50019baa9fbf1654477aaced56c90b39679c78c8bed71949b5170378833d8e7a"
+        }
+      ]
+    },
+    {
+      "partId": "T_GUIDE_COUPON",
+      "stl": "STL/Ver.3/integrated_r7/common/T_GUIDE_COUPON.stl",
+      "stlSha256": "08563d5949bc71d171d9588d2ceb5aba5149c234c060659e04b4e0ef553f21c2",
+      "processSha256": "561d153a4e286d9d945e302f8696b30e14db2fca03598225270ebc40f2bd9aac",
+      "effectiveSettingsSha256": "6fa3368873b18c994d42953b174059b4e0ba6a9f6cda640c0479a84f54069053",
+      "supportEnabled": false,
+      "exitCode": 0,
+      "orientationPolicy": "Preserve the exported build Z; arrange may rotate about Z only",
+      "scale": 1,
+      "layerInspectionStatus": "EXTRUSION_CHECKS_COMPUTED",
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          110.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          124.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 0.0,
+      "privateProjectSha256": "f61c03b9f1d706db71ca1f7d349e3bc977aaa8e809acfffa1cb219fb33f6da20",
+      "gcodeSha256": "12ddb488762b2abbdb127769c979a7db43250a610c896c7ee8c01579b3cb7c98",
+      "estimates": {
+        "timeEstimate": "model printing time: 18m 45s; total estimated time: 25m 26s",
+        "reportedLayerCount": 81,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 708.64,
+        "filament used [cm3]": 1.7,
+        "filament used [g]": 2.16
+      },
+      "modelLayerCount": 81,
+      "firstLayerBoundingBoxAgreementWithOrcaMm": 0.0212099999999964,
+      "allLayerCountIncludingSeparateSupportLayers": 81,
+      "featureSegmentCounts": {
+        "Brim": 390,
+        "Inner wall": 18291,
+        "Outer wall": 15079,
+        "Bottom surface": 74,
+        "Internal solid infill": 1038,
+        "Top surface": 184
+      },
+      "bores": [
+        {
+          "sourceCenterXYMm": [
+            4,
+            4
+          ],
+          "nominalInscribedRadiusMm": 2.075,
+          "checkedModelLayerCount": 81,
+          "minimumModelToolpathClearRadiusMm": 2.0375326718129214,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            16,
+            4
+          ],
+          "nominalInscribedRadiusMm": 2.125,
+          "checkedModelLayerCount": 81,
+          "minimumModelToolpathClearRadiusMm": 2.0949270057634006,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            28,
+            4
+          ],
+          "nominalInscribedRadiusMm": 2.175,
+          "checkedModelLayerCount": 81,
+          "minimumModelToolpathClearRadiusMm": 2.1343837955631524,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        }
+      ],
+      "gearLayers": [],
+      "supportInterfaceLayerHeightsMm": [],
+      "bridgeLayerHeightsMm": [],
+      "depositionBoundsXYMm": [
+        [
+          105.208,
+          119.208
+        ],
+        [
+          150.792,
+          136.792
+        ]
+      ],
+      "minimumBedEdgeMarginIncludingSupportAndBrimMm": 105.208,
+      "layerImages": [
+        {
+          "path": "T_GUIDE_COUPON_layers.png",
+          "sha256": "8d4e4e7e329f70453434da446c43cff547381b69a4faf2f0f561f325be33acdf"
+        }
+      ]
+    },
+    {
+      "partId": "T_JOURNAL_COUPON",
+      "stl": "STL/Ver.3/integrated_r7/common/T_JOURNAL_COUPON.stl",
+      "stlSha256": "5784816035a2d916b48fffccaa33c6fead18b84267716adf91e020c4721fdd1f",
+      "processSha256": "561d153a4e286d9d945e302f8696b30e14db2fca03598225270ebc40f2bd9aac",
+      "effectiveSettingsSha256": "6fa3368873b18c994d42953b174059b4e0ba6a9f6cda640c0479a84f54069053",
+      "supportEnabled": false,
+      "exitCode": 0,
+      "orientationPolicy": "Preserve the exported build Z; arrange may rotate about Z only",
+      "scale": 1,
+      "layerInspectionStatus": "EXTRUSION_CHECKS_COMPUTED",
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          110.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          123.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 0.0,
+      "privateProjectSha256": "94895c725d1dc5702163e5031de32096af72c64c3d7edc2d6b8b5f143da488dd",
+      "gcodeSha256": "14152db62ff53417e904bcbc58fb4a68d846736537e844a5c75431a4a84372b3",
+      "estimates": {
+        "timeEstimate": "model printing time: 10m 34s; total estimated time: 17m 15s",
+        "reportedLayerCount": 43,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 418.5,
+        "filament used [cm3]": 1.01,
+        "filament used [g]": 1.28
+      },
+      "modelLayerCount": 43,
+      "firstLayerBoundingBoxAgreementWithOrcaMm": 0.0212099999999964,
+      "allLayerCountIncludingSeparateSupportLayers": 43,
+      "featureSegmentCounts": {
+        "Brim": 386,
+        "Inner wall": 4175,
+        "Outer wall": 7337,
+        "Bottom surface": 70,
+        "Internal solid infill": 845,
+        "Top surface": 222
+      },
+      "bores": [
+        {
+          "sourceCenterXYMm": [
+            6,
+            5
+          ],
+          "nominalInscribedRadiusMm": 2.56,
+          "checkedModelLayerCount": 43,
+          "minimumModelToolpathClearRadiusMm": 2.534483621036983,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            18,
+            5
+          ],
+          "nominalInscribedRadiusMm": 2.56,
+          "checkedModelLayerCount": 43,
+          "minimumModelToolpathClearRadiusMm": 2.535781587106225,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            30,
+            5
+          ],
+          "nominalInscribedRadiusMm": 2.56,
+          "checkedModelLayerCount": 43,
+          "minimumModelToolpathClearRadiusMm": 2.5581041998557033,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        }
+      ],
+      "gearLayers": [],
+      "supportInterfaceLayerHeightsMm": [],
+      "bridgeLayerHeightsMm": [],
+      "depositionBoundsXYMm": [
+        [
+          105.208,
+          118.208
+        ],
+        [
+          150.792,
+          137.792
+        ]
+      ],
+      "minimumBedEdgeMarginIncludingSupportAndBrimMm": 105.208,
+      "layerImages": [
+        {
+          "path": "T_JOURNAL_COUPON_layers.png",
+          "sha256": "6c92a8a50362168d180d6a53c2cc21f93dba8a940edf1988c9d3e6c8f4c05d5d"
+        }
+      ]
+    },
+    {
+      "partId": "T_DIAMETER_COUPON",
+      "stl": "STL/Ver.3/integrated_r7/common/T_DIAMETER_COUPON.stl",
+      "stlSha256": "ff8338804ad8ab52b14f692417c2ad12547357712f2287f616bd05df3a5dad5e",
+      "processSha256": "561d153a4e286d9d945e302f8696b30e14db2fca03598225270ebc40f2bd9aac",
+      "effectiveSettingsSha256": "6fa3368873b18c994d42953b174059b4e0ba6a9f6cda640c0479a84f54069053",
+      "supportEnabled": false,
+      "exitCode": 0,
+      "orientationPolicy": "Preserve the exported build Z; arrange may rotate about Z only",
+      "scale": 1,
+      "layerInspectionStatus": "EXTRUSION_CHECKS_COMPUTED",
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          76.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          108.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 0.0,
+      "privateProjectSha256": "9a5e49a7e31b4153b37e8e678aa3d310359b83e302522037263769fcba852dc6",
+      "gcodeSha256": "013db64fbd85772903e92388a2b042dfe25475854584febbe0c8445489912c1b",
+      "estimates": {
+        "timeEstimate": "model printing time: 1h 23m 29s; total estimated time: 1h 30m 10s",
+        "reportedLayerCount": 31,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 6231.18,
+        "filament used [cm3]": 14.99,
+        "filament used [g]": 19.03
+      },
+      "modelLayerCount": 31,
+      "firstLayerBoundingBoxAgreementWithOrcaMm": 0.0212099999999964,
+      "allLayerCountIncludingSeparateSupportLayers": 31,
+      "featureSegmentCounts": {
+        "Brim": 382,
+        "Inner wall": 61406,
+        "Outer wall": 19739,
+        "Bottom surface": 1151,
+        "Internal solid infill": 42432,
+        "Top surface": 576
+      },
+      "bores": [
+        {
+          "sourceCenterXYMm": [
+            8,
+            8
+          ],
+          "nominalInscribedRadiusMm": 2.0,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 1.972466183311659,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            20,
+            8
+          ],
+          "nominalInscribedRadiusMm": 2.05,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 2.020476879426752,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            32,
+            8
+          ],
+          "nominalInscribedRadiusMm": 2.1,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 2.071990184945273,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            44,
+            8
+          ],
+          "nominalInscribedRadiusMm": 2.15,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 2.1183379507992806,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            60,
+            8
+          ],
+          "nominalInscribedRadiusMm": 4.0,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 3.965426449223386,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            72,
+            8
+          ],
+          "nominalInscribedRadiusMm": 4.05,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 4.012294195979785,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            84,
+            8
+          ],
+          "nominalInscribedRadiusMm": 4.1,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 4.071391654559491,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            10,
+            27
+          ],
+          "nominalInscribedRadiusMm": 7.0,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 6.978503766250227,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            30,
+            27
+          ],
+          "nominalInscribedRadiusMm": 7.1,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 7.0746335818439094,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            50,
+            27
+          ],
+          "nominalInscribedRadiusMm": 7.2,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 7.175548514698032,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            70,
+            27
+          ],
+          "nominalInscribedRadiusMm": 8.0,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 7.974916315414845,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        },
+        {
+          "sourceCenterXYMm": [
+            90,
+            27
+          ],
+          "nominalInscribedRadiusMm": 8.1,
+          "checkedModelLayerCount": 31,
+          "minimumModelToolpathClearRadiusMm": 8.074615046845663,
+          "minimumSupportToolpathClearRadiusMm": null,
+          "supportIntrusionLayers": [],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        }
+      ],
+      "gearLayers": [],
+      "supportInterfaceLayerHeightsMm": [],
+      "bridgeLayerHeightsMm": [],
+      "depositionBoundsXYMm": [
+        [
+          71.208,
+          103.208
+        ],
+        [
+          184.792,
+          152.792
+        ]
+      ],
+      "minimumBedEdgeMarginIncludingSupportAndBrimMm": 71.208,
+      "layerImages": [
+        {
+          "path": "T_DIAMETER_COUPON_layers.png",
+          "sha256": "13c9e34fcb7d91f26b0ae499ec69ed16234f4bc57438384a009bf569edc7d449"
+        }
+      ]
+    }
+  ]
+}
