@@ -1,0 +1,117 @@
+{
+  "source": {
+    "schemaVersion": 2,
+    "localOnly": true,
+    "candidateCommit": "09d49e396ec0a4b527ff6545c955df91995fd197",
+    "revision": {
+      "revisionId": "v3-integrated-walkers-r7-16-floor2",
+      "candidateRevision": "v3-integrated-walkers-r7-16-floor2",
+      "label": "r7統合候補・実機未検証・ローカル表示",
+      "canonicalCommit": "09d49e396ec0a4b527ff6545c955df91995fd197",
+      "inputCommit": "369434e046acc5cb8f9da0f9f338308d29938d1e",
+      "sourceHash": "5074478881da48673648df953a591c0924f3b1d8ed390fad3830d6a0057ed5e4",
+      "localOnly": true
+    },
+    "sourceContractSha256": "f7d82bf3bcb7bd5c0258fb3002bd5b4590a80879dee27788a86b1721f6662671",
+    "geometryUnits": "metres",
+    "cadAxes": "X shaft / Y stride / Z height",
+    "assemblyOffsetUnits": "mm, added to canonical CAD translations, not a new mechanical placement",
+    "designs": {
+      "A": {
+        "model": "assets/r7-A.glb.gz",
+        "modelSha256": "55dacbef048134f5040ff4ffc231b45fe15dfaa040a1cecf55272b304dd18ffb",
+        "transportSha256": "7d5b051d16f6aa377e0f8f7ae5103fb3cd071f14f36d25a1b1f63e8ee4e77187",
+        "guide": "assets/r7-assembly-A.json",
+        "guideSha256": "c432481a536d4d513d01adc26695457eef8b558bb4651ab8704803d7efbd29c4",
+        "instanceCount": 750,
+        "signedInputRevolutionsPerCrank": 144.0,
+        "contactFrames": {
+          "url": "r7-files/docs/ver3/integrated_r7/A/contact_frames.json",
+          "sha256": "e0fa9525eed928bfec8c30cccdebb406e449c8d2804e0a5471d856647f32f288",
+          "unavailable": {
+            "independentRockerAngleRad": "Not a solved independent state in the canonical single-center/equalizing-rocker model. Null is intentional; never substitute zero.",
+            "rigidBodyWorld4x4": "The canonical body pose is a small-angle approximation,not a measured/exact rigid-body trajectory.",
+            "actualInputSpeed": "Prescribed120RPM is a display clock,not an achieved or predicted speed."
+          },
+          "prescribedTiming": {
+            "absoluteInputRpm": 120,
+            "signedInputTurnsPerCrank": 144.0,
+            "cycleSeconds": 72.0,
+            "achievedOrPredicted": false
+          },
+          "frameCount": 73
+        }
+      },
+      "B": {
+        "model": "assets/r7-B.glb.gz",
+        "modelSha256": "8c8235cf8a85714280d696c1c2368c4b0b5d3cbd2fd5e88115e096d61d2aecf4",
+        "transportSha256": "5a2443aad57f0a24bcb01d3c28721e650450451dcf9ad1117811912e22887896",
+        "guide": "assets/r7-assembly-B.json",
+        "guideSha256": "a742800c883bf8422bf40a8e2e3822ffecb6b41316444da299cf8147924b1bb8",
+        "instanceCount": 785,
+        "signedInputRevolutionsPerCrank": -512.0,
+        "contactFrames": {
+          "url": "r7-files/docs/ver3/integrated_r7/B/contact_frames.json",
+          "sha256": "9e38f9d2fb12f87abdf4440a59590e6ae11dc8b462e96b4e36178c9101a1689b",
+          "unavailable": {
+            "independentRockerAngleRad": "Not a solved independent state in the canonical single-center/equalizing-rocker model. Null is intentional; never substitute zero.",
+            "rigidBodyWorld4x4": "The canonical body pose is a small-angle approximation,not a measured/exact rigid-body trajectory.",
+            "actualInputSpeed": "Prescribed120RPM is a display clock,not an achieved or predicted speed."
+          },
+          "prescribedTiming": {
+            "absoluteInputRpm": 120,
+            "signedInputTurnsPerCrank": -512.0,
+            "cycleSeconds": 256.0,
+            "achievedOrPredicted": false
+          },
+          "frameCount": 73
+        }
+      },
+      "C": {
+        "model": "assets/r7-C.glb.gz",
+        "modelSha256": "cc825e054fb3b295ff0314e0a28cd91b3af4aa6ae2fb4846283211a4d1ca07c0",
+        "transportSha256": "f8bddec5afa3b0fec025c435b43862fb8466970cc4107f94482fa112424767ae",
+        "guide": "assets/r7-assembly-C.json",
+        "guideSha256": "a2db7e2e168d4b6a9ac945030db0e3e0f2394fa42ba3dd4494b1042399bd0466",
+        "instanceCount": 750,
+        "signedInputRevolutionsPerCrank": 156.0,
+        "contactFrames": {
+          "url": "r7-files/docs/ver3/integrated_r7/C/contact_frames.json",
+          "sha256": "342efc89501285ffac0d61d9ee9511b3969b041b4526b736be9504df38c1c116",
+          "unavailable": {
+            "independentRockerAngleRad": "Not a solved independent state in the canonical single-center/equalizing-rocker model. Null is intentional; never substitute zero.",
+            "rigidBodyWorld4x4": "The canonical body pose is a small-angle approximation,not a measured/exact rigid-body trajectory.",
+            "actualInputSpeed": "Prescribed120RPM is a display clock,not an achieved or predicted speed."
+          },
+          "prescribedTiming": {
+            "absoluteInputRpm": 120,
+            "signedInputTurnsPerCrank": 156.0,
+            "cycleSeconds": 78.0,
+            "achievedOrPredicted": false
+          },
+          "frameCount": 73
+        }
+      }
+    },
+    "walkingMotion": {
+      "status": "partial_canonical_states_received",
+      "reason": "73 saved body/foot-center states are available. Independent rocker angles and exact rigid body world4x4 remain unsolved; no zero fill.",
+      "owner": "engineering final package",
+      "required": [
+        "same-revision source hashes",
+        "crank/input angle and signed ratio",
+        "body world pose / forward trajectory",
+        "per-foot compression/rocker/contact or canonical instance transforms",
+        "time/RPM assumptions and approximation scope"
+      ]
+    },
+    "renderingStatus": "Static and assembly rendering authorized; full walking is not inferred from missing degrees of freedom."
+  },
+  "planHashes": {
+    "A": "caa2e78367355786eaae1c3ebecdc95a0f2ecbf365019a565bba460644166bbf",
+    "B": "6047d71836353245da721b9a439f704b3493c29c49a314377d6789d2bcacfa7d",
+    "C": "d0cd75326103a44672cf4546f930cab479f3c100b451311e7fe3e12a0fcaf220"
+  },
+  "walking": "not generated; canonical frames pending",
+  "publicationAuthorized": false
+}

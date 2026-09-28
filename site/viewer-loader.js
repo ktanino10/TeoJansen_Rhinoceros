@@ -5,6 +5,7 @@ const errorBox = document.getElementById("viewer-error");
 const workspace = document.getElementById("viewer-workspace");
 const fallback = document.getElementById("viewer-fallback");
 const requested = new URL(location.href).searchParams;
+const catalogUrl = document.body.dataset.viewerCatalog || "assets/viewer-index.json";
 if (["A", "B", "C"].includes(requested.get("design"))) design.value = requested.get("design");
 let controller;
 let loading = false;
@@ -22,7 +23,7 @@ async function openDesign() {
   try {
     if (!controller) {
       const { createViewer } = await import("./assets/viewer-engine.js");
-      controller = createViewer();
+      controller = createViewer({ catalogUrl });
     }
     workspace.hidden = false;
     await controller.load(design.value, requested.get("focus"));

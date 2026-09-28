@@ -14,7 +14,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "site/dist/TeoJansen_Rhinoceros"
 PUBLIC_URL = "https://ktanino10.github.io/TeoJansen_Rhinoceros/"
-PAGES = {"index.html", "production.html", "comparison.html", "viewer.html", "calculations.html"}
+PAGES = {"index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html"}
 
 
 def fetch_bytes(url):
@@ -34,7 +34,7 @@ def validate_manifest(manifest, expected_commit):
     if not manifest.get("assets"):
         raise ValueError("Published asset manifest is empty")
     for name in manifest["assets"]:
-        if not re.fullmatch(r"assets/[A-Za-z0-9][A-Za-z0-9_.-]*\.(webp|mp4|gif|glb|json|js|txt|svg|csv)", name):
+        if not re.fullmatch(r"assets/[A-Za-z0-9][A-Za-z0-9_.-]*\.(webp|mp4|gif|glb|gz|json|js|txt|svg|csv|vtt)", name):
             raise ValueError(f"Unsafe public asset path: {name}")
 
 
@@ -50,7 +50,7 @@ def verify(expected_commit):
         text = fetch_bytes(PUBLIC_URL + page).decode("utf-8")
         if '<html lang="ja">' not in text or "{{" in text or "/Users/" in text:
             raise ValueError(f"Invalid deployed HTML: {page}")
-    for filename in ("styles.css", "viewer.css", "calculations.css", "app.js", "viewer-loader.js", "calculations.js", "favicon.svg"):
+    for filename in ("styles.css", "viewer.css", "calculations.css", "r7.css", "app.js", "viewer-loader.js", "calculations.js", "favicon.svg"):
         if fetch_bytes(PUBLIC_URL + filename) != (ROOT / "site" / filename).read_bytes():
             raise ValueError(f"Deployed static source differs: {filename}")
 

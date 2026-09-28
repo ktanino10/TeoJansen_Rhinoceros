@@ -38,4 +38,5 @@ __pycache__/
 site/dist/
 site/node_modules/
 site/test-results/
+site/test-results-r7/
 site/playwright-report/

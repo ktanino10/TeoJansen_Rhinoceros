@@ -71,7 +71,7 @@ jobs:
         run: |
           if [ "$VERIFY_LIVE" = "true" ]; then
             python site/verify_live.py --expected-commit "$EXPECTED_COMMIT"
-            npm --prefix site test -- --grep 'versions, source-bound|production journey|3D is opt-in|mobile touch|Matrix is complete|all three concrete guides|calculation'
+            npm --prefix site test -- --grep 'versions, source-bound|production journey|3D is opt-in|mobile touch|Matrix is complete|all three concrete guides|calculation|r7 public'
           else
             npm --prefix site test
           fi

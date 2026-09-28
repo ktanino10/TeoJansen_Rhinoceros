@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
+  "candidateRevision": "v3-integrated-walkers-r7-16-floor2",
+  "artifactCommit": "09d49e396ec0a4b527ff6545c955df91995fd197",
+  "inputCommit": "369434e046acc5cb8f9da0f9f338308d29938d1e",
+  "sourceHash": "5074478881da48673648df953a591c0924f3b1d8ed390fad3830d6a0057ed5e4",
+  "contract": "docs/ver3/integrated_r7/integration_contract.json",
+  "contractSha256": "f7d82bf3bcb7bd5c0258fb3002bd5b4590a80879dee27788a86b1721f6662671",
+  "manifest": "docs/ver3/integrated_r7/manifest.json",
+  "manifestSha256": "3158650243bcb40cbf169296e28cee74e2f2b193209540d2ef6677be1332c6f1",
+  "expectedInstances": {"A": 750, "B": 785, "C": 750},
+  "reviewedGeometryCommit": "f50978e55384d1b03417ed7115395e6e2c010e85",
+  "upstreamPublicationAuthorized": true,
+  "publicSourceCommit": "2a530205a53ace4418845f34c910567f5efbfc31",
+  "publicationAuthorized": true,
+  "localOnly": false,
+  "displayFloorGateSha256": "c8b3e0d4e0e0e1fb797ec5a26bc893efec6ea7c58ea70955ecddc6b941bf95a2",
+  "displayFloorGateScope": "All 73 saved phases and all 2285 instances: source-map reserved bounds and orthogonal-display noncontact bounds passed. Only two native rolling-pad volumes excluded; rocker core swept over +/-5deg. No new physical solver or floor/mesh displacement."
+}

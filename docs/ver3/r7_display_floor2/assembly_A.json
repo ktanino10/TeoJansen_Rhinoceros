@@ -1,0 +1,695 @@
+{
+  "sourceCommit": "09d49e396ec0a4b527ff6545c955df91995fd197",
+  "design": "A",
+  "reverseReference": false,
+  "fps": 24,
+  "frameCount": 1264,
+  "stream": {
+    "width": 1280,
+    "height": 720,
+    "r_frame_rate": "24/1",
+    "duration": "52.666667",
+    "nb_read_frames": "1264"
+  },
+  "stateSequence": [
+    {
+      "id": "empty",
+      "frame": 1,
+      "lastFrame": 24
+    },
+    {
+      "id": "01_left_support:0",
+      "frame": 25,
+      "lastFrame": 48
+    },
+    {
+      "id": "01_left_support:1",
+      "frame": 49,
+      "lastFrame": 60
+    },
+    {
+      "id": "01_left_support:2",
+      "frame": 61,
+      "lastFrame": 84
+    },
+    {
+      "id": "02_open_drive:0",
+      "frame": 85,
+      "lastFrame": 108
+    },
+    {
+      "id": "02_open_drive:1",
+      "frame": 109,
+      "lastFrame": 120
+    },
+    {
+      "id": "02_open_drive:2",
+      "frame": 121,
+      "lastFrame": 144
+    },
+    {
+      "id": "03_close_frame:0",
+      "frame": 145,
+      "lastFrame": 168
+    },
+    {
+      "id": "03_close_frame:1",
+      "frame": 169,
+      "lastFrame": 172
+    },
+    {
+      "id": "03_close_frame:2",
+      "frame": 173,
+      "lastFrame": 176
+    },
+    {
+      "id": "03_close_frame:3",
+      "frame": 177,
+      "lastFrame": 180
+    },
+    {
+      "id": "03_close_frame:4",
+      "frame": 181,
+      "lastFrame": 184
+    },
+    {
+      "id": "03_close_frame:5",
+      "frame": 185,
+      "lastFrame": 188
+    },
+    {
+      "id": "03_close_frame:6",
+      "frame": 189,
+      "lastFrame": 192
+    },
+    {
+      "id": "03_close_frame:7",
+      "frame": 193,
+      "lastFrame": 196
+    },
+    {
+      "id": "03_close_frame:8",
+      "frame": 197,
+      "lastFrame": 200
+    },
+    {
+      "id": "03_close_frame:9",
+      "frame": 201,
+      "lastFrame": 204
+    },
+    {
+      "id": "03_close_frame:10",
+      "frame": 205,
+      "lastFrame": 216
+    },
+    {
+      "id": "03_close_frame:11",
+      "frame": 217,
+      "lastFrame": 240
+    },
+    {
+      "id": "04_upper_sheets:0",
+      "frame": 241,
+      "lastFrame": 264
+    },
+    {
+      "id": "04_upper_sheets:1",
+      "frame": 265,
+      "lastFrame": 276
+    },
+    {
+      "id": "04_upper_sheets:2",
+      "frame": 277,
+      "lastFrame": 288
+    },
+    {
+      "id": "04_upper_sheets:3",
+      "frame": 289,
+      "lastFrame": 292
+    },
+    {
+      "id": "04_upper_sheets:4",
+      "frame": 293,
+      "lastFrame": 296
+    },
+    {
+      "id": "04_upper_sheets:5",
+      "frame": 297,
+      "lastFrame": 300
+    },
+    {
+      "id": "04_upper_sheets:6",
+      "frame": 301,
+      "lastFrame": 304
+    },
+    {
+      "id": "04_upper_sheets:7",
+      "frame": 305,
+      "lastFrame": 308
+    },
+    {
+      "id": "04_upper_sheets:8",
+      "frame": 309,
+      "lastFrame": 312
+    },
+    {
+      "id": "04_upper_sheets:9",
+      "frame": 313,
+      "lastFrame": 316
+    },
+    {
+      "id": "04_upper_sheets:10",
+      "frame": 317,
+      "lastFrame": 320
+    },
+    {
+      "id": "04_upper_sheets:11",
+      "frame": 321,
+      "lastFrame": 324
+    },
+    {
+      "id": "04_upper_sheets:12",
+      "frame": 325,
+      "lastFrame": 328
+    },
+    {
+      "id": "04_upper_sheets:13",
+      "frame": 329,
+      "lastFrame": 332
+    },
+    {
+      "id": "04_upper_sheets:14",
+      "frame": 333,
+      "lastFrame": 344
+    },
+    {
+      "id": "04_upper_sheets:15",
+      "frame": 345,
+      "lastFrame": 348
+    },
+    {
+      "id": "04_upper_sheets:16",
+      "frame": 349,
+      "lastFrame": 352
+    },
+    {
+      "id": "04_upper_sheets:17",
+      "frame": 353,
+      "lastFrame": 356
+    },
+    {
+      "id": "04_upper_sheets:18",
+      "frame": 357,
+      "lastFrame": 360
+    },
+    {
+      "id": "04_upper_sheets:19",
+      "frame": 361,
+      "lastFrame": 364
+    },
+    {
+      "id": "04_upper_sheets:20",
+      "frame": 365,
+      "lastFrame": 376
+    },
+    {
+      "id": "04_upper_sheets:21",
+      "frame": 377,
+      "lastFrame": 388
+    },
+    {
+      "id": "04_upper_sheets:22",
+      "frame": 389,
+      "lastFrame": 400
+    },
+    {
+      "id": "04_upper_sheets:23",
+      "frame": 401,
+      "lastFrame": 424
+    },
+    {
+      "id": "05_side_sheets:0",
+      "frame": 425,
+      "lastFrame": 448
+    },
+    {
+      "id": "05_side_sheets:1",
+      "frame": 449,
+      "lastFrame": 460
+    },
+    {
+      "id": "05_side_sheets:2",
+      "frame": 461,
+      "lastFrame": 464
+    },
+    {
+      "id": "05_side_sheets:3",
+      "frame": 465,
+      "lastFrame": 468
+    },
+    {
+      "id": "05_side_sheets:4",
+      "frame": 469,
+      "lastFrame": 472
+    },
+    {
+      "id": "05_side_sheets:5",
+      "frame": 473,
+      "lastFrame": 476
+    },
+    {
+      "id": "05_side_sheets:6",
+      "frame": 477,
+      "lastFrame": 480
+    },
+    {
+      "id": "05_side_sheets:7",
+      "frame": 481,
+      "lastFrame": 484
+    },
+    {
+      "id": "05_side_sheets:8",
+      "frame": 485,
+      "lastFrame": 488
+    },
+    {
+      "id": "05_side_sheets:9",
+      "frame": 489,
+      "lastFrame": 492
+    },
+    {
+      "id": "05_side_sheets:10",
+      "frame": 493,
+      "lastFrame": 496
+    },
+    {
+      "id": "05_side_sheets:11",
+      "frame": 497,
+      "lastFrame": 500
+    },
+    {
+      "id": "05_side_sheets:12",
+      "frame": 501,
+      "lastFrame": 504
+    },
+    {
+      "id": "05_side_sheets:13",
+      "frame": 505,
+      "lastFrame": 508
+    },
+    {
+      "id": "05_side_sheets:14",
+      "frame": 509,
+      "lastFrame": 512
+    },
+    {
+      "id": "05_side_sheets:15",
+      "frame": 513,
+      "lastFrame": 516
+    },
+    {
+      "id": "05_side_sheets:16",
+      "frame": 517,
+      "lastFrame": 520
+    },
+    {
+      "id": "05_side_sheets:17",
+      "frame": 521,
+      "lastFrame": 524
+    },
+    {
+      "id": "05_side_sheets:18",
+      "frame": 525,
+      "lastFrame": 536
+    },
+    {
+      "id": "05_side_sheets:19",
+      "frame": 537,
+      "lastFrame": 548
+    },
+    {
+      "id": "05_side_sheets:20",
+      "frame": 549,
+      "lastFrame": 572
+    },
+    {
+      "id": "06_prepare_rotor:0",
+      "frame": 573,
+      "lastFrame": 596
+    },
+    {
+      "id": "06_prepare_rotor:1",
+      "frame": 597,
+      "lastFrame": 608
+    },
+    {
+      "id": "06_prepare_rotor:2",
+      "frame": 609,
+      "lastFrame": 612
+    },
+    {
+      "id": "06_prepare_rotor:3",
+      "frame": 613,
+      "lastFrame": 616
+    },
+    {
+      "id": "06_prepare_rotor:4",
+      "frame": 617,
+      "lastFrame": 620
+    },
+    {
+      "id": "06_prepare_rotor:5",
+      "frame": 621,
+      "lastFrame": 624
+    },
+    {
+      "id": "06_prepare_rotor:6",
+      "frame": 625,
+      "lastFrame": 628
+    },
+    {
+      "id": "06_prepare_rotor:7",
+      "frame": 629,
+      "lastFrame": 632
+    },
+    {
+      "id": "06_prepare_rotor:8",
+      "frame": 633,
+      "lastFrame": 636
+    },
+    {
+      "id": "06_prepare_rotor:9",
+      "frame": 637,
+      "lastFrame": 640
+    },
+    {
+      "id": "06_prepare_rotor:10",
+      "frame": 641,
+      "lastFrame": 664
+    },
+    {
+      "id": "07_lower_rotor:0",
+      "frame": 665,
+      "lastFrame": 688
+    },
+    {
+      "id": "07_lower_rotor:1",
+      "frame": 689,
+      "lastFrame": 700
+    },
+    {
+      "id": "07_lower_rotor:2",
+      "frame": 701,
+      "lastFrame": 704
+    },
+    {
+      "id": "07_lower_rotor:3",
+      "frame": 705,
+      "lastFrame": 708
+    },
+    {
+      "id": "07_lower_rotor:4",
+      "frame": 709,
+      "lastFrame": 712
+    },
+    {
+      "id": "07_lower_rotor:5",
+      "frame": 713,
+      "lastFrame": 716
+    },
+    {
+      "id": "07_lower_rotor:6",
+      "frame": 717,
+      "lastFrame": 720
+    },
+    {
+      "id": "07_lower_rotor:7",
+      "frame": 721,
+      "lastFrame": 724
+    },
+    {
+      "id": "07_lower_rotor:8",
+      "frame": 725,
+      "lastFrame": 728
+    },
+    {
+      "id": "07_lower_rotor:9",
+      "frame": 729,
+      "lastFrame": 732
+    },
+    {
+      "id": "07_lower_rotor:10",
+      "frame": 733,
+      "lastFrame": 736
+    },
+    {
+      "id": "07_lower_rotor:11",
+      "frame": 737,
+      "lastFrame": 740
+    },
+    {
+      "id": "07_lower_rotor:12",
+      "frame": 741,
+      "lastFrame": 744
+    },
+    {
+      "id": "07_lower_rotor:13",
+      "frame": 745,
+      "lastFrame": 748
+    },
+    {
+      "id": "07_lower_rotor:14",
+      "frame": 749,
+      "lastFrame": 752
+    },
+    {
+      "id": "07_lower_rotor:15",
+      "frame": 753,
+      "lastFrame": 756
+    },
+    {
+      "id": "07_lower_rotor:16",
+      "frame": 757,
+      "lastFrame": 760
+    },
+    {
+      "id": "07_lower_rotor:17",
+      "frame": 761,
+      "lastFrame": 772
+    },
+    {
+      "id": "07_lower_rotor:18",
+      "frame": 773,
+      "lastFrame": 796
+    },
+    {
+      "id": "08_input_shaft:0",
+      "frame": 797,
+      "lastFrame": 820
+    },
+    {
+      "id": "08_input_shaft:1",
+      "frame": 821,
+      "lastFrame": 824
+    },
+    {
+      "id": "08_input_shaft:2",
+      "frame": 825,
+      "lastFrame": 828
+    },
+    {
+      "id": "08_input_shaft:3",
+      "frame": 829,
+      "lastFrame": 832
+    },
+    {
+      "id": "08_input_shaft:4",
+      "frame": 833,
+      "lastFrame": 836
+    },
+    {
+      "id": "08_input_shaft:5",
+      "frame": 837,
+      "lastFrame": 840
+    },
+    {
+      "id": "08_input_shaft:6",
+      "frame": 841,
+      "lastFrame": 844
+    },
+    {
+      "id": "08_input_shaft:7",
+      "frame": 845,
+      "lastFrame": 848
+    },
+    {
+      "id": "08_input_shaft:8",
+      "frame": 849,
+      "lastFrame": 852
+    },
+    {
+      "id": "08_input_shaft:9",
+      "frame": 853,
+      "lastFrame": 856
+    },
+    {
+      "id": "08_input_shaft:10",
+      "frame": 857,
+      "lastFrame": 860
+    },
+    {
+      "id": "08_input_shaft:11",
+      "frame": 861,
+      "lastFrame": 884
+    },
+    {
+      "id": "09_rear_cage:0",
+      "frame": 885,
+      "lastFrame": 908
+    },
+    {
+      "id": "09_rear_cage:1",
+      "frame": 909,
+      "lastFrame": 912
+    },
+    {
+      "id": "09_rear_cage:2",
+      "frame": 913,
+      "lastFrame": 916
+    },
+    {
+      "id": "09_rear_cage:3",
+      "frame": 917,
+      "lastFrame": 920
+    },
+    {
+      "id": "09_rear_cage:4",
+      "frame": 921,
+      "lastFrame": 924
+    },
+    {
+      "id": "09_rear_cage:5",
+      "frame": 925,
+      "lastFrame": 928
+    },
+    {
+      "id": "09_rear_cage:6",
+      "frame": 929,
+      "lastFrame": 932
+    },
+    {
+      "id": "09_rear_cage:7",
+      "frame": 933,
+      "lastFrame": 936
+    },
+    {
+      "id": "09_rear_cage:8",
+      "frame": 937,
+      "lastFrame": 940
+    },
+    {
+      "id": "09_rear_cage:9",
+      "frame": 941,
+      "lastFrame": 944
+    },
+    {
+      "id": "09_rear_cage:10",
+      "frame": 945,
+      "lastFrame": 948
+    },
+    {
+      "id": "09_rear_cage:11",
+      "frame": 949,
+      "lastFrame": 952
+    },
+    {
+      "id": "09_rear_cage:12",
+      "frame": 953,
+      "lastFrame": 964
+    },
+    {
+      "id": "09_rear_cage:13",
+      "frame": 965,
+      "lastFrame": 988
+    },
+    {
+      "id": "10_right_cranks:0",
+      "frame": 989,
+      "lastFrame": 1012
+    },
+    {
+      "id": "10_right_cranks:1",
+      "frame": 1013,
+      "lastFrame": 1024
+    },
+    {
+      "id": "10_right_cranks:2",
+      "frame": 1025,
+      "lastFrame": 1048
+    },
+    {
+      "id": "11_prepare_legs:0",
+      "frame": 1049,
+      "lastFrame": 1072
+    },
+    {
+      "id": "11_prepare_legs:1",
+      "frame": 1073,
+      "lastFrame": 1084
+    },
+    {
+      "id": "11_prepare_legs:2",
+      "frame": 1085,
+      "lastFrame": 1096
+    },
+    {
+      "id": "11_prepare_legs:3",
+      "frame": 1097,
+      "lastFrame": 1108
+    },
+    {
+      "id": "11_prepare_legs:4",
+      "frame": 1109,
+      "lastFrame": 1120
+    },
+    {
+      "id": "11_prepare_legs:5",
+      "frame": 1121,
+      "lastFrame": 1132
+    },
+    {
+      "id": "11_prepare_legs:6",
+      "frame": 1133,
+      "lastFrame": 1144
+    },
+    {
+      "id": "11_prepare_legs:7",
+      "frame": 1145,
+      "lastFrame": 1180
+    },
+    {
+      "id": "11_prepare_legs:8",
+      "frame": 1181,
+      "lastFrame": 1204
+    },
+    {
+      "id": "12_legs:0",
+      "frame": 1205,
+      "lastFrame": 1228
+    },
+    {
+      "id": "12_legs:1",
+      "frame": 1229,
+      "lastFrame": 1240
+    },
+    {
+      "id": "12_legs:2",
+      "frame": 1241,
+      "lastFrame": 1264
+    }
+  ],
+  "meaning": "Illustrative review timing only. No physical assembly speed, input RPM or walking is simulated.",
+  "interpolation": "Constant-held canonical boundaries and finite path samples. No interpolated path is newly validated.",
+  "originalGeometry": true,
+  "physicalAssemblyPerformed": false
+}
