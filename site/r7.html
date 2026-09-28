@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{r7_robots}}
+  <meta name="color-scheme" content="light">
+  <title>{{r7_page_title}}</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="viewer.css">
+  <link rel="stylesheet" href="r7.css">
+  <script src="app.js" defer></script>
+  <script src="viewer-loader.js" type="module"></script>
+</head>
+<body data-viewer-catalog="assets/r7-viewer-index.json" data-local-only="{{r7_local_only}}">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span>RHINOCEROS<small>{{r7_brand_note}}</small></span></a>
+    <nav aria-label="メインナビゲーション"><a href="#r7-comparison">比較</a><a href="#viewer">360°・工程</a><a href="#r7-guides">12工程と資料</a><a href="viewer.html">第一カット履歴</a></nav>
+  </div></header>
+  <main id="main" tabindex="-1">
+    <section class="section viewer-intro" id="top">
+      <p class="eyebrow">{{r7_scope_label}} / R7 INTEGRATED ASSEMBLY</p>
+      <h1>新しい三案を、<br><span>同じ版の形と工程で見る。</span></h1>
+      <aside class="warning" id="r7-status"><h2>{{r7_status_title}}</h2>
+        <p><strong>manufacturingRelease=false／qualifiedWalkingPrototypeCount=0。</strong>実自己始動・30 cm歩行はUNKNOWN。
+        {{r7_slice_notice}} 印刷済み・完成機合格を示すものではありません。</p>
+        <p>候補：<strong>{{r7_revision}}</strong>／{{r7_candidate_revision}}。機械資料の確定commit <code>{{r7_commit}}</code>。
+        {{r7_resource_notice}}</p>
+      </aside>
+      <nav class="journey-nav" aria-label="表示版を選ぶ">
+        <a href="r7.html" aria-current="page">r7統合候補（{{r7_scope_short}}）</a>
+        <a href="viewer.html">第一カット・360°／組立履歴</a><a href="comparison.html">旧V2→第一カットのMatrix</a>
+        <a href="calculations.html">r3研究・r4入力軸カード</a><a href="production.html">Ver.1・Ver.2製作記録</a>
+      </nav>
+      <p>既存の第一カットA300／B90／C180 mm、r3計算・r4カードとは別の全体モデルです。旧動画・旧CGをr7の動作として表示せず、新しい空力図・歩行アニメーションも生成していません。</p>
+      {{r7_comparison_image}}
+    </section>
+
+    <section class="section" id="r7-comparison" aria-labelledby="r7-comparison-title">
+      <p class="eyebrow">PROPOSED IMPROVEMENTS &amp; TRADEOFFS</p><h2 id="r7-comparison-title">変えた点と、代償を同じ条件で。</h2>
+      {{r7_comparison}}
+      <section id="r7-change-matrix" aria-labelledby="r7-change-matrix-title">
+        <h3 id="r7-change-matrix-title">V2の経験から、r7で具体化した対策</h3>
+        <p class="small-note">V2は作者の実物観察、r7は計算と有限CAD確認です。未測定のV2値を計算値と同列に並べません。
+        <a href="comparison.html">第一カットの旧Matrix</a>は歴史として分離しています。</p>
+        <div class="matrix-scroll" role="region" aria-label="V2からr7への変更Matrix" tabindex="0">
+          <table class="improvement-matrix"><thead><tr><th scope="col">観点</th><th scope="col">V2の記録／旧課題</th><th scope="col">r7で具体化したもの</th><th scope="col">未確認・代償</th></tr></thead><tbody>
+            <tr><th scope="row">接合の空転</th><td>風車・歯車と軸が一体で回らなくなる相対滑り。</td><td>入力金属6Dハブと下流5 mm-AF正係合。<a href="r7.html?design=A&amp;focus=connection#viewer">接合を3Dで選ぶ</a></td><td>実締付け・はめあい・耐久トルクは未測定。</td></tr>
+            <tr><th scope="row">軸方向保持</th><td>部品の抜けと支持の不安定さ。</td><td>固定側／浮動側、肩・キャップ・カラー・平滑スリーブを区別。<a href="r7.html?design=A&amp;focus=retention#viewer">保持部品を見る</a></td><td>過締め・クリープ・実公差による抵抗は未確認。</td></tr>
+            <tr><th scope="row">摩擦と軸受</th><td>丸棒のたわみ・摩擦ロス。焼付きが確認されたわけではない。</td><td>金属ジャーナル・市販軸受、ねじ山でない摺動面。<a href="r7.html?design=B&amp;focus=bearings#viewer">支持を見る</a></td><td>入力抵抗は感度仮定であり、購入品を選んだだけで低抵抗を実証しない。</td></tr>
+            <tr><th scope="row">風入力・減速</th><td>V2の初動動画はあるが同条件トルク実測表はない。</td><td>A144／B512／C156:1を実歯車・軸配置で比較。<a href="r7.html?design=C&amp;focus=drivetrain#viewer">段構成を見る</a></td><td>静止空力代理は未校正。高抵抗・不利風・偏心で不足し、仮120 rpmは実速度ではない。</td></tr>
+            <tr><th scope="row">脚・支持・床</th><td>フック受け面などを改良。定量的な滑り比較は未計測。</td><td>PC26.5 mm・84 mm同期軸・市販ばね・案内・ロッカーと、床是正ガード。<a href="r7.html?design=C&amp;focus=legs#viewer">脚部を見る</a></td><td>滑り仕事は残る。独立ロッカー角は未解決、実30 cm歩行はUNKNOWN。</td></tr>
+            <tr><th scope="row">構造・質量</th><td>実物の製作改良記録が中心。</td><td>全実CAD・名目重心を計算条件へ結合し、保存旧Aも同じ式で比較。</td><td>名目質量は実測・スライス値ではない。入力低減だけでなく重量・滑り仕事の増加も表示。</td></tr>
+            <tr><th scope="row">組立・工具</th><td>V2詳細工程・編集可能nativeは未提供。</td><td>12工程・全在庫・退避／再挿入／有限経路、市販M2×12とDN-03。<a href="#r7-guides">全案の工程を見る</a></td><td>支持除去・実組立・保持トルクは未確認。表示上の状態を実作業済みとしない。</td></tr>
+            <tr><th scope="row">調達と予算</th><td>材料・工具リンクはあるが完成機の同条件BOMではない。</td><td>個別初回の最低購入lot・付属品・税の未確定を分けた24,000円目安。</td><td>DN-03等の未保有工具・送料・税は別。共同購入平均への置換、在庫・納期保証はしない。</td></tr>
+          </tbody></table>
+        </div>
+      </section>
+      <div class="record-scope"><h3>どの「旧版」と比べているか</h3><p>Ver.2は作者の実物記録で、同じ条件の実測トルク・質量表はありません。
+        第一カットは別の公開比較設計。下の旧Aはr7開発中に保存した計算基準を最終式で再計算したもので、Ver.2実測でも第一カットAでもありません。</p>
+        {{r7_baseline}}
+      </div>
+      <div class="two-column">
+        <article class="download-card"><h3>V2で報告された滑りに対して</h3><p>入力は金属6Dハブ、下流は5 mm-AF正係合と平滑金属ジャーナル。ねじ山を摺動面とせず、軸方向保持とトルク伝達を分けています。実締付け・はめあい・耐久は未測定です。</p><a href="r7.html?design=A&amp;focus=connection#viewer">入力・下流の接合を選択 →</a></article>
+        <article class="download-card"><h3>接地・支持・組立に対して</h3><p>PC26.5 mm、84 mm同期軸、実ばね・案内・ロッカー、分割フレームとPET／風車ガードを含む構成です。有限標本の確認を実衝撃・摩耗・歩行認定と読み替えず、床滑り仕事を残しています。</p><a href="r7.html?design=B&amp;focus=access#viewer">ガードと支持・工程を選択 →</a></article>
+      </div>
+      <p class="small-note">名目の静止供給代理と要求の正差だけで自己始動を保証しません。不利な風・高抵抗・偏心では不足します。入力120 rpm時の所要時間は仮定換算で、実到達速度ではありません。供給の減率0.5・下流の設計余裕・実測下限UNKNOWNは別の判定です。</p>
+    </section>
+
+    <section class="section viewer-section" id="viewer" aria-labelledby="interactive-title">
+      <div class="section-heading"><p class="eyebrow">EXACT CAD MESH / SCHEMA 2</p><h2 id="interactive-title">全2285点と、12工程の操作境界。</h2><p>主軸の一時退避、部品の追加・取外し・同じIDの再挿入を省略しません。工程内の操作と実経路の標本は、下の「操作境界／経路標本」で選べます。</p></div>
+      <div class="viewer-toolbar"><label for="design-select">r7候補
+        <select id="design-select"><option value="A">A · 220 mm／144:1</option><option value="B">B · 160 mm／512:1</option><option value="C">C · 200 mm／156:1</option></select>
+        </label><button type="button" class="button primary" id="load-viewer" hidden>選んだ案の3Dを読み込む</button>
+        <p class="small-note" id="load-note">{{r7_payload}}。選択した案だけを操作時に取得します。gzipは転送の圧縮で、形状を簡略化していません。</p>
+      </div>
+      <p id="viewer-status" role="status" aria-live="polite">3Dはまだ読み込んでいません。下の同版CG・正規資料も参照できます。</p>
+      <p class="media-error" id="viewer-error" role="alert" hidden></p>
+      <div id="viewer-fallback" class="viewer-fallback">{{r7_fallback}}<a href="#r7-guides">静的な12工程・原本資料へ</a></div>
+      <noscript><p class="record-scope">JavaScriptなしでは360°操作はできません。下の全案の工程・BOM・native／STEP／STL資料をご利用ください。</p></noscript>
+      <div id="viewer-workspace" hidden>
+        <div class="viewer-layout">
+          <div class="viewer-visual">
+            <div class="camera-controls" role="group" aria-label="視点と拡大">
+              <button class="button" type="button" data-view="isometric">斜め</button><button class="button" type="button" data-view="front">正面</button>
+              <button class="button" type="button" data-view="left">左</button><button class="button" type="button" data-view="right">右</button>
+              <button class="button" type="button" data-view="back">背面</button><button class="button" type="button" data-view="top">上</button><button class="button" type="button" data-view="bottom">下</button>
+              <button class="button" type="button" id="fit-view">全体を収める</button><button class="button" type="button" id="reset-view">視点リセット</button>
+              <button class="button" type="button" id="zoom-in">拡大 ＋</button><button class="button" type="button" id="zoom-out">縮小 −</button>
+            </div>
+            <div class="canvas-host" id="canvas-host"></div>
+            <p class="small-note" id="canvas-help">ドラッグ／指1本で回転、ホイール／指2本で拡大・移動、右ドラッグで移動。3Dにフォーカスして矢印で回転、Shift＋矢印で移動、＋／−で拡縮、Homeで全体表示。</p>
+            <p class="small-note">X＝軸方向、Y＝脚の進行平面、Z＝高さ。左は−X、正面は−Yからの視点です。無圧縮の組立基準姿勢で、床接触を解いた姿勢ではありません。床面や旧歩行動画を重ねて性能を表現していません。</p>
+            <div class="viewer-options"><label><input type="checkbox" id="fade-previous" checked> 既存部品を淡色に</label>
+              <label><input type="checkbox" id="clip-section"> X表示クリップ</label><button class="text-button" type="button" id="clear-selection">選択を解除</button></div>
+            <p class="small-note">表示クリップは断面形状を生成しません。寸法の正本は<a id="section-source" href="#r7-guides">正規の組立基準図／CAD</a>です。</p>
+            <details class="viewer-diagnostics"><summary>版・全体寸法・描画数</summary><p id="model-stats"></p><p id="camera-stats"></p><p id="source-stats"></p></details>
+          </div>
+          <aside class="assembly-panel" aria-labelledby="stage-panel-title">
+            <h3 id="stage-panel-title">schema2の12工程</h3>
+            <div class="step-navigation" role="group" aria-label="組立の進行"><button class="button" type="button" id="step-first">先頭・未配置</button>
+              <button class="button" type="button" id="step-previous">前へ</button><button class="button" type="button" id="step-next">次へ</button><button class="button primary" type="button" id="step-complete">全完成の参照</button></div>
+            <label for="step-select">正規工程<select id="step-select"></select></label>
+            <label for="step-range">工程を移動<input type="range" id="step-range" min="0" max="12" step="1" value="12"></label>
+            <label for="r7-operation-select">操作境界／経路標本<select id="r7-operation-select"></select></label>
+            <div class="step-navigation" role="group" aria-label="工程内の操作"><button class="button" type="button" id="r7-operation-previous">操作を戻す</button><button class="button" type="button" id="r7-operation-next">次の操作・標本</button></div>
+            <label for="r7-operation-range">工程内を移動<input type="range" id="r7-operation-range" min="0" max="1" step="1" value="0"></label>
+            <label for="r7-path-select">この工程の記録済み経路へ<select id="r7-path-select"><option value="">操作境界を選択</option></select></label>
+            <p class="viewer-count" id="instance-count"></p>
+            <div class="stage-legend"><span><i class="swatch added"></i>今回／移動部品</span><span><i class="swatch previous"></i>固定・既存部品</span><span><i class="swatch selected"></i>選択</span></div>
+            <h4 id="stage-title"></h4><p id="stage-operation"></p><p class="small-note" id="stage-tools"></p>
+            <p class="small-note" id="arrow-note"></p><p class="r7-support-note" id="temporary-note"></p><p class="small-note" id="r7-path-note"></p>
+            <details><summary>原典の締結・向き・仮支持条件</summary><p id="stage-cautions"></p></details>
+            <details class="step-bom" open><summary>この操作の部品ID・数量・区分</summary><div id="stage-parts" role="region" aria-label="今回の部品一覧" tabindex="0"></div></details>
+            <details><summary>固定・移動・取外しの全IDと姿勢／ハッシュ</summary><pre id="r7-inventory"></pre></details>
+            <select id="access-select" aria-label="旧版の工具経路（r7では未使用）" hidden><option value="">r7操作境界を使用</option></select>
+          </aside>
+        </div>
+        <section class="part-inspector" aria-labelledby="part-title">
+          <div><h3 id="part-title">同じIDの部品を追う</h3><p class="small-note">3Dのクリックまたは一覧で選択。取外したIDは在庫一覧に残り、再挿入後は再び選べます。</p>
+            <label for="part-select">部品ID・名称<select id="part-select"><option value="">未選択</option></select></label><button class="button" type="button" id="fit-selection" disabled>選択部品へ寄る</button></div>
+          <div id="part-description" role="status" aria-live="polite">部品はまだ選択されていません。</div>
+        </section>
+      </div>
+      <div class="record-scope"><h3>「全完成」は画面上の参照状態です。</h3><p>各段階の本体在庫をorderedOperationsから再構成し、経路はafterOperationIndexで固定在庫を結び付けています。
+        経路標本では移動部品以外の装着済み全品を残し、prepareOnlyは別の独立シーンです。
+        2区間をつなぐ端点・主軸−53 mm・再挿入IDは保持しますが、有限標本の間を物理的に検証したとはしていません。
+        部品の瞬時表示や操作境界だけの参照を、手で実際に組み付けたことにしません。</p></div>
+    </section>
+
+    {{r7_media}}
+    {{r7_diagnostics}}
+
+    <section class="downloads-section" id="r7-guides"><div class="section">
+      <p class="eyebrow">SOURCE FILES / FROZEN REVISION</p><h2>全案の12工程と正規資料</h2>
+      <p>{{r7_resource_notice}}
+        試験片・組立台は別枠で費用に含み、歩行質量へ加算しません。代表スライスは限定結果で、実部品の適合・強度の確認ではありません。</p>
+      <nav class="journey-nav" aria-label="r7静的組立案"><a href="#r7-guide-A">A</a><a href="#r7-guide-B">B</a><a href="#r7-guide-C">C</a></nav>
+      {{r7_guides}}
+      <div class="document-strip">{{r7_sources}}</div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>{{r7_footer_note}}</span></div><a href="#top">先頭へ ↑</a><a href="viewer.html">第一カット履歴へ</a><a href="calculations.html">研究資料へ</a></footer>
+</body>
+</html>

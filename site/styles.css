@@ -57,6 +57,7 @@ nav a:hover { color: var(--teal); text-decoration: underline; }
 .button.primary:hover { background: #104542; }
 .text-link { font-size: 0.9rem; font-weight: 700; }
 .small-note { font-size: 0.83rem; color: var(--muted); line-height: 1.9; }
+.r7-entry { padding-block: 38px; border-block: 1px solid var(--line); }
 .section-heading { max-width: 830px; margin-bottom: 32px; }
 .section-heading p:last-child { color: var(--muted); }
 .version-overview { border-top: 1px solid var(--line); padding-top: 48px; }

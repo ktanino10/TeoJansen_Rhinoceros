@@ -20,9 +20,11 @@ SITE = ROOT / "site"
 REPOSITORY = "ktanino10/TeoJansen_Rhinoceros"
 SLUG = "TeoJansen_Rhinoceros"
 DEFAULT_OUTPUT = SITE / "dist" / SLUG
-MAX_BUNDLE_BYTES = 30_000_000
+MAX_BUNDLE_BYTES = 60_000_000
 MAX_STATIC_BYTES = 12_000_000
-PAGES = ("index.html", "production.html", "comparison.html", "viewer.html", "calculations.html")
+MAX_R7_BYTES = 30_000_000
+HISTORY_PAGES = ("index.html", "production.html", "comparison.html", "viewer.html", "calculations.html")
+PAGES = (*HISTORY_PAGES, "r7.html")
 IMAGES = {
     "hero": ("docs/images/テオヤンセンver2完成3.jpg", (320, 0, 1240, 1100), 1100),
     "v1-photo": ("docs/images/テオヤンセンver1完成1.jpg", (70, 0, 1240, 1090), 1050),
@@ -276,7 +278,7 @@ class DocumentLinks(HTMLParser):
 def validate(output: Path, manifest: dict) -> None:
     output = output.resolve()
     documents = {}
-    for name in PAGES:
+    for name in manifest["pages"]:
         text = (output / name).read_text()
         if "{{" in text or "/Users/" in text or "file://" in text:
             raise ValueError(f"Unresolved template or private path in {name}")
@@ -310,15 +312,16 @@ def validate(output: Path, manifest: dict) -> None:
                 if not reference or (int(attrs["width"]), int(attrs["height"])) != (reference["width"], reference["height"]):
                     raise ValueError("External image is not a fixed, dimensioned source reference")
     actual = {str(path.relative_to(output)) for path in output.rglob("*") if path.is_file()}
-    expected = {*PAGES, "styles.css", "viewer.css", "calculations.css", "app.js", "viewer-loader.js", "calculations.js",
+    expected = {*manifest["pages"], "styles.css", "viewer.css", "calculations.css", "r7.css", "app.js", "viewer-loader.js", "calculations.js",
                 "favicon.svg", ".nojekyll", "build-manifest.json",
                 *manifest["assets"].keys()}
     if actual != expected:
         raise ValueError(f"Unexpected output files: {actual ^ expected}")
     total = sum(path.stat().st_size for path in output.rglob("*") if path.is_file())
-    display = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("loading") == "on-demand")
-    if total > MAX_BUNDLE_BYTES or total - display > MAX_STATIC_BYTES or display > 18_000_000:
-        raise ValueError("Public bundle exceeded the 12 MB static / 18 MB opt-in 3D budgets")
+    r7 = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("bundle_group") == "r7")
+    display = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("loading") == "on-demand" and entry.get("bundle_group") != "r7")
+    if total > MAX_BUNDLE_BYTES or total - display - r7 > MAX_STATIC_BYTES or display > 18_000_000 or r7 > MAX_R7_BYTES:
+        raise ValueError("Public bundle exceeded the 12 MB history static / 18 MB history 3D / 30 MB r7 budgets")
     for name in manifest["assets"]:
         path = output / name
         if path.suffix == ".webp":
@@ -330,7 +333,7 @@ def validate(output: Path, manifest: dict) -> None:
             svg_dimensions(path.read_bytes())
 
 
-def build(output: Path, ref: str) -> dict:
+def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> dict:
     from calculation_data import build_calculations
     from viewer_data import build_viewer, static_guides
 
@@ -363,6 +366,11 @@ def build(output: Path, ref: str) -> dict:
     calculation_html, calculation_assets, calculation_source = build_calculations(output)
     assets.update(calculation_assets)
     cartridge_html, external_images, cartridge_source = cartridge_card()
+    r7_html, r7_source = {}, None
+    if include_r7:
+        from r7_public import build_public_r7
+        r7_html, r7_assets, r7_source = build_public_r7(output, ref)
+        assets.update(r7_assets)
     subprocess.run(["node", str(SITE / "build-viewer.mjs"), str(output)], cwd=ROOT, check=True)
     for name, original in (("viewer-engine.js", "site/viewer.js"),
                            ("three-LICENSE.txt", "site/node_modules/three/LICENSE")):
@@ -379,6 +387,7 @@ def build(output: Path, ref: str) -> dict:
     reduction = 100 * (1 - selected["volume_proxy_mm3"] / baseline["volume_proxy_mm3"])
     replacements = {
         **calculation_html,
+        **r7_html,
         "{{cartridge_card}}": cartridge_html,
         "{{hero}}": figure("hero", "サボニウス型風車を備えたVer.2の実物。白いフレームと黒い足を持つ歩行模型。", "Ver.2 · 実物の制作記録（表示用トリミング）", ref, True),
         "{{v1_photo}}": figure("v1-photo", "六枚羽の風車を備えたVer.1実物の斜めからの写真。", "Ver.1 · 実物の完成写真", ref),
@@ -407,7 +416,8 @@ def build(output: Path, ref: str) -> dict:
             f'<a href="viewer.html?design={r["comparison"]["prototype"]}">{r["comparison"]["prototype"]}の360°と組立へ →</a></article>'
             for r in records) + "</div>",
     }
-    for name in PAGES:
+    pages = PAGES if include_r7 else HISTORY_PAGES
+    for name in pages:
         html = (SITE / name).read_text()
         for token, value in replacements.items():
             html = html.replace(token, value)
@@ -416,20 +426,22 @@ def build(output: Path, ref: str) -> dict:
         html = re.sub(r"\{\{(source|tree|download):([^}]+)\}\}",
                       lambda match: escape(source_url(match[1], match[2], ref), quote=True), html)
         (output / name).write_text(html)
-    for name in ("styles.css", "viewer.css", "calculations.css", "app.js", "viewer-loader.js", "calculations.js", "favicon.svg"):
+    for name in ("styles.css", "viewer.css", "calculations.css", "r7.css", "app.js", "viewer-loader.js", "calculations.js", "favicon.svg"):
         shutil.copyfile(SITE / name, output / name)
     (output / ".nojekyll").write_text("")
-    manifest = {"schema": 1, "repository": REPOSITORY, "source_commit": ref, "pages": list(PAGES),
+    manifest = {"schema": 1, "repository": REPOSITORY, "source_commit": ref, "pages": list(pages),
                 "repository_subpath": f"/{SLUG}/",
                 "comparison_sha256": sha256(ROOT / "docs/ver3/comparison.json"),
                 "assets": assets, "bundle_budget_bytes": MAX_BUNDLE_BYTES,
                 "static_budget_bytes": MAX_STATIC_BYTES, "on_demand_3d_budget_bytes": 18_000_000,
                 "engineering_source": viewer_source,
+                "r7_source": r7_source, "r7_budget_bytes": MAX_R7_BYTES,
                 "calculation_source": calculation_source,
                 "cartridge_source": cartridge_source, "external_images": external_images,
                 "note": "Only selected display derivatives and existing media are deployed. Exact-mesh GLBs are opt-in display data; native CAD/STL/BOM downloads remain on GitHub."}
     (output / "build-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
-    validate(output, manifest)
+    if validate_output:
+        validate(output, manifest)
     return manifest
 
 

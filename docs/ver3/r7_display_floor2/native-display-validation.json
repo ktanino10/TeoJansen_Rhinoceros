@@ -1,0 +1,13 @@
+{
+  "sourceCommit": "09d49e396ec0a4b527ff6545c955df91995fd197",
+  "checks": {
+    "meshes": 228,
+    "staticInstances": 4570,
+    "stateInstances": 82802,
+    "states": 405
+  },
+  "status": "PASS",
+  "scope": "Exact imported meshes, original/static placement and every schema2 displayed state. Not mechanical revalidation.",
+  "walking": "NOT GENERATED",
+  "manufacturingRelease": false
+}

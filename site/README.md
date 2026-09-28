@@ -1,6 +1,6 @@
 # Ver.1 / Ver.2 / Ver.3 紹介サイト
 
-既存READMEと是正済みの機械資料を読むための、日本語中心の静的サイトです。CADや動画は再生成しません。Ver.1/2の実物記録、Ver.3の概念設計・規定歩行、未検証事項を区別します。`index.html` は三版の全体紹介、`production.html` はVer.1の製作工程とVer.2の改良・完成記録、`comparison.html` はV2→V3の画像付きMatrix、`viewer.html` は実3Dと全案の具体的組立ガイドです。`calculations.html` は別版 `v3-commercial-r3-01` の材料・構造・流体モデルの固定計算資料を読むページです。
+既存READMEと是正済みの機械資料を読むための、日本語中心の静的サイトです。機械CAD・物理結果は変更せず、表示派生だけを生成します。`r7.html` は床是正版の比較・360°・12工程・同版CG／説明動画／限定診断図です。`index.html` は全体紹介、`production.html` はVer.1/2製作記録、`comparison.html` と `viewer.html` は第一カットのMatrix・360°・組立履歴、`calculations.html` は別版r3の固定計算資料とr4入力軸カードです。旧動画は第一カットの履歴に限定し、新r7の歩行実証として使いません。
 
 ## ローカル生成・確認
 
@@ -28,7 +28,7 @@ npm test
 - 写真／CG／スライサー形状画像は明示した48画像だけをWebPへ縮小。原写真の画面・周囲の私物が入る範囲を表示用にトリミングし、EXIF・XMP・ICCなどを派生表示画像から除去します。原本は変更しません。顔の写る着用写真は派生に含めません。
 - 既存のMP4五本と、操作するまで読まないGIF一本を選別コピーします。初期表示で動画/GIF/YouTube/外部フォントは取得しません。
 - CAD、STL、BOM、文書等は確定コミットを参照するGitHubリンクです。全リポジトリや原データ162 MBをPagesへ配信しません。
-- `site/dist/TeoJansen_Rhinoceros/` のみを配信します。HTML・画像・既存動画・表示ライブラリは12 MB、操作時だけ取得する3Dデータは別枠18 MB、合計30 MBが上限です。計算資料追加後は約10.9 MB＋14.7 MB。ページ間アンカー、許可ファイル、メタデータをビルドで確認し、`build-manifest.json` にページ・出典・ハッシュ・画像処理・3Dと計算それぞれの版を記録します。追加写真・計算SVGは該当ページで遅延読み込みし、トップページでは取得しません。
+- `site/dist/TeoJansen_Rhinoceros/` のみを配信します。従来の静的資産12 MB／操作時3D18 MBの枠は維持し、r7の3モデル・同版CG・6本の操作時動画等を別枠30 MB、全体60 MB以内で選別配信します。全CAD／STL／Blenderや一時フレームはPagesへコピーせず、GitHubの確定版へリンクします。ページ間アンカー、許可ファイル、メタデータを検証し、`build-manifest.json` に各版の出典・ハッシュを保存。非選択モデルや動画は初期ロードしません。
 - CIのPR実行は生成と実ブラウザー確認のみ。`main`へのpushまたは`main`の手動実行は、同じ検証に合格した静的出力だけを公式Pages Actionsで配信します。deploy jobのみ`pages:write`/`id-token:write`を持ちます。
 
 公開後は `SITE_URL` にデプロイが返した実URLを指定して `npm --prefix site test` を実行できます。公開URLのGET、主要画像・MP4、GitHub側の代表ダウンロードも確認します。CI成功だけを実配信の確認として扱いません。
@@ -79,3 +79,64 @@ Ver.3は実機未検証、全案の接地残差3 mm目標は未達、Bは名目�
 - `test_calculations.py` は図・データの原本ハッシュ、全16図の契約、同一ピークトルクと実たわみ値、版分離、メタデータ・不正SVG拒否を検査します。`calculations.spec.mjs` は1440px／375pxで全案の表示・非選択案の遅延取得、SVG拡大と元サイズ、単位・版、リンクのGET/hash、無JS、エラー、axeを確認します。既存workflowのliveモードにも同じ計算ページ検査を含めます。
 
 `calculations.html#common-input` の短いカードは、別版 `v3-common-input-r4-01` の共通入力軸だけを紹介します。`cartridge-source.json` で入力・成果物commitとmanifestハッシュを固定し、質量と概算費用はその版の調達JSONから読みます。約3.94 MBの原CADプレビューSVGは、detailsを開いた時だけ固定commitのGitHubから取得します。原本を加工せず、Pagesへの巨大画像追加・新ページ・新GLB・予算上限の緩和もありません。外部参照は `build-manifest.json` の `external_images` に限定記録し、live検証でも原本ハッシュを照合します。R3の16図と第一カットは変更しません。
+
+## r7床是正版の統合契約
+
+`r7-source.json` がartifact・入力・統合契約・全manifest・公開元commitを固定します。
+現在は **v3-integrated-walkers-r7-16-floor2**、artifact `09d49e3`／source `369434e`、
+機械資料main `2a53020` です。通常公開ビルドでは作業コピーをhash照合し、浅いCI checkoutでも旧Git履歴を必要としません。
+ローカル候補を検討するときは `Snapshot(use_git=True)` で指定Gitスナップショットを読み取れます。
+変更後の原本と旧図を混在させず、`publicationHold` があれば本番レンダーと公開を拒否します。
+
+```bash
+# 開発用・公開とは別の出力
+python3 site/build_r7_preview.py
+python3 -m unittest discover -s site/r7_tests -p 'test_*.py'
+python3 site/r7_blender.py --validate
+PLAYWRIGHT_SOFTWARE_GPU=1 npm --prefix site test -- --config playwright.r7.config.mjs
+```
+
+開発用の `site/dist/r7-preview/TeoJansen_Rhinoceros/` はCADダウンロード原本も含むため、
+`LOCAL_ONLY_DO_NOT_DEPLOY` を付けてCI・外部URLでの候補検査を拒否します。通常Pagesビルドとは別です。
+サーバー例は `python3 site/serve.py --port 4176`、
+URLは `http://127.0.0.1:4176/r7-preview/TeoJansen_Rhinoceros/r7.html` です。
+
+- `r7_data.py` は正規mesh・assembly・BOM・工程・経路・native参照hashを照合し、**A750／B785／C750＝2285点**を保持します。
+  頂点・三角形の間引きはなく、GLBをgzip転送するだけです。1案ずつlazy取得し、圧縮／展開後のhashを照合します。
+- 旧第一カットの18／18／16状態を流用しません。r7の12工程は`orderedOperations`の各境界から在庫を再構成。
+  `afterOperationIndex`、装着済み全非移動品、`visibleAfter`、再挿入履歴、経路・在庫hashが違えば停止します。
+  手書きの障害物除外、異なる固定在庫の連続経路、未知ID、未装着品の取外しを許しません。
+- 本体在庫と表示シーンは別欄。`prepareOnly`は独立した作業台シーンで、本体へ取り付けた数に加えません。
+  主軸X−53mm、PETのY−4mm、工程07のX＋4mm下降→同じ高さでX0へ着座、
+  後付け締結品・同IDの再挿入・停止角0°・手による仮支持・カラー角の反映済み属性を保持します。
+  操作境界を完成参照位置で示す場合と、記録された経路標本を示す場合を分け、連続経路の新しい物理検査は行いません。
+- `footFirstBenchSubassemblies` は6脚の足部を先に市販M2×12／ナイロンナット・DN-03で準備する独立状態です。
+  A/Bの安定追跡IDに古い寸法名が残る場合も、`part_id`・BOM・`nativeLabelOverrides`を現行仕様として表示します。
+- r7では、無圧縮の組立基準姿勢にZ0の床を重ねて接地を主張しません。
+  比較は個別初回費用、仮120rpmの時間、名目原代理と要求、不利条件・床滑り仕事を分離します。
+  旧Aの同じ最終式による計算比較は、Ver.2実測や公開第一カットAとは別の基準です。
+- 公開時のnative／STEP／STL／BOMは機械是正の確定commitへ直接リンクします。編集用Blenderは媒体原本のcommitへ。
+  約24,000円／台の部材目安と、未保有DN-03約396円・送料・未確定税を分け、共同購入平均で個別額を置き換えません。
+- 旧floor不整合の反例は原機械資料のレビュー記録とローカル旧媒体に保持。
+  `r7_floor_gate.py` は保存済み73位相だけを使い、元包絡と直交表示の全非接地部を照合します。
+  接触solver・風・荷重を再計算しません。ローリングパッド2体だけを除外し、ロッカー芯は全±5°で確認します。
+
+### 同版CG・説明動画・限定診断
+
+`blender-handoff.json` は同じ2285点・全工程・圧縮／展開hash・符号付き減速比を保持します。
+`r7_blender.py` は新規backgroundプロセスのみで実行し、ロックで同時生成を拒否します。
+既存ライブシーンは触りません。`--build`、`--verify-native`、`--stills`、`--assembly`を直列に実行します。
+旧媒体のラベル付替えでなく、床是正・足締結を含む新メッシュから全三案の比較CG・編集native・組立／逆順参照を生成します。
+表示の時間は説明用、状態間は原典の境界と有限経路標本を保持し、途中経路を新たに物理検証済みとは扱いません。
+字幕は日本語VTTで、灰色の装着部品・透明PETの存在と、取外し／未配置を区別します。
+
+`r7_motion_diagnostic.py`／`r7_diagnostic_render.py` は保存された0／120／240°だけを表示します。
+小角の非直交写像でCADをせん断せず、極分解による**描画専用**の直交フレームと計算点との差を数値で残します。
+荷重足の対称パッド中心を等高にする表示角が機械範囲で一意なら使いますが、独立solver角nullは保持。
+空中足など未確定のロッカー・ばね線材は省略します。床補正・任意前進・伸縮リンク・補間は追加しません。
+**完全なCAD歩行動画は未生成**で、サイトに再生ボタンを用意しません。
+
+`r7_finalize_media.py` は同版床ゲート・全メッシュ／在庫検証・MP4フレーム数とデコードを確認し、
+`docs/ver3/r7_display_floor2/` と `Blender/Ver.3/integrated_r7/r7_floor2.blend` に原本とmanifestを保存します。
+CIはそこから表示派生を作るだけでBlenderや物理計算を再実行しません。
+元5点＋新Cの相手歯車2点の実層確認も、支持薄膜除去・実はめあい・実造形済みの認定とはしません。

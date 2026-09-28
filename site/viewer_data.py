@@ -115,7 +115,8 @@ def transform(point: list, matrix: list) -> list[float]:
     return [sum(matrix[row][col] * point[col] for col in range(3)) + matrix[row][3] for row in range(3)]
 
 
-def export_glb(manifest: dict, library: dict, destination: Path, source: dict) -> dict:
+def export_glb(manifest: dict, library: dict, destination: Path, source: dict, *,
+               coupon_ids=("Q_BEARING_FIT", "Q_JOINT_FIT"), max_model_bytes=MAX_MODEL_BYTES) -> dict:
     binary = bytearray()
     views, accessors, meshes = [], [], []
     geometry_stats, mesh_indices = {}, {}
@@ -167,7 +168,7 @@ def export_glb(manifest: dict, library: dict, destination: Path, source: dict) -
                 world_max[axis] = max(world_max[axis], point[axis])
     assembly_nodes = list(range(len(nodes)))
     coupons = []
-    for index, part in enumerate(("Q_BEARING_FIT", "Q_JOINT_FIT")):
+    for index, part in enumerate(coupon_ids):
         coupons.append(len(nodes))
         nodes.append({"name": f"specimen-{part}", "mesh": mesh_indices[part],
                       "translation": [index * 0.10, 0, 0],
@@ -188,12 +189,12 @@ def export_glb(manifest: dict, library: dict, destination: Path, source: dict) -
     result = (struct.pack("<4sII", b"glTF", 2, 28 + len(encoded) + len(binary))
               + struct.pack("<I4s", len(encoded), b"JSON") + encoded
               + struct.pack("<I4s", len(binary), b"BIN\0") + binary)
-    if len(result) > MAX_MODEL_BYTES:
-        raise ValueError(f"{manifest['id']}: display model exceeded its 6 MB opt-in budget")
+    if len(result) > max_model_bytes:
+        raise ValueError(f"{manifest['id']}: display model exceeded its {max_model_bytes} byte opt-in budget")
     destination.write_bytes(result)
     return {"parts": geometry_stats, "instanceCount": len(assembly_nodes),
             "boundsMm": [world_min, world_max], "bytes": len(result),
-            "sha256": hashlib.sha256(result).hexdigest(), "couponPreviewCount": 2}
+            "sha256": hashlib.sha256(result).hexdigest(), "couponPreviewCount": len(coupon_ids)}
 
 
 def instructions() -> dict:

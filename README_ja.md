@@ -563,3 +563,5 @@ Copilot を活用すると、開発スピードが向上するだけでなく、
 **写真でたどる製作記録：** [Ver.1の設計・出力・仕上げ・組立](https://ktanino10.github.io/TeoJansen_Rhinoceros/production.html#ver1) / [Ver.2への改良・完成写真・テスト](https://ktanino10.github.io/TeoJansen_Rhinoceros/production.html#ver2) — 本READMEの工程と版対応を整理し、各版6方向の実写真と参考図への導線をまとめています。未記録のVer.2専用工程やネイティブCADを復元したものではありません。
 
 **Ver.3第一カットを詳しく見る：** [Ver.2からの変更と確認状況の画像付きMatrix](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html) / [A・B・Cの360°・部品選択・具体的組立ガイド](https://ktanino10.github.io/TeoJansen_Rhinoceros/viewer.html) — 既存CADの全メッシュと部品IDを使う表示資料です。準備・部分組立・一時取外しを区別し、実機未検証・接地目標未達・Bの入力不足を保持しています。
+
+**r7床是正版：** [三案の比較・360°・12工程・同版CG／診断図・正規ダウンロード](https://ktanino10.github.io/TeoJansen_Rhinoceros/r7.html) — 全2285部品の床是正後の版です。材料費24,000円／台の承認目安と工具・送料・税を分け、元5点＋新C歯車2点の層確認を記載しています。実機未検証・合格歩行機0、完全なCAD歩行動画は未生成です。第一カット・研究資料・旧反例は履歴として保持しています。

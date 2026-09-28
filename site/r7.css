@@ -1,0 +1,32 @@
+.r7-local-banner { margin: 18px auto; width: min(1180px, calc(100% - 36px)); padding: 16px 22px; border: 2px solid var(--gold); background: var(--warning-bg); color: var(--warning); font-size: 0.9rem; }
+.r7-local-banner a { font-weight: 750; }
+.r7-support-note { border-left: 3px solid var(--gold); padding-left: 12px; font-size: 0.87rem; }
+#r7-inventory { max-height: 340px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.72rem; }
+#r7-operation-range { display: block; width: 100%; min-height: 36px; accent-color: var(--teal); }
+.r7-specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.r7-specs article { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 24px; }
+.r7-specs dl div { border-top: 1px solid var(--line); padding-block: 9px; }
+.r7-specs dt { font-size: 0.8rem; color: var(--muted); }
+.r7-specs dd { margin: 0; font-weight: 700; }
+.r7-specs p { font-size: 0.86rem; }
+.r7-fallback { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.r7-fallback img { width: 100%; height: auto; border: 1px solid var(--line); }
+.r7-path-list { padding-left: 1.2rem; font-size: 0.87rem; }
+.r7-path-list li { margin-block: 12px; }
+.r7-path-list code { font-size: 0.78rem; }
+.r7-downloads { display: flex; flex-wrap: wrap; gap: 12px 22px; margin-block: 20px; }
+.r7-operation-list { padding-left: 1.4rem; }
+.r7-operation-list li { margin-block: 10px; }
+.r7-film { border-top: 1px solid var(--line); margin-top: 32px; padding-top: 28px; }
+.r7-diagnostic-grid { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.r7-diagnostic .media { max-width: none; }
+.r7-diagnostic-grid figcaption { font-size: 0.8rem; }
+#r7-change-matrix { margin-top: 34px; }
+#r7-status code { overflow-wrap: anywhere; font-size: 0.8rem; }
+[data-local-only] .viewer-visual { top: 100px; }
+@media (max-width: 720px) {
+  .r7-specs, .r7-fallback { grid-template-columns: 1fr; }
+  .r7-diagnostic-grid { grid-template-columns: 1fr; }
+  .r7-specs article { padding: 20px; }
+  .r7-local-banner { padding: 14px 17px; }
+}

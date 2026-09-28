@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
+  "artifactCommit": "09d49e396ec0a4b527ff6545c955df91995fd197",
+  "sourceCommit": "369434e046acc5cb8f9da0f9f338308d29938d1e",
+  "sourceHash": "5074478881da48673648df953a591c0924f3b1d8ed390fad3830d6a0057ed5e4",
+  "contractSha256": "f7d82bf3bcb7bd5c0258fb3002bd5b4590a80879dee27788a86b1721f6662671",
+  "allSavedDisplayFramesFloorGate": "PASS",
+  "completeWalkingVideoGenerated": false,
+  "physicalTestsPerformed": false,
+  "manufacturingRelease": false,
+  "geometrySource": "All canonical vertices, triangles, stable instance IDs and millimetre transforms; no mesh simplification.",
+  "assemblyScope": "Constant-held canonical schema2 inventories and finite path samples, reverse reference for removal. Physical timing and interpolation are not asserted.",
+  "diagnosticScope": "0/120/240deg saved states, polar rigid display frame, geometric loaded-pad angle only if unique; source rocker null preserved, unresolved feet and coil deformation omitted.",
+  "files": {
+    "docs/ver3/r7_display_floor2/comparison.png": {
+      "bytes": 1141970,
+      "sha256": "a5c8f0e2dccb52e907d19332d137b30fdd9540a3192a2189895a5708b110965a"
+    },
+    "docs/ver3/r7_display_floor2/hero_A.png": {
+      "bytes": 943013,
+      "sha256": "5d6f2c393cc68d46b0eebdf6de6c7806d41376640e957bf572c1cf3e87aa3793"
+    },
+    "docs/ver3/r7_display_floor2/hero_B.png": {
+      "bytes": 937822,
+      "sha256": "873eda805388fc9e6e6e8d86f831248634fa9d4f071e627531a52779e2f3be27"
+    },
+    "docs/ver3/r7_display_floor2/hero_C.png": {
+      "bytes": 943341,
+      "sha256": "ff024f0196cd56ce25ada8c99bf6eb1b45348544df2805fba16dada0402e9771"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_A_000.png": {
+      "bytes": 996779,
+      "sha256": "56ab0f0f6c1d765cabb14567817c64b68a39712246c9997e373bc0e54776def4"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_A_120.png": {
+      "bytes": 997737,
+      "sha256": "36b5c92395fad90a05348a97a6a64d5e457e1b1c77cec9e4e9ffa1399aa5a580"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_A_240.png": {
+      "bytes": 998855,
+      "sha256": "4df007a8d7a213301c9c88462e2d5c4e106827306d8a6cc158b7ac5deb889f54"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_B_000.png": {
+      "bytes": 990924,
+      "sha256": "dedd95267be5bb1a97b306777164a993a03d20451a0d1c5f78963960ee80a98e"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_B_120.png": {
+      "bytes": 993293,
+      "sha256": "5d1e923840125d2a70a932d60a08ca00c06ac9f93d22a4d95baa2b6d830b501d"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_B_240.png": {
+      "bytes": 992572,
+      "sha256": "7ccbd61e16ec092e8a9d0a1415e68589f289875dcc93f744f303b86cd125f797"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_C_000.png": {
+      "bytes": 997431,
+      "sha256": "eb9984878580e86dc90f61dbd7cf32112c702830426b2e50593a29530d1f70e8"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_C_120.png": {
+      "bytes": 998664,
+      "sha256": "774a1dacdcd92c32a039ace8e8b41fb76e73f9442fd27913f79703868cb5607f"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_C_240.png": {
+      "bytes": 999790,
+      "sha256": "b3afd8e36cc2939338120ab8a8fc33108e8d433e946dc23d6e415ddbc963a539"
+    },
+    "docs/ver3/r7_display_floor2/assembly_A.mp4": {
+      "bytes": 2169722,
+      "sha256": "427686d13889d4897726739dc5b05bedf73a2c2e0c345076597e1a2d329b7116"
+    },
+    "docs/ver3/r7_display_floor2/assembly_A.vtt": {
+      "bytes": 31306,
+      "sha256": "cfe78946ac0334b36f7dacc0861dd1f19ea659aafa1640107d88e761becce24c"
+    },
+    "docs/ver3/r7_display_floor2/assembly_A.json": {
+      "bytes": 12555,
+      "sha256": "e775660ea6e620f9dcdd57c2ddfb089e8c16ed1a6f3f46bd3d4bd43a09717cea"
+    },
+    "docs/ver3/r7_display_floor2/disassembly_A.mp4": {
+      "bytes": 2174880,
+      "sha256": "502757eb1d0b31a3dc0f4d4289205b927dd9fd75c63e47b097261fb19e770702"
+    },
+    "docs/ver3/r7_display_floor2/disassembly_A.vtt": {
+      "bytes": 32926,
+      "sha256": "e2e467aa48b2e7eed85d1f9664a3aef14b9450eda9933c3bc99a8ae2bdbc249b"
+    },
+    "docs/ver3/r7_display_floor2/disassembly_A.json": {
+      "bytes": 12566,
+      "sha256": "61326a8a5c877e9e22b18af7ad2f8954169f0eeae97211f29a5eea144518480d"
+    },
+    "docs/ver3/r7_display_floor2/assembly_B.mp4": {
+      "bytes": 2110194,
+      "sha256": "052b14b633d8dab2ee8a0098792e4353391a7032ddc2a613efe8831589664d6d"
+    },
+    "docs/ver3/r7_display_floor2/assembly_B.vtt": {
+      "bytes": 31306,
+      "sha256": "d594ff92276f8a8a3b75f32780f64640f8e9ac3f84535ca47bb1ba23ce93ebff"
+    },
+    "docs/ver3/r7_display_floor2/assembly_B.json": {
+      "bytes": 12555,
+      "sha256": "78d96378e3ffd46b83f34d867a3b56c93b5e73f125b09d54a244698330062157"
+    },
+    "docs/ver3/r7_display_floor2/disassembly_B.mp4": {
+      "bytes": 1938640,
+      "sha256": "724ded411b08f9bc4cb658ff9b44de9148cd2ad65b1e0c7f8d22c9b732b92301"
+    },
+    "docs/ver3/r7_display_floor2/disassembly_B.vtt": {
+      "bytes": 32926,
+      "sha256": "f7b77234b3b7647a27c9dada7363a5d752fc4ef653ae1f1082763c6da4217709"
+    },
+    "docs/ver3/r7_display_floor2/disassembly_B.json": {
+      "bytes": 12566,
+      "sha256": "783a1a1c078114c47881ee94e12d50644b86c41aadc409470a652d89a69990e6"
+    },
+    "docs/ver3/r7_display_floor2/assembly_C.mp4": {
+      "bytes": 2203083,
+      "sha256": "9d49afb79e2595352de49eac836424ad916d3b6d92b4c25239970a3ced84b341"
+    },
+    "docs/ver3/r7_display_floor2/assembly_C.vtt": {
+      "bytes": 31306,
+      "sha256": "cfe78946ac0334b36f7dacc0861dd1f19ea659aafa1640107d88e761becce24c"
+    },
+    "docs/ver3/r7_display_floor2/assembly_C.json": {
+      "bytes": 12555,
+      "sha256": "5a99ba9807c0a0e944eaf100e6282c07261da7a78acaf4cbf1fbe858e47f3f77"
+    },
+    "docs/ver3/r7_display_floor2/disassembly_C.mp4": {
+      "bytes": 2493891,
+      "sha256": "66ccb5a12100025a7b0b0edbdfa8c707260a2d59d9c0ea082106fbba82d693e2"
+    },
+    "docs/ver3/r7_display_floor2/disassembly_C.vtt": {
+      "bytes": 32926,
+      "sha256": "e2e467aa48b2e7eed85d1f9664a3aef14b9450eda9933c3bc99a8ae2bdbc249b"
+    },
+    "docs/ver3/r7_display_floor2/disassembly_C.json": {
+      "bytes": 12566,
+      "sha256": "a97b02370642d464d5b3ee2c65727fa71bd65c69a71b843e2bee4729814f85fa"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_A.json": {
+      "bytes": 655651,
+      "sha256": "1b4bfa408bde1aef70400ae9e8201b2134d20ef27a2fc43f77d40277bd583a6b"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_B.json": {
+      "bytes": 685113,
+      "sha256": "63c3310fbd312206ba2015f4c67e0b38e3eeea7666f6a58df408e85e1856dee1"
+    },
+    "docs/ver3/r7_display_floor2/diagnostic_C.json": {
+      "bytes": 655963,
+      "sha256": "d254843d367da3200d2d4dab111b0309050ae55a13e83c64f2185478d37027da"
+    },
+    "docs/ver3/r7_display_floor2/native-display-validation.json": {
+      "bytes": 389,
+      "sha256": "65c13993c8b4554333c1f47b897c849156fd26e9a0d22ffc1cc1fbe0eaf05787"
+    },
+    "docs/ver3/r7_display_floor2/render-source.json": {
+      "bytes": 6004,
+      "sha256": "bf1441dd56cc7205ca12496685660bdda5dc2e837c25c6ddf96418ee6e031c8c"
+    },
+    "docs/ver3/r7_display_floor2/display-floor-gate.json": {
+      "bytes": 797619,
+      "sha256": "c8b3e0d4e0e0e1fb797ec5a26bc893efec6ea7c58ea70955ecddc6b941bf95a2"
+    },
+    "Blender/Ver.3/integrated_r7/r7_floor2.blend": {
+      "bytes": 33804712,
+      "sha256": "6dc42ef576f2d5d423adb7d529f8ae53a9a1603eccdce055e16438112e79afe7"
+    }
+  }
+}
