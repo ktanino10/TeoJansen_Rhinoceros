@@ -4,6 +4,8 @@
 
 対象STLはレビュー済み `f50978e55384d1b03417ed7115395e6e2c010e85` とバイト一致。CAD・STEP・STL・歯形・質量・計算値・BOMは変更していません。全機や全140件のSTLをスライスした結果ではありません。購入・プリンター接続・送信・印刷・ドライヤー運転は行っていません。
 
+[凍結した229ファイルの不変確認](frozen_artifact_invariance.json)では、native・STEP・メッシュ・STLと非説明文の物理資料を照合しました。工程の非文言部分も不変です。変更した説明・支持要否・契約／スライスのメタデータとは分けています。
+
 ## 使用した仮定と来歴
 
 公式 [OrcaSlicer 2.4.2](https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/v2.4.2) のMac Universal版をApple Siliconで使用。公開SHA256一致、署名検証、macOSのNotarized Developer ID受理を確認し、ユーザー設定とは別の領域で実行しました。安全警告の回避や認証情報の入力はしていません。

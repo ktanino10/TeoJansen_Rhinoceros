@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "revisionId": "v3-integrated-walkers-r7-15",
-  "sourceCommit": "124cf4a4555c7b68dd6a01deb41146ca39ed29e6",
-  "sourceHash": "197e5533bd60783c3ba5ff7222798223ffaa2712d92eb38e3d3c0b7a8aec5ee1",
+  "sourceCommit": "49d1186130ae7ec3e23610490ae2e376bd9d31a5",
+  "sourceHash": "54cead48c4f60f37b9422efdd905b3aabad12c4c1b425cd26589b811a3591168",
   "sourceFiles": [
     {
       "path": "scripts/ver3/walker_r7.json",
@@ -26,8 +26,8 @@
     },
     {
       "path": "scripts/ver3/requirements_integrated_r7.txt",
-      "bytes": 34,
-      "sha256": "35002511e43911d73643c56618c78ab8825aab3a87d198f56751687f15deea59"
+      "bytes": 47,
+      "sha256": "4269be2d7ee5fe84b5aa9bae33e541da04074abba98fc135fc9e30e06a33b94f"
     },
     {
       "path": "scripts/ver3/walker_geometry.py",
@@ -66,8 +66,8 @@
     },
     {
       "path": "scripts/ver3/analyze_integrated_walkers.py",
-      "bytes": 33618,
-      "sha256": "406079f4f4d05bbd4591a161d3c40a949931fc225c37ae610609ce2bdaa157a2"
+      "bytes": 42142,
+      "sha256": "171de1a6b8630aede21139c90d37c2424148aee73ed9e17d32b230b6da998953"
     },
     {
       "path": "scripts/ver3/analyze_integrated_structure.py",
@@ -136,28 +136,28 @@
     },
     {
       "path": "scripts/ver3/test_assembly_contract.py",
-      "bytes": 6196,
-      "sha256": "df1dfeeac5675200f9836d132a83bceff26f13189c67da57d0e8f44321c9944f"
+      "bytes": 6924,
+      "sha256": "b07c1a00b1ac4ab97de00d850b6fe6244afe6e955ec7935ab297fd5a03a801bb"
     },
     {
       "path": "scripts/ver3/export_integrated_prints.py",
-      "bytes": 7744,
-      "sha256": "d3b089b324ecb750da806b23ece16172e28af05c8e8b4ee9b6cb1dc15b46f569"
+      "bytes": 7944,
+      "sha256": "ca53d8ef4751b4b27e56e2cbf5845c405955a6e16651d642a2901d4629d41271"
     },
     {
       "path": "scripts/ver3/report_integrated_walkers.py",
-      "bytes": 25661,
-      "sha256": "ba443422766b88adbee35a8d0a3d6bbc433fea3bd058f02ec79ddbe4619c7b7a"
+      "bytes": 26017,
+      "sha256": "fa694d45656e7a582991ed37e36dbbc0d2fcee1e21a2feac5b71bde5fb38edfe"
     },
     {
       "path": "scripts/ver3/build_integrated_contract.py",
-      "bytes": 25426,
-      "sha256": "d5798d6a8f8c389b2683808e3e0c2e53a68c9ea160e9da45dbd6228b88c04755"
+      "bytes": 26865,
+      "sha256": "9c5ae7488bd99e10a31dc7afac92b14169c402c4282e0934982e9a1e84f5ce81"
     },
     {
       "path": "scripts/ver3/verify_integrated_package.py",
-      "bytes": 7621,
-      "sha256": "7cd4fb33422ea419466c36ff0e7294ad166f54f0dd0ac974cad054bed268212e"
+      "bytes": 11953,
+      "sha256": "368fdf4cd21f258ccf9b77f298d70205572e07745a62787fe733436d5fa0a786"
     },
     {
       "path": "scripts/ver3/beam.py",
@@ -193,6 +193,26 @@
       "path": "scripts/ver3/input_cartridge.py",
       "bytes": 7152,
       "sha256": "1a9f97cd3106909cb55efc0f3b343a5756c8975072807dcd3b3bd20044646c5d"
+    },
+    {
+      "path": "scripts/ver3/slice_integrated_representatives.py",
+      "bytes": 8949,
+      "sha256": "bb6ece15df36fe509da17a0a9e0908a8d70f48bac30223a4b46016ac262ce79d"
+    },
+    {
+      "path": "scripts/ver3/inspect_integrated_toolpaths.py",
+      "bytes": 20699,
+      "sha256": "b5c95589d41378a7504f8fb7a2a09c1e9920f6a9c0967a27c1b7933f0e29ae74"
+    },
+    {
+      "path": "scripts/ver3/test_slicing_inspection.py",
+      "bytes": 4162,
+      "sha256": "1884909e47b0934bd9d2aaa6982b134f890fe8e3ba36a6f833b90f94b60d9bce"
+    },
+    {
+      "path": "scripts/ver3/test_contact_frames.py",
+      "bytes": 4099,
+      "sha256": "caf2717ba1855d652d5bab199a4a4686d657f08224c73a90158e23329f63bd9f"
     }
   ],
   "requirements": {
@@ -266,13 +286,18 @@
       },
       "stages": {
         "path": "docs/ver3/integrated_r7/A/assembly_stages.json",
-        "bytes": 170759,
-        "sha256": "280d09330f56cd571fdac635839666ec05e78c4afe39f6b3c706daa4f6f9376e"
+        "bytes": 170878,
+        "sha256": "a973381002d31e6538728dc20cc9ade56d4abeae03cccb06f58ac282a5d3af2c"
       },
       "printAndSheetTemplates": {
         "path": "docs/ver3/integrated_r7/A/print_geometry.json",
-        "bytes": 39237,
-        "sha256": "a8998880bf45366af2d9be2808275799a15a6c0a1657800e5dcc5a566a0d4b6f"
+        "bytes": 39236,
+        "sha256": "55f7719ff5e576d21aa83506f41328e3238a9b379f6023111af4d65fefa3c373"
+      },
+      "contactFrames": {
+        "path": "docs/ver3/integrated_r7/A/contact_frames.json",
+        "bytes": 181055,
+        "sha256": "ca1a75dc273a9bece2fd9326a7ca465934dc56fdf3ba08b75c93abdec0791acf"
       },
       "validationFiles": [
         {
@@ -390,13 +415,18 @@
       },
       "stages": {
         "path": "docs/ver3/integrated_r7/B/assembly_stages.json",
-        "bytes": 182807,
-        "sha256": "e573f101cd210847a2771fba67fa0ad5a5a504e635ff1282fea28a5b3e7f3373"
+        "bytes": 182926,
+        "sha256": "3999fcd0bfa84f75e93102275339eff50f2bf6c4f4bc7993489b70e37fd68fc6"
       },
       "printAndSheetTemplates": {
         "path": "docs/ver3/integrated_r7/B/print_geometry.json",
         "bytes": 41285,
         "sha256": "047e0d1f5d58f1108769b5671ca04ef0599d98f6b3cc5c23f629de4fa645b21a"
+      },
+      "contactFrames": {
+        "path": "docs/ver3/integrated_r7/B/contact_frames.json",
+        "bytes": 182135,
+        "sha256": "63068c2273a065e442d595e1fde0ab851d92b7ea23b36e36db641a97dc251227"
       },
       "validationFiles": [
         {
@@ -514,13 +544,18 @@
       },
       "stages": {
         "path": "docs/ver3/integrated_r7/C/assembly_stages.json",
-        "bytes": 170757,
-        "sha256": "267f2d675a3c627c92b1e48d87f788c92d240e2667b08de3ef5465d4fa5dc104"
+        "bytes": 170876,
+        "sha256": "7284a19e07167d18cf61e841087ce54ed89a10bca41fb7503e9a7bf033895398"
       },
       "printAndSheetTemplates": {
         "path": "docs/ver3/integrated_r7/C/print_geometry.json",
-        "bytes": 39120,
-        "sha256": "13a128fdf5dcde3191b401e3a8bb34b207b6320b507558c82551c50d5399d5ca"
+        "bytes": 39119,
+        "sha256": "11f4dd7bffefcfe8a9e82d28a29f9fc7a232c5591fb421e4b254be4993c552f2"
+      },
+      "contactFrames": {
+        "path": "docs/ver3/integrated_r7/C/contact_frames.json",
+        "bytes": 181705,
+        "sha256": "c21179ebfbe5c989a0087664d9ab0b995504070ca7cdc138aee50a23bec0847d"
       },
       "validationFiles": [
         {
@@ -610,8 +645,8 @@
   },
   "slicingStatus": {
     "path": "docs/ver3/integrated_r7/slicing_status.json",
-    "bytes": 1778,
-    "sha256": "10db078e88b29b602898c4173c60ecdbd1f736252edb121277fffba64bfeb476"
+    "bytes": 4897,
+    "sha256": "b314856ddca33cb26621b4c344a0db22953b9d84c67f21b51889484c73cfa1cf"
   },
   "sharedOrder": {
     "path": "docs/ver3/integrated_r7/purchase_lots.json",
@@ -651,25 +686,48 @@
     "Assembly reference is uncompressed and not a solved floor-contact pose; do not impose a floor atZ=0 as a performance claim.",
     "Camera orbit and stated assembly paths are allowed representations; no self-start or dynamic walking animation is validated.",
     "Generation hashes describe the actual build history,including incremental root-only updates. The current source hash also includes the approved budget-only metadata update.",
-    "Old first-cut GLB,r3 calculations andr4/r6 data remain separately versioned; do not merge their numbers or geometry."
+    "Old first-cut GLB,r3 calculations andr4/r6 data remain separately versioned; do not merge their numbers or geometry.",
+    "Contact frames are decimated converged small-angle quasi-static states,not dynamics. Missing independent rocker angles remain null; never replace them with zero or arbitrary poses."
   ],
   "manufacturingRelease": false,
   "qualifiedWalkingPrototypeCount": 0,
   "physicalSelfStart": "UNKNOWN",
   "real30cmTravel": "UNKNOWN",
-  "publicationAuthorized": false,
+  "publicationAuthorized": true,
+  "publicationScope": {
+    "repository": "https://github.com/ktanino10/TeoJansen_Rhinoceros",
+    "pages": "https://ktanino10.github.io/TeoJansen_Rhinoceros/",
+    "manufacturingOrMachineOperationAuthorized": false
+  },
   "assemblyReviewCorrection": {
     "findingId": "R7-I1",
     "reviewedSnapshotCommit": "922a47c5ab815fc186dd1486726123ab08552ede",
     "geometryChanged": false,
     "pathInventoryDerivedFromOrderedOperations": true
   },
-  "candidateRevision": "v3-integrated-walkers-r7-15-review1",
+  "candidateRevision": "v3-integrated-walkers-r7-15-slice1",
+  "reviewedGeometryArtifactCommit": "f50978e55384d1b03417ed7115395e6e2c010e85",
+  "geometryChangedSinceReviewedArtifact": false,
+  "slicingReport": {
+    "path": "docs/ver3/integrated_r7/SLICING_ja.md",
+    "bytes": 8558,
+    "sha256": "32e31ea0b53ff8b6a89e8e9688e678e71fbf560347c7e1fc2d50001c9bca111b"
+  },
+  "representativeToolpathChecks": {
+    "path": "docs/ver3/integrated_r7/slicing/toolpath_checks.json",
+    "bytes": 26446,
+    "sha256": "ec82959d6d626e03cb5aa7f91c465e5be6dd1e06f03ed26bdc74d73607467ded"
+  },
+  "slicingProfileProvenance": {
+    "path": "docs/ver3/integrated_r7/slicing/profile_provenance.json",
+    "bytes": 9440,
+    "sha256": "e77520d6abbeb448e8e507ce75b950ba5df2616de33b1590f146c187fc2a2db8"
+  },
   "integrationReview": {
     "summary": {
       "path": "docs/ver3/integrated_r7/REVIEW_ja.md",
-      "bytes": 6390,
-      "sha256": "33ea5658908deec8ecafe7837765ea94ac4db4ef7cd7b4ee118ff1ca2a40aaec"
+      "bytes": 6811,
+      "sha256": "d2da34056c1151ee1c571c7c7c7c49cbe765e4fae29b360a2dee451280e7f909"
     },
     "initialReview": {
       "path": "docs/ver3/integrated_r7/review/initial_review_record.json",
@@ -691,5 +749,10 @@
     "path": "docs/ver3/integrated_r7/B/retainer_tool_access.json",
     "bytes": 1789,
     "sha256": "9ce81652134d6dec4275b396bab172057de1ab8394308f27d3601bd0aadc7712"
+  },
+  "stage04DocumentationCorrection": {
+    "path": "docs/ver3/integrated_r7/review/stage04_documentation_correction.json",
+    "bytes": 734,
+    "sha256": "774d51d23f43a9d2fdf6ed173de7815302acab12cd0d8f9624a35cca4023a20b"
   }
 }

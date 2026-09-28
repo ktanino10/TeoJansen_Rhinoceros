@@ -1454,7 +1454,7 @@
         "upper_pet_lateral_seat"
       ],
       "fasteningTorqueNm": null,
-      "noteJa": "主軸を一時53mm引き込み、上側PETをY=-4mmで上げてからY=0へ。アイドラーキャップ部品を同じIDで戻す。 Bの最終段右保持ナットには先端外幅7.6mm以下・厚さ1.8mm以下の小型工具という未確認の工具条件がある。大きい工具が入るとは扱わない。",
+      "noteJa": "主軸をX方向へ一時-53mm引き込み、上側PETを完成位置からY方向へ-4mmずらして下から上げ、同じ高さでY=-4→0mmへ着座する。工程07のX方向退避とは別。アイドラーキャップ部品を同じIDで戻す。 Bの最終段右保持ナットには先端外幅7.6mm以下・厚さ1.8mm以下の小型工具という未確認の工具条件がある。大きい工具が入るとは扱わない。",
       "physicalAssemblyPerformed": false,
       "temporaryPoseOperations": [
         {

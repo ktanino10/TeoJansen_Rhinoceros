@@ -1,0 +1,14 @@
+{
+  "reviewedArtifactCommit": "f50978e55384d1b03417ed7115395e6e2c010e85",
+  "status": "BYTE_IDENTICAL",
+  "immutableFileCount": 229,
+  "immutableBytes": 240313331,
+  "scope": "All reviewed r7 native/STEP/render meshes/STLs and non-Markdown engineering data except integration/stage/print/slicing status metadata.",
+  "checkedInventorySha256": "4c952a221b90b74b313bffe6b33ff4752ee84391bcf68e6b5036dc53573cdcf9",
+  "permittedMetadataOnlyChanges": [
+    "Stage04 note Y=-4 to 0 instead of left/right prose",
+    "A/C input pinion supportsMayBeRequired=true",
+    "Source/contract/manifest and representative slicing records"
+  ],
+  "cadOrPhysicalValueOrBomChanged": false
+}

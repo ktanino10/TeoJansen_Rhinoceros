@@ -27,4 +27,6 @@
 
 集計との照合は[保存時の整合記録](contact_frames_validation.json)を参照します。従来の`work_budget.json`と`work_profile.csv`は上書きしません。再現時には`--output-dir`で別の解析出力先を指定し、`--motion-output`と`--source-commit`でフレームだけを保存します。全CAD生成・全公差／干渉ケースの再実行は不要です。
 
+今回のA/B/Cでは、解析ソースのhash欄を除く既存集計の数値差と`work_profile.csv`の数値差はいずれも0でした。保存フレームの法線力合計・床位置・最大圧縮・周期端点も同じモデル内で照合しています。新たな独立物理レビューや実歩行の確認ではありません。
+
 フレーム間の補間は表示上の操作であり、接地切替を追加検証したことにはなりません。`manufacturingRelease=false`、実始動・30cm歩行はUNKNOWNを保持します。
