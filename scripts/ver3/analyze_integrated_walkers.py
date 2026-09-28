@@ -387,7 +387,8 @@ def contact_frames(assembly,gait,contact,result,source_commit,frame_step_deg=5):
     return {
         "schemaVersion":1,"revisionId":assembly["revisionId"],"designId":result["designId"],
         "sourceCommit":source_commit,"sourceHash":source_identity()[2],
-        "reviewedGeometryArtifactCommit":"f50978e55384d1b03417ed7115395e6e2c010e85",
+        "previousPublishedArtifactCommit":"8973992f0d48033224d91c7e9eb07144366b1fa2",
+        "geometryCorrectedForFloorClearance":True,
         "assemblySha256":hashlib.sha256((OUT/result["designId"]/"assembly.json").read_bytes()).hexdigest(),
         "mechanicalInputSha256":result["mechanicalInputSha256"],
         "analysisSourcesSha256":result["analysisSourcesSha256"],
@@ -424,7 +425,7 @@ def contact_frames(assembly,gait,contact,result,source_commit,frame_step_deg=5):
 
 
 def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=None,
-            motion_output=None,source_commit=None):
+            motion_output=None,source_commit=None,contact_sink=None):
     if motion_output is not None and output_dir is None:
         raise ValueError("Contact export requires a separate analysis output directory to preserve frozen budgets")
     if motion_output is not None and (assembly_override is not None or air_case is not None):
@@ -616,6 +617,8 @@ def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=N
                       "Negative aggregate output demand is still clipped as a conservative reference bound,not a claim that spring energy is dissipated twice.",
                       "Journal reactions are first-order statics; friction-force feedback remains unquantified.",
                       "Only the saved CAD BOM is counted; unmodeled guards/access fixes cannot be silently declared covered."]}
+    if contact_sink is not None:
+        contact_sink(assembly,gait,contact,result)
     if motion_output is not None:
         frames=contact_frames(assembly,gait,contact,result,source_commit)
         Path(motion_output).write_text(json.dumps(frames,ensure_ascii=False,indent=2,allow_nan=False)+"\n")

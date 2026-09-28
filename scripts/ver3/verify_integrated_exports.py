@@ -14,25 +14,29 @@ def verify(design,root):
     out=root/"docs/ver3/integrated_r7"/design
     cad=root/"FreeCAD/Ver.3/integrated_r7"/design
     manifest=json.loads((out/"assembly.json").read_text())
+    print("STAGE_BEGIN verify-native-open",design,flush=True)
     doc=App.openDocument(str(cad/f"Walker_{design}.FCStd"))
     try:
         objects=[o for o in doc.Objects if o.TypeId=="Part::Feature"]
         if len(objects)!=len(manifest["instances"]):
             raise RuntimeError("Native object count differs from canonical instances")
-        for item,obj in zip(manifest["instances"],objects):
+        for index,(item,obj) in enumerate(zip(manifest["instances"],objects)):
+            if index%100==0:print("STAGE_BEGIN verify-native-solids",design,index,flush=True)
             if obj.PartId!=item["part_id"] or not obj.Shape.isValid():
                 raise RuntimeError("Native part correspondence/validity failed: "+obj.Name)
             if item["name"]!=obj.Name:
                 item["requestedName"]=item["name"]
                 item["name"]=obj.Name
         source=[(o.Name,s) for o in objects for s in o.Shape.Solids]
+        print("STAGE_BEGIN verify-step-open",design,flush=True)
         exchange=Part.read(str(cad/f"Walker_{design}.step"))
         target=exchange.Solids
         if len(source)!=len(target) or not exchange.isValid() or any(not s.isValid() for s in target):
             raise RuntimeError("STEP solid count or validity failed")
         rows=[];surface=[]
         keys=("XMin","XMax","YMin","YMax","ZMin","ZMax")
-        for (name,s),t in zip(source,target):
+        for index,((name,s),t) in enumerate(zip(source,target)):
+            if index%100==0:print("STAGE_BEGIN verify-correspondence",design,index,flush=True)
             bounds=max(abs(getattr(s.BoundBox,k)-getattr(t.BoundBox,k)) for k in keys)
             relative=abs(t.Volume-s.Volume)/s.Volume
             if bounds>1e-4 or relative>5e-5:

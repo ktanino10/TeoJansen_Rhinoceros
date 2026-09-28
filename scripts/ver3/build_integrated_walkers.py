@@ -302,6 +302,11 @@ def foot_slider():
         result=union([result,cheek])
     result=cut(result,Part.makeCylinder(1.15,16,V(0,-8,pivot),V(0,1,0)))
     result=cut(result,Part.makeCylinder(2.05,8,V(0,-4,pivot),V(0,1,0)))
+    for sign in (-1,1):
+        depth=f.get("rockerPinSeatInsetMm",0)
+        if depth:
+            result=cut(result,Part.makeCylinder(f["rockerPinSeatDiameterMm"]/2,depth+.01,
+                       V(0,sign*(gap+f["rockerForkEarMm"]-depth),pivot),V(0,sign,0)))
     # Nominal8-degree stops;5 degrees is the accepted minimum after print error.
     stop_z=pivot+6*math.sin(math.radians(8))+2*math.cos(math.radians(8))
     for x in (-6,6):
@@ -312,7 +317,7 @@ def foot_slider():
 def foot_rocker():
     f=C["foot"];pivot=f["toeOffsetFromFNeutralMm"][1]
     cross=Part.makeBox(24,f["rockerWidthAtPivotMm"],4,V(-12,-f["rockerWidthAtPivotMm"]/2,pivot-2))
-    boss=Part.makeCylinder(5,f["rockerWidthAtPivotMm"],V(0,-f["rockerWidthAtPivotMm"]/2,pivot),V(0,1,0))
+    boss=Part.makeCylinder(f.get("rockerBossRadiusMm",5),f["rockerWidthAtPivotMm"],V(0,-f["rockerWidthAtPivotMm"]/2,pivot),V(0,1,0))
     toes=[Part.makeCylinder(f["toeRadiusMm"],8,V(x-4,0,pivot),V(1,0,0)) for x in (-12,12)]
     shape=union([cross,boss,*toes])
     return cut(shape,Part.makeCylinder(2.1,10,V(0,-5,pivot),V(0,1,0))).removeSplitter()
@@ -448,10 +453,17 @@ class Whole:
         return name
 
     def hardware(self,kind,size,origin,direction=(1,0,0),length=0,group="hardware",motion=None):
-        if kind=="bolt":
+        category="purchased"
+        if kind in ("bolt","cut_bolt"):
             pid=f"H_BOLT_M{size}_{length}";shape=metric_bolt(size,length);sku=f"BOLT_M{size}_{length}";density=7.85
+            if kind=="cut_bolt":
+                sku=f'BOLT_M{size}_{C["foot"]["rockerPinStockBoltLengthMm"]}'
+                category="cut_to_length"
         elif kind=="nut":
             pid=f"H_NUT_M{size}";shape=nut_shape(size);sku=f"NUT_M{size}";density=7.85
+        elif kind=="small_washer":
+            f=C["foot"];pid="H_WASHER_4_SMALL";sku="THRUST4_SMALL";density=7.85
+            shape=disk(f["rockerThrustWasherOuterMm"]/2,f["rockerThrustWasherThicknessMm"],f["rockerThrustWasherInnerMm"])
         elif kind=="washer":
             inner,outer,th={2:(2.2,5,.3),3:(3.2,7,.5),4:(4.3,9,.8),6:(6.4,11.5,.8)}[size]
             pid=f"H_WASHER_{size}";shape=disk(outer/2,th,inner);sku=f"WASHER_M{size}" if size in (2,3) else f"THRUST{size}";density=7.85
@@ -460,7 +472,10 @@ class Whole:
             sku="CE-308N" if size==3 else {8:"CE-2008N",12:"CE-2012N",20:"CE-2020N"}[length]
             density=8.5
         else:raise ValueError(kind)
-        self.define(pid,shape,"purchased",sku+"; metric dimensional model, no physical material certification",density=density,sku=sku)
+        spec=sku+"; metric dimensional model, no physical material certification"
+        if kind=="cut_bolt":
+            spec+=f'; cut/deburr stock16mm to under-head12.5+/-{C["foot"]["rockerPinCutAcceptanceMm"]}mm,not a new stock SKU; retain both M2 jam nuts and>=0.6mm full-thread projection'
+        self.define(pid,shape,category,spec,density=density,sku=sku)
         return self.add(pid,axis_pose(*origin,direction),group,motion)
 
     def clamp(self,x,yz,group,motion=None,clock=0):
@@ -829,6 +844,17 @@ def add_bearing_cap(a,name,yz,bearing_x,cap_x,side=1,thrust=14.6,bolt_half=13,in
     return pid
 
 
+def rocker_hardware(foot):
+    inset=foot.get("rockerPinSeatInsetMm",0)
+    width=foot["rockerWidthAtPivotMm"];washer=foot.get("rockerThrustWasherThicknessMm",.8)
+    return (("sleeve",2,-4,8),
+            ("cut_bolt" if inset else "bolt",2,-5.3+inset,foot.get("rockerPinBoltLengthMm",16)),
+            ("washer",2,-5.3+inset,0),("washer",2,5-inset,0),
+            ("nut",2,5.3-inset,0),("nut",2,6.9-inset,0),
+            ("small_washer" if inset else "washer",4,-width/2-washer,0),
+            ("small_washer" if inset else "washer",4,width/2,0))
+
+
 def add_legs(a):
     reference=P
     for side in (-1,1):
@@ -880,9 +906,7 @@ def add_legs(a):
                            {"kind":"foot","piece":"GUIDE","station":station,"side":side,"phase":phase})
             pivot=f["toeOffsetFromFNeutralMm"][1]
             direction=location[:3,1]
-            for kind,size,b,length in (("sleeve",2,-4,8),("bolt",2,-5.3,16),("washer",2,-5.3,0),
-                                      ("washer",2,5,0),("nut",2,5.3,0),("nut",2,6.9,0),
-                                      ("washer",4,-2.7,0),("washer",4,1.9,0)):
+            for kind,size,b,length in rocker_hardware(f):
                 origin=(location@np.array([0,b,pivot,1]))[:3]
                 a.hardware(kind,size,origin,direction,length,"feet",
                            {"kind":"foot","piece":"ROCKER_PIN","station":station,"side":side,"phase":phase})
@@ -1108,7 +1132,7 @@ def clock_input_collars(a):
                       "scope":"Actual assembly rotations of two round-bore collars; axial bearing datums unchanged. Nominal single-plane gravity balance only,not measured or dynamic balance."}
 
 
-def add_gear_shields(a):
+def add_gear_shields(a,only=None):
     guard=C.get("guards",{})
     if not guard.get("petGearShields",False):return
     thick=guard["petThicknessMm"];flange=guard["petReturnFlangeMm"]
@@ -1121,6 +1145,7 @@ def add_gear_shields(a):
     a.guard_sheet_blanks=[]
     a.guard_cut_scrap=[]
     for name,x,low,high,inward in layouts:
+        if only is not None and name not in only:continue
         ymin,ymax=guard["upperSheetBoundsYmm"] if name=="UPPER_RIGHT" else guard["sideSheetBoundsYmm"]
         mounts=[]
         for mount in a.cap_mounts:
@@ -1163,6 +1188,16 @@ def add_gear_shields(a):
             print("BOOLEAN_END PET",name,len(cut_result.Solids),"retained",len(retained),sum(p.Volume for p in retained),flush=True)
             return retained[0] if len(retained)==1 else Part.makeCompound(retained)
         shape=Part.makeBox(thick,ymax-ymin,high-low,V(x,ymin,low))
+        if name!="UPPER_RIGHT" and "sideSheetOutline" in guard:
+            bridge=guard["sideSheetUpperBridgeBottomMm"]
+            profile=Part.makeBox(thick,ymax-ymin,high-bridge,V(x,ymin,bridge))
+            coverage=guard["sideSheetGearCoverageMarginMm"]
+            for stage in a.red["stages"]:
+                center=a.red["axesYzMm"][stage["wheelAxis"]]
+                margin=guard.get("sideSheetLowerCoverageMarginMm",coverage) if stage["wheelAxis"]==len(a.red["axesYzMm"])-1 else coverage
+                radius=stage["wheel"]/2+stage["wheelAddendumCoefficient"]+margin
+                profile=profile.fuse(x_cylinder(radius,x,thick,center))
+            shape=solid(shape.common(profile)).removeSplitter()
         if flange:
             raise ValueError("This revision uses flat PET cuts; folded returns need their own manufacturing profile")
         # Round passages clear the full real rotating envelopes, not just
@@ -1227,7 +1262,8 @@ def add_gear_shields(a):
                                     "heightMm":high-low,"thicknessMm":thick,
                                     "assembledXmm":x,"lowZmm":low,"highZmm":high,
                                     "materialAttachmentSamplesMm":[list(p) for p in anchors],
-                                    "fingersafeOrImpactCertified":False})
+                                    "fingersafeOrImpactCertified":False,
+                                    "lowerEdgeFollowsGearEnvelope":name!="UPPER_RIGHT" and "sideSheetOutline" in guard})
 
 
 def finalize(a):

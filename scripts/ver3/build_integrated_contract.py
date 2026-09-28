@@ -138,7 +138,7 @@ def assembly_stages(data):
          [("add",g["rightCranks"]|g["rightCrankClamps"])],("HEX_2P5","WRENCH_5P5"),
          note="印刷された0/180度の部品とクランプ方向を識別する。")
     step("11_prepare_legs","6脚・案内・ばね・ロッカーを準備",[],("HEX_1P5","HEX_2P5","WRENCH_4"),
-         prepare=g["legsAndFeet"],note="ねじ山ではなく平滑金属スリーブを摺動面にする。")
+         prepare=g["legsAndFeet"],         note="ねじ山ではなく平滑金属スリーブを摺動面にする。ロッカーピンはM2x16を頭下面から12.5±0.1mmへ切断・端面処理する計画。実加工は未実施。2個のジャムナットと8mm金属スリーブ、外径8mm/厚0.5mmの小形M4座金を使用。内側ナットには先端厚0.8mm以下の工具が必要で、実工具適合は未確認。")
     step("12_legs","リンク層と金属ピンを取り付ける",
          [("add",g["legsAndFeet"])],("HEX_1P5","HEX_2P5","WRENCH_4"),
          note="Pのねじ頭は内側、ジャムナットは外側。ばね行程/停止は組立図と有限検査を参照。運転許可ではない。")
@@ -283,7 +283,9 @@ def source_identity():
         "report_integrated_walkers.py","build_integrated_contract.py","verify_integrated_package.py","beam.py","frame3d.py",
         "cad_parts.py","core.py","commercial_r3.py","study_r2.py","input_cartridge.py",
         "slice_integrated_representatives.py","inspect_integrated_toolpaths.py",
-        "test_slicing_inspection.py","test_contact_frames.py"]
+        "test_slicing_inspection.py","test_contact_frames.py","walker_floor.py",
+        "export_floor_envelopes.py","check_integrated_floor.py","test_walker_floor.py",
+        "refresh_integrated_floor_details.py","check_rocker_pin_access.py"]
     sources=[resource(ROOT/"scripts/ver3"/name) for name in source_files]
     dependencies=[resource(ROOT/"docs/ver3/common_input_r4/assembly.json"),
                   resource(ROOT/"FreeCAD/Ver.3/common_input_r4/CommonInputR4.FCStd"),
@@ -299,6 +301,7 @@ def build(source_commit):
     for name in "ABC":
         folder=OUT/name;a=json.loads((folder/"assembly.json").read_text())
         stages=assembly_stages(a)
+        stages[10]["additionalToolRequirement"]=resource(folder/"rocker_pin_access.json")
         if name=="B":
             tool_requirement=resource(folder/"retainer_tool_access.json")
             stages[3]["additionalToolRequirement"]=tool_requirement
@@ -320,6 +323,9 @@ def build(source_commit):
             "bom":resource(folder/"BOM.csv"),"purchaseLots":resource(folder/"purchase_lots.json"),
             "stages":resource(stage_file),"printAndSheetTemplates":resource(folder/"print_geometry.json"),
             "contactFrames":resource(folder/"contact_frames.json"),
+            "nonContactFloorClearance":resource(folder/"floor_clearance.json"),
+            "nativeFloorEnvelopes":resource(folder/"floor_envelopes.json"),
+            "rockerPinToolAccess":resource(folder/"rocker_pin_access.json"),
             "validationFiles":[resource(folder/file) for file in
                 ("static_collisions.json","gait_motion.json","assembly_access.json","contact_sensitivity.json",
                  "rotating_clearance.json","structure.json","work_budget.json","environment_sensitivity.json")],
@@ -342,7 +348,7 @@ def build(source_commit):
                       ("HEX_1P5","HEX_2P5","HEX_3","WRENCH_4","WRENCH_5P5","WRENCH_7")],
         "renderingLimits":["Assembly reference is uncompressed and not a solved floor-contact pose; do not impose a floor atZ=0 as a performance claim.",
                            "Camera orbit and stated assembly paths are allowed representations; no self-start or dynamic walking animation is validated.",
-                           "Generation hashes describe the actual build history,including incremental root-only updates. The current source hash also includes the approved budget-only metadata update.",
+                           "Generation hashes describe full and incremental build history. The floor correction changes C stage allocation and all three side PET/rocker-pin details; earlier unchanged-artifact claims apply only to their historical snapshot.",
                            "Old first-cut GLB,r3 calculations andr4/r6 data remain separately versioned; do not merge their numbers or geometry."],
         "manufacturingRelease":False,"qualifiedWalkingPrototypeCount":0,
         "physicalSelfStart":"UNKNOWN","real30cmTravel":"UNKNOWN","publicationAuthorized":True,
@@ -351,9 +357,13 @@ def build(source_commit):
                             "manufacturingOrMachineOperationAuthorized":False}}
     contract["assemblyReviewCorrection"]={"findingId":"R7-I1","reviewedSnapshotCommit":"922a47c5ab815fc186dd1486726123ab08552ede",
         "geometryChanged":False,"pathInventoryDerivedFromOrderedOperations":True}
-    contract["candidateRevision"]="v3-integrated-walkers-r7-15-slice1"
+    contract["candidateRevision"]=cfg["revisionId"]
     contract["reviewedGeometryArtifactCommit"]="f50978e55384d1b03417ed7115395e6e2c010e85"
-    contract["geometryChangedSinceReviewedArtifact"]=False
+    contract["geometryChangedSinceReviewedArtifact"]=True
+    contract["previousPublishedArtifactCommit"]="8973992f0d48033224d91c7e9eb07144366b1fa2"
+    contract["floorCorrection"]={"report":resource(OUT/"FLOOR_CORRECTION_ja.md"),
+                                 "baseline":resource(OUT/"review/floor_conflict_baseline.json"),
+                                 "independentlyReviewed":False,"ordinaryAuthorChecksOnly":True}
     contract["slicingReport"]=resource(OUT/"SLICING_ja.md")
     contract["representativeToolpathChecks"]=resource(OUT/"slicing/toolpath_checks.json")
     contract["slicingProfileProvenance"]=resource(OUT/"slicing/profile_provenance.json")

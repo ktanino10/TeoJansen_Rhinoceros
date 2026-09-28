@@ -160,6 +160,34 @@ def analyze(design):
             "catalogueRatedForceN":foot["springRatedMaxLoadN"],
             "loadedCompressionFromCadMassMm":w["contact"]["maximum_guide_compression_mm"],
             "notAMeasuredSpringCurve":True}
+    floor=json.loads((folder/"floor_clearance.json").read_text())
+    if not floor["complete"] or floor["status"]!="PASS":
+        raise ValueError("The rocker screen requires the complete current floor/support cases")
+    normal=max(row["maximumModeledFootNormalN"] for row in floor["cases"])
+    load=normal*math.sqrt(1+foot["groundFrictionCoefficientAssumed"]**2)
+    inset=foot["rockerPinSeatInsetMm"];gap=foot["rockerForkInnerHalfGapMm"]
+    sleeve=foot["rockerSleeveLengthMm"];ear=foot["rockerForkEarMm"]
+    seat=gap+ear-inset
+    if abs(2*seat-sleeve)>1e-9:raise ValueError("Rocker clamp seats do not end on the metal sleeve")
+    nut_end=5.3-inset+2*1.6
+    tip=-5.3+inset+foot["rockerPinBoltLengthMm"]-foot["rockerPinCutAcceptanceMm"]
+    free=2*gap-foot["rockerWidthAtPivotMm"]-2*foot["rockerThrustWasherThicknessMm"]
+    if tip-nut_end<.6-1e-9 or abs(free-.6)>1e-9:raise ValueError("Rocker thread projection or free stack changed")
+    side_wall=(10-foot["rockerPinSeatDiameterMm"])/2
+    boss_wall=foot["rockerBossRadiusMm"]-2.1
+    rocker={"maximumNormalForceFromAllCasesN":normal,"resultantWithAssumedFloorFrictionN":load,
+            "metalSleeveLengthMm":sleeve,"opposedClampSeatDistanceMm":2*seat,
+            "minimumThreadProjectionAfterCutToleranceMm":tip-nut_end,"M2ThreadPitchMm":.4,
+            "twoUnchangedFullHeightJamNuts":True,"axialRockerFreeClearanceMm":free,
+            "recessSideLigamentMm":side_wall,"recessResidualEarThicknessMm":ear-inset,
+            "bossRadialLigamentMm":boss_wall,
+            "nominalSleeveBearingPressureMpa":load/(4*foot["rockerWidthAtPivotMm"]),
+            "bossNetSectionScreenMpa":load/(2*boss_wall*foot["rockerWidthAtPivotMm"]),
+            "recessCheekNetSectionScreenMpa":load/(4*side_wall*(ear-inset)),
+            "balancedTwoPadCrossbarBendingMpa":(load*foot["rockerHalfSpanMm"]/2)*2/(foot["rockerWidthAtPivotMm"]*4**3/12),
+            "toolWorkingEndThicknessMaximumMm":.8,"actualToolModelOrOwnershipConfirmed":False,
+            "physicalPreloadFitWearOrImpactQualified":False,
+            "scope":"Nominal section/load screens; metal sleeve carries the axial clamp path. No measured FDM strength,thread class,preload,fatigue or single-pad impact qualification."}
     meshes=[]
     for stage in a["reduction"]["stages"]:
         meshes.append(gear_pair_metrics(1,stage["pinion"],stage["wheel"],25,.3))
@@ -181,7 +209,7 @@ def analyze(design):
             "inputShaftGravityBeam":z,"inputShaftTransverseBeam":y,
             "fixedCageGravityWrenchAtFloatingTowerNAndNmm":guard_wrench.tolist(),
             "inputTowerLocalCases":cases,"loadPathScreens":same_load,"springStop":spring,
-            "frameSplice":splice,
+            "frameSplice":splice,"rockerPinRetention":rocker,
             "gearGeometry":meshes,
             "wholeStructureQualification":"UNKNOWN",
             "limits":["Actual16-sided prism area and second moment,not a circle with unchanged mass.",

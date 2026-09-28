@@ -13,6 +13,7 @@ import numpy as np
 from walker_geometry import ROOT,OUT,CAD
 from build_integrated_contract import validate_path_inventory
 from slice_integrated_representatives import PARTS
+from walker_floor import identity as floor_identity
 
 
 def load(path):
@@ -107,6 +108,31 @@ def main():
             if "nativeSha256" in result and result["nativeSha256"]!=native_hash:raise ValueError("Stale native check")
         contact=load(folder/"contact_sensitivity.json")
         if contact["passed"]!=contact["total"] or contact["total"]!=162:raise ValueError("Support cases are incomplete")
+        floor=load(folder/"floor_clearance.json");envelopes=load(folder/"floor_envelopes.json")
+        if (floor["status"]!="PASS" or not floor["complete"] or floor["caseCount"]!=163
+                or floor["poseCount"]!=29880 or floor["nativeSha256"]!=native_hash
+                or envelopes["nativeSha256"]!=native_hash
+                or floor["mechanicalIdentity"]!=floor_identity(a)
+                or envelopes["mechanicalIdentity"]!=floor_identity(a)):
+            raise ValueError("Incomplete or stale whole-body floor verification")
+        if {r["instance"] for r in floor["worstPerInstance"]}!=set(ids) or len(floor["worstPerInstance"])!=len(ids):
+            raise ValueError("The floor result omitted an assembly instance")
+        if set(envelopes["parts"])!=set(a["parts"]):
+            raise ValueError("A native floor-envelope definition is missing")
+        for case in floor["cases"]:
+            expected=720 if case["caseId"]=="nominal_dense" else 180
+            if (case["status"]!="PASS" or case["phaseCount"]!=expected
+                    or case["checkedInstances"]!=len(ids) or case["failures"]
+                    or case["worst"]["minimumReservedClearanceMm"]<0
+                    or not case["maximumModeledFootNormalN"]>0):
+                raise ValueError("A whole-body floor case is incomplete or failed")
+        for filename,expected_hash in floor["checkerSourcesSha256"].items():
+            if hashlib.sha256((ROOT/"scripts/ver3"/filename).read_bytes()).hexdigest()!=expected_hash:
+                raise ValueError("Floor checker source differs from the executed result")
+        tool=load(folder/"rocker_pin_access.json")
+        if (tool["nativeSha256"]!=native_hash or tool["status"]!="PASS_REQUIRED_TOOL_ENVELOPE"
+                or len(tool["records"])!=12 or any(r["status"]!="PASS" for r in tool["records"])):
+            raise ValueError("Rocker-pin required-tool access is incomplete")
         motion=load(folder/"gait_motion.json")
         if motion["poses"]!=216:raise ValueError("Operating pose set differs")
         printing=load(folder/"print_geometry.json")
@@ -170,7 +196,7 @@ def main():
             if not target.exists():raise ValueError(f"Broken document link: {file.relative_to(ROOT)} -> {href}")
     validate_slicing(load(OUT/"slicing_status.json"),load(OUT/"slicing/toolpath_checks.json"),
                      load(OUT/"slicing/profile_provenance.json"))
-    print("PASS: frozen hashes,three native sets,actual instances/BOM/mass,all declared finite checks,stage operations,links and approved standalone budgets.")
+    print("PASS: current hashes,three native sets,instances/BOM/mass,declared finite checks,all-instance floor cases,required-tool access,stage operations,links and approved standalone budgets.")
     print("Physical qualification remains0. Five representative toolpaths are inspected,with exposed first-layer support removal unresolved; actual airflow,friction,fit,strength,tools and30cm travel remain unverified.")
 
 

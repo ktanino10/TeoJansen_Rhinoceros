@@ -1,5 +1,5 @@
 {
-  "revisionId": "v3-integrated-walkers-r7-15",
+  "revisionId": "v3-integrated-walkers-r7-16-floor1",
   "scope": "Three whole-machine candidates from one common mechanism; actual physical validation remains separate",
   "requirements": {
     "coldAirReference": "preserve R3 adopted6.4m/s local-reference-as-Gaussian-peak, sigma20mm,150mm plane; not a measured product guarantee",
@@ -65,6 +65,10 @@
       "petSheetPriceTaxIncludedJpy": 680,
       "petSheetSource": "https://www.dcm-ekurashi.com/goods/217260",
       "sideSheetBoundsYmm": [-109,110],
+      "sideSheetOutline": "lower edge follows the union of actual gear radial envelopes plus3mm; no full-width rectangle at the largest radius",
+      "sideSheetGearCoverageMarginMm": 3,
+      "sideSheetLowerCoverageMarginMm": 0.65,
+      "sideSheetUpperBridgeBottomMm": -25.93,
       "upperSheetBoundsYmm": [-96,69.5],
       "lowerRightSheetTopZmm": 40,
       "qualification": "Real removable cage integrated with floating cap; no impact/fragment containment certification. End-grid and cylindrical-grid clear openings are at most9mm nominal outside necessary shaft/frame passages."
@@ -122,7 +126,16 @@
       "laneConstruction": "two8mm rolling pads and one20mm brass guide per leg. Foot centerX64.4 is the actual CEF link midplane. The guide is moved10mm rearward within that plane and lowered7mm,not cantilevered22mm outboard; both spring axes stay over the rocker. Support uses each foot center,not an enlarged polygon.",
       "rockerHalfSpanMm": 12,
       "rockerTravelDeg": 5,
-      "rockerWidthAtPivotMm": 3.8,
+      "rockerWidthAtPivotMm": 4.4,
+      "rockerBossRadiusMm": 4.3,
+      "rockerPinSeatInsetMm": 1,
+      "rockerPinSeatDiameterMm": 5.4,
+      "rockerPinBoltLengthMm": 12.5,
+      "rockerPinStockBoltLengthMm": 16,
+      "rockerPinCutAcceptanceMm": 0.1,
+      "rockerThrustWasherInnerMm": 4.5,
+      "rockerThrustWasherOuterMm": 8,
+      "rockerThrustWasherThicknessMm": 0.5,
       "rockerSleeveLengthMm": 8,
       "rockerForkEarMm": 2,
       "rockerForkInnerHalfGapMm": 3,
@@ -211,7 +224,7 @@
   "candidates": [
     {"id":"A","direction":"large rotor, few stages","rotorDiameterMm":220,"activeSpanMm":32,"stageRatios":[12,12],"stagePinionTeeth":[12,12],"firstGearPlaneXmm":-25,"stageAxisDeltaYmm":[-15,-15]},
     {"id":"B","direction":"small rotor, high reduction/slower","rotorDiameterMm":160,"activeSpanMm":32,"stageRatios":[8,8,8],"stagePinionTeeth":[14,14,18],"stageAxisDeltaYmm":[10,-10,-20]},
-    {"id":"C","direction":"intermediate rotor, material-constrained light frame","rotorDiameterMm":200,"activeSpanMm":32,"stageRatios":[12,13],"stagePinionTeeth":[12,12],"firstGearPlaneXmm":-25,"stageAxisDeltaYmm":[-22,-10]}
+    {"id":"C","direction":"intermediate rotor, material-constrained light frame","rotorDiameterMm":200,"activeSpanMm":32,"stageRatios":[13,12],"stagePinionTeeth":[12,12],"firstGearPlaneXmm":-25,"stageAxisDeltaYmm":[-22,-10]}
   ],
   "sources": {
     "hexStock": {

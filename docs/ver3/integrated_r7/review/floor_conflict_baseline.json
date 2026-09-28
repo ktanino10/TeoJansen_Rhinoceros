@@ -1,0 +1,239 @@
+{
+  "artifactCommit": "8973992f0d48033224d91c7e9eb07144366b1fa2",
+  "mainMergeCommit": "3d69bfec5014ccef2caefc5e8b5fb0eb757dcf83",
+  "siteReproductionSha256": "2b98fb6ccad7ef585e73f62866b2094e5e2b336864e1b69663e0d93b2138764c",
+  "scope": "Before-correction positive controls. Source float64 mesh vertices and saved canonical linear contact map; not renderer polar decomposition or a rocker-state assumption.",
+  "canonicalFloorZMm": 0,
+  "bodyFixedControls": [
+    {
+      "design": "A",
+      "crankDeg": 0,
+      "instance": "S_GUARD_LOWER_RIGHT_001",
+      "vertexIndex": 1538,
+      "localVertexMm": [
+        42.3,
+        110.0,
+        -75.93
+      ],
+      "nativeVertexMm": [
+        42.3,
+        110.0,
+        -5.930000000000007
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "bodyHeightAndSlopes": [
+        77.79775161327943,
+        -0.012110228830703923,
+        -0.005950411493007636
+      ],
+      "minimumSourceWorldZMm": 0.700943669509808
+    },
+    {
+      "design": "A",
+      "crankDeg": 120,
+      "instance": "S_GUARD_LEFT_001",
+      "vertexIndex": 0,
+      "localVertexMm": [
+        -45.5,
+        110.0,
+        -75.93
+      ],
+      "nativeVertexMm": [
+        -45.5,
+        110.0,
+        -5.930000000000007
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "bodyHeightAndSlopes": [
+        77.91532293304157,
+        0.008418174517384911,
+        -0.010837452616725354
+      ],
+      "minimumSourceWorldZMm": 0.4101762046607562
+    },
+    {
+      "design": "A",
+      "crankDeg": 240,
+      "instance": "S_GUARD_LEFT_001",
+      "vertexIndex": 996,
+      "localVertexMm": [
+        -45.5,
+        -109.0,
+        -75.93
+      ],
+      "nativeVertexMm": [
+        -45.5,
+        -109.0,
+        -5.930000000000007
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "bodyHeightAndSlopes": [
+        77.91621022098245,
+        0.006796775494519865,
+        0.0007984275279030588
+      ],
+      "minimumSourceWorldZMm": 1.5899283354403557
+    },
+    {
+      "design": "B",
+      "crankDeg": 0,
+      "instance": "S_GUARD_LOWER_RIGHT_001",
+      "vertexIndex": 1521,
+      "localVertexMm": [
+        42.3,
+        110.0,
+        -75.93
+      ],
+      "nativeVertexMm": [
+        42.3,
+        110.0,
+        -5.930000000000007
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "bodyHeightAndSlopes": [
+        77.72773278926485,
+        -0.01075085899672581,
+        -0.007314017357451898
+      ],
+      "minimumSourceWorldZMm": 0.5384295443836313
+    },
+    {
+      "design": "B",
+      "crankDeg": 120,
+      "instance": "S_GUARD_LEFT_001",
+      "vertexIndex": 0,
+      "localVertexMm": [
+        -45.5,
+        110.0,
+        -75.93
+      ],
+      "nativeVertexMm": [
+        -45.5,
+        110.0,
+        -5.930000000000007
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "bodyHeightAndSlopes": [
+        77.75049267640287,
+        0.01052690591954267,
+        -0.012298698110252313
+      ],
+      "minimumSourceWorldZMm": -0.011338335064081662
+    },
+    {
+      "design": "B",
+      "crankDeg": 240,
+      "instance": "S_GUARD_LEFT_001",
+      "vertexIndex": 0,
+      "localVertexMm": [
+        -45.5,
+        110.0,
+        -75.93
+      ],
+      "nativeVertexMm": [
+        -45.5,
+        110.0,
+        -5.930000000000007
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "bodyHeightAndSlopes": [
+        77.87361681771236,
+        0.007971070232965068,
+        -8.372372586932825e-06
+      ],
+      "minimumSourceWorldZMm": 1.5800121611278801
+    },
+    {
+      "design": "C",
+      "crankDeg": 0,
+      "instance": "S_GUARD_LOWER_RIGHT_001",
+      "vertexIndex": 1533,
+      "localVertexMm": [
+        42.3,
+        110.0,
+        -81.93
+      ],
+      "nativeVertexMm": [
+        42.3,
+        110.0,
+        -11.930000000000007
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "bodyHeightAndSlopes": [
+        77.85808929971513,
+        -0.011479683726771491,
+        -0.005853503967453394
+      ],
+      "minimumSourceWorldZMm": -5.201386758347182
+    },
+    {
+      "design": "C",
+      "crankDeg": 120,
+      "instance": "S_GUARD_LEFT_001",
+      "vertexIndex": 0,
+      "localVertexMm": [
+        -45.5,
+        110.0,
+        -81.93
+      ],
+      "nativeVertexMm": [
+        -45.5,
+        110.0,
+        -11.930000000000007
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "bodyHeightAndSlopes": [
+        77.96522455716858,
+        0.008503818311100555,
+        -0.010615872116350622
+      ],
+      "minimumSourceWorldZMm": -5.519445108785068
+    },
+    {
+      "design": "C",
+      "crankDeg": 240,
+      "instance": "S_GUARD_LEFT_001",
+      "vertexIndex": 1013,
+      "localVertexMm": [
+        -45.5,
+        -109.0,
+        -81.93
+      ],
+      "nativeVertexMm": [
+        -45.5,
+        -109.0,
+        -11.930000000000007
+      ],
+      "cadReferenceBodyOriginZMm": 70.0,
+      "bodyHeightAndSlopes": [
+        77.94995034172831,
+        0.007122055551061019,
+        0.0007752280251608747
+      ],
+      "minimumSourceWorldZMm": -4.388603040587508
+    }
+  ],
+  "rotatingOutputControl": {
+    "design": "C",
+    "partId": "P_OUTPUT_WHEEL",
+    "crankDeg": 110,
+    "bodyHeightAndSlopes": [
+      77.81492432596123,
+      0.008663300016001869,
+      -0.011279163102419259
+    ],
+    "axisYzMm": [
+      0,
+      0
+    ],
+    "tipRadiusMm": 78.93,
+    "toothFaceXRangeMm": [
+      -15,
+      -11.8
+    ],
+    "sourceMeshSampleMinimumZMm": -1.2497652320420891,
+    "scope": "72 saved5-degree phases; not the entire continuous motion"
+  },
+  "earlierSupportPassDidNotIncludeWholeBodyFloorClearance": true,
+  "physicalTestPerformed": false
+}
