@@ -13,10 +13,14 @@ from walker_geometry import OUT
 
 def check(design,envelopes_path,scratch,output,nominal_only=False):
     envelopes=json.loads(envelopes_path.read_text())
+    for name,digest in envelopes["generatorSourcesSha256"].items():
+        if hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()!=digest:
+            raise ValueError("Native-envelope generator changed: "+name)
     cases=[];worst_by_instance={}
     source_hashes={name:hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
                    for name in ("walker_floor.py","check_integrated_floor.py","check_integrated_contact.py",
-                                "analyze_integrated_walkers.py","walker_contact.py","walker_kinematics.py")}
+                                "analyze_integrated_walkers.py","walker_contact.py","walker_kinematics.py",
+                                "walker_geometry.py")}
     def receive(assembly,contact,errors,case_id):
         report=floor_check(assembly,envelopes,contact,errors,case_id)
         for row in report.pop("perInstance"):

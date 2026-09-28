@@ -80,6 +80,7 @@ def check(assembly,envelopes,contact,errors=None,case_id="reference"):
     rows=[]
     for item in assembly["instances"]:
         part=envelopes["parts"][item["part_id"]]
+        nominal_low=None
         matrix=np.asarray(item["transform"]);rotation=matrix[:3,:3];translation=matrix[:3,3]
         motion=item["motion"];kind=motion["kind"]
         if kind in ("shaft","crank"):
@@ -125,6 +126,9 @@ def check(assembly,envelopes,contact,errors=None,case_id="reference"):
                     low+=local_normals@pivot+location
                 else:
                     low=minimum_cloud(relative,rel_circles,local_normals)+location
+                    if kind=="foot" and "nominalEnvelopePointCount" in part:
+                        count=part["nominalEnvelopePointCount"]
+                        nominal_low=minimum_cloud(relative[:count],rel_circles,local_normals)+location
             else:
                 raise ValueError("Unclassified non-contact geometry: "+kind)
         # Effective length errors already move each modeled joint and foot.
@@ -136,6 +140,9 @@ def check(assembly,envelopes,contact,errors=None,case_id="reference"):
                      "minimumBoundZMm":float(low[index]),"minimumReservedClearanceMm":clearance,
                      "additionalProfileAllowanceMm":allowance,
                      "crankDeg":float(np.degrees(theta[index])),"status":"PASS" if clearance>=0 else "FAIL"})
+        if nominal_low is not None:
+            rows[-1]["nominalShapeBoundAtSamePoseMm"]=float(nominal_low[index])
+            rows[-1]["stockLengthVerticalAllowanceMm"]=float(nominal_low[index]-low[index])
     if len(rows)!=len(assembly["instances"]) or {r["instance"] for r in rows}!={i["name"] for i in assembly["instances"]}:
         raise ValueError("The floor detector dropped an assembly instance")
     worst=min(rows,key=lambda row:row["minimumReservedClearanceMm"])

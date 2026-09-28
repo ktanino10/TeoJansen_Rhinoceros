@@ -5,6 +5,8 @@ from collections import defaultdict
 import hashlib
 import json
 from pathlib import Path
+import re
+import subprocess
 
 import numpy as np
 
@@ -304,6 +306,12 @@ def source_identity():
 
 def build(source_commit):
     sources,dependencies,source_digest=source_identity()
+    if not re.fullmatch(r"[0-9a-f]{40}",source_commit or ""):
+        raise ValueError("The contract requires an immutable source commit")
+    for item in sources+dependencies:
+        blob=subprocess.check_output(["git","show",source_commit+":"+item["path"]],cwd=ROOT)
+        if hashlib.sha256(blob).hexdigest()!=item["sha256"]:
+            raise ValueError("Source commit does not contain the current pinned input: "+item["path"])
     cfg=json.loads((ROOT/"scripts/ver3/walker_r7.json").read_text())
     designs=[]
     for name in "ABC":
@@ -376,6 +384,13 @@ def build(source_commit):
     contract["representativeToolpathChecks"]=resource(OUT/"slicing/toolpath_checks.json")
     contract["slicingProfileProvenance"]=resource(OUT/"slicing/profile_provenance.json")
     contract["stockFastenersAndTools"]=resource(OUT/"stock_fasteners_and_tools.json")
+    contract["additionalCPrintInspection"]={"status":resource(OUT/"C/slicing_status.json"),
+                                           "checks":resource(OUT/"C/slicing/toolpath_checks.json"),
+                                           "report":resource(OUT/"C/SLICING_ja.md")}
+    reference_costs={name:json.loads((OUT/name/"purchase_lots.json").read_text())["sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy"]
+                     for name in "ABC"}
+    contract["budgetConfirmationPending"]=any(value>cfg["requirements"]["materialBudgetJpy"] for value in reference_costs.values())
+    contract["standaloneReferenceCostsJpy"]=reference_costs
     contract["renderingLimits"].append("Contact frames are decimated converged small-angle quasi-static states,not dynamics. Missing independent rocker angles remain null; never replace them with zero or arbitrary poses.")
     contract["integrationReview"]={"summary":resource(OUT/"REVIEW_ja.md"),
         "initialReview":resource(OUT/"review/initial_review_record.json"),

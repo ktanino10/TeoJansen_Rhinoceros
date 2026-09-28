@@ -10,14 +10,27 @@ import re
 
 import numpy as np
 
-from walker_geometry import ROOT,OUT,CAD
+from walker_geometry import ROOT,OUT,CAD,reducer
 from build_integrated_contract import validate_path_inventory
 from slice_integrated_representatives import PARTS
 from walker_floor import identity as floor_identity
+from walker_contact import error_cases
 
 
 def load(path):
     return json.loads(path.read_text())
+
+
+def verify_resources(value):
+    if isinstance(value,dict):
+        if {"path","bytes","sha256"}<=value.keys():
+            path=(ROOT/value["path"]).resolve()
+            if (not path.is_relative_to(ROOT) or not path.is_file() or path.stat().st_size!=value["bytes"]
+                    or hashlib.sha256(path.read_bytes()).hexdigest()!=value["sha256"]):
+                raise ValueError("Stale or invalid contract resource: "+value["path"])
+        for item in value.values():verify_resources(item)
+    elif isinstance(value,list):
+        for item in value:verify_resources(item)
 
 
 def validate_slicing(status,checks,provenance):
@@ -64,10 +77,13 @@ def main():
     manifest=load(OUT/"manifest.json")
     contract=load(OUT/"integration_contract.json")
     comparison=load(OUT/"comparison.json")
+    budget_exceptions=[]
+    approved_budget=load(OUT/"requirements_approval.json")["approvedApproximateBudgetJpyPerMachine"]
+    verify_resources(contract)
     for doc in (manifest,contract,comparison):
         if doc["manufacturingRelease"] or doc["qualifiedWalkingPrototypeCount"]!=0:
             raise ValueError("Physical qualification was incorrectly promoted")
-    if contract["requirements"]["materialBudgetJpy"]!=23000:
+    if contract["requirements"]["materialBudgetJpy"]!=approved_budget:
         raise ValueError("The current user-approved budget is missing")
     if contract["schemaVersion"]!=2:
         raise ValueError("Assembly paths must use the inventory-bound workflow schema")
@@ -83,8 +99,20 @@ def main():
             raise ValueError("Artifact hash changed: "+row["path"])
     for design in contract["designs"]:
         name=design["id"];folder=OUT/name;a=load(folder/"assembly.json")
-        if a["revisionId"]!=contract["revisionId"] or a["parameters"]["requirements"]["materialBudgetJpy"]!=23000:
+        if a["revisionId"]!=contract["revisionId"] or a["parameters"]["requirements"]["materialBudgetJpy"]!=approved_budget:
             raise ValueError("Mixed current design or requirement revision")
+        train=reducer(a["candidate"],a["parameters"]["common"])
+        if (not np.allclose(train["axesYzMm"],a["reduction"]["axesYzMm"],atol=1e-9)
+                or not np.allclose(train["speedRatios"],a["reduction"]["speedRatios"],atol=1e-9)):
+            raise ValueError("Reducer coordinates or signed shaft ratios are stale")
+        if len(train["stages"])!=len(a["reduction"]["stages"]):
+            raise ValueError("A physical reducer stage was omitted")
+        for expected,saved in zip(train["stages"],a["reduction"]["stages"]):
+            for key in ("pinion","wheel","centreMm","xMm","pinionProfileShift","wheelProfileShift"):
+                if abs(expected[key]-saved[key])>1e-9:raise ValueError("Reducer stage differs: "+key)
+            if (saved.get("moduleMm",1)!=expected["moduleMm"]
+                    or saved.get("pressureAngleDeg",25)!=expected["pressureAngleDeg"]):
+                raise ValueError("A mesh lost its own module or pressure angle")
         native=CAD/name/f"Walker_{name}.FCStd";native_hash=hashlib.sha256(native.read_bytes()).hexdigest()
         if design["native"]["sha256"]!=native_hash or a["nativeStepStatus"]!="PASS":
             raise ValueError("Native/STEP identity or correspondence failed")
@@ -115,10 +143,18 @@ def main():
                 or floor["mechanicalIdentity"]!=floor_identity(a)
                 or envelopes["mechanicalIdentity"]!=floor_identity(a)):
             raise ValueError("Incomplete or stale whole-body floor verification")
+        expected_cases={"nominal_dense"}|{f'{entry["id"]}/guide={mode}/couple={sign}'
+            for entry in error_cases(a["parameters"]["common"]) for mode in (-1,0,1) for sign in (-1,1)}
+        if ({case["caseId"] for case in floor["cases"]}!=expected_cases or len(floor["cases"])!=163
+                or sum(case["phaseCount"] for case in floor["cases"])!=29880):
+            raise ValueError("A declared floor scenario was omitted or duplicated")
         if {r["instance"] for r in floor["worstPerInstance"]}!=set(ids) or len(floor["worstPerInstance"])!=len(ids):
             raise ValueError("The floor result omitted an assembly instance")
         if set(envelopes["parts"])!=set(a["parts"]):
             raise ValueError("A native floor-envelope definition is missing")
+        for filename,digest in envelopes["generatorSourcesSha256"].items():
+            if hashlib.sha256((ROOT/"scripts/ver3"/filename).read_bytes()).hexdigest()!=digest:
+                raise ValueError("Native-envelope generator source changed")
         for case in floor["cases"]:
             expected=720 if case["caseId"]=="nominal_dense" else 180
             if (case["status"]!="PASS" or case["phaseCount"]!=expected
@@ -204,10 +240,10 @@ def main():
             case=wind["nonContactFloor"]
             if case["status"]!="PASS" or case["phaseCount"]!=720 or case["checkedInstances"]!=len(ids):
                 raise ValueError("Incomplete non-contact floor check for a declared wind case")
-        if not price["guardsAndFitCouponsFullyIncluded"] or price["targetMaterialCostApproxJpy"]!=23000:
+        if not price["guardsAndFitCouponsFullyIncluded"] or price["targetMaterialCostApproxJpy"]!=approved_budget:
             raise ValueError("Full approved cost scope is incomplete")
-        if price["sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy"]>23000:
-            raise ValueError("Standalone reference cost exceeds approval")
+        if price["sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy"]>approved_budget:
+            budget_exceptions.append({"design":name,"referenceJpy":price["sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy"],"recordedBudgetJpy":approved_budget})
         if any(row["clockingAlreadyIncludedInCadTransforms"] is not True
                for row in stages["stages"] if "clockingAlreadyIncludedInCadTransforms" in row):
             raise ValueError("Ambiguous collar transforms")
@@ -218,6 +254,29 @@ def main():
             if not target.exists():raise ValueError(f"Broken document link: {file.relative_to(ROOT)} -> {href}")
     validate_slicing(load(OUT/"slicing_status.json"),load(OUT/"slicing/toolpath_checks.json"),
                      load(OUT/"slicing/profile_provenance.json"))
+    extra_status=load(OUT/"C/slicing_status.json")
+    extra=load(OUT/"C/slicing/toolpath_checks.json")
+    if (extra_status["status"]!="TWO_C_GEAR_TOOLPATHS_REVIEWED_WITH_WARNINGS"
+            or not extra_status["visualReviewPerformed"] or extra_status["dimensionalManufacturingApproval"]
+            or extra_status["printerContacted"] or extra_status["physicalPrintingPerformed"]
+            or {p["partId"] for p in extra["parts"]}!={"P_INPUT_PINION","P_COMPOUND_1"}):
+        raise ValueError("Invalid scope for additional C toolpath inspection")
+    for part in extra["parts"]:
+        if part["exitCode"] or hashlib.sha256((ROOT/part["stl"]).read_bytes()).hexdigest()!=part["stlSha256"]:
+            raise ValueError("Additional C toolpath input changed")
+        if any(not b["modelNeverClosesBoreCenter"] for b in part["bores"]):
+            raise ValueError("An additional C model bore closed")
+        for gear in part["gearLayers"]:
+            if gear["depositedEnvelopeTeeth"]!=gear["expectedTeeth"] or not gear["allDetectedTipsOnOneRootConnectedComponent"]:
+                raise ValueError("Additional C tooth-count/root check failed")
+        for image in part["layerImages"]:
+            if hashlib.sha256((OUT/"C/slicing"/image["path"]).read_bytes()).hexdigest()!=image["sha256"]:
+                raise ValueError("Additional C layer image changed")
+    compound=next(p for p in extra["parts"] if p["partId"]=="P_COMPOUND_1")
+    if abs(compound["gearLayers"][0]["maximumTipRadialSetbackMm"]-extra_status["firstWheelFaceMeasuredSetbackMm"])>1e-9:
+        raise ValueError("The reported first-face C slicing warning changed")
+    if budget_exceptions:
+        raise ValueError("All other package checks completed; standalone reference costs require budget confirmation: "+json.dumps(budget_exceptions))
     print("PASS: current hashes,three native sets,instances/BOM/mass,declared finite checks,all-instance floor cases,required-tool access,stage operations,links and approved standalone budgets.")
     print("Physical qualification remains0. Five representative toolpaths are inspected,with exposed first-layer support removal unresolved; actual airflow,friction,fit,strength,tools and30cm travel remain unverified.")
 

@@ -160,12 +160,15 @@ def export(design,library,output,snapshot=None):
                 cloud=np.asarray(entry["points"])
                 extension=cloud.copy();extension[extension[:,2]>0,2]+=tolerance
                 entry["points"]=np.vstack((cloud,extension)).tolist()
+                entry["nominalEnvelopePointCount"]=len(cloud)
                 entry["acceptedStockLengthRangeMm"]=[12-tolerance,12+tolerance]
                 entry["lengthAcceptanceNote"]="Stock length is measured before assembly; not a claimed supplier tolerance. No precision cutting."
             result[pid]={**entry,**extra}
             print("STAGE_END floor-envelope",design,pid,flush=True)
         payload={"designId":design,"revisionId":a["revisionId"],"mechanicalIdentity":identity(a),
                  "nativeSha256":hashlib.sha256(native.read_bytes()).hexdigest(),
+                 "generatorSourcesSha256":{name:hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
+                                           for name in ("export_floor_envelopes.py","walker_floor.py","walker_geometry.py")},
                  "parts":result,"rotatingInstances":rotating,"allAssemblyPartsRepresented":set(result)==set(a["parts"]),
                  "scope":"Native B-rep boxes or boundary enclosures. Trimmed circular arcs use circumscribed tangent segments (<=0.001mm excess),not the absent lower part of a full circle. Cylinder parameter rectangles enclose trimmed faces. Gear radial bounds use native analytic surfaces. Every instance remains checked; only intended rolling pads are removed from the rocker core.",
                  "physicalFloorTestPerformed":False}

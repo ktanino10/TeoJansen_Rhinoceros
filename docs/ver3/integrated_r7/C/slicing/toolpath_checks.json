@@ -1,0 +1,346 @@
+{
+  "reviewedArtifactCommit": null,
+  "orcaVersion": "2.4.2",
+  "inputArtifactCommit": "f72b2cf64813978f0d31d1a1eaeb4d968948caf5",
+  "designId": "C",
+  "sourceScriptSha256": "c80a4fd9f905d2bac50171a84d6b06a70d40b854cf37ccb92de67e623cfe559b",
+  "coordinateConvention": "Model-bed XY equals emitted G-code XY plus the declared single-nozzle offset; source STL placement comes from the saved 3MF. First-layer bounds are checked against Orca's own plate metadata.",
+  "coordinateSource": "https://github.com/OrcaSlicer/OrcaSlicer/blob/v2.4.2/src/libslic3r/GCode.cpp#L8123-L8134",
+  "scope": "Selected actual toolpaths only; center-open checks do not certify bore diameter, support removal, material strength or any physical walking.",
+  "modelAndSupportSeparated": true,
+  "machineStartupAndPurgeExcludedFromBedAndBoreChecks": true,
+  "physicalPrintingPerformed": false,
+  "parts": [
+    {
+      "partId": "P_INPUT_PINION",
+      "stl": "STL/Ver.3/integrated_r7/C/P_INPUT_PINION.stl",
+      "stlSha256": "27a157995f917f9e03edcd5b84271c8c5b8408e1c8564f72472944932dcfb531",
+      "processSha256": "c431fe03ca38bf2964589b4fa5d0cd214d8f96baa60f16a9615654cea5927c70",
+      "effectiveSettingsSha256": "5ca2eee75b25738eaa7c265e99ba33b80f5f28e6acbd86ecaeb846406f4cdf59",
+      "supportEnabled": true,
+      "exitCode": 0,
+      "orientationPolicy": "Preserve the exported build Z; arrange may rotate about Z only",
+      "scale": 1,
+      "layerInspectionStatus": "EXTRUSION_CHECKS_COMPUTED",
+      "gearTeeth": [
+        12
+      ],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          -0.882276184,
+          0.470732127,
+          0.0,
+          128.0
+        ],
+        [
+          -0.470732127,
+          -0.882276184,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": -151.91816902234893,
+      "privateProjectSha256": "323f39dc1166214f66742046fcefd7722300641018f9ddbab5d08cebd2c14ead",
+      "gcodeSha256": "b6a12be555f48fa90029c1b829a3b820df71c0317eb4fb5d2a6a834f5efcfae1",
+      "estimates": {
+        "timeEstimate": "model printing time: 18m 10s; total estimated time: 24m 52s",
+        "reportedLayerCount": 254,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 552.03,
+        "filament used [cm3]": 1.33,
+        "filament used [g]": 1.69
+      },
+      "modelLayerCount": 219,
+      "firstLayerBoundingBoxAgreementWithOrcaMm": 0.021735999999989986,
+      "allLayerCountIncludingSeparateSupportLayers": 254,
+      "featureSegmentCounts": {
+        "Support": 2457,
+        "Outer wall": 17221,
+        "Inner wall": 8969,
+        "Support interface": 364,
+        "Overhang wall": 363,
+        "Top surface": 38
+      },
+      "bores": [
+        {
+          "sourceCenterXYMm": [
+            0,
+            0
+          ],
+          "nominalInscribedRadiusMm": 2.6,
+          "checkedModelLayerCount": 219,
+          "minimumModelToolpathClearRadiusMm": 2.586470362395361,
+          "minimumSupportToolpathClearRadiusMm": -0.25,
+          "supportIntrusionLayers": [
+            {
+              "zMm": 0.2,
+              "heightMm": 0.2,
+              "clearRadiusMm": -0.25
+            }
+          ],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        }
+      ],
+      "gearLayers": [
+        {
+          "zMm": 10.12,
+          "layerHeightMm": 0.16,
+          "expectedTeeth": 12,
+          "nominalSectionTeeth": 12,
+          "depositedEnvelopeTeeth": 12,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 4.589918203547217,
+          "maximumTipRadialSetbackMm": 0.004186910503334751,
+          "tipPathWidthRangeMm": [
+            0.419999,
+            0.419999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        },
+        {
+          "zMm": 11.08,
+          "layerHeightMm": 0.16,
+          "expectedTeeth": 12,
+          "nominalSectionTeeth": 12,
+          "depositedEnvelopeTeeth": 12,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 4.588546715767943,
+          "maximumTipRadialSetbackMm": 0.004186903636531625,
+          "tipPathWidthRangeMm": [
+            0.419999,
+            0.419999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        }
+      ],
+      "supportInterfaceLayerHeightsMm": [
+        8.94057,
+        9.21371,
+        9.48686,
+        9.76
+      ],
+      "bridgeLayerHeightsMm": [],
+      "depositionBoundsXYMm": [
+        [
+          117.15,
+          117.15
+        ],
+        [
+          138.85,
+          138.85
+        ]
+      ],
+      "minimumBedEdgeMarginIncludingSupportAndBrimMm": 117.15,
+      "layerImages": [
+        {
+          "path": "P_INPUT_PINION_layers.png",
+          "sha256": "58bae30a488f267a58952d4fb23cfda445a99fd89f98a8ee68630bf016ebb50b"
+        },
+        {
+          "path": "P_INPUT_PINION_support_bore.png",
+          "sha256": "4f8fb8207fe751176880d46d6ee590fdc60410d80e8c1d0a741dae58236d1b7f"
+        },
+        {
+          "path": "P_INPUT_PINION_tooth_detail.png",
+          "sha256": "9785b7ba689a577f8a7edd9f00f6e1a044a5b7459ceae8a53543a785e11bbdf4"
+        }
+      ]
+    },
+    {
+      "partId": "P_COMPOUND_1",
+      "stl": "STL/Ver.3/integrated_r7/C/P_COMPOUND_1.stl",
+      "stlSha256": "7d55514164dc831c99637fdab4f08c95210b1ef21f57b4b4e952eb7597ef6860",
+      "processSha256": "c431fe03ca38bf2964589b4fa5d0cd214d8f96baa60f16a9615654cea5927c70",
+      "effectiveSettingsSha256": "5ca2eee75b25738eaa7c265e99ba33b80f5f28e6acbd86ecaeb846406f4cdf59",
+      "supportEnabled": true,
+      "exitCode": 0,
+      "orientationPolicy": "Preserve the exported build Z; arrange may rotate about Z only",
+      "scale": 1,
+      "layerInspectionStatus": "EXTRUSION_CHECKS_COMPUTED",
+      "gearTeeth": [
+        156,
+        12
+      ],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          0.891575952,
+          -0.452871198,
+          0.0,
+          128.0
+        ],
+        [
+          0.452871198,
+          0.891575952,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 26.928046797027438,
+      "privateProjectSha256": "6cae4f92fce956ad519e123bcae16c5f5304ae833fc031c7e25f469f6edcf2f2",
+      "gcodeSha256": "6c96889dedaed486767f05849c384f96fe98dd87b2945b016b531653be6b0de5",
+      "estimates": {
+        "timeEstimate": "model printing time: 2h 36m 34s; total estimated time: 2h 43m 15s",
+        "reportedLayerCount": 342,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 15173.64,
+        "filament used [cm3]": 36.5,
+        "filament used [g]": 46.35
+      },
+      "modelLayerCount": 275,
+      "firstLayerBoundingBoxAgreementWithOrcaMm": 0.02114999999999867,
+      "allLayerCountIncludingSeparateSupportLayers": 342,
+      "featureSegmentCounts": {
+        "Support": 30572,
+        "Outer wall": 49108,
+        "Inner wall": 130429,
+        "Support interface": 5740,
+        "Overhang wall": 7532,
+        "Bridge": 283,
+        "Internal solid infill": 4362,
+        "Top surface": 1603
+      },
+      "bores": [
+        {
+          "sourceCenterXYMm": [
+            0,
+            0
+          ],
+          "nominalInscribedRadiusMm": 2.56,
+          "checkedModelLayerCount": 275,
+          "minimumModelToolpathClearRadiusMm": 2.5502028114257267,
+          "minimumSupportToolpathClearRadiusMm": -0.25,
+          "supportIntrusionLayers": [
+            {
+              "zMm": 0.2,
+              "heightMm": 0.2,
+              "clearRadiusMm": -0.25
+            }
+          ],
+          "modelNeverClosesBoreCenter": true,
+          "dimensionOrFitCertified": false
+        }
+      ],
+      "gearLayers": [
+        {
+          "zMm": 20.2,
+          "layerHeightMm": 0.16,
+          "expectedTeeth": 156,
+          "nominalSectionTeeth": 156,
+          "depositedEnvelopeTeeth": 156,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 68.75998735766436,
+          "maximumTipRadialSetbackMm": 0.05188227305436044,
+          "tipPathWidthRangeMm": [
+            0.419999,
+            0.419999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        },
+        {
+          "zMm": 21.0,
+          "layerHeightMm": 0.16,
+          "expectedTeeth": 156,
+          "nominalSectionTeeth": 156,
+          "depositedEnvelopeTeeth": 156,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 68.75993712662797,
+          "maximumTipRadialSetbackMm": 0.0007535430271587984,
+          "tipPathWidthRangeMm": [
+            0.419999,
+            0.419999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        },
+        {
+          "zMm": 30.92,
+          "layerHeightMm": 0.16,
+          "expectedTeeth": 12,
+          "nominalSectionTeeth": 12,
+          "depositedEnvelopeTeeth": 12,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 4.748562198912036,
+          "maximumTipRadialSetbackMm": 0.005995284623751651,
+          "tipPathWidthRangeMm": [
+            0.419999,
+            0.419999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        }
+      ],
+      "supportInterfaceLayerHeightsMm": [
+        4.12,
+        4.4,
+        4.68,
+        4.96,
+        19.0133,
+        19.2889,
+        19.5644,
+        19.84
+      ],
+      "bridgeLayerHeightsMm": [
+        20.2
+      ],
+      "depositionBoundsXYMm": [
+        [
+          53.666,
+          53.666
+        ],
+        [
+          202.334,
+          202.334
+        ]
+      ],
+      "minimumBedEdgeMarginIncludingSupportAndBrimMm": 53.666,
+      "layerImages": [
+        {
+          "path": "P_COMPOUND_1_layers.png",
+          "sha256": "d5a1c02df5c6ef1cc1733fa975e14169a28b07dabdd582bd8bca9ce139f807f8"
+        },
+        {
+          "path": "P_COMPOUND_1_support_bore.png",
+          "sha256": "5a5b92300dfae60aae03a0351b6fea835160acf33a55e4c05de5c799067a77ed"
+        },
+        {
+          "path": "P_COMPOUND_1_tooth_detail.png",
+          "sha256": "c0a8cc3c009a34a866d99f6ffa998debcb9ef3f9d80ebbc129031d0aca96b52e"
+        }
+      ]
+    }
+  ]
+}
