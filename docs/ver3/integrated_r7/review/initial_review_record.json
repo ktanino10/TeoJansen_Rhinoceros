@@ -1,0 +1,446 @@
+{
+  "reviewerAgentId": "8e708228-0ade-45b3-bc89-9c88abb9c78a",
+  "newIndependentContext": true,
+  "modelOverrideSpecified": false,
+  "pathRedactionOnly": true,
+  "originalReportSha256": "ef13f3da7b08e18a36d6ab945e58eb9c8be8ba623008c1b1bf874429b28020a6",
+  "originalFindingsSha256": "58f2b9186e062b70cad8a313263dcaed6bcd0f219434fe565772b4cc92b044a9",
+  "originalProbeFiles": [
+    {
+      "path": "probes/p01_contact.py",
+      "sha256": "c42a37d69c67d95246729f702a5c1de30afff717fedffebda0b6057be6a6a833"
+    },
+    {
+      "path": "probes/p02_work_air.py",
+      "sha256": "259152cccc7d951abf35f25179b2aa88dcebd28877f2f039c79c2a6e49aaa215"
+    },
+    {
+      "path": "probes/p03_native.py",
+      "sha256": "f03baa70d5ca67024230a7315f5f7aa8c15d29632d66c2a62e77cb1f3a38bbac"
+    },
+    {
+      "path": "probes/p04_contract.py",
+      "sha256": "82176def0b8ee0e5f105f90032823e78dacb4c32326b045789bb0478b3e481c0"
+    },
+    {
+      "path": "probes/p05_budget.py",
+      "sha256": "47b71b289f2ed98a5b699c62d0b3123055046bb730a316a5557ee898a270d905"
+    },
+    {
+      "path": "probes/p06_stage_collision.py",
+      "sha256": "c51e75da6dfda0e614eabb034d90a169527f1199d93b9dfb44c44880d872b27d"
+    },
+    {
+      "path": "probes/probe_notes.md",
+      "sha256": "e9b6cc5583fcd169e6d1a45fd4505b38ed3dd5cf39797f655d91913c66aa1d54"
+    }
+  ],
+  "review": {
+    "schemaVersion": 1,
+    "reviewType": "new-independent-r7-whole-walker-integration",
+    "reviewDateJst": "2026-09-28",
+    "verdict": "REQUEST_CHANGES",
+    "target": {
+      "repository": "ktanino10/TeoJansen_Rhinoceros",
+      "workspace": "<worktree>",
+      "branch": "ktanino10-ver3-feasibility-redesign",
+      "snapshotCommit": "922a47c5ab815fc186dd1486726123ab08552ede",
+      "sourceCommit": "2bec2d1784c0850946cc6a426aab7fd206bcf02c",
+      "revisionId": "v3-integrated-walkers-r7-15",
+      "sourceHash": "f537ee3120f5ea8dbbe8fbe501142375e65d67a3b53ffb2f540b7cb5df3a9574",
+      "manifestSha256": "4a9012e9378428aaa2b6c35b81a1ddcc2b0553859c649431e9011daf0074d2d9",
+      "contractSha256": "be4b2cfcd38d57855e08dc765b202bea0fb56634fda99ff59258f9ed0972e54f"
+    },
+    "independence": {
+      "newR7Review": true,
+      "notContinuationOrApprovalBy": [
+        "dae672f2-99c0-495a-a6ca-059e1bfbf790",
+        "5c0e8d4c-4f0a-4981-bcf7-91b479a2c8d2"
+      ],
+      "priorContextInformationSource": "User-provided review packet; no old reviewer was invoked",
+      "nestedAgentsUsed": false,
+      "factoriesUsed": false,
+      "otherSessionsCreated": false,
+      "modelOverrideUsed": false
+    },
+    "findings": [
+      {
+        "id": "R7-I1",
+        "severity": "Critical",
+        "confidence": "High",
+        "dimensions": [
+          "Correctness",
+          "Architecture"
+        ],
+        "claimsAffected": [
+          3,
+          5
+        ],
+        "designsConfirmed": [
+          "B"
+        ],
+        "titleJa": "工程04で装着済みのPET・保持ボルトを工程07の固定側から除外し、実nativeで干渉する下降経路をPASSとしている",
+        "locations": [
+          {
+            "path": "scripts/ver3/check_integrated_access.py",
+            "function": "stages",
+            "lines": [
+              98,
+              101
+            ],
+            "expression": "front_basket_and_rotor_lower: fixed=frames+drive"
+          },
+          {
+            "path": "scripts/ver3/build_integrated_contract.py",
+            "function": "assembly_stages",
+            "lines": [
+              104,
+              124
+            ],
+            "stages": [
+              "04_upper_sheets",
+              "06_prepare_rotor",
+              "07_lower_rotor"
+            ]
+          },
+          {
+            "path": "docs/ver3/integrated_r7/B/assembly_stages.json",
+            "jsonPointers": [
+              "/stages/3/orderedOperations",
+              "/stages/5/visibleAfter",
+              "/stages/6/validatedPathIds"
+            ]
+          },
+          {
+            "path": "docs/ver3/integrated_r7/B/assembly_access.json",
+            "pathId": "front_basket_and_rotor_lower",
+            "recordedStatus": "PASS"
+          },
+          {
+            "path": "FreeCAD/Ver.3/integrated_r7/B/Walker_B.FCStd",
+            "sha256": "dd6a68352a5fab903d5d9adb594b7bf1429a039a187ca375a344576e88ba9f02",
+            "objectIds": [
+              "H_INPUT_HUB_001",
+              "S_GUARD_UPPER_RIGHT_2_001",
+              "P_ROTOR_CAGE_FRONT_001",
+              "H_BOLT_M3_20_011",
+              "H_BOLT_M3_20_012"
+            ]
+          }
+        ],
+        "minimalReproduction": {
+          "script": "probes/p06_stage_collision.py",
+          "command": "PYTHONDONTWRITEBYTECODE=1 /Applications/FreeCAD.app/Contents/Resources/bin/python <private-review>/probes/p06_stage_collision.py",
+          "method": "Open the frozen B native in isolated CLI. Leave stage04 parts in their native placements. Translate the stage07 moving parts by [0,0,dz] mm. Sum the volume of common() for each pair of actual solids. Do not fuse assembly parts or save the document.",
+          "stopCrankDeg": 0,
+          "controlDistancesMm": [
+            0,
+            5,
+            10,
+            20
+          ],
+          "allDistancesAlreadyInFrozenPath": true,
+          "expectedMaximumUnintendedIntersectionMm3": 1e-05,
+          "observations": [
+            {
+              "moving": "H_INPUT_HUB_001",
+              "fixed": "S_GUARD_UPPER_RIGHT_2_001",
+              "fixedFirstAddedStage": "04_upper_sheets",
+              "stillInstalledBeforeStage07": true,
+              "missingFromFixedNames": true,
+              "intersectionMm3ByOffset": [
+                {
+                  "zOffsetMm": 0,
+                  "intersectionMm3": 0
+                },
+                {
+                  "zOffsetMm": 5,
+                  "intersectionMm3": 6.574035076044807
+                },
+                {
+                  "zOffsetMm": 10,
+                  "intersectionMm3": 9.662464586877448
+                },
+                {
+                  "zOffsetMm": 20,
+                  "intersectionMm3": 4.32003667325552
+                }
+              ]
+            },
+            {
+              "moving": "P_ROTOR_CAGE_FRONT_001",
+              "fixed": "H_BOLT_M3_20_011",
+              "fixedFirstAddedStage": "04_upper_sheets",
+              "stillInstalledBeforeStage07": true,
+              "missingFromFixedNames": true,
+              "intersectionMm3ByOffset": [
+                {
+                  "zOffsetMm": 0,
+                  "intersectionMm3": 0
+                },
+                {
+                  "zOffsetMm": 5,
+                  "intersectionMm3": 4.069624999995241
+                },
+                {
+                  "zOffsetMm": 10,
+                  "intersectionMm3": 2.5404894418411144
+                },
+                {
+                  "zOffsetMm": 20,
+                  "intersectionMm3": 10.479915453573458
+                }
+              ]
+            },
+            {
+              "moving": "P_ROTOR_CAGE_FRONT_001",
+              "fixed": "H_BOLT_M3_20_012",
+              "fixedFirstAddedStage": "04_upper_sheets",
+              "stillInstalledBeforeStage07": true,
+              "missingFromFixedNames": true,
+              "intersectionMm3ByOffset": [
+                {
+                  "zOffsetMm": 0,
+                  "intersectionMm3": 0
+                },
+                {
+                  "zOffsetMm": 5,
+                  "intersectionMm3": 2.332757803137632
+                },
+                {
+                  "zOffsetMm": 10,
+                  "intersectionMm3": 0
+                },
+                {
+                  "zOffsetMm": 20,
+                  "intersectionMm3": 2.110289571037134
+                }
+              ]
+            }
+          ],
+          "additionalOffGridEvidence": [
+            {
+              "zOffsetMm": 7.5,
+              "hubSheetIntersectionMm3": 9.569558268788125,
+              "cageBolt011IntersectionMm3": 4.777854747296119,
+              "cageBolt012IntersectionMm3": 2.929326293469593
+            },
+            {
+              "zOffsetMm": 12.5,
+              "hubSheetIntersectionMm3": 8.831744680342545,
+              "cageBolt011IntersectionMm3": 2.540489441840816
+            }
+          ]
+        },
+        "whyDecisionChangesJa": "最終静止位置が干渉しないことは、装着済み部品を残した指定工程が通ることを意味しない。現行PASSは契約より部品数の少ない別構成に対する結果であり、Bの同一工程・同一構成の統合完了を支持しない。既存の10mm検査点で再現するため、刻み幅だけの問題ではない。",
+        "minimumCorrectionAreaJa": [
+          "経路の固定在庫をorderedOperationsから導出するか、同じ工程の在庫と機械的に照合して、装着済みguards/bearing_capsの未検査を検出する。",
+          "実際に可能な工程順または下降経路へ整合させる。必要なら対象部品の取外し・同一IDによる再挿入・仮支持を明示し、その取外し／後付け経路も確認する。",
+          "この3部品対と全固定在庫を含む回帰検査を行い、assembly_access、assembly_stages、ASSEMBLY、integration_contractを同じ工程へ更新する。形状や部品が変わる場合はnative/BOM/質量等も対応させる。",
+          "検査から部品を隠す、干渉閾値を上げる、未実施の現物押込みを前提にする修正は不可。"
+        ],
+        "scopeLimitsJa": "Bの名目native工程で確認。A/Cの同工程の実交差は未計算。実物Dハブの開放状態、軸／ハブの微小参照交差、製造公差についての新しい断定ではない。"
+      }
+    ],
+    "probeResults": [
+      {
+        "id": "P01",
+        "script": "probes/p01_contact.py",
+        "status": "PASS",
+        "analyticTripodExpectedReactionsN": [
+          1.96133,
+          3.4323275,
+          4.4129925,
+          0,
+          0,
+          0
+        ],
+        "expectedEnergyDeltaNmm": 0.02646,
+        "observedEnergyDeltaNmm": 0.026460000000042783,
+        "independentBranchAngles": 12,
+        "maximumBranchPositionDifferenceMm": 3.9918655144511616e-14,
+        "maximumCadRockerCenterDifferenceMm": 2.0097183471152322e-14,
+        "realBContactSamples": 9,
+        "maximumForceMomentResidual": 8.810729923425242e-12
+      },
+      {
+        "id": "P02",
+        "script": "probes/p02_work_air.py",
+        "status": "PASS",
+        "manualSignedSpeedPerCrank": {
+          "B": [
+            -512,
+            64,
+            -8,
+            1
+          ],
+          "C": [
+            156,
+            -13,
+            1
+          ]
+        },
+        "independentStaticSupplyAtSavedWorstPhaseMilliNm": {
+          "B": 1.1565670486418378,
+          "C": 1.4629322589023395
+        },
+        "differenceFromSavedRequiredAtThatPhaseMilliNm": {
+          "B": 0.21195714549006242,
+          "C": 0.10595992431780685
+        },
+        "maximumRequiredTorqueIndependentlyResearchedOverFullCycle": false,
+        "actualFastMassComponents": 28,
+        "maximumGravityWorkFiniteDifferenceErrorNmm": 5.775309119826488e-10,
+        "newCoarseContactStates": 72,
+        "frictionForceDotSlipIntegralNmm": 50.4686586723996,
+        "nonnegativeCoulombBoundIntegralNmm": 50.50830232261073,
+        "maximumPlanarForceResidualN": 3.7239968227187337e-08,
+        "maximumYawMomentResidualNmm": 7.263894459264009e-07
+      },
+      {
+        "id": "P03",
+        "script": "probes/p03_native.py",
+        "status": "FAIL_WITH_R7-I1",
+        "passedBeforeStageCollision": [
+          "Seven frozen mesh transforms versus native geometry",
+          "B18T/M3 nut full radial envelope",
+          "5mm AF,8mm bearing journal,4mm smooth sleeve and axial keeper",
+          "Slotted physical6mm foot stop with6.01mm positive control",
+          "Six actual native incoming guard rays",
+          "Two new upper-PET positions against183 stage-fixed instances"
+        ],
+        "maximumMeshBoundErrorMm": 0.0012600256785875175,
+        "retainerRadialClearanceMm": 0.9745735194570582,
+        "old13mmHalfPitchIntersectionMm3": 0.0016753607579060466,
+        "current14mmHalfPitchIntersectionMm3": 0,
+        "hexSectionObservedMm2": 21.65063509461118,
+        "journalSectionObservedMm2": 27.563146112470314,
+        "smoothSleeveObservedVolumeMm3": 175.30087007031034,
+        "innerRingKeeperGapMm": 0.20000000000000284,
+        "sleeveToABRadialGapMm": 0.09999999999999432,
+        "footStop6p01ExpectedOverlapMm3": 0.05544383991865108,
+        "footStop6p01ObservedOverlapMm3": 0.055443839918672695,
+        "toolScope": "7.6mm circular working-end radial envelope only; real handle and actual tool not verified",
+        "probeDevelopmentNotes": "probes/probe_notes.md"
+      },
+      {
+        "id": "P04",
+        "script": "probes/p04_contract.py",
+        "status": "PASS_FOR_IDENTITY_AND_STATE_REPLAY",
+        "sourceAndDependencyRecords": 40,
+        "instancesByDesign": {
+          "A": 756,
+          "B": 791,
+          "C": 756
+        },
+        "totalInstances": 2303,
+        "partIdsByDesign": {
+          "A": 72,
+          "B": 75,
+          "C": 72
+        },
+        "stagesPerDesign": 12,
+        "removeAndReinsertQuantityEachPerDesign": 65,
+        "BVisibleAfterEachStage": [
+          83,
+          135,
+          205,
+          239,
+          277,
+          276,
+          292,
+          293,
+          317,
+          329,
+          329,
+          791
+        ],
+        "maximumNativeRelativePlacementError": 2.842170943040401e-14,
+        "warning": "State replay consistency is distinct from whether the collision checker includes the resulting installed inventory; see R7-I1."
+      },
+      {
+        "id": "P05",
+        "script": "probes/p05_budget.py",
+        "status": "PASS",
+        "standaloneReferenceJpy": {
+          "A": 22204.43,
+          "B": 22634.67,
+          "C": 22064.71
+        },
+        "approvedApproximateStandaloneBudgetJpy": 23000,
+        "domesticTaxUnclearReserveEachJpy": 178,
+        "optionalImportTaxReserveEachJpy": 568.32,
+        "firstBuildAccessoryPieces": 7,
+        "firstBuildAccessoryMassG": 118.36397372840563,
+        "BGuardMountedPiecesBlankRectanglesPurchasedSheets": [
+          4,
+          3,
+          1
+        ],
+        "BShaftStockMm": 500,
+        "BShaftCutPiecesMm": [
+          100,
+          100,
+          100,
+          58,
+          58
+        ],
+        "BShaftRemainingAfterAllowancesMm": 72,
+        "BMaterialFactor1p5ReferenceJpy": 23249.04,
+        "jointOrderAverageUsedAsStandalone": false
+      },
+      {
+        "id": "P06",
+        "script": "probes/p06_stage_collision.py",
+        "status": "PASS_REPRODUCING_R7-I1",
+        "actualSolidPairSamples": 12,
+        "samplingOffsetsMm": [
+          0,
+          5,
+          10,
+          20
+        ],
+        "finalPositionAllThreePairsClear": true,
+        "recordedPassingPathHasCollisionAtExisting10mmSample": true
+      }
+    ],
+    "verification": {
+      "specificationReadBeforeImplementation": true,
+      "primaryMechanismTestsReviewedBeforeImplementation": "scripts/ver3/test_walker_math.py,187 lines",
+      "author65TestSuiteRerunAsIndependentEvidence": false,
+      "author216PoseOr162SupportSuiteRerunAsIndependentEvidence": false,
+      "fullCadBuildExecuted": false,
+      "nativeReadOnlyCliVersion": "FreeCAD1.1.3",
+      "securityReview": "OUT_OF_SCOPE_AS_REQUESTED",
+      "initialFrozenFilesChecked": 279,
+      "finalFrozenFilesChecked": 279,
+      "frozenFileMismatches": [],
+      "finalManifestAndContractHashesMatchPacket": true,
+      "finalHeadMatchesSnapshot": true,
+      "finalBranchUnchanged": true,
+      "finalGitStatusPorcelain": "",
+      "repositoryFilesModified": false,
+      "primaryCheckoutExplicitlyAccessed": false,
+      "nativeDocumentsSavedOrRecomputed": false,
+      "liveGuiUsed": false,
+      "softwareInstalled": false,
+      "purchasingPrintingApplianceOrPublicationAction": false
+    },
+    "uncomputedBoundaries": [
+      "A/C actual native stage07 collisions",
+      "Continuous full assembly sweeps and full manufacturing tolerance intervals",
+      "New exhaustive full-cycle required-torque maximum search and complete COM/contact fixed-point recomputation",
+      "Full STEP reread/correspondence and whole-machine solid FEM",
+      "Actual miniature tool handle/fit,physical material/friction/air calibration,slicing,physical startup and300mm travel"
+    ],
+    "qualificationUnchanged": {
+      "manufacturingRelease": false,
+      "qualifiedWalkingPrototypeCount": 0,
+      "physicalSelfStart": "UNKNOWN",
+      "real30cmTravel": "UNKNOWN"
+    },
+    "passComplete": true,
+    "autonomousCorrectiveFollowUpStarted": false,
+    "followUpPolicy": "Await one explicitly requested narrow corrective-diff follow-up in this same context; no new review context."
+  }
+}

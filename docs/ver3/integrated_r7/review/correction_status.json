@@ -1,0 +1,77 @@
+{
+  "findingId": "R7-I1",
+  "reviewedSnapshotCommit": "922a47c5ab815fc186dd1486726123ab08552ede",
+  "reviewerAgentId": "8e708228-0ade-45b3-bc89-9c88abb9c78a",
+  "independentFollowUpStatus": "PENDING",
+  "geometryAndNumericalDataChanged": false,
+  "unchangedProtectedFileCount": 180,
+  "unchangedProtectedFilesAggregateSha256": "41658c4061caad5bdb9938bc9d9612cb6c14a11665c0e05afd0c5cc5bca0aca9",
+  "authorPathResults": [
+    {
+      "designId": "A",
+      "nativeSha256": "f093fdfcdfd1c860d3feaff24a95d7ec836b7ae39c8d740c1e94422a157cb304",
+      "pathCount": 10,
+      "exactPairs": 608,
+      "status": "PASS"
+    },
+    {
+      "designId": "B",
+      "nativeSha256": "dd6a68352a5fab903d5d9adb594b7bf1429a039a187ca375a344576e88ba9f02",
+      "pathCount": 10,
+      "exactPairs": 642,
+      "status": "PASS"
+    },
+    {
+      "designId": "C",
+      "nativeSha256": "c4180d6e48ff99d7135f209560f787b635cdcd430f17b2a083b111cd108af26c",
+      "pathCount": 10,
+      "exactPairs": 607,
+      "status": "PASS"
+    }
+  ],
+  "pathChange": {
+    "descentConstantOffsetMm": [
+      4,
+      0,
+      0
+    ],
+    "axialSeatingOffsetsMm": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "intersectionThresholdMm3": 1e-05,
+    "allInstalledNonmovingPartsIncluded": true
+  },
+  "regressionTestCount": 7,
+  "physicalQualification": {
+    "manufacturingRelease": false,
+    "qualifiedWalkingPrototypeCount": 0
+  },
+  "slicerApproval": "PENDING_PARENT_RELAY",
+  "correctiveSourceCommit": "124cf4a4555c7b68dd6a01deb41146ca39ed29e6",
+  "authorRegressionSuiteTests": 72,
+  "reviewConfirmationPending": true
+}

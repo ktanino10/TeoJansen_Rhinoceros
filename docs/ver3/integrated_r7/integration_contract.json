@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "revisionId": "v3-integrated-walkers-r7-15",
-  "sourceCommit": "2bec2d1784c0850946cc6a426aab7fd206bcf02c",
-  "sourceHash": "f537ee3120f5ea8dbbe8fbe501142375e65d67a3b53ffb2f540b7cb5df3a9574",
+  "sourceCommit": "124cf4a4555c7b68dd6a01deb41146ca39ed29e6",
+  "sourceHash": "197e5533bd60783c3ba5ff7222798223ffaa2712d92eb38e3d3c0b7a8aec5ee1",
   "sourceFiles": [
     {
       "path": "scripts/ver3/walker_r7.json",
@@ -106,8 +106,8 @@
     },
     {
       "path": "scripts/ver3/check_integrated_access.py",
-      "bytes": 10754,
-      "sha256": "f072f2f43565247b452ad3fe9f74c65c67b8c3cdc50b305462178ffdec788f13"
+      "bytes": 5212,
+      "sha256": "f7e2dc367f9286953210989a07b9b9d547097e444cdb94c65a42f578f2a2c055"
     },
     {
       "path": "scripts/ver3/check_integrated_contact.py",
@@ -135,24 +135,29 @@
       "sha256": "11589b2799f5f0ec3c775bf98fc4bdd09964dd19c3039cec9002b7d56f304972"
     },
     {
+      "path": "scripts/ver3/test_assembly_contract.py",
+      "bytes": 6196,
+      "sha256": "df1dfeeac5675200f9836d132a83bceff26f13189c67da57d0e8f44321c9944f"
+    },
+    {
       "path": "scripts/ver3/export_integrated_prints.py",
       "bytes": 7744,
       "sha256": "d3b089b324ecb750da806b23ece16172e28af05c8e8b4ee9b6cb1dc15b46f569"
     },
     {
       "path": "scripts/ver3/report_integrated_walkers.py",
-      "bytes": 25072,
-      "sha256": "f42aec771f40d4273d68bae7071a9b68870ab4276f397b0faecfb64ffe954afa"
+      "bytes": 25661,
+      "sha256": "ba443422766b88adbee35a8d0a3d6bbc433fea3bd058f02ec79ddbe4619c7b7a"
     },
     {
       "path": "scripts/ver3/build_integrated_contract.py",
-      "bytes": 16439,
-      "sha256": "21b37f605a24f3ee712cd5d472a37ab5d053bb7605eb89b485752307d3c86bee"
+      "bytes": 25426,
+      "sha256": "d5798d6a8f8c389b2683808e3e0c2e53a68c9ea160e9da45dbd6228b88c04755"
     },
     {
       "path": "scripts/ver3/verify_integrated_package.py",
-      "bytes": 7031,
-      "sha256": "cf37eb58092766c73c8313b962d15b472da4c6f2709206bd60ec6a8801d5bbf1"
+      "bytes": 7621,
+      "sha256": "7cd4fb33422ea419466c36ff0e7294ad166f54f0dd0ac974cad054bed268212e"
     },
     {
       "path": "scripts/ver3/beam.py",
@@ -261,8 +266,8 @@
       },
       "stages": {
         "path": "docs/ver3/integrated_r7/A/assembly_stages.json",
-        "bytes": 159755,
-        "sha256": "b8795871e0ad0bdcd671934c28e09244d6f49df6f474cf570611cb4073e56969"
+        "bytes": 170759,
+        "sha256": "280d09330f56cd571fdac635839666ec05e78c4afe39f6b3c706daa4f6f9376e"
       },
       "printAndSheetTemplates": {
         "path": "docs/ver3/integrated_r7/A/print_geometry.json",
@@ -282,8 +287,8 @@
         },
         {
           "path": "docs/ver3/integrated_r7/A/assembly_access.json",
-          "bytes": 32166,
-          "sha256": "82c036829b3ef905b3e431a2a0c0e3a74a734b4932414b5958c9ff1639fb249d"
+          "bytes": 114183,
+          "sha256": "57244215888b877e214f6c2102036767adcffbe23bea354f85aef0f8876776f0"
         },
         {
           "path": "docs/ver3/integrated_r7/A/contact_sensitivity.json",
@@ -385,8 +390,8 @@
       },
       "stages": {
         "path": "docs/ver3/integrated_r7/B/assembly_stages.json",
-        "bytes": 171717,
-        "sha256": "8b598c540fd8e8e4c1170fedd36083c7fb492f126e2bdf9ee2a77eb981f6640c"
+        "bytes": 182807,
+        "sha256": "e573f101cd210847a2771fba67fa0ad5a5a504e635ff1282fea28a5b3e7f3373"
       },
       "printAndSheetTemplates": {
         "path": "docs/ver3/integrated_r7/B/print_geometry.json",
@@ -406,8 +411,8 @@
         },
         {
           "path": "docs/ver3/integrated_r7/B/assembly_access.json",
-          "bytes": 34765,
-          "sha256": "23645a74e4a7e50ad5d79ed5620aa01e5c7503c57be17c50400cab1de28ee674"
+          "bytes": 128252,
+          "sha256": "fc87bd8b719292132fcfbf0be59347f5111418eecc59ce2997ce5ee952f16722"
         },
         {
           "path": "docs/ver3/integrated_r7/B/contact_sensitivity.json",
@@ -509,8 +514,8 @@
       },
       "stages": {
         "path": "docs/ver3/integrated_r7/C/assembly_stages.json",
-        "bytes": 159753,
-        "sha256": "2d2994b95d3ad45da2ec58dbcb2e22b79a2cf1491deeb799cf87780b8cd00e46"
+        "bytes": 170757,
+        "sha256": "267f2d675a3c627c92b1e48d87f788c92d240e2667b08de3ef5465d4fa5dc104"
       },
       "printAndSheetTemplates": {
         "path": "docs/ver3/integrated_r7/C/print_geometry.json",
@@ -530,8 +535,8 @@
         },
         {
           "path": "docs/ver3/integrated_r7/C/assembly_access.json",
-          "bytes": 32160,
-          "sha256": "68f5f88f7b459dab5728b8e8680d31b3a9eca0d5f162c7b2ee82cd0acbdd70d6"
+          "bytes": 114177,
+          "sha256": "36b323d86732b51509691fead7ce9931cd705c56326689d516b2b1a5349b4547"
         },
         {
           "path": "docs/ver3/integrated_r7/C/contact_sensitivity.json",
@@ -653,6 +658,30 @@
   "physicalSelfStart": "UNKNOWN",
   "real30cmTravel": "UNKNOWN",
   "publicationAuthorized": false,
+  "assemblyReviewCorrection": {
+    "findingId": "R7-I1",
+    "reviewedSnapshotCommit": "922a47c5ab815fc186dd1486726123ab08552ede",
+    "geometryChanged": false,
+    "pathInventoryDerivedFromOrderedOperations": true
+  },
+  "candidateRevision": "v3-integrated-walkers-r7-15-review1",
+  "integrationReview": {
+    "summary": {
+      "path": "docs/ver3/integrated_r7/REVIEW_ja.md",
+      "bytes": 4678,
+      "sha256": "00ffc6c100bae7dc0f48e8e36ce02df2fbf0e28f2659e5eac63422996037e327"
+    },
+    "initialReview": {
+      "path": "docs/ver3/integrated_r7/review/initial_review_record.json",
+      "bytes": 17003,
+      "sha256": "1b7b5dffadda16876c8da4043a58445b040891edf2e67191928f15a617f80359"
+    },
+    "correction": {
+      "path": "docs/ver3/integrated_r7/review/correction_status.json",
+      "bytes": 1799,
+      "sha256": "1d12f6ec2c6905b3ddad95c911c1c9787e501005af23f3337b31f2b57513ed1c"
+    }
+  },
   "bRetainerCorrection": {
     "path": "docs/ver3/integrated_r7/B/retainer_corner_correction.json",
     "bytes": 1407,

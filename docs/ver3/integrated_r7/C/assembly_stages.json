@@ -2,7 +2,7 @@
   "revisionId": "v3-integrated-walkers-r7-15",
   "designId": "C",
   "nativeSha256": "c4180d6e48ff99d7135f209560f787b635cdcd430f17b2a083b111cd108af26c",
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "operationsAreOrdered": true,
   "stages": [
     {
@@ -504,10 +504,6 @@
             "H_BOLT_M3_20_008",
             "H_BOLT_M3_20_009",
             "H_BOLT_M3_20_010",
-            "H_BOLT_M3_20_013",
-            "H_BOLT_M3_20_014",
-            "H_BOLT_M3_20_015",
-            "H_BOLT_M3_20_016",
             "H_NMB1680_007",
             "H_NMB1680_008",
             "H_NUT_M2_001",
@@ -522,14 +518,6 @@
             "H_NUT_M3_040",
             "H_NUT_M3_041",
             "H_NUT_M3_042",
-            "H_NUT_M3_061",
-            "H_NUT_M3_062",
-            "H_NUT_M3_063",
-            "H_NUT_M3_064",
-            "H_NUT_M3_065",
-            "H_NUT_M3_066",
-            "H_NUT_M3_067",
-            "H_NUT_M3_068",
             "H_SLEEVE_2_8_001",
             "H_SLEEVE_2_8_002",
             "H_WASHER_2_001",
@@ -544,14 +532,6 @@
             "H_WASHER_3_024",
             "H_WASHER_3_025",
             "H_WASHER_3_026",
-            "H_WASHER_3_045",
-            "H_WASHER_3_046",
-            "H_WASHER_3_047",
-            "H_WASHER_3_048",
-            "H_WASHER_3_049",
-            "H_WASHER_3_050",
-            "H_WASHER_3_051",
-            "H_WASHER_3_052",
             "P_IDLER_CAP_001",
             "P_IDLER_CAP_002",
             "P_IDLER_INNER_WASHER_001",
@@ -560,6 +540,31 @@
             "P_IDLER_JOURNAL_002",
             "P_SYNC_IDLER_001",
             "P_SYNC_IDLER_002"
+          ]
+        },
+        {
+          "operation": "add",
+          "instances": [
+            "H_BOLT_M3_20_013",
+            "H_BOLT_M3_20_014",
+            "H_BOLT_M3_20_015",
+            "H_BOLT_M3_20_016",
+            "H_NUT_M3_061",
+            "H_NUT_M3_062",
+            "H_NUT_M3_063",
+            "H_NUT_M3_064",
+            "H_NUT_M3_065",
+            "H_NUT_M3_066",
+            "H_NUT_M3_067",
+            "H_NUT_M3_068",
+            "H_WASHER_3_045",
+            "H_WASHER_3_046",
+            "H_WASHER_3_047",
+            "H_WASHER_3_048",
+            "H_WASHER_3_049",
+            "H_WASHER_3_050",
+            "H_WASHER_3_051",
+            "H_WASHER_3_052"
           ]
         }
       ],
@@ -578,10 +583,6 @@
         "H_BOLT_M3_20_008",
         "H_BOLT_M3_20_009",
         "H_BOLT_M3_20_010",
-        "H_BOLT_M3_20_013",
-        "H_BOLT_M3_20_014",
-        "H_BOLT_M3_20_015",
-        "H_BOLT_M3_20_016",
         "H_NMB1680_007",
         "H_NMB1680_008",
         "H_NUT_M2_001",
@@ -596,14 +597,6 @@
         "H_NUT_M3_040",
         "H_NUT_M3_041",
         "H_NUT_M3_042",
-        "H_NUT_M3_061",
-        "H_NUT_M3_062",
-        "H_NUT_M3_063",
-        "H_NUT_M3_064",
-        "H_NUT_M3_065",
-        "H_NUT_M3_066",
-        "H_NUT_M3_067",
-        "H_NUT_M3_068",
         "H_SLEEVE_2_8_001",
         "H_SLEEVE_2_8_002",
         "H_WASHER_2_001",
@@ -618,14 +611,6 @@
         "H_WASHER_3_024",
         "H_WASHER_3_025",
         "H_WASHER_3_026",
-        "H_WASHER_3_045",
-        "H_WASHER_3_046",
-        "H_WASHER_3_047",
-        "H_WASHER_3_048",
-        "H_WASHER_3_049",
-        "H_WASHER_3_050",
-        "H_WASHER_3_051",
-        "H_WASHER_3_052",
         "P_IDLER_CAP_001",
         "P_IDLER_CAP_002",
         "P_IDLER_INNER_WASHER_001",
@@ -633,7 +618,27 @@
         "P_IDLER_JOURNAL_001",
         "P_IDLER_JOURNAL_002",
         "P_SYNC_IDLER_001",
-        "P_SYNC_IDLER_002"
+        "P_SYNC_IDLER_002",
+        "H_BOLT_M3_20_013",
+        "H_BOLT_M3_20_014",
+        "H_BOLT_M3_20_015",
+        "H_BOLT_M3_20_016",
+        "H_NUT_M3_061",
+        "H_NUT_M3_062",
+        "H_NUT_M3_063",
+        "H_NUT_M3_064",
+        "H_NUT_M3_065",
+        "H_NUT_M3_066",
+        "H_NUT_M3_067",
+        "H_NUT_M3_068",
+        "H_WASHER_3_045",
+        "H_WASHER_3_046",
+        "H_WASHER_3_047",
+        "H_WASHER_3_048",
+        "H_WASHER_3_049",
+        "H_WASHER_3_050",
+        "H_WASHER_3_051",
+        "H_WASHER_3_052"
       ],
       "remove": [],
       "reinsert": [],
@@ -837,7 +842,94 @@
       ],
       "fasteningTorqueNm": null,
       "noteJa": "",
-      "physicalAssemblyPerformed": false
+      "physicalAssemblyPerformed": false,
+      "pathChecks": [
+        {
+          "id": "frame_right_close",
+          "afterOperationIndex": 0,
+          "movingNames": [
+            "BEARING_INPUT_FLOAT",
+            "BEARING_MAIN_R_0_0",
+            "BEARING_MAIN_R_84_0",
+            "BEARING_MAIN_R__84_0",
+            "CAP_MAIN_R_0_0",
+            "CAP_MAIN_R_84_0",
+            "CAP_MAIN_R__84_0",
+            "CHASSIS_R",
+            "H_BOLT_M2_16_001",
+            "H_BOLT_M2_16_002",
+            "H_BOLT_M3_20_007",
+            "H_BOLT_M3_20_008",
+            "H_BOLT_M3_20_009",
+            "H_BOLT_M3_20_010",
+            "H_NMB1680_007",
+            "H_NMB1680_008",
+            "H_NUT_M2_001",
+            "H_NUT_M2_002",
+            "H_NUT_M2_003",
+            "H_NUT_M2_004",
+            "H_NUT_M3_033",
+            "H_NUT_M3_034",
+            "H_NUT_M3_035",
+            "H_NUT_M3_036",
+            "H_NUT_M3_039",
+            "H_NUT_M3_040",
+            "H_NUT_M3_041",
+            "H_NUT_M3_042",
+            "H_SLEEVE_2_8_001",
+            "H_SLEEVE_2_8_002",
+            "H_WASHER_2_001",
+            "H_WASHER_2_002",
+            "H_WASHER_2_003",
+            "H_WASHER_2_004",
+            "H_WASHER_3_019",
+            "H_WASHER_3_020",
+            "H_WASHER_3_021",
+            "H_WASHER_3_022",
+            "H_WASHER_3_023",
+            "H_WASHER_3_024",
+            "H_WASHER_3_025",
+            "H_WASHER_3_026",
+            "P_IDLER_CAP_001",
+            "P_IDLER_CAP_002",
+            "P_IDLER_INNER_WASHER_001",
+            "P_IDLER_INNER_WASHER_002",
+            "P_IDLER_JOURNAL_001",
+            "P_IDLER_JOURNAL_002",
+            "P_SYNC_IDLER_001",
+            "P_SYNC_IDLER_002"
+          ],
+          "sceneKind": "installed",
+          "direction": [
+            1,
+            0,
+            0
+          ],
+          "distancesMm": [
+            120,
+            80,
+            40,
+            20,
+            10,
+            5,
+            2,
+            1,
+            0
+          ],
+          "constantOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "sceneOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "fixedPoseOverrides": [],
+          "continues": null
+        }
+      ]
     },
     {
       "id": "04_upper_sheets",
@@ -1237,6 +1329,104 @@
             0
           ],
           "when": "after upper-sheet seating"
+        }
+      ],
+      "pathChecks": [
+        {
+          "id": "upper_pet_from_below",
+          "afterOperationIndex": 1,
+          "movingNames": [
+            "S_GUARD_UPPER_RIGHT_001"
+          ],
+          "sceneKind": "installed",
+          "direction": [
+            0,
+            0,
+            -1
+          ],
+          "distancesMm": [
+            300,
+            220,
+            160,
+            120,
+            80,
+            40,
+            20,
+            10,
+            5,
+            2,
+            0
+          ],
+          "constantOffsetMm": [
+            0,
+            -4,
+            0
+          ],
+          "sceneOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "fixedPoseOverrides": [
+            {
+              "instances": [
+                "H_MAIN_HEX100_001",
+                "H_MAIN_HEX100_002",
+                "H_MAIN_HEX100_003"
+              ],
+              "translationFromCadMm": [
+                -53,
+                0,
+                0
+              ]
+            }
+          ],
+          "continues": null
+        },
+        {
+          "id": "upper_pet_lateral_seat",
+          "afterOperationIndex": 1,
+          "movingNames": [
+            "S_GUARD_UPPER_RIGHT_001"
+          ],
+          "sceneKind": "installed",
+          "direction": [
+            0,
+            -1,
+            0
+          ],
+          "distancesMm": [
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "constantOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "sceneOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "fixedPoseOverrides": [
+            {
+              "instances": [
+                "H_MAIN_HEX100_001",
+                "H_MAIN_HEX100_002",
+                "H_MAIN_HEX100_003"
+              ],
+              "translationFromCadMm": [
+                -53,
+                0,
+                0
+              ]
+            }
+          ],
+          "continues": "upper_pet_from_below"
         }
       ]
     },
@@ -1773,7 +1963,79 @@
       ],
       "fasteningTorqueNm": null,
       "noteJa": "PETを軸受予圧の圧縮スペーサーにしない。左脚・右クランクの取り付け前。",
-      "physicalAssemblyPerformed": false
+      "physicalAssemblyPerformed": false,
+      "pathChecks": [
+        {
+          "id": "left_pet_from_left",
+          "afterOperationIndex": 1,
+          "movingNames": [
+            "S_GUARD_LEFT_001"
+          ],
+          "sceneKind": "installed",
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "distancesMm": [
+            120,
+            80,
+            40,
+            20,
+            10,
+            5,
+            2,
+            0
+          ],
+          "constantOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "sceneOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "fixedPoseOverrides": [],
+          "continues": null
+        },
+        {
+          "id": "lower_pet_from_right",
+          "afterOperationIndex": 1,
+          "movingNames": [
+            "S_GUARD_LOWER_RIGHT_001"
+          ],
+          "sceneKind": "installed",
+          "direction": [
+            1,
+            0,
+            0
+          ],
+          "distancesMm": [
+            120,
+            80,
+            40,
+            20,
+            10,
+            5,
+            2,
+            0
+          ],
+          "constantOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "sceneOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "fixedPoseOverrides": [],
+          "continues": null
+        }
+      ]
     },
     {
       "id": "06_prepare_rotor",
@@ -2057,7 +2319,54 @@
       ],
       "fasteningTorqueNm": null,
       "noteJa": "準備中の部品は本体へ追加済みと数えない。軸が通るまで手で支持する。",
-      "physicalAssemblyPerformed": false
+      "physicalAssemblyPerformed": false,
+      "pathChecks": [
+        {
+          "id": "rotor_into_front_basket",
+          "afterOperationIndex": 0,
+          "movingNames": [
+            "H_BOLT_M4_12_001",
+            "H_BOLT_M4_12_002",
+            "H_BOLT_M4_12_003",
+            "H_BOLT_M4_12_004",
+            "H_INPUT_HUB_001",
+            "H_WASHER_4_117",
+            "H_WASHER_4_118",
+            "H_WASHER_4_119",
+            "H_WASHER_4_120",
+            "P_INPUT_PINION_001",
+            "P_ROTOR_001"
+          ],
+          "sceneKind": "isolated_preassembly",
+          "direction": [
+            1,
+            0,
+            0
+          ],
+          "distancesMm": [
+            140,
+            100,
+            60,
+            30,
+            10,
+            5,
+            2,
+            0
+          ],
+          "constantOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "sceneOffsetMm": [
+            300,
+            0,
+            0
+          ],
+          "fixedPoseOverrides": [],
+          "continues": null
+        }
+      ]
     },
     {
       "id": "07_lower_rotor",
@@ -2070,11 +2379,7 @@
             "H_BOLT_M4_12_002",
             "H_BOLT_M4_12_003",
             "H_BOLT_M4_12_004",
-            "H_INPUT_COLLAR_001",
-            "H_INPUT_COLLAR_002",
             "H_INPUT_HUB_001",
-            "H_INPUT_SPACER_001",
-            "H_INPUT_SPACER_002",
             "H_WASHER_4_117",
             "H_WASHER_4_118",
             "H_WASHER_4_119",
@@ -2088,6 +2393,15 @@
           "instances": [
             "P_INPUT_PINION_001"
           ]
+        },
+        {
+          "operation": "add",
+          "instances": [
+            "H_INPUT_COLLAR_001",
+            "H_INPUT_COLLAR_002",
+            "H_INPUT_SPACER_001",
+            "H_INPUT_SPACER_002"
+          ]
         }
       ],
       "add": [
@@ -2095,17 +2409,17 @@
         "H_BOLT_M4_12_002",
         "H_BOLT_M4_12_003",
         "H_BOLT_M4_12_004",
-        "H_INPUT_COLLAR_001",
-        "H_INPUT_COLLAR_002",
         "H_INPUT_HUB_001",
-        "H_INPUT_SPACER_001",
-        "H_INPUT_SPACER_002",
         "H_WASHER_4_117",
         "H_WASHER_4_118",
         "H_WASHER_4_119",
         "H_WASHER_4_120",
         "P_ROTOR_001",
-        "P_ROTOR_CAGE_FRONT_001"
+        "P_ROTOR_CAGE_FRONT_001",
+        "H_INPUT_COLLAR_001",
+        "H_INPUT_COLLAR_002",
+        "H_INPUT_SPACER_001",
+        "H_INPUT_SPACER_002"
       ],
       "remove": [],
       "reinsert": [
@@ -2374,10 +2688,11 @@
       "stopCrankDeg": 0,
       "requiredTools": [],
       "validatedPathIds": [
-        "front_basket_and_rotor_lower"
+        "front_basket_and_rotor_lower",
+        "front_basket_axial_seat"
       ],
       "fasteningTorqueNm": null,
-      "noteJa": "ピニオンを同じIDで戻す。カラー・スペーサーもまだ仮置き。",
+      "noteJa": "装着済みのPET・保持品を残し、部分組立全体をX=+4mmへ逃がして下降後、X=0へ軸方向に着座する。ピニオンを同じIDで戻す。カラー・スペーサーの仮置きは着座後。",
       "physicalAssemblyPerformed": false,
       "temporarilyHandSupported": [
         "H_BOLT_M4_12_001",
@@ -2396,6 +2711,99 @@
         "P_INPUT_PINION_001",
         "P_ROTOR_001",
         "P_ROTOR_CAGE_FRONT_001"
+      ],
+      "pathChecks": [
+        {
+          "id": "front_basket_and_rotor_lower",
+          "afterOperationIndex": 1,
+          "movingNames": [
+            "H_BOLT_M4_12_001",
+            "H_BOLT_M4_12_002",
+            "H_BOLT_M4_12_003",
+            "H_BOLT_M4_12_004",
+            "H_INPUT_HUB_001",
+            "H_WASHER_4_117",
+            "H_WASHER_4_118",
+            "H_WASHER_4_119",
+            "H_WASHER_4_120",
+            "P_INPUT_PINION_001",
+            "P_ROTOR_001",
+            "P_ROTOR_CAGE_FRONT_001"
+          ],
+          "sceneKind": "installed",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "distancesMm": [
+            240,
+            180,
+            120,
+            80,
+            40,
+            20,
+            10,
+            5,
+            2,
+            0
+          ],
+          "constantOffsetMm": [
+            4,
+            0,
+            0
+          ],
+          "sceneOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "fixedPoseOverrides": [],
+          "continues": null
+        },
+        {
+          "id": "front_basket_axial_seat",
+          "afterOperationIndex": 1,
+          "movingNames": [
+            "H_BOLT_M4_12_001",
+            "H_BOLT_M4_12_002",
+            "H_BOLT_M4_12_003",
+            "H_BOLT_M4_12_004",
+            "H_INPUT_HUB_001",
+            "H_WASHER_4_117",
+            "H_WASHER_4_118",
+            "H_WASHER_4_119",
+            "H_WASHER_4_120",
+            "P_INPUT_PINION_001",
+            "P_ROTOR_001",
+            "P_ROTOR_CAGE_FRONT_001"
+          ],
+          "sceneKind": "installed",
+          "direction": [
+            1,
+            0,
+            0
+          ],
+          "distancesMm": [
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "constantOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "sceneOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "fixedPoseOverrides": [],
+          "continues": "front_basket_and_rotor_lower"
+        }
       ]
     },
     {
@@ -2710,7 +3118,46 @@
         "removedMaterial": false,
         "scope": "Actual assembly rotations of two round-bore collars; axial bearing datums unchanged. Nominal single-plane gravity balance only,not measured or dynamic balance."
       },
-      "clockingAlreadyIncludedInCadTransforms": true
+      "clockingAlreadyIncludedInCadTransforms": true,
+      "pathChecks": [
+        {
+          "id": "input_shaft_insert",
+          "afterOperationIndex": 0,
+          "movingNames": [
+            "H_INPUT_SHAFT_001"
+          ],
+          "sceneKind": "installed",
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "distancesMm": [
+            180,
+            140,
+            100,
+            80,
+            40,
+            20,
+            10,
+            5,
+            2,
+            0
+          ],
+          "constantOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "sceneOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "fixedPoseOverrides": [],
+          "continues": null
+        }
+      ]
     },
     {
       "id": "09_rear_cage",
@@ -2719,7 +3166,12 @@
         {
           "operation": "add",
           "instances": [
-            "CAP_INPUT_FLOAT",
+            "CAP_INPUT_FLOAT"
+          ]
+        },
+        {
+          "operation": "add",
+          "instances": [
             "H_BOLT_M3_16_016",
             "H_BOLT_M3_16_017",
             "H_BOLT_M3_16_018",
@@ -3071,7 +3523,47 @@
       ],
       "fasteningTorqueNm": null,
       "noteJa": "",
-      "physicalAssemblyPerformed": false
+      "physicalAssemblyPerformed": false,
+      "pathChecks": [
+        {
+          "id": "rear_cage_cap_insert",
+          "afterOperationIndex": 0,
+          "movingNames": [
+            "CAP_INPUT_FLOAT"
+          ],
+          "sceneKind": "installed",
+          "direction": [
+            1,
+            0,
+            0
+          ],
+          "distancesMm": [
+            100,
+            60,
+            40,
+            24,
+            16,
+            12,
+            8,
+            4,
+            2,
+            1,
+            0
+          ],
+          "constantOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "sceneOffsetMm": [
+            0,
+            0,
+            0
+          ],
+          "fixedPoseOverrides": [],
+          "continues": null
+        }
+      ]
     },
     {
       "id": "10_right_cranks",
@@ -5907,5 +6399,6 @@
   ],
   "finalVisibleInstanceCount": 756,
   "sameIdReinsertionsRequired": true,
+  "pathInventorySource": "All installed nonmoving instances at each declared ordered-operation boundary; isolated preassembly uses its declared separate scene.",
   "scope": "Staged geometry reference with explicit temporary removals and hand support,not an executed assembly or dynamics animation."
 }
