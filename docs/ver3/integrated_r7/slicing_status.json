@@ -1,45 +1,92 @@
 {
   "revisionId": "v3-integrated-walkers-r7-15",
-  "actualSlicingPerformed": false,
-  "status": "NOT_RUN_AVAILABLE_SLICER_NOT_FOUND",
-  "checkedInstalledApplicationLocations": [
-    "/Applications/BambuStudio.app",
-    "/Applications/Bambu Studio.app",
-    "/Applications/OrcaSlicer.app",
-    "/Applications/PrusaSlicer.app",
-    "~/Applications/BambuStudio.app",
-    "~/Applications/Bambu Studio.app",
-    "~/Applications/OrcaSlicer.app",
-    "~/Applications/PrusaSlicer.app"
-  ],
-  "checkedPathCommands": [
-    "bambu-studio",
-    "BambuStudio",
-    "orcaslicer",
-    "OrcaSlicer",
-    "prusa-slicer",
-    "PrusaSlicer",
-    "CuraEngine",
-    "cura-engine"
-  ],
-  "availableExecutableDetected": false,
-  "softwareInstalled": false,
+  "reviewedArtifactCommit": "f50978e55384d1b03417ed7115395e6e2c010e85",
+  "actualSlicingPerformed": true,
+  "status": "REPRESENTATIVE_TOOLPATHS_REVIEWED_WITH_LIMITATIONS",
+  "representativePartCount": 5,
+  "fullAssemblySliced": false,
+  "softwareInstalled": true,
+  "slicer": {
+    "name": "OrcaSlicer",
+    "version": "2.4.2",
+    "release": "https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/v2.4.2",
+    "asset": "OrcaSlicer_Mac_universal_V2.4.2.dmg",
+    "assetSha256": "e15e7bb1b66214ec6e96b169b388004179c4f5f705effcdaf8c80d4992ee0366",
+    "architecture": "arm64 from the official universal build",
+    "signature": "Developer ID Application: Li Jiang (XQK7C38HH5)",
+    "macOSAssessment": "accepted; Notarized Developer ID",
+    "publicDigestMatched": true,
+    "quarantineOrSecurityBypassUsed": false,
+    "isolatedApplicationAndSettings": true,
+    "userApplicationOrSettingsOverwritten": false
+  },
   "printerContacted": false,
-  "printerMachineForExecutedSlice": null,
-  "nozzleForExecutedSliceMm": null,
-  "settingsForExecutedSlice": null,
-  "representativeFilesForFutureLayerInspection": [
-    "STL/Ver.3/integrated_r7/A/P_INPUT_PINION.stl",
-    "STL/Ver.3/integrated_r7/A/P_COMPOUND_1.stl",
-    "STL/Ver.3/integrated_r7/common/T_GUIDE_COUPON.stl",
-    "STL/Ver.3/integrated_r7/common/T_JOURNAL_COUPON.stl",
-    "STL/Ver.3/integrated_r7/common/T_DIAMETER_COUPON.stl"
+  "physicalPrintingPerformed": false,
+  "printerMachineForExecutedSlice": "Bambu Lab P1S 0.4 nozzle (offline design-inspection assumption only)",
+  "nozzleForExecutedSliceMm": 0.4,
+  "actualHardwareAndMaterialMatched": false,
+  "settingsForExecutedSlice": {
+    "bundledProcess": "0.16mm Optimal @BBL X1C",
+    "bundledFilament": "Generic PETG",
+    "layerHeightMm": 0.16,
+    "firstLayerHeightMm": 0.2,
+    "nozzleTemperatureC": 255,
+    "texturedPeiBedTemperatureC": 70,
+    "filamentDensityGcm3": 1.27,
+    "flowRatio": 0.95,
+    "maximumVolumetricSpeedMm3s": 12,
+    "wallGenerator": "arachne",
+    "requestedWallLoops": 4,
+    "sparseInfillPercent": 100,
+    "infillPattern": "rectilinear",
+    "topAndBottomShellLayers": 5,
+    "gearSupport": "normal(auto), build plate only, 30 degree threshold",
+    "supportTopGapMm": 0.2,
+    "supportObjectXYGapMm": 0.35,
+    "supportFirstLayerExpansionMm": 2,
+    "outerBrimWidthMm": 5,
+    "brimObjectGapMm": 0.2,
+    "arcFitting": false,
+    "orientation": "Frozen exported build Z; actual per-part Z rotation and bed placement are recorded from the 3MF.",
+    "gcodeToModelBedXYOffsetMm": [0, 2],
+    "effectiveSettingsVerified": true
+  },
+  "toolpathChecks": "slicing/toolpath_checks.json",
+  "profileProvenance": "slicing/profile_provenance.json",
+  "humanReadableReport": "SLICING_ja.md",
+  "visualLayerReviewPerformed": true,
+  "visualReviewScope": "Finishing owner inspected five layer montages, tooth details and first-layer bore-support images. Not an independent engineering re-review.",
+  "modelBoresOpenInAllCheckedModelLayers": true,
+  "allSupportFreeBores": false,
+  "supportRemovalRequired": [
+    "P_INPUT_PINION: support crosses the bore only in the exposed first 0.2mm layer.",
+    "P_COMPOUND_1: support crosses the bore only in the exposed first 0.2mm layer.",
+    "Support touches the underside of gear faces, spokes and shoulders; removal can damage tooth lower edges or leave burrs."
   ],
-  "remainingLayerChecks": [
-    "The approximately0.53mm tooth tip must survive the chosen nozzle and wall generator.",
-    "Inspect actual tooth-face layers,root lines,bore continuity and support removal access.",
-    "Verify the actual printer/nozzle/material profile; none was treated as confirmed.",
-    "Watertight STL and native/STEP agreement do not substitute for toolpath or printed-fit approval."
+  "limitedSettingsTrial": {
+    "change": "support first-layer expansion 2mm to 0mm, same frozen STLs",
+    "result": "The exposed 0.2mm bore film remained in both gears; not accepted as a fix.",
+    "finalSelection": "Retain the recorded 2mm default support-base expansion. No geometry or second orientation was introduced."
+  },
+  "observedCliWarnings": [
+    "The headless CLI could not create an OpenGL 3.4 context and skipped embedded 3MF thumbnail generation. Public layer images are independently rasterized actual G-code,not Orca screenshots.",
+    "Optional filament_retract_lift_above/below/enforce entries were reported absent during profile conversion. Effective material,nozzle,bed,layer,wall and support settings were explicitly checked."
   ],
-  "scope": "Known installed-app paths and PATH were checked. No new large software,full-machine slicing,printer upload or print operation was attempted."
+  "commandTemplate": [
+    "OrcaSlicer", "--datadir", "<private-config>", "--debug", "2",
+    "--load-settings", "<flattened-machine.json>;<part-process.json>",
+    "--load-filaments", "<flattened-filament.json>",
+    "--orient", "0", "--arrange", "1", "--ensure-on-bed", "--scale", "1",
+    "--outputdir", "<private-part-output>", "--slice", "0",
+    "--export-3mf", "<part>.3mf", "<frozen-part>.stl"
+  ],
+  "remainingChecks": [
+    "Physically remove support and confirm bore opening, tooth lower edges and bearing/journal fit.",
+    "A 4-wall setting does not mean four lines fit at thin teeth or journals; the inspected thin tips use about one 0.42mm bead.",
+    "Actual printer/nozzle/material matching, adhesion, shrinkage, layer strength and support removal remain unverified.",
+    "Five representative slices do not establish whole-machine material cost, printability, strength, self-start or 30cm walking."
+  ],
+  "publicArtifactPolicy": "Only source scripts, profile names/overrides/hashes, small checks and derived layer PNGs. Raw G-code, settings-bearing 3MF, installers and private logs remain local.",
+  "manufacturingRelease": false,
+  "qualifiedWalkingPrototypeCount": 0
 }

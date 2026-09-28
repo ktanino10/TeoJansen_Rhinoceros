@@ -98,6 +98,19 @@ class AssemblyInventoryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"fixedNames"):
             validate_path_inventory(data,wrong)
 
+    def test_upper_pet_documentation_matches_the_unchanged_y_path(self):
+        prose=(OUT/"ASSEMBLY_ja.md").read_text()
+        self.assertIn("Y=-4→0mm",prose)
+        self.assertNotIn("4mm左へ",prose)
+        for data in self.designs.values():
+            stage=next(s for s in assembly_stages(data) if s["id"]=="04_upper_sheets")
+            first,second=stage["pathChecks"]
+            self.assertIn("Y=-4→0mm",stage["noteJa"])
+            self.assertEqual(first["constantOffsetMm"],[0,-4,0])
+            self.assertEqual(second["direction"],[0,-1,0])
+            self.assertEqual(second["distancesMm"],[4,3,2,1,0])
+            self.assertEqual(stage["temporaryPoseOperations"][0]["translationFromCadMm"],[-53,0,0])
+
     def test_manual_exclusion_and_discontinuous_segments_are_rejected(self):
         data=self.designs["B"];workflow=assembly_stages(data)
         stage=next(s for s in workflow if s["id"]=="07_lower_rotor")

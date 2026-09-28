@@ -11,6 +11,7 @@ import json
 import hashlib
 import math
 from pathlib import Path
+import re
 
 import numpy as np
 
@@ -323,7 +324,113 @@ def retime_for_hex_cranks(assembly,new_phases):
     return result
 
 
-def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=None):
+def contact_frames(assembly,gait,contact,result,source_commit,frame_step_deg=5):
+    from build_integrated_contract import source_identity
+
+    if not re.fullmatch(r"[0-9a-f]{40}",source_commit or ""):
+        raise ValueError("Contact export requires an explicit source commit")
+    if gait.lanes!=1:
+        raise ValueError("Contact export currently requires the canonical single modeled center per foot")
+    raw=contact["data"];theta=np.asarray(raw["theta_rad"])
+    count=len(theta);stride=round(frame_step_deg/gait.step_deg)
+    if (count<2 or stride<1 or count%stride or not math.isclose(count*gait.step_deg,360)
+            or not math.isclose(stride*gait.step_deg,frame_step_deg)
+            or not np.allclose(np.diff(theta),math.radians(gait.step_deg),atol=1e-12)):
+        raise ValueError("Export frames must evenly sample the existing periodic solver grid")
+    arrays={key:np.asarray(raw[key]) for key in (
+        "body_z_slopex_slopey","normal_n","toes_body_mm","spring_compression_mm",
+        "body_velocity_mm_per_rad","toe_slip_velocity_mm_per_rad")}
+    foot_count=len(gait.legs)
+    shapes={"body_z_slopex_slopey":(count,3),"normal_n":(count,foot_count),
+            "toes_body_mm":(count,foot_count,3),"spring_compression_mm":(count,foot_count),
+            "body_velocity_mm_per_rad":(count,3),"toe_slip_velocity_mm_per_rad":(count,foot_count,2)}
+    for key,values in arrays.items():
+        if values.shape!=shapes[key] or not np.all(np.isfinite(values)):
+            raise ValueError("Missing,nonfinite or incorrectly shaped contact state: "+key)
+    if (not np.all(np.isfinite(theta))
+            or not math.isfinite(result["actualCogContactResidualMm"])
+            or not math.isfinite(contact["tangential_force_moment_residual_normalized_max"])
+            or result["actualCogContactResidualMm"]>=1e-5
+            or contact["tangential_force_moment_residual_normalized_max"]>1e-6):
+        raise ValueError("Unconverged contact state cannot become render frames")
+    dt=math.radians(gait.step_deg)
+    integrated=np.vstack([np.zeros(3),np.cumsum(arrays["body_velocity_mm_per_rad"]*dt,axis=0)])
+    expected=np.array([contact["lateral_per_cycle_mm"],contact["advance_per_cycle_mm"],
+                       contact["yaw_per_cycle_rad"]])
+    if not np.allclose(integrated[-1],expected,rtol=1e-10,atol=1e-9):
+        raise ValueError("Export integration disagrees with the existing contact summary")
+    _,gamma=gait.neutral()
+    if gamma.shape!=(count,foot_count) or not np.all(np.isfinite(gamma)):
+        raise ValueError("Missing canonical guide pitch")
+    speed=assembly["reduction"]["speedRatios"][0]
+    input_rpm=120
+    threshold=assembly["parameters"]["common"]["criteria"]["loadFootFraction"]*contact["mass_kg"]*9.80665
+    frames=[]
+    for index in range(0,count+1,stride):
+        phase=index%count
+        degrees=index*gait.step_deg
+        frames.append({
+            "crankDeg":degrees,"sourcePhaseIndex":phase,"periodicClosure":index==count,
+            "inputDegUnwrapped":degrees*speed,
+            "secondsAtPrescribed120InputRpm":degrees/360*abs(speed)*60/input_rpm,
+            "bodyHeightAndSlopes":arrays["body_z_slopex_slopey"][phase].tolist(),
+            "integratedPlanarComponents":integrated[index].tolist(),
+            "bodyPlanarVelocityPerCrankRad":arrays["body_velocity_mm_per_rad"][phase].tolist(),
+            "normalN":arrays["normal_n"][phase].tolist(),
+            "loadedFoot":(arrays["normal_n"][phase]>threshold).tolist(),
+            "springCompressionMm":arrays["spring_compression_mm"][phase].tolist(),
+            "toesBodyMm":arrays["toes_body_mm"][phase].tolist(),
+            "guidePitchRad":gamma[phase].tolist(),
+            "toeSlipVelocityMmPerCrankRad":arrays["toe_slip_velocity_mm_per_rad"][phase].tolist(),
+            "independentRockerAngleRad":None,
+        })
+    return {
+        "schemaVersion":1,"revisionId":assembly["revisionId"],"designId":result["designId"],
+        "sourceCommit":source_commit,"sourceHash":source_identity()[2],
+        "reviewedGeometryArtifactCommit":"f50978e55384d1b03417ed7115395e6e2c010e85",
+        "assemblySha256":hashlib.sha256((OUT/result["designId"]/"assembly.json").read_bytes()).hexdigest(),
+        "mechanicalInputSha256":result["mechanicalInputSha256"],
+        "analysisSourcesSha256":result["analysisSourcesSha256"],
+        "method":"Decimated states from the existing converged analyze()/ContactGait.evaluate() result; no replacement contact,airflow,friction or walking solver.",
+        "rawPhaseCount":count,"rawStepDeg":gait.step_deg,"frameStepDeg":frame_step_deg,
+        "frameCount":len(frames),"cadReferenceBodyOriginZMm":assembly["bodyOriginZMm"],
+        "footOrder":[{"stationYmm":float(station),"side":side,"phaseDeg":phase}
+                     for station,side,phase in gait.legs],
+        "units":{"bodyHeightAndSlopes":["mm","dz/dx","dz/dy"],
+                 "integratedPlanarComponents":["mm","mm","rad"],
+                 "bodyPlanarVelocityPerCrankRad":["mm/rad","mm/rad","rad/rad"],
+                 "length":"mm","force":"N","anglesUnlessDeg":"rad"},
+        "coordinates":{
+            "native":"Right-handed native X=shaft/lateral,Y=station/longitudinal,Z=up.",
+            "toesBodyMm":"Converged,compression-corrected foot-center coordinates relative to the body reference origin,not native absolute Z.",
+            "bodyHeightAndSlopes":"Exactly the existing solver's body_z_slopex_slopey. Its point map is x'=x-slopeX*z,y'=y-slopeY*z,z'=z+height+slopeX*x+slopeY*y.",
+            "integratedPlanarComponents":"Componentwise rectangular quadrature of the original dense body velocity in its reference axes. Origin at crank0 is chosen as [0,0,0]; not missing-state padding. This exactly preserves the saved lateral/advance/yaw aggregates; no new SE(2) trajectory solve.",
+            "closure":"The explicit 360-degree endpoint uses the converged periodic phase0 state and the full dense-cycle integrated displacement.",
+        },
+        "prescribedTiming":{"absoluteInputRpm":input_rpm,"signedInputTurnsPerCrank":speed,
+                            "cycleSeconds":abs(speed)*60/input_rpm,"achievedOrPredicted":False},
+        "convergence":{"actualCogContactIterations":result["actualCogContactIterations"],
+                       "actualCogContactResidualMm":result["actualCogContactResidualMm"],
+                       "maximumTangentialResidualNormalized":contact["tangential_force_moment_residual_normalized_max"]},
+        "denseCycleSummary":{"integratedPlanarComponents":integrated[-1].tolist(),
+                             "maximumCompressionMm":float(arrays["spring_compression_mm"].max()),
+                             "minimumLoadedFeet":contact["minimum_loaded_feet"],
+                             "savedAdvancePerCrankCycleMm":result["kinematicTravel"]["advancePerCrankCycleMm"]},
+        "unavailableComponents":{"independentRockerAngleRad":"Not a solved independent state in the canonical single-center/equalizing-rocker model. Null is intentional; never substitute zero.",
+                                 "rigidBodyWorld4x4":"The canonical body pose is a small-angle approximation,not a measured/exact rigid-body trajectory.",
+                                 "actualInputSpeed":"Prescribed120RPM is a display clock,not an achieved or predicted speed."},
+        "manufacturingRelease":False,"physicalTestsPerformed":False,"frames":frames,
+    }
+
+
+def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=None,
+            motion_output=None,source_commit=None):
+    if motion_output is not None and output_dir is None:
+        raise ValueError("Contact export requires a separate analysis output directory to preserve frozen budgets")
+    if motion_output is not None and (assembly_override is not None or air_case is not None):
+        raise ValueError("Publication contact frames must use the unchanged canonical assembly and reference air case")
+    if motion_output is not None and not re.fullmatch(r"[0-9a-f]{40}",source_commit or ""):
+        raise ValueError("Contact export requires an explicit source commit")
     source_folder=OUT/design
     folder=Path(output_dir) if output_dir else source_folder
     folder.mkdir(parents=True,exist_ok=True)
@@ -509,6 +616,9 @@ def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=N
                       "Negative aggregate output demand is still clipped as a conservative reference bound,not a claim that spring energy is dissipated twice.",
                       "Journal reactions are first-order statics; friction-force feedback remains unquantified.",
                       "Only the saved CAD BOM is counted; unmodeled guards/access fixes cannot be silently declared covered."]}
+    if motion_output is not None:
+        frames=contact_frames(assembly,gait,contact,result,source_commit)
+        Path(motion_output).write_text(json.dumps(frames,ensure_ascii=False,indent=2,allow_nan=False)+"\n")
     (folder/"work_budget.json").write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
     np.savetxt(folder/"work_profile.csv",np.column_stack([np.degrees(theta),potential_rate,slip_work_rate,wind_work_rate]),
                delimiter=",",header="crank_deg,potential_rate_Nmm,ground_slip_rate_Nmm,wind_force_rate_Nmm",comments="")
@@ -521,5 +631,9 @@ if __name__=="__main__":
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--design",choices=("A","B","C"),required=True)
     parser.add_argument("--step-deg",type=float,default=.5)
+    parser.add_argument("--output-dir",type=Path)
+    parser.add_argument("--motion-output",type=Path)
+    parser.add_argument("--source-commit")
     args=parser.parse_args()
-    analyze(args.design,args.step_deg)
+    analyze(args.design,args.step_deg,output_dir=args.output_dir,
+            motion_output=args.motion_output,source_commit=args.source_commit)

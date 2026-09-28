@@ -229,8 +229,8 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
         writer=csv.DictWriter(stream,fieldnames=rows[0].keys(),lineterminator="\n")
         writer.writeheader();writer.writerows(rows)
     summary=["# Ver.3 統合3案：全体実体と条件付き判断","","**主要求の「実証済みで成立する3台」は未完です。**",
-             "旧r3/r4/r6と公開first-cutは不変。このフォルダーは新しい全機CAD、全BOM、接地・駆動計算、組立経路を同版でまとめたローカル成果です。",
-             "製作リリース=false、合格歩行機数=0。購入・印刷・ドライヤー操作・公開は実施していません。","",
+             "旧r3/r4/r6と公開first-cutは不変。このフォルダーは新しい全機CAD、全BOM、接地・駆動計算、組立経路を同版でまとめた設計資料です。",
+             "製作リリース=false、合格歩行機数=0。購入・印刷・ドライヤー操作は実施していません。既存リポジトリ／Pagesへの設計資料公開と現物認定を区別します。","",
              "[独立統合レビューとR7-I1の限定是正](REVIEW_ja.md)：旧スナップショットの工程在庫不一致を記録し、装着済みの全非移動部品を含む経路検査へ修正しています。CAD・質量・数値・BOMは変更していません。","",
              f'現在の設計予算は**1台約{approval["approvedApproximateBudgetJpyPerMachine"]:,.0f}円**（{approval["recordedDateJst"]} JSTユーザー承認）。送料・未確定税等別。購入はしていません。',
              "",
@@ -268,13 +268,13 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
               "滑り仕事は非負で残り、8mm足上げ・3mm滑りは設計者の旧目標です。ユーザー条件に言い換えたり、未達を消していません。","",
               "## 残る本質条件",
               "1. 実空力と実抵抗：各案の入力軸受抵抗上限、印刷偏心、負荷付き回転速度を満たすか。静止代理の原値、設計減率0.5、実測下限UNKNOWNは別欄です。",
-              "2. 製作・接合：実スライスと試験片によるはめあい・薄い歯先・積層強度、フレーム接合/保持/工具の現物確認。梁の局部固定境界を全機剛性の証明にしません。",
+              "2. 製作・接合：代表5点は実スライス済みですが、支持の底面薄膜・歯下縁の仕上げ、試験片の実はめあい、薄い歯先・積層強度、フレーム接合/保持/工具は未確認です。全機造形や梁の局部固定境界を全機剛性の証明にしません。",
               "3. 床上の成立：有限公差ケースの支持と、滑り・衝突・始動を含む実30cm歩行。未実施なので3台合格には数えません。","",
-              "[共通組立](ASSEMBLY_ja.md)／[初回試験片・組立台](common/accessories.json)／[3台共同購入lot](purchase_lots.json)／[統合契約](integration_contract.json)／[スライス未実施の範囲](slicing_status.json)"]
+              "[共通組立](ASSEMBLY_ja.md)／[初回試験片・組立台](common/accessories.json)／[3台共同購入lot](purchase_lots.json)／[統合契約](integration_contract.json)／[代表5点の実層と残件](SLICING_ja.md)／[正規接地フレームの範囲](CONTACT_FRAMES_ja.md)"]
     summary+=["","## 再現環境",
-              "既存FreeCAD1.1.3の独立Python、numpy/scipy/Shapely/trimesh/Pillow/PyMuPDFを使用しました。新しい大型ソフトは導入していません。",
+              "CADには既存FreeCAD1.1.3の独立Python、numpy/scipy/Shapely/trimesh/Pillow/PyMuPDFを使用しました。承認後、代表スライスに公式OrcaSlicer2.4.2を専用領域へ追加しました。",
               "Python依存関係は`scripts/ver3/requirements_integrated_r7.txt`、正規入力は`scripts/ver3/walker_r7.json`です。FreeCADの実行ファイル/ライブラリ位置はCLI引数で明示します。",
-              "最終ソース・ファイルハッシュは`integration_contract.json`と`manifest.json`に保存します。公開や旧ページの置換はこの成果物とは別の承認事項です。"]
+              "最終ソース・ファイルハッシュは`integration_contract.json`と`manifest.json`に保存します。生成処理はネットワーク公開を実行しません。実配信版はmainとPagesの通常Actionsから追跡し、旧first-cutとは明示的に区別します。"]
     (OUT/"README_ja.md").write_text("\n".join(summary)+"\n")
     files=[]
     for base in (OUT,CAD,PRINT):

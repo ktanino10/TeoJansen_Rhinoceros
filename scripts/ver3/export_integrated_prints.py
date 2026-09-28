@@ -13,6 +13,11 @@ import numpy as np
 from walker_geometry import ROOT,OUT,CAD,PRINT,body_points
 
 
+def support_may_be_required(pid, data, bed_shift):
+    return (pid.startswith(("P_CHASSIS","P_COMPOUND","P_LEG_CEF","P_FOOT","P_CRANK"))
+            or pid=="P_INPUT_PINION" and data["reduction"]["stages"][0]["xMm"]+bed_shift>1e-6)
+
+
 def export(design,library):
     sys.path.insert(0,library)
     import FreeCAD as App
@@ -82,7 +87,7 @@ def export(design,library):
                          "boundsMm":[box.XLength,box.YLength,box.ZLength],
                          "nativeVolumeMm3":part["solid_volume_mm3"],
                          "linearDeflectionMm":.04,"angularDeflectionRad":.08,
-                         "supportsMayBeRequired":pid.startswith(("P_CHASSIS","P_COMPOUND","P_LEG_CEF","P_FOOT","P_CRANK")),
+                         "supportsMayBeRequired":support_may_be_required(pid,data,shift),
                          "sliced":False})
         result={"revisionId":data["revisionId"],"designId":design,
                 "nativeSha256":hashlib.sha256(native.read_bytes()).hexdigest(),

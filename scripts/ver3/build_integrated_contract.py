@@ -106,7 +106,7 @@ def assembly_stages(data):
          [("remove",g["idlerCapRemovable"]),("add",g["upperSheets"]),("add",g["interR"]),
           ("reinsert",g["idlerCapRemovable"])],
          ("HEX_2P5","WRENCH_5P5"),("upper_pet_from_below","upper_pet_lateral_seat"),
-         note="主軸を一時53mm引き込み、上側PETをY=-4mmで上げてからY=0へ。アイドラーキャップ部品を同じIDで戻す。")
+         note="主軸をX方向へ一時-53mm引き込み、上側PETを完成位置からY方向へ-4mmずらして下から上げ、同じ高さでY=-4→0mmへ着座する。工程07のX方向退避とは別。アイドラーキャップ部品を同じIDで戻す。")
     steps[-1]["temporaryPoseOperations"]=[
         {"instances":sorted(g["mainMetalShafts"]),"translationFromCadMm":[-53,0,0],"when":"before upper-sheet insertion"},
         {"instances":sorted(g["mainMetalShafts"]),"translationFromCadMm":[0,0,0],"when":"after upper-sheet seating"}]
@@ -270,7 +270,7 @@ def validate_path_inventory(data,results,workflow=None):
             raise ValueError("An assembly path has unresolved intersections: "+identity)
 
 
-def build(source_commit):
+def source_identity():
     source_files=[
         "walker_r7.json","design.json","input_cartridge.json","requirements.txt","requirements_integrated_r7.txt",
         "walker_geometry.py","walker_kinematics.py","walker_contact.py","walker_air.py",
@@ -281,12 +281,19 @@ def build(source_commit):
         "check_integrated_contact.py","check_integrated_rotations.py","check_retainer_tool_access.py",
         "check_walker_cad_components.py","test_walker_math.py","test_assembly_contract.py","export_integrated_prints.py",
         "report_integrated_walkers.py","build_integrated_contract.py","verify_integrated_package.py","beam.py","frame3d.py",
-        "cad_parts.py","core.py","commercial_r3.py","study_r2.py","input_cartridge.py"]
+        "cad_parts.py","core.py","commercial_r3.py","study_r2.py","input_cartridge.py",
+        "slice_integrated_representatives.py","inspect_integrated_toolpaths.py",
+        "test_slicing_inspection.py","test_contact_frames.py"]
     sources=[resource(ROOT/"scripts/ver3"/name) for name in source_files]
     dependencies=[resource(ROOT/"docs/ver3/common_input_r4/assembly.json"),
                   resource(ROOT/"FreeCAD/Ver.3/common_input_r4/CommonInputR4.FCStd"),
                   resource(ROOT/"scripts/ver3/commercial_r3.json")]
     source_digest=hashlib.sha256(json.dumps(sources+dependencies,sort_keys=True,separators=(",",":")).encode()).hexdigest()
+    return sources,dependencies,source_digest
+
+
+def build(source_commit):
+    sources,dependencies,source_digest=source_identity()
     cfg=json.loads((ROOT/"scripts/ver3/walker_r7.json").read_text())
     designs=[]
     for name in "ABC":
@@ -312,6 +319,7 @@ def build(source_commit):
             "mesh":resource(CAD/name/"render_geometry.json.gz"),"assembly":resource(folder/"assembly.json"),
             "bom":resource(folder/"BOM.csv"),"purchaseLots":resource(folder/"purchase_lots.json"),
             "stages":resource(stage_file),"printAndSheetTemplates":resource(folder/"print_geometry.json"),
+            "contactFrames":resource(folder/"contact_frames.json"),
             "validationFiles":[resource(folder/file) for file in
                 ("static_collisions.json","gait_motion.json","assembly_access.json","contact_sensitivity.json",
                  "rotating_clearance.json","structure.json","work_budget.json","environment_sensitivity.json")],
@@ -337,15 +345,25 @@ def build(source_commit):
                            "Generation hashes describe the actual build history,including incremental root-only updates. The current source hash also includes the approved budget-only metadata update.",
                            "Old first-cut GLB,r3 calculations andr4/r6 data remain separately versioned; do not merge their numbers or geometry."],
         "manufacturingRelease":False,"qualifiedWalkingPrototypeCount":0,
-        "physicalSelfStart":"UNKNOWN","real30cmTravel":"UNKNOWN","publicationAuthorized":False}
+        "physicalSelfStart":"UNKNOWN","real30cmTravel":"UNKNOWN","publicationAuthorized":True,
+        "publicationScope":{"repository":"https://github.com/ktanino10/TeoJansen_Rhinoceros",
+                            "pages":"https://ktanino10.github.io/TeoJansen_Rhinoceros/",
+                            "manufacturingOrMachineOperationAuthorized":False}}
     contract["assemblyReviewCorrection"]={"findingId":"R7-I1","reviewedSnapshotCommit":"922a47c5ab815fc186dd1486726123ab08552ede",
         "geometryChanged":False,"pathInventoryDerivedFromOrderedOperations":True}
-    contract["candidateRevision"]="v3-integrated-walkers-r7-15-review1"
+    contract["candidateRevision"]="v3-integrated-walkers-r7-15-slice1"
+    contract["reviewedGeometryArtifactCommit"]="f50978e55384d1b03417ed7115395e6e2c010e85"
+    contract["geometryChangedSinceReviewedArtifact"]=False
+    contract["slicingReport"]=resource(OUT/"SLICING_ja.md")
+    contract["representativeToolpathChecks"]=resource(OUT/"slicing/toolpath_checks.json")
+    contract["slicingProfileProvenance"]=resource(OUT/"slicing/profile_provenance.json")
+    contract["renderingLimits"].append("Contact frames are decimated converged small-angle quasi-static states,not dynamics. Missing independent rocker angles remain null; never replace them with zero or arbitrary poses.")
     contract["integrationReview"]={"summary":resource(OUT/"REVIEW_ja.md"),
         "initialReview":resource(OUT/"review/initial_review_record.json"),
         "correction":resource(OUT/"review/correction_status.json")}
     contract["bRetainerCorrection"]=resource(OUT/"B/retainer_corner_correction.json")
     contract["bRequiredToolEnvelope"]=resource(OUT/"B/retainer_tool_access.json")
+    contract["stage04DocumentationCorrection"]=resource(OUT/"review/stage04_documentation_correction.json")
     (OUT/"integration_contract.json").write_text(json.dumps(contract,ensure_ascii=False,indent=2)+"\n")
     print("Integration contract",contract["revisionId"],source_digest)
 

@@ -540,7 +540,7 @@
       "nativeVolumeMm3": 914.3019436698455,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
-      "supportsMayBeRequired": false,
+      "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
       "volumeRelativeDifference": 0.0002156608991448822,
