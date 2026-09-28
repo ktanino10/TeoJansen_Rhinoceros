@@ -1,0 +1,375 @@
+{
+  "reviewerAgentId": "8e708228-0ade-45b3-bc89-9c88abb9c78a",
+  "sameIndependentContext": true,
+  "newReviewContextUsed": false,
+  "pathRedactionOnly": true,
+  "originalFollowUpReportSha256": "b591673b00ca24a99f4b6e27a4bc8f970baa6413d67faa18404ccfa7735041d4",
+  "originalFollowUpJsonSha256": "a69e53badf6564ab7dd24539a08ce62f636c8231affa2ea62f684b167f7ed00b",
+  "originalProbeFiles": [
+    {
+      "path": "followup_probes/f01_inventory_contract.py",
+      "sha256": "ea4206cc39cd97cec2651707edaeb38ec05f6f4dcfd94df18fb5208ed0d3a58e"
+    },
+    {
+      "path": "followup_probes/f02_native_paths.py",
+      "sha256": "df1dd834d125f58a229b75fbd7383ab0b14a8b7a14f1e5b76a288221be507257"
+    },
+    {
+      "path": "followup_probes/f03_integrity.py",
+      "sha256": "e45be53a5efc71c81cfce52dd17dd5aca10f193e72682bb770449dae71c2bc2b"
+    }
+  ],
+  "confirmation": {
+    "schemaVersion": 1,
+    "findingId": "R7-I1",
+    "status": "CONFIRMED",
+    "scope": "One narrow corrective-difference confirmation in the same independent R7 context",
+    "sameReviewerContext": true,
+    "newReviewContextOrDelegationUsed": false,
+    "originalFindingRemainsValidForOriginalSnapshot": true,
+    "remainingR7I1Issues": [],
+    "target": {
+      "repository": "ktanino10/TeoJansen_Rhinoceros",
+      "workspace": "<worktree>",
+      "branch": "ktanino10-ver3-feasibility-redesign",
+      "originalSnapshotCommit": "922a47c5ab815fc186dd1486726123ab08552ede",
+      "correctiveSnapshotCommit": "a756a229ed133d15b70149ea949a5347ad24d684",
+      "correctiveSourceCommit": "124cf4a4555c7b68dd6a01deb41146ca39ed29e6",
+      "sourceHash": "197e5533bd60783c3ba5ff7222798223ffaa2712d92eb38e3d3c0b7a8aec5ee1",
+      "revisionId": "v3-integrated-walkers-r7-15",
+      "candidateRevision": "v3-integrated-walkers-r7-15-review1",
+      "manifestSha256": "f236d3287e48aaee714eebef490645843fa6c81f392511e76d0141dcff946bab",
+      "contractSha256": "c01b9df65b50eb15a79ced705a41ff5ba2b0bfcb8f2871ae46d465d25b993f66",
+      "correctivePacketSha256": "1742ffb30fba585cbd87d2cb91ebce5e212c1f7b8e54f172fb1b1c63c3b01653",
+      "patchSha256": "2d8cc37eacf9ca3a29d456ae98209ef78a4d84f94e70720634d887fe61877769",
+      "bNativeSha256": "dd6a68352a5fab903d5d9adb594b7bf1429a039a187ca375a344576e88ba9f02"
+    },
+    "conclusionJa": "orderedOperationsから全固定在庫を導出する是正と、同一在庫でのX+4下降・軸方向着座を独立に確認した。旧干渉は同じnativeで再現でき、新経路の代表点では交差0。装着済み部品の欠落を含む改変結果も拒否される。R7-I1は宣言された有限CAD組立経路の範囲で閉じられる。",
+    "inventoryVerification": {
+      "independentMethod": "Per-instance last-operation histories, not visibleAfter or author scenario-helper output",
+      "sourceSavedWorkflowAndResultsAgree": true,
+      "pathBindingsCheckedPerDesign": 10,
+      "endOfStageInventoriesUnchangedFromOriginal": true,
+      "stage07FixedCounts": {
+        "A": 241,
+        "B": 276,
+        "C": 241
+      },
+      "bModifiedBoundaries": [
+        {
+          "stage": "03_close_frame",
+          "afterOperationIndex": 0,
+          "scene": 185,
+          "moving": 50,
+          "fixed": 135,
+          "lateAdded": 20,
+          "stageEnd": 205
+        },
+        {
+          "stage": "07_lower_rotor",
+          "afterOperationIndex": 1,
+          "scene": 288,
+          "moving": 12,
+          "fixed": 276,
+          "lateAdded": 4,
+          "stageEnd": 292
+        },
+        {
+          "stage": "09_rear_cage",
+          "afterOperationIndex": 0,
+          "scene": 294,
+          "moving": 1,
+          "fixed": 293,
+          "lateAdded": 23,
+          "stageEnd": 317
+        }
+      ],
+      "isolatedBenchScene": {
+        "declaredUninstalledPrepareOnlyParts": 12,
+        "intersectionWithInstalledMachineInventory": 0,
+        "sceneOffsetMm": [
+          300,
+          0,
+          0
+        ]
+      },
+      "originalBObstaclesRetainedInBothSegments": [
+        "S_GUARD_UPPER_RIGHT_2_001",
+        "H_BOLT_M3_20_011",
+        "H_BOLT_M3_20_012"
+      ],
+      "bSceneInventorySha256": "58a733d331d326ad3bc7a414db36c31df4196a4c48076d3181a94b9ef5ac40b1",
+      "bDescentPathDefinitionSha256": "708410359fc02d574f3f7c215a73f50a8c91c148612ed690949f4c04cab78946",
+      "bSeatingPathDefinitionSha256": "d2f2e1c496f2dad030c17c4e884175d5ef80628ccc2b32920da69262fa458072",
+      "continuousJoinOffsetMm": [
+        4,
+        0,
+        0
+      ],
+      "finalOffsetMm": [
+        0,
+        0,
+        0
+      ],
+      "stage07FixedPoseOverrides": {}
+    },
+    "nativeVerification": {
+      "engine": "Isolated FreeCAD1.1.3 CLI, FreeCAD imported before Part",
+      "path": "FreeCAD/Ver.3/integrated_r7/B/Walker_B.FCStd",
+      "method": "Unmodified native parts, copied translations; all276 independently reconstructed fixed parts, actual solid-pair Boolean after bounding-box screening; no assembly fusion",
+      "thresholdMm3": 1e-05,
+      "oldControls": [
+        {
+          "moving": "H_INPUT_HUB_001",
+          "fixed": "S_GUARD_UPPER_RIGHT_2_001",
+          "offsetMm": [
+            0,
+            0,
+            10
+          ],
+          "expectedMm3": 9.662464586877448,
+          "observedMm3": 9.662464586877448
+        },
+        {
+          "moving": "P_ROTOR_CAGE_FRONT_001",
+          "fixed": "H_BOLT_M3_20_011",
+          "offsetMm": [
+            0,
+            0,
+            10
+          ],
+          "expectedMm3": 2.5404894418411144,
+          "observedMm3": 2.5404894418411144
+        },
+        {
+          "moving": "P_ROTOR_CAGE_FRONT_001",
+          "fixed": "H_BOLT_M3_20_012",
+          "offsetMm": [
+            0,
+            0,
+            5
+          ],
+          "expectedMm3": 2.332757803137632,
+          "observedMm3": 2.332757803137632
+        }
+      ],
+      "correctedPathSamples": [
+        {
+          "segment": "descent",
+          "offsetMm": [
+            4,
+            0,
+            40
+          ],
+          "exactPartPairs": 2,
+          "maximumIntersectionMm3": 0
+        },
+        {
+          "segment": "descent",
+          "offsetMm": [
+            4,
+            0,
+            20
+          ],
+          "exactPartPairs": 8,
+          "maximumIntersectionMm3": 0
+        },
+        {
+          "segment": "descent",
+          "offsetMm": [
+            4,
+            0,
+            10
+          ],
+          "exactPartPairs": 10,
+          "maximumIntersectionMm3": 0
+        },
+        {
+          "segment": "descent",
+          "offsetMm": [
+            4,
+            0,
+            7.5
+          ],
+          "exactPartPairs": 12,
+          "maximumIntersectionMm3": 0
+        },
+        {
+          "segment": "descent",
+          "offsetMm": [
+            4,
+            0,
+            2.5
+          ],
+          "exactPartPairs": 14,
+          "maximumIntersectionMm3": 0
+        },
+        {
+          "segment": "descent",
+          "offsetMm": [
+            4,
+            0,
+            0
+          ],
+          "exactPartPairs": 15,
+          "maximumIntersectionMm3": 0
+        },
+        {
+          "segment": "axial_seating",
+          "offsetMm": [
+            4,
+            0,
+            0
+          ],
+          "exactPartPairs": 15,
+          "maximumIntersectionMm3": 0
+        },
+        {
+          "segment": "axial_seating",
+          "offsetMm": [
+            2.5,
+            0,
+            0
+          ],
+          "exactPartPairs": 15,
+          "maximumIntersectionMm3": 0
+        },
+        {
+          "segment": "axial_seating",
+          "offsetMm": [
+            1.5,
+            0,
+            0
+          ],
+          "exactPartPairs": 15,
+          "maximumIntersectionMm3": 0
+        },
+        {
+          "segment": "axial_seating",
+          "offsetMm": [
+            0,
+            0,
+            0
+          ],
+          "exactPartPairs": 18,
+          "maximumIntersectionMm3": 0
+        }
+      ],
+      "correctedPathExactPartPairChecks": 124,
+      "upperSheetFixedPoseControl": {
+        "movingOffsetMm": [
+          0,
+          -4,
+          -40
+        ],
+        "installedFixedCount": 183,
+        "mainShaftRetractionMm": [
+          -53,
+          0,
+          0
+        ],
+        "retractedShaftCount": 3,
+        "moving": "S_GUARD_UPPER_RIGHT_1_001",
+        "fixed": "H_MAIN_HEX100_001",
+        "withoutRetractionIntersectionMm3": 1.3021210203793088,
+        "withRetractionIntersectionMm3": 0,
+        "allCheckedFixedPartsMaximumIntersectionMm3": 0,
+        "shaftRemainsInFixedInventory": true
+      }
+    },
+    "negativeControls": {
+      "memoryCopiesOnly": true,
+      "freshlyRehashedMalformedResultsRejected": true,
+      "contractAndPackageSharedValidatorControls": [
+        {
+          "mutation": "Remove installed PET from fixedNames and sceneInventoryNames, recompute hashes",
+          "rejectedField": "fixedNames"
+        },
+        {
+          "mutation": "Remove installed bolt011 from fixedNames and sceneInventoryNames, recompute hashes",
+          "rejectedField": "fixedNames"
+        },
+        {
+          "mutation": "Change afterOperationIndex from1 to2 and recompute path hash",
+          "rejectedField": "afterOperationIndex"
+        },
+        {
+          "mutation": "Translate bolt012 through fixedPoseOverridesByName and recompute path hash",
+          "rejectedField": "fixedPoseOverridesByName"
+        }
+      ],
+      "scenarioControls": [
+        {
+          "mutation": "Hand-written excludedFixedNames",
+          "rejected": "Path definitions cannot filter installed obstacles"
+        },
+        {
+          "mutation": "Seat segment starts0.25mm away from descent endpoint",
+          "rejected": "Discontinuous assembly path segments"
+        },
+        {
+          "mutation": "Add installed CHASSIS_L to isolated bench prepareOnly",
+          "rejected": "Bench preassembly must consist of declared uninstalled parts"
+        }
+      ],
+      "totalRejections": 11,
+      "fullContractGeneratorExecuted": false,
+      "packageMainExpectedPendingRejection": "R7-I1 requires the same independent review context's corrective-diff confirmation",
+      "pendingGateTreatedAsNewDefect": false
+    },
+    "executedProbes": [
+      {
+        "path": "followup_probes/f01_inventory_contract.py",
+        "interpreter": "python3",
+        "status": "PASS",
+        "purpose": "Independent operation boundaries, source/doc/result agreement, negative controls"
+      },
+      {
+        "path": "followup_probes/f02_native_paths.py",
+        "interpreter": "/Applications/FreeCAD.app/Contents/Resources/bin/python",
+        "status": "PASS",
+        "purpose": "Old positive controls,new two-segment path with complete fixed inventory,and fixed-pose control"
+      },
+      {
+        "path": "followup_probes/f03_integrity.py",
+        "interpreter": "python3",
+        "status": "PASS",
+        "purpose": "Candidate hashes,unchanged original artifacts,private evidence preservation,and source identities"
+      }
+    ],
+    "verification": {
+      "additionalSevenTestsReviewed": true,
+      "author72TestSuiteRerun": false,
+      "authorFullThreeDesignPathSuiteRerun": false,
+      "candidateFilesChecked": 284,
+      "unchangedOriginalFileRecords": 263,
+      "allOriginalFileRecordsAccountedFor": true,
+      "changedSharedOriginalRecords": 16,
+      "changesConfinedToWorkflowValidationAndReviewDocumentation": true,
+      "originalAndAuthorPrivateFilesHashChecked": 15,
+      "beforeCorrectionCopiesAndOriginalGitBlobsChecked": 12,
+      "sourceAndDependencyRecordsChecked": 41,
+      "manifestAndContractHashesMatchPacket": true,
+      "exactPatchMatchesOriginalToCandidateGitDiff": true,
+      "headMatchesCorrectiveSnapshot": true,
+      "branchUnchanged": true,
+      "gitStatusPorcelain": "",
+      "mismatches": []
+    },
+    "qualificationUnchanged": {
+      "manufacturingRelease": false,
+      "qualifiedWalkingPrototypeCount": 0,
+      "physicalSelfStart": "UNKNOWN",
+      "real30cmTravel": "UNKNOWN",
+      "candidateIndependentFollowUpStatusNotEdited": "PENDING"
+    },
+    "boundaries": [
+      "Confirmation of R7-I1 only,not a new whole-integration approval",
+      "Finite nominal native samples,not continuous-path or manufacturing-tolerance proof",
+      "No new A/C native path sweep,physical hand-support/tool-operation test,physics/BOM/price recomputation or actual walking test",
+      "No repository/candidate/initial-review/author-evidence edit",
+      "Coordinator may record this confirmation separately; this review did not alter the frozen PENDING gate"
+    ],
+    "followUpComplete": true
+  }
+}

@@ -1168,8 +1168,8 @@
     },
     {
       "path": "docs/ver3/integrated_r7/REVIEW_ja.md",
-      "bytes": 4678,
-      "sha256": "00ffc6c100bae7dc0f48e8e36ce02df2fbf0e28f2659e5eac63422996037e327"
+      "bytes": 6390,
+      "sha256": "33ea5658908deec8ecafe7837765ea94ac4db4ef7cd7b4ee118ff1ca2a40aaec"
     },
     {
       "path": "docs/ver3/integrated_r7/baseline_A_assembly_snapshot.json",
@@ -1199,7 +1199,7 @@
     {
       "path": "docs/ver3/integrated_r7/integration_contract.json",
       "bytes": 25476,
-      "sha256": "c01b9df65b50eb15a79ced705a41ff5ba2b0bfcb8f2871ae46d465d25b993f66"
+      "sha256": "0c0a6405988a225251f895f5408226af87643b408a1f2b9f279bf67c2e56f18f"
     },
     {
       "path": "docs/ver3/integrated_r7/purchase_lots.json",
@@ -1212,14 +1212,24 @@
       "sha256": "04bbe772d44bfeb32c46a5796ac5592c7d9256ef5d6925ff36b30c85fa8d31bc"
     },
     {
+      "path": "docs/ver3/integrated_r7/review/FOLLOWUP_R7-I1_ja.md",
+      "bytes": 8249,
+      "sha256": "db06c1bf63591b171b32726155642f61b2be2f1698ccd6440f9a7dad400d88bc"
+    },
+    {
       "path": "docs/ver3/integrated_r7/review/INITIAL_REVIEW_ja.md",
       "bytes": 12393,
       "sha256": "96d3a3cd8adc8bf9f2da1cf09766008796bf2dceab3a130396f55f0cb2e9fbdb"
     },
     {
       "path": "docs/ver3/integrated_r7/review/correction_status.json",
-      "bytes": 1799,
-      "sha256": "1d12f6ec2c6905b3ddad95c911c1c9787e501005af23f3337b31f2b57513ed1c"
+      "bytes": 2800,
+      "sha256": "707b3b832f2f8fc9fb443c468aec595c5d0bdebde9e568bbd565d08d084a84b4"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/review/followup_review_record.json",
+      "bytes": 12649,
+      "sha256": "8e67b671c8954bf85c3b24495e0713d8ca5ab2f885330d94b10ca68d5824b072"
     },
     {
       "path": "docs/ver3/integrated_r7/review/initial_review_record.json",

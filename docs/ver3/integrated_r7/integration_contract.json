@@ -668,8 +668,8 @@
   "integrationReview": {
     "summary": {
       "path": "docs/ver3/integrated_r7/REVIEW_ja.md",
-      "bytes": 4678,
-      "sha256": "00ffc6c100bae7dc0f48e8e36ce02df2fbf0e28f2659e5eac63422996037e327"
+      "bytes": 6390,
+      "sha256": "33ea5658908deec8ecafe7837765ea94ac4db4ef7cd7b4ee118ff1ca2a40aaec"
     },
     "initialReview": {
       "path": "docs/ver3/integrated_r7/review/initial_review_record.json",
@@ -678,8 +678,8 @@
     },
     "correction": {
       "path": "docs/ver3/integrated_r7/review/correction_status.json",
-      "bytes": 1799,
-      "sha256": "1d12f6ec2c6905b3ddad95c911c1c9787e501005af23f3337b31f2b57513ed1c"
+      "bytes": 2800,
+      "sha256": "707b3b832f2f8fc9fb443c468aec595c5d0bdebde9e568bbd565d08d084a84b4"
     }
   },
   "bRetainerCorrection": {

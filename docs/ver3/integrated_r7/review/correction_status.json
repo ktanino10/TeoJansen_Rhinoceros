@@ -2,7 +2,7 @@
   "findingId": "R7-I1",
   "reviewedSnapshotCommit": "922a47c5ab815fc186dd1486726123ab08552ede",
   "reviewerAgentId": "8e708228-0ade-45b3-bc89-9c88abb9c78a",
-  "independentFollowUpStatus": "PENDING",
+  "independentFollowUpStatus": "CONFIRMED",
   "geometryAndNumericalDataChanged": false,
   "unchangedProtectedFileCount": 180,
   "unchangedProtectedFilesAggregateSha256": "41658c4061caad5bdb9938bc9d9612cb6c14a11665c0e05afd0c5cc5bca0aca9",
@@ -73,5 +73,21 @@
   "slicerApproval": "PENDING_PARENT_RELAY",
   "correctiveSourceCommit": "124cf4a4555c7b68dd6a01deb41146ca39ed29e6",
   "authorRegressionSuiteTests": 72,
-  "reviewConfirmationPending": true
+  "reviewConfirmationPending": false,
+  "confirmationRecordedAtJst": "2026-09-28T12:43:46.651536+09:00",
+  "independentConfirmation": {
+    "reviewerAgentId": "8e708228-0ade-45b3-bc89-9c88abb9c78a",
+    "sameContext": true,
+    "reviewedCorrectiveSnapshotCommit": "a756a229ed133d15b70149ea949a5347ad24d684",
+    "reviewedSourceCommit": "124cf4a4555c7b68dd6a01deb41146ca39ed29e6",
+    "reviewedSourceHash": "197e5533bd60783c3ba5ff7222798223ffaa2712d92eb38e3d3c0b7a8aec5ee1",
+    "remainingR7I1Issues": [],
+    "actualIndependentBrepPairChecks": 124,
+    "negativeControlRejections": 11,
+    "reportPath": "docs/ver3/integrated_r7/review/FOLLOWUP_R7-I1_ja.md",
+    "reportSha256": "db06c1bf63591b171b32726155642f61b2be2f1698ccd6440f9a7dad400d88bc",
+    "recordPath": "docs/ver3/integrated_r7/review/followup_review_record.json",
+    "recordSha256": "8e67b671c8954bf85c3b24495e0713d8ca5ab2f885330d94b10ca68d5824b072",
+    "scope": "R7-I1 limited corrective-difference confirmation only; no manufacturing or physical walking approval"
+  }
 }
