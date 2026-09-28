@@ -1,7 +1,7 @@
 {
   "designId": "C",
   "revisionId": "v3-integrated-walkers-r7-16-floor2",
-  "mechanicalIdentity": "3d640999f31f949e14271c035dcff8de694f3a627853c7c8f99a6ecd41acf014",
+  "mechanicalIdentity": "16ba85d4aa9692070cb52ab7323c394b263819744ad389bc14424c90928bfdcd",
   "nativeSha256": "255625f6e162358f6396e18a9c58902758e53c8696faf528e91e808bd9769e92",
   "generatorSourcesSha256": {
     "export_floor_envelopes.py": "0018955e972dae9f64af98ce6025ff7769dda02d50bed1d522679900269a355f",
@@ -214001,5 +214001,6 @@
   },
   "allAssemblyPartsRepresented": true,
   "scope": "Native B-rep boxes or boundary enclosures. Trimmed circular arcs use circumscribed tangent segments (<=0.001mm excess),not the absent lower part of a full circle. Cylinder parameter rectangles enclose trimmed faces. Gear radial bounds use native analytic surfaces. Every instance remains checked; only intended rolling pads are removed from the rocker core.",
-  "physicalFloorTestPerformed": false
+  "physicalFloorTestPerformed": false,
+  "budgetMetadataUpdate": "docs/ver3/integrated_r7/budget_metadata_update.json"
 }

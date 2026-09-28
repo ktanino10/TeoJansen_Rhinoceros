@@ -30,8 +30,8 @@
       "contactPassed": 162,
       "contactTotal": 162,
       "minutesFor300mmAtAssumed120InputRpm": 3.896861511183203,
-      "approvedApproximateBudgetJpy": 23000,
-      "budgetStatus": "ABOVE_APPROVED_REFERENCE_BUDGET",
+      "approvedApproximateBudgetJpy": 24000,
+      "budgetStatus": "CONDITIONAL_WITHIN_APPROVED_BUDGET",
       "staticStatus": "PASS",
       "motionStatus": "PASS",
       "accessStatus": "PASS",
@@ -65,8 +65,8 @@
       "contactPassed": 162,
       "contactTotal": 162,
       "minutesFor300mmAtAssumed120InputRpm": 13.825306106022115,
-      "approvedApproximateBudgetJpy": 23000,
-      "budgetStatus": "ABOVE_APPROVED_REFERENCE_BUDGET",
+      "approvedApproximateBudgetJpy": 24000,
+      "budgetStatus": "CONDITIONAL_WITHIN_APPROVED_BUDGET",
       "staticStatus": "PASS",
       "motionStatus": "PASS",
       "accessStatus": "PASS",
@@ -100,8 +100,8 @@
       "contactPassed": 162,
       "contactTotal": 162,
       "minutesFor300mmAtAssumed120InputRpm": 4.221321281547751,
-      "approvedApproximateBudgetJpy": 23000,
-      "budgetStatus": "ABOVE_APPROVED_REFERENCE_BUDGET",
+      "approvedApproximateBudgetJpy": 24000,
+      "budgetStatus": "CONDITIONAL_WITHIN_APPROVED_BUDGET",
       "staticStatus": "PASS",
       "motionStatus": "PASS",
       "accessStatus": "PASS",
@@ -109,6 +109,6 @@
       "physicalSelfStart": "UNKNOWN"
     }
   ],
-  "published": false,
+  "publicationStateSource": "Repository main and Pages deployments; this report generator does not publish.",
   "physicalTestsPerformed": false
 }

@@ -2,7 +2,7 @@
   "designId": "B",
   "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "nativeSha256": "af40b3b39b8e7595adaff1289a6acba7bf7db9e890be97b047b60fafad4e35af",
-  "mechanicalIdentity": "9216a1746d00aa2df98d98b5503095ccce3cb0ccc6840b011beedccc659c5af0",
+  "mechanicalIdentity": "ecfaa081f1c4f61019b2b006a18840827b069c64c2f41aa8791eefe5510fa685",
   "checkerSourcesSha256": {
     "walker_floor.py": "6d1417c393221a908b21c3e6e0016cfc7013295fc56e58e0df8b3970669fb8c5",
     "check_integrated_floor.py": "5aa94019e98473f5609a046670b5b2b3024f76dd13573e69ccb7bdf7799f3cc8",
@@ -12,7 +12,7 @@
     "walker_kinematics.py": "50111228441a217670513bbb15d21a1454026891c38febfc9ae9319b48e32a37",
     "walker_geometry.py": "d976d6cd480a3875856c2c4397671ee1ac89fd0c73269a68dec095c05b12e2c6"
   },
-  "envelopesSha256": "80e1efc406dde9c04113e75401a7769e5ae054aefa5fdb640c75c406b16b7fb5",
+  "envelopesSha256": "06eb538f3e119e76009f08dfa38cc8cff562c88dc1346608b6c6a47421128df0",
   "status": "PASS",
   "caseCount": 163,
   "poseCount": 29880,
@@ -11668,5 +11668,6 @@
     }
   ],
   "scope": "Canonical dense720 nominal phases plus existing162 support scenarios across180 phases each. Native-containing envelopes cover every non-contact part and each rocker core across its continuous +/-5-degree stop range. Only the defined rolling-pad volumes are contact geometry. Not continuous crank-angle or physical-floor certification.",
-  "physicalTestsPerformed": false
+  "physicalTestsPerformed": false,
+  "budgetMetadataUpdate": "docs/ver3/integrated_r7/budget_metadata_update.json"
 }

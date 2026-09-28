@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "299711c11bb755be1d8a19de132129e59eab944e",
-  "sourceHash": "0052499d81d46db6ae9b3834162dfe6e546f80d1f14b46571e90d9f64f2fd530",
+  "sourceCommit": "369434e046acc5cb8f9da0f9f338308d29938d1e",
+  "sourceHash": "5074478881da48673648df953a591c0924f3b1d8ed390fad3830d6a0057ed5e4",
   "status": "PASS_CURRENT_INPUT_EXPORT_CONSISTENCY",
   "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "scope": "Current corrected geometry and actual nominal masses,not the obsolete r7-15 values. Same solver repeat and sampled frame force/floor/periodicity checks; not an independent physics review or real walking.",
@@ -10,7 +10,7 @@
       "designId": "A",
       "frameCount": 73,
       "rawPhaseCount": 720,
-      "contactFramesSha256": "ee7b042c5632027e32934096ca776f192d9e11eacca734ca4922eeb18c8ff0b3",
+      "contactFramesSha256": "e0fa9525eed928bfec8c30cccdebb406e449c8d2804e0a5471d856647f32f288",
       "matchingCurrentWorkBudgetSha256": "427c101b1bab21a3dc3468cbc370c934957ed9ebc3cb24068e48266b95cd378c",
       "repeatBudgetAndProfileExactlyMatch": true,
       "maximumNormalBalanceErrorN": 1.900701818158268e-13,
@@ -66,7 +66,7 @@
       "designId": "B",
       "frameCount": 73,
       "rawPhaseCount": 720,
-      "contactFramesSha256": "638f4da211c134c130ff9b544e0f603d6684274fc9f0e372113007a9aff1378e",
+      "contactFramesSha256": "9e38f9d2fb12f87abdf4440a59590e6ae11dc8b462e96b4e36178c9101a1689b",
       "matchingCurrentWorkBudgetSha256": "4a908dbb9039b44fdafb99aa1c68fbbc632b4a9556db6676a604b9b69de55250",
       "repeatBudgetAndProfileExactlyMatch": true,
       "maximumNormalBalanceErrorN": 2.3447910280083306e-13,
@@ -122,7 +122,7 @@
       "designId": "C",
       "frameCount": 73,
       "rawPhaseCount": 720,
-      "contactFramesSha256": "391c97577e18b755a741f0d57b466c32d4fe3ac0627a5d6a66fd16fbad220f11",
+      "contactFramesSha256": "342efc89501285ffac0d61d9ee9511b3969b041b4526b736be9504df38c1c116",
       "matchingCurrentWorkBudgetSha256": "4a9f4d87bd968964da5e72b7c266af203ea7bc0664ea6c51a14631d03e124a5e",
       "repeatBudgetAndProfileExactlyMatch": true,
       "maximumNormalBalanceErrorN": 2.362554596402333e-13,
@@ -174,5 +174,8 @@
         }
       ]
     }
-  ]
+  ],
+  "executionSourceCommit": "299711c11bb755be1d8a19de132129e59eab944e",
+  "executionSourceHash": "0052499d81d46db6ae9b3834162dfe6e546f80d1f14b46571e90d9f64f2fd530",
+  "budgetMetadataUpdate": "docs/ver3/integrated_r7/budget_metadata_update.json"
 }

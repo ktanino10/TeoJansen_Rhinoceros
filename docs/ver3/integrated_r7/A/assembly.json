@@ -9,9 +9,9 @@
       "floor": "level indoor floor; adopted local height departure +/-0.3mm, not measured",
       "travelMm": 300,
       "unpushedStart": true,
-      "materialBudgetJpy": 23000,
+      "materialBudgetJpy": 24000,
       "budgetApprovalDateJst": "2026-09-28",
-      "budgetApproval": "User approved approximately JPY23000 per machine via the coordinating parent; includes guards,all fasteners,assembly cradles and initial fit pieces. Shipping and unquoted taxes separate. No purchasing authorized.",
+      "budgetApproval": "User explicitly approved approximately JPY24000 per machine on2026-09-28 via the coordinating parent,finishing with stock parts; includes guards,all fasteners,assembly cradles and initial fit pieces. Shipping,uncertain taxes and unowned hand tools including DN-03 approximately JPY396 are separate. No purchasing authorized.",
       "shipping": "separate",
       "importedPartsScope": "input shaft/bearings/hub/collars and their already-counted fastener packs only",
       "noMachineOperationOrPurchasing": true
@@ -31991,5 +31991,6 @@
     "stepGeometryTextUnchanged": true,
     "geometryOrPhysicalValuesChanged": false,
     "scope": "Only human-facing labels corrected after replacing16mm/cut bolts and large washers. Stable instance IDs remain unchanged; no new geometric verification or independent review is claimed."
-  }
+  },
+  "budgetMetadataUpdate": "docs/ver3/integrated_r7/budget_metadata_update.json"
 }

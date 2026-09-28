@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "designId": "B",
-  "sourceCommit": "299711c11bb755be1d8a19de132129e59eab944e",
-  "sourceHash": "0052499d81d46db6ae9b3834162dfe6e546f80d1f14b46571e90d9f64f2fd530",
+  "sourceCommit": "369434e046acc5cb8f9da0f9f338308d29938d1e",
+  "sourceHash": "5074478881da48673648df953a591c0924f3b1d8ed390fad3830d6a0057ed5e4",
   "previousPublishedArtifactCommit": "8973992f0d48033224d91c7e9eb07144366b1fa2",
   "geometryCorrectedForFloorClearance": true,
-  "assemblySha256": "360e28cfedb1058f72887337875e6efe2b01746dad40bee1d0c76a023cbeeaee",
+  "assemblySha256": "74dbb60950d78e636850ca39d9b94bd3a5b74590f2e5277592da5ddcb32a3316",
   "mechanicalInputSha256": "9c488b7ec9878e4e97f87d71e7c57531def2ac42ffeab00f088d0d196f38f212",
   "analysisSourcesSha256": {
     "analyze_integrated_walkers.py": "5048ea6864f8b9386050a48d1ff8b5ebd2de6625551a640e0fbb141134abaeec",
@@ -8360,5 +8360,8 @@
       ],
       "independentRockerAngleRad": null
     }
-  ]
+  ],
+  "generationSourceCommit": "299711c11bb755be1d8a19de132129e59eab944e",
+  "generationSourceHash": "0052499d81d46db6ae9b3834162dfe6e546f80d1f14b46571e90d9f64f2fd530",
+  "budgetMetadataUpdate": "docs/ver3/integrated_r7/budget_metadata_update.json"
 }

@@ -516,7 +516,7 @@
     }
   ],
   "mechanicalInputSha256": "a8ee9b3ca6fac53dd2fd9cb89a8adfad6803a209f0bdabb599cf3a9d51682b4d",
-  "nativeFloorEnvelopesSha256": "ffda6f97d70d0212b50935b32b06603e061d422487000e059be1f966b3ee8722",
+  "nativeFloorEnvelopesSha256": "8407e0561a756606d7e519b0892c2dc0d32907875e065e0e99c211e0c9ddb0e1",
   "measuredAirOrResistance": false,
   "limits": [
     "The same six sensitivity inputs are applied to every design,not optimized per candidate.",
@@ -525,5 +525,6 @@
     "Rotor eccentricity is a static adverse-orientation bound using actual nominal rotor mass; centrifugal loads and running dynamics remain uncalculated.",
     "Nominal collar clocking is not a claim that a printed rotor has zero real eccentricity.",
     "Arbitrary factor0.5 and2x-downstream design margins remain separate from raw proxy results."
-  ]
+  ],
+  "budgetMetadataUpdate": "docs/ver3/integrated_r7/budget_metadata_update.json"
 }
