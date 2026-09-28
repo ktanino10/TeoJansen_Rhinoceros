@@ -1,4 +1,7 @@
 {
+  "historicalOnly": true,
+  "appliesToArtifactCommit": "8973992f0d48033224d91c7e9eb07144366b1fa2",
+  "notApplicableToCurrentFloorCorrection": true,
   "reviewedArtifactCommit": "f50978e55384d1b03417ed7115395e6e2c010e85",
   "status": "BYTE_IDENTICAL",
   "immutableFileCount": 229,

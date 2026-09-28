@@ -1,0 +1,96 @@
+{
+  "previousPublishedArtifactCommit": "8973992f0d48033224d91c7e9eb07144366b1fa2",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
+  "totalOriginalStlFiles": 140,
+  "unchangedStlFiles": 121,
+  "changedStlFiles": [
+    "STL/Ver.3/integrated_r7/A/P_FOOT_ROCKER_L.stl",
+    "STL/Ver.3/integrated_r7/A/P_FOOT_ROCKER_R.stl",
+    "STL/Ver.3/integrated_r7/A/P_FOOT_SLIDER_L.stl",
+    "STL/Ver.3/integrated_r7/A/P_FOOT_SLIDER_R.stl",
+    "STL/Ver.3/integrated_r7/B/P_FOOT_ROCKER_L.stl",
+    "STL/Ver.3/integrated_r7/B/P_FOOT_ROCKER_R.stl",
+    "STL/Ver.3/integrated_r7/B/P_FOOT_SLIDER_L.stl",
+    "STL/Ver.3/integrated_r7/B/P_FOOT_SLIDER_R.stl",
+    "STL/Ver.3/integrated_r7/C/P_CHASSIS_L.stl",
+    "STL/Ver.3/integrated_r7/C/P_CHASSIS_R.stl",
+    "STL/Ver.3/integrated_r7/C/P_COMPOUND_1.stl",
+    "STL/Ver.3/integrated_r7/C/P_FOOT_ROCKER_L.stl",
+    "STL/Ver.3/integrated_r7/C/P_FOOT_ROCKER_R.stl",
+    "STL/Ver.3/integrated_r7/C/P_FOOT_SLIDER_L.stl",
+    "STL/Ver.3/integrated_r7/C/P_FOOT_SLIDER_R.stl",
+    "STL/Ver.3/integrated_r7/C/P_INPUT_PINION.stl",
+    "STL/Ver.3/integrated_r7/C/P_OUTPUT_WHEEL.stl",
+    "STL/Ver.3/integrated_r7/C/P_ROTOR_CAGE_CAP.stl",
+    "STL/Ver.3/integrated_r7/C/P_ROTOR_CAGE_FRONT.stl"
+  ],
+  "designs": [
+    {
+      "designId": "A",
+      "oldInstanceCount": 756,
+      "newInstanceCount": 750,
+      "oldNominalMassG": 1076.3474319017914,
+      "newNominalMassG": 1065.387580211831,
+      "changedLocalMeshPartIds": [
+        "H_BOLT_M2_12",
+        "H_LOCK_NUT_M2",
+        "H_WASHER_4_SMALL",
+        "P_FOOT_ROCKER_L",
+        "P_FOOT_ROCKER_R",
+        "P_FOOT_SLIDER_L",
+        "P_FOOT_SLIDER_R",
+        "S_GUARD_LEFT",
+        "S_GUARD_LOWER_RIGHT"
+      ],
+      "nativeSha256": "4584762d480d940bc26a23b4ccd44491ffb051e7b1872559a2436af664473e88"
+    },
+    {
+      "designId": "B",
+      "oldInstanceCount": 791,
+      "newInstanceCount": 785,
+      "oldNominalMassG": 1112.3296448040544,
+      "newNominalMassG": 1101.3697931140941,
+      "changedLocalMeshPartIds": [
+        "H_BOLT_M2_12",
+        "H_LOCK_NUT_M2",
+        "H_WASHER_4_SMALL",
+        "P_FOOT_ROCKER_L",
+        "P_FOOT_ROCKER_R",
+        "P_FOOT_SLIDER_L",
+        "P_FOOT_SLIDER_R",
+        "S_GUARD_LEFT",
+        "S_GUARD_LOWER_RIGHT"
+      ],
+      "nativeSha256": "af40b3b39b8e7595adaff1289a6acba7bf7db9e890be97b047b60fafad4e35af"
+    },
+    {
+      "designId": "C",
+      "oldInstanceCount": 756,
+      "newInstanceCount": 750,
+      "oldNominalMassG": 1049.2401540565288,
+      "newNominalMassG": 1031.4327899206955,
+      "changedLocalMeshPartIds": [
+        "H_BOLT_M2_12",
+        "H_LOCK_NUT_M2",
+        "H_WASHER_4_SMALL",
+        "P_CHASSIS_L",
+        "P_CHASSIS_R",
+        "P_COMPOUND_1",
+        "P_FOOT_ROCKER_L",
+        "P_FOOT_ROCKER_R",
+        "P_FOOT_SLIDER_L",
+        "P_FOOT_SLIDER_R",
+        "P_INPUT_PINION",
+        "P_OUTPUT_WHEEL",
+        "P_ROTOR_CAGE_CAP",
+        "P_ROTOR_CAGE_FRONT",
+        "S_GUARD_LEFT",
+        "S_GUARD_LOWER_RIGHT",
+        "S_GUARD_UPPER_RIGHT"
+      ],
+      "nativeSha256": "255625f6e162358f6396e18a9c58902758e53c8696faf528e91e808bd9769e92"
+    }
+  ],
+  "scope": "Byte comparison of every original STL and equality of each parsed local mesh; whole native/STEP files intentionally change. Historical229-file invariance does not apply to this correction.",
+  "hardwareCountsChangedBecause": "Each foot uses one stock nylon-insert locking nut instead of two jam nuts; no foot or guard was hidden from the detector."
+}

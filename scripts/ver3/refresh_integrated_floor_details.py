@@ -112,6 +112,9 @@ def refresh(name,b,backup,hardware_only=False):
             feature.Placement=b.App.Placement(b.App.Matrix(*np.asarray(item["transform"]).ravel().tolist())).multiply(shape.Placement)
             feature.NominalMassGram=part["mass_g"];feature.PartId=pid
             feature.Category=part["category"];feature.Specification=part["spec"]
+            if replacement:
+                feature.Label=pid+"_"+item["name"].rsplit("_",1)[-1]
+                data.setdefault("nativeLabelOverrides",{})[item["name"]]=feature.Label
         for item in data["instances"]:doc.getObject(item["name"]).RevisionId=b.CFG["revisionId"]
         active={i["part_id"] for i in data["instances"]}
         data["parts"]={pid:p for pid,p in data["parts"].items() if pid in active}

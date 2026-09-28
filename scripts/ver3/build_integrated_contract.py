@@ -295,7 +295,7 @@ def source_identity():
         "slice_integrated_representatives.py","inspect_integrated_toolpaths.py",
         "test_slicing_inspection.py","test_contact_frames.py","walker_floor.py",
         "export_floor_envelopes.py","check_integrated_floor.py","test_walker_floor.py",
-        "refresh_integrated_floor_details.py","check_rocker_pin_access.py"]
+        "refresh_integrated_floor_details.py","check_rocker_pin_access.py","refresh_stock_labels.py"]
     sources=[resource(ROOT/"scripts/ver3"/name) for name in source_files]
     dependencies=[resource(ROOT/"docs/ver3/common_input_r4/assembly.json"),
                   resource(ROOT/"FreeCAD/Ver.3/common_input_r4/CommonInputR4.FCStd"),
@@ -379,11 +379,15 @@ def build(source_commit):
     contract["previousPublishedArtifactCommit"]="8973992f0d48033224d91c7e9eb07144366b1fa2"
     contract["floorCorrection"]={"report":resource(OUT/"FLOOR_CORRECTION_ja.md"),
                                  "baseline":resource(OUT/"review/floor_conflict_baseline.json"),
+                                 "intermediateCollisionControl":resource(OUT/"review/ratio_swap_collision_control.json"),
+                                 "changedScope":resource(OUT/"floor_correction_scope.json"),
                                  "independentlyReviewed":False,"ordinaryAuthorChecksOnly":True}
     contract["slicingReport"]=resource(OUT/"SLICING_ja.md")
     contract["representativeToolpathChecks"]=resource(OUT/"slicing/toolpath_checks.json")
     contract["slicingProfileProvenance"]=resource(OUT/"slicing/profile_provenance.json")
     contract["stockFastenersAndTools"]=resource(OUT/"stock_fasteners_and_tools.json")
+    contract["stockLabelMetadataUpdates"]=[resource(OUT/name/"stock_label_metadata_update.json")
+                                           for name in "AB"]
     contract["additionalCPrintInspection"]={"status":resource(OUT/"C/slicing_status.json"),
                                            "checks":resource(OUT/"C/slicing/toolpath_checks.json"),
                                            "report":resource(OUT/"C/SLICING_ja.md")}
