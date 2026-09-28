@@ -11,6 +11,7 @@ import re
 import numpy as np
 
 from walker_geometry import ROOT,OUT,CAD
+from build_integrated_contract import validate_path_inventory
 
 
 def load(path):
@@ -26,6 +27,11 @@ def main():
             raise ValueError("Physical qualification was incorrectly promoted")
     if contract["requirements"]["materialBudgetJpy"]!=23000:
         raise ValueError("The current user-approved budget is missing")
+    if contract["schemaVersion"]!=2:
+        raise ValueError("Assembly paths must use the inventory-bound workflow schema")
+    review=load(OUT/"review/correction_status.json")
+    if review["independentFollowUpStatus"]!="CONFIRMED":
+        raise ValueError("R7-I1 requires the same independent review context's corrective-diff confirmation")
     if contract["sourceHash"]!=manifest["sourceHash"] or not re.fullmatch(r"[0-9a-f]{40}",contract["sourceCommit"] or ""):
         raise ValueError("Missing or inconsistent source identity")
     for row in manifest["files"]:
@@ -65,6 +71,7 @@ def main():
         printing=load(folder/"print_geometry.json")
         if printing["nativeSha256"]!=native_hash or printing["geometryStatus"]!="PASS":raise ValueError("Stale print output")
         stages=load(folder/"assembly_stages.json");visible=set();seen=set()
+        if stages["schemaVersion"]!=2:raise ValueError("Legacy unbound assembly stage schema")
         for stage in stages["stages"]:
             for op in stage["orderedOperations"]:
                 names=set(op["instances"])
@@ -81,6 +88,7 @@ def main():
                 else:raise ValueError("Unknown stage operation")
             if visible!=set(stage["visibleAfter"]):raise ValueError("Stage inventory mismatch")
         if visible!=set(ids):raise ValueError("Final assembly stage is incomplete")
+        validate_path_inventory(a,load(folder/"assembly_access.json"),stages["stages"])
         work=load(folder/"work_budget.json");price=load(folder/"purchase_lots.json")
         if abs(work["cadMassKg"]*1000-total)>1e-7 or any(c["physicalSelfStart"]!="UNKNOWN" for c in work["cases"]):
             raise ValueError("Work model mass or qualification differs")

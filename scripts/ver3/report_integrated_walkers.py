@@ -135,6 +135,7 @@ def report():
         body=f"""# {name}：全体モデルの判断資料
 
 版：`{revision}`。**実測始動・30cm歩行は未確認、製作リリースではありません。**
+工程・経路の独立レビューとR7-I1是正の状態は[統合レビュー](../REVIEW_ja.md)を参照してください。幾何・性能数値とは別に、工程在庫へ拘束したschema 2の経路検査を使います。
 
 ![組立基準図](assembly_layout.svg)
 
@@ -230,6 +231,7 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
     summary=["# Ver.3 統合3案：全体実体と条件付き判断","","**主要求の「実証済みで成立する3台」は未完です。**",
              "旧r3/r4/r6と公開first-cutは不変。このフォルダーは新しい全機CAD、全BOM、接地・駆動計算、組立経路を同版でまとめたローカル成果です。",
              "製作リリース=false、合格歩行機数=0。購入・印刷・ドライヤー操作・公開は実施していません。","",
+             "[独立統合レビューとR7-I1の限定是正](REVIEW_ja.md)：旧スナップショットの工程在庫不一致を記録し、装着済みの全非移動部品を含む経路検査へ修正しています。CAD・質量・数値・BOMは変更していません。","",
              f'現在の設計予算は**1台約{approval["approvedApproximateBudgetJpyPerMachine"]:,.0f}円**（{approval["recordedDateJst"]} JSTユーザー承認）。送料・未確定税等別。購入はしていません。',
              "",
              "|案|径／減速比|名目g|個別初回 円|原代理／名目要求 mN·m|滑り仕事 Nmm/cycle|仮120RPMの30cm 分|",
@@ -282,6 +284,7 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
     files.extend(ROOT/item["path"] for item in contract["readOnlyExistingDependencies"])
     files=sorted(set(files))
     manifest={"revisionId":revision,"manufacturingRelease":False,"qualifiedWalkingPrototypeCount":0,
+              "candidateRevision":contract["candidateRevision"],
               "sourceCommit":contract["sourceCommit"],"sourceHash":contract["sourceHash"],
               "files":[{"path":str(p.relative_to(ROOT)),"bytes":p.stat().st_size,"sha256":hashlib.sha256(p.read_bytes()).hexdigest()}
                        for p in files]}

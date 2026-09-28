@@ -98,8 +98,9 @@ def assembly_stages(data):
          [("add",g["mainBase"]|g["leftCranks"]|g["reducer"]|g["syncDrivers"]|g["inputPinion"])],
          ("HEX_2P5","WRENCH_5P5"),note="主軸クランプは後で引き込み可能な段階。入力ピニオンは軸なしの仮置き。")
     right_bearing={name for name in g["inputR"] if name.startswith("BEARING_")}
+    closing_frame=g["rightFrame"]|g["idlers"]|g["mainRBody"]|right_bearing
     step("03_close_frame","右フレームを閉じ、キー・継手を固定",
-         [("add",g["rightFrame"]|g["splice"]|g["idlers"]|g["mainRBody"]|right_bearing)],
+         [("add",closing_frame),("add",g["splice"])],
          ("HEX_2P5","WRENCH_5P5"),("frame_right_close",))
     step("04_upper_sheets","一時取り外し・上側PETの挿入",
          [("remove",g["idlerCapRemovable"]),("add",g["upperSheets"]),("add",g["interR"]),
@@ -119,8 +120,10 @@ def assembly_stages(data):
          [("remove",g["inputPinion"])],("HEX_3",),("rotor_into_front_basket",),module,
          note="準備中の部品は本体へ追加済みと数えない。軸が通るまで手で支持する。")
     step("07_lower_rotor","前バスケットと風車部分組立を下ろす",
-         [("add",g["rotorSubassembly"]|g["frontBasket"]|g["inputLooseStops"]),("reinsert",g["inputPinion"])],
-         (),("front_basket_and_rotor_lower",),note="ピニオンを同じIDで戻す。カラー・スペーサーもまだ仮置き。")
+         [("add",g["rotorSubassembly"]|g["frontBasket"]),("reinsert",g["inputPinion"]),
+          ("add",g["inputLooseStops"])],
+         (),("front_basket_and_rotor_lower","front_basket_axial_seat"),
+         note="装着済みのPET・保持品を残し、部分組立全体をX=+4mmへ逃がして下降後、X=0へ軸方向に着座する。ピニオンを同じIDで戻す。カラー・スペーサーの仮置きは着座後。")
     steps[-1]["temporarilyHandSupported"]=sorted(module|g["inputLooseStops"])
     step("08_input_shaft","140mm入力軸を通し、カラー位置・向きを設定",
          [("add",g["inputShaft"])],("HEX_2P5",),("input_shaft_insert",),
@@ -128,7 +131,8 @@ def assembly_stages(data):
     steps[-1]["collarClocking"]=data.get("inputCollarClocking")
     steps[-1]["clockingAlreadyIncludedInCadTransforms"]=True
     step("09_rear_cage","後部ガードと前後の接合を固定",
-         [("add",(g["inputR"]-right_bearing)|g["cageJoinHardware"])],
+         [("add",g["inputRBody"]-right_bearing),
+          ("add",g["inputRHardware"]|g["cageJoinHardware"])],
          ("HEX_2P5","HEX_3","WRENCH_5P5","WRENCH_7"),("rear_cage_cap_insert",))
     step("10_right_cranks","右クランク・丸ジャーナル・正係合",
          [("add",g["rightCranks"]|g["rightCrankClamps"])],("HEX_2P5","WRENCH_5P5"),
@@ -141,7 +145,129 @@ def assembly_stages(data):
     if visible!=items.keys():raise ValueError("Incomplete assembly contract: "+str(items.keys()-visible))
     if any(len(row["visibleAfter"])!=len(set(row["visibleAfter"])) for row in steps):
         raise ValueError("A stage duplicates a physical instance")
+    by_stage={row["id"]:row for row in steps}
+    def path(stage,identity,after,moving,direction,distances,offset=(0,0,0),
+             scene="installed",fixed_poses=(),continues=None):
+        by_stage[stage].setdefault("pathChecks",[]).append({
+            "id":identity,"afterOperationIndex":after,"movingNames":sorted(moving),
+            "sceneKind":scene,"direction":list(direction),"distancesMm":list(distances),
+            "constantOffsetMm":list(offset),
+            "sceneOffsetMm":[300,0,0] if scene=="isolated_preassembly" else [0,0,0],
+            "fixedPoseOverrides":list(fixed_poses),"continues":continues})
+    retracted=[{"instances":sorted(g["mainMetalShafts"]),"translationFromCadMm":[-53,0,0]}]
+    path("03_close_frame","frame_right_close",0,closing_frame,(1,0,0),(120,80,40,20,10,5,2,1,0))
+    path("04_upper_sheets","upper_pet_from_below",1,g["upperSheets"],(0,0,-1),
+         (300,220,160,120,80,40,20,10,5,2,0),(0,-4,0),fixed_poses=retracted)
+    path("04_upper_sheets","upper_pet_lateral_seat",1,g["upperSheets"],(0,-1,0),
+         (4,3,2,1,0),fixed_poses=retracted,continues="upper_pet_from_below")
+    lower={name for name in g["sideSheets"] if items[name]["part_id"]=="S_GUARD_LOWER_RIGHT"}
+    left=g["sideSheets"]-lower
+    path("05_side_sheets","left_pet_from_left",1,left,(-1,0,0),(120,80,40,20,10,5,2,0))
+    path("05_side_sheets","lower_pet_from_right",1,lower,(1,0,0),(120,80,40,20,10,5,2,0))
+    path("06_prepare_rotor","rotor_into_front_basket",0,module-g["frontBasket"],(1,0,0),
+         (140,100,60,30,10,5,2,0),scene="isolated_preassembly")
+    path("07_lower_rotor","front_basket_and_rotor_lower",1,module,(0,0,1),
+         (240,180,120,80,40,20,10,5,2,0),(4,0,0))
+    path("07_lower_rotor","front_basket_axial_seat",1,module,(1,0,0),(4,3,2,1,0),
+         continues="front_basket_and_rotor_lower")
+    path("08_input_shaft","input_shaft_insert",0,g["inputShaft"],(-1,0,0),(180,140,100,80,40,20,10,5,2,0))
+    path("09_rear_cage","rear_cage_cap_insert",0,g["inputRBody"]-right_bearing,(1,0,0),
+         (100,60,40,24,16,12,8,4,2,1,0))
     return steps
+
+
+def assembly_path_scenarios(data,workflow=None):
+    """Every installed-path obstacle comes from the actual ordered inventory."""
+    workflow=assembly_stages(data) if workflow is None else workflow
+    all_names={item["name"] for item in data["instances"]}
+    visible=set();ever=set();paths=[];by_id={}
+    for stage in workflow:
+        snapshots={-1:visible.copy()}
+        for index,operation in enumerate(stage["orderedOperations"]):
+            names=set(operation["instances"])
+            if len(names)!=len(operation["instances"]) or not names<=all_names:
+                raise ValueError("Unknown or duplicated workflow instance")
+            kind=operation["operation"]
+            if kind=="add":
+                if names&ever:raise ValueError("Previously installed parts require reinsert")
+                visible|=names;ever|=names
+            elif kind=="remove":
+                if not names<=visible:raise ValueError("Removing uninstalled workflow parts")
+                visible-=names
+            elif kind=="reinsert":
+                if not names<=ever or names&visible:raise ValueError("Invalid workflow reinsertion")
+                visible|=names
+            else:raise ValueError("Unknown workflow operation")
+            snapshots[index]=visible.copy()
+        if visible!=set(stage["visibleAfter"]):raise ValueError("Declared stage inventory disagrees with its operations")
+        checks=stage.get("pathChecks",[])
+        if [row["id"] for row in checks]!=stage["validatedPathIds"]:
+            raise ValueError("Every declared path must have one ordered inventory binding")
+        if checks and stage["stopCrankDeg"]!=0:
+            raise ValueError("Only the native reference crank pose is implemented")
+        for definition in checks:
+            if "fixedNames" in definition or "excludedFixedNames" in definition:
+                raise ValueError("Path definitions cannot filter installed obstacles")
+            boundary=definition["afterOperationIndex"]
+            if boundary not in snapshots:raise ValueError("Unknown path operation boundary")
+            installed=snapshots[boundary]
+            kind=definition["sceneKind"]
+            if kind=="installed":
+                scene=installed
+            elif kind=="isolated_preassembly":
+                scene=set(stage["prepareOnly"])
+                if scene&installed or not scene<=all_names:
+                    raise ValueError("Bench preassembly must consist of declared uninstalled parts")
+            else:raise ValueError("Unknown path scene")
+            moving=set(definition["movingNames"])
+            if not moving or not moving<=scene or len(moving)!=len(definition["movingNames"]):
+                raise ValueError("A moving part is missing from its bound scene")
+            fixed=scene-moving
+            overrides={}
+            for override in definition["fixedPoseOverrides"]:
+                names=set(override["instances"]);vector=override["translationFromCadMm"]
+                if not names<=fixed or names&overrides.keys() or np.shape(vector)!=(3,) or not np.isfinite(vector).all():
+                    raise ValueError("Invalid fixed-part pose override")
+                overrides.update({name:list(vector) for name in names})
+            for field in ("direction","constantOffsetMm","sceneOffsetMm"):
+                if np.shape(definition[field])!=(3,) or not np.isfinite(definition[field]).all():
+                    raise ValueError("Invalid path translation")
+            if not definition["distancesMm"] or not np.isfinite(definition["distancesMm"]).all():
+                raise ValueError("Invalid path samples")
+            row={key:definition[key] for key in ("id","sceneKind","direction","distancesMm","constantOffsetMm","sceneOffsetMm","continues")}
+            row.update(workflowStageId=stage["id"],afterOperationIndex=boundary,
+                       stopCrankDeg=stage["stopCrankDeg"],movingNames=sorted(moving),fixedNames=sorted(fixed),
+                       sceneInventoryNames=sorted(scene),fixedPoseOverridesByName=overrides)
+            row["inventorySha256"]=hashlib.sha256(json.dumps(sorted(scene),separators=(",",":")).encode()).hexdigest()
+            row["pathDefinitionSha256"]=hashlib.sha256(json.dumps(row,sort_keys=True,separators=(",",":")).encode()).hexdigest()
+            previous=definition["continues"]
+            if previous:
+                if previous not in by_id:raise ValueError("Unknown preceding path segment")
+                before=by_id[previous]
+                if any(before[key]!=row[key] for key in ("movingNames","fixedNames","fixedPoseOverridesByName","sceneKind","sceneOffsetMm")):
+                    raise ValueError("A continuous path changed its scene or moving assembly")
+                end=np.array(before["direction"])*before["distancesMm"][-1]+before["constantOffsetMm"]
+                start=np.array(row["direction"])*row["distancesMm"][0]+row["constantOffsetMm"]
+                if not np.allclose(end,start,rtol=0,atol=1e-10):
+                    raise ValueError("Discontinuous assembly path segments")
+            if row["id"] in by_id:raise ValueError("Duplicate path id")
+            paths.append(row);by_id[row["id"]]=row
+    if visible!=all_names:raise ValueError("The complete workflow does not install every physical instance")
+    return paths
+
+
+def validate_path_inventory(data,results,workflow=None):
+    expected={row["id"]:row for row in assembly_path_scenarios(data,workflow)}
+    actual={row["id"]:row for row in results["stages"]}
+    if len(actual)!=len(results["stages"]) or actual.keys()!=expected.keys():
+        raise ValueError("The assembly path result set is incomplete or duplicated")
+    for identity,row in expected.items():
+        result=actual[identity]
+        for key,value in row.items():
+            if result.get(key)!=value:
+                raise ValueError(f"Path {identity} disagrees with ordered workflow inventory/definition: {key}")
+        if result.get("status")!="PASS":
+            raise ValueError("An assembly path has unresolved intersections: "+identity)
 
 
 def build(source_commit):
@@ -153,7 +279,7 @@ def build(source_commit):
         "price_integrated_walkers.py","run_cad_bounded.py","verify_integrated_exports.py",
         "check_integrated_collisions.py","check_integrated_motion.py","check_integrated_access.py",
         "check_integrated_contact.py","check_integrated_rotations.py","check_retainer_tool_access.py",
-        "check_walker_cad_components.py","test_walker_math.py","export_integrated_prints.py",
+        "check_walker_cad_components.py","test_walker_math.py","test_assembly_contract.py","export_integrated_prints.py",
         "report_integrated_walkers.py","build_integrated_contract.py","verify_integrated_package.py","beam.py","frame3d.py",
         "cad_parts.py","core.py","commercial_r3.py","study_r2.py","input_cartridge.py"]
     sources=[resource(ROOT/"scripts/ver3"/name) for name in source_files]
@@ -173,13 +299,12 @@ def build(source_commit):
         native=resource(CAD/name/f"Walker_{name}.FCStd")
         paths=json.loads((folder/"assembly_access.json").read_text())
         if paths["nativeSha256"]!=native["sha256"]:raise ValueError("Stale assembly path verification "+name)
-        available={row["id"] for row in paths["stages"]}
-        if any(not set(row["validatedPathIds"])<=available for row in stages):
-            raise ValueError("Contract references an unverified path")
+        validate_path_inventory(a,paths,stages)
         stage_file=folder/"assembly_stages.json"
         stage_file.write_text(json.dumps({"revisionId":a["revisionId"],"designId":name,
-            "nativeSha256":native["sha256"],"schemaVersion":1,"operationsAreOrdered":True,"stages":stages,
+            "nativeSha256":native["sha256"],"schemaVersion":2,"operationsAreOrdered":True,"stages":stages,
             "finalVisibleInstanceCount":len(a["instances"]),"sameIdReinsertionsRequired":True,
+            "pathInventorySource":"All installed nonmoving instances at each declared ordered-operation boundary; isolated preassembly uses its declared separate scene.",
             "scope":"Staged geometry reference with explicit temporary removals and hand support,not an executed assembly or dynamics animation."},
             ensure_ascii=False,indent=2)+"\n")
         designs.append({"id":name,"revisionId":a["revisionId"],"direction":a["candidate"]["direction"],
@@ -196,7 +321,7 @@ def build(source_commit):
             "mainShaftPhasesDeg":a["parameters"]["common"]["legPhasesDeg"],
             "signedInputRevolutionsPerCrank":a["reduction"]["speedRatios"][0],
             "nominalMassG":a["nominalTotalMassG"],"nominalCogMm":a["nominalCenterOfMassMm"]})
-    contract={"schemaVersion":1,"revisionId":cfg["revisionId"],"sourceCommit":source_commit,
+    contract={"schemaVersion":2,"revisionId":cfg["revisionId"],"sourceCommit":source_commit,
         "sourceHash":source_digest,"sourceFiles":sources,"requirements":cfg["requirements"],
         "readOnlyExistingDependencies":dependencies,
         "requirementsApproval":resource(OUT/"requirements_approval.json"),
@@ -213,6 +338,12 @@ def build(source_commit):
                            "Old first-cut GLB,r3 calculations andr4/r6 data remain separately versioned; do not merge their numbers or geometry."],
         "manufacturingRelease":False,"qualifiedWalkingPrototypeCount":0,
         "physicalSelfStart":"UNKNOWN","real30cmTravel":"UNKNOWN","publicationAuthorized":False}
+    contract["assemblyReviewCorrection"]={"findingId":"R7-I1","reviewedSnapshotCommit":"922a47c5ab815fc186dd1486726123ab08552ede",
+        "geometryChanged":False,"pathInventoryDerivedFromOrderedOperations":True}
+    contract["candidateRevision"]="v3-integrated-walkers-r7-15-review1"
+    contract["integrationReview"]={"summary":resource(OUT/"REVIEW_ja.md"),
+        "initialReview":resource(OUT/"review/initial_review_record.json"),
+        "correction":resource(OUT/"review/correction_status.json")}
     contract["bRetainerCorrection"]=resource(OUT/"B/retainer_corner_correction.json")
     contract["bRequiredToolEnvelope"]=resource(OUT/"B/retainer_tool_access.json")
     (OUT/"integration_contract.json").write_text(json.dumps(contract,ensure_ascii=False,indent=2)+"\n")
