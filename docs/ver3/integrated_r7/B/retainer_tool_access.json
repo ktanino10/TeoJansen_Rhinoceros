@@ -1,0 +1,63 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-15",
+  "designId": "B",
+  "nativeSha256": "dd6a68352a5fab903d5d9adb594b7bf1429a039a187ca375a344576e88ba9f02",
+  "status": "PASS_REQUIRED_TOOL_ENVELOPE",
+  "stopCrankDeg": 0,
+  "retainerOffsetsYzMm": [
+    [
+      -14,
+      0
+    ],
+    [
+      14,
+      0
+    ]
+  ],
+  "nominalCapHoleEdgeWallMm": 2.75,
+  "nominalCarrierBossHoleEdgeWallMm": 3.25,
+  "records": [
+    {
+      "targetNut": "H_NUT_M3_061",
+      "toolHeadOuterWidthMm": 7.6,
+      "toolThicknessMm": 1.8,
+      "toolAcrossFlatsMm": 5.65,
+      "workingHandleLengthMm": 27,
+      "status": "PASS",
+      "intersections": []
+    },
+    {
+      "targetNut": "H_NUT_M3_062",
+      "toolHeadOuterWidthMm": 7.6,
+      "toolThicknessMm": 1.8,
+      "toolAcrossFlatsMm": 5.65,
+      "workingHandleLengthMm": 27,
+      "status": "PASS",
+      "intersections": []
+    },
+    {
+      "targetNut": "H_NUT_M3_063",
+      "toolHeadOuterWidthMm": 7.6,
+      "toolThicknessMm": 1.8,
+      "toolAcrossFlatsMm": 5.65,
+      "workingHandleLengthMm": 27,
+      "status": "PASS",
+      "intersections": []
+    },
+    {
+      "targetNut": "H_NUT_M3_064",
+      "toolHeadOuterWidthMm": 7.6,
+      "toolThicknessMm": 1.8,
+      "toolAcrossFlatsMm": 5.65,
+      "workingHandleLengthMm": 27,
+      "status": "PASS",
+      "intersections": []
+    }
+  ],
+  "actualToolModelOrOwnershipConfirmed": false,
+  "limits": [
+    "This verifies required miniature-spanner working-end dimensions,not an identified manufacturer's complete handle or an actual user's tool.",
+    "A larger spanner is not assumed to fit. Actual tools and tightening forces remain a pre-build acceptance condition.",
+    "Nominal CAD clearance is not a tolerance or deformation guarantee; no physical wrench operation was performed."
+  ]
+}

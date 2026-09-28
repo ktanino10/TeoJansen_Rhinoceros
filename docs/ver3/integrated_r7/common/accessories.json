@@ -1,0 +1,125 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-15",
+  "parts": [
+    {
+      "partId": "T_DIAMETER_COUPON",
+      "quantity": 1,
+      "unitCadMassG": 19.487523315092357,
+      "unitSolidVolumeMm3": 15344.506547316814,
+      "purpose": "Left-to-right nominal diameters are printed in accessories.json; fit gauge,not installed",
+      "stl": "STL/Ver.3/integrated_r7/common/T_DIAMETER_COUPON.stl"
+    },
+    {
+      "partId": "T_GUIDE_COUPON",
+      "quantity": 1,
+      "unitCadMassG": 2.135241854532689,
+      "unitSolidVolumeMm3": 1681.2927988446372,
+      "purpose": "Actual13mm engagement length; preserve the selected fit rather than sanding a threaded screw",
+      "stl": "STL/Ver.3/integrated_r7/common/T_GUIDE_COUPON.stl"
+    },
+    {
+      "partId": "T_JOURNAL_COUPON",
+      "quantity": 1,
+      "unitCadMassG": 1.2545790034629465,
+      "unitSolidVolumeMm3": 987.8574830416902,
+      "purpose": "Three round-journal gauges7.90/7.95/8.00mm with the actual5.12mm-AF bore; verify steel bearing/print fit without claiming measured drag",
+      "stl": "STL/Ver.3/integrated_r7/common/T_JOURNAL_COUPON.stl"
+    },
+    {
+      "partId": "T_ASSEMBLY_CRADLE",
+      "quantity": 2,
+      "unitCadMassG": 42.059544158388356,
+      "unitSolidVolumeMm3": 33117.751305817605,
+      "purpose": "Chassis-rail cradle for stationary assembly only; remove both before any floor travel",
+      "stl": "STL/Ver.3/integrated_r7/common/T_ASSEMBLY_CRADLE.stl"
+    },
+    {
+      "partId": "T_GEAR_12",
+      "quantity": 1,
+      "unitCadMassG": 0.3299624549948507,
+      "unitSolidVolumeMm3": 259.81295668885883,
+      "purpose": "Actual25-degree zero-shift tooth profile with shortened tips; first print/slice mesh coupon",
+      "stl": "STL/Ver.3/integrated_r7/common/T_GEAR_12.stl"
+    },
+    {
+      "partId": "T_GEAR_120",
+      "quantity": 1,
+      "unitCadMassG": 11.037578783546072,
+      "unitSolidVolumeMm3": 8691.00691617801,
+      "purpose": "Actual25-degree zero-shift tooth profile with shortened tips; first print/slice mesh coupon",
+      "stl": "STL/Ver.3/integrated_r7/common/T_GEAR_120.stl"
+    }
+  ],
+  "totalFirstBuildPrintedMassG": 118.36397372840563,
+  "installedWalkingMassG": 0,
+  "nativeStep": "native reopen and valid solids checked; not installed in walker export",
+  "cradleRailCentersXmm": [
+    -39.5,
+    32
+  ],
+  "cradleSeatHeightMm": 100,
+  "diameterCouponHoles": [
+    [
+      8,
+      8,
+      4
+    ],
+    [
+      20,
+      8,
+      4.1
+    ],
+    [
+      32,
+      8,
+      4.2
+    ],
+    [
+      44,
+      8,
+      4.3
+    ],
+    [
+      60,
+      8,
+      8
+    ],
+    [
+      72,
+      8,
+      8.1
+    ],
+    [
+      84,
+      8,
+      8.2
+    ],
+    [
+      10,
+      27,
+      14
+    ],
+    [
+      30,
+      27,
+      14.2
+    ],
+    [
+      50,
+      27,
+      14.4
+    ],
+    [
+      70,
+      27,
+      16
+    ],
+    [
+      90,
+      27,
+      16.2
+    ]
+  ],
+  "purchaseReuse": "Fit checks use one of the already purchased sleeves/bearings,then return it to the assembly; no new import lot",
+  "physicalTestsPerformed": false
+}

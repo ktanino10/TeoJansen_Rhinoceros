@@ -1,0 +1,45 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-15",
+  "actualSlicingPerformed": false,
+  "status": "NOT_RUN_AVAILABLE_SLICER_NOT_FOUND",
+  "checkedInstalledApplicationLocations": [
+    "/Applications/BambuStudio.app",
+    "/Applications/Bambu Studio.app",
+    "/Applications/OrcaSlicer.app",
+    "/Applications/PrusaSlicer.app",
+    "~/Applications/BambuStudio.app",
+    "~/Applications/Bambu Studio.app",
+    "~/Applications/OrcaSlicer.app",
+    "~/Applications/PrusaSlicer.app"
+  ],
+  "checkedPathCommands": [
+    "bambu-studio",
+    "BambuStudio",
+    "orcaslicer",
+    "OrcaSlicer",
+    "prusa-slicer",
+    "PrusaSlicer",
+    "CuraEngine",
+    "cura-engine"
+  ],
+  "availableExecutableDetected": false,
+  "softwareInstalled": false,
+  "printerContacted": false,
+  "printerMachineForExecutedSlice": null,
+  "nozzleForExecutedSliceMm": null,
+  "settingsForExecutedSlice": null,
+  "representativeFilesForFutureLayerInspection": [
+    "STL/Ver.3/integrated_r7/A/P_INPUT_PINION.stl",
+    "STL/Ver.3/integrated_r7/A/P_COMPOUND_1.stl",
+    "STL/Ver.3/integrated_r7/common/T_GUIDE_COUPON.stl",
+    "STL/Ver.3/integrated_r7/common/T_JOURNAL_COUPON.stl",
+    "STL/Ver.3/integrated_r7/common/T_DIAMETER_COUPON.stl"
+  ],
+  "remainingLayerChecks": [
+    "The approximately0.53mm tooth tip must survive the chosen nozzle and wall generator.",
+    "Inspect actual tooth-face layers,root lines,bore continuity and support removal access.",
+    "Verify the actual printer/nozzle/material profile; none was treated as confirmed.",
+    "Watertight STL and native/STEP agreement do not substitute for toolpath or printed-fit approval."
+  ],
+  "scope": "Known installed-app paths and PATH were checked. No new large software,full-machine slicing,printer upload or print operation was attempted."
+}

@@ -1,0 +1,73 @@
+part_id,category,quantity,sku,unit_nominal_mass_g,total_nominal_mass_g,basis,spec
+H_NYLOCK4,purchased,10,2812-0004-0007,0.78,7.800000000000001,supplier unit value or explicitly tagged estimate,goBILDA2812-0004-0007 M4 prevailing torque nut; shared25-piece purchase lot
+H_INPUT_SHAFT,purchased,1,2101-0006-0140,30,30,supplier unit value or explicitly tagged estimate,goBILDA2101-0006-0140 stock140mm D shaft; no machining
+H_INPUT_BEARING,purchased,2,1611-0514-0006,3,6,supplier unit value or explicitly tagged estimate,"1611-0514-0006; original R4 dimensional envelope, not redistributed vendorCAD"
+H_INPUT_HUB,purchased,1,1309-0016-1006,14,14,supplier unit value or explicitly tagged estimate,"1309-0016-1006; original R4 dimensional envelope, not redistributed vendorCAD"
+H_INPUT_COLLAR,purchased,2,2910-0919-0006,7,14,supplier unit value or explicitly tagged estimate,"2910-0919-0006; original R4 dimensional envelope, not redistributed vendorCAD"
+H_INPUT_SPACER,purchased,2,1521-0008-0040,0.64,1.28,supplier unit value or explicitly tagged estimate,"1521-0008-0040; original R4 dimensional envelope, not redistributed vendorCAD"
+H_NMB1680,purchased,10,DDL-1680HH,4,40,supplier unit value or explicitly tagged estimate,"NMB DDL-1680HH8x16x5,Li9.68,Lo14.23;4g conservative UNVERIFIED unit-mass allowance"
+H_MAIN_HEX100,cut_to_length,3,HEX5,18.40303983041933,55.209119491257994,actual solid CAD volume x assumed material density,"C3604B5mm-AF stock cut100mm; tolerance acceptance+/-2,round8mm keyed journals are separate"
+H_INTER_HEX58,cut_to_length,1,HEX5,10.673763101643212,10.673763101643212,actual solid CAD volume x assumed material density,"C3604B5mm-AF stock cut58mm,+/-0.5mm acceptance; short flush end permits the upper PET panel's radial insertion; no end tapping"
+P_CRANK_JOURNAL_-1_0,printed,2,,3.3650948757176913,6.730189751435383,actual solid CAD volume x assumed material density,One keyed crank/round8mm journal with9.2mm shoulder and clamp; no hex stock directly inside round bearing
+P_CRANK_JOURNAL_1_180,printed,2,,3.621531191860354,7.243062383720708,actual solid CAD volume x assumed material density,One keyed crank/round8mm journal with9.2mm shoulder and clamp; no hex stock directly inside round bearing
+P_MAIN_INNER_STOP,printed,2,,1.0518534299037439,2.1037068598074877,actual solid CAD volume x assumed material density,"Keyed inner stop,0.2mm locating-bearing allowance; clamp is axialretention,hexprofile carries torque"
+H_BOLT_M3_16,purchased,18,BOLT_M3_16,1.3835878609720142,24.904581497496256,actual solid CAD volume x assumed material density,"BOLT_M3_16; metric dimensional model, no physical material certification"
+H_NUT_M3,purchased,68,NUT_M3,0.3995902952303397,27.172140075663098,actual solid CAD volume x assumed material density,"NUT_M3; metric dimensional model, no physical material certification"
+P_CAP_STEP_-14_-13_19_0_3_14.6,printed,3,,2.314751054136551,6.9442531624096535,actual solid CAD volume x assumed material density,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+H_BOLT_M3_20,purchased,16,BOLT_M3_20,1.6055413819481328,25.688662111170125,actual solid CAD volume x assumed material density,"BOLT_M3_20; metric dimensional model, no physical material certification"
+H_WASHER_3,purchased,64,WASHER_M3,0.11948497879214402,7.6470386426972174,actual solid CAD volume x assumed material density,"WASHER_M3; metric dimensional model, no physical material certification"
+H_WASHER_4,purchased,120,THRUST4,0.30831810213815986,36.99817225657918,actual solid CAD volume x assumed material density,"THRUST4; metric dimensional model, no physical material certification"
+P_CAP_WIDE_-14_-13_19_0_4_14.6,printed,3,,1.9899169106693266,5.96975073200798,actual solid CAD volume x assumed material density,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+H_BOLT_M4_20,purchased,10,BOLT_M4_20,3.0589644111029615,30.589644111029614,actual solid CAD volume x assumed material density,"BOLT_M4_20; metric dimensional model, no physical material certification"
+H_WASHER_6,purchased,6,THRUST6,0.45026970955355317,2.7016182573213188,actual solid CAD volume x assumed material density,"THRUST6; metric dimensional model, no physical material certification"
+P_CRANK_JOURNAL_-1_180,printed,1,,3.365094815369599,3.365094815369599,actual solid CAD volume x assumed material density,One keyed crank/round8mm journal with9.2mm shoulder and clamp; no hex stock directly inside round bearing
+P_CRANK_JOURNAL_1_0,printed,1,,3.6215311918603557,3.6215311918603557,actual solid CAD volume x assumed material density,One keyed crank/round8mm journal with9.2mm shoulder and clamp; no hex stock directly inside round bearing
+P_SYNC_DRIVE,printed,3,,4.887088965815953,14.66126689744786,actual solid CAD volume x assumed material density,"42-tooth m1,25deg synchronous maingear; two-idler bus makes all mainshafts same direction"
+P_SYNC_IDLER,printed,2,,7.253078107141635,14.50615621428327,actual solid CAD volume x assumed material density,42-tooth idler with real8mm bearing; short fixed journal must not enter reducer planes
+P_IDLER_CAP,printed,2,,0.6724274670166356,1.3448549340332712,actual solid CAD volume x assumed material density,Outer ring cap with0.4mm front clearance;two M3 bolts
+P_IDLER_JOURNAL,printed,2,,0.29803975345341,0.59607950690682,actual solid CAD volume x assumed material density,Round8mm journal around4mm stationary brasssleeve;9.2mm inner-ring shoulder
+P_IDLER_INNER_WASHER,printed,2,,0.12029315350227994,0.24058630700455988,actual solid CAD volume x assumed material density,Inner-ring-only axial keeper;0.2mm total inner stack freedom
+H_SLEEVE_2_8,purchased,20,CE-2008N,0.5960229582390559,11.920459164781118,actual solid CAD volume x assumed material density,"CE-2008N; metric dimensional model, no physical material certification"
+H_BOLT_M2_16,purchased,20,BOLT_M2_16,0.557343910424044,11.14687820848088,actual solid CAD volume x assumed material density,"BOLT_M2_16; metric dimensional model, no physical material certification"
+H_WASHER_2,purchased,88,WASHER_M2,0.037288191523987976,3.281360854110942,actual solid CAD volume x assumed material density,"WASHER_M2; metric dimensional model, no physical material certification"
+H_NUT_M2,purchased,100,NUT_M2,0.14619461547327647,14.619461547327647,actual solid CAD volume x assumed material density,"NUT_M2; metric dimensional model, no physical material certification"
+P_COMPOUND_1,printed,1,,15.485819091915841,15.485819091915841,actual solid CAD volume x assumed material density,Two rigid involute stages on one keyed carrier;8mm journals; exact two clocked tooth datums
+P_INTER_STOP,printed,1,,1.7726120325345869,1.7726120325345869,actual solid CAD volume x assumed material density,Removable5mm-AF intermediate clamp and9.2mm shoulder;0.4mm inner-stack freedom
+P_CAP_STEP_-17_0_17_0_3_14.6,printed,1,,2.091402194711255,2.091402194711255,actual solid CAD volume x assumed material density,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+P_CAP_PLAIN_-13_0_13_0_3_14.6,printed,1,,1.4104695413330608,1.4104695413330608,actual solid CAD volume x assumed material density,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+P_OUTPUT_WHEEL,printed,1,,14.75188352735583,14.75188352735583,actual solid CAD volume x assumed material density,Reducer output on the third common shaft;positive5mm-AF profile
+P_INPUT_PINION,printed,1,,1.1611634684607037,1.1611634684607037,actual solid CAD volume x assumed material density,"Positive6mmD pinion with integral spacerstem;0.4mm axial clearance between inner collar and metal hub,not an unsupported round-bore friction fit"
+P_CAP_PLAIN_-18_0_18_0_4_10.2,printed,1,,1.7598348496280152,1.7598348496280152,actual solid CAD volume x assumed material density,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+P_ROTOR_CAGE_FRONT,printed,1,,37.87961389640445,37.87961389640445,actual solid CAD volume x assumed material density,"Front cage basket: fit rotor/hub inside,lower radially into open chamber before threading the input shaft. Rear cap is separate."
+P_ROTOR_CAGE_CAP,printed,1,,28.562438056961845,28.562438056961845,actual solid CAD volume x assumed material density,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+P_CHASSIS_L,printed,1,,70.48242491381862,70.48242491381862,actual solid CAD volume x assumed material density,"Real longitudinal frame half;4M3 bolts,front locating hex key and rear relieved key. Close around the shafts rather than trapping integral gears in a one-piece housing."
+P_CHASSIS_R,printed,1,,78.70768547117977,78.70768547117977,actual solid CAD volume x assumed material density,"Real longitudinal frame half;4M3 bolts,front locating hex key and rear relieved key. Close around the shafts rather than trapping integral gears in a one-piece housing."
+P_LEG_AB_L,printed,3,,1.0836849988541473,3.251054996562442,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;AB
+P_LEG_AC_L,printed,3,,1.2968538638541451,3.8905615915624354,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;AC
+P_LEG_PC_L,printed,3,,0.9183309988541501,2.7549929965624504,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;PC
+P_LEG_PBD_L,printed,3,,2.3383211495832077,7.014963448749623,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;PBD
+P_LEG_DE_L,printed,3,,0.8938034888541473,2.6814104665624416,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;DE
+P_LEG_CEF_L,printed,3,,6.284554414093794,18.85366324228138,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;CEF
+P_FOOT_SLIDER_L,printed,3,,2.207711847486366,6.6231355424590985,actual solid CAD volume x assumed material density,Guided stock-spring equalizer; SLIDER
+P_FOOT_ROCKER_L,printed,3,,2.7314125071332525,8.194237521399756,actual solid CAD volume x assumed material density,Guided stock-spring equalizer; ROCKER
+P_LEG_AB_R,printed,3,,1.0836849988541473,3.251054996562442,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;AB
+P_LEG_AC_R,printed,3,,1.2968538638541447,3.890561591562434,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;AC
+P_LEG_PC_R,printed,3,,0.9183309988541501,2.7549929965624504,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;PC
+P_LEG_PBD_R,printed,3,,2.3383211495832077,7.014963448749623,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;PBD
+P_LEG_DE_R,printed,3,,0.8938034888541473,2.6814104665624416,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;DE
+P_LEG_CEF_R,printed,3,,6.284554414093794,18.85366324228138,actual solid CAD volume x assumed material density,Shared Jansen body with real smooth journals;CEF
+P_FOOT_SLIDER_R,printed,3,,2.2077118474863675,6.623135542459103,actual solid CAD volume x assumed material density,Guided stock-spring equalizer; SLIDER
+P_FOOT_ROCKER_R,printed,3,,2.731412507133252,8.194237521399756,actual solid CAD volume x assumed material density,Guided stock-spring equalizer; ROCKER
+H_FOOT_SPRING,purchased,12,12-0721,0.31,3.7199999999999998,supplier unit value or explicitly tagged estimate,"SAMINI12-0721;OD7,wire0.6,free15,total6.8active4.8,rate0.882N/mm. Coil drawing is envelope;end pitch simplified."
+H_SLEEVE_2_20,purchased,30,CE-2020N,1.4900573955976388,44.701721867929166,actual solid CAD volume x assumed material density,"CE-2020N; metric dimensional model, no physical material certification"
+H_BOLT_M2_30,purchased,12,BOLT_M2_30,0.9026049430535621,10.831259316642745,actual solid CAD volume x assumed material density,"BOLT_M2_30; metric dimensional model, no physical material certification"
+P_LAYER_SPACER_7.4,printed,6,,0.33591713497161574,2.0155028098296945,actual solid CAD volume x assumed material density,Free axial spacing between nonadjacent link planes; not in the screw clamp path
+H_BOLT_M2_25,purchased,18,BOLT_M2_25,0.7792974314001627,14.027353765202928,actual solid CAD volume x assumed material density,"BOLT_M2_25; metric dimensional model, no physical material certification"
+P_LAYER_SPACER_3.3,printed,12,,0.14980088451436888,1.7976106141724264,actual solid CAD volume x assumed material density,Free axial spacing between nonadjacent link planes; not in the screw clamp path
+P_PIN_TAIL_4.3,printed,6,,0.19292538157153605,1.1575522894292163,actual solid CAD volume x assumed material density,"Free axial keeper around4mm sleeve; bolt load closes on metal sleeve,not this spacer"
+P_PIN_TAIL_8.4,printed,6,,0.37904163202878294,2.2742497921726974,actual solid CAD volume x assumed material density,"Free axial keeper around4mm sleeve; bolt load closes on metal sleeve,not this spacer"
+P_ROTOR,printed,1,,131.8139850497129,131.8139850497129,actual solid CAD volume x assumed material density,"16 bare curved blades;4mm spoke root+32mm active span+2mm outer end ring,matched6D hub;not air-calibrated"
+H_BOLT_M4_12,purchased,4,BOLT_M4_12,2.2697963365212064,9.079185346084826,actual solid CAD volume x assumed material density,"BOLT_M4_12; metric dimensional model, no physical material certification"
+S_GUARD_LEFT,sheet_cut,1,PAC34-05,24.177737043218883,24.177737043218883,actual solid CAD volume x assumed material density,PAC34-05 PET0.5mm flat sheet; full-thickness cuts only. Mounting uses explicitly relocated existing cap fasteners; no adhesive or pocket milling.
+S_GUARD_LOWER_RIGHT,sheet_cut,1,PAC34-05,15.251486728070768,15.251486728070768,actual solid CAD volume x assumed material density,PAC34-05 PET0.5mm flat sheet; full-thickness cuts only. Mounting uses explicitly relocated existing cap fasteners; no adhesive or pocket milling.
+S_GUARD_UPPER_RIGHT,sheet_cut,1,PAC34-05,11.94696854689459,11.94696854689459,actual solid CAD volume x assumed material density,PAC34-05 PET0.5mm flat sheet; full-thickness cuts only. Mounting uses explicitly relocated existing cap fasteners; no adhesive or pocket milling.

@@ -1,0 +1,1510 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-15",
+  "designId": "C",
+  "nativeSha256": "c4180d6e48ff99d7135f209560f787b635cdcd430f17b2a083b111cd108af26c",
+  "printedParts": [
+    {
+      "partId": "P_CRANK_JOURNAL_-1_0",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CRANK_JOURNAL_-1_0.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          90
+        ],
+        [
+          "translateZ",
+          -33.2
+        ]
+      ],
+      "boundsMm": [
+        18.9986640425305,
+        23.249360381337286,
+        21.25
+      ],
+      "nativeVolumeMm3": 2649.681004502119,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00017411978573540437,
+      "meshExtentMm": [
+        18.998663902282715,
+        23.24936008453369,
+        21.25
+      ],
+      "sha256": "167adb3c4f209012f8ee808e6732333217d4b2f691e660629f3fec76e2a01182"
+    },
+    {
+      "partId": "P_CRANK_JOURNAL_1_180",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CRANK_JOURNAL_1_180.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          -29.5
+        ]
+      ],
+      "boundsMm": [
+        18.998664042530496,
+        23.248569700417555,
+        24.950000000000003
+      ],
+      "nativeVolumeMm3": 2851.59936366957,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00019436571632062424,
+      "meshExtentMm": [
+        18.998663902282715,
+        23.24856948852539,
+        24.950000762939453
+      ],
+      "sha256": "c40d77e515cb59e1ef98e39379a97b5ef2835f38cbf27e2d916e935b2464f309"
+    },
+    {
+      "partId": "P_MAIN_INNER_STOP",
+      "stl": "STL/Ver.3/integrated_r7/C/P_MAIN_INNER_STOP.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          32.8
+        ]
+      ],
+      "boundsMm": [
+        10.000000000000004,
+        18.991575211733817,
+        6.799999999999997
+      ],
+      "nativeVolumeMm3": 828.2310471683023,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.0001658775435067378,
+      "meshExtentMm": [
+        10.0,
+        18.991575241088867,
+        6.800000190734863
+      ],
+      "sha256": "88337845191e5dfd38b6c069a1e1d9c3995e29b7effe716a8fcbad19572894fa"
+    },
+    {
+      "partId": "P_CAP_STEP_-14_-13_19_0_3_14.6",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CAP_STEP_-14_-13_19_0_3_14.6.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          3.0
+        ]
+      ],
+      "boundsMm": [
+        41.999637751942245,
+        30.498199177974463,
+        6.8
+      ],
+      "nativeVolumeMm3": 1822.6386253043706,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00018563021354335202,
+      "meshExtentMm": [
+        41.999637603759766,
+        30.498199462890625,
+        6.800000190734863
+      ],
+      "sha256": "701cea5293f3f721391116b6c0337e999faf90fc34705cd92f1aaf396b14f8b7"
+    },
+    {
+      "partId": "P_CAP_WIDE_-14_-13_19_0_4_14.6",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CAP_WIDE_-14_-13_19_0_4_14.6.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -0.0
+        ]
+      ],
+      "boundsMm": [
+        41.999637751942245,
+        30.498199177974463,
+        3.5
+      ],
+      "nativeVolumeMm3": 1566.8637091884461,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00012527316715876195,
+      "meshExtentMm": [
+        41.999637603759766,
+        30.498199462890625,
+        3.5
+      ],
+      "sha256": "7d2b4c3e30d03e754393655453a260ff5c520dfb4d9a4d5aee00e223dbfdd655"
+    },
+    {
+      "partId": "P_CRANK_JOURNAL_-1_180",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CRANK_JOURNAL_-1_180.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          90
+        ],
+        [
+          "translateZ",
+          -33.2
+        ]
+      ],
+      "boundsMm": [
+        18.99999603886701,
+        23.248569700417555,
+        21.25
+      ],
+      "nativeVolumeMm3": 2649.680956983936,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00017089749994871333,
+      "meshExtentMm": [
+        18.999996185302734,
+        23.24856948852539,
+        21.25
+      ],
+      "sha256": "1d28273cbafc219132eea82b0b207baa8db0a6d7d53072b14a52d7a8d3d265ea"
+    },
+    {
+      "partId": "P_CRANK_JOURNAL_1_0",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CRANK_JOURNAL_1_0.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          -29.5
+        ]
+      ],
+      "boundsMm": [
+        18.9986640425305,
+        23.249360381337286,
+        24.950000000000003
+      ],
+      "nativeVolumeMm3": 2851.599363669571,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00019233055807366502,
+      "meshExtentMm": [
+        18.998663902282715,
+        23.24936008453369,
+        24.950000762939453
+      ],
+      "sha256": "dd33f33d1772b3c8ed694c3333cb8a68758a1336718d07642bf5039993f725a4"
+    },
+    {
+      "partId": "P_SYNC_DRIVE",
+      "stl": "STL/Ver.3/integrated_r7/C/P_SYNC_DRIVE.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          -2.999999999999999
+        ]
+      ],
+      "boundsMm": [
+        43.69457224015077,
+        43.78,
+        10.200000000000081
+      ],
+      "nativeVolumeMm3": 3848.1015478865775,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 8.217433254905035e-05,
+      "meshExtentMm": [
+        43.69457244873047,
+        43.779998779296875,
+        10.199999809265137
+      ],
+      "sha256": "58c696f08ad9d3744e0bd37a1ec2d0712664ae50e31efaed126117fa1508c847"
+    },
+    {
+      "partId": "P_IDLER_CAP",
+      "stl": "STL/Ver.3/integrated_r7/C/P_IDLER_CAP.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -0.0
+        ]
+      ],
+      "boundsMm": [
+        32.999308154195234,
+        21.99569056749635,
+        2.0
+      ],
+      "nativeVolumeMm3": 529.4704464697918,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00015588799674098189,
+      "meshExtentMm": [
+        32.99930763244629,
+        21.995691299438477,
+        2.0
+      ],
+      "sha256": "8e22692cd47ff85aee5b8ffd1ba9c3540dfdbff31c0b26f09501c21d35420aa5"
+    },
+    {
+      "partId": "P_IDLER_JOURNAL",
+      "stl": "STL/Ver.3/integrated_r7/C/P_IDLER_JOURNAL.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -0.0
+        ]
+      ],
+      "boundsMm": [
+        9.200000000000001,
+        9.198181433884603,
+        6.0
+      ],
+      "nativeVolumeMm3": 234.6769712231575,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00026354794527882905,
+      "meshExtentMm": [
+        9.199999809265137,
+        9.19818115234375,
+        6.0
+      ],
+      "sha256": "4812a666f88ce708755f2542a5d8de8d160bd595a6d0e10d117d6e2e0b3ab0a9"
+    },
+    {
+      "partId": "P_IDLER_INNER_WASHER",
+      "stl": "STL/Ver.3/integrated_r7/C/P_IDLER_INNER_WASHER.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -0.0
+        ]
+      ],
+      "boundsMm": [
+        9.200000000000001,
+        9.198181433884603,
+        1.8
+      ],
+      "nativeVolumeMm3": 94.71901850573224,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00026356734316407504,
+      "meshExtentMm": [
+        9.199999809265137,
+        9.19818115234375,
+        1.7999999523162842
+      ],
+      "sha256": "122f4f9bc069d5d87297cd4e37b1da7c9080b5e22d44a1fca42dbd496124ee03"
+    },
+    {
+      "partId": "P_SYNC_IDLER",
+      "stl": "STL/Ver.3/integrated_r7/C/P_SYNC_IDLER.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          -7.999999999999998
+        ]
+      ],
+      "boundsMm": [
+        43.78,
+        43.69457224015078,
+        7.0000000000000036
+      ],
+      "nativeVolumeMm3": 5711.085123733571,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 6.15575253784009e-05,
+      "meshExtentMm": [
+        43.779998779296875,
+        43.69457244873047,
+        7.0
+      ],
+      "sha256": "22c10e91c2127778bef957758ad06727fac601c7554cc4f743e243c9858398aa"
+    },
+    {
+      "partId": "P_COMPOUND_1",
+      "stl": "STL/Ver.3/integrated_r7/C/P_COMPOUND_1.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          45.0
+        ]
+      ],
+      "boundsMm": [
+        145.85998316660863,
+        145.8599831666086,
+        44.050000000000004
+      ],
+      "nativeVolumeMm3": 12193.558340091591,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.0008779204207716148,
+      "meshExtentMm": [
+        145.8599853515625,
+        145.8599853515625,
+        44.04999923706055
+      ],
+      "sha256": "66263aed5b583b345565bd7d5f7d6d97b6dd05318ab5895f7cea81daa6ad202b"
+    },
+    {
+      "partId": "P_INTER_STOP",
+      "stl": "STL/Ver.3/integrated_r7/C/P_INTER_STOP.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          59.0
+        ]
+      ],
+      "boundsMm": [
+        10.000000000000007,
+        18.991575211733824,
+        13.799999999999997
+      ],
+      "nativeVolumeMm3": 1395.7575059327455,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00019097693084827241,
+      "meshExtentMm": [
+        10.0,
+        18.991575241088867,
+        13.800000190734863
+      ],
+      "sha256": "d97d5387f7f48813a0118cea9033cd07b8671974e16a10ae195a01b97606b40a"
+    },
+    {
+      "partId": "P_CAP_STEP_-17_0_17_0_3_14.6",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CAP_STEP_-17_0_17_0_3_14.6.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          3.0
+        ]
+      ],
+      "boundsMm": [
+        42.999110483965296,
+        25.994822925087462,
+        6.0
+      ],
+      "nativeVolumeMm3": 1646.7733816624054,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00019388077884875565,
+      "meshExtentMm": [
+        42.99911117553711,
+        25.994823455810547,
+        6.0
+      ],
+      "sha256": "773d48bbe2c0699c79f463f08ea9d2a9643f020c2804568d9b91cd813ec7f12a"
+    },
+    {
+      "partId": "P_CAP_PLAIN_-13_0_13_0_3_14.6",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CAP_PLAIN_-13_0_13_0_3_14.6.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          1.0
+        ]
+      ],
+      "boundsMm": [
+        34.999110483965296,
+        22.0,
+        4.5
+      ],
+      "nativeVolumeMm3": 1110.6059380575282,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00017725504821382762,
+      "meshExtentMm": [
+        34.99911117553711,
+        22.0,
+        4.5
+      ],
+      "sha256": "d0ebb23948296e85a18020aff74800887f9c91c63c4e28765374d113612edf1f"
+    },
+    {
+      "partId": "P_OUTPUT_WHEEL",
+      "stl": "STL/Ver.3/integrated_r7/C/P_OUTPUT_WHEEL.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          32.8
+        ]
+      ],
+      "boundsMm": [
+        157.84167131137792,
+        157.84167131137792,
+        21.000000000000007
+      ],
+      "nativeVolumeMm3": 12512.25058167549,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.0010632961204814283,
+      "meshExtentMm": [
+        157.8416748046875,
+        157.8416748046875,
+        21.0
+      ],
+      "sha256": "8ebe9007cf88b52f1affbe5df961d93987cab04b65044d1fd2ca5b84a333a808"
+    },
+    {
+      "partId": "P_INPUT_PINION",
+      "stl": "STL/Ver.3/integrated_r7/C/P_INPUT_PINION.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          35.0
+        ]
+      ],
+      "boundsMm": [
+        13.372689555809131,
+        13.372689555809131,
+        35.0
+      ],
+      "nativeVolumeMm3": 914.301943669846,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.0002156591029891757,
+      "meshExtentMm": [
+        13.372689247131348,
+        13.372689247131348,
+        35.0
+      ],
+      "sha256": "836b521d1c03fe329dfa16609055360fd1e265b139259ab0ae098eedae6b5049"
+    },
+    {
+      "partId": "P_CAP_PLAIN_-18_0_18_0_4_10.2",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CAP_PLAIN_-18_0_18_0_4_10.2.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -0.0
+        ]
+      ],
+      "boundsMm": [
+        44.999110483965296,
+        22.0,
+        3.0
+      ],
+      "nativeVolumeMm3": 1385.6967319905632,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00013041934598025738,
+      "meshExtentMm": [
+        44.99911117553711,
+        22.0,
+        3.0
+      ],
+      "sha256": "94b381d2d3a36b2c47ce6098009a775b21168bc697d10e5752ded76ce9fb9d07"
+    },
+    {
+      "partId": "P_ROTOR_CAGE_FRONT",
+      "stl": "STL/Ver.3/integrated_r7/C/P_ROTOR_CAGE_FRONT.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -6.5
+        ]
+      ],
+      "boundsMm": [
+        220.0,
+        218.0,
+        41.000000000000014
+      ],
+      "nativeVolumeMm3": 26716.222041018606,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 2.855129476582315e-05,
+      "meshExtentMm": [
+        220.0,
+        218.0,
+        41.0
+      ],
+      "sha256": "07584abaa4fcf42bbb8549d5fa4e93c9054121cda308cbbb88dfb48906459b70"
+    },
+    {
+      "partId": "P_ROTOR_CAGE_CAP",
+      "stl": "STL/Ver.3/integrated_r7/C/P_ROTOR_CAGE_CAP.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateX",
+          180
+        ],
+        [
+          "translateZ",
+          3.000000000000014
+        ]
+      ],
+      "boundsMm": [
+        220.0,
+        217.99955124360798,
+        19.50000000000005
+      ],
+      "nativeVolumeMm3": 20094.4182481086,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 4.5915933500489436e-05,
+      "meshExtentMm": [
+        220.0,
+        217.99954986572266,
+        19.5
+      ],
+      "sha256": "9b3e81ca6f1f4b0c33ec63f68f21048f3a7383275af0eb8f6038ad65598c8161"
+    },
+    {
+      "partId": "P_CHASSIS_L",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CHASSIS_L.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          90
+        ],
+        [
+          "translateZ",
+          -9.000000000000004
+        ]
+      ],
+      "boundsMm": [
+        188.235647078858,
+        225.99951038882455,
+        45.300000000000026
+      ],
+      "nativeVolumeMm3": 47984.66572726298,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 1.4857310440363549e-05,
+      "meshExtentMm": [
+        188.23563957214355,
+        225.99951171875,
+        45.29999923706055
+      ],
+      "sha256": "e38df248b1166a65001826a37e7c7d219e8dc691dd30bec4873c96c3e260446c"
+    },
+    {
+      "partId": "P_CHASSIS_R",
+      "stl": "STL/Ver.3/integrated_r7/C/P_CHASSIS_R.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          12.000000000000284
+        ]
+      ],
+      "boundsMm": [
+        188.235647078858,
+        225.99951038882455,
+        76.00000000000011
+      ],
+      "nativeVolumeMm3": 54494.47504714845,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 3.874135731320972e-05,
+      "meshExtentMm": [
+        188.23563957214355,
+        225.99951171875,
+        75.9999999999998
+      ],
+      "sha256": "fa2afa0c33ab607a24fecf95564c3e93f677e555386c6bcfd9a0fd6833c26d6e"
+    },
+    {
+      "partId": "P_LEG_AB_L",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_AB_L.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          90
+        ],
+        [
+          "translateZ",
+          -54.65
+        ]
+      ],
+      "boundsMm": [
+        29.526752831995537,
+        34.557648193597686,
+        3.1000000000000156
+      ],
+      "nativeVolumeMm3": 853.295274688305,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 6.492079701335715e-05,
+      "meshExtentMm": [
+        29.52675199508667,
+        34.55764865875244,
+        3.0999999046325684
+      ],
+      "sha256": "242b8f75b14074d61f62d71873df389dd480b525b4eb7c2834b4e7208fc096a5"
+    },
+    {
+      "partId": "P_LEG_AC_L",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_AC_L.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          90
+        ],
+        [
+          "translateZ",
+          -66.95
+        ]
+      ],
+      "boundsMm": [
+        39.529753919463936,
+        35.63689878284903,
+        3.1000000000000227
+      ],
+      "nativeVolumeMm3": 1021.1447746883032,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 5.567301021699706e-05,
+      "meshExtentMm": [
+        39.529752254486084,
+        35.6368989944458,
+        3.0999999046325826
+      ],
+      "sha256": "134fae5ad07171b7891b3b54f96a74645f300382ce715508f6b881812559449e"
+    },
+    {
+      "partId": "P_LEG_PC_L",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_PC_L.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          90
+        ],
+        [
+          "translateZ",
+          -54.64999999999997
+        ]
+      ],
+      "boundsMm": [
+        34.459409208426656,
+        17.2107764971212,
+        3.100000000000051
+      ],
+      "nativeVolumeMm3": 723.0952746883072,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 7.76485829423994e-05,
+      "meshExtentMm": [
+        34.4594090282917,
+        17.210776329040527,
+        3.0999999046325755
+      ],
+      "sha256": "5514f206602de1f7fb09dd372414a918ddcd69b02d004302fcdb676f7796f7fb"
+    },
+    {
+      "partId": "P_LEG_PBD_L",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_PBD_L.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          90
+        ],
+        [
+          "translateZ",
+          -58.74999999999998
+        ]
+      ],
+      "boundsMm": [
+        34.596763580666476,
+        42.206540547585234,
+        3.100000000000037
+      ],
+      "nativeVolumeMm3": 1841.1977555773292,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 3.076988375188531e-05,
+      "meshExtentMm": [
+        34.59676265716553,
+        42.206539154052734,
+        3.0999999046325684
+      ],
+      "sha256": "33b84241f2e55c79061df1bbb68ae50fdbd45712636c7d1694d2af00d154a844"
+    },
+    {
+      "partId": "P_LEG_DE_L",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_DE_L.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          90
+        ],
+        [
+          "translateZ",
+          -54.65
+        ]
+      ],
+      "boundsMm": [
+        31.883970021091624,
+        21.086834448953987,
+        3.1000000000000085
+      ],
+      "nativeVolumeMm3": 703.7822746883049,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 8.070362393788259e-05,
+      "meshExtentMm": [
+        31.883970260620117,
+        21.086837768554688,
+        3.0999999046325684
+      ],
+      "sha256": "07657459d3b4e28cc792e46273a1f54b6ec21f7eef44fb2887bef58645beb8f8"
+    },
+    {
+      "partId": "P_LEG_CEF_L",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_CEF_L.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          90
+        ],
+        [
+          "translateZ",
+          -50.400000000000034
+        ]
+      ],
+      "boundsMm": [
+        54.66574042109265,
+        31.311867870956284,
+        28.000000000000007
+      ],
+      "nativeVolumeMm3": 4948.4680425935385,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 5.7906759375321296e-05,
+      "meshExtentMm": [
+        54.665738105773926,
+        31.311867713928223,
+        28.000000000000036
+      ],
+      "sha256": "e15b2af2703c49b0977a6232b86c01463d3dc375f644a2100d16e6a4247ed0af"
+    },
+    {
+      "partId": "P_LAYER_SPACER_7.4",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LAYER_SPACER_7.4.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -0.0
+        ]
+      ],
+      "boundsMm": [
+        8.0,
+        7.9984186381605245,
+        7.400000000000006
+      ],
+      "nativeVolumeMm3": 264.50168108001236,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.0002635360157512993,
+      "meshExtentMm": [
+        8.0,
+        7.998418807983398,
+        7.400000095367432
+      ],
+      "sha256": "63efd0782394caf6a82332ee53c11dd6d43cbef9e3cfd18546521d7be42f93c8"
+    },
+    {
+      "partId": "P_LAYER_SPACER_3.3",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LAYER_SPACER_3.3.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -0.0
+        ]
+      ],
+      "boundsMm": [
+        8.0,
+        7.9984186381605245,
+        3.299999999999997
+      ],
+      "nativeVolumeMm3": 117.95345237351879,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00026356334564597866,
+      "meshExtentMm": [
+        8.0,
+        7.998418807983398,
+        3.299999952316284
+      ],
+      "sha256": "991a2f306a5c37badd530555f367651f313e2e89cb6760d5847c1902f36b4821"
+    },
+    {
+      "partId": "P_PIN_TAIL_4.3",
+      "stl": "STL/Ver.3/integrated_r7/C/P_PIN_TAIL_4.3.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -0.0
+        ]
+      ],
+      "boundsMm": [
+        8.0,
+        7.9984186381605245,
+        4.250000000000003
+      ],
+      "nativeVolumeMm3": 151.90974926892602,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00026354889984536365,
+      "meshExtentMm": [
+        8.0,
+        7.998418807983398,
+        4.25
+      ],
+      "sha256": "ab1d5c6911c79bad0be7ae11dc54c09442dc82c050cda178ea58185ec527eab1"
+    },
+    {
+      "partId": "P_PIN_TAIL_8.4",
+      "stl": "STL/Ver.3/integrated_r7/C/P_PIN_TAIL_8.4.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -0.0
+        ]
+      ],
+      "boundsMm": [
+        8.0,
+        7.9984186381605245,
+        8.350000000000012
+      ],
+      "nativeVolumeMm3": 298.4579779754196,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00026350322688934954,
+      "meshExtentMm": [
+        8.0,
+        7.998418807983398,
+        8.350000381469727
+      ],
+      "sha256": "3b7ca5ffa0edf5045fc902bbb6b2fbb33a35cbafaf7a495b773f3a7f654ec51c"
+    },
+    {
+      "partId": "P_FOOT_SLIDER_L",
+      "stl": "STL/Ver.3/integrated_r7/C/P_FOOT_SLIDER_L.stl",
+      "rigidBedTransforms": [
+        [
+          "inverseReferenceFootPose",
+          [
+            [
+              1.0,
+              0.0,
+              0.0,
+              -64.4
+            ],
+            [
+              0.0,
+              0.9357717401530946,
+              0.3526063673997523,
+              -25.772537299265743
+            ],
+            [
+              0.0,
+              -0.3526063673997523,
+              0.9357717401530946,
+              -60.892737540061184
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        [
+          "translateZ",
+          16.000000000000004
+        ]
+      ],
+      "boundsMm": [
+        28.0,
+        21.799011648850346,
+        26.0
+      ],
+      "nativeVolumeMm3": 1738.3557854223354,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 2.76987194732064e-05,
+      "meshExtentMm": [
+        28.0,
+        21.799012184143066,
+        26.0
+      ],
+      "sha256": "b984a2d5c5f1e4a76cfac573e2424887e08e5ad4fc59043841ba2bb3ae99302e"
+    },
+    {
+      "partId": "P_FOOT_ROCKER_L",
+      "stl": "STL/Ver.3/integrated_r7/C/P_FOOT_ROCKER_L.stl",
+      "rigidBedTransforms": [
+        [
+          "inverseReferenceFootPose",
+          [
+            [
+              1.0,
+              0.0,
+              0.0,
+              -64.4
+            ],
+            [
+              0.0,
+              0.9357717401530946,
+              0.3526063673997523,
+              -25.772537299265743
+            ],
+            [
+              0.0,
+              -0.3526063673997523,
+              0.9357717401530946,
+              -60.892737540061184
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        [
+          "translateZ",
+          20.0
+        ]
+      ],
+      "boundsMm": [
+        32.00000000000003,
+        11.997627957240788,
+        12.000000000000007
+      ],
+      "nativeVolumeMm3": 2150.718509553742,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00024256156623942988,
+      "meshExtentMm": [
+        32.0,
+        11.997628211975098,
+        12.0
+      ],
+      "sha256": "29bcadf1112d6effa1a50993c7460ba8e671236e909c852aae5c3566996ca386"
+    },
+    {
+      "partId": "P_LEG_AB_R",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_AB_R.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          -54.65
+        ]
+      ],
+      "boundsMm": [
+        29.52675283199556,
+        34.55764819359767,
+        3.1000000000000227
+      ],
+      "nativeVolumeMm3": 853.295274688305,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 6.492079701482272e-05,
+      "meshExtentMm": [
+        29.52675199508667,
+        34.55764865875244,
+        3.0999999046325684
+      ],
+      "sha256": "7eb09f56b08f199435a4b42b30320dcfafb6451c0f504acf152ea1d372db0d3b"
+    },
+    {
+      "partId": "P_LEG_AC_R",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_AC_R.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          -66.95
+        ]
+      ],
+      "boundsMm": [
+        39.52975391946395,
+        35.63689878284902,
+        3.1000000000000085
+      ],
+      "nativeVolumeMm3": 1021.144774688303,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 5.567301022000306e-05,
+      "meshExtentMm": [
+        39.529752254486084,
+        35.6368989944458,
+        3.0999999046325684
+      ],
+      "sha256": "35c00b412909eef06fc6184d479e6f110a0fae666c0c49f11c82b52cbb4f1218"
+    },
+    {
+      "partId": "P_LEG_PC_R",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_PC_R.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          -54.64999999999997
+        ]
+      ],
+      "boundsMm": [
+        34.45940920842665,
+        17.210776497121202,
+        3.1000000000000654
+      ],
+      "nativeVolumeMm3": 723.0952746883072,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 7.764858294428608e-05,
+      "meshExtentMm": [
+        34.4594090282917,
+        17.210776329040527,
+        3.0999999046325755
+      ],
+      "sha256": "01ac98064d18631c9dd266ddf3028fa0aaa56c59e0b39efed0ddf9d087b40763"
+    },
+    {
+      "partId": "P_LEG_PBD_R",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_PBD_R.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          -58.74999999999998
+        ]
+      ],
+      "boundsMm": [
+        34.5967635806665,
+        42.206540547585234,
+        3.100000000000044
+      ],
+      "nativeVolumeMm3": 1841.1977555773292,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 3.0769883753861185e-05,
+      "meshExtentMm": [
+        34.59676265716553,
+        42.206539154052734,
+        3.0999999046325684
+      ],
+      "sha256": "94b90cc354b019e5b30e7a0381d97184a46ef52baf3a5be3c27e2b6f59bd05a6"
+    },
+    {
+      "partId": "P_LEG_DE_R",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_DE_R.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          -54.65
+        ]
+      ],
+      "boundsMm": [
+        31.88397002109162,
+        21.086834448953965,
+        3.1000000000000156
+      ],
+      "nativeVolumeMm3": 703.7822746883049,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 8.070362393659029e-05,
+      "meshExtentMm": [
+        31.883970260620117,
+        21.086837768554688,
+        3.0999999046325755
+      ],
+      "sha256": "f692763455f0a932d5fd8a9c1cd8dee0f2162fa77229acd38897b04903ffaaba"
+    },
+    {
+      "partId": "P_LEG_CEF_R",
+      "stl": "STL/Ver.3/integrated_r7/C/P_LEG_CEF_R.stl",
+      "rigidBedTransforms": [
+        [
+          "rotateY",
+          -90
+        ],
+        [
+          "translateZ",
+          -50.400000000000006
+        ]
+      ],
+      "boundsMm": [
+        54.66574042109265,
+        31.31186787095631,
+        28.0
+      ],
+      "nativeVolumeMm3": 4948.4680425935385,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 5.790686262445117e-05,
+      "meshExtentMm": [
+        54.665738105773926,
+        31.311867713928223,
+        28.0
+      ],
+      "sha256": "bf09384485a4514705eaf7bcf63f1038bb0278decc4fc6e483f71db69ca641e5"
+    },
+    {
+      "partId": "P_FOOT_SLIDER_R",
+      "stl": "STL/Ver.3/integrated_r7/C/P_FOOT_SLIDER_R.stl",
+      "rigidBedTransforms": [
+        [
+          "inverseReferenceFootPose",
+          [
+            [
+              1.0,
+              0.0,
+              0.0,
+              64.4
+            ],
+            [
+              0.0,
+              0.9357717401530946,
+              0.3526063673997523,
+              -25.772537299265743
+            ],
+            [
+              0.0,
+              -0.3526063673997523,
+              0.9357717401530946,
+              -60.892737540061184
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        [
+          "translateZ",
+          16.000000000000018
+        ]
+      ],
+      "boundsMm": [
+        28.0,
+        21.799011648850325,
+        26.00000000000001
+      ],
+      "nativeVolumeMm3": 1738.3557854223366,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 2.7698719473467977e-05,
+      "meshExtentMm": [
+        28.0,
+        21.799012184143066,
+        26.000000000000007
+      ],
+      "sha256": "ddd730cb4dfad47bde93bc0b5a4a4746ff88e84110a6a41453c01d0a7aff6762"
+    },
+    {
+      "partId": "P_FOOT_ROCKER_R",
+      "stl": "STL/Ver.3/integrated_r7/C/P_FOOT_ROCKER_R.stl",
+      "rigidBedTransforms": [
+        [
+          "inverseReferenceFootPose",
+          [
+            [
+              1.0,
+              0.0,
+              0.0,
+              64.4
+            ],
+            [
+              0.0,
+              0.9357717401530946,
+              0.3526063673997523,
+              -25.772537299265743
+            ],
+            [
+              0.0,
+              -0.3526063673997523,
+              0.9357717401530946,
+              -60.892737540061184
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        [
+          "translateZ",
+          20.000000000000014
+        ]
+      ],
+      "boundsMm": [
+        32.0,
+        11.997627957240788,
+        12.0
+      ],
+      "nativeVolumeMm3": 2150.7185095537416,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": true,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.0002425615662392185,
+      "meshExtentMm": [
+        32.0,
+        11.997628211975098,
+        12.0
+      ],
+      "sha256": "9ebd933684c965d79c1ccca6d6f91033c8981a59394532b34aa3f3b1ed9d0f47"
+    },
+    {
+      "partId": "P_ROTOR",
+      "stl": "STL/Ver.3/integrated_r7/C/P_ROTOR.stl",
+      "rigidBedTransforms": [
+        [
+          "translateZ",
+          -0.0
+        ]
+      ],
+      "boundsMm": [
+        200.0,
+        199.99809614394542,
+        38.0
+      ],
+      "nativeVolumeMm3": 92831.92332135128,
+      "linearDeflectionMm": 0.04,
+      "angularDeflectionRad": 0.08,
+      "supportsMayBeRequired": false,
+      "sliced": false,
+      "watertight": true,
+      "volumeRelativeDifference": 0.00015768736944792703,
+      "meshExtentMm": [
+        200.0,
+        199.9980926513672,
+        38.0
+      ],
+      "sha256": "2d21c02fcb3d9370a46d39b4f81aa9906a01384091c22eb0264ae266ad4152f2"
+    }
+  ],
+  "sheetTemplates": [
+    {
+      "partId": "S_GUARD_LEFT",
+      "svg": "docs/ver3/integrated_r7/C/S_GUARD_LEFT_cut.svg",
+      "thicknessMm": 0.5,
+      "outlineWidthMm": 219.00000000000014,
+      "outlineHeightMm": 254.165785583451,
+      "scale": 1,
+      "chordDeflectionMm": 0.02,
+      "pdf": "docs/ver3/integrated_r7/C/S_GUARD_LEFT_cut.pdf",
+      "pdfPageMm": [
+        297.0000023735894,
+        420.0000311957465
+      ],
+      "pdfSha256": "c5b93d707e7c90a95693c62158aa93e95dc090d428d70de16c7256b84e2f565a"
+    },
+    {
+      "partId": "S_GUARD_LOWER_RIGHT",
+      "svg": "docs/ver3/integrated_r7/C/S_GUARD_LOWER_RIGHT_cut.svg",
+      "thicknessMm": 0.5,
+      "outlineWidthMm": 219.0,
+      "outlineHeightMm": 121.93,
+      "scale": 1,
+      "chordDeflectionMm": 0.02,
+      "pdf": "docs/ver3/integrated_r7/C/S_GUARD_LOWER_RIGHT_cut.pdf",
+      "pdfPageMm": [
+        297.0000023735894,
+        420.0000311957465
+      ],
+      "pdfSha256": "f6c83a51f008a3fccf4d81d82f513629464a70a8d0724bf4bc692ec104534d62"
+    },
+    {
+      "partId": "S_GUARD_UPPER_RIGHT",
+      "svg": "docs/ver3/integrated_r7/C/S_GUARD_UPPER_RIGHT_cut.svg",
+      "thicknessMm": 0.5000000000000007,
+      "outlineWidthMm": 165.5,
+      "outlineHeightMm": 152.235785583451,
+      "scale": 1,
+      "chordDeflectionMm": 0.02,
+      "pdf": "docs/ver3/integrated_r7/C/S_GUARD_UPPER_RIGHT_cut.pdf",
+      "pdfPageMm": [
+        297.0000023735894,
+        420.0000311957465
+      ],
+      "pdfSha256": "da659bc9f5f71d8a1dc0e5a63d9c62de54051cab6e969c76168fd78c1ecd82dd"
+    }
+  ],
+  "noScalingOrMeshRepairApplied": true,
+  "actualSlicingPerformed": false,
+  "geometryStatus": "PASS",
+  "meshFailures": []
+}
