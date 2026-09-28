@@ -1,0 +1,66 @@
+{
+  "sourceCommit": "14796019a505bd55e83395cf3bb5fff0098d5604",
+  "trial": "C ratios13x12 with both stages module1",
+  "nativeSha256": "54d800af9b427dddc64250f2ef7a241acca6eb7b666284005597c742ad38ebf5",
+  "status": "FAIL",
+  "unintendedIntersections": [
+    {
+      "a": "H_MAIN_HEX100_002",
+      "aPart": "H_MAIN_HEX100",
+      "aGroup": "mainshafts",
+      "b": "P_COMPOUND_1_001",
+      "bPart": "P_COMPOUND_1",
+      "bGroup": "reducer",
+      "overlapMm3": 29.012392584645582,
+      "intersectionBoundsMinMm": [
+        -45.0,
+        -2.500000000000001,
+        68.4263200636511
+      ],
+      "intersectionBoundsMaxMm": [
+        -0.9499999999999943,
+        2.500000000000001,
+        72.88675134594814
+      ]
+    },
+    {
+      "a": "P_COMPOUND_1_001",
+      "aPart": "P_COMPOUND_1",
+      "aGroup": "reducer",
+      "b": "P_OUTPUT_WHEEL_001",
+      "bPart": "P_OUTPUT_WHEEL",
+      "bGroup": "reducer",
+      "overlapMm3": 47.51673544795171,
+      "intersectionBoundsMinMm": [
+        -32.8,
+        -72.92089050242389,
+        68.4263200636511
+      ],
+      "intersectionBoundsMaxMm": [
+        -11.799999999999695,
+        68.92999835960377,
+        142.9208905024239
+      ]
+    }
+  ],
+  "stageAllocation": {
+    "id": "C",
+    "direction": "intermediate rotor, material-constrained light frame",
+    "rotorDiameterMm": 200,
+    "activeSpanMm": 32,
+    "stageRatios": [
+      13,
+      12
+    ],
+    "stagePinionTeeth": [
+      12,
+      12
+    ],
+    "firstGearPlaneXmm": -25,
+    "stageAxisDeltaYmm": [
+      -22,
+      -10
+    ]
+  },
+  "scope": "Failed intermediate correction,not a publication approval. Preserved as a positive control; do not infer success from the separate floor or stationary-only rotation checks."
+}

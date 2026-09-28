@@ -18,7 +18,7 @@ def support_may_be_required(pid, data, bed_shift):
             or pid=="P_INPUT_PINION" and data["reduction"]["stages"][0]["xMm"]+bed_shift>1e-6)
 
 
-def export(design,library):
+def export(design,library,selected=None):
     sys.path.insert(0,library)
     import FreeCAD as App
     import MeshPart
@@ -27,11 +27,18 @@ def export(design,library):
     doc=App.openDocument(str(native))
     try:
         c=data["parameters"]["common"];rows=[];templates=[]
+        previous=json.loads((OUT/design/"print_geometry.json").read_text()) if selected is not None else None
         representatives={}
         for item in data["instances"]:representatives.setdefault(item["part_id"],item)
         for pid,item in representatives.items():
             part=data["parts"][pid]
             if part["category"] not in ("printed","sheet_cut"):continue
+            if selected is not None and pid not in selected:
+                key="printedParts" if part["category"]=="printed" else "sheetTemplates"
+                row=next((r for r in previous[key] if r["partId"]==pid),None)
+                if row is None:raise ValueError("Selective export would omit a new part: "+pid)
+                (rows if key=="printedParts" else templates).append(row)
+                continue
             shape=doc.getObject(item["name"]).Shape.copy()
             inverse=App.Placement(App.Matrix(*np.linalg.inv(np.array(item["transform"])).ravel().tolist()))
             shape.Placement=inverse.multiply(shape.Placement)
@@ -99,7 +106,7 @@ def export(design,library):
         App.closeDocument(doc.Name)
 
 
-def verify(design):
+def verify(design,selected=None):
     import trimesh
     import fitz
     path=OUT/design/"print_geometry.json";data=json.loads(path.read_text())
@@ -115,8 +122,9 @@ def verify(design):
         if not mesh.is_watertight or relative>.002:errors.append(row["partId"])
     for row in data["sheetTemplates"]:
         file=ROOT/row["svg"];pdf=file.with_suffix(".pdf")
-        with fitz.open(stream=file.read_bytes(),filetype="svg") as document:
-            pdf.write_bytes(document.convert_to_pdf())
+        if selected is None or row["partId"] in selected:
+            with fitz.open(stream=file.read_bytes(),filetype="svg") as document:
+                pdf.write_bytes(document.convert_to_pdf())
         with fitz.open(pdf) as document:
             size=[document[0].rect.width*25.4/72,document[0].rect.height*25.4/72]
         if not np.allclose(size,[297,420],atol=.05):raise ValueError("PET template is not1:1 A3")
@@ -132,7 +140,9 @@ if __name__=="__main__":
     parser.add_argument("--designs",nargs="+",required=True)
     parser.add_argument("--mode",choices=("export","verify"),required=True)
     parser.add_argument("--freecad-lib")
+    parser.add_argument("--parts",nargs="+")
     options=parser.parse_args()
     if options.mode=="export" and not options.freecad_lib:parser.error("--freecad-lib is required for export")
     for design in options.designs:
-        export(design,options.freecad_lib) if options.mode=="export" else verify(design)
+        selected=set(options.parts) if options.parts else None
+        export(design,options.freecad_lib,selected) if options.mode=="export" else verify(design,selected)

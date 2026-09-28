@@ -227,15 +227,16 @@ class WalkerCadTests(unittest.TestCase):
         self.assertEqual(len(compound.Solids),1)
 
     def test_compound_wheel_clears_output_carrier_between_mesh_planes(self):
-        train=b.reducer(b.CFG["candidates"][0],b.C)
-        compound=b.compound_geometry(*train["stages"])
-        output=b.output_wheel_geometry(train["stages"][-1])
-        for angle in (0,math.pi/train["stages"][-1]["wheel"]):
-            first=compound.copy()
-            first.rotate(b.V(),b.V(1,0,0),math.degrees(angle*train["speedRatios"][1]))
-            first.translate(b.V(0,*train["axesYzMm"][1]))
-            second=output.copy();second.rotate(b.V(),b.V(1,0,0),math.degrees(angle))
-            self.assertLess(overlap(first,second),1e-5)
+        for candidate in (b.CFG["candidates"][0],b.CFG["candidates"][2]):
+            train=b.reducer(candidate,b.C)
+            compound=b.compound_geometry(*train["stages"])
+            output=b.output_wheel_geometry(train["stages"][-1])
+            for angle in (0,math.pi/train["stages"][-1]["wheel"]):
+                first=compound.copy()
+                first.rotate(b.V(),b.V(1,0,0),math.degrees(angle*train["speedRatios"][1]))
+                first.translate(b.V(0,*train["axesYzMm"][1]))
+                second=output.copy();second.rotate(b.V(),b.V(1,0,0),math.degrees(angle))
+                self.assertLess(overlap(first,second),1e-5)
 
     def test_cage_join_fasteners_have_real_counterbores(self):
         a=b.Whole(b.CFG["candidates"][0])

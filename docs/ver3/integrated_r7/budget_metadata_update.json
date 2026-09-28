@@ -1,0 +1,150 @@
+{
+  "baselineArtifactCommit": "e82a9d981388631b26b04ba90294c32992674f23",
+  "sourceCommit": "369434e046acc5cb8f9da0f9f338308d29938d1e",
+  "sourceHash": "5074478881da48673648df953a591c0924f3b1d8ed390fad3830d6a0057ed5e4",
+  "status": "VERIFIED_BUDGET_METADATA_ONLY",
+  "approvalDateJst": "2026-09-28",
+  "oldApproximatePartsBudgetJpy": 23000,
+  "approvedApproximatePartsBudgetJpy": 24000,
+  "unownedDn03ToolApproximateCostJpySeparate": 396,
+  "cadOrPhysicalValuesChanged": false,
+  "solverOrCadRerunPerformed": false,
+  "originalSliceResultsChanged": false,
+  "manufacturingRelease": false,
+  "qualificationPromoted": false,
+  "designs": [
+    {
+      "designId": "A",
+      "instanceCount": 750,
+      "beforeRequirementInclusiveIdentity": "25e89d42f6fd97c1c2c2246cd54318fa04f4c6f69714bc981cc6c2093d4ded3b",
+      "afterRequirementInclusiveIdentity": "1caa06aa7100a571ba1c4d3bab1853942a1b63b886aa6dbe3a57ea0996164163",
+      "unchangedPhysicalInputSha256": "a8ee9b3ca6fac53dd2fd9cb89a8adfad6803a209f0bdabb599cf3a9d51682b4d",
+      "unchangedFrameCount": 73,
+      "unchangedFrameDataSha256": "2a1246ac6fedacbc5f2eb8bcd428535434f7319d07204f0285dfdcde85e84d23"
+    },
+    {
+      "designId": "B",
+      "instanceCount": 785,
+      "beforeRequirementInclusiveIdentity": "9216a1746d00aa2df98d98b5503095ccce3cb0ccc6840b011beedccc659c5af0",
+      "afterRequirementInclusiveIdentity": "ecfaa081f1c4f61019b2b006a18840827b069c64c2f41aa8791eefe5510fa685",
+      "unchangedPhysicalInputSha256": "9c488b7ec9878e4e97f87d71e7c57531def2ac42ffeab00f088d0d196f38f212",
+      "unchangedFrameCount": 73,
+      "unchangedFrameDataSha256": "13a54d5ef2871fe51c887d065bc009a905c68fd8ba2f09a6a16939c8f9103182"
+    },
+    {
+      "designId": "C",
+      "instanceCount": 750,
+      "beforeRequirementInclusiveIdentity": "3d640999f31f949e14271c035dcff8de694f3a627853c7c8f99a6ecd41acf014",
+      "afterRequirementInclusiveIdentity": "16ba85d4aa9692070cb52ab7323c394b263819744ad389bc14424c90928bfdcd",
+      "unchangedPhysicalInputSha256": "b35b1986ef35d532cad757ef3217ab546c74e1a20be646231736b54aa12c6bd8",
+      "unchangedFrameCount": 73,
+      "unchangedFrameDataSha256": "555762b1cd4fd4dd05ef69ffa09b82bac25310da571551f03561a6e3871c5192"
+    }
+  ],
+  "identityScope": "The existing floor identity includes requirements; only its budget fields are rebound. All cases,envelopes,geometry,physical inputs and frame arrays are unchanged. Original execution source hashes remain recorded.",
+  "preservedResourceCount": 254,
+  "preservedResourceBytes": 240969645,
+  "preservedInventorySha256": "545432cf5696ca1de4c39b0c816ed2882674d400f3bc4e4155e8ec17e6347977",
+  "updatedResources": [
+    {
+      "path": "docs/ver3/integrated_r7/A/assembly.json",
+      "beforeSha256": "fd94b5a9c81a64af8d564afb576383023073b96d70e3357a9c799bc00ba8b39c",
+      "afterSha256": "1750f667aa9029aec39f9b409a6039f8f6b4d5ad99e81c71653dd04739fd1e3d"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/A/floor_envelopes.json",
+      "beforeSha256": "ffda6f97d70d0212b50935b32b06603e061d422487000e059be1f966b3ee8722",
+      "afterSha256": "8407e0561a756606d7e519b0892c2dc0d32907875e065e0e99c211e0c9ddb0e1"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/A/floor_clearance.json",
+      "beforeSha256": "513e558ab209172f6cda25510460b89fa6b3401b9b3cd2437685938ef52070f1",
+      "afterSha256": "2d5486814e4dc1c67370681778906135e7748b85f9892553bc5dc90be056bb1f"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/A/environment_sensitivity.json",
+      "beforeSha256": "766429045f28377aee9a7d9ecfd227498730cb95607f68fc36db1b39ebda9ecc",
+      "afterSha256": "737c321f4e8cd44bdbd274ea8f3eb664cb7b198bee7952d7d1317b8dbda46fe6"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/A/contact_frames.json",
+      "beforeSha256": "ee7b042c5632027e32934096ca776f192d9e11eacca734ca4922eeb18c8ff0b3",
+      "afterSha256": "e0fa9525eed928bfec8c30cccdebb406e449c8d2804e0a5471d856647f32f288"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/B/assembly.json",
+      "beforeSha256": "360e28cfedb1058f72887337875e6efe2b01746dad40bee1d0c76a023cbeeaee",
+      "afterSha256": "74dbb60950d78e636850ca39d9b94bd3a5b74590f2e5277592da5ddcb32a3316"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/B/floor_envelopes.json",
+      "beforeSha256": "80e1efc406dde9c04113e75401a7769e5ae054aefa5fdb640c75c406b16b7fb5",
+      "afterSha256": "06eb538f3e119e76009f08dfa38cc8cff562c88dc1346608b6c6a47421128df0"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/B/floor_clearance.json",
+      "beforeSha256": "dc63156eb6f20da696a88877bdd17cf8f9e0241e17d8ee86cbfb500ff2c655ee",
+      "afterSha256": "9bdd3010eaaadd1a9b90ec08b338299861d727eae8aa39c7a010da928b19873d"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/B/environment_sensitivity.json",
+      "beforeSha256": "dddca7a641f0d81fbf1be06a3b0ed6466d23cd2b699431534cf922aefe11689c",
+      "afterSha256": "70ff34c02895c13b3e7ccfefbef26ba0e89773d6a85a01231c4ec80c33d69f99"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/B/contact_frames.json",
+      "beforeSha256": "638f4da211c134c130ff9b544e0f603d6684274fc9f0e372113007a9aff1378e",
+      "afterSha256": "9e38f9d2fb12f87abdf4440a59590e6ae11dc8b462e96b4e36178c9101a1689b"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/C/assembly.json",
+      "beforeSha256": "aac1c6c0267f62eae04bc44a41a704aea78b29670d8a14c9bd76eebc03217472",
+      "afterSha256": "f4dbb6beb179e2e304b1628bcb365be8000d721723fae5acf3f8c2c6c872b3ea"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/C/floor_envelopes.json",
+      "beforeSha256": "f9f38812ca0c521f1ea95925a1331a9ba075539f112c99cc469bb267e90244d4",
+      "afterSha256": "52e9a95ada9bcaa8de46bb25ec1157771c5253daf10746497de199b462d8efa7"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/C/floor_clearance.json",
+      "beforeSha256": "5efc2b2d4202e4549887212e168e6ab9383bf6fb69f634957e2afa74bf9680c1",
+      "afterSha256": "0f7c084a6539b1b8840c1ef76efb89eda6a4a79b4ce8206cd92c529575fb1755"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/C/environment_sensitivity.json",
+      "beforeSha256": "f26ae3d48e5acfeef8dbd658028ad19d877bf1a4e81c74ac8d190da2e36e7d24",
+      "afterSha256": "72a51d64ad7938eb7c40d983410fd21ead0198e6c79168eb7341162157a43ced"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/C/contact_frames.json",
+      "beforeSha256": "391c97577e18b755a741f0d57b466c32d4fe3ac0627a5d6a66fd16fbad220f11",
+      "afterSha256": "342efc89501285ffac0d61d9ee9511b3969b041b4526b736be9504df38c1c116"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/A/purchase_lots.json",
+      "beforeSha256": "3edb078a97263526c412f5cd9ae1a2e1e7108fa0e7a14af4eb4a12bb4336cd04",
+      "afterSha256": "93270dd5da9b06a52891c94b0362cf98dd7974db73e36c9ba08d0ca6e40ea4e7"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/B/purchase_lots.json",
+      "beforeSha256": "8f959d06b9fde19766eefc85b9186fcd58bfe602eb52dcbf6fe188096bab134e",
+      "afterSha256": "d9781c56f5a13e62cb6dda464e2da103f02d01b9d0dcffd11fcb33ccb46d6c62"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/C/purchase_lots.json",
+      "beforeSha256": "5e37c85be0ea7e5f21966f1ce3eff2c226f6df56ac8af5ae6f8625cb66875abb",
+      "afterSha256": "2cc5cd960c113142c0e4ee274b0d68423186ea0f0a10b6580509c0396f1db2eb"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/purchase_lots.json",
+      "beforeSha256": "10a25598864925c32ddd84f39a25a94a450cdac66c6645ae8ed83c00abdd4fe6",
+      "afterSha256": "27f55a197bc087bbdadb8c94b0ce43ea2d7d376fee3bb5669ca7b43d5d3bdadc"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/contact_frames_validation.json",
+      "beforeSha256": "15c468f661531c62f7d09b9be7f26be94ab25c3f47724b07541b343f7dc23cc2",
+      "afterSha256": "44152a6ae240b4cf308cdf4f53a7b872f8c9804e914b08a8a38fd002181a96ba"
+    }
+  ]
+}

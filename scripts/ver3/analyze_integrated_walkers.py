@@ -48,7 +48,7 @@ def shaft_gravity_work(fast,axes,theta,pitch,pitch_rate):
     return result
 
 
-def reflect_shaft_work(output_work,gravity_work,speeds,eta,bearing_each):
+def reflect_shaft_work(output_work,gravity_work,speeds,eta,bearing_each,mesh_work=None):
     """Walk the real train from output to input in Nmm per crank radian."""
     if not 0<eta<=1 or bearing_each<0 or len(speeds)!=len(gravity_work):
         raise ValueError("Invalid shaft power-flow inputs")
@@ -56,6 +56,9 @@ def reflect_shaft_work(output_work,gravity_work,speeds,eta,bearing_each):
     losses=[]
     for shaft in range(len(speeds)-2,-1,-1):
         after=np.where(work>=0,work/eta,work*eta)
+        if mesh_work is not None:
+            mesh_work.append({"stage":shaft,"pinionWorkMaximumNmmPerCrankRad":float(np.max(abs(after))),
+                              "wheelWorkMaximumNmmPerCrankRad":float(np.max(abs(work)))})
         losses.append(after-work)
         work=after+gravity_work[shaft]+2*bearing_each*abs(speeds[shaft])
     return work/abs(speeds[0]),np.array(losses)
@@ -387,7 +390,8 @@ def contact_frames(assembly,gait,contact,result,source_commit,frame_step_deg=5):
     return {
         "schemaVersion":1,"revisionId":assembly["revisionId"],"designId":result["designId"],
         "sourceCommit":source_commit,"sourceHash":source_identity()[2],
-        "reviewedGeometryArtifactCommit":"f50978e55384d1b03417ed7115395e6e2c010e85",
+        "previousPublishedArtifactCommit":"8973992f0d48033224d91c7e9eb07144366b1fa2",
+        "geometryCorrectedForFloorClearance":True,
         "assemblySha256":hashlib.sha256((OUT/result["designId"]/"assembly.json").read_bytes()).hexdigest(),
         "mechanicalInputSha256":result["mechanicalInputSha256"],
         "analysisSourcesSha256":result["analysisSourcesSha256"],
@@ -424,7 +428,7 @@ def contact_frames(assembly,gait,contact,result,source_commit,frame_step_deg=5):
 
 
 def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=None,
-            motion_output=None,source_commit=None):
+            motion_output=None,source_commit=None,contact_sink=None):
     if motion_output is not None and output_dir is None:
         raise ValueError("Contact export requires a separate analysis output directory to preserve frozen budgets")
     if motion_output is not None and (assembly_override is not None or air_case is not None):
@@ -552,8 +556,22 @@ def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=N
         downstream=np.maximum(net+bus_bound,0)+bus_bearings
         input_pair=2*bearing_drag
         output_work=np.interp(fine,np.r_[theta,2*math.pi],np.r_[downstream,downstream[0]])
+        mesh_work=[]
         required_nmm,reducer_loss=reflect_shaft_work(
-            output_work,gravity_work,assembly["reduction"]["speedRatios"],eta,bearing_drag)
+            output_work,gravity_work,assembly["reduction"]["speedRatios"],eta,bearing_drag,mesh_work)
+        mesh_forces=[]
+        for load in sorted(mesh_work,key=lambda row:row["stage"]):
+            stage=assembly["reduction"]["stages"][load["stage"]];module=stage.get("moduleMm",1)
+            pinion_radius=module*stage["pinion"]/2;wheel_radius=module*stage["wheel"]/2
+            tangential=max(load["pinionWorkMaximumNmmPerCrankRad"]/abs(stage["pinionSpeedPerCrank"])/pinion_radius,
+                           load["wheelWorkMaximumNmmPerCrankRad"]/abs(stage["wheelSpeedPerCrank"])/wheel_radius)
+            pressure=stage.get("pressureAngleDeg",25)
+            mesh_forces.append({"stage":load["stage"],"moduleMm":module,"pressureAngleDeg":pressure,
+                                "pinionPitchRadiusMm":pinion_radius,"wheelPitchRadiusMm":wheel_radius,
+                                "tangentialForceUpperN":tangential,
+                                "separatingForceUpperN":tangential*math.tan(math.radians(pressure)),
+                                "resultantForceUpperN":tangential/math.cos(math.radians(pressure)),
+                                "basis":"Maximum reflected per-shaft work divided by actual speed and pitch radius; conservative eta-dependent bound,not a resolved tooth-friction distribution."})
         required=required_nmm/1000
         margin=raw_supply-required;worst=int(np.argmin(margin))
         # Absolute increments prevent forward/backward slip from cancelling.
@@ -569,6 +587,7 @@ def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=N
                 "maximumInputBearingPairForRawBalanceNm":float((raw_supply-required+input_pair/1000).min()),
                 "inputOnlyAccelerationHeadroomRadS2":float(margin.min()/inertia["inputShaftAssemblyKgM2"]) if inertia else None,
                 "guideMuAssumed":guide_mu,"meshEfficiencyAssumed":eta,
+                "reducerMeshForceBounds":mesh_forces,
                 "guideRootMomentMaximumNmm":guide_root_moment,
                 "guideAxialForceResidualMaximumN":guide_axial_residual,
                 "workPerCycleNmm":{"groundSlip":work_slip,"guide":float(guide_loss.sum()*dt),
@@ -616,6 +635,8 @@ def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=N
                       "Negative aggregate output demand is still clipped as a conservative reference bound,not a claim that spring energy is dissipated twice.",
                       "Journal reactions are first-order statics; friction-force feedback remains unquantified.",
                       "Only the saved CAD BOM is counted; unmodeled guards/access fixes cannot be silently declared covered."]}
+    if contact_sink is not None:
+        contact_sink(assembly,gait,contact,result)
     if motion_output is not None:
         frames=contact_frames(assembly,gait,contact,result,source_commit)
         Path(motion_output).write_text(json.dumps(frames,ensure_ascii=False,indent=2,allow_nan=False)+"\n")

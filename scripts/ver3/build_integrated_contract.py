@@ -5,6 +5,8 @@ from collections import defaultdict
 import hashlib
 import json
 from pathlib import Path
+import re
+import subprocess
 
 import numpy as np
 
@@ -137,8 +139,16 @@ def assembly_stages(data):
     step("10_right_cranks","右クランク・丸ジャーナル・正係合",
          [("add",g["rightCranks"]|g["rightCrankClamps"])],("HEX_2P5","WRENCH_5P5"),
          note="印刷された0/180度の部品とクランプ方向を識別する。")
-    step("11_prepare_legs","6脚・案内・ばね・ロッカーを準備",[],("HEX_1P5","HEX_2P5","WRENCH_4"),
-         prepare=g["legsAndFeet"],note="ねじ山ではなく平滑金属スリーブを摺動面にする。")
+    step("11_prepare_legs","6脚・案内・ばね・ロッカーを準備",[],("HEX_1P5","HEX_2P5","WRENCH_4","NUT_DRIVER_4P5"),
+         prepare=g["legsAndFeet"],note="ねじ山ではなく平滑金属スリーブを摺動面にする。先にCEF一体の足モジュールを別作業台で組み、市販M2x12とM2ナイロンナットをENGINEER DN-03（対辺4.5mm）で締結してから残る脚リンクを加える。精密切断や薄口スパナは不要。8mm金属スリーブ端面と鋼座金が締結力を受け、ロッカー自由すきま0.6mmを保持。工具型番/寸法確認と現物操作・保持トルク実証は別。")
+    steps[-1]["footFirstBenchSubassemblies"]=[
+        {"stationYmm":station,"side":side,
+         "instances":sorted(name for name,item in items.items()
+                            if item["motion"].get("station")==station and item["motion"].get("side")==side
+                            and (item["motion"]["kind"]=="foot" or item["motion"].get("link")=="CEF")),
+         "attachOtherLegLinksAfterTightening":True}
+        for station in (-data["parameters"]["common"]["stationPitchMm"],0,data["parameters"]["common"]["stationPitchMm"])
+        for side in (-1,1)]
     step("12_legs","リンク層と金属ピンを取り付ける",
          [("add",g["legsAndFeet"])],("HEX_1P5","HEX_2P5","WRENCH_4"),
          note="Pのねじ頭は内側、ジャムナットは外側。ばね行程/停止は組立図と有限検査を参照。運転許可ではない。")
@@ -283,7 +293,10 @@ def source_identity():
         "report_integrated_walkers.py","build_integrated_contract.py","verify_integrated_package.py","beam.py","frame3d.py",
         "cad_parts.py","core.py","commercial_r3.py","study_r2.py","input_cartridge.py",
         "slice_integrated_representatives.py","inspect_integrated_toolpaths.py",
-        "test_slicing_inspection.py","test_contact_frames.py"]
+        "test_slicing_inspection.py","test_contact_frames.py","walker_floor.py",
+        "export_floor_envelopes.py","check_integrated_floor.py","test_walker_floor.py",
+        "refresh_integrated_floor_details.py","check_rocker_pin_access.py","refresh_stock_labels.py",
+        "refresh_integrated_budget.py","test_integrated_budget.py"]
     sources=[resource(ROOT/"scripts/ver3"/name) for name in source_files]
     dependencies=[resource(ROOT/"docs/ver3/common_input_r4/assembly.json"),
                   resource(ROOT/"FreeCAD/Ver.3/common_input_r4/CommonInputR4.FCStd"),
@@ -294,11 +307,18 @@ def source_identity():
 
 def build(source_commit):
     sources,dependencies,source_digest=source_identity()
+    if not re.fullmatch(r"[0-9a-f]{40}",source_commit or ""):
+        raise ValueError("The contract requires an immutable source commit")
+    for item in sources+dependencies:
+        blob=subprocess.check_output(["git","show",source_commit+":"+item["path"]],cwd=ROOT)
+        if hashlib.sha256(blob).hexdigest()!=item["sha256"]:
+            raise ValueError("Source commit does not contain the current pinned input: "+item["path"])
     cfg=json.loads((ROOT/"scripts/ver3/walker_r7.json").read_text())
     designs=[]
     for name in "ABC":
         folder=OUT/name;a=json.loads((folder/"assembly.json").read_text())
         stages=assembly_stages(a)
+        stages[10]["additionalToolRequirement"]=resource(folder/"rocker_pin_access.json")
         if name=="B":
             tool_requirement=resource(folder/"retainer_tool_access.json")
             stages[3]["additionalToolRequirement"]=tool_requirement
@@ -320,6 +340,9 @@ def build(source_commit):
             "bom":resource(folder/"BOM.csv"),"purchaseLots":resource(folder/"purchase_lots.json"),
             "stages":resource(stage_file),"printAndSheetTemplates":resource(folder/"print_geometry.json"),
             "contactFrames":resource(folder/"contact_frames.json"),
+            "nonContactFloorClearance":resource(folder/"floor_clearance.json"),
+            "nativeFloorEnvelopes":resource(folder/"floor_envelopes.json"),
+            "rockerPinToolAccess":resource(folder/"rocker_pin_access.json"),
             "validationFiles":[resource(folder/file) for file in
                 ("static_collisions.json","gait_motion.json","assembly_access.json","contact_sensitivity.json",
                  "rotating_clearance.json","structure.json","work_budget.json","environment_sensitivity.json")],
@@ -339,10 +362,10 @@ def build(source_commit):
         "transformConvention":"row-major4x4 matrices multiplied by homogeneous column vectors; millimetres",
         "handedness":"Left-hand geometry is already mirrored in its mesh; do not mirror it again.",
         "stageTools":[{"id":identifier,"torqueNm":None} for identifier in
-                      ("HEX_1P5","HEX_2P5","HEX_3","WRENCH_4","WRENCH_5P5","WRENCH_7")],
+                      ("HEX_1P5","HEX_2P5","HEX_3","WRENCH_4","WRENCH_5P5","WRENCH_7","NUT_DRIVER_4P5")],
         "renderingLimits":["Assembly reference is uncompressed and not a solved floor-contact pose; do not impose a floor atZ=0 as a performance claim.",
                            "Camera orbit and stated assembly paths are allowed representations; no self-start or dynamic walking animation is validated.",
-                           "Generation hashes describe the actual build history,including incremental root-only updates. The current source hash also includes the approved budget-only metadata update.",
+                           "Generation hashes describe full and incremental build history. The floor correction changes C stage allocation and all three side PET/rocker-pin details; earlier unchanged-artifact claims apply only to their historical snapshot.",
                            "Old first-cut GLB,r3 calculations andr4/r6 data remain separately versioned; do not merge their numbers or geometry."],
         "manufacturingRelease":False,"qualifiedWalkingPrototypeCount":0,
         "physicalSelfStart":"UNKNOWN","real30cmTravel":"UNKNOWN","publicationAuthorized":True,
@@ -351,12 +374,29 @@ def build(source_commit):
                             "manufacturingOrMachineOperationAuthorized":False}}
     contract["assemblyReviewCorrection"]={"findingId":"R7-I1","reviewedSnapshotCommit":"922a47c5ab815fc186dd1486726123ab08552ede",
         "geometryChanged":False,"pathInventoryDerivedFromOrderedOperations":True}
-    contract["candidateRevision"]="v3-integrated-walkers-r7-15-slice1"
+    contract["candidateRevision"]=cfg["revisionId"]
     contract["reviewedGeometryArtifactCommit"]="f50978e55384d1b03417ed7115395e6e2c010e85"
-    contract["geometryChangedSinceReviewedArtifact"]=False
+    contract["geometryChangedSinceReviewedArtifact"]=True
+    contract["previousPublishedArtifactCommit"]="8973992f0d48033224d91c7e9eb07144366b1fa2"
+    contract["floorCorrection"]={"report":resource(OUT/"FLOOR_CORRECTION_ja.md"),
+                                 "baseline":resource(OUT/"review/floor_conflict_baseline.json"),
+                                 "intermediateCollisionControl":resource(OUT/"review/ratio_swap_collision_control.json"),
+                                 "changedScope":resource(OUT/"floor_correction_scope.json"),
+                                 "independentlyReviewed":False,"ordinaryAuthorChecksOnly":True}
     contract["slicingReport"]=resource(OUT/"SLICING_ja.md")
     contract["representativeToolpathChecks"]=resource(OUT/"slicing/toolpath_checks.json")
     contract["slicingProfileProvenance"]=resource(OUT/"slicing/profile_provenance.json")
+    contract["stockFastenersAndTools"]=resource(OUT/"stock_fasteners_and_tools.json")
+    contract["stockLabelMetadataUpdates"]=[resource(OUT/name/"stock_label_metadata_update.json")
+                                           for name in "AB"]
+    contract["additionalCPrintInspection"]={"status":resource(OUT/"C/slicing_status.json"),
+                                           "checks":resource(OUT/"C/slicing/toolpath_checks.json"),
+                                           "report":resource(OUT/"C/SLICING_ja.md")}
+    reference_costs={name:json.loads((OUT/name/"purchase_lots.json").read_text())["sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy"]
+                     for name in "ABC"}
+    contract["budgetConfirmationPending"]=any(value>cfg["requirements"]["materialBudgetJpy"] for value in reference_costs.values())
+    contract["standaloneReferenceCostsJpy"]=reference_costs
+    contract["budgetMetadataUpdate"]=resource(OUT/"budget_metadata_update.json")
     contract["renderingLimits"].append("Contact frames are decimated converged small-angle quasi-static states,not dynamics. Missing independent rocker angles remain null; never replace them with zero or arbitrary poses.")
     contract["integrationReview"]={"summary":resource(OUT/"REVIEW_ja.md"),
         "initialReview":resource(OUT/"review/initial_review_record.json"),

@@ -1,0 +1,227 @@
+{
+  "reviewedArtifactCommit": null,
+  "inputArtifactCommit": "f72b2cf64813978f0d31d1a1eaeb4d968948caf5",
+  "designId": "C",
+  "inputAssemblySha256": "aac1c6c0267f62eae04bc44a41a704aea78b29670d8a14c9bd76eebc03217472",
+  "inputGearStages": [
+    {
+      "id": "stage0",
+      "pinion": 12,
+      "wheel": 156,
+      "moduleMm": 0.9,
+      "pressureAngleDeg": 20,
+      "pinionAxis": 0,
+      "wheelAxis": 1,
+      "centreMm": 75.6,
+      "xMm": -25,
+      "pinionToothDatumRad": -1.2755188900474206,
+      "wheelToothDatumRad": 1.8862121779884609,
+      "pinionProfileShift": 0.35,
+      "wheelProfileShift": -0.35,
+      "pinionAddendumCoefficient": 0.74,
+      "wheelAddendumCoefficient": 1.0,
+      "pinionSpeedPerCrank": 156.0,
+      "wheelSpeedPerCrank": -12.0
+    },
+    {
+      "id": "stage1",
+      "pinion": 12,
+      "wheel": 144,
+      "moduleMm": 1,
+      "pressureAngleDeg": 25,
+      "pinionAxis": 1,
+      "wheelAxis": 2,
+      "centreMm": 78.0,
+      "xMm": -15,
+      "pinionToothDatumRad": -1.4422373667534711,
+      "wheelToothDatumRad": 1.721171902486251,
+      "pinionProfileShift": 0,
+      "wheelProfileShift": 0,
+      "pinionAddendumCoefficient": 0.82,
+      "wheelAddendumCoefficient": 0.93,
+      "pinionSpeedPerCrank": -12.0,
+      "wheelSpeedPerCrank": 1.0
+    }
+  ],
+  "orcaBundleVersion": "2.4.2",
+  "sourceProfiles": {
+    "machine": [
+      {
+        "path": "profiles/BBL/machine/fdm_machine_common.json",
+        "sha256": "cdcaa5e5061934a9b960c94e203cc7d1e3b869a407182644f2dda9fdcbf5c2b3"
+      },
+      {
+        "path": "profiles/BBL/machine/fdm_bbl_3dp_001_common.json",
+        "sha256": "e90597a202d5461a2f8636a06c35409cffc79a2c1991bb726c6e465e9a0bd26c"
+      },
+      {
+        "path": "profiles/BBL/machine/Bambu Lab P1S 0.4 nozzle.json",
+        "sha256": "3e72ef1682406940986edb1ebd7d3b2c99afe59789b9c9389ffbdf6831e07b6a"
+      }
+    ],
+    "process": [
+      {
+        "path": "profiles/BBL/process/fdm_process_common.json",
+        "sha256": "398fcb322a7f459edab00cb2daf524345a19b8cef074415af52f377f91e4bd5b"
+      },
+      {
+        "path": "profiles/BBL/process/fdm_process_single_common.json",
+        "sha256": "59fc5ca43dcf9850076708b8ca14b7f9098fe90b9b32ceffc6741b4fcaf3e73e"
+      },
+      {
+        "path": "profiles/BBL/process/fdm_process_single_0.16.json",
+        "sha256": "2406d4621c5ab7ba3656e3e8e0286062c70509e3b1cc805310bed1aa8ddd049c"
+      },
+      {
+        "path": "profiles/BBL/process/0.16mm Optimal @BBL X1C.json",
+        "sha256": "4ea4775dc8363f4a1748d396a045adb519a04b7776fb6ed5b5d966442ad53e4a"
+      }
+    ],
+    "filament": [
+      {
+        "path": "profiles/BBL/filament/fdm_filament_common.json",
+        "sha256": "05725cc129f96ea903dc77c40d248fa1bd0137cfc41216d09d952cfdd37d3683"
+      },
+      {
+        "path": "profiles/BBL/filament/fdm_filament_pet.json",
+        "sha256": "9d49bae4fd046871c7ea9254af61c9c2e02fa343e15b3ff8d755ab0dd49bebe4"
+      },
+      {
+        "path": "profiles/BBL/filament/Generic PETG @base.json",
+        "sha256": "a8742f2dc6f1d73f8affe69eb12fefe3e16f0da5e7054c09cea400c145398708"
+      },
+      {
+        "path": "profiles/BBL/filament/Generic PETG.json",
+        "sha256": "12185605cae0f69442ca848bf488045b3ebf05273187dfb88fc44795e5150727"
+      }
+    ]
+  },
+  "profileNames": {
+    "machine": "Bambu Lab P1S 0.4 nozzle",
+    "process": "0.16mm Optimal @BBL X1C",
+    "filament": "Generic PETG"
+  },
+  "processOverrides": {
+    "wall_generator": "arachne",
+    "wall_loops": "4",
+    "sparse_infill_density": "100%",
+    "sparse_infill_pattern": "rectilinear",
+    "top_shell_layers": "5",
+    "bottom_shell_layers": "5",
+    "enable_arc_fitting": "0",
+    "curr_bed_type": "Textured PEI Plate",
+    "support_type": "normal(auto)",
+    "support_style": "default",
+    "support_on_build_plate_only": "1",
+    "support_threshold_angle": "30",
+    "support_top_z_distance": "0.2",
+    "support_bottom_z_distance": "0.2",
+    "support_interface_top_layers": "3",
+    "support_object_xy_distance": "0.35",
+    "brim_type": "outer_only",
+    "brim_width": "5",
+    "brim_object_gap": "0.2",
+    "outer_wall_speed": "40",
+    "inner_wall_speed": "60",
+    "internal_solid_infill_speed": "60",
+    "top_surface_speed": "40",
+    "initial_layer_speed": "20",
+    "initial_layer_infill_speed": "30"
+  },
+  "machineSettingsSha256": "592792d59f9a6c472c122feffc2f6c1dcd3ad595631b815d388e35943a3c318f",
+  "filamentSettingsSha256": "e9b822d4074fc69530de0508c37dbf9fe97d53e967f3d5229e10243c3140df29",
+  "profileInheritance": "Explicitly flattened, then checked against CLI effective settings",
+  "printerContacted": false,
+  "physicalPrintingPerformed": false,
+  "actualHardwareAndMaterialMatched": false,
+  "parts": [
+    {
+      "partId": "P_INPUT_PINION",
+      "stl": "STL/Ver.3/integrated_r7/C/P_INPUT_PINION.stl",
+      "stlSha256": "27a157995f917f9e03edcd5b84271c8c5b8408e1c8564f72472944932dcfb531",
+      "processSha256": "c431fe03ca38bf2964589b4fa5d0cd214d8f96baa60f16a9615654cea5927c70",
+      "effectiveSettingsSha256": "5ca2eee75b25738eaa7c265e99ba33b80f5f28e6acbd86ecaeb846406f4cdf59",
+      "supportEnabled": true,
+      "exitCode": 0,
+      "orientationPolicy": "Preserve the exported build Z; arrange may rotate about Z only",
+      "scale": 1,
+      "gearTeeth": [
+        12
+      ],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          -0.882276184,
+          0.470732127,
+          0.0,
+          128.0
+        ],
+        [
+          -0.470732127,
+          -0.882276184,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": -151.91816902234893,
+      "privateProjectSha256": "323f39dc1166214f66742046fcefd7722300641018f9ddbab5d08cebd2c14ead",
+      "gcodeSha256": "b6a12be555f48fa90029c1b829a3b820df71c0317eb4fb5d2a6a834f5efcfae1"
+    },
+    {
+      "partId": "P_COMPOUND_1",
+      "stl": "STL/Ver.3/integrated_r7/C/P_COMPOUND_1.stl",
+      "stlSha256": "7d55514164dc831c99637fdab4f08c95210b1ef21f57b4b4e952eb7597ef6860",
+      "processSha256": "c431fe03ca38bf2964589b4fa5d0cd214d8f96baa60f16a9615654cea5927c70",
+      "effectiveSettingsSha256": "5ca2eee75b25738eaa7c265e99ba33b80f5f28e6acbd86ecaeb846406f4cdf59",
+      "supportEnabled": true,
+      "exitCode": 0,
+      "orientationPolicy": "Preserve the exported build Z; arrange may rotate about Z only",
+      "scale": 1,
+      "gearTeeth": [
+        156,
+        12
+      ],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          0.891575952,
+          -0.452871198,
+          0.0,
+          128.0
+        ],
+        [
+          0.452871198,
+          0.891575952,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 26.928046797027438,
+      "privateProjectSha256": "6cae4f92fce956ad519e123bcae16c5f5304ae833fc031c7e25f469f6edcf2f2",
+      "gcodeSha256": "6c96889dedaed486767f05849c384f96fe98dd87b2945b016b531653be6b0de5"
+    }
+  ],
+  "recordScope": "Executed slicer inputs and outputs; final visual review is recorded separately in slicing_status.json."
+}

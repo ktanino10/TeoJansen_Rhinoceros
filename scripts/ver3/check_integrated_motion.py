@@ -157,6 +157,7 @@ def main():
         target=folder/("foot_motion.json" if args.foot_only else "gait_motion.json")
         target.write_text(json.dumps(result,indent=2)+"\n")
         print("STAGE_END motion-audit",args.design,"poses",poses,"hits",len(hits),"seconds",time.monotonic()-start,flush=True)
+        if result["status"]!="PASS":raise ValueError("Finite motion verification did not pass")
     finally:
         App.closeDocument(doc.Name)
 

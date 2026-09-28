@@ -1,0 +1,28 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
+  "inputArtifactCommit": "f72b2cf64813978f0d31d1a1eaeb4d968948caf5",
+  "actualSlicingPerformed": true,
+  "status": "TWO_C_GEAR_TOOLPATHS_REVIEWED_WITH_WARNINGS",
+  "parts": ["P_INPUT_PINION", "P_COMPOUND_1"],
+  "orcaVersion": "2.4.2",
+  "profileAssumption": "Official P1S0.4mm/Generic PETG,0.16mm model layers,4 requested Arachne walls,100% infill,normal support; actual hardware/material matching unconfirmed",
+  "toolpathChecks": "slicing/toolpath_checks.json",
+  "profileProvenance": "slicing/profile_provenance.json",
+  "visualReviewPerformed": true,
+  "toothCountsPreserved": [12, 156, 12],
+  "allInspectedToothTipsRootConnected": true,
+  "firstWheelFaceMeasuredSetbackMm": 0.05188227305436044,
+  "dimensionalManufacturingApproval": false,
+  "modelBoresOpenAcrossAllModelLayers": true,
+  "warnings": [
+    "Both parts retain a removable support film across the exposed bore in the first0.2mm layer.",
+    "The156-tooth wheel has up to0.051883mm radial tip setback in its first supported face layer atZ20.2mm; theZ21mm interior layer is below0.001mm. This is recorded,not relabeled as the earlier A sample's below0.04mm result.",
+    "Nominal tip widths are not four extrusion lines; inspected tip lines are approximately0.42mm.",
+    "Support removal,lower tooth edges,fit,layer strength and actual meshing remain physically unverified."
+  ],
+  "physicalPrintingPerformed": false,
+  "printerContacted": false,
+  "manufacturingRelease": false,
+  "originalFiveRepresentativeSlicesUnchanged": true,
+  "wholeMachineSliced": false
+}

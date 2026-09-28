@@ -1,0 +1,65 @@
+{
+  "recordedDateJst": "2026-09-28",
+  "purchasingOrPhysicalToolOperationPerformed": false,
+  "bolt": {
+    "sku": "BOLT_M2_12",
+    "product": "ステンレス キャップ(全) M2x12",
+    "url": "https://www.nejinejikun.com/products/detail/371457",
+    "packQuantity": 10,
+    "packPriceTaxIncludedJpy": 330,
+    "quantityPerWalker": 6,
+    "stockCuttingRequired": false,
+    "designAcceptanceUnderHeadLengthMm": [
+      11.7,
+      12.3
+    ],
+    "acceptanceIsNotClaimedSupplierTolerance": true
+  },
+  "lockingNut": {
+    "sku": "LOCK_NUT_M2",
+    "product": "鉄 ナイロンナット(1種) M2(4.5x2.5) 三価クロメート",
+    "url": "https://www.nejinejikun.com/products/detail/342110",
+    "dimensionImage": "https://www.nejinejikun.com/html/upload/save_image/kikaku_data/a3050100000000_d.gif",
+    "acrossFlatsMm": 4.5,
+    "heightMm": 2.5,
+    "packQuantity": 10,
+    "packPriceTaxIncludedJpy": 440,
+    "quantityPerWalker": 6,
+    "nylonEngagementBasis": "At the accepted minimum11.7mm screw length and nominal2.5mm nut height,the screw projects0.6mm beyond the complete nut. Verify the actual parts before assembly.",
+    "holdingTorqueOrReuseCyclesVerified": false,
+    "maintenancePolicy": "Do not assume retained prevailing torque after removal; this plan calls for a new nut on reassembly. This is a design precaution,not a quoted manufacturer reuse-cycle specification."
+  },
+  "tool": {
+    "manufacturer": "ENGINEER",
+    "model": "DN-03",
+    "officialEntry": "https://www.engineer.jp/",
+    "officialCatalog": "https://online.fliphtml5.com/jhzqw/fqqa/",
+    "officialPdf": "https://84cbee47-81a9-47c6-af39-398f20800455.filesusr.com/ugd/104650_ca0824db194f4daba8b2ca2d4497fb11.pdf",
+    "pdfSha256": "c28e9998dcbdb672fc36f348c12c44d876e8d7714428472ea1ba1693284e6c79",
+    "catalogYear": 2026,
+    "printedPage": 69,
+    "pdfPage": 72,
+    "acrossFlatsMm": 4.5,
+    "workingEndOuterDiameterMm": 8,
+    "workingEndLengthMm": 18,
+    "socketDepthMm": 9,
+    "shaftLengthMm": 75,
+    "overallLengthMm": 145,
+    "handleDiameterMm": 13,
+    "publishedPriceExTaxJpy": 360,
+    "referenceWith10PercentTaxJpy": 396,
+    "actualOwnershipOrOperationConfirmed": false,
+    "materialBudgetIncludesNewHandTools": false
+  },
+  "smallThrustWasher": {
+    "sku": "THRUST4_SMALL",
+    "url": "https://www.nejinejikun.com/products/detail/94368",
+    "dimensionImage": "https://www.nejinejikun.com/html/upload/save_image/kikaku_data/a4010100000000_d.gif",
+    "nominalInnerMm": 4.5,
+    "nominalOuterMm": 8,
+    "nominalThicknessMm": 0.5,
+    "packQuantity": 100,
+    "packPriceTaxIncludedJpy": 330
+  },
+  "scope": "Current supplier product descriptions and manufacturer catalog dimensions,not vendor CAD,physical fit,tightening torque,durability,stock reservation or a guarantee of final delivered cost."
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "revisionId": "v3-integrated-walkers-r7-15",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "designId": "A",
-  "nativeSha256": "f093fdfcdfd1c860d3feaff24a95d7ec836b7ae39c8d740c1e94422a157cb304",
+  "nativeSha256": "4584762d480d940bc26a23b4ccd44491ffb051e7b1872559a2436af664473e88",
   "stages": [
     {
       "id": "frame_right_close",
@@ -760,7 +760,7 @@
         "S_GUARD_UPPER_RIGHT_001"
       ],
       "fixedPoseOverridesByName": {
-        "H_MAIN_HEX100_001": [
+        "H_MAIN_HEX100_003": [
           -53,
           0,
           0
@@ -770,7 +770,7 @@
           0,
           0
         ],
-        "H_MAIN_HEX100_003": [
+        "H_MAIN_HEX100_001": [
           -53,
           0,
           0
@@ -778,7 +778,7 @@
       },
       "inventorySha256": "d34b0c215e88930ba7efff52a61c74474e301edfce5f02dbf7c5a8d6edae2f1b",
       "pathDefinitionSha256": "9c5dfaf41497a18b6eea0b3577f7d1d7cfb29263360d682921225553c3e8d8aa",
-      "note": "\u4e3b\u8ef8\u3092\u4e00\u664253mm\u5f15\u304d\u8fbc\u307f\u3001\u4e0a\u5074PET\u3092Y=-4mm\u3067\u4e0a\u3052\u3066\u304b\u3089Y=0\u3078\u3002\u30a2\u30a4\u30c9\u30e9\u30fc\u30ad\u30e3\u30c3\u30d7\u90e8\u54c1\u3092\u540c\u3058ID\u3067\u623b\u3059\u3002",
+      "note": "主軸をX方向へ一時-53mm引き込み、上側PETを完成位置からY方向へ-4mmずらして下から上げ、同じ高さでY=-4→0mmへ着座する。工程07のX方向退避とは別。アイドラーキャップ部品を同じIDで戻す。",
       "exactPairs": 14,
       "unintendedIntersections": [],
       "clampReferenceContacts": [],
@@ -1152,7 +1152,7 @@
         "S_GUARD_UPPER_RIGHT_001"
       ],
       "fixedPoseOverridesByName": {
-        "H_MAIN_HEX100_001": [
+        "H_MAIN_HEX100_003": [
           -53,
           0,
           0
@@ -1162,7 +1162,7 @@
           0,
           0
         ],
-        "H_MAIN_HEX100_003": [
+        "H_MAIN_HEX100_001": [
           -53,
           0,
           0
@@ -1170,7 +1170,7 @@
       },
       "inventorySha256": "d34b0c215e88930ba7efff52a61c74474e301edfce5f02dbf7c5a8d6edae2f1b",
       "pathDefinitionSha256": "f4c9570cfa325d0d39b795961a6e80676cb2bef7366c48277eb553d762c38cfe",
-      "note": "\u4e3b\u8ef8\u3092\u4e00\u664253mm\u5f15\u304d\u8fbc\u307f\u3001\u4e0a\u5074PET\u3092Y=-4mm\u3067\u4e0a\u3052\u3066\u304b\u3089Y=0\u3078\u3002\u30a2\u30a4\u30c9\u30e9\u30fc\u30ad\u30e3\u30c3\u30d7\u90e8\u54c1\u3092\u540c\u3058ID\u3067\u623b\u3059\u3002",
+      "note": "主軸をX方向へ一時-53mm引き込み、上側PETを完成位置からY方向へ-4mmずらして下から上げ、同じ高さでY=-4→0mmへ着座する。工程07のX方向退避とは別。アイドラーキャップ部品を同じIDで戻す。",
       "exactPairs": 10,
       "unintendedIntersections": [],
       "clampReferenceContacts": [],
@@ -1545,7 +1545,7 @@
       "fixedPoseOverridesByName": {},
       "inventorySha256": "94ddade9287fb508ad8223bbdcfcb41ebc60832d7021db210c562951a6f49fa7",
       "pathDefinitionSha256": "7406191d0c9326edb5ed896825a8279dbbf749ab06f4aa3028ec228de808bc1a",
-      "note": "PET\u3092\u8ef8\u53d7\u4e88\u5727\u306e\u5727\u7e2e\u30b9\u30da\u30fc\u30b5\u30fc\u306b\u3057\u306a\u3044\u3002\u5de6\u811a\u30fb\u53f3\u30af\u30e9\u30f3\u30af\u306e\u53d6\u308a\u4ed8\u3051\u524d\u3002",
+      "note": "PETを軸受予圧の圧縮スペーサーにしない。左脚・右クランクの取り付け前。",
       "exactPairs": 79,
       "unintendedIntersections": [],
       "clampReferenceContacts": [],
@@ -1920,7 +1920,7 @@
       "fixedPoseOverridesByName": {},
       "inventorySha256": "94ddade9287fb508ad8223bbdcfcb41ebc60832d7021db210c562951a6f49fa7",
       "pathDefinitionSha256": "97b51939a303356700cafd0dd74f59608217174c434c6272be233602fdb8c802",
-      "note": "PET\u3092\u8ef8\u53d7\u4e88\u5727\u306e\u5727\u7e2e\u30b9\u30da\u30fc\u30b5\u30fc\u306b\u3057\u306a\u3044\u3002\u5de6\u811a\u30fb\u53f3\u30af\u30e9\u30f3\u30af\u306e\u53d6\u308a\u4ed8\u3051\u524d\u3002",
+      "note": "PETを軸受予圧の圧縮スペーサーにしない。左脚・右クランクの取り付け前。",
       "exactPairs": 14,
       "unintendedIntersections": [],
       "clampReferenceContacts": [],
@@ -1991,7 +1991,7 @@
       "fixedPoseOverridesByName": {},
       "inventorySha256": "68aac1215c998a266c1697875846da0cb73b18afcc1e1d926f2a1e7cedd67bde",
       "pathDefinitionSha256": "4dd7185af2784e2573b44a3fff52050bf34981c6e548971aaa0b6669b960ab8a",
-      "note": "\u6e96\u5099\u4e2d\u306e\u90e8\u54c1\u306f\u672c\u4f53\u3078\u8ffd\u52a0\u6e08\u307f\u3068\u6570\u3048\u306a\u3044\u3002\u8ef8\u304c\u901a\u308b\u307e\u3067\u624b\u3067\u652f\u6301\u3059\u308b\u3002",
+      "note": "準備中の部品は本体へ追加済みと数えない。軸が通るまで手で支持する。",
       "exactPairs": 53,
       "unintendedIntersections": [],
       "clampReferenceContacts": [],
@@ -2546,7 +2546,7 @@
       "fixedPoseOverridesByName": {},
       "inventorySha256": "ee60bfb7ac279e0895c2618309419e46127e4a50669297b4b85839a1e14eaefe",
       "pathDefinitionSha256": "e219a9f879f07d1f0aabc8fbee5011d353a97f8aebad8bc3a20b3c2e67c764c7",
-      "note": "\u88c5\u7740\u6e08\u307f\u306ePET\u30fb\u4fdd\u6301\u54c1\u3092\u6b8b\u3057\u3001\u90e8\u5206\u7d44\u7acb\u5168\u4f53\u3092X=+4mm\u3078\u9003\u304c\u3057\u3066\u4e0b\u964d\u5f8c\u3001X=0\u3078\u8ef8\u65b9\u5411\u306b\u7740\u5ea7\u3059\u308b\u3002\u30d4\u30cb\u30aa\u30f3\u3092\u540c\u3058ID\u3067\u623b\u3059\u3002\u30ab\u30e9\u30fc\u30fb\u30b9\u30da\u30fc\u30b5\u30fc\u306e\u4eee\u7f6e\u304d\u306f\u7740\u5ea7\u5f8c\u3002",
+      "note": "装着済みのPET・保持品を残し、部分組立全体をX=+4mmへ逃がして下降後、X=0へ軸方向に着座する。ピニオンを同じIDで戻す。カラー・スペーサーの仮置きは着座後。",
       "exactPairs": 70,
       "unintendedIntersections": [],
       "clampReferenceContacts": [],
@@ -3096,7 +3096,7 @@
       "fixedPoseOverridesByName": {},
       "inventorySha256": "ee60bfb7ac279e0895c2618309419e46127e4a50669297b4b85839a1e14eaefe",
       "pathDefinitionSha256": "8aeb764fc8274863551738bd036507e2e8f796c74e4e6ba0ff8c818150d84870",
-      "note": "\u88c5\u7740\u6e08\u307f\u306ePET\u30fb\u4fdd\u6301\u54c1\u3092\u6b8b\u3057\u3001\u90e8\u5206\u7d44\u7acb\u5168\u4f53\u3092X=+4mm\u3078\u9003\u304c\u3057\u3066\u4e0b\u964d\u5f8c\u3001X=0\u3078\u8ef8\u65b9\u5411\u306b\u7740\u5ea7\u3059\u308b\u3002\u30d4\u30cb\u30aa\u30f3\u3092\u540c\u3058ID\u3067\u623b\u3059\u3002\u30ab\u30e9\u30fc\u30fb\u30b9\u30da\u30fc\u30b5\u30fc\u306e\u4eee\u7f6e\u304d\u306f\u7740\u5ea7\u5f8c\u3002",
+      "note": "装着済みのPET・保持品を残し、部分組立全体をX=+4mmへ逃がして下降後、X=0へ軸方向に着座する。ピニオンを同じIDで戻す。カラー・スペーサーの仮置きは着座後。",
       "exactPairs": 83,
       "unintendedIntersections": [],
       "clampReferenceContacts": [],
@@ -3661,7 +3661,7 @@
       "fixedPoseOverridesByName": {},
       "inventorySha256": "c4d90ce2ba34b551ce5af18e5fad803e2ed6469a61c2ce7096e8f08f15ffa266",
       "pathDefinitionSha256": "23d7056cafceb0dcdec52bc4681644d30f70c3c7719b0211d558d3ba5527077c",
-      "note": "\u5b9f\u969b\u306e\u306f\u3081\u3042\u3044\u3068\u7de0\u4ed8\u3051\u306f\u672a\u78ba\u8a8d\u3002\u540d\u76eeD\u30cf\u30d6\u63a5\u89e6\u306f\u72ec\u7acb\u3057\u305f\u672a\u78ba\u8a8d\u754c\u9762\u3002",
+      "note": "実際のはめあいと締付けは未確認。名目Dハブ接触は独立した未確認界面。",
       "exactPairs": 107,
       "unintendedIntersections": [],
       "clampReferenceContacts": [
@@ -4280,7 +4280,8 @@
     }
   ],
   "status": "PASS",
-  "elapsedSeconds": 213.74360254199564,
+  "elapsedSeconds": 238.16149529098766,
   "pathInventorySource": "Complete orderedOperations inventory at each bound operation boundary",
-  "scope": "Finite rigid paths with all installed nonmoving parts present. Separate bench scenes contain only their declared uninstalled preassembly. No continuous sweep,tolerance,hand-force or material-fit proof."
+  "scope": "Finite rigid paths with all installed nonmoving parts present. Separate bench scenes contain only their declared uninstalled preassembly. No continuous sweep,tolerance,hand-force or material-fit proof.",
+  "nativeLabelOnlyUpdateProof": "stock_label_metadata_update.json"
 }

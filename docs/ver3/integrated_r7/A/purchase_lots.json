@@ -3,7 +3,7 @@
     "A"
   ],
   "cadNominalMassG": {
-    "A": 1076.3474319017914
+    "A": 1065.387580211831
   },
   "rows": [
     {
@@ -98,12 +98,29 @@
       "tax": "Japanese import tax and shipping not quoted"
     },
     {
+      "sku": "BOLT_M2_12",
+      "neededQuantity": 6,
+      "checkedJst": "2026-09-28",
+      "costJpy": 330,
+      "purchaseQuantity": 10,
+      "unused": 4,
+      "lots": [
+        {
+          "packs": 1,
+          "packSize": 10,
+          "packPriceTaxIncludedJpy": 330,
+          "url": "https://www.nejinejikun.com/products/detail/371457"
+        }
+      ],
+      "tax": "included"
+    },
+    {
       "sku": "BOLT_M2_16",
-      "neededQuantity": 20,
+      "neededQuantity": 14,
       "checkedJst": "2026-09-27",
       "costJpy": 660,
       "purchaseQuantity": 20,
-      "unused": 0,
+      "unused": 6,
       "lots": [
         {
           "packs": 2,
@@ -250,12 +267,29 @@
       "availability": "page1-2days,not reserved"
     },
     {
+      "sku": "LOCK_NUT_M2",
+      "neededQuantity": 6,
+      "checkedJst": "2026-09-28",
+      "costJpy": 440,
+      "purchaseQuantity": 10,
+      "unused": 4,
+      "lots": [
+        {
+          "packs": 1,
+          "packSize": 10,
+          "packPriceTaxIncludedJpy": 440,
+          "url": "https://www.nejinejikun.com/products/detail/342110"
+        }
+      ],
+      "tax": "included"
+    },
+    {
       "sku": "NUT_M2",
-      "neededQuantity": 100,
+      "neededQuantity": 88,
       "checkedJst": "2026-09-27",
       "costJpy": 440,
       "purchaseQuantity": 100,
-      "unused": 0,
+      "unused": 12,
       "lots": [
         {
           "packs": 1,
@@ -285,11 +319,11 @@
     },
     {
       "sku": "THRUST4",
-      "neededQuantity": 120,
+      "neededQuantity": 108,
       "checkedJst": "2026-09-27",
       "costJpy": 660,
       "purchaseQuantity": 200,
-      "unused": 80,
+      "unused": 92,
       "lots": [
         {
           "packs": 2,
@@ -299,6 +333,29 @@
         }
       ],
       "tax": "included"
+    },
+    {
+      "sku": "THRUST4_SMALL",
+      "neededQuantity": 12,
+      "checkedJst": "2026-09-28",
+      "costJpy": 330,
+      "purchaseQuantity": 100,
+      "unused": 88,
+      "lots": [
+        {
+          "packs": 1,
+          "packSize": 100,
+          "packPriceTaxIncludedJpy": 330,
+          "url": "https://www.nejinejikun.com/products/detail/94368"
+        }
+      ],
+      "tax": "included",
+      "nominalDimensionsMm": {
+        "inner": 4.5,
+        "outer": 8,
+        "thickness": 0.5
+      },
+      "dimensionSource": "https://www.nejinejikun.com/html/upload/save_image/kikaku_data/a4010100000000_d.gif"
     },
     {
       "sku": "THRUST6",
@@ -419,46 +476,46 @@
     "stockNegativeLengthAllowanceMm": 2,
     "source": "https://www.yokoyama-techno.net/detail/596.html"
   },
-  "purchasedSubtotalJpy": 19915.2,
-  "printedSolidMassG": 566.9788199681872,
+  "purchasedSubtotalJpy": 21015.2,
+  "printedSolidMassG": 567.1724262582594,
   "firstBuildAccessoryMassG": 118.36397372840563,
   "commonAccessoriesSetsPurchased": 1,
   "firstBuildAccessoriesIncluded": true,
   "filamentJpyKgAssumed": 3000,
   "printWasteFactorAssumed": 1.2,
-  "printedMaterialEstimateJpy": 2467.23,
-  "representedBomSubtotalJpy": 22382.43,
+  "printedMaterialEstimateJpy": 2467.93,
+  "representedBomSubtotalJpy": 23483.13,
   "optionalImportTaxReserve10PercentJpy": 568.32,
-  "representedBomWithImportReserveJpy": 22950.75,
+  "representedBomWithImportReserveJpy": 24051.45,
   "includedUnclearDomesticTaxReserveJpy": 178.0,
   "shippingJpy": null,
   "paymentFeesJpy": null,
   "guardsAndFitCouponsFullyIncluded": true,
-  "sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy": 22204.43,
+  "sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy": 23305.13,
   "completeMachineBudgetStatus": "CONDITIONAL_WITHIN_APPROVED_BUDGET",
-  "targetMaterialCostApproxJpy": 23000,
+  "targetMaterialCostApproxJpy": 24000,
   "approvedBudgetDateJst": "2026-09-28",
-  "representedCostDifferenceFromTargetJpy": -795.57,
-  "approvedReferenceBudgetCeilingJpy": 23000,
+  "representedCostDifferenceFromTargetJpy": -694.87,
+  "approvedReferenceBudgetCeilingJpy": 24000,
   "note": "Quoted minimum purchase lots,real cut-sheet blanks,cage and first-build coupons/cradles are counted when present. A complete bill is not safety,material,airflow or budget approval. Single-build and joint-order lots remain distinct.",
   "budgetCondition": "Reference FX160JPY/USD and1.2x solid+accessory print material; no measured slice cost. Shipping and unquoted tax/fees excluded from the approved comparison.",
   "printMaterialSensitivity": [
     {
-      "solidPlusAccessoriesMassG": 685.3427936965928,
+      "solidPlusAccessoriesMassG": 685.5363999866651,
       "materialFactor": 1.0,
-      "partsAndMaterialWithoutUncertainTaxReservesJpy": 21793.23,
+      "partsAndMaterialWithoutUncertainTaxReservesJpy": 22893.81,
       "notSlicerMeasured": true
     },
     {
-      "solidPlusAccessoriesMassG": 685.3427936965928,
+      "solidPlusAccessoriesMassG": 685.5363999866651,
       "materialFactor": 1.2,
-      "partsAndMaterialWithoutUncertainTaxReservesJpy": 22204.43,
+      "partsAndMaterialWithoutUncertainTaxReservesJpy": 23305.13,
       "notSlicerMeasured": true
     },
     {
-      "solidPlusAccessoriesMassG": 685.3427936965928,
+      "solidPlusAccessoriesMassG": 685.5363999866651,
       "materialFactor": 1.5,
-      "partsAndMaterialWithoutUncertainTaxReservesJpy": 22821.24,
+      "partsAndMaterialWithoutUncertainTaxReservesJpy": 23922.11,
       "notSlicerMeasured": true
     }
   ]

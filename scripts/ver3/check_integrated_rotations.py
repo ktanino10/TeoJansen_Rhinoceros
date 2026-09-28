@@ -69,9 +69,9 @@ def sections(item,shape,data):
         width=data["parameters"]["common"]["gears"]["faceWidthMm"]
         end=data["parameters"]["common"]["intermediateJournalEndXmm"]
         pieces=[
-            (incoming["xMm"],incoming["xMm"]+width,incoming["wheel"]/2+incoming["wheelAddendumCoefficient"]),
-            (outgoing["xMm"],outgoing["xMm"]+width,outgoing["pinion"]/2+outgoing["pinionAddendumCoefficient"]),
-            (incoming["xMm"],outgoing["xMm"]+width,min(9.5,outgoing["pinion"]/2-1.5)),
+            (incoming["xMm"],incoming["xMm"]+width,incoming.get("moduleMm",1)*(incoming["wheel"]/2+incoming["wheelAddendumCoefficient"]+incoming["wheelProfileShift"])),
+            (outgoing["xMm"],outgoing["xMm"]+width,outgoing.get("moduleMm",1)*(outgoing["pinion"]/2+outgoing["pinionAddendumCoefficient"]+outgoing["pinionProfileShift"])),
+            (incoming["xMm"],outgoing["xMm"]+width,min(9.5,outgoing.get("moduleMm",1)*(outgoing["pinion"]/2-1.5+outgoing["pinionProfileShift"]))),
             (-45,incoming["xMm"],4),(-39.8,incoming["xMm"],4.6),
             (outgoing["xMm"]+width,end,4),(outgoing["xMm"]+width,-6.8,4.6)]
         ends=sorted({v for lo,hi,_ in pieces for v in (lo,hi)})
@@ -113,13 +113,14 @@ def gear_face_check(data,objects):
             item=next(i for i in data["instances"] if i["part_id"]==part_id)
             shape=objects[item["name"]]
             axis=stage[role+"Axis"];yz=np.array(data["reduction"]["axesYzMm"][axis])+[0,data["bodyOriginZMm"]]
-            points=involute_outline(1,stage[role],25,.3,
+            points=involute_outline(stage.get("moduleMm",1),stage[role],stage.get("pressureAngleDeg",25),.3,
+                                    profile_shift=stage[role+"ProfileShift"],
                                     addendum_coefficient=stage[role+"AddendumCoefficient"])
             angle=stage[role+"ToothDatumRad"];c,s=math.cos(angle),math.sin(angle)
             points=points@np.array([[c,s],[-s,c]])+yz
             expected=Polygon(points)
             if not expected.is_valid:raise ValueError("Invalid canonical tooth polygon")
-            root=stage[role]/2-1.25
+            root=stage.get("moduleMm",1)*(stage[role]/2-1.25+stage[role+"ProfileShift"])
             band=expected.difference(Point(*yz).buffer(root-.1,quad_segs=512))
             samples=[]
             for local in (.1,common["gears"]["faceWidthMm"]/2,common["gears"]["faceWidthMm"]-.1):
@@ -192,6 +193,7 @@ def main():
                 "scope":"Finite axial-section radial envelopes of input,reducer and synchronous gears against stationary real solids. Crank/leg/foot motion has separate216-pose checks. Actual tooth-face material is checked; axial section sampling and unsupported curves are not a continuous-clearance proof. Envelope hits are candidates,not proof of real collision."}
         (folder/"rotating_clearance.json").write_text(json.dumps(result,indent=2)+"\n")
         print("STAGE_END rotational-envelope",result["status"],count,len(hits),flush=True)
+        if result["status"]!="PASS":raise ValueError("Rotating-geometry verification did not pass")
     finally:
         App.closeDocument(doc.Name)
 

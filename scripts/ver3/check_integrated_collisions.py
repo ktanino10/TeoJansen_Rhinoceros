@@ -75,6 +75,7 @@ def main():
                 "scope":"static saved B-reps only; no full-cycle or tolerance sweep approval"}
         (folder/"static_collisions.json").write_text(json.dumps(result,indent=2)+"\n")
         print("STAGE_END collision",args.design,"tested",tested,"hits",len(hits),"elapsed",time.monotonic()-start,flush=True)
+        if result["status"]!="PASS":raise ValueError("Static collision verification did not pass")
     finally:
         App.closeDocument(doc.Name)
 

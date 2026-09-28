@@ -1,10 +1,12 @@
 {
-  "revisionId": "v3-integrated-walkers-r7-15",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "recordedDateJst": "2026-09-28",
   "authority": "User approval relayed by the coordinating parent",
-  "userDecisionJa": "1台約23,000円まで認め、現構成を仕上げる（推奨）",
-  "previousApproximateBudgetJpyPerMachine": 20000,
-  "approvedApproximateBudgetJpyPerMachine": 23000,
+  "userDecisionJa": "約24,000円を認め、市販部品で仕上げる（推奨）",
+  "previousApproximateBudgetJpyPerMachine": 23000,
+  "approvedApproximateBudgetJpyPerMachine": 24000,
+  "previousApprovalArtifactCommit": "e82a9d981388631b26b04ba90294c32992674f23",
+  "approvalRelayedDateJst": "2026-09-29",
   "includes": [
     "All installed printed and purchased parts",
     "Rotor and gear guards",
@@ -15,13 +17,16 @@
   "separate": [
     "Shipping",
     "Unquoted domestic tax treatment",
-    "Unquoted import taxes and payment charges"
+    "Unquoted import taxes and payment charges",
+    "Unowned hand tools,including ENGINEER DN-03 approximately JPY396"
   ],
+  "unownedDn03ToolApproximateCostJpy": 396,
   "purchasingAuthorized": false,
   "printingAuthorized": false,
   "applianceOperationAuthorized": false,
-  "publicationAuthorized": false,
+  "publicationAuthorized": true,
+  "publicationScope": "Ordinary correction PR,CI and merge to the existing repository and Pages; no machine operations or purchases.",
   "physicalQualificationChanged": false,
   "geometryChangedByBudgetApproval": false,
-  "note": "Historical20000-yen versions remain unchanged. Current r7-15 requirements and price comparisons use23000; joint-order averages never replace standalone first-build costs."
+  "note": "Historical20000/23000-yen versions remain in Git history. The floor2 parts-and-material budget is approximately24000 per machine. Reference costs A23305.13/B23735.37/C23154.43 are unchanged; joint-order averages never replace standalone first-build costs. This approval changes budget metadata only,not geometry,physical qualification or measured manufacturing costs."
 }

@@ -146,6 +146,7 @@ def report():
 |名目質量|{a["nominalTotalMassG"]:.3f}g。実CADソリッド体積・仮密度・購入品の表示値/明示推定の合計|
 |基準姿勢の重心 X,Y,Z|{", ".join(f"{x:.3f}" for x in a["nominalCenterOfMassMm"])}mm|
 |購入・初回材料|{cost["sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy"]:,.0f}円。送料別|
+|別費用|送料・未確定税等、未保有のDN-03約396円等の工具費。共同購入平均とは区別|
 |国内税の未確定分／任意輸入税準備金|{cost["includedUnclearDomesticTaxReserveJpy"]:,.0f}円／{cost["optionalImportTaxReserve10PercentJpy"]:,.0f}円。確定税額ではない|
 |初回試験片・組立台|{cost["firstBuildAccessoryMassG"]:.2f}g分を費用に含む。歩行質量には含まない|
 |承認予算|1台約{approval["approvedApproximateBudgetJpyPerMachine"]:,.0f}円、{approval["recordedDateJst"]} JSTにユーザー承認（親調整担当から伝達）。送料・未確定税等別|
@@ -206,6 +207,8 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
 - [全インスタンス・正規パラメータ](assembly.json)／[静止交差](static_collisions.json)／[作動域](gait_motion.json)／[挿入経路](assembly_access.json)
 - [接地・公差](contact_sensitivity.json)／[局部構造・軸梁](structure.json)／[供給・要求](work_budget.json)／[回転断面](rotating_clearance.json)
 - [STL姿勢・実寸PET型紙](print_geometry.json)／[機械可読の組立工程](assembly_stages.json)
+- [全非接地部と床](floor_clearance.json)／[native包含包絡](floor_envelopes.json)／[市販DN-03の全工具アクセス](rocker_pin_access.json)
+- [床是正と未確認範囲](../FLOOR_CORRECTION_ja.md)／[代表5点の実層](../SLICING_ja.md)
 
 材料の異方性、固定部とフレーム接合の変形、実際の工具寸法・印刷はめあい、実風・実抵抗は別の確認が必要です。
 部品が存在し、有限CAD検査を通ることと、実機運転の合格は分けて扱います。
@@ -221,9 +224,15 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
 要求工具の先端外幅7.6mm・厚さ1.8mmの空間を確認しましたが、市販工具の型番・実外形・手元への適合は未確認です。
 これを実公差込みの保証にはしていません。[是正根拠](retainer_corner_correction.json)／[要求工具の確認](retainer_tool_access.json)
 """
+        body+="\n## この版の実相手歯車対\n\n|段|モジュール mm|圧力角 度|歯数（入力／出力）|転位（入力／出力）|\n|---|---:|---:|---:|---:|\n"
+        for index,stage in enumerate(a["reduction"]["stages"],1):
+            body+=f'|{index}|{stage.get("moduleMm",1):g}|{stage.get("pressureAngleDeg",25):g}|{stage["pinion"]}/{stage["wheel"]}|{stage["pinionProfileShift"]:+g}/{stage["wheelProfileShift"]:+g}|\n'
+        if name=="C":
+            body+="\nC第1対は旧C/A/Bと混用しません。[C相手2点の追加実層と支持面の警告](SLICING_ja.md)も確認してください。\n"
         (OUT/name/"README_ja.md").write_text(body)
     result={"revisionId":revision,"manufacturingRelease":False,"qualifiedWalkingPrototypeCount":0,
-            "rows":rows,"published":False,"physicalTestsPerformed":False}
+            "rows":rows,"publicationStateSource":"Repository main and Pages deployments; this report generator does not publish.",
+            "physicalTestsPerformed":False}
     (OUT/"comparison.json").write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
     with (OUT/"comparison.csv").open("w",newline="") as stream:
         writer=csv.DictWriter(stream,fieldnames=rows[0].keys(),lineterminator="\n")
@@ -231,8 +240,8 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
     summary=["# Ver.3 統合3案：全体実体と条件付き判断","","**主要求の「実証済みで成立する3台」は未完です。**",
              "旧r3/r4/r6と公開first-cutは不変。このフォルダーは新しい全機CAD、全BOM、接地・駆動計算、組立経路を同版でまとめた設計資料です。",
              "製作リリース=false、合格歩行機数=0。購入・印刷・ドライヤー操作は実施していません。既存リポジトリ／Pagesへの設計資料公開と現物認定を区別します。","",
-             "[独立統合レビューとR7-I1の限定是正](REVIEW_ja.md)：旧スナップショットの工程在庫不一致を記録し、装着済みの全非移動部品を含む経路検査へ修正しています。CAD・質量・数値・BOMは変更していません。","",
-             f'現在の設計予算は**1台約{approval["approvedApproximateBudgetJpyPerMachine"]:,.0f}円**（{approval["recordedDateJst"]} JSTユーザー承認）。送料・未確定税等別。購入はしていません。',
+             "[独立レビューの履歴](REVIEW_ja.md)は旧r7-15とR7-I1に限定されます。現行の[床干渉是正](FLOOR_CORRECTION_ja.md)ではCの段配分、全案のPET下縁とロッカーピン周辺を実体変更し、質量・荷重・全物体対床を同版へ更新しています。新しい独立レビューの追認とはしていません。","",
+             f'現在の設計予算は**1台の部材費目安約{approval["approvedApproximateBudgetJpyPerMachine"]:,.0f}円**（{approval["recordedDateJst"]} JSTユーザー承認）。送料・未確定税等、未保有DN-03約396円等の工具費は別。個別初回と共同lotを区別し、購入はしていません。',
              "",
              "|案|径／減速比|名目g|個別初回 円|原代理／名目要求 mN·m|滑り仕事 Nmm/cycle|仮120RPMの30cm 分|",
              "|---|---:|---:|---:|---:|---:|---:|"]
@@ -253,6 +262,7 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
               f'{common["synchronization"]["teeth"]}歯の同期歯車と{common["stationPitchMm"]}mm軸ピッチは、下流大歯車・ガードとの実逃げを確保する変更です。足を広げたり重りを追加した対処ではありません。',
               "16角柱の実断面、キー付き左右フレーム、前バスケットと後部キャップに分かれる風車ガード、鋼ワッシャーで締結荷重を逃がすPET側面ガードを含みます。",
               "2つの既製カラーは位置を変えずにクロックし、名目の重力不釣合いを減らしました。現物バランスは未測定です。","",
+              "床是正ではCを13×12へ再配分し、第1対をm0.9・20度・転位+0.35/−0.35、最終輪をm1の144歯としました。左右PET下縁と段付け座面、小形M4座金、非接地ボスを更新。市販M2×12とナイロン緩み止めナット、実在DN-03を用い、精密切断・薄口工具は不要です。足位置・接地面積・ばね定数・6mm行程は保持しています。","",
               "## V2からの改善対応","",
               "|確認された課題|r7の具体対応|まだ認定していないこと|",
               "|---|---|---|",
@@ -265,6 +275,7 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
               "同軸上の対向脚・回転締結品は先に仕事を合成してから、実在する各歯車対の損失を一回ずつ計上します。釣合った4本のボルトへ架空の歯車損失を課す旧実装は使いません。",
               "送風の水平力とヨー偶力を床のCoulomb反力へ含め、全位相の実CAD重心と接触姿勢を反復して整合させています。",
               "これらの数式・実装修正による数値差は、部品軽量化や性能向上の成果とは区別します。保存した旧977.709g基準は、同じ式で再計算して比較します。",
+              "実ピッチ半径と伝達仕事から各歯車対の反力上限も保存し、入力軸の曲げ評価へ追加しました。旧版の重力・風だけの梁結果と同一負荷の比較ではありません。実軸受抵抗や動的歯面摩擦を校正したものでもありません。",
               "滑り仕事は非負で残り、8mm足上げ・3mm滑りは設計者の旧目標です。ユーザー条件に言い換えたり、未達を消していません。","",
               "## 残る本質条件",
               "1. 実空力と実抵抗：各案の入力軸受抵抗上限、印刷偏心、負荷付き回転速度を満たすか。静止代理の原値、設計減率0.5、実測下限UNKNOWNは別欄です。",

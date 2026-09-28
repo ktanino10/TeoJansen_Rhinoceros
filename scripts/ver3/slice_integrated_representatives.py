@@ -6,6 +6,7 @@ import json
 import math
 from pathlib import Path
 import plistlib
+import re
 import shutil
 import subprocess
 import xml.etree.ElementTree as ET
@@ -130,15 +131,16 @@ def placement(project):
     }
 
 
-def run(app, output, selected):
+def run(app, output, selected,design="A",reference=CANDIDATE):
+    if not re.fullmatch(r"[0-9a-f]{40}",reference):
+        raise ValueError("An immutable full Git commit is required")
     output.mkdir(parents=True, exist_ok=False)
     resources = app / "Contents/Resources/profiles/BBL"
     executable = app / "Contents/MacOS/OrcaSlicer"
     info = plistlib.loads((app / "Contents/Info.plist").read_bytes())
-    frozen = json.loads(subprocess.check_output(
-        ["git", "show", CANDIDATE + ":docs/ver3/integrated_r7/manifest.json"],
-        cwd=ROOT, text=True))
-    frozen_files = {row["path"]: row for row in frozen["files"]}
+    assembly_bytes=subprocess.check_output(
+        ["git","show",reference+f":docs/ver3/integrated_r7/{design}/assembly.json"],cwd=ROOT)
+    assembly=json.loads(assembly_bytes)
     configs = {}
     sources = {}
     for kind, name in PROFILES.items():
@@ -148,9 +150,11 @@ def run(app, output, selected):
     write_json(output / "filament.json", configs["filament"])
     records = []
     for part in selected:
-        relative = f"STL/Ver.3/integrated_r7/{PARTS[part]}/{part}.stl"
+        variant=design if PARTS[part]=="A" else PARTS[part]
+        relative = f"STL/Ver.3/integrated_r7/{variant}/{part}.stl"
         source = ROOT / relative
-        if sha(source) != frozen_files[relative]["sha256"]:
+        frozen=subprocess.check_output(["git","show",reference+":"+relative],cwd=ROOT)
+        if sha(source) != hashlib.sha256(frozen).hexdigest():
             raise ValueError("Frozen STL changed: " + relative)
         folder = output / part
         folder.mkdir()
@@ -184,6 +188,11 @@ def run(app, output, selected):
             "scale": 1,
             "layerInspectionStatus": "PENDING",
         }
+        if part=="P_INPUT_PINION":
+            record["gearTeeth"]=[assembly["reduction"]["stages"][0]["pinion"]]
+        elif part=="P_COMPOUND_1":
+            record["gearTeeth"]=[assembly["reduction"]["stages"][0]["wheel"],
+                                 assembly["reduction"]["stages"][1]["pinion"]]
         if completed.returncode == 0:
             project = folder / (part + ".3mf")
             record.update(placement(project))
@@ -191,7 +200,10 @@ def run(app, output, selected):
             record["gcodeSha256"] = sha(folder / "plate_1.gcode")
         records.append(record)
         write_json(output / "run.json", {
-            "reviewedArtifactCommit": CANDIDATE,
+            "reviewedArtifactCommit": CANDIDATE if reference==CANDIDATE else None,
+            "inputArtifactCommit":reference,"designId":design,
+            "inputAssemblySha256":hashlib.sha256(assembly_bytes).hexdigest(),
+            "inputGearStages":assembly["reduction"]["stages"],
             "orcaBundleVersion": info["CFBundleShortVersionString"],
             "sourceProfiles": sources, "profileNames": PROFILES,
             "processOverrides": PROCESS_OVERRIDES,
@@ -212,5 +224,7 @@ if __name__ == "__main__":
     parser.add_argument("--app", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--part", choices=PARTS, action="append")
+    parser.add_argument("--design",choices=("A","C"),default="A")
+    parser.add_argument("--reference-commit",default=CANDIDATE)
     args = parser.parse_args()
-    run(args.app.resolve(), args.output.resolve(), args.part or list(PARTS))
+    run(args.app.resolve(),args.output.resolve(),args.part or list(PARTS),args.design,args.reference_commit)

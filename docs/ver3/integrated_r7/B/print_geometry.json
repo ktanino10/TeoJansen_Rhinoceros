@@ -1,7 +1,7 @@
 {
-  "revisionId": "v3-integrated-walkers-r7-15",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "designId": "B",
-  "nativeSha256": "dd6a68352a5fab903d5d9adb594b7bf1429a039a187ca375a344576e88ba9f02",
+  "nativeSha256": "af40b3b39b8e7595adaff1289a6acba7bf7db9e890be97b047b60fafad4e35af",
   "printedParts": [
     {
       "partId": "P_CRANK_JOURNAL_-1_0",
@@ -1102,27 +1102,27 @@
         ],
         [
           "translateZ",
-          16.000000000000004
+          16.000000000000014
         ]
       ],
       "boundsMm": [
         28.0,
         21.799011648850346,
-        26.0
+        26.000000000000004
       ],
-      "nativeVolumeMm3": 1738.3557854223354,
+      "nativeVolumeMm3": 1774.4068440891165,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 2.76987194732064e-05,
+      "volumeRelativeDifference": 1.8147810639812137e-05,
       "meshExtentMm": [
         28.0,
         21.799012184143066,
-        26.0
+        25.999999999999993
       ],
-      "sha256": "b984a2d5c5f1e4a76cfac573e2424887e08e5ad4fc59043841ba2bb3ae99302e"
+      "sha256": "6211ac39b0579e0069b04773405e5b85b65e1c2a1f9527e343bdec6b8e981d56"
     },
     {
       "partId": "P_FOOT_ROCKER_L",
@@ -1167,19 +1167,19 @@
         11.997627957240788,
         12.000000000000007
       ],
-      "nativeVolumeMm3": 2150.718509553742,
+      "nativeVolumeMm3": 2140.075100502787,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 0.00024256156623942988,
+      "volumeRelativeDifference": 0.00023646976997341042,
       "meshExtentMm": [
         32.0,
         11.997628211975098,
         12.0
       ],
-      "sha256": "29bcadf1112d6effa1a50993c7460ba8e671236e909c852aae5c3566996ca386"
+      "sha256": "e0feca99838d30179424798ed4671c71af7d385d3002fe5dc09567919134f01d"
     },
     {
       "partId": "P_LEG_AB_R",
@@ -1408,27 +1408,27 @@
         ],
         [
           "translateZ",
-          16.000000000000018
+          16.000000000000025
         ]
       ],
       "boundsMm": [
         28.0,
         21.799011648850325,
-        26.00000000000001
+        26.000000000000004
       ],
-      "nativeVolumeMm3": 1738.3557854223366,
+      "nativeVolumeMm3": 1774.4068440891167,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 2.7698719473467977e-05,
+      "volumeRelativeDifference": 1.8147810639940276e-05,
       "meshExtentMm": [
         28.0,
         21.799012184143066,
-        26.000000000000007
+        25.999999999999993
       ],
-      "sha256": "ddd730cb4dfad47bde93bc0b5a4a4746ff88e84110a6a41453c01d0a7aff6762"
+      "sha256": "3a6b47d85a5c6d142ba874b4d4aa5b40abe8e2347c558f6e1e8729936e16d853"
     },
     {
       "partId": "P_FOOT_ROCKER_R",
@@ -1473,19 +1473,19 @@
         11.997627957240788,
         12.0
       ],
-      "nativeVolumeMm3": 2150.7185095537416,
+      "nativeVolumeMm3": 2140.075100502787,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 0.0002425615662392185,
+      "volumeRelativeDifference": 0.00023646976997298544,
       "meshExtentMm": [
         32.0,
         11.997628211975098,
         12.0
       ],
-      "sha256": "9ebd933684c965d79c1ccca6d6f91033c8981a59394532b34aa3f3b1ed9d0f47"
+      "sha256": "a3908c939f2b596e9a6e0dfbf626a48899cc9bcdb878f815048dec26978fc610"
     },
     {
       "partId": "P_ROTOR",
@@ -1520,9 +1520,9 @@
     {
       "partId": "S_GUARD_LEFT",
       "svg": "docs/ver3/integrated_r7/B/S_GUARD_LEFT_cut.svg",
-      "thicknessMm": 0.5,
+      "thicknessMm": 0.5000000000000071,
       "outlineWidthMm": 219.00000000000017,
-      "outlineHeightMm": 292.8246101334335,
+      "outlineHeightMm": 290.47461013343354,
       "scale": 1,
       "chordDeflectionMm": 0.02,
       "pdf": "docs/ver3/integrated_r7/B/S_GUARD_LEFT_cut.pdf",
@@ -1530,14 +1530,14 @@
         297.0000023735894,
         420.0000311957465
       ],
-      "pdfSha256": "fc6ee04754be5ea03d21eb10bbe71401e158795234f6a50d1fdb45261d683961"
+      "pdfSha256": "28d42649c9b4a3626cd46869875ad41e15558935d3d3a5d1ba4460c525ef70ef"
     },
     {
       "partId": "S_GUARD_LOWER_RIGHT",
       "svg": "docs/ver3/integrated_r7/B/S_GUARD_LOWER_RIGHT_cut.svg",
       "thicknessMm": 0.5,
       "outlineWidthMm": 219.0,
-      "outlineHeightMm": 115.93,
+      "outlineHeightMm": 113.58000000000003,
       "scale": 1,
       "chordDeflectionMm": 0.02,
       "pdf": "docs/ver3/integrated_r7/B/S_GUARD_LOWER_RIGHT_cut.pdf",
@@ -1545,7 +1545,7 @@
         297.0000023735894,
         420.0000311957465
       ],
-      "pdfSha256": "989f6be3a41b5860f76ed711c43c307e3617bd64fa81d9590b7db3eac24e1561"
+      "pdfSha256": "5462005eb53581279a93a0c9a0b675be0e6a108aa6efbd0741a54fe7ad07562b"
     },
     {
       "partId": "S_GUARD_UPPER_RIGHT_1",
@@ -1581,5 +1581,6 @@
   "noScalingOrMeshRepairApplied": true,
   "actualSlicingPerformed": false,
   "geometryStatus": "PASS",
-  "meshFailures": []
+  "meshFailures": [],
+  "nativeLabelOnlyUpdateProof": "stock_label_metadata_update.json"
 }

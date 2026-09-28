@@ -11,7 +11,7 @@ from walker_contact import ContactGait,dimensions,error_cases,functional_swing_b
 from walker_geometry import OUT
 
 
-def check(design,step_deg=2,output=None):
+def check(design,step_deg=2,output=None,case_sink=None):
     a=json.loads((OUT/design/"assembly.json").read_text())
     c=a["parameters"]["common"];mass=a["nominalTotalMassG"]/1000
     work=json.loads((OUT/design/"work_budget.json").read_text())
@@ -34,6 +34,8 @@ def check(design,step_deg=2,output=None):
             except ValueError as error:
                 cases.append({"id":entry["id"],"guideMode":mode,"inputCoupleSign":sign,"status":"FAIL","reason":str(error)})
                 continue
+            if case_sink is not None:
+                case_sink(a,result,entry["errors"],f'{entry["id"]}/guide={mode}/couple={sign}')
             selected={k:result[k] for k in (
                 "minimum_loaded_feet","minimum_support_margin_mm","maximum_body_tilt_deg",
                 "maximum_guide_compression_mm","maximum_spring_force_n",

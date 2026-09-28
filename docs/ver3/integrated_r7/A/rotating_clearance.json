@@ -1,7 +1,7 @@
 {
-  "revisionId": "v3-integrated-walkers-r7-15",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "designId": "A",
-  "nativeSha256": "f093fdfcdfd1c860d3feaff24a95d7ec836b7ae39c8d740c1e94422a157cb304",
+  "nativeSha256": "4584762d480d940bc26a23b4ccd44491ffb051e7b1872559a2436af664473e88",
   "status": "PASS",
   "continuousClearanceProof": false,
   "actualGearFaceProfiles": [
@@ -117,6 +117,7 @@
   "envelopeIntersections": [],
   "unsupportedAnalyticCurveBounds": [],
   "exactEnvelopePairs": 311,
-  "elapsedSeconds": 429.42214345799584,
-  "scope": "Finite axial-section radial envelopes of input,reducer and synchronous gears against stationary real solids. Crank/leg/foot motion has separate216-pose checks. Actual tooth-face material is checked; axial section sampling and unsupported curves are not a continuous-clearance proof. Envelope hits are candidates,not proof of real collision."
+  "elapsedSeconds": 370.5166793749959,
+  "scope": "Finite axial-section radial envelopes of input,reducer and synchronous gears against stationary real solids. Crank/leg/foot motion has separate216-pose checks. Actual tooth-face material is checked; axial section sampling and unsupported curves are not a continuous-clearance proof. Envelope hits are candidates,not proof of real collision.",
+  "nativeLabelOnlyUpdateProof": "stock_label_metadata_update.json"
 }
