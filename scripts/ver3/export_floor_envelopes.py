@@ -15,6 +15,16 @@ from walker_geometry import ROOT,OUT,CAD,body_points
 from walker_floor import identity
 
 
+def arc_enclosure(value,center,radius,first,last):
+    step=min(math.pi/8,2*math.acos(radius/(radius+.001)))
+    angles=np.linspace(first,last,max(1,math.ceil((last-first)/step))+1)
+    points=[np.asarray(list(value(float(angle)))) for angle in angles]
+    for low,high in zip(angles,angles[1:]):
+        middle=np.asarray(list(value(float((low+high)/2))))
+        points.append(center+(middle-center)/math.cos((high-low)/2))
+    return points
+
+
 def export(design,library,output,snapshot=None):
     sys.path.insert(0,library)
     import FreeCAD as App
@@ -51,13 +61,6 @@ def export(design,library,output,snapshot=None):
             else:
                 bound=max(bound,max(math.hypot(y-yz[0],z-yz[1]) for _,y,z in corners(face)))
         return bound
-    def circle_points(center,axis,radius):
-        axis=np.asarray(axis);axis=axis/np.linalg.norm(axis)
-        basis=np.array([1,0,0]) if abs(axis[0])<.9 else np.array([0,1,0])
-        u=np.cross(axis,basis);u/=np.linalg.norm(u);v=np.cross(axis,u)
-        angles=np.arange(32)*2*math.pi/32
-        outside=(radius+1e-8)/math.cos(math.pi/32)
-        return np.asarray(center)+outside*(np.cos(angles)[:,None]*u+np.sin(angles)[:,None]*v)
     def enclosing_points(shape,orientation):
         inverse=np.eye(4);inverse[:3,:3]=orientation.T
         aligned=moved(shape,inverse);points=[]
@@ -66,15 +69,16 @@ def export(design,library,output,snapshot=None):
                 for edge in face.Edges:
                     if isinstance(edge.Curve,Part.Circle):
                         curve=edge.Curve
-                        points.extend(circle_points(list(curve.Center),list(curve.Axis),curve.Radius))
+                        points.extend(arc_enclosure(edge.valueAt,np.asarray(list(curve.Center)),curve.Radius,
+                                                 edge.FirstParameter,edge.LastParameter))
                     elif isinstance(edge.Curve,Part.Line):
                         points.extend(list(v.Point) for v in edge.Vertexes)
                     else:points.extend(corners(edge))
             elif isinstance(face.Surface,Part.Cylinder):
-                cylinder=face.Surface;center=np.asarray(list(cylinder.Center));axis=np.asarray(list(cylinder.Axis))
-                positions=(np.asarray(corners(face))-center)@axis
-                for position in (positions.min(),positions.max()):
-                    points.extend(circle_points(center+position*axis,axis,cylinder.Radius))
+                cylinder=face.Surface;first,last,lower,upper=face.ParameterRange
+                for height in (lower,upper):
+                    center=(np.asarray(list(cylinder.value(0,height)))+np.asarray(list(cylinder.value(math.pi,height))))/2
+                    points.extend(arc_enclosure(lambda angle:cylinder.value(angle,height),center,cylinder.Radius,first,last))
             else:points.extend(corners(face))
         cloud=np.unique(np.asarray(points),axis=0)
         if len(cloud)<4:raise ValueError("Incomplete native boundary envelope")
@@ -94,10 +98,10 @@ def export(design,library,output,snapshot=None):
             exact=None
             if pid=="P_OUTPUT_WHEEL":
                 stage=a["reduction"]["stages"][-1]
-                radius=stage["wheel"]/2+stage["wheelAddendumCoefficient"];exact=True
+                radius=stage.get("moduleMm",1)*(stage["wheel"]/2+stage["wheelAddendumCoefficient"]+stage["wheelProfileShift"]);exact=True
             elif pid.startswith("P_COMPOUND_"):
                 index=int(pid.rsplit("_",1)[1])-1;stage=a["reduction"]["stages"][index]
-                radius=stage["wheel"]/2+stage["wheelAddendumCoefficient"];exact=True
+                radius=stage.get("moduleMm",1)*(stage["wheel"]/2+stage["wheelAddendumCoefficient"]+stage["wheelProfileShift"]);exact=True
             if exact:
                 native_radius=radial_bound(shape,yz)
                 if native_radius>radius+1e-7:raise ValueError(f"Native rotating solid escapes its floor cylinder: {pid}: {native_radius}>{radius}")
@@ -151,12 +155,19 @@ def export(design,library,output,snapshot=None):
                 entry={"kind":"planar_boundary","points":points,"circles":circles}
             else:
                 entry={"kind":"containing_boundary_hull","points":enclosing_points(shape,orientation),"circles":[]}
+            if pid=="H_BOLT_M2_12":
+                tolerance=c["foot"]["rockerPinBoltLengthToleranceMm"]
+                cloud=np.asarray(entry["points"])
+                extension=cloud.copy();extension[extension[:,2]>0,2]+=tolerance
+                entry["points"]=np.vstack((cloud,extension)).tolist()
+                entry["acceptedStockLengthRangeMm"]=[12-tolerance,12+tolerance]
+                entry["lengthAcceptanceNote"]="Stock length is measured before assembly; not a claimed supplier tolerance. No precision cutting."
             result[pid]={**entry,**extra}
             print("STAGE_END floor-envelope",design,pid,flush=True)
         payload={"designId":design,"revisionId":a["revisionId"],"mechanicalIdentity":identity(a),
                  "nativeSha256":hashlib.sha256(native.read_bytes()).hexdigest(),
                  "parts":result,"rotatingInstances":rotating,"allAssemblyPartsRepresented":set(result)==set(a["parts"]),
-                 "scope":"Native B-rep bounding boxes or planar edge extrema/full-circle enclosures. Gear cylinders checked against native analytic face/edge upper bounds. Every instance remains checked; only intended rolling-pad volumes are removed from the rocker core.",
+                 "scope":"Native B-rep boxes or boundary enclosures. Trimmed circular arcs use circumscribed tangent segments (<=0.001mm excess),not the absent lower part of a full circle. Cylinder parameter rectangles enclose trimmed faces. Gear radial bounds use native analytic surfaces. Every instance remains checked; only intended rolling pads are removed from the rocker core.",
                  "physicalFloorTestPerformed":False}
         output.write_text(json.dumps(payload,indent=2)+"\n")
     finally:App.closeDocument(doc.Name)

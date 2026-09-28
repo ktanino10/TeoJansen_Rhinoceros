@@ -33,12 +33,13 @@ class WholeWalkerMathTests(unittest.TestCase):
 
     def test_pressure_angle_reaches_all_pinion_wheel_pairs(self):
         for candidate in self.cfg["candidates"]:
-            for pinion,ratio in zip(candidate["stagePinionTeeth"],candidate["stageRatios"]):
-                pair=gear_pair_metrics(1,pinion,pinion*ratio,25,.3)
+            for stage in reducer(candidate,self.cfg["common"])["stages"]:
+                pressure=stage["pressureAngleDeg"]
+                pair=gear_pair_metrics(stage["moduleMm"],stage["pinion"],stage["wheel"],pressure,.3,stage["pinionProfileShift"])
                 self.assertTrue(pair["noStandardRackUndercut"])
                 self.assertGreater(pair["contactRatio"],1.3)
                 self.assertGreater(pair["minimumTipThicknessMm"],.5)
-                self.assertAlmostEqual(pair["radialForcePerTangential"],math.tan(math.radians(25)))
+                self.assertAlmostEqual(pair["radialForcePerTangential"],math.tan(math.radians(pressure)))
 
     def test_hex_stock_has_a_real_round_journal_not_a_false_diameter_match(self):
         c=self.cfg["common"];s=self.cfg["sources"]["bearing"]
@@ -49,16 +50,27 @@ class WholeWalkerMathTests(unittest.TestCase):
 
     def test_sampled_involute_mates_do_not_interpenetrate(self):
         from shapely.geometry import Polygon
-        for pinion,wheel in ((12,120),(12,144),(12,156),(14,112),(18,144),(42,42)):
-            p=involute_outline(1,pinion);w=involute_outline(1,wheel)
+        pairs=[(1,p,w,25,0) for p,w in ((12,120),(12,144),(12,156),(14,112),(18,144),(42,42))]
+        pairs.append((.9,12,156,20,.35))
+        for module,pinion,wheel,pressure,shift in pairs:
+            p=involute_outline(module,pinion,pressure,profile_shift=shift)
+            w=involute_outline(module,wheel,pressure,profile_shift=-shift)
             self.assertTrue(Polygon(p).is_valid);self.assertTrue(Polygon(w).is_valid)
             for angle in np.linspace(0,2*math.pi/pinion,33):
                 other=math.pi+math.pi/wheel-angle*pinion/wheel
                 def rotate(points,a):
                     return points@np.array([[math.cos(a),math.sin(a)],[-math.sin(a),math.cos(a)]])
                 a=Polygon(rotate(p,angle))
-                b=Polygon(rotate(w,other)+[(pinion+wheel)/2,0])
+                b=Polygon(rotate(w,other)+[module*(pinion+wheel)/2,0])
                 self.assertLess(a.intersection(b).area,1e-8)
+
+    def test_c_pair_preserves_contact_target_and_clears_the_nonmating_carrier(self):
+        candidate=next(c for c in self.cfg["candidates"] if c["id"]=="C")
+        train=reducer(candidate,self.cfg["common"]);first,last=train["stages"]
+        radius=first["moduleMm"]*(first["wheel"]/2+first["wheelProfileShift"]+first["wheelAddendumCoefficient"])
+        self.assertGreater(last["centreMm"]-radius-4,3)
+        self.assertGreater(first["moduleMm"]*(first["pinion"]/2-1.25+first["pinionProfileShift"]),4)
+        self.assertLess(gear_pair_metrics(.9,12,156,25)["contactRatio"],1.3)
 
     def test_catalogued_coil_rate_is_not_a_print_modulus(self):
         foot=self.cfg["common"]["foot"]

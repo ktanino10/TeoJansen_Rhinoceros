@@ -137,8 +137,16 @@ def assembly_stages(data):
     step("10_right_cranks","右クランク・丸ジャーナル・正係合",
          [("add",g["rightCranks"]|g["rightCrankClamps"])],("HEX_2P5","WRENCH_5P5"),
          note="印刷された0/180度の部品とクランプ方向を識別する。")
-    step("11_prepare_legs","6脚・案内・ばね・ロッカーを準備",[],("HEX_1P5","HEX_2P5","WRENCH_4"),
-         prepare=g["legsAndFeet"],         note="ねじ山ではなく平滑金属スリーブを摺動面にする。ロッカーピンはM2x16を頭下面から12.5±0.1mmへ切断・端面処理する計画。実加工は未実施。2個のジャムナットと8mm金属スリーブ、外径8mm/厚0.5mmの小形M4座金を使用。内側ナットには先端厚0.8mm以下の工具が必要で、実工具適合は未確認。")
+    step("11_prepare_legs","6脚・案内・ばね・ロッカーを準備",[],("HEX_1P5","HEX_2P5","WRENCH_4","NUT_DRIVER_4P5"),
+         prepare=g["legsAndFeet"],note="ねじ山ではなく平滑金属スリーブを摺動面にする。先にCEF一体の足モジュールを別作業台で組み、市販M2x12とM2ナイロンナットをENGINEER DN-03（対辺4.5mm）で締結してから残る脚リンクを加える。精密切断や薄口スパナは不要。8mm金属スリーブ端面と鋼座金が締結力を受け、ロッカー自由すきま0.6mmを保持。工具型番/寸法確認と現物操作・保持トルク実証は別。")
+    steps[-1]["footFirstBenchSubassemblies"]=[
+        {"stationYmm":station,"side":side,
+         "instances":sorted(name for name,item in items.items()
+                            if item["motion"].get("station")==station and item["motion"].get("side")==side
+                            and (item["motion"]["kind"]=="foot" or item["motion"].get("link")=="CEF")),
+         "attachOtherLegLinksAfterTightening":True}
+        for station in (-data["parameters"]["common"]["stationPitchMm"],0,data["parameters"]["common"]["stationPitchMm"])
+        for side in (-1,1)]
     step("12_legs","リンク層と金属ピンを取り付ける",
          [("add",g["legsAndFeet"])],("HEX_1P5","HEX_2P5","WRENCH_4"),
          note="Pのねじ頭は内側、ジャムナットは外側。ばね行程/停止は組立図と有限検査を参照。運転許可ではない。")
@@ -345,7 +353,7 @@ def build(source_commit):
         "transformConvention":"row-major4x4 matrices multiplied by homogeneous column vectors; millimetres",
         "handedness":"Left-hand geometry is already mirrored in its mesh; do not mirror it again.",
         "stageTools":[{"id":identifier,"torqueNm":None} for identifier in
-                      ("HEX_1P5","HEX_2P5","HEX_3","WRENCH_4","WRENCH_5P5","WRENCH_7")],
+                      ("HEX_1P5","HEX_2P5","HEX_3","WRENCH_4","WRENCH_5P5","WRENCH_7","NUT_DRIVER_4P5")],
         "renderingLimits":["Assembly reference is uncompressed and not a solved floor-contact pose; do not impose a floor atZ=0 as a performance claim.",
                            "Camera orbit and stated assembly paths are allowed representations; no self-start or dynamic walking animation is validated.",
                            "Generation hashes describe full and incremental build history. The floor correction changes C stage allocation and all three side PET/rocker-pin details; earlier unchanged-artifact claims apply only to their historical snapshot.",
@@ -367,6 +375,7 @@ def build(source_commit):
     contract["slicingReport"]=resource(OUT/"SLICING_ja.md")
     contract["representativeToolpathChecks"]=resource(OUT/"slicing/toolpath_checks.json")
     contract["slicingProfileProvenance"]=resource(OUT/"slicing/profile_provenance.json")
+    contract["stockFastenersAndTools"]=resource(OUT/"stock_fasteners_and_tools.json")
     contract["renderingLimits"].append("Contact frames are decimated converged small-angle quasi-static states,not dynamics. Missing independent rocker angles remain null; never replace them with zero or arbitrary poses.")
     contract["integrationReview"]={"summary":resource(OUT/"REVIEW_ja.md"),
         "initialReview":resource(OUT/"review/initial_review_record.json"),

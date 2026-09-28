@@ -18,12 +18,13 @@ PRINT = ROOT/"STL/Ver.3/integrated_r7"
 
 def nominal_thread_pair(a,b):
     pa,pb=a["part_id"],b["part_id"]
-    if pa.startswith("H_NUT_") or pa=="H_NYLOCK4":a,b=b,a;pa,pb=pb,pa
-    if not pa.startswith("H_BOLT_M") or not (pb.startswith("H_NUT_M") or pb=="H_NYLOCK4"):
+    lock_sizes={"H_NYLOCK4":("M4",5.2),"H_LOCK_NUT_M2":("M2",2.5)}
+    if pa.startswith("H_NUT_") or pa in lock_sizes:a,b=b,a;pa,pb=pb,pa
+    if not pa.startswith("H_BOLT_M") or not (pb.startswith("H_NUT_M") or pb in lock_sizes):
         return False
     size=pa.split("_")[2]
-    if pb!="H_NYLOCK4" and size!=pb.split("_")[2]:return False
-    if pb=="H_NYLOCK4" and size!="M4":return False
+    if pb not in lock_sizes and size!=pb.split("_")[2]:return False
+    if pb in lock_sizes and size!=lock_sizes[pb][0]:return False
     first,second=np.array(a["transform"]),np.array(b["transform"])
     direction,other=first[:3,2],second[:3,2]
     offset=second[:3,3]-first[:3,3]
@@ -31,7 +32,7 @@ def nominal_thread_pair(a,b):
     if abs(abs(alignment)-1)>=1e-7 or np.linalg.norm(np.cross(offset,direction))>=1e-6:
         return False
     length=float(pa.split("_")[3])
-    nut_height=5.2 if pb=="H_NYLOCK4" else {"M2":1.6,"M3":2.4,"M4":3.2}[size]
+    nut_height=lock_sizes[pb][1] if pb in lock_sizes else {"M2":1.6,"M3":2.4,"M4":3.2}[size]
     begin=float(offset@direction);end=begin+alignment*nut_height
     return min(begin,end)>=-1e-7 and max(begin,end)<=length+1e-7
 
@@ -39,13 +40,17 @@ def nominal_thread_pair(a,b):
 def reducer(candidate, common):
     ratios = candidate["stageRatios"]
     teeth = candidate["stagePinionTeeth"]
-    module = common["gears"]["moduleMm"]
+    modules = candidate.get("stageModulesMm",[common["gears"]["moduleMm"]]*len(ratios))
+    pressures = candidate.get("stagePressureAnglesDeg",[common["gears"]["pressureAngleDeg"]]*len(ratios))
+    shifts = candidate.get("stagePinionProfileShifts",[0.]*len(ratios))
+    if any(len(values)!=len(ratios) for values in (modules,pressures,shifts)):
+        raise ValueError("Every real mesh needs its own module,pressure angle and paired profile shift")
     centers = [None]*(len(ratios)+1)
     centers[-1] = np.array([0., 0.])
     speeds = [0]*(len(ratios)+1)
     speeds[-1] = 1.
     for i in range(len(ratios)-1, -1, -1):
-        center = module*teeth[i]*(1+ratios[i])/2
+        center = modules[i]*teeth[i]*(1+ratios[i])/2
         delta_y=candidate.get("stageAxisDeltaYmm",[-20]*len(ratios))[i]
         if abs(delta_y)>=center:raise ValueError("Invalid stage horizontal offset")
         centers[i] = centers[i+1]+[delta_y, math.sqrt(center**2-delta_y**2)]
@@ -54,26 +59,27 @@ def reducer(candidate, common):
     for i, ratio in enumerate(ratios):
         delta = centers[i+1]-centers[i]
         alpha = math.atan2(delta[1], delta[0])
-        shift=0.
+        module,pressure,shift=modules[i],pressures[i],shifts[i]
         stages.append({"id": f"stage{i}", "pinion": teeth[i], "wheel": teeth[i]*ratio,
+                       "moduleMm":module,"pressureAngleDeg":pressure,
                        "pinionAxis": i, "wheelAxis": i+1, "centreMm": float(np.linalg.norm(delta)),
                        "xMm": candidate.get("firstGearPlaneXmm",common["gears"]["firstPlaneXmm"])+i*common["gears"]["axialLayerPitchMm"],
                        "pinionToothDatumRad": alpha,
                        "wheelToothDatumRad": alpha+math.pi+math.pi/(teeth[i]*ratio),
                        "pinionProfileShift":shift,"wheelProfileShift":-shift,
-                       "pinionAddendumCoefficient":tip_addendum(module,teeth[i]),
-                       "wheelAddendumCoefficient":tip_addendum(module,teeth[i]*ratio),
+                       "pinionAddendumCoefficient":tip_addendum(module,teeth[i],pressure,profile_shift=shift),
+                       "wheelAddendumCoefficient":tip_addendum(module,teeth[i]*ratio,pressure,profile_shift=-shift),
                        "pinionSpeedPerCrank": speeds[i], "wheelSpeedPerCrank": speeds[i+1]})
     return {"axesYzMm": [p.tolist() for p in centers], "speedRatios": speeds, "stages": stages}
 
 
-def tip_addendum(module,teeth,pressure_deg=25,backlash=.3,minimum_tip_mm=.53):
+def tip_addendum(module,teeth,pressure_deg=25,backlash=.3,minimum_tip_mm=.53,profile_shift=0.):
     """One finite manufacturability solve, rounded before contact-ratio checks."""
     alpha=math.radians(pressure_deg)
     pitch=module*teeth/2;base=pitch*math.cos(alpha)
-    half=(math.pi*module/2-backlash/2)/(2*pitch)
+    half=(math.pi*module/2+2*profile_shift*module*math.tan(alpha)-backlash/2)/(2*pitch)
     def width(coefficient):
-        tip=pitch+module*coefficient
+        tip=pitch+module*(coefficient+profile_shift)
         return 2*tip*(half+involute(alpha)-involute(math.acos(base/tip)))
     if width(.4)<minimum_tip_mm:
         raise ValueError("No admissible tip thickness in the bounded addendum range")
@@ -85,8 +91,8 @@ def involute_outline(module, teeth, pressure_deg=25, backlash=.3, samples=8,
                      profile_shift=0.,addendum_coefficient=None):
     alpha = math.radians(pressure_deg)
     pitch = module*teeth/2
-    addendum=tip_addendum(module,teeth,pressure_deg,backlash) if addendum_coefficient is None else addendum_coefficient
-    base,root,tip=pitch*math.cos(alpha),pitch-(1.25-profile_shift)*module,pitch+addendum*module
+    addendum=tip_addendum(module,teeth,pressure_deg,backlash,profile_shift=profile_shift) if addendum_coefficient is None else addendum_coefficient
+    base,root,tip=pitch*math.cos(alpha),pitch-(1.25-profile_shift)*module,pitch+(addendum+profile_shift)*module
     half=(math.pi*module/2+2*profile_shift*module*math.tan(alpha)-backlash/2)/(2*pitch)
     start = max(root, base)
     def flank(radius):
@@ -114,11 +120,9 @@ def involute_outline(module, teeth, pressure_deg=25, backlash=.3, samples=8,
 def gear_pair_metrics(module, pinion, wheel, pressure_deg=25, backlash=.3,pinion_shift=0.):
     alpha = math.radians(pressure_deg)
     radii = np.array([pinion, wheel])*module/2
-    if pinion_shift:
-        raise ValueError("This revision uses zero profile shift and explicitly truncated tips")
-    shifts=np.zeros(2)
-    addenda=[tip_addendum(module,n,pressure_deg,backlash) for n in (pinion,wheel)]
-    bases,tips=radii*math.cos(alpha),radii+module*np.array(addenda)
+    shifts=np.array([pinion_shift,-pinion_shift])
+    addenda=[tip_addendum(module,n,pressure_deg,backlash,profile_shift=x) for n,x in zip((pinion,wheel),shifts)]
+    bases,tips=radii*math.cos(alpha),radii+module*(np.array(addenda)+shifts)
     contact = (sum(np.sqrt(tips**2-bases**2))-sum(radii)*math.sin(alpha))/(math.pi*module*math.cos(alpha))
     half=(math.pi*module/2+2*shifts*module*math.tan(alpha)-backlash/2)/(2*radii)
     tip_thick = 2*tips*(half+involute(alpha)-np.array([involute(math.acos(b/r)) for b,r in zip(bases,tips)]))
@@ -126,11 +130,11 @@ def gear_pair_metrics(module, pinion, wheel, pressure_deg=25, backlash=.3,pinion
             "centerDistanceMm": float(sum(radii)), "pressureAngleDeg": pressure_deg,
             "contactRatio": float(contact), "minimumTipThicknessMm": float(min(tip_thick)),
             "rackUndercutMinimumTeeth": 2/math.sin(alpha)**2,
-            "noStandardRackUndercut": pinion >= 2/math.sin(alpha)**2,
+            "noStandardRackUndercut":all(x>=1-n*math.sin(alpha)**2/2-1e-10 for n,x in zip((pinion,wheel),shifts)),
             "backlashMm": backlash,
             "profileShifts":shifts.tolist(),
             "addendumCoefficients":addenda,
-            "profileDefinition":"zero-shift true involutes with shortened addenda sized to>=0.53mm nominal tip then rounded down; center,ratio and25deg pressure preserved",
+            "profileDefinition":"Paired zero-total-shift involutes; per-mesh module/pressure, truncated addenda sized to>=0.53mm then rounded down. Mesh center and tooth-count ratio are preserved.",
             "radialForcePerTangential": math.tan(alpha),
             "rootProfile": "radial continuation below base circle; no claimed generated hob trochoid",
             "printedProfileNeedsCoupon": True}

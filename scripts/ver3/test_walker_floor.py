@@ -9,9 +9,33 @@ import numpy as np
 
 from walker_floor import check,identity,minimum_cloud,rocker_minimum,radial_lower_bound
 from walker_geometry import OUT
+from walker_contact import load
+from export_floor_envelopes import arc_enclosure
 
 
 class FloorTests(unittest.TestCase):
+    def test_stock_fastener_stack_needs_no_cutting_or_thin_spanner(self):
+        f=load()["common"]["foot"]
+        self.assertEqual(f["rockerPinBoltLengthMm"],f["rockerPinStockBoltLengthMm"])
+        seat=f["rockerForkInnerHalfGapMm"]+f["rockerForkEarMm"]-f["rockerPinSeatInsetMm"]
+        self.assertAlmostEqual(2*seat,f["rockerSleeveLengthMm"])
+        minimum_tip=-5.3+f["rockerPinSeatInsetMm"]+f["rockerPinBoltLengthMm"]-f["rockerPinBoltLengthToleranceMm"]
+        nut_top=5.3-f["rockerPinSeatInsetMm"]+f["rockerLockNutHeightMm"]
+        self.assertGreaterEqual(minimum_tip-nut_top,.6-1e-9)
+        self.assertGreaterEqual((f["rockerForkWidthMm"]-f["rockerPinSeatDiameterMm"])/2,2.3-1e-9)
+        self.assertAlmostEqual(2*f["rockerForkInnerHalfGapMm"]-f["rockerWidthAtPivotMm"]-2*f["rockerThrustWasherThicknessMm"],.6)
+
+    def test_partial_seat_arc_does_not_invent_absent_material_below_the_fork(self):
+        from shapely.geometry import MultiPoint,Point
+        radius=4.1;angle=math.asin(2/radius)
+        value=lambda t:[radius*math.cos(t),0,radius*math.sin(t)]
+        cloud=np.asarray(arc_enclosure(value,np.zeros(3),radius,-angle,math.pi+angle))
+        self.assertGreaterEqual(cloud[:,2].min(),-2.001-1e-10)
+        self.assertLessEqual(np.linalg.norm(cloud,axis=1).max(),radius+.001+1e-10)
+        hull=MultiPoint(cloud[:,[0,2]]).convex_hull.buffer(1e-9)
+        self.assertTrue(all(hull.covers(Point(value(t)[0],value(t)[2]))
+                            for t in np.linspace(-angle,math.pi+angle,501)))
+
     def test_published_c_and_b_floor_conflicts_remain_failure_controls(self):
         baseline=json.loads((OUT/"review/floor_conflict_baseline.json").read_text())
         failures=[]

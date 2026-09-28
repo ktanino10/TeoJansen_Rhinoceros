@@ -130,9 +130,24 @@ def main():
             if hashlib.sha256((ROOT/"scripts/ver3"/filename).read_bytes()).hexdigest()!=expected_hash:
                 raise ValueError("Floor checker source differs from the executed result")
         tool=load(folder/"rocker_pin_access.json")
-        if (tool["nativeSha256"]!=native_hash or tool["status"]!="PASS_REQUIRED_TOOL_ENVELOPE"
-                or len(tool["records"])!=12 or any(r["status"]!="PASS" for r in tool["records"])):
+        if (tool["nativeSha256"]!=native_hash or tool["status"]!="PASS_STOCK_TOOL_ENVELOPE"
+                or not tool["toolModelAndPublishedDimensionsConfirmed"]
+                or len(tool["records"])!=6 or any(r["status"]!="PASS" for r in tool["records"])):
             raise ValueError("Rocker-pin required-tool access is incomplete")
+        lock_nuts={i["name"] for i in a["instances"] if i["part_id"]=="H_LOCK_NUT_M2"}
+        if {row["targetNut"] for row in tool["records"]}!=lock_nuts:
+            raise ValueError("A stock locking nut was omitted from tool verification")
+        lookup={i["name"]:i for i in a["instances"]}
+        for row in tool["records"]:
+            m=lookup[row["targetNut"]]["motion"]
+            expected_scene={i["name"] for i in a["instances"]
+                            if i["motion"].get("station")==m["station"] and i["motion"].get("side")==m["side"]
+                            and (i["motion"]["kind"]=="foot" or i["motion"].get("link")=="CEF")}
+            if set(row["sceneInstances"])!=expected_scene or len(row["sceneInstances"])!=len(expected_scene):
+                raise ValueError("Foot-tool preassembly inventory was filtered")
+            if (len(row["insertionSamples"])!=6 or any(s["intersections"] for s in row["insertionSamples"])
+                    or row["fullRotationEnvelopeIntersections"] or row["gripEnvelopeIntersections"]):
+                raise ValueError("Stock driver insertion,rotation or grip clearance failed")
         motion=load(folder/"gait_motion.json")
         if motion["poses"]!=216:raise ValueError("Operating pose set differs")
         printing=load(folder/"print_geometry.json")
@@ -182,6 +197,13 @@ def main():
         environment=load(folder/"environment_sensitivity.json")
         if len(environment["windCases"])!=6 or len(environment["staticRotorImbalance"])!=4:
             raise ValueError("Wind or imbalance sensitivity set is incomplete")
+        if (environment["mechanicalInputSha256"]!=work["mechanicalInputSha256"]
+                or environment["nativeFloorEnvelopesSha256"]!=hashlib.sha256((folder/"floor_envelopes.json").read_bytes()).hexdigest()):
+            raise ValueError("Wind-case floor verification is stale")
+        for wind in environment["windCases"]:
+            case=wind["nonContactFloor"]
+            if case["status"]!="PASS" or case["phaseCount"]!=720 or case["checkedInstances"]!=len(ids):
+                raise ValueError("Incomplete non-contact floor check for a declared wind case")
         if not price["guardsAndFitCouponsFullyIncluded"] or price["targetMaterialCostApproxJpy"]!=23000:
             raise ValueError("Full approved cost scope is incomplete")
         if price["sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy"]>23000:

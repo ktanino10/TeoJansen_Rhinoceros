@@ -13,6 +13,8 @@ from walker_geometry import ROOT,OUT
 BASE="https://www.nejinejikun.com/products/detail/"
 DOMESTIC={
     "BOLT_M2_16":[(10,330,371466),(100,1430,371467)],
+    "BOLT_M2_12":[(10,330,371457),(100,1001,371458)],
+    "LOCK_NUT_M2":[(10,440,342110),(100,2530,342111)],
     "BOLT_M2_20":[(10,440,371472),(100,1870,371473)],
     "BOLT_M2_25":[(10,440,371478),(100,3080,371479)],
     "BOLT_M2_30":[(10,484,371481),(100,4510,371482)],
@@ -127,6 +129,7 @@ def price(designs,fx=160,filament=3000):
         if sku in ("HEX5","PAC34-05"):continue
         if sku in DOMESTIC:
             row.update(best_lots(quantity,DOMESTIC[sku]));row["tax"]="included"
+            if sku in ("BOLT_M2_12","LOCK_NUT_M2"):row["checkedJst"]="2026-09-28"
             if sku=="THRUST4_SMALL":
                 row["checkedJst"]="2026-09-28"
                 row["nominalDimensionsMm"]={"inner":4.5,"outer":8,"thickness":.5}

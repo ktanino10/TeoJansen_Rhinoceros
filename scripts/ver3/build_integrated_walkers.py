@@ -15,6 +15,7 @@ import json
 import inspect
 import math
 from pathlib import Path
+import shutil
 import sys
 import time
 
@@ -23,6 +24,7 @@ parser.add_argument("--freecad-lib", required=True)
 parser.add_argument("--design", choices=("A","B","C","BC","all"), default="all")
 parser.add_argument("--diagnostics", type=Path)
 parser.add_argument("--stop-after", choices=("drive","frame","complete"), default="complete")
+parser.add_argument("--reuse-bundle",type=Path)
 args = parser.parse_args()
 sys.path.insert(0, args.freecad_lib)
 import FreeCAD as App
@@ -45,6 +47,9 @@ PIN_SIZE = {node:2 for node in ("A","P","B","C","D","E")}
 STATIONS = [-float(C["stationPitchMm"]),0.,float(C["stationPitchMm"])]
 BOOLEAN_INDEX = 0
 FRAME_SEGMENTS = []
+REUSE_SHAPES = {}
+REUSE_MESHES = {}
+REUSE_RECORD = {}
 BUILD_INPUTS=[Path(__file__).resolve(),*[Path(__file__).resolve().with_name(name) for name in
               ("walker_r7.json","walker_geometry.py","walker_kinematics.py","walker_contact.py")]]
 BUILD_HASHES={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in BUILD_INPUTS}
@@ -181,14 +186,14 @@ def clamp_hub(start,length=8,af=5.12,cross_x=None,clock=0):
     return shape.removeSplitter()
 
 
-def gear_disk(teeth,start,phase=0,face=None,profile_shift=0.,addendum_coefficient=None):
+def gear_disk(teeth,start,phase=0,face=None,profile_shift=0.,addendum_coefficient=None,module=1.,pressure_deg=25.):
     face=C["gears"]["faceWidthMm"] if face is None else face
-    outline=involute_outline(1,teeth,C["gears"]["pressureAngleDeg"],.3,
+    outline=involute_outline(module,teeth,pressure_deg,.3,
                              profile_shift=profile_shift,addendum_coefficient=addendum_coefficient)
     co,si=math.cos(phase),math.sin(phase)
     outline=outline@np.array([[co,si],[-si,co]])
     body=prism_x(outline,start,face)
-    root=teeth/2-1.25+profile_shift
+    root=module*(teeth/2-1.25+profile_shift)
     if root>16:
         rim=cut(body,x_cylinder(root-3,start-1,face+2))
         spokes=[capsule_x([0,0],[(root-2)*math.cos(phase+i*math.pi/3),
@@ -298,7 +303,8 @@ def foot_slider():
     pivot=f["toeOffsetFromFNeutralMm"][1]
     gap=f["rockerForkInnerHalfGapMm"]
     for sign in (-1,1):
-        cheek=Part.makeBox(10,2,plate_z-pivot+3,V(-5,gap if sign>0 else -gap-2,pivot-2))
+        width=f.get("rockerForkWidthMm",10)
+        cheek=Part.makeBox(width,2,plate_z-pivot+3,V(-width/2,gap if sign>0 else -gap-2,pivot-2))
         result=union([result,cheek])
     result=cut(result,Part.makeCylinder(1.15,16,V(0,-8,pivot),V(0,1,0)))
     result=cut(result,Part.makeCylinder(2.05,8,V(0,-4,pivot),V(0,1,0)))
@@ -324,6 +330,8 @@ def foot_rocker():
 
 
 def leg_shape(name,side):
+    cached=f"P_LEG_{name}_{'L' if side<0 else 'R'}"
+    if cached in REUSE_SHAPES:return REUSE_SHAPES[cached].copy()
     nodes=rigids()[name];x=54.65+LAYERS[name]*C["legLayerPitchMm"];th=C["linkThicknessMm"]
     paths=list(zip(nodes,nodes[1:]))+([(nodes[-1],nodes[0])] if len(nodes)==3 else [])
     if name=="CEF":
@@ -454,11 +462,12 @@ class Whole:
 
     def hardware(self,kind,size,origin,direction=(1,0,0),length=0,group="hardware",motion=None):
         category="purchased"
-        if kind in ("bolt","cut_bolt"):
+        if kind=="bolt":
             pid=f"H_BOLT_M{size}_{length}";shape=metric_bolt(size,length);sku=f"BOLT_M{size}_{length}";density=7.85
-            if kind=="cut_bolt":
-                sku=f'BOLT_M{size}_{C["foot"]["rockerPinStockBoltLengthMm"]}'
-                category="cut_to_length"
+        elif kind=="lock_nut":
+            f=C["foot"];pid="H_LOCK_NUT_M2";sku="LOCK_NUT_M2";density=7.85
+            shape=cut(hexagon(f["rockerLockNutAcrossFlatsMm"],f["rockerLockNutHeightMm"]),
+                      cylinder(size*.42,f["rockerLockNutHeightMm"]+2,z=-1))
         elif kind=="nut":
             pid=f"H_NUT_M{size}";shape=nut_shape(size);sku=f"NUT_M{size}";density=7.85
         elif kind=="small_washer":
@@ -473,8 +482,8 @@ class Whole:
             density=8.5
         else:raise ValueError(kind)
         spec=sku+"; metric dimensional model, no physical material certification"
-        if kind=="cut_bolt":
-            spec+=f'; cut/deburr stock16mm to under-head12.5+/-{C["foot"]["rockerPinCutAcceptanceMm"]}mm,not a new stock SKU; retain both M2 jam nuts and>=0.6mm full-thread projection'
+        if kind=="lock_nut":
+            spec+="; stock M2 nylon insert,AF4.5 x height2.5. Conservative all-steel mass envelope includes the insert; actual mass,prevailing torque and reuse unqualified"
         self.define(pid,shape,category,spec,density=density,sku=sku)
         return self.add(pid,axis_pose(*origin,direction),group,motion)
 
@@ -848,9 +857,9 @@ def rocker_hardware(foot):
     inset=foot.get("rockerPinSeatInsetMm",0)
     width=foot["rockerWidthAtPivotMm"];washer=foot.get("rockerThrustWasherThicknessMm",.8)
     return (("sleeve",2,-4,8),
-            ("cut_bolt" if inset else "bolt",2,-5.3+inset,foot.get("rockerPinBoltLengthMm",16)),
+            ("bolt",2,-5.3+inset,foot["rockerPinBoltLengthMm"]),
             ("washer",2,-5.3+inset,0),("washer",2,5-inset,0),
-            ("nut",2,5.3-inset,0),("nut",2,6.9-inset,0),
+            ("lock_nut",2,5.3-inset,0),
             ("small_washer" if inset else "washer",4,-width/2-washer,0),
             ("small_washer" if inset else "washer",4,width/2,0))
 
@@ -862,9 +871,12 @@ def add_legs(a):
             pid=f"P_LEG_{name}_{'L' if side<0 else 'R'}"
             a.define(pid,leg_shape(name,side),"printed","Shared Jansen body with real smooth journals;"+name)
         for kind,shape in (("SLIDER",foot_slider()),("ROCKER",foot_rocker())):
-            part=transformed(shape,foot_axes(P["F"]))
-            if side<0:part=mirror_x(part)
-            a.define(f"P_FOOT_{kind}_{'L' if side<0 else 'R'}",part,"printed","Guided stock-spring equalizer; "+kind)
+            pid=f"P_FOOT_{kind}_{'L' if side<0 else 'R'}"
+            if pid in REUSE_SHAPES:part=REUSE_SHAPES[pid].copy()
+            else:
+                part=transformed(shape,foot_axes(P["F"]))
+                if side<0:part=mirror_x(part)
+            a.define(pid,part,"printed","Guided stock-spring equalizer; "+kind)
     f=C["foot"]
     a.define("H_FOOT_SPRING",spring_shape(),"purchased",
              "SAMINI12-0721;OD7,wire0.6,free15,total6.8active4.8,rate0.882N/mm. Coil drawing is envelope;end pitch simplified.",
@@ -1000,7 +1012,7 @@ def add_drive(a,old):
         a.add("P_INTER_STOP",matrix.tolist(),"reducer",motion)
         a.clamp(-55,[yz[0],yz[1]+Z0],"reducer",motion)
         add_bearing_cap(a,f"INTER_L_{axis_index}",yz,-45,-48.2,-1,bolt_half=13)
-        pinion_tip=outgoing["pinion"]/2+outgoing["pinionAddendumCoefficient"]
+        pinion_tip=outgoing.get("moduleMm",1)*(outgoing["pinion"]/2+outgoing["pinionAddendumCoefficient"]+outgoing["pinionProfileShift"])
         # Include the M3 nut's corner radius,not just its across-flats size.
         retainer_pitch=max(13,math.ceil(pinion_tip+5.5/math.sqrt(3)+.6))
         add_bearing_cap(a,f"INTER_R_{axis_index}",yz,-6,-.8,1,bolt_half=retainer_pitch)
@@ -1023,7 +1035,8 @@ def add_drive(a,old):
     if not -35<=first["xMm"]<=-C["gears"]["faceWidthMm"]:
         raise ValueError("Input gear plane does not fit the retained D-shaft carrier")
     pinion=union([gear_disk(first["pinion"],first["xMm"],first["pinionToothDatumRad"],
-                           profile_shift=first["pinionProfileShift"],addendum_coefficient=first["pinionAddendumCoefficient"]),
+                           profile_shift=first["pinionProfileShift"],addendum_coefficient=first["pinionAddendumCoefficient"],
+                           module=first.get("moduleMm",1),pressure_deg=first.get("pressureAngleDeg",25)),
                    x_cylinder(4,-35,35)])
     pinion=cut(pinion,d_x(6.2,2.6,-36,38))
     a.define("P_INPUT_PINION",pinion,"printed","Positive6mmD pinion with integral spacerstem;0.4mm axial clearance between inner collar and metal hub,not an unsupported round-bore friction fit")
@@ -1035,11 +1048,13 @@ def add_drive(a,old):
 def compound_geometry(incoming,outgoing):
     # The connection must remain inside the small pinion's root cylinder.
     # A large-wheel hub radius carried through this face buries its teeth.
-    bridge_radius=min(9.5,C["gears"]["moduleMm"]*(outgoing["pinion"]/2-1.25+outgoing["pinionProfileShift"])-.25)
+    bridge_radius=min(9.5,outgoing.get("moduleMm",1)*(outgoing["pinion"]/2-1.25+outgoing["pinionProfileShift"])-.25)
     body=union([gear_disk(incoming["wheel"],incoming["xMm"],incoming["wheelToothDatumRad"],
-                         profile_shift=incoming["wheelProfileShift"],addendum_coefficient=incoming["wheelAddendumCoefficient"]),
+                         profile_shift=incoming["wheelProfileShift"],addendum_coefficient=incoming["wheelAddendumCoefficient"],
+                         module=incoming.get("moduleMm",1),pressure_deg=incoming.get("pressureAngleDeg",25)),
                 gear_disk(outgoing["pinion"],outgoing["xMm"],outgoing["pinionToothDatumRad"],
-                          profile_shift=outgoing["pinionProfileShift"],addendum_coefficient=outgoing["pinionAddendumCoefficient"]),
+                          profile_shift=outgoing["pinionProfileShift"],addendum_coefficient=outgoing["pinionAddendumCoefficient"],
+                          module=outgoing.get("moduleMm",1),pressure_deg=outgoing.get("pressureAngleDeg",25)),
                 x_cylinder(bridge_radius,incoming["xMm"],outgoing["xMm"]-incoming["xMm"]+3.2),
                 x_cylinder(4,-45,incoming["xMm"]+45),
                 x_cylinder(4.6,-39.8,incoming["xMm"]+39.8),
@@ -1050,13 +1065,14 @@ def compound_geometry(incoming,outgoing):
 
 def output_wheel_geometry(last):
     wheel=gear_disk(last["wheel"],last["xMm"],last["wheelToothDatumRad"],
-                    profile_shift=last["wheelProfileShift"],addendum_coefficient=last["wheelAddendumCoefficient"])
+                    profile_shift=last["wheelProfileShift"],addendum_coefficient=last["wheelAddendumCoefficient"],
+                    module=last.get("moduleMm",1),pressure_deg=last.get("pressureAngleDeg",25))
     items=[wheel,retaining_collar(-32.8)]
     if last["xMm"]>-26:items.append(x_cylinder(4,-26,last["xMm"]+26))
     return cut(union(items),hex_x(5.12,-34,32))
 
 
-def rotor(a):
+def rotor_shape(a):
     radius=a.candidate["rotorDiameterMm"]/2
     inner=22.5;tip=radius-.8
     phase_sign=1 if a.red["speedRatios"][0]>0 else -1
@@ -1086,7 +1102,12 @@ def rotor(a):
     shape=cut(shape,cylinder(7.15,2.15))
     for y in (-8,8):
         for z in (-8,8):shape=cut(shape,cylinder(2.25,6,y,z,-1))
-    a.define("P_ROTOR",shape.removeSplitter(),"printed","16 bare curved blades;4mm spoke root+32mm active span+2mm outer end ring,matched6D hub;not air-calibrated")
+    return shape.removeSplitter()
+
+
+def rotor(a):
+    shape=REUSE_SHAPES["P_ROTOR"].copy() if "P_ROTOR" in REUSE_SHAPES else rotor_shape(a)
+    a.define("P_ROTOR",shape,"printed","16 bare curved blades;4mm spoke root+32mm active span+2mm outer end ring,matched6D hub;not air-calibrated")
     yz=a.input["axisYz"];motion={"kind":"shaft","axisYz":yz,"speed":a.red["speedRatios"][0]}
     a.add("P_ROTOR",axis_pose(8,yz[0],yz[1]+Z0),"input",motion)
     for y in (-8,8):
@@ -1138,7 +1159,7 @@ def add_gear_shields(a,only=None):
     thick=guard["petThicknessMm"];flange=guard["petReturnFlangeMm"]
     top=a.input["axisYz"][1]+14
     bottom=min(stage["xMm"]*0+a.red["axesYzMm"][stage["wheelAxis"]][1]
-               -stage["wheel"]/2-stage["wheelAddendumCoefficient"]-3
+               -stage.get("moduleMm",1)*(stage["wheel"]/2+stage["wheelAddendumCoefficient"]+stage["wheelProfileShift"])-3
                for stage in a.red["stages"])
     layouts=[("LEFT",-45.5,bottom,top,1),("LOWER_RIGHT",41.8,bottom,guard["lowerRightSheetTopZmm"],-1),
              ("UPPER_RIGHT",-.55,20,top,-1)]
@@ -1195,7 +1216,7 @@ def add_gear_shields(a,only=None):
             for stage in a.red["stages"]:
                 center=a.red["axesYzMm"][stage["wheelAxis"]]
                 margin=guard.get("sideSheetLowerCoverageMarginMm",coverage) if stage["wheelAxis"]==len(a.red["axesYzMm"])-1 else coverage
-                radius=stage["wheel"]/2+stage["wheelAddendumCoefficient"]+margin
+                radius=stage.get("moduleMm",1)*(stage["wheel"]/2+stage["wheelAddendumCoefficient"]+stage["wheelProfileShift"])+margin
                 profile=profile.fuse(x_cylinder(radius,x,thick,center))
             shape=solid(shape.common(profile)).removeSplitter()
         if flange:
@@ -1281,10 +1302,15 @@ def finalize(a):
     print("STAGE_END step-saved",a.id,step.stat().st_size,flush=True)
     meshes={};definitions={}
     for pid,p in a.defs.items():
-        vertices,triangles=p["shape"].tessellate(.16)
-        meshes[pid]={"vertices":[list(v) for v in vertices],"triangles":triangles,"category":p["category"]}
+        if pid in REUSE_MESHES:
+            meshes[pid]=REUSE_MESHES[pid]
+        else:
+            vertices,triangles=p["shape"].tessellate(.16)
+            meshes[pid]={"vertices":[list(v) for v in vertices],"triangles":triangles,"category":p["category"]}
         definitions[pid]={k:v for k,v in p.items() if k!="shape"}
-        if p["category"]=="printed":
+        if p["category"]=="printed" and pid in REUSE_SHAPES:
+            shutil.copyfile(args.reuse_bundle/"STL"/(pid+".stl"),stl/(pid+".stl"))
+        elif p["category"]=="printed":
             shape=p["shape"].copy()
             # Bed pose is separately recorded; no scaling of the printed parts.
             if pid.startswith("P_CHASSIS_"):
@@ -1317,6 +1343,7 @@ def finalize(a):
               "nominalTotalMassG":total,"nominalPrintedMassG":printed,"nominalCenterOfMassMm":(cog/total).tolist(),
               "physicalQualification":"UNKNOWN","fullAssemblyVerification":"IN_PROGRESS",
               "manufacturerModelsRedistributed":False,"assemblyReference":"uncompressed supported pose,not dynamic walking CG"}
+    if REUSE_RECORD:manifest["unchangedGeometryReuse"]=REUSE_RECORD
     write_json(out/"assembly.json",manifest)
     with (out/"BOM.csv").open("w",newline="") as stream:
         w=csv.writer(stream,lineterminator="\n")
@@ -1330,8 +1357,40 @@ def finalize(a):
     print(a.id,len(a.instances),"instances",total,"g",printed,"printedg",cog/total,flush=True)
 
 
+def load_reuse():
+    if args.design not in ("A","B","C"):raise ValueError("Reuse requires exactly one design")
+    data=json.loads((args.reuse_bundle/"docs/assembly.json").read_text())
+    if data["designId"]!=args.design:raise ValueError("Reuse bundle belongs to another design")
+    before=deepcopy(data["parameters"]["common"]);after=deepcopy(C)
+    mutable={"rockerPinSeatDiameterMm","rockerForkWidthMm","rockerPinBoltLengthMm",
+             "rockerPinStockBoltLengthMm","rockerPinCutAcceptanceMm","rockerPinBoltLengthToleranceMm",
+             "rockerLockNutAcrossFlatsMm","rockerLockNutHeightMm","rockerPinLocking"}
+    for common in (before,after):
+        for key in mutable:common["foot"].pop(key,None)
+    if before!=after:raise ValueError("Reuse would conceal a changed leg/foot/rotor construction input")
+    candidate=next(c for c in CFG["candidates"] if c["id"]==args.design)
+    if (any(candidate[k]!=data["candidate"][k] for k in ("rotorDiameterMm","activeSpanMm"))
+            or reducer(candidate,C)["speedRatios"][0]!=data["reduction"]["speedRatios"][0]):
+        raise ValueError("The reused rotor's defining inputs changed")
+    native=args.reuse_bundle/"CAD"/f"Walker_{args.design}.FCStd"
+    meshes=json.loads(gzip.decompress((args.reuse_bundle/"CAD/render_geometry.json.gz").read_bytes()))
+    doc=App.openDocument(str(native))
+    try:
+        selected={pid for pid in data["parts"] if pid.startswith(("P_LEG_","P_FOOT_ROCKER_")) or pid=="P_ROTOR"}
+        for pid in selected:
+            item=next(i for i in data["instances"] if i["part_id"]==pid)
+            REUSE_SHAPES[pid]=transformed(doc.getObject(item["name"]).Shape,np.linalg.inv(np.asarray(item["transform"])))
+            REUSE_MESHES[pid]=meshes[pid]
+        REUSE_RECORD.update({"nativeSha256":hashlib.sha256(native.read_bytes()).hexdigest(),
+                             "assemblySha256":hashlib.sha256((args.reuse_bundle/"docs/assembly.json").read_bytes()).hexdigest(),
+                             "partIds":sorted(selected),
+                             "scope":"Only unchanged leg bodies,rocker cores and local rotor geometry. Defining common inputs and rotor diameter/span/speed checked. Gear train,frame,cages,sliders and sheet guards are regenerated."})
+    finally:App.closeDocument(doc.Name)
+
+
 if __name__=="__main__":
     faulthandler.dump_traceback_later(45,repeat=True)
+    if args.reuse_bundle:load_reuse()
     old=own_r4_parts()
     for candidate in CFG["candidates"]:
         if args.design=="BC" and candidate["id"] not in ("B","C"):continue

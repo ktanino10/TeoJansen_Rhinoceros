@@ -343,8 +343,15 @@ def inspect(run_folder, public_folder):
             })
         lower = np.min([np.minimum(s.start, s.end) - s.width / 2 for s in all_segments], axis=0)
         upper = np.max([np.maximum(s.start, s.end) + s.width / 2 for s in all_segments], axis=0)
+        gear_samples=GEAR_CHECKS.get(part,[])
+        if record.get("gearTeeth"):
+            teeth=record["gearTeeth"]
+            gear_samples=[(z,teeth[0] if index<2 else teeth[-1])
+                          for index,(z,_) in enumerate(gear_samples)]
+        elif "/C/" in record["stl"] and gear_samples:
+            raise ValueError("C gear counts must come from the pinned assembly")
         gears = [gear_check(mesh, transform, nearest_model_layer(layers, z), teeth)
-                 for z, teeth in GEAR_CHECKS.get(part, [])]
+                 for z, teeth in gear_samples]
         images = []
         montage = Image.new("RGB", (1440, 1220), "white")
         for index, z in enumerate(VIEWS[part]):
@@ -398,6 +405,8 @@ def inspect(run_folder, public_folder):
               "teeth", [g["depositedEnvelopeTeeth"] for g in gears], flush=True)
     write_json(public_folder / "toolpath_checks.json", {
         "reviewedArtifactCommit": run["reviewedArtifactCommit"], "orcaVersion": "2.4.2",
+        "inputArtifactCommit":run.get("inputArtifactCommit",run["reviewedArtifactCommit"]),
+        "designId":run.get("designId","A"),
         "sourceScriptSha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "coordinateConvention": "Model-bed XY equals emitted G-code XY plus the declared single-nozzle offset; source STL placement comes from the saved 3MF. First-layer bounds are checked against Orca's own plate metadata.",
         "coordinateSource": "https://github.com/OrcaSlicer/OrcaSlicer/blob/v2.4.2/src/libslic3r/GCode.cpp#L8123-L8134",

@@ -1,4 +1,4 @@
-"""Finite miniature-tool access to recessed rocker-pin seats, before mounting the legs."""
+"""Stock DN-03 full-tool access in the explicitly isolated foot preassembly."""
 
 import argparse
 import hashlib
@@ -18,19 +18,19 @@ def check(design,library):
     import Part
     a=json.loads((OUT/design/"assembly.json").read_text())
     native=CAD/design/f"Walker_{design}.FCStd";doc=App.openDocument(str(native))
-    def prism(points,start,length):
-        wire=[App.Vector(x,y,start) for x,y in points]
-        return Part.Face(Part.makePolygon(wire+[wire[0]])).extrude(App.Vector(0,0,length))
-    def wrench(angle):
-        depth=.8;start=.75;radius=3.8
-        head=Part.makeCylinder(radius,depth,App.Vector(0,0,start))
-        u=np.array([math.cos(angle),math.sin(angle)]);v=np.array([-u[1],u[0]])
-        rectangle=[u*length+v*width for length,width in ((3,-1.5),(30,-1.5),(30,1.5),(3,1.5))]
-        head=head.fuse(prism(rectangle,start,depth))
-        hexagon=[[4.15/math.sqrt(3)*math.cos(i*math.pi/3),4.15/math.sqrt(3)*math.sin(i*math.pi/3)] for i in range(6)]
-        head=head.cut(prism(hexagon,start-.01,depth+.02))
-        mouth=[-u*length+v*width for length,width in ((0,-2.075),(8,-2.075),(8,2.075),(0,2.075))]
-        return head.cut(prism(mouth,start-.01,depth+.02))
+    def prism(af,start,length):
+        points=[App.Vector(af/math.sqrt(3)*math.cos(i*math.pi/3),
+                           af/math.sqrt(3)*math.sin(i*math.pi/3),start) for i in range(6)]
+        return Part.Face(Part.makePolygon(points+[points[0]])).extrude(App.Vector(0,0,length))
+    def driver(swept=False):
+        body=Part.makeCylinder(4,75,App.Vector(0,0,.05)).fuse(
+             Part.makeCylinder(6.5,70,App.Vector(0,0,75.05)))
+        hole=Part.makeCylinder(4.5/2,9.02,App.Vector(0,0,.04)) if swept else prism(4.5,.04,9.02)
+        return body.cut(hole)
+    def placed(shape,matrix,offset=0):
+        value=shape.copy();translation=np.eye(4);translation[2,3]=offset
+        value.Placement=App.Placement(App.Matrix(*(matrix@translation).ravel().tolist())).multiply(value.Placement)
+        return value
     def intersections(tool,items):
         hits=[]
         for item in items:
@@ -45,31 +45,44 @@ def check(design,library):
         records=[]
         for item in a["instances"]:
             m=item["motion"]
-            if m.get("piece")!="ROCKER_PIN" or item["part_id"]!="H_NUT_M2":continue
+            if m.get("piece")!="ROCKER_PIN" or item["part_id"]!="H_LOCK_NUT_M2":continue
             scene=[i for i in a["instances"] if i["motion"].get("station")==m["station"]
-                   and i["motion"].get("side")==m["side"]]
-            matrix=np.asarray(item["transform"])
-            choices=[]
-            for angle in np.deg2rad((45,135,225,315)):
-                tool=wrench(float(angle))
-                tool.Placement=App.Placement(App.Matrix(*matrix.ravel().tolist())).multiply(tool.Placement)
-                hits=intersections(tool,scene)
-                choices.append({"handleAngleDeg":float(np.degrees(angle)),"intersections":hits})
-            usable=next((r for r in choices if not r["intersections"]),None)
+                   and i["motion"].get("side")==m["side"]
+                   and (i["motion"]["kind"]=="foot" or i["motion"].get("link")=="CEF")]
+            matrix=np.asarray(item["transform"]);samples=[]
+            for offset in (40,20,10,5,2,0):
+                hits=intersections(placed(driver(),matrix,offset),scene)
+                samples.append({"withdrawalMm":offset,"intersections":hits})
+            rotating=intersections(placed(driver(True),matrix),[i for i in scene if i["name"]!=item["name"]])
+            grip=Part.makeCylinder(35,75,App.Vector(0,0,75.05))
+            grip_hits=intersections(placed(grip,matrix),scene)
+            if not any(i["part_id"].startswith("P_LEG_CEF") for i in scene):
+                raise ValueError("The foot-support body was omitted from tool access")
+            failures=any(s["intersections"] for s in samples) or bool(rotating) or bool(grip_hits)
             records.append({"targetNut":item["name"],"sceneInstances":[i["name"] for i in scene],
-                            "status":"PASS" if usable else "FAIL","selected":usable,"tested":choices})
-            print("STAGE_END rocker-nut-tool",design,item["name"],records[-1]["status"],flush=True)
-        if len(records)!=12:raise ValueError("Both jam nuts on all six feet must be checked")
+                            "status":"FAIL" if failures else "PASS","insertionSamples":samples,
+                            "fullRotationEnvelopeIntersections":rotating,
+                            "gripEnvelopeIntersections":grip_hits,
+                            "rotationTargetContactTreatment":"Exact hex engagement checked with target present; the continuous outer-tool rotation envelope excludes only that actively driven nut. All other foot parts remain."})
+            print("STAGE_END stock-nut-tool",design,item["name"],records[-1]["status"],flush=True)
+        if len(records)!=6:raise ValueError("All six stock locking nuts must be checked")
         result={"revisionId":a["revisionId"],"designId":design,"nativeSha256":hashlib.sha256(native.read_bytes()).hexdigest(),
-                "status":"PASS_REQUIRED_TOOL_ENVELOPE" if all(r["status"]=="PASS" for r in records) else "FAIL",
-                "tool":{"acrossFlatsMm":4.15,"headOuterMm":7.6,"thicknessMm":.8,"workingHandleMm":27},
-                "scene":"Each complete leg/foot preassembly before body installation; no foot component omitted.",
-                "records":records,"actualToolModelOrOwnershipConfirmed":False,
-                "limits":["Finite working-end access,not torque/preload or a confirmed real user's tool.",
-                          "The recessed inner nut requires a spanner working-end thickness<=0.8mm; do not substitute a thicker tool.",
-                          "Physical cutting/deburring,thread engagement and final fitting remain unperformed."]}
+                "status":"PASS_STOCK_TOOL_ENVELOPE" if all(r["status"]=="PASS" for r in records) else "FAIL",
+                "tool":{"manufacturer":"ENGINEER","model":"DN-03","acrossFlatsMm":4.5,
+                        "workingEndOuterDiameterMm":8,"workingEndLengthMm":18,"socketDepthMm":9,
+                        "shaftLengthMm":75,"overallLengthMm":145,"handleDiameterMm":13,
+                        "modeling":"Conservative8mm cylinder for all75mm of metal shaft,plus13mm handle; not an exact cosmetic tool mesh.",
+                        "publishedPriceExTaxJpy":360,"catalog":"https://online.fliphtml5.com/jhzqw/fqqa/",
+                        "catalogYear":2026,"printedPage":69,"pdfPage":72},
+                "scene":"Prepare and tighten the CEF-integrated foot module before adding the other leg links or mounting it on the body. Every foot component is present.",
+                "gripEnvelope":{"diameterMm":70,"lengthMm":75,"basis":"Declared design clearance around the handle,not a measured hand or an ergonomics guarantee."},
+                "records":records,"toolModelAndPublishedDimensionsConfirmed":True,
+                "actualToolOwnershipOrOperationConfirmed":False,
+                "limits":["Nylon locking function is not a tested holding-torque or reuse equivalent to two jam nuts.",
+                          "The opposite M2 cap screw is held with a normal1.5mm hex tool; actual tightening and prevailing torque remain untested.",
+                          "Parts,tool and hands have not been physically fitted. Stock acceptance and final fit checks remain mandatory."]}
         (OUT/design/"rocker_pin_access.json").write_text(json.dumps(result,indent=2)+"\n")
-        if result["status"]=="FAIL":raise ValueError("Rocker-pin tool access failed")
+        if result["status"]=="FAIL":raise ValueError("Full stock-tool/hand access failed")
     finally:App.closeDocument(doc.Name)
 
 

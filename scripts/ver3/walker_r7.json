@@ -1,5 +1,5 @@
 {
-  "revisionId": "v3-integrated-walkers-r7-16-floor1",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "scope": "Three whole-machine candidates from one common mechanism; actual physical validation remains separate",
   "requirements": {
     "coldAirReference": "preserve R3 adopted6.4m/s local-reference-as-Gaussian-peak, sigma20mm,150mm plane; not a measured product guarantee",
@@ -129,10 +129,14 @@
       "rockerWidthAtPivotMm": 4.4,
       "rockerBossRadiusMm": 4.3,
       "rockerPinSeatInsetMm": 1,
-      "rockerPinSeatDiameterMm": 5.4,
-      "rockerPinBoltLengthMm": 12.5,
-      "rockerPinStockBoltLengthMm": 16,
-      "rockerPinCutAcceptanceMm": 0.1,
+      "rockerPinSeatDiameterMm": 8.2,
+      "rockerForkWidthMm": 12.8,
+      "rockerPinBoltLengthMm": 12,
+      "rockerPinStockBoltLengthMm": 12,
+      "rockerPinBoltLengthToleranceMm": 0.3,
+      "rockerLockNutAcrossFlatsMm": 4.5,
+      "rockerLockNutHeightMm": 2.5,
+      "rockerPinLocking": "One stock M2 nylon-insert nut; not a measured holding-torque or reuse equivalent to the earlier jam-nut pair",
       "rockerThrustWasherInnerMm": 4.5,
       "rockerThrustWasherOuterMm": 8,
       "rockerThrustWasherThicknessMm": 0.5,
@@ -224,7 +228,7 @@
   "candidates": [
     {"id":"A","direction":"large rotor, few stages","rotorDiameterMm":220,"activeSpanMm":32,"stageRatios":[12,12],"stagePinionTeeth":[12,12],"firstGearPlaneXmm":-25,"stageAxisDeltaYmm":[-15,-15]},
     {"id":"B","direction":"small rotor, high reduction/slower","rotorDiameterMm":160,"activeSpanMm":32,"stageRatios":[8,8,8],"stagePinionTeeth":[14,14,18],"stageAxisDeltaYmm":[10,-10,-20]},
-    {"id":"C","direction":"intermediate rotor, material-constrained light frame","rotorDiameterMm":200,"activeSpanMm":32,"stageRatios":[13,12],"stagePinionTeeth":[12,12],"firstGearPlaneXmm":-25,"stageAxisDeltaYmm":[-22,-10]}
+    {"id":"C","direction":"intermediate rotor, material-constrained light frame","rotorDiameterMm":200,"activeSpanMm":32,"stageRatios":[13,12],"stagePinionTeeth":[12,12],"stageModulesMm":[0.9,1],"stagePressureAnglesDeg":[20,25],"stagePinionProfileShifts":[0.35,0],"firstGearPlaneXmm":-25,"stageAxisDeltaYmm":[-22,-10]}
   ],
   "sources": {
     "hexStock": {

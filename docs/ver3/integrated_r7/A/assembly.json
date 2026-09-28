@@ -1,8 +1,8 @@
 {
-  "revisionId": "v3-integrated-walkers-r7-15",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "designId": "A",
   "parameters": {
-    "revisionId": "v3-integrated-walkers-r7-15",
+    "revisionId": "v3-integrated-walkers-r7-16-floor2",
     "scope": "Three whole-machine candidates from one common mechanism; actual physical validation remains separate",
     "requirements": {
       "coldAirReference": "preserve R3 adopted6.4m/s local-reference-as-Gaussian-peak, sigma20mm,150mm plane; not a measured product guarantee",
@@ -103,6 +103,10 @@
           -109,
           110
         ],
+        "sideSheetOutline": "lower edge follows the union of actual gear radial envelopes plus3mm; no full-width rectangle at the largest radius",
+        "sideSheetGearCoverageMarginMm": 3,
+        "sideSheetLowerCoverageMarginMm": 0.65,
+        "sideSheetUpperBridgeBottomMm": -25.93,
         "upperSheetBoundsYmm": [
           -96,
           69.5
@@ -198,7 +202,20 @@
         "laneConstruction": "two8mm rolling pads and one20mm brass guide per leg. Foot centerX64.4 is the actual CEF link midplane. The guide is moved10mm rearward within that plane and lowered7mm,not cantilevered22mm outboard; both spring axes stay over the rocker. Support uses each foot center,not an enlarged polygon.",
         "rockerHalfSpanMm": 12,
         "rockerTravelDeg": 5,
-        "rockerWidthAtPivotMm": 3.8,
+        "rockerWidthAtPivotMm": 4.4,
+        "rockerBossRadiusMm": 4.3,
+        "rockerPinSeatInsetMm": 1,
+        "rockerPinSeatDiameterMm": 8.2,
+        "rockerForkWidthMm": 12.8,
+        "rockerPinBoltLengthMm": 12,
+        "rockerPinStockBoltLengthMm": 12,
+        "rockerPinBoltLengthToleranceMm": 0.3,
+        "rockerLockNutAcrossFlatsMm": 4.5,
+        "rockerLockNutHeightMm": 2.5,
+        "rockerPinLocking": "One stock M2 nylon-insert nut; not a measured holding-torque or reuse equivalent to the earlier jam-nut pair",
+        "rockerThrustWasherInnerMm": 4.5,
+        "rockerThrustWasherOuterMm": 8,
+        "rockerThrustWasherThicknessMm": 0.5,
         "rockerSleeveLengthMm": 8,
         "rockerForkEarMm": 2,
         "rockerForkInnerHalfGapMm": 3,
@@ -352,12 +369,24 @@
         "rotorDiameterMm": 200,
         "activeSpanMm": 32,
         "stageRatios": [
-          12,
-          13
+          13,
+          12
         ],
         "stagePinionTeeth": [
           12,
           12
+        ],
+        "stageModulesMm": [
+          0.9,
+          1
+        ],
+        "stagePressureAnglesDeg": [
+          20,
+          25
+        ],
+        "stagePinionProfileShifts": [
+          0.35,
+          0
         ],
         "firstGearPlaneXmm": -25,
         "stageAxisDeltaYmm": [
@@ -2107,62 +2136,62 @@
     },
     "P_FOOT_SLIDER_L": {
       "category": "printed",
-      "spec": "Guided stock-spring equalizer; SLIDER",
+      "spec": "Floor correction: same foot position/spring/rolling pads; recessed metal clamp seats, reduced non-contact boss and preserved axial stack.",
       "sku": null,
-      "solid_volume_mm3": 1738.3557854223354,
+      "solid_volume_mm3": 1774.4068440891165,
       "local_com_mm": [
-        -64.4,
-        -29.233091833337408,
-        -65.14261036192232
+        -64.39999999999986,
+        -29.20845739939152,
+        -65.17747887734393
       ],
       "centralVolumeInertiaMm5": [
         [
-          70728.21555123938,
-          5.820766091346741e-10,
+          70755.1644115219,
+          -1.0477378964424133e-09,
           -9.313225746154785e-10
         ],
         [
-          5.820766091346741e-10,
-          112605.03188575432,
-          13133.107103347667
+          -1.0477378964424133e-09,
+          115657.19560464472,
+          13437.267289708025
         ],
         [
           -9.313225746154785e-10,
-          13133.107103347667,
-          108648.40939273685
+          13437.267289708025,
+          112173.71243003011
         ]
       ],
-      "mass_g": 2.207711847486366,
+      "mass_g": 2.253496691993178,
       "mass_basis": "actual solid CAD volume x assumed material density"
     },
     "P_FOOT_ROCKER_L": {
       "category": "printed",
-      "spec": "Guided stock-spring equalizer; ROCKER",
+      "spec": "Floor correction: same foot position/spring/rolling pads; recessed metal clamp seats, reduced non-contact boss and preserved axial stack.",
       "sku": null,
-      "solid_volume_mm3": 2150.718509553742,
+      "solid_volume_mm3": 2140.075100502787,
       "local_com_mm": [
         -64.4,
-        -30.709026442862278,
+        -30.70902644286227,
         -73.99354190220451
       ],
       "centralVolumeInertiaMm5": [
         [
-          34921.465537768905,
-          0.0,
-          -9.313225746154785e-10
+          34406.817872322106,
+          2.3283064365386963e-10,
+          -4.656612873077393e-10
         ],
         [
-          0.0,
-          294089.8581922054,
-          -504.30013038852485
+          2.3283064365386963e-10,
+          294005.64605255425,
+          -253.5124040581286
         ],
         [
-          -9.313225746154785e-10,
-          -504.30013038852485,
-          292941.5351766348
+          -4.656612873077393e-10,
+          -253.5124040581286,
+          293428.3824137673
         ]
       ],
-      "mass_g": 2.7314125071332525,
+      "mass_g": 2.717895377638539,
       "mass_basis": "actual solid CAD volume x assumed material density"
     },
     "P_LEG_AB_R": {
@@ -2347,62 +2376,62 @@
     },
     "P_FOOT_SLIDER_R": {
       "category": "printed",
-      "spec": "Guided stock-spring equalizer; SLIDER",
+      "spec": "Floor correction: same foot position/spring/rolling pads; recessed metal clamp seats, reduced non-contact boss and preserved axial stack.",
       "sku": null,
-      "solid_volume_mm3": 1738.3557854223366,
+      "solid_volume_mm3": 1774.4068440891167,
       "local_com_mm": [
         64.4,
-        -29.23309183333741,
-        -65.14261036192232
+        -29.20845739939152,
+        -65.17747887734393
       ],
       "centralVolumeInertiaMm5": [
         [
-          70728.21555123955,
-          3.764028304542962e-12,
-          1.2526770836707635e-11
+          70755.16441152208,
+          7.146604169615383e-12,
+          2.892713378848633e-11
         ],
         [
-          3.764028304542962e-12,
-          112605.03188576984,
-          13133.107103347698
+          7.146604169615383e-12,
+          115657.19560458089,
+          13437.26728970806
         ],
         [
-          1.2526770836707635e-11,
-          13133.107103347698,
-          108648.40939273826
+          2.892713378848633e-11,
+          13437.26728970806,
+          112173.7124299622
         ]
       ],
-      "mass_g": 2.2077118474863675,
+      "mass_g": 2.253496691993178,
       "mass_basis": "actual solid CAD volume x assumed material density"
     },
     "P_FOOT_ROCKER_R": {
       "category": "printed",
-      "spec": "Guided stock-spring equalizer; ROCKER",
+      "spec": "Floor correction: same foot position/spring/rolling pads; recessed metal clamp seats, reduced non-contact boss and preserved axial stack.",
       "sku": null,
-      "solid_volume_mm3": 2150.7185095537416,
+      "solid_volume_mm3": 2140.075100502787,
       "local_com_mm": [
         64.4,
-        -30.709026442862278,
+        -30.70902644286227,
         -73.99354190220451
       ],
       "centralVolumeInertiaMm5": [
         [
-          34921.46553776873,
-          -2.353133667128811e-11,
-          -3.83821395410329e-11
+          34406.817872322106,
+          -1.3469132164381882e-11,
+          -2.1193421240632208e-11
         ],
         [
-          -2.353133667128811e-11,
-          294089.85819220415,
-          -504.30013038846664
+          -1.3469132164381882e-11,
+          294005.64605255524,
+          -253.5124040581286
         ],
         [
-          -3.83821395410329e-11,
-          -504.30013038846664,
-          292941.53517663595
+          -2.1193421240632208e-11,
+          -253.5124040581286,
+          293428.38241376204
         ]
       ],
-      "mass_g": 2.731412507133252,
+      "mass_g": 2.717895377638539,
       "mass_basis": "actual solid CAD volume x assumed material density"
     },
     "H_FOOT_SPRING": {
@@ -2707,62 +2736,62 @@
     },
     "S_GUARD_LEFT": {
       "category": "sheet_cut",
-      "spec": "PAC34-05 PET0.5mm flat sheet; full-thickness cuts only. Mounting uses explicitly relocated existing cap fasteners; no adhesive or pocket milling.",
+      "spec": "PAC34-05 PET0.5mm flat sheet; full-thickness cuts only. Every retained piece has at least two declared supports; no adhesive or pocket milling.",
       "sku": "PAC34-05",
-      "solid_volume_mm3": 17520.099306680353,
+      "solid_volume_mm3": 14429.589701144401,
       "local_com_mm": [
-        -45.24999999999998,
-        19.1279327584353,
-        25.377949377542173
+        -45.25000000000003,
+        23.03501266102733,
+        42.595098032424836
       ],
       "centralVolumeInertiaMm5": [
         [
-          151864658.48909712,
-          0.0,
-          1.862645149230957e-08
+          106362083.07708031,
+          -1.1175870895385742e-08,
+          -7.450580596923828e-09
         ],
         [
-          0.0,
-          88929869.71581486,
-          -27509717.43457925
+          -1.1175870895385742e-08,
+          64035212.86100721,
+          -21995875.035846397
         ],
         [
-          1.862645149230957e-08,
-          -27509717.43457925,
-          62935518.777420014
+          -7.450580596923828e-09,
+          -21995875.035846397,
+          42327471.44897733
         ]
       ],
-      "mass_g": 24.177737043218883,
+      "mass_g": 19.91283378757927,
       "mass_basis": "actual solid CAD volume x assumed material density"
     },
     "S_GUARD_LOWER_RIGHT": {
       "category": "sheet_cut",
-      "spec": "PAC34-05 PET0.5mm flat sheet; full-thickness cuts only. Mounting uses explicitly relocated existing cap fasteners; no adhesive or pocket milling.",
+      "spec": "PAC34-05 PET0.5mm flat sheet; full-thickness cuts only. Every retained piece has at least two declared supports; no adhesive or pocket milling.",
       "sku": "PAC34-05",
-      "solid_volume_mm3": 11051.801976862876,
+      "solid_volume_mm3": 7961.2923713268565,
       "local_com_mm": [
-        42.05,
-        1.0604861160116834,
-        -21.3783307314304
+        42.04999999999995,
+        1.1283070806100044,
+        -8.323206855816082
       ],
       "centralVolumeInertiaMm5": [
         [
-          55682607.21568608,
-          -4.656612873077393e-10,
-          3.725290298461914e-09
+          30824700.363053374,
+          -1.0477378964424133e-09,
+          2.3283064365386963e-09
         ],
         [
-          -4.656612873077393e-10,
-          12819393.970415879,
-          -294266.8988871748
+          -1.0477378964424133e-09,
+          7320816.7245065775,
+          -257893.2545279216
         ],
         [
-          3.725290298461914e-09,
-          -294266.8988871748,
-          42863673.737019256
+          2.3283064365386963e-09,
+          -257893.2545279216,
+          23504215.359062307
         ]
       ],
-      "mass_g": 15.251486728070768,
+      "mass_g": 10.986583472431061,
       "mass_basis": "actual solid CAD volume x assumed material density"
     },
     "S_GUARD_UPPER_RIGHT": {
@@ -2793,6 +2822,96 @@
         ]
       ],
       "mass_g": 11.94696854689459,
+      "mass_basis": "actual solid CAD volume x assumed material density"
+    },
+    "H_WASHER_4_SMALL": {
+      "category": "purchased",
+      "spec": "THRUST4_SMALL; metric dimensional model, no physical material certification",
+      "sku": "THRUST4_SMALL",
+      "solid_volume_mm3": 17.180584824319183,
+      "local_com_mm": [
+        9.56387744216585e-16,
+        3.532171823017079e-16,
+        0.2500000000000001
+      ],
+      "centralVolumeInertiaMm5": [
+        [
+          90.82444581606377,
+          -2.3482614658573815e-15,
+          -8.881784197001237e-16
+        ],
+        [
+          -2.3482614658573815e-15,
+          90.82444581606207,
+          9.43880233099585e-19
+        ],
+        [
+          -8.881784197001237e-16,
+          9.43880233099585e-19,
+          180.9330339311124
+        ]
+      ],
+      "mass_g": 0.13486759087090558,
+      "mass_basis": "actual solid CAD volume x assumed material density"
+    },
+    "H_BOLT_M2_12": {
+      "category": "purchased",
+      "spec": "BOLT_M2_12; metric dimensional model, no physical material certification",
+      "sku": "BOLT_M2_12",
+      "solid_volume_mm3": 58.43285364348082,
+      "local_com_mm": [
+        -6.091868445144041e-17,
+        3.93153709527648e-17,
+        3.5328619939880452
+      ],
+      "centralVolumeInertiaMm5": [
+        [
+          1135.5377911020971,
+          1.569420857083334e-15,
+          -1.3366795190954596e-14
+        ],
+        [
+          1.569420857083334e-15,
+          1135.5377911020967,
+          -1.0928116401875896e-14
+        ],
+        [
+          -1.3366795190954596e-14,
+          -1.0928116401875896e-14,
+          59.18218143035066
+        ]
+      ],
+      "mass_g": 0.4586979011013244,
+      "mass_basis": "actual solid CAD volume x assumed material density"
+    },
+    "H_LOCK_NUT_M2": {
+      "category": "purchased",
+      "spec": "LOCK_NUT_M2; metric dimensional model, no physical material certification; stock M2 nylon insert,AF4.5 x height2.5. Conservative all-steel mass envelope includes the insert; actual mass,prevailing torque and reuse unqualified",
+      "sku": "LOCK_NUT_M2",
+      "solid_volume_mm3": 38.30076662565482,
+      "local_com_mm": [
+        2.6269438048078397e-17,
+        -1.1573796529443794e-18,
+        1.2499999999999998
+      ],
+      "centralVolumeInertiaMm5": [
+        [
+          80.62431416511964,
+          -4.486437013981409e-15,
+          3.1450536619459513e-15
+        ],
+        [
+          -4.486437013981409e-15,
+          80.62431416511973,
+          2.6628138071893265e-15
+        ],
+        [
+          3.1450536619459513e-15,
+          2.6628138071893265e-15,
+          121.35199642851558
+        ]
+      ],
+      "mass_g": 0.30066101801139034,
       "mass_basis": "actual solid CAD volume x assumed material density"
     }
   },
@@ -3653,6 +3772,9 @@
   "guardSheetBlanks": [
     {
       "partId": "S_GUARD_LEFT",
+      "piecePartIds": [
+        "S_GUARD_LEFT"
+      ],
       "widthMm": 219,
       "heightMm": 243.0182098660769,
       "thicknessMm": 0.5,
@@ -3691,10 +3813,14 @@
           0.0
         ]
       ],
-      "fingersafeOrImpactCertified": false
+      "fingersafeOrImpactCertified": false,
+      "lowerEdgeFollowsGearEnvelope": true
     },
     {
       "partId": "S_GUARD_LOWER_RIGHT",
+      "piecePartIds": [
+        "S_GUARD_LOWER_RIGHT"
+      ],
       "widthMm": 219,
       "heightMm": 115.93,
       "thicknessMm": 0.5,
@@ -3733,7 +3859,8 @@
           0.0
         ]
       ],
-      "fingersafeOrImpactCertified": false
+      "fingersafeOrImpactCertified": false,
+      "lowerEdgeFollowsGearEnvelope": true
     },
     {
       "partId": "S_GUARD_UPPER_RIGHT",
@@ -3760,52 +3887,52 @@
   ],
   "guardCutScrap": [
     {
-      "panel": "LEFT",
-      "volumeMm3": 0.39218393381865835,
-      "centroidMm": [
-        -45.24999999999999,
-        -108.77349674366414,
-        27.61272422024591
-      ],
-      "reason": "enclosed frame-slot cutout; no attachment point, removed as sheet scrap"
-    },
-    {
-      "panel": "LEFT",
-      "volumeMm3": 2591.6885347075313,
-      "centroidMm": [
-        -45.25,
-        -84.08679614484001,
-        120.41765472836146
-      ],
-      "reason": "enclosed frame-slot cutout; no attachment point, removed as sheet scrap"
-    },
-    {
-      "panel": "LEFT",
-      "volumeMm3": 2653.388179258096,
-      "centroidMm": [
-        -45.24999999999999,
-        -21.891077041928035,
-        85.24664322091203
-      ],
-      "reason": "enclosed frame-slot cutout; no attachment point, removed as sheet scrap"
-    },
-    {
-      "panel": "LOWER_RIGHT",
-      "volumeMm3": 6.942066059209389,
-      "centroidMm": [
-        42.050000000000004,
-        -107.62329625849131,
-        37.758876786472825
-      ],
-      "reason": "enclosed frame-slot cutout; no attachment point, removed as sheet scrap"
-    },
-    {
       "panel": "UPPER_RIGHT",
       "volumeMm3": 2686.3064307363047,
       "centroidMm": [
         -0.30000000000000004,
         -11.849138274496587,
         38.41338988819039
+      ],
+      "reason": "enclosed frame-slot cutout; no attachment point, removed as sheet scrap"
+    },
+    {
+      "panel": "LEFT",
+      "volumeMm3": 2591.6885347075468,
+      "centroidMm": [
+        -45.25000000000001,
+        -84.08679614483997,
+        120.41765472836148
+      ],
+      "reason": "enclosed frame-slot cutout; no attachment point, removed as sheet scrap"
+    },
+    {
+      "panel": "LEFT",
+      "volumeMm3": 0.3921839338187859,
+      "centroidMm": [
+        -45.25000000000006,
+        -108.77349674366415,
+        27.612724220245873
+      ],
+      "reason": "enclosed frame-slot cutout; no attachment point, removed as sheet scrap"
+    },
+    {
+      "panel": "LEFT",
+      "volumeMm3": 2653.388179258133,
+      "centroidMm": [
+        -45.25000000000001,
+        -21.891077041928042,
+        85.246643220912
+      ],
+      "reason": "enclosed frame-slot cutout; no attachment point, removed as sheet scrap"
+    },
+    {
+      "panel": "LOWER_RIGHT",
+      "volumeMm3": 6.942066059209267,
+      "centroidMm": [
+        42.05,
+        -107.62329625849131,
+        37.75887678647281
       ],
       "reason": "enclosed frame-slot cutout; no attachment point, removed as sheet scrap"
     }
@@ -16536,7 +16663,7 @@
     },
     {
       "name": "H_BOLT_M2_16_005",
-      "part_id": "H_BOLT_M2_16",
+      "part_id": "H_BOLT_M2_12",
       "transform": [
         [
           1.0,
@@ -16548,13 +16675,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          -119.66861666567367
+          -118.73284492552057
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -2.124728154985821
+          -2.477334522385574
         ],
         [
           0.0,
@@ -16586,13 +16713,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          -119.66861666567367
+          -118.73284492552057
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -2.124728154985821
+          -2.477334522385574
         ],
         [
           0.0,
@@ -16624,13 +16751,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          -110.0301677420968
+          -110.9659394822499
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -5.7565737392032705
+          -5.4039673718035175
         ],
         [
           0.0,
@@ -16650,7 +16777,7 @@
     },
     {
       "name": "H_NUT_M2_019",
-      "part_id": "H_NUT_M2",
+      "part_id": "H_LOCK_NUT_M2",
       "transform": [
         [
           1.0,
@@ -16662,51 +16789,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          -109.74943622005087
+          -110.68520796020397
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -5.862355649423195
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "group": "feet",
-      "motion": {
-        "kind": "foot",
-        "piece": "ROCKER_PIN",
-        "station": -84.0,
-        "side": -1,
-        "phase": 0.0
-      }
-    },
-    {
-      "name": "H_NUT_M2_020",
-      "part_id": "H_NUT_M2",
-      "transform": [
-        [
-          1.0,
-          -0.0,
-          0.0,
-          -64.4
-        ],
-        [
-          0.0,
-          -0.3526063673997524,
-          0.9357717401530947,
-          -108.25220143580592
-        ],
-        [
-          -0.0,
-          -0.9357717401530947,
-          -0.3526063673997524,
-          -6.426525837262799
+          -5.509749282023442
         ],
         [
           0.0,
@@ -16726,7 +16815,7 @@
     },
     {
       "name": "H_WASHER_4_045",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -16764,7 +16853,7 @@
     },
     {
       "name": "H_WASHER_4_046",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -16776,13 +16865,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          -112.93106013657139
+          -112.65032861452546
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -4.663494000264038
+          -4.769275910483964
         ],
         [
           0.0,
@@ -19462,7 +19551,7 @@
     },
     {
       "name": "H_BOLT_M2_16_008",
-      "part_id": "H_BOLT_M2_16",
+      "part_id": "H_BOLT_M2_12",
       "transform": [
         [
           1.0,
@@ -19474,13 +19563,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          -99.13156302849336
+          -98.32222413797443
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          4.15927351621297
+          4.7466154611595215
         ],
         [
           0.0,
@@ -19512,13 +19601,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          -99.13156302849336
+          -98.32222413797443
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          4.15927351621297
+          4.7466154611595215
         ],
         [
           0.0,
@@ -19550,13 +19639,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          -90.79537245614846
+          -91.60471134666739
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          10.208895549162467
+          9.621553604215913
         ],
         [
           0.0,
@@ -19576,7 +19665,7 @@
     },
     {
       "name": "H_NUT_M2_035",
-      "part_id": "H_NUT_M2",
+      "part_id": "H_LOCK_NUT_M2",
       "transform": [
         [
           1.0,
@@ -19588,51 +19677,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          -90.55257078899278
+          -91.36190967951171
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          10.385098132646432
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "group": "feet",
-      "motion": {
-        "kind": "foot",
-        "piece": "ROCKER_PIN",
-        "station": -84.0,
-        "side": 1,
-        "phase": 3.141592653589793
-      }
-    },
-    {
-      "name": "H_NUT_M2_036",
-      "part_id": "H_NUT_M2",
-      "transform": [
-        [
-          1.0,
-          -0.0,
-          0.0,
-          64.4
-        ],
-        [
-          0.0,
-          0.5873419449465531,
-          0.8093388905189223,
-          -89.2576285641625
-        ],
-        [
-          -0.0,
-          -0.8093388905189223,
-          0.5873419449465531,
-          11.324845244560917
+          9.797756187699878
         ],
         [
           0.0,
@@ -19652,7 +19703,7 @@
     },
     {
       "name": "H_WASHER_4_059",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -19690,7 +19741,7 @@
     },
     {
       "name": "H_WASHER_4_060",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -19702,13 +19753,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          -93.30432301675712
+          -93.06152134960143
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          8.38813551982815
+          8.564338103312117
         ],
         [
           0.0,
@@ -22388,7 +22439,7 @@
     },
     {
       "name": "H_BOLT_M2_16_011",
-      "part_id": "H_BOLT_M2_16",
+      "part_id": "H_BOLT_M2_12",
       "transform": [
         [
           1.0,
@@ -22400,13 +22451,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          -15.131563028493366
+          -14.322224137974443
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          4.15927351621297
+          4.7466154611595215
         ],
         [
           0.0,
@@ -22438,13 +22489,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          -15.131563028493366
+          -14.322224137974443
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          4.15927351621297
+          4.7466154611595215
         ],
         [
           0.0,
@@ -22476,13 +22527,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          -6.795372456148467
+          -7.60471134666739
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          10.208895549162467
+          9.621553604215913
         ],
         [
           0.0,
@@ -22502,7 +22553,7 @@
     },
     {
       "name": "H_NUT_M2_051",
-      "part_id": "H_NUT_M2",
+      "part_id": "H_LOCK_NUT_M2",
       "transform": [
         [
           1.0,
@@ -22514,51 +22565,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          -6.55257078899279
+          -7.361909679511712
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          10.385098132646432
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "group": "feet",
-      "motion": {
-        "kind": "foot",
-        "piece": "ROCKER_PIN",
-        "station": 0.0,
-        "side": -1,
-        "phase": 3.141592653589793
-      }
-    },
-    {
-      "name": "H_NUT_M2_052",
-      "part_id": "H_NUT_M2",
-      "transform": [
-        [
-          1.0,
-          -0.0,
-          0.0,
-          -64.4
-        ],
-        [
-          0.0,
-          0.5873419449465531,
-          0.8093388905189223,
-          -5.2576285641625145
-        ],
-        [
-          -0.0,
-          -0.8093388905189223,
-          0.5873419449465531,
-          11.324845244560917
+          9.797756187699878
         ],
         [
           0.0,
@@ -22578,7 +22591,7 @@
     },
     {
       "name": "H_WASHER_4_073",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -22616,7 +22629,7 @@
     },
     {
       "name": "H_WASHER_4_074",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -22628,13 +22641,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          -9.304323016757126
+          -9.061521349601449
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          8.38813551982815
+          8.564338103312117
         ],
         [
           0.0,
@@ -25314,7 +25327,7 @@
     },
     {
       "name": "H_BOLT_M2_16_014",
-      "part_id": "H_BOLT_M2_16",
+      "part_id": "H_BOLT_M2_12",
       "transform": [
         [
           1.0,
@@ -25326,13 +25339,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          -35.668616665673675
+          -34.73284492552058
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -2.124728154985821
+          -2.477334522385574
         ],
         [
           0.0,
@@ -25364,13 +25377,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          -35.668616665673675
+          -34.73284492552058
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -2.124728154985821
+          -2.477334522385574
         ],
         [
           0.0,
@@ -25402,13 +25415,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          -26.0301677420968
+          -26.965939482249897
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -5.7565737392032705
+          -5.4039673718035175
         ],
         [
           0.0,
@@ -25428,7 +25441,7 @@
     },
     {
       "name": "H_NUT_M2_067",
-      "part_id": "H_NUT_M2",
+      "part_id": "H_LOCK_NUT_M2",
       "transform": [
         [
           1.0,
@@ -25440,51 +25453,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          -25.749436220050875
+          -26.685207960203968
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -5.862355649423195
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "group": "feet",
-      "motion": {
-        "kind": "foot",
-        "piece": "ROCKER_PIN",
-        "station": 0.0,
-        "side": 1,
-        "phase": 0.0
-      }
-    },
-    {
-      "name": "H_NUT_M2_068",
-      "part_id": "H_NUT_M2",
-      "transform": [
-        [
-          1.0,
-          -0.0,
-          0.0,
-          64.4
-        ],
-        [
-          0.0,
-          -0.3526063673997524,
-          0.9357717401530947,
-          -24.252201435805922
-        ],
-        [
-          -0.0,
-          -0.9357717401530947,
-          -0.3526063673997524,
-          -6.426525837262799
+          -5.509749282023442
         ],
         [
           0.0,
@@ -25504,7 +25479,7 @@
     },
     {
       "name": "H_WASHER_4_087",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -25542,7 +25517,7 @@
     },
     {
       "name": "H_WASHER_4_088",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -25554,13 +25529,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          -28.931060136571396
+          -28.650328614525467
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -4.663494000264038
+          -4.769275910483964
         ],
         [
           0.0,
@@ -28240,7 +28215,7 @@
     },
     {
       "name": "H_BOLT_M2_16_017",
-      "part_id": "H_BOLT_M2_16",
+      "part_id": "H_BOLT_M2_12",
       "transform": [
         [
           1.0,
@@ -28252,13 +28227,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          48.331383334326325
+          49.26715507447942
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -2.124728154985821
+          -2.477334522385574
         ],
         [
           0.0,
@@ -28290,13 +28265,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          48.331383334326325
+          49.26715507447942
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -2.124728154985821
+          -2.477334522385574
         ],
         [
           0.0,
@@ -28328,13 +28303,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          57.9698322579032
+          57.034060517750106
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -5.7565737392032705
+          -5.4039673718035175
         ],
         [
           0.0,
@@ -28354,7 +28329,7 @@
     },
     {
       "name": "H_NUT_M2_083",
-      "part_id": "H_NUT_M2",
+      "part_id": "H_LOCK_NUT_M2",
       "transform": [
         [
           1.0,
@@ -28366,51 +28341,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          58.250563779949125
+          57.31479203979603
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -5.862355649423195
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "group": "feet",
-      "motion": {
-        "kind": "foot",
-        "piece": "ROCKER_PIN",
-        "station": 84.0,
-        "side": -1,
-        "phase": 0.0
-      }
-    },
-    {
-      "name": "H_NUT_M2_084",
-      "part_id": "H_NUT_M2",
-      "transform": [
-        [
-          1.0,
-          -0.0,
-          0.0,
-          -64.4
-        ],
-        [
-          0.0,
-          -0.3526063673997524,
-          0.9357717401530947,
-          59.74779856419408
-        ],
-        [
-          -0.0,
-          -0.9357717401530947,
-          -0.3526063673997524,
-          -6.426525837262799
+          -5.509749282023442
         ],
         [
           0.0,
@@ -28430,7 +28367,7 @@
     },
     {
       "name": "H_WASHER_4_101",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -28468,7 +28405,7 @@
     },
     {
       "name": "H_WASHER_4_102",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -28480,13 +28417,13 @@
           0.0,
           -0.3526063673997524,
           0.9357717401530947,
-          55.068939863428604
+          55.34967138547454
         ],
         [
           -0.0,
           -0.9357717401530947,
           -0.3526063673997524,
-          -4.663494000264038
+          -4.769275910483964
         ],
         [
           0.0,
@@ -31166,7 +31103,7 @@
     },
     {
       "name": "H_BOLT_M2_16_020",
-      "part_id": "H_BOLT_M2_16",
+      "part_id": "H_BOLT_M2_12",
       "transform": [
         [
           1.0,
@@ -31178,13 +31115,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          68.86843697150663
+          69.67777586202556
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          4.15927351621297
+          4.7466154611595215
         ],
         [
           0.0,
@@ -31216,13 +31153,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          68.86843697150663
+          69.67777586202556
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          4.15927351621297
+          4.7466154611595215
         ],
         [
           0.0,
@@ -31254,13 +31191,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          77.20462754385153
+          76.3952886533326
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          10.208895549162467
+          9.621553604215913
         ],
         [
           0.0,
@@ -31280,7 +31217,7 @@
     },
     {
       "name": "H_NUT_M2_099",
-      "part_id": "H_NUT_M2",
+      "part_id": "H_LOCK_NUT_M2",
       "transform": [
         [
           1.0,
@@ -31292,51 +31229,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          77.4474292110072
+          76.63809032048829
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          10.385098132646432
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "group": "feet",
-      "motion": {
-        "kind": "foot",
-        "piece": "ROCKER_PIN",
-        "station": 84.0,
-        "side": 1,
-        "phase": 3.141592653589793
-      }
-    },
-    {
-      "name": "H_NUT_M2_100",
-      "part_id": "H_NUT_M2",
-      "transform": [
-        [
-          1.0,
-          -0.0,
-          0.0,
-          64.4
-        ],
-        [
-          0.0,
-          0.5873419449465531,
-          0.8093388905189223,
-          78.74237143583748
-        ],
-        [
-          -0.0,
-          -0.8093388905189223,
-          0.5873419449465531,
-          11.324845244560917
+          9.797756187699878
         ],
         [
           0.0,
@@ -31356,7 +31255,7 @@
     },
     {
       "name": "H_WASHER_4_115",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -31394,7 +31293,7 @@
     },
     {
       "name": "H_WASHER_4_116",
-      "part_id": "H_WASHER_4",
+      "part_id": "H_WASHER_4_SMALL",
       "transform": [
         [
           1.0,
@@ -31406,13 +31305,13 @@
           0.0,
           0.5873419449465531,
           0.8093388905189223,
-          74.69567698324286
+          74.93847865039854
         ],
         [
           -0.0,
           -0.8093388905189223,
           0.5873419449465531,
-          8.38813551982815
+          8.564338103312117
         ],
         [
           0.0,
@@ -31885,12 +31784,12 @@
     }
   ],
   "cadMeshes": "FreeCAD/Ver.3/integrated_r7/A/render_geometry.json.gz",
-  "nominalTotalMassG": 1076.3474319017914,
-  "nominalPrintedMassG": 566.9788199681872,
+  "nominalTotalMassG": 1065.387580211831,
+  "nominalPrintedMassG": 567.1724262582594,
   "nominalCenterOfMassMm": [
-    3.260496335305114,
-    -16.883710709766483,
-    118.25398623852169
+    3.3068477736040545,
+    -17.02100964511519,
+    119.34794689054928
   ],
   "physicalQualification": "UNKNOWN",
   "fullAssemblyVerification": "IN_PROGRESS",
@@ -31952,5 +31851,79 @@
     "geometryChanged": false,
     "unchangedNativeSha256": "f093fdfcdfd1c860d3feaff24a95d7ec836b7ae39c8d740c1e94422a157cb304",
     "effectiveCanonicalInputSha256": "6b6b3e0105d17d6e1bf9325cb80457aae6392774528ec2cdd11690cd39461d6a"
+  },
+  "incrementalGuardUpdate": {
+    "previousNativeSha256": "f093fdfcdfd1c860d3feaff24a95d7ec836b7ae39c8d740c1e94422a157cb304",
+    "previousRevisionId": "v3-integrated-walkers-r7-15",
+    "changedParts": [
+      {
+        "partId": "S_GUARD_LEFT",
+        "beforeMassG": 24.177737043218883,
+        "afterMassG": 20.207766499473472
+      },
+      {
+        "partId": "S_GUARD_LOWER_RIGHT",
+        "beforeMassG": 15.251486728070768,
+        "afterMassG": 11.281516184325225
+      }
+    ],
+    "unchangedNativeShapeCount": 754,
+    "printedStlFilesTouched": 0,
+    "inputHashes": {
+      "scripts/ver3/build_integrated_walkers.py": "6c7dd0169aa234b6a78689879829976b06c3fdd3d062a558d38d72dcf0231513",
+      "scripts/ver3/walker_r7.json": "420d78e5d7f7cbe0c111b28a4650a02381fd666ceb056e3585f11fd05be8527d",
+      "scripts/ver3/walker_geometry.py": "4453d3410d2d47a35e4eb39e20e53ddc967e6a486b48960946157c43d795ae2f",
+      "scripts/ver3/walker_kinematics.py": "50111228441a217670513bbb15d21a1454026891c38febfc9ae9319b48e32a37",
+      "scripts/ver3/walker_contact.py": "1eaf09338afb0f2b3f556a026e2f7aa4b660f60edadd75ccd71e8170100bfd56"
+    }
+  },
+  "incrementalFloorDetailsUpdate": {
+    "previousNativeSha256": "b0d24e7f6e7a3c50903b3b1d4224ff4eb090e7ab905cc0c120240f71856b5979",
+    "previousRevisionId": "v3-integrated-walkers-r7-16-floor1",
+    "changedParts": [
+      {
+        "partId": "P_FOOT_SLIDER_L",
+        "beforeMassG": 2.1645188004842115,
+        "afterMassG": 2.253496691993178
+      },
+      {
+        "partId": "P_FOOT_SLIDER_R",
+        "beforeMassG": 2.164518800484213,
+        "afterMassG": 2.253496691993178
+      },
+      {
+        "partId": "H_BOLT_M2_12",
+        "beforeMassG": null,
+        "afterMassG": 0.4586979011013244
+      },
+      {
+        "partId": "H_LOCK_NUT_M2",
+        "beforeMassG": null,
+        "afterMassG": 0.30066101801139034
+      },
+      {
+        "partId": "H_WASHER_4_SMALL",
+        "beforeMassG": 0.13486759087090558,
+        "afterMassG": 0.13486759087090558
+      }
+    ],
+    "unchangedNativeShapeCount": 702,
+    "printedStlFilesTouched": 0,
+    "inputHashes": {
+      "scripts/ver3/build_integrated_walkers.py": "7cce8ffb89bc17b61209ab252044975e0a6b244722a3169e00f38ea1aaeb2979",
+      "scripts/ver3/walker_r7.json": "a4456f7c29437f4cd9316fcdd5a58ea4a7ff434a692050d063fcb2cfa2e7063f",
+      "scripts/ver3/walker_geometry.py": "d976d6cd480a3875856c2c4397671ee1ac89fd0c73269a68dec095c05b12e2c6",
+      "scripts/ver3/walker_kinematics.py": "50111228441a217670513bbb15d21a1454026891c38febfc9ae9319b48e32a37",
+      "scripts/ver3/walker_contact.py": "1eaf09338afb0f2b3f556a026e2f7aa4b660f60edadd75ccd71e8170100bfd56"
+    },
+    "removedSurplusJamNutInstances": [
+      "H_NUT_M2_020",
+      "H_NUT_M2_036",
+      "H_NUT_M2_052",
+      "H_NUT_M2_068",
+      "H_NUT_M2_084",
+      "H_NUT_M2_100"
+    ],
+    "lockingChange": "Two jam nuts replaced by one stock nylon insert nut; no holding-torque or durability equivalence claimed"
   }
 }

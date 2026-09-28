@@ -48,7 +48,7 @@ def shaft_gravity_work(fast,axes,theta,pitch,pitch_rate):
     return result
 
 
-def reflect_shaft_work(output_work,gravity_work,speeds,eta,bearing_each):
+def reflect_shaft_work(output_work,gravity_work,speeds,eta,bearing_each,mesh_work=None):
     """Walk the real train from output to input in Nmm per crank radian."""
     if not 0<eta<=1 or bearing_each<0 or len(speeds)!=len(gravity_work):
         raise ValueError("Invalid shaft power-flow inputs")
@@ -56,6 +56,9 @@ def reflect_shaft_work(output_work,gravity_work,speeds,eta,bearing_each):
     losses=[]
     for shaft in range(len(speeds)-2,-1,-1):
         after=np.where(work>=0,work/eta,work*eta)
+        if mesh_work is not None:
+            mesh_work.append({"stage":shaft,"pinionWorkMaximumNmmPerCrankRad":float(np.max(abs(after))),
+                              "wheelWorkMaximumNmmPerCrankRad":float(np.max(abs(work)))})
         losses.append(after-work)
         work=after+gravity_work[shaft]+2*bearing_each*abs(speeds[shaft])
     return work/abs(speeds[0]),np.array(losses)
@@ -553,8 +556,22 @@ def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=N
         downstream=np.maximum(net+bus_bound,0)+bus_bearings
         input_pair=2*bearing_drag
         output_work=np.interp(fine,np.r_[theta,2*math.pi],np.r_[downstream,downstream[0]])
+        mesh_work=[]
         required_nmm,reducer_loss=reflect_shaft_work(
-            output_work,gravity_work,assembly["reduction"]["speedRatios"],eta,bearing_drag)
+            output_work,gravity_work,assembly["reduction"]["speedRatios"],eta,bearing_drag,mesh_work)
+        mesh_forces=[]
+        for load in sorted(mesh_work,key=lambda row:row["stage"]):
+            stage=assembly["reduction"]["stages"][load["stage"]];module=stage.get("moduleMm",1)
+            pinion_radius=module*stage["pinion"]/2;wheel_radius=module*stage["wheel"]/2
+            tangential=max(load["pinionWorkMaximumNmmPerCrankRad"]/abs(stage["pinionSpeedPerCrank"])/pinion_radius,
+                           load["wheelWorkMaximumNmmPerCrankRad"]/abs(stage["wheelSpeedPerCrank"])/wheel_radius)
+            pressure=stage.get("pressureAngleDeg",25)
+            mesh_forces.append({"stage":load["stage"],"moduleMm":module,"pressureAngleDeg":pressure,
+                                "pinionPitchRadiusMm":pinion_radius,"wheelPitchRadiusMm":wheel_radius,
+                                "tangentialForceUpperN":tangential,
+                                "separatingForceUpperN":tangential*math.tan(math.radians(pressure)),
+                                "resultantForceUpperN":tangential/math.cos(math.radians(pressure)),
+                                "basis":"Maximum reflected per-shaft work divided by actual speed and pitch radius; conservative eta-dependent bound,not a resolved tooth-friction distribution."})
         required=required_nmm/1000
         margin=raw_supply-required;worst=int(np.argmin(margin))
         # Absolute increments prevent forward/backward slip from cancelling.
@@ -570,6 +587,7 @@ def analyze(design,step_deg=.5,assembly_override=None,output_dir=None,air_case=N
                 "maximumInputBearingPairForRawBalanceNm":float((raw_supply-required+input_pair/1000).min()),
                 "inputOnlyAccelerationHeadroomRadS2":float(margin.min()/inertia["inputShaftAssemblyKgM2"]) if inertia else None,
                 "guideMuAssumed":guide_mu,"meshEfficiencyAssumed":eta,
+                "reducerMeshForceBounds":mesh_forces,
                 "guideRootMomentMaximumNmm":guide_root_moment,
                 "guideAxialForceResidualMaximumN":guide_axial_residual,
                 "workPerCycleNmm":{"groundSlip":work_slip,"guide":float(guide_loss.sum()*dt),
