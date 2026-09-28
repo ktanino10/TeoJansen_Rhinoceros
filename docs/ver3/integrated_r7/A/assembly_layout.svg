@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="930" viewBox="0 0 960 930">
 <rect width="960" height="930" fill="#fff"/>
-<text x="30" y="32" font-size="21">Ver.3 A / v3-integrated-walkers-r7-15</text>
+<text x="30" y="32" font-size="21">Ver.3 A / v3-integrated-walkers-r7-16-floor2</text>
 <text x="30" y="55" font-size="13">CAD寸法からの側面組立模式図。実形状・穴・工具経路はnative/STEPと検査JSONを参照。</text>
 <path d="M181.21,621.65L181.21,650.00" fill="none" stroke="#a8b5c7" stroke-width="3"/>
 <path d="M181.21,650.00L134.52,659.58" fill="none" stroke="#a8b5c7" stroke-width="3"/>

@@ -1,0 +1,374 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
+  "designId": "C",
+  "nativeSha256": "255625f6e162358f6396e18a9c58902758e53c8696faf528e91e808bd9769e92",
+  "status": "PASS_STOCK_TOOL_ENVELOPE",
+  "tool": {
+    "manufacturer": "ENGINEER",
+    "model": "DN-03",
+    "acrossFlatsMm": 4.5,
+    "workingEndOuterDiameterMm": 8,
+    "workingEndLengthMm": 18,
+    "socketDepthMm": 9,
+    "shaftLengthMm": 75,
+    "overallLengthMm": 145,
+    "handleDiameterMm": 13,
+    "modeling": "Conservative8mm cylinder for all75mm of metal shaft,plus13mm handle; not an exact cosmetic tool mesh.",
+    "publishedPriceExTaxJpy": 360,
+    "catalog": "https://online.fliphtml5.com/jhzqw/fqqa/",
+    "catalogYear": 2026,
+    "printedPage": 69,
+    "pdfPage": 72
+  },
+  "scene": "Prepare and tighten the CEF-integrated foot module before adding the other leg links or mounting it on the body. Every foot component is present.",
+  "gripEnvelope": {
+    "diameterMm": 70,
+    "lengthMm": 75,
+    "basis": "Declared design clearance around the handle,not a measured hand or an ergonomics guarantee."
+  },
+  "records": [
+    {
+      "targetNut": "H_LOCK_NUT_M2_001",
+      "sceneInstances": [
+        "P_LEG_CEF_L_001",
+        "P_FOOT_SLIDER_L_001",
+        "P_FOOT_ROCKER_L_001",
+        "H_FOOT_SPRING_001",
+        "H_FOOT_SPRING_002",
+        "H_SLEEVE_2_20_005",
+        "H_BOLT_M2_30_002",
+        "H_WASHER_2_016",
+        "H_NUT_M2_017",
+        "H_NUT_M2_018",
+        "H_WASHER_3_053",
+        "H_WASHER_4_043",
+        "H_WASHER_4_044",
+        "H_WASHER_3_054",
+        "H_SLEEVE_2_8_005",
+        "H_BOLT_M2_12_001",
+        "H_WASHER_2_017",
+        "H_WASHER_2_018",
+        "H_LOCK_NUT_M2_001",
+        "H_WASHER_4_SMALL_001",
+        "H_WASHER_4_SMALL_002"
+      ],
+      "status": "PASS",
+      "insertionSamples": [
+        {
+          "withdrawalMm": 40,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 20,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 10,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 5,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 2,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 0,
+          "intersections": []
+        }
+      ],
+      "fullRotationEnvelopeIntersections": [],
+      "gripEnvelopeIntersections": [],
+      "rotationTargetContactTreatment": "Exact hex engagement checked with target present; the continuous outer-tool rotation envelope excludes only that actively driven nut. All other foot parts remain."
+    },
+    {
+      "targetNut": "H_LOCK_NUT_M2_002",
+      "sceneInstances": [
+        "P_LEG_CEF_R_001",
+        "P_FOOT_SLIDER_R_001",
+        "P_FOOT_ROCKER_R_001",
+        "H_FOOT_SPRING_003",
+        "H_FOOT_SPRING_004",
+        "H_SLEEVE_2_20_010",
+        "H_BOLT_M2_30_004",
+        "H_WASHER_2_030",
+        "H_NUT_M2_031",
+        "H_NUT_M2_032",
+        "H_WASHER_3_055",
+        "H_WASHER_4_055",
+        "H_WASHER_4_056",
+        "H_WASHER_3_056",
+        "H_SLEEVE_2_8_008",
+        "H_BOLT_M2_12_002",
+        "H_WASHER_2_031",
+        "H_WASHER_2_032",
+        "H_LOCK_NUT_M2_002",
+        "H_WASHER_4_SMALL_003",
+        "H_WASHER_4_SMALL_004"
+      ],
+      "status": "PASS",
+      "insertionSamples": [
+        {
+          "withdrawalMm": 40,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 20,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 10,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 5,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 2,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 0,
+          "intersections": []
+        }
+      ],
+      "fullRotationEnvelopeIntersections": [],
+      "gripEnvelopeIntersections": [],
+      "rotationTargetContactTreatment": "Exact hex engagement checked with target present; the continuous outer-tool rotation envelope excludes only that actively driven nut. All other foot parts remain."
+    },
+    {
+      "targetNut": "H_LOCK_NUT_M2_003",
+      "sceneInstances": [
+        "P_LEG_CEF_L_002",
+        "P_FOOT_SLIDER_L_002",
+        "P_FOOT_ROCKER_L_002",
+        "H_FOOT_SPRING_005",
+        "H_FOOT_SPRING_006",
+        "H_SLEEVE_2_20_015",
+        "H_BOLT_M2_30_006",
+        "H_WASHER_2_044",
+        "H_NUT_M2_045",
+        "H_NUT_M2_046",
+        "H_WASHER_3_057",
+        "H_WASHER_4_067",
+        "H_WASHER_4_068",
+        "H_WASHER_3_058",
+        "H_SLEEVE_2_8_011",
+        "H_BOLT_M2_12_003",
+        "H_WASHER_2_045",
+        "H_WASHER_2_046",
+        "H_LOCK_NUT_M2_003",
+        "H_WASHER_4_SMALL_005",
+        "H_WASHER_4_SMALL_006"
+      ],
+      "status": "PASS",
+      "insertionSamples": [
+        {
+          "withdrawalMm": 40,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 20,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 10,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 5,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 2,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 0,
+          "intersections": []
+        }
+      ],
+      "fullRotationEnvelopeIntersections": [],
+      "gripEnvelopeIntersections": [],
+      "rotationTargetContactTreatment": "Exact hex engagement checked with target present; the continuous outer-tool rotation envelope excludes only that actively driven nut. All other foot parts remain."
+    },
+    {
+      "targetNut": "H_LOCK_NUT_M2_004",
+      "sceneInstances": [
+        "P_LEG_CEF_R_002",
+        "P_FOOT_SLIDER_R_002",
+        "P_FOOT_ROCKER_R_002",
+        "H_FOOT_SPRING_007",
+        "H_FOOT_SPRING_008",
+        "H_SLEEVE_2_20_020",
+        "H_BOLT_M2_30_008",
+        "H_WASHER_2_058",
+        "H_NUT_M2_059",
+        "H_NUT_M2_060",
+        "H_WASHER_3_059",
+        "H_WASHER_4_079",
+        "H_WASHER_4_080",
+        "H_WASHER_3_060",
+        "H_SLEEVE_2_8_014",
+        "H_BOLT_M2_12_004",
+        "H_WASHER_2_059",
+        "H_WASHER_2_060",
+        "H_LOCK_NUT_M2_004",
+        "H_WASHER_4_SMALL_007",
+        "H_WASHER_4_SMALL_008"
+      ],
+      "status": "PASS",
+      "insertionSamples": [
+        {
+          "withdrawalMm": 40,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 20,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 10,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 5,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 2,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 0,
+          "intersections": []
+        }
+      ],
+      "fullRotationEnvelopeIntersections": [],
+      "gripEnvelopeIntersections": [],
+      "rotationTargetContactTreatment": "Exact hex engagement checked with target present; the continuous outer-tool rotation envelope excludes only that actively driven nut. All other foot parts remain."
+    },
+    {
+      "targetNut": "H_LOCK_NUT_M2_005",
+      "sceneInstances": [
+        "P_LEG_CEF_L_003",
+        "P_FOOT_SLIDER_L_003",
+        "P_FOOT_ROCKER_L_003",
+        "H_FOOT_SPRING_009",
+        "H_FOOT_SPRING_010",
+        "H_SLEEVE_2_20_025",
+        "H_BOLT_M2_30_010",
+        "H_WASHER_2_072",
+        "H_NUT_M2_073",
+        "H_NUT_M2_074",
+        "H_WASHER_3_061",
+        "H_WASHER_4_091",
+        "H_WASHER_4_092",
+        "H_WASHER_3_062",
+        "H_SLEEVE_2_8_017",
+        "H_BOLT_M2_12_005",
+        "H_WASHER_2_073",
+        "H_WASHER_2_074",
+        "H_LOCK_NUT_M2_005",
+        "H_WASHER_4_SMALL_009",
+        "H_WASHER_4_SMALL_010"
+      ],
+      "status": "PASS",
+      "insertionSamples": [
+        {
+          "withdrawalMm": 40,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 20,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 10,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 5,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 2,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 0,
+          "intersections": []
+        }
+      ],
+      "fullRotationEnvelopeIntersections": [],
+      "gripEnvelopeIntersections": [],
+      "rotationTargetContactTreatment": "Exact hex engagement checked with target present; the continuous outer-tool rotation envelope excludes only that actively driven nut. All other foot parts remain."
+    },
+    {
+      "targetNut": "H_LOCK_NUT_M2_006",
+      "sceneInstances": [
+        "P_LEG_CEF_R_003",
+        "P_FOOT_SLIDER_R_003",
+        "P_FOOT_ROCKER_R_003",
+        "H_FOOT_SPRING_011",
+        "H_FOOT_SPRING_012",
+        "H_SLEEVE_2_20_030",
+        "H_BOLT_M2_30_012",
+        "H_WASHER_2_086",
+        "H_NUT_M2_087",
+        "H_NUT_M2_088",
+        "H_WASHER_3_063",
+        "H_WASHER_4_103",
+        "H_WASHER_4_104",
+        "H_WASHER_3_064",
+        "H_SLEEVE_2_8_020",
+        "H_BOLT_M2_12_006",
+        "H_WASHER_2_087",
+        "H_WASHER_2_088",
+        "H_LOCK_NUT_M2_006",
+        "H_WASHER_4_SMALL_011",
+        "H_WASHER_4_SMALL_012"
+      ],
+      "status": "PASS",
+      "insertionSamples": [
+        {
+          "withdrawalMm": 40,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 20,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 10,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 5,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 2,
+          "intersections": []
+        },
+        {
+          "withdrawalMm": 0,
+          "intersections": []
+        }
+      ],
+      "fullRotationEnvelopeIntersections": [],
+      "gripEnvelopeIntersections": [],
+      "rotationTargetContactTreatment": "Exact hex engagement checked with target present; the continuous outer-tool rotation envelope excludes only that actively driven nut. All other foot parts remain."
+    }
+  ],
+  "toolModelAndPublishedDimensionsConfirmed": true,
+  "actualToolOwnershipOrOperationConfirmed": false,
+  "limits": [
+    "Nylon locking function is not a tested holding-torque or reuse equivalent to two jam nuts.",
+    "The opposite M2 cap screw is held with a normal1.5mm hex tool; actual tightening and prevailing torque remain untested.",
+    "Parts,tool and hands have not been physically fitted. Stock acceptance and final fit checks remain mandatory."
+  ]
+}

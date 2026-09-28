@@ -1,10 +1,10 @@
 {
   "designId": "C",
-  "revisionId": "v3-integrated-walkers-r7-15",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "poses": [
     "saved reference assembly"
   ],
-  "exactPairsTested": 1901,
+  "exactPairsTested": 1879,
   "limited": false,
   "unintendedIntersections": [],
   "declaredThreadAndClampInterfaces": [
@@ -514,417 +514,387 @@
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_005",
+      "a": "H_BOLT_M2_12_001",
+      "b": "H_LOCK_NUT_M2_001",
+      "reason": "coaxial corresponding screw/nut nominal threads"
+    },
+    {
+      "a": "H_BOLT_M2_30_003",
       "b": "H_NUT_M2_019",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_005",
+      "a": "H_BOLT_M2_30_003",
       "b": "H_NUT_M2_020",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_003",
+      "a": "H_BOLT_M2_25_004",
       "b": "H_NUT_M2_021",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_003",
+      "a": "H_BOLT_M2_25_004",
       "b": "H_NUT_M2_022",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_004",
+      "a": "H_BOLT_M2_16_005",
       "b": "H_NUT_M2_023",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_004",
+      "a": "H_BOLT_M2_16_005",
       "b": "H_NUT_M2_024",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_006",
+      "a": "H_BOLT_M2_25_005",
       "b": "H_NUT_M2_025",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_006",
+      "a": "H_BOLT_M2_25_005",
       "b": "H_NUT_M2_026",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_005",
+      "a": "H_BOLT_M2_16_006",
       "b": "H_NUT_M2_027",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_005",
+      "a": "H_BOLT_M2_16_006",
       "b": "H_NUT_M2_028",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_007",
+      "a": "H_BOLT_M2_25_006",
       "b": "H_NUT_M2_029",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_007",
+      "a": "H_BOLT_M2_25_006",
       "b": "H_NUT_M2_030",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_006",
+      "a": "H_BOLT_M2_30_004",
       "b": "H_NUT_M2_031",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_006",
+      "a": "H_BOLT_M2_30_004",
       "b": "H_NUT_M2_032",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_004",
+      "a": "H_BOLT_M2_12_002",
+      "b": "H_LOCK_NUT_M2_002",
+      "reason": "coaxial corresponding screw/nut nominal threads"
+    },
+    {
+      "a": "H_BOLT_M2_30_005",
       "b": "H_NUT_M2_033",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_004",
+      "a": "H_BOLT_M2_30_005",
       "b": "H_NUT_M2_034",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_008",
+      "a": "H_BOLT_M2_25_007",
       "b": "H_NUT_M2_035",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_008",
+      "a": "H_BOLT_M2_25_007",
       "b": "H_NUT_M2_036",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_005",
+      "a": "H_BOLT_M2_16_007",
       "b": "H_NUT_M2_037",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_005",
+      "a": "H_BOLT_M2_16_007",
       "b": "H_NUT_M2_038",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_007",
+      "a": "H_BOLT_M2_25_008",
       "b": "H_NUT_M2_039",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_007",
+      "a": "H_BOLT_M2_25_008",
       "b": "H_NUT_M2_040",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_009",
+      "a": "H_BOLT_M2_16_008",
       "b": "H_NUT_M2_041",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_009",
+      "a": "H_BOLT_M2_16_008",
       "b": "H_NUT_M2_042",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_008",
+      "a": "H_BOLT_M2_25_009",
       "b": "H_NUT_M2_043",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_008",
+      "a": "H_BOLT_M2_25_009",
       "b": "H_NUT_M2_044",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_010",
+      "a": "H_BOLT_M2_30_006",
       "b": "H_NUT_M2_045",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_010",
+      "a": "H_BOLT_M2_30_006",
       "b": "H_NUT_M2_046",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_009",
+      "a": "H_BOLT_M2_12_003",
+      "b": "H_LOCK_NUT_M2_003",
+      "reason": "coaxial corresponding screw/nut nominal threads"
+    },
+    {
+      "a": "H_BOLT_M2_30_007",
       "b": "H_NUT_M2_047",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_009",
+      "a": "H_BOLT_M2_30_007",
       "b": "H_NUT_M2_048",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_006",
+      "a": "H_BOLT_M2_25_010",
       "b": "H_NUT_M2_049",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_006",
+      "a": "H_BOLT_M2_25_010",
       "b": "H_NUT_M2_050",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_011",
+      "a": "H_BOLT_M2_16_009",
       "b": "H_NUT_M2_051",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_011",
+      "a": "H_BOLT_M2_16_009",
       "b": "H_NUT_M2_052",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_007",
+      "a": "H_BOLT_M2_25_011",
       "b": "H_NUT_M2_053",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_007",
+      "a": "H_BOLT_M2_25_011",
       "b": "H_NUT_M2_054",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_010",
+      "a": "H_BOLT_M2_16_010",
       "b": "H_NUT_M2_055",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_010",
+      "a": "H_BOLT_M2_16_010",
       "b": "H_NUT_M2_056",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_012",
+      "a": "H_BOLT_M2_25_012",
       "b": "H_NUT_M2_057",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_012",
+      "a": "H_BOLT_M2_25_012",
       "b": "H_NUT_M2_058",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_011",
+      "a": "H_BOLT_M2_30_008",
       "b": "H_NUT_M2_059",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_011",
+      "a": "H_BOLT_M2_30_008",
       "b": "H_NUT_M2_060",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_013",
+      "a": "H_BOLT_M2_12_004",
+      "b": "H_LOCK_NUT_M2_004",
+      "reason": "coaxial corresponding screw/nut nominal threads"
+    },
+    {
+      "a": "H_BOLT_M2_30_009",
       "b": "H_NUT_M2_061",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_013",
+      "a": "H_BOLT_M2_30_009",
       "b": "H_NUT_M2_062",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_012",
+      "a": "H_BOLT_M2_25_013",
       "b": "H_NUT_M2_063",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_012",
+      "a": "H_BOLT_M2_25_013",
       "b": "H_NUT_M2_064",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_008",
+      "a": "H_BOLT_M2_16_011",
       "b": "H_NUT_M2_065",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_008",
+      "a": "H_BOLT_M2_16_011",
       "b": "H_NUT_M2_066",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_014",
+      "a": "H_BOLT_M2_25_014",
       "b": "H_NUT_M2_067",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_014",
+      "a": "H_BOLT_M2_25_014",
       "b": "H_NUT_M2_068",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_009",
+      "a": "H_BOLT_M2_16_012",
       "b": "H_NUT_M2_069",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_009",
+      "a": "H_BOLT_M2_16_012",
       "b": "H_NUT_M2_070",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_013",
+      "a": "H_BOLT_M2_25_015",
       "b": "H_NUT_M2_071",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_013",
+      "a": "H_BOLT_M2_25_015",
       "b": "H_NUT_M2_072",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_015",
+      "a": "H_BOLT_M2_30_010",
       "b": "H_NUT_M2_073",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_015",
+      "a": "H_BOLT_M2_30_010",
       "b": "H_NUT_M2_074",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_014",
+      "a": "H_BOLT_M2_12_005",
+      "b": "H_LOCK_NUT_M2_005",
+      "reason": "coaxial corresponding screw/nut nominal threads"
+    },
+    {
+      "a": "H_BOLT_M2_30_011",
       "b": "H_NUT_M2_075",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_014",
+      "a": "H_BOLT_M2_30_011",
       "b": "H_NUT_M2_076",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_016",
+      "a": "H_BOLT_M2_25_016",
       "b": "H_NUT_M2_077",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_016",
+      "a": "H_BOLT_M2_25_016",
       "b": "H_NUT_M2_078",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_015",
+      "a": "H_BOLT_M2_16_013",
       "b": "H_NUT_M2_079",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_015",
+      "a": "H_BOLT_M2_16_013",
       "b": "H_NUT_M2_080",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_010",
+      "a": "H_BOLT_M2_25_017",
       "b": "H_NUT_M2_081",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_010",
+      "a": "H_BOLT_M2_25_017",
       "b": "H_NUT_M2_082",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_017",
+      "a": "H_BOLT_M2_16_014",
       "b": "H_NUT_M2_083",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_017",
+      "a": "H_BOLT_M2_16_014",
       "b": "H_NUT_M2_084",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_011",
+      "a": "H_BOLT_M2_25_018",
       "b": "H_NUT_M2_085",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_30_011",
+      "a": "H_BOLT_M2_25_018",
       "b": "H_NUT_M2_086",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_016",
+      "a": "H_BOLT_M2_30_012",
       "b": "H_NUT_M2_087",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_25_016",
+      "a": "H_BOLT_M2_30_012",
       "b": "H_NUT_M2_088",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_018",
-      "b": "H_NUT_M2_089",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_16_018",
-      "b": "H_NUT_M2_090",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_25_017",
-      "b": "H_NUT_M2_091",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_25_017",
-      "b": "H_NUT_M2_092",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_16_019",
-      "b": "H_NUT_M2_093",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_16_019",
-      "b": "H_NUT_M2_094",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_25_018",
-      "b": "H_NUT_M2_095",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_25_018",
-      "b": "H_NUT_M2_096",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_30_012",
-      "b": "H_NUT_M2_097",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_30_012",
-      "b": "H_NUT_M2_098",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_16_020",
-      "b": "H_NUT_M2_099",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_16_020",
-      "b": "H_NUT_M2_100",
+      "a": "H_BOLT_M2_12_006",
+      "b": "H_LOCK_NUT_M2_006",
       "reason": "coaxial corresponding screw/nut nominal threads"
     }
   ],
   "status": "PASS",
-  "elapsedSeconds": 85.01671925000119,
+  "elapsedSeconds": 74.34023341699503,
   "scope": "static saved B-reps only; no full-cycle or tolerance sweep approval"
 }

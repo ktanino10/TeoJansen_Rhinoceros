@@ -1,28 +1,26 @@
 {
-  "sourceCommit": "49d1186130ae7ec3e23610490ae2e376bd9d31a5",
-  "sourceHash": "54cead48c4f60f37b9422efdd905b3aabad12c4c1b425cd26589b811a3591168",
-  "status": "PASS_LIMITED_EXPORT_CONSISTENCY",
-  "scope": "Same existing solver at the same 0.5 degree grid; compare unchanged saved work budgets/profiles and sampled force/floor/periodicity consistency. Not an independent physics review.",
-  "geometryOrPhysicalInputsChanged": false,
+  "sourceCommit": "299711c11bb755be1d8a19de132129e59eab944e",
+  "sourceHash": "0052499d81d46db6ae9b3834162dfe6e546f80d1f14b46571e90d9f64f2fd530",
+  "status": "PASS_CURRENT_INPUT_EXPORT_CONSISTENCY",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
+  "scope": "Current corrected geometry and actual nominal masses,not the obsolete r7-15 values. Same solver repeat and sampled frame force/floor/periodicity checks; not an independent physics review or real walking.",
   "independentRockerAnglesAvailable": false,
   "designs": [
     {
       "designId": "A",
       "frameCount": 73,
       "rawPhaseCount": 720,
-      "contactFramesSha256": "ca1a75dc273a9bece2fd9326a7ca465934dc56fdf3ba08b75c93abdec0791acf",
-      "unchangedReferenceWorkBudgetSha256": "f75ad2bf983a58654e86a25cf8c2a3a41dd131eaec90e5661c5e403d885fd2f9",
-      "allExistingBudgetFieldsComparedExceptAnalysisSourceHashes": true,
-      "maximumAbsoluteNumericBudgetDifference": 0.0,
-      "maximumWorkProfileDifference": 0.0,
-      "maximumFrameForceBalanceErrorN": 1.9539925233402755e-13,
-      "maximumFrameFloorPenetrationMm": 1.3322676295501878e-14,
+      "contactFramesSha256": "ee7b042c5632027e32934096ca776f192d9e11eacca734ca4922eeb18c8ff0b3",
+      "matchingCurrentWorkBudgetSha256": "427c101b1bab21a3dc3468cbc370c934957ed9ebc3cb24068e48266b95cd378c",
+      "repeatBudgetAndProfileExactlyMatch": true,
+      "maximumNormalBalanceErrorN": 1.900701818158268e-13,
+      "maximumModeledFloorPenetrationMm": 1.3322676295501878e-14,
       "representativeFrames": [
         {
           "crankDeg": 0.0,
-          "normalForceBalanceErrorN": 8.704148513061227e-14,
-          "minimumModeledFloorGapMm": -4.440892098500626e-15,
-          "maximumCompressionMm": 2.991364134223028,
+          "normalBalanceErrorN": 7.283063041541027e-14,
+          "minimumModeledFloorGapMm": -7.993605777301127e-15,
+          "maximumCompressionMm": 2.9635102372260222,
           "integratedPlanarComponents": [
             0.0,
             0.0,
@@ -31,35 +29,35 @@
         },
         {
           "crankDeg": 90.0,
-          "normalForceBalanceErrorN": 1.687538997430238e-13,
-          "minimumModeledFloorGapMm": -9.769962616701378e-15,
-          "maximumCompressionMm": 1.9938732954348362,
+          "normalBalanceErrorN": 1.0125233984581428e-13,
+          "minimumModeledFloorGapMm": -5.329070518200751e-15,
+          "maximumCompressionMm": 1.977726555700641,
           "integratedPlanarComponents": [
-            -1.1410183863949106,
-            -29.791118007527377,
-            0.004768619299932343
+            -1.1347008042043074,
+            -29.78683035106809,
+            0.004738403528263459
           ]
         },
         {
           "crankDeg": 180.0,
-          "normalForceBalanceErrorN": 2.842170943040401e-14,
-          "minimumModeledFloorGapMm": -4.440892098500626e-15,
-          "maximumCompressionMm": 2.68620830587846,
+          "normalBalanceErrorN": 7.105427357601002e-14,
+          "minimumModeledFloorGapMm": -3.552713678800501e-15,
+          "maximumCompressionMm": 2.6571383594610216,
           "integratedPlanarComponents": [
-            -1.5729472787061198,
-            -45.99606054218656,
-            0.006141735909140818
+            -1.5582824442806125,
+            -45.99279633677033,
+            0.006092641622659307
           ]
         },
         {
           "crankDeg": 360.0,
-          "normalForceBalanceErrorN": 8.704148513061227e-14,
-          "minimumModeledFloorGapMm": -4.440892098500626e-15,
-          "maximumCompressionMm": 2.991364134223028,
+          "normalBalanceErrorN": 7.283063041541027e-14,
+          "minimumModeledFloorGapMm": -7.993605777301127e-15,
+          "maximumCompressionMm": 2.9635102372260222,
           "integratedPlanarComponents": [
-            0.03948777158238381,
-            -92.38646606774543,
-            0.0007234471825259641
+            0.03949168042662453,
+            -92.38203589398118,
+            0.0007248564792522736
           ]
         }
       ]
@@ -68,19 +66,17 @@
       "designId": "B",
       "frameCount": 73,
       "rawPhaseCount": 720,
-      "contactFramesSha256": "63068c2273a065e442d595e1fde0ab851d92b7ea23b36e36db641a97dc251227",
-      "unchangedReferenceWorkBudgetSha256": "4639c77967813e841832211b6a062aa97ea12bf5c215a7ccae35e3d27c13a9ce",
-      "allExistingBudgetFieldsComparedExceptAnalysisSourceHashes": true,
-      "maximumAbsoluteNumericBudgetDifference": 0.0,
-      "maximumWorkProfileDifference": 0.0,
-      "maximumFrameForceBalanceErrorN": 1.9895196601282805e-13,
-      "maximumFrameFloorPenetrationMm": 1.3322676295501878e-14,
+      "contactFramesSha256": "638f4da211c134c130ff9b544e0f603d6684274fc9f0e372113007a9aff1378e",
+      "matchingCurrentWorkBudgetSha256": "4a908dbb9039b44fdafb99aa1c68fbbc632b4a9556db6676a604b9b69de55250",
+      "repeatBudgetAndProfileExactlyMatch": true,
+      "maximumNormalBalanceErrorN": 2.3447910280083306e-13,
+      "maximumModeledFloorPenetrationMm": 1.2434497875801753e-14,
       "representativeFrames": [
         {
           "crankDeg": 0.0,
-          "normalForceBalanceErrorN": 3.019806626980426e-14,
-          "minimumModeledFloorGapMm": -5.329070518200751e-15,
-          "maximumCompressionMm": 2.9292533811482393,
+          "normalBalanceErrorN": 7.460698725481052e-14,
+          "minimumModeledFloorGapMm": -7.105427357601002e-15,
+          "maximumCompressionMm": 2.9012962173894095,
           "integratedPlanarComponents": [
             0.0,
             0.0,
@@ -89,35 +85,35 @@
         },
         {
           "crankDeg": 90.0,
-          "normalForceBalanceErrorN": 1.1191048088221578e-13,
-          "minimumModeledFloorGapMm": -1.2434497875801753e-14,
-          "maximumCompressionMm": 2.0389151985031737,
+          "normalBalanceErrorN": 6.039613253960852e-14,
+          "minimumModeledFloorGapMm": -3.552713678800501e-15,
+          "maximumCompressionMm": 2.0255189721547837,
           "integratedPlanarComponents": [
-            -1.1115830263904496,
-            -30.13753485534614,
-            0.004342786327379811
+            -1.1056310677635255,
+            -30.134246678526697,
+            0.004314132471847626
           ]
         },
         {
           "crankDeg": 180.0,
-          "normalForceBalanceErrorN": 3.019806626980426e-14,
+          "normalBalanceErrorN": 1.2434497875801753e-14,
           "minimumModeledFloorGapMm": -7.993605777301127e-15,
-          "maximumCompressionMm": 2.952128551374271,
+          "maximumCompressionMm": 2.923040629001351,
           "integratedPlanarComponents": [
-            -1.646249175814535,
-            -46.3138535722968,
-            0.005970069960949955
+            -1.6316112697478247,
+            -46.311354286443674,
+            0.005921883530027373
           ]
         },
         {
           "crankDeg": 360.0,
-          "normalForceBalanceErrorN": 3.019806626980426e-14,
-          "minimumModeledFloorGapMm": -5.329070518200751e-15,
-          "maximumCompressionMm": 2.9292533811482393,
+          "normalBalanceErrorN": 7.460698725481052e-14,
+          "minimumModeledFloorGapMm": -7.105427357601002e-15,
+          "maximumCompressionMm": 2.9012962173894095,
           "integratedPlanarComponents": [
-            -0.006899403500824563,
-            -92.5870090561924,
-            0.00037284918994796666
+            -0.0067347986009169145,
+            -92.58384517377537,
+            0.0003717221885217276
           ]
         }
       ]
@@ -126,19 +122,17 @@
       "designId": "C",
       "frameCount": 73,
       "rawPhaseCount": 720,
-      "contactFramesSha256": "c21179ebfbe5c989a0087664d9ab0b995504070ca7cdc138aee50a23bec0847d",
-      "unchangedReferenceWorkBudgetSha256": "9926ae89d3d7a58a59c53cff61e147f06004de20308de749df5128c33ae466d3",
-      "allExistingBudgetFieldsComparedExceptAnalysisSourceHashes": true,
-      "maximumAbsoluteNumericBudgetDifference": 0.0,
-      "maximumWorkProfileDifference": 0.0,
-      "maximumFrameForceBalanceErrorN": 2.220446049250313e-13,
-      "maximumFrameFloorPenetrationMm": 1.2434497875801753e-14,
+      "contactFramesSha256": "391c97577e18b755a741f0d57b466c32d4fe3ac0627a5d6a66fd16fbad220f11",
+      "matchingCurrentWorkBudgetSha256": "4a9f4d87bd968964da5e72b7c266af203ea7bc0664ea6c51a14631d03e124a5e",
+      "repeatBudgetAndProfileExactlyMatch": true,
+      "maximumNormalBalanceErrorN": 2.362554596402333e-13,
+      "maximumModeledFloorPenetrationMm": 1.3322676295501878e-14,
       "representativeFrames": [
         {
           "crankDeg": 0.0,
-          "normalForceBalanceErrorN": 5.5067062021407764e-14,
-          "minimumModeledFloorGapMm": 1.7763568394002505e-15,
-          "maximumCompressionMm": 2.8863301231728995,
+          "normalBalanceErrorN": 1.2967404927621828e-13,
+          "minimumModeledFloorGapMm": -1.0658141036401503e-14,
+          "maximumCompressionMm": 2.8427409764044027,
           "integratedPlanarComponents": [
             0.0,
             0.0,
@@ -147,35 +141,35 @@
         },
         {
           "crankDeg": 90.0,
-          "normalForceBalanceErrorN": 1.8474111129762605e-13,
-          "minimumModeledFloorGapMm": -8.881784197001252e-15,
-          "maximumCompressionMm": 1.9362827844686656,
+          "normalBalanceErrorN": 1.9539925233402755e-14,
+          "minimumModeledFloorGapMm": -7.105427357601002e-15,
+          "maximumCompressionMm": 1.9104881430792222,
           "integratedPlanarComponents": [
-            -1.1147414559822808,
-            -29.84415409002451,
-            0.004602742865173502
+            -1.105091375316178,
+            -29.828526686779274,
+            0.004555667197163806
           ]
         },
         {
           "crankDeg": 180.0,
-          "normalForceBalanceErrorN": 1.4033219031261979e-13,
-          "minimumModeledFloorGapMm": -5.329070518200751e-15,
-          "maximumCompressionMm": 2.647315030120931,
+          "normalBalanceErrorN": 7.105427357601002e-14,
+          "minimumModeledFloorGapMm": -7.105427357601002e-15,
+          "maximumCompressionMm": 2.595325246483296,
           "integratedPlanarComponents": [
-            -1.5375657936155565,
-            -46.04664302203148,
-            0.0059617196495407665
+            -1.5113727093584144,
+            -46.03345025543123,
+            0.0058764426561599935
           ]
         },
         {
           "crankDeg": 360.0,
-          "normalForceBalanceErrorN": 5.5067062021407764e-14,
-          "minimumModeledFloorGapMm": 1.7763568394002505e-15,
-          "maximumCompressionMm": 2.8863301231728995,
+          "normalBalanceErrorN": 1.2967404927621828e-13,
+          "minimumModeledFloorGapMm": -1.0658141036401503e-14,
+          "maximumCompressionMm": 2.8427409764044027,
           "integratedPlanarComponents": [
-            0.031088825707921642,
-            -92.40149017483566,
-            0.000654000167292609
+            0.03183194684047817,
+            -92.38813489623945,
+            0.0006488949789036628
           ]
         }
       ]

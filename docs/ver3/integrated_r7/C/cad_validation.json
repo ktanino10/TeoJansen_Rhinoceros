@@ -1,19 +1,19 @@
 {
   "designId": "C",
-  "nativeObjects": 756,
-  "nativeSolids": 794,
-  "stepSolids": 794,
-  "nativeVolumeBySolidsMm3": 525320.9534948117,
-  "stepVolumeBySolidsMm3": 525320.9527043812,
-  "totalRelativeVolumeDifference": 1.5046619794139814e-09,
-  "maximumBoundsDifferenceMm": 9.632117325963918e-11,
+  "nativeObjects": 750,
+  "nativeSolids": 788,
+  "stepSolids": 788,
+  "nativeVolumeBySolidsMm3": 513804.93209996255,
+  "stepVolumeBySolidsMm3": 513804.931313679,
+  "totalRelativeVolumeDifference": 1.5303153555048222e-09,
+  "maximumBoundsDifferenceMm": 1.0007283890445251e-10,
   "surfaceChecks": [],
-  "massG": 1049.2401540565288,
-  "printedMassG": 528.1659118602923,
+  "massG": 1031.4327899206955,
+  "printedMassG": 525.3122339103058,
   "nominalCogMm": [
-    2.5851620925565113,
-    -16.8774332127113,
-    117.44336624191853
+    2.731905093625136,
+    -17.10269883161391,
+    115.69066148633486
   ],
   "tolerances": {
     "totalVolumeRelative": 1e-05,

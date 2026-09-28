@@ -1,5 +1,5 @@
 {
-  "revisionId": "v3-integrated-walkers-r7-15",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "designId": "A",
   "windCases": [
     {
@@ -16,38 +16,61 @@
         "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
       },
       "nominalSupport": true,
+      "nonContactFloor": {
+        "caseId": "speed80percent",
+        "status": "PASS",
+        "phaseCount": 720,
+        "checkedInstances": 750,
+        "maximumModeledFootNormalN": 5.577018747541959,
+        "modeledFloorUpperBoundMm": 0.3,
+        "profileAllowance": {
+          "linkAndCutPetMm": 0.30000000000000004,
+          "otherNominalHardwareMm": 0,
+          "basis": "Declared effective link-pitch error is also included in the solved joint positions; only nominal retained link profiles and cut PET receive this extra conservative material-bound reserve. Purchased-part dimensional tolerance remains unqualified."
+        },
+        "worst": {
+          "instance": "H_NUT_M2_019",
+          "partId": "H_LOCK_NUT_M2",
+          "minimumBoundZMm": 1.0752943401893233,
+          "minimumReservedClearanceMm": 0.7752943401893233,
+          "additionalProfileAllowanceMm": 0.0,
+          "crankDeg": 319.5,
+          "status": "PASS"
+        },
+        "failures": []
+      },
       "cases": [
         {
           "case": "low",
           "rawSupplyMinimumNm": 0.001034600830092047,
-          "requiredInputMaximumNm": 0.0007810336945087285,
-          "rawPhaseMinimumMarginNm": 0.0002536115862391663,
-          "rawEnvelopeMarginNm": 0.00025356713558331856,
-          "halfProxyPhaseMinimumMarginNm": -0.00026369082567426715,
-          "downstream2xPhaseMinimumMarginNm": -0.0003273816513485344,
-          "maximumInputBearingPairForRawBalanceNm": 0.0004536115862391663,
+          "requiredInputMaximumNm": 0.0007754276044010382,
+          "rawPhaseMinimumMarginNm": 0.0002592179683031192,
+          "rawEnvelopeMarginNm": 0.00025917322569100887,
+          "halfProxyPhaseMinimumMarginNm": -0.0002580844436103143,
+          "downstream2xPhaseMinimumMarginNm": -0.0003161688872206287,
+          "maximumInputBearingPairForRawBalanceNm": 0.00045921796830311916,
           "rawReferenceBudgetStatus": "PASS"
         },
         {
           "case": "nominal",
           "rawSupplyMinimumNm": 0.001034600830092047,
-          "requiredInputMaximumNm": 0.0014382105702560434,
-          "rawPhaseMinimumMarginNm": -0.0004035573973018788,
-          "rawEnvelopeMarginNm": -0.00040360974016399637,
-          "halfProxyPhaseMinimumMarginNm": -0.0009208598092153123,
-          "downstream2xPhaseMinimumMarginNm": -0.0012417196184306247,
-          "maximumInputBearingPairForRawBalanceNm": 0.00019644260269812113,
+          "requiredInputMaximumNm": 0.0014306473372249179,
+          "rawPhaseMinimumMarginNm": -0.0003959937507174542,
+          "rawEnvelopeMarginNm": -0.0003960465071328708,
+          "halfProxyPhaseMinimumMarginNm": -0.0009132961626308877,
+          "downstream2xPhaseMinimumMarginNm": -0.0012265923252617755,
+          "maximumInputBearingPairForRawBalanceNm": 0.00020400624928254573,
           "rawReferenceBudgetStatus": "FAIL"
         },
         {
           "case": "high",
           "rawSupplyMinimumNm": 0.001034600830092047,
-          "requiredInputMaximumNm": 0.0037185992547103196,
-          "rawPhaseMinimumMarginNm": -0.002683921743635181,
-          "rawEnvelopeMarginNm": -0.0026839984246182728,
-          "halfProxyPhaseMinimumMarginNm": -0.0032012241555486143,
-          "downstream2xPhaseMinimumMarginNm": -0.0044024483110972285,
-          "maximumInputBearingPairForRawBalanceNm": -0.0006839217436351809,
+          "requiredInputMaximumNm": 0.0037049296956772745,
+          "rawPhaseMinimumMarginNm": -0.0026702513983459155,
+          "rawEnvelopeMarginNm": -0.002670328865585227,
+          "halfProxyPhaseMinimumMarginNm": -0.003187553810259349,
+          "downstream2xPhaseMinimumMarginNm": -0.004375107620518698,
+          "maximumInputBearingPairForRawBalanceNm": -0.0006702513983459155,
           "rawReferenceBudgetStatus": "FAIL"
         }
       ]
@@ -66,38 +89,61 @@
         "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
       },
       "nominalSupport": true,
+      "nonContactFloor": {
+        "caseId": "speed120percent",
+        "status": "PASS",
+        "phaseCount": 720,
+        "checkedInstances": 750,
+        "maximumModeledFootNormalN": 5.614602976132626,
+        "modeledFloorUpperBoundMm": 0.3,
+        "profileAllowance": {
+          "linkAndCutPetMm": 0.30000000000000004,
+          "otherNominalHardwareMm": 0,
+          "basis": "Declared effective link-pitch error is also included in the solved joint positions; only nominal retained link profiles and cut PET receive this extra conservative material-bound reserve. Purchased-part dimensional tolerance remains unqualified."
+        },
+        "worst": {
+          "instance": "H_NUT_M2_019",
+          "partId": "H_LOCK_NUT_M2",
+          "minimumBoundZMm": 1.0709849280365447,
+          "minimumReservedClearanceMm": 0.7709849280365446,
+          "additionalProfileAllowanceMm": 0.0,
+          "crankDeg": 319.5,
+          "status": "PASS"
+        },
+        "failures": []
+      },
       "cases": [
         {
           "case": "low",
           "rawSupplyMinimumNm": 0.002327851867707105,
-          "requiredInputMaximumNm": 0.0007879601434330146,
-          "rawPhaseMinimumMarginNm": 0.0015399190108339798,
-          "rawEnvelopeMarginNm": 0.0015398917242740906,
-          "halfProxyPhaseMinimumMarginNm": 0.00037598858402875467,
-          "downstream2xPhaseMinimumMarginNm": 0.0009519771680575092,
-          "maximumInputBearingPairForRawBalanceNm": 0.00173991901083398,
+          "requiredInputMaximumNm": 0.0007823112301721161,
+          "rawPhaseMinimumMarginNm": 0.0015455680965967226,
+          "rawEnvelopeMarginNm": 0.001545540637534989,
+          "halfProxyPhaseMinimumMarginNm": 0.0003816376697914973,
+          "downstream2xPhaseMinimumMarginNm": 0.0009632753395829945,
+          "maximumInputBearingPairForRawBalanceNm": 0.0017455680965967227,
           "rawReferenceBudgetStatus": "PASS"
         },
         {
           "case": "nominal",
           "rawSupplyMinimumNm": 0.002327851867707105,
-          "requiredInputMaximumNm": 0.0014464449105373522,
-          "rawPhaseMinimumMarginNm": 0.0008814421276708265,
-          "rawEnvelopeMarginNm": 0.0008814069571697529,
-          "halfProxyPhaseMinimumMarginNm": -0.0002824882991343987,
-          "downstream2xPhaseMinimumMarginNm": 3.502340173120247e-05,
-          "maximumInputBearingPairForRawBalanceNm": 0.0014814421276708265,
+          "requiredInputMaximumNm": 0.0014388498282703222,
+          "rawPhaseMinimumMarginNm": 0.0008890374850455162,
+          "rawEnvelopeMarginNm": 0.0008890020394367829,
+          "halfProxyPhaseMinimumMarginNm": -0.00027489294175970895,
+          "downstream2xPhaseMinimumMarginNm": 5.021411648058194e-05,
+          "maximumInputBearingPairForRawBalanceNm": 0.0014890374850455163,
           "rawReferenceBudgetStatus": "PASS"
         },
         {
           "case": "high",
           "rawSupplyMinimumNm": 0.002327851867707105,
-          "requiredInputMaximumNm": 0.003730673816548416,
-          "rawPhaseMinimumMarginNm": -0.001402759810640889,
-          "rawEnvelopeMarginNm": -0.001402821948841311,
-          "halfProxyPhaseMinimumMarginNm": -0.002566690237446114,
-          "downstream2xPhaseMinimumMarginNm": -0.0031333804748922283,
-          "maximumInputBearingPairForRawBalanceNm": 0.000597240189359111,
+          "requiredInputMaximumNm": 0.003717017159043375,
+          "rawPhaseMinimumMarginNm": -0.0013891025537393024,
+          "rawEnvelopeMarginNm": -0.0013891652913362697,
+          "halfProxyPhaseMinimumMarginNm": -0.0025530329805445277,
+          "downstream2xPhaseMinimumMarginNm": -0.003106065961089055,
+          "maximumInputBearingPairForRawBalanceNm": 0.0006108974462606977,
           "rawReferenceBudgetStatus": "FAIL"
         }
       ]
@@ -116,38 +162,61 @@
         "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
       },
       "nominalSupport": true,
+      "nonContactFloor": {
+        "caseId": "narrowJet",
+        "status": "PASS",
+        "phaseCount": 720,
+        "checkedInstances": 750,
+        "maximumModeledFootNormalN": 5.573379645614171,
+        "modeledFloorUpperBoundMm": 0.3,
+        "profileAllowance": {
+          "linkAndCutPetMm": 0.30000000000000004,
+          "otherNominalHardwareMm": 0,
+          "basis": "Declared effective link-pitch error is also included in the solved joint positions; only nominal retained link profiles and cut PET receive this extra conservative material-bound reserve. Purchased-part dimensional tolerance remains unqualified."
+        },
+        "worst": {
+          "instance": "H_NUT_M2_019",
+          "partId": "H_LOCK_NUT_M2",
+          "minimumBoundZMm": 1.0757120725458797,
+          "minimumReservedClearanceMm": 0.7757120725458797,
+          "additionalProfileAllowanceMm": 0.0,
+          "crankDeg": 319.5,
+          "status": "PASS"
+        },
+        "failures": []
+      },
       "cases": [
         {
           "case": "low",
           "rawSupplyMinimumNm": 0.001063054883956633,
-          "requiredInputMaximumNm": 0.0007802920854448816,
-          "rawPhaseMinimumMarginNm": 0.00028278029695715423,
-          "rawEnvelopeMarginNm": 0.0002827627985117515,
-          "halfProxyPhaseMinimumMarginNm": -0.00024874714502116533,
-          "downstream2xPhaseMinimumMarginNm": -0.0002974942900423308,
-          "maximumInputBearingPairForRawBalanceNm": 0.0004827802969571542,
+          "requiredInputMaximumNm": 0.0007746899118420818,
+          "rawPhaseMinimumMarginNm": 0.0002883827897433086,
+          "rawEnvelopeMarginNm": 0.00028836497211455123,
+          "halfProxyPhaseMinimumMarginNm": -0.00024314465223501094,
+          "downstream2xPhaseMinimumMarginNm": -0.000286289304470022,
+          "maximumInputBearingPairForRawBalanceNm": 0.0004883827897433086,
           "rawReferenceBudgetStatus": "PASS"
         },
         {
           "case": "nominal",
           "rawSupplyMinimumNm": 0.001063054883956633,
-          "requiredInputMaximumNm": 0.0014373871376117564,
-          "rawPhaseMinimumMarginNm": -0.00037428168419923456,
-          "rawEnvelopeMarginNm": -0.0003743322536551234,
-          "halfProxyPhaseMinimumMarginNm": -0.0009058091261775604,
-          "downstream2xPhaseMinimumMarginNm": -0.001211618252355121,
-          "maximumInputBearingPairForRawBalanceNm": 0.0002257183158007654,
+          "requiredInputMaximumNm": 0.0014298269596964685,
+          "rawPhaseMinimumMarginNm": -0.0003667210756559643,
+          "rawEnvelopeMarginNm": -0.00036677207573983543,
+          "halfProxyPhaseMinimumMarginNm": -0.0008982485176342902,
+          "downstream2xPhaseMinimumMarginNm": -0.0011964970352685805,
+          "maximumInputBearingPairForRawBalanceNm": 0.00023327892434403562,
           "rawReferenceBudgetStatus": "FAIL"
         },
         {
           "case": "high",
           "rawSupplyMinimumNm": 0.001063054883956633,
-          "requiredInputMaximumNm": 0.003717572749258964,
-          "rawPhaseMinimumMarginNm": -0.0026544437086377776,
-          "rawEnvelopeMarginNm": -0.002654517865302331,
-          "halfProxyPhaseMinimumMarginNm": -0.0031859711506161035,
-          "downstream2xPhaseMinimumMarginNm": -0.004371942301232207,
-          "maximumInputBearingPairForRawBalanceNm": -0.0006544437086377776,
+          "requiredInputMaximumNm": 0.0037039026502722725,
+          "rawPhaseMinimumMarginNm": -0.002640772800711998,
+          "rawEnvelopeMarginNm": -0.0026408477663156394,
+          "halfProxyPhaseMinimumMarginNm": -0.003172300242690324,
+          "downstream2xPhaseMinimumMarginNm": -0.004344600485380648,
+          "maximumInputBearingPairForRawBalanceNm": -0.000640772800711998,
           "rawReferenceBudgetStatus": "FAIL"
         }
       ]
@@ -166,38 +235,61 @@
         "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
       },
       "nominalSupport": true,
+      "nonContactFloor": {
+        "caseId": "wideJet",
+        "status": "PASS",
+        "phaseCount": 720,
+        "checkedInstances": 750,
+        "maximumModeledFootNormalN": 5.620358079221954,
+        "modeledFloorUpperBoundMm": 0.3,
+        "profileAllowance": {
+          "linkAndCutPetMm": 0.30000000000000004,
+          "otherNominalHardwareMm": 0,
+          "basis": "Declared effective link-pitch error is also included in the solved joint positions; only nominal retained link profiles and cut PET receive this extra conservative material-bound reserve. Purchased-part dimensional tolerance remains unqualified."
+        },
+        "worst": {
+          "instance": "H_NUT_M2_019",
+          "partId": "H_LOCK_NUT_M2",
+          "minimumBoundZMm": 1.0703254777990203,
+          "minimumReservedClearanceMm": 0.7703254777990203,
+          "additionalProfileAllowanceMm": 0.0,
+          "crankDeg": 319.5,
+          "status": "PASS"
+        },
+        "failures": []
+      },
       "cases": [
         {
           "case": "low",
           "rawSupplyMinimumNm": 0.0021350976695228446,
-          "requiredInputMaximumNm": 0.0007889099937714486,
-          "rawPhaseMinimumMarginNm": 0.0013463555824313514,
-          "rawEnvelopeMarginNm": 0.001346187675751396,
-          "halfProxyPhaseMinimumMarginNm": 0.0002788067476699283,
-          "downstream2xPhaseMinimumMarginNm": 0.0007576134953398565,
-          "maximumInputBearingPairForRawBalanceNm": 0.0015463555824313515,
+          "requiredInputMaximumNm": 0.0007832541957100204,
+          "rawPhaseMinimumMarginNm": 0.0013520131214103883,
+          "rawEnvelopeMarginNm": 0.0013518434738128242,
+          "halfProxyPhaseMinimumMarginNm": 0.0002844642866489652,
+          "downstream2xPhaseMinimumMarginNm": 0.0007689285732979303,
+          "maximumInputBearingPairForRawBalanceNm": 0.0015520131214103883,
           "rawReferenceBudgetStatus": "PASS"
         },
         {
           "case": "nominal",
           "rawSupplyMinimumNm": 0.0021350976695228446,
-          "requiredInputMaximumNm": 0.0014476584551023591,
-          "rawPhaseMinimumMarginNm": 0.0006876922626962031,
-          "rawEnvelopeMarginNm": 0.0006874392144204855,
-          "halfProxyPhaseMinimumMarginNm": -0.0003798565720652201,
-          "downstream2xPhaseMinimumMarginNm": -0.00015971314413044035,
-          "maximumInputBearingPairForRawBalanceNm": 0.001287692262696203,
+          "requiredInputMaximumNm": 0.0014400584363727527,
+          "rawPhaseMinimumMarginNm": 0.000695295129974905,
+          "rawEnvelopeMarginNm": 0.0006950392331500918,
+          "halfProxyPhaseMinimumMarginNm": -0.0003722537047865181,
+          "downstream2xPhaseMinimumMarginNm": -0.0001445074095730364,
+          "maximumInputBearingPairForRawBalanceNm": 0.001295295129974905,
           "rawReferenceBudgetStatus": "PASS"
         },
         {
           "case": "high",
           "rawSupplyMinimumNm": 0.0021350976695228446,
-          "requiredInputMaximumNm": 0.0037327154626121415,
-          "rawPhaseMinimumMarginNm": -0.001597069613367817,
-          "rawEnvelopeMarginNm": -0.0015976177930892969,
-          "halfProxyPhaseMinimumMarginNm": -0.00266461844812924,
-          "downstream2xPhaseMinimumMarginNm": -0.0033292368962584804,
-          "maximumInputBearingPairForRawBalanceNm": 0.000402930386632183,
+          "requiredInputMaximumNm": 0.0037190617066632328,
+          "rawPhaseMinimumMarginNm": -0.0015834094915331731,
+          "rawEnvelopeMarginNm": -0.0015839640371403882,
+          "halfProxyPhaseMinimumMarginNm": -0.0026509583262945965,
+          "downstream2xPhaseMinimumMarginNm": -0.0033019166525891925,
+          "maximumInputBearingPairForRawBalanceNm": 0.0004165905084668269,
           "rawReferenceBudgetStatus": "FAIL"
         }
       ]
@@ -216,38 +308,61 @@
         "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
       },
       "nominalSupport": true,
+      "nonContactFloor": {
+        "caseId": "aim10mmInward",
+        "status": "PASS",
+        "phaseCount": 720,
+        "checkedInstances": 750,
+        "maximumModeledFootNormalN": 5.593925028681988,
+        "modeledFloorUpperBoundMm": 0.3,
+        "profileAllowance": {
+          "linkAndCutPetMm": 0.30000000000000004,
+          "otherNominalHardwareMm": 0,
+          "basis": "Declared effective link-pitch error is also included in the solved joint positions; only nominal retained link profiles and cut PET receive this extra conservative material-bound reserve. Purchased-part dimensional tolerance remains unqualified."
+        },
+        "worst": {
+          "instance": "H_NUT_M2_019",
+          "partId": "H_LOCK_NUT_M2",
+          "minimumBoundZMm": 1.073354503852201,
+          "minimumReservedClearanceMm": 0.773354503852201,
+          "additionalProfileAllowanceMm": 0.0,
+          "crankDeg": 319.5,
+          "status": "PASS"
+        },
+        "failures": []
+      },
       "cases": [
         {
           "case": "low",
           "rawSupplyMinimumNm": 0.001450860626685671,
-          "requiredInputMaximumNm": 0.0007843109284641674,
-          "rawPhaseMinimumMarginNm": 0.0006668801186285497,
-          "rawEnvelopeMarginNm": 0.0006665496982215036,
-          "halfProxyPhaseMinimumMarginNm": -5.8550194714286565e-05,
-          "downstream2xPhaseMinimumMarginNm": 8.289961057142674e-05,
-          "maximumInputBearingPairForRawBalanceNm": 0.0008668801186285497,
+          "requiredInputMaximumNm": 0.0007786860718274996,
+          "rawPhaseMinimumMarginNm": 0.0006725075234527341,
+          "rawEnvelopeMarginNm": 0.0006721745548581714,
+          "halfProxyPhaseMinimumMarginNm": -5.292278989010217e-05,
+          "downstream2xPhaseMinimumMarginNm": 9.415442021979553e-05,
+          "maximumInputBearingPairForRawBalanceNm": 0.0008725075234527341,
           "rawReferenceBudgetStatus": "PASS"
         },
         {
           "case": "nominal",
           "rawSupplyMinimumNm": 0.001450860626685671,
-          "requiredInputMaximumNm": 0.0014419792613211122,
-          "rawPhaseMinimumMarginNm": 9.301380335808825e-06,
-          "rawEnvelopeMarginNm": 8.881365364558783e-06,
-          "halfProxyPhaseMinimumMarginNm": -0.0007161289330070274,
-          "downstream2xPhaseMinimumMarginNm": -0.000832257866014055,
-          "maximumInputBearingPairForRawBalanceNm": 0.0006093013803358088,
+          "requiredInputMaximumNm": 0.0014344017782157597,
+          "rawPhaseMinimumMarginNm": 1.6882642248272975e-05,
+          "rawEnvelopeMarginNm": 1.645884846991131e-05,
+          "halfProxyPhaseMinimumMarginNm": -0.0007085476710945633,
+          "downstream2xPhaseMinimumMarginNm": -0.0008170953421891267,
+          "maximumInputBearingPairForRawBalanceNm": 0.0006168826422482729,
           "rawReferenceBudgetStatus": "PASS"
         },
         {
           "case": "high",
           "rawSupplyMinimumNm": 0.001450860626685671,
-          "requiredInputMaximumNm": 0.0037237296321493626,
-          "rawPhaseMinimumMarginNm": -0.002272157765581909,
-          "rawEnvelopeMarginNm": -0.0022728690054636914,
-          "halfProxyPhaseMinimumMarginNm": -0.002997588078924745,
-          "downstream2xPhaseMinimumMarginNm": -0.00399517615784949,
-          "maximumInputBearingPairForRawBalanceNm": -0.00027215776558190893,
+          "requiredInputMaximumNm": 0.003710064410801926,
+          "rawPhaseMinimumMarginNm": -0.002258484939208594,
+          "rawEnvelopeMarginNm": -0.002259203784116255,
+          "halfProxyPhaseMinimumMarginNm": -0.0029839152525514305,
+          "downstream2xPhaseMinimumMarginNm": -0.003967830505102861,
+          "maximumInputBearingPairForRawBalanceNm": -0.00025848493920859394,
           "rawReferenceBudgetStatus": "FAIL"
         }
       ]
@@ -266,38 +381,61 @@
         "basis": "whole adopted Gaussian-jet momentum SUPPORT bound; no torque/power extraction credit"
       },
       "nominalSupport": true,
+      "nonContactFloor": {
+        "caseId": "aim10mmOutward",
+        "status": "PASS",
+        "phaseCount": 720,
+        "checkedInstances": 750,
+        "maximumModeledFootNormalN": 5.593925028681988,
+        "modeledFloorUpperBoundMm": 0.3,
+        "profileAllowance": {
+          "linkAndCutPetMm": 0.30000000000000004,
+          "otherNominalHardwareMm": 0,
+          "basis": "Declared effective link-pitch error is also included in the solved joint positions; only nominal retained link profiles and cut PET receive this extra conservative material-bound reserve. Purchased-part dimensional tolerance remains unqualified."
+        },
+        "worst": {
+          "instance": "H_NUT_M2_019",
+          "partId": "H_LOCK_NUT_M2",
+          "minimumBoundZMm": 1.073354503852201,
+          "minimumReservedClearanceMm": 0.773354503852201,
+          "additionalProfileAllowanceMm": 0.0,
+          "crankDeg": 319.5,
+          "status": "PASS"
+        },
+        "failures": []
+      },
       "cases": [
         {
           "case": "low",
           "rawSupplyMinimumNm": 0.0017431731395410922,
-          "requiredInputMaximumNm": 0.0007843109284641674,
-          "rawPhaseMinimumMarginNm": 0.0009589609756093556,
-          "rawEnvelopeMarginNm": 0.0009588622110769248,
-          "halfProxyPhaseMinimumMarginNm": 8.737440583880178e-05,
-          "downstream2xPhaseMinimumMarginNm": 0.00037474881167760344,
-          "maximumInputBearingPairForRawBalanceNm": 0.0011589609756093556,
+          "requiredInputMaximumNm": 0.0007786860718274996,
+          "rawPhaseMinimumMarginNm": 0.0009645863552885344,
+          "rawEnvelopeMarginNm": 0.0009644870677135926,
+          "halfProxyPhaseMinimumMarginNm": 9.29997855179806e-05,
+          "downstream2xPhaseMinimumMarginNm": 0.00038599957103596107,
+          "maximumInputBearingPairForRawBalanceNm": 0.0011645863552885345,
           "rawReferenceBudgetStatus": "PASS"
         },
         {
           "case": "nominal",
           "rawSupplyMinimumNm": 0.0017431731395410922,
-          "requiredInputMaximumNm": 0.0014419792613211122,
-          "rawPhaseMinimumMarginNm": 0.00030134121862801034,
-          "rawEnvelopeMarginNm": 0.00030119387821998,
-          "halfProxyPhaseMinimumMarginNm": -0.0005702453511425435,
-          "downstream2xPhaseMinimumMarginNm": -0.0005404907022850871,
-          "maximumInputBearingPairForRawBalanceNm": 0.0009013412186280103,
+          "requiredInputMaximumNm": 0.0014344017782157597,
+          "rawPhaseMinimumMarginNm": 0.00030891924751929147,
+          "rawEnvelopeMarginNm": 0.0003087713613253325,
+          "halfProxyPhaseMinimumMarginNm": -0.0005626673222512623,
+          "downstream2xPhaseMinimumMarginNm": -0.0005253346445025248,
+          "maximumInputBearingPairForRawBalanceNm": 0.0009089192475192914,
           "rawReferenceBudgetStatus": "PASS"
         },
         {
           "case": "high",
           "rawSupplyMinimumNm": 0.0017431731395410922,
-          "requiredInputMaximumNm": 0.0037237296321493626,
-          "rawPhaseMinimumMarginNm": -0.001980261026958243,
-          "rawEnvelopeMarginNm": -0.0019805564926082707,
-          "halfProxyPhaseMinimumMarginNm": -0.002851847596728797,
-          "downstream2xPhaseMinimumMarginNm": -0.0037036951934575936,
-          "maximumInputBearingPairForRawBalanceNm": 1.9738973041757025e-05,
+          "requiredInputMaximumNm": 0.003710064410801926,
+          "rawPhaseMinimumMarginNm": -0.0019665951856057077,
+          "rawEnvelopeMarginNm": -0.0019668912712608334,
+          "halfProxyPhaseMinimumMarginNm": -0.0028381817553762615,
+          "downstream2xPhaseMinimumMarginNm": -0.003676363510752523,
+          "maximumInputBearingPairForRawBalanceNm": 3.3404814394292354e-05,
           "rawReferenceBudgetStatus": "FAIL"
         }
       ]
@@ -310,15 +448,15 @@
       "cases": [
         {
           "case": "low",
-          "minimumMarginWithAdverseOrientationNm": 0.0008322891181170742
+          "minimumMarginWithAdverseOrientationNm": 0.0008379142064073506
         },
         {
           "case": "nominal",
-          "minimumMarginWithAdverseOrientationNm": 0.00017462892861678614
+          "minimumMarginWithAdverseOrientationNm": 0.0001822067552502667
         },
         {
           "case": "high",
-          "minimumMarginWithAdverseOrientationNm": -0.0021070949710284463
+          "minimumMarginWithAdverseOrientationNm": -0.002093429058314785
         }
       ]
     },
@@ -328,15 +466,15 @@
       "cases": [
         {
           "case": "low",
-          "minimumMarginWithAdverseOrientationNm": 0.0007676564372926859
+          "minimumMarginWithAdverseOrientationNm": 0.0007732815255829623
         },
         {
           "case": "nominal",
-          "minimumMarginWithAdverseOrientationNm": 0.00010999624779239779
+          "minimumMarginWithAdverseOrientationNm": 0.00011757407442587835
         },
         {
           "case": "high",
-          "minimumMarginWithAdverseOrientationNm": -0.0021717276518528348
+          "minimumMarginWithAdverseOrientationNm": -0.0021580617391391732
         }
       ]
     },
@@ -346,15 +484,15 @@
       "cases": [
         {
           "case": "low",
-          "minimumMarginWithAdverseOrientationNm": 0.0007030237564682975
+          "minimumMarginWithAdverseOrientationNm": 0.0007086488447585738
         },
         {
           "case": "nominal",
-          "minimumMarginWithAdverseOrientationNm": 4.536356696800944e-05
+          "minimumMarginWithAdverseOrientationNm": 5.2941393601490004e-05
         },
         {
           "case": "high",
-          "minimumMarginWithAdverseOrientationNm": -0.002236360332677223
+          "minimumMarginWithAdverseOrientationNm": -0.0022226944199635616
         }
       ]
     },
@@ -364,19 +502,21 @@
       "cases": [
         {
           "case": "low",
-          "minimumMarginWithAdverseOrientationNm": 0.0005091257139951326
+          "minimumMarginWithAdverseOrientationNm": 0.0005147508022854089
         },
         {
           "case": "nominal",
-          "minimumMarginWithAdverseOrientationNm": -0.00014853447550515557
+          "minimumMarginWithAdverseOrientationNm": -0.000140956648871675
         },
         {
           "case": "high",
-          "minimumMarginWithAdverseOrientationNm": -0.002430258375150388
+          "minimumMarginWithAdverseOrientationNm": -0.0024165924624367265
         }
       ]
     }
   ],
+  "mechanicalInputSha256": "a8ee9b3ca6fac53dd2fd9cb89a8adfad6803a209f0bdabb599cf3a9d51682b4d",
+  "nativeFloorEnvelopesSha256": "ffda6f97d70d0212b50935b32b06603e061d422487000e059be1f966b3ee8722",
   "measuredAirOrResistance": false,
   "limits": [
     "The same six sensitivity inputs are applied to every design,not optimized per candidate.",

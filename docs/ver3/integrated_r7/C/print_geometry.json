@@ -1,7 +1,7 @@
 {
-  "revisionId": "v3-integrated-walkers-r7-15",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "designId": "C",
-  "nativeSha256": "c4180d6e48ff99d7135f209560f787b635cdcd430f17b2a083b111cd108af26c",
+  "nativeSha256": "255625f6e162358f6396e18a9c58902758e53c8696faf528e91e808bd9769e92",
   "printedParts": [
     {
       "partId": "P_CRANK_JOURNAL_-1_0",
@@ -381,23 +381,23 @@
         ]
       ],
       "boundsMm": [
-        145.85998316660863,
-        145.8599831666086,
+        141.56953720228995,
+        141.56953720228992,
         44.050000000000004
       ],
-      "nativeVolumeMm3": 12193.558340091591,
+      "nativeVolumeMm3": 11710.81216688033,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 0.0008779204207716148,
+      "volumeRelativeDifference": 0.0008524830889101297,
       "meshExtentMm": [
-        145.8599853515625,
-        145.8599853515625,
+        141.5695343017578,
+        141.5695343017578,
         44.04999923706055
       ],
-      "sha256": "66263aed5b583b345565bd7d5f7d6d97b6dd05318ab5895f7cea81daa6ad202b"
+      "sha256": "7d55514164dc831c99637fdab4f08c95210b1ef21f57b4b4e952eb7597ef6860"
     },
     {
       "partId": "P_INTER_STOP",
@@ -501,23 +501,23 @@
         ]
       ],
       "boundsMm": [
-        157.84167131137792,
-        157.84167131137792,
-        21.000000000000007
+        145.8417810048478,
+        145.84178100484777,
+        21.000000000000306
       ],
-      "nativeVolumeMm3": 12512.25058167549,
+      "nativeVolumeMm3": 11615.656320753444,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": false,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 0.0010632961204814283,
+      "volumeRelativeDifference": 0.0009510429757023734,
       "meshExtentMm": [
-        157.8416748046875,
-        157.8416748046875,
+        145.84178161621094,
+        145.84178161621094,
         21.0
       ],
-      "sha256": "8ebe9007cf88b52f1affbe5df961d93987cab04b65044d1fd2ca5b84a333a808"
+      "sha256": "c04402afe43e7b340573512b8132c9bc3c680f4b9e8116607c50dc581a7c31b9"
     },
     {
       "partId": "P_INPUT_PINION",
@@ -533,23 +533,23 @@
         ]
       ],
       "boundsMm": [
-        13.372689555809131,
-        13.372689555809131,
+        12.541408070439445,
+        12.541408070439434,
         35.0
       ],
-      "nativeVolumeMm3": 914.301943669846,
+      "nativeVolumeMm3": 881.4422710371546,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 0.0002156591029891757,
+      "volumeRelativeDifference": 0.00022369884476678307,
       "meshExtentMm": [
-        13.372689247131348,
-        13.372689247131348,
+        12.54140853881836,
+        12.54140853881836,
         35.0
       ],
-      "sha256": "836b521d1c03fe329dfa16609055360fd1e265b139259ab0ae098eedae6b5049"
+      "sha256": "27a157995f917f9e03edcd5b84271c8c5b8408e1c8564f72472944932dcfb531"
     },
     {
       "partId": "P_CAP_PLAIN_-18_0_18_0_4_10.2",
@@ -591,21 +591,21 @@
       "boundsMm": [
         220.0,
         218.0,
-        41.000000000000014
+        41.00000000000002
       ],
-      "nativeVolumeMm3": 26716.222041018606,
+      "nativeVolumeMm3": 26718.756262906543,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": false,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 2.855129476582315e-05,
+      "volumeRelativeDifference": 1.7669969793258638e-05,
       "meshExtentMm": [
         220.0,
         218.0,
         41.0
       ],
-      "sha256": "07584abaa4fcf42bbb8549d5fa4e93c9054121cda308cbbb88dfb48906459b70"
+      "sha256": "626a4a278fdc4e5a20668ae601e48ab09e6b2bd7913de509db7123aaac6793a8"
     },
     {
       "partId": "P_ROTOR_CAGE_CAP",
@@ -622,22 +622,22 @@
       ],
       "boundsMm": [
         220.0,
-        217.99955124360798,
+        217.98958283093788,
         19.50000000000005
       ],
-      "nativeVolumeMm3": 20094.4182481086,
+      "nativeVolumeMm3": 20196.251741541524,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": false,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 4.5915933500489436e-05,
+      "volumeRelativeDifference": 4.586486511541839e-05,
       "meshExtentMm": [
         220.0,
-        217.99954986572266,
+        217.98958587646484,
         19.5
       ],
-      "sha256": "9b3e81ca6f1f4b0c33ec63f68f21048f3a7383275af0eb8f6038ad65598c8161"
+      "sha256": "9f2cc6b30b3e44fa7adb9ca0b71945aaa65436571c281b68fbd0d7baa3c2143d"
     },
     {
       "partId": "P_CHASSIS_L",
@@ -653,23 +653,23 @@
         ]
       ],
       "boundsMm": [
-        188.235647078858,
+        179.68432105335438,
         225.99951038882455,
         45.300000000000026
       ],
-      "nativeVolumeMm3": 47984.66572726298,
+      "nativeVolumeMm3": 47450.20465365976,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 1.4857310440363549e-05,
+      "volumeRelativeDifference": 1.517590038956084e-05,
       "meshExtentMm": [
-        188.23563957214355,
+        179.68432426452637,
         225.99951171875,
         45.29999923706055
       ],
-      "sha256": "e38df248b1166a65001826a37e7c7d219e8dc691dd30bec4873c96c3e260446c"
+      "sha256": "75831bdb9634446c5dff3811a12147987be2039bc02c48c7e5833d2546d1f59a"
     },
     {
       "partId": "P_CHASSIS_R",
@@ -685,23 +685,23 @@
         ]
       ],
       "boundsMm": [
-        188.235647078858,
+        179.68432105335438,
         225.99951038882455,
         76.00000000000011
       ],
-      "nativeVolumeMm3": 54494.47504714845,
+      "nativeVolumeMm3": 53937.33210270197,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 3.874135731320972e-05,
+      "volumeRelativeDifference": 3.9317398064518396e-05,
       "meshExtentMm": [
-        188.23563957214355,
+        179.68432426452637,
         225.99951171875,
         75.9999999999998
       ],
-      "sha256": "fa2afa0c33ab607a24fecf95564c3e93f677e555386c6bcfd9a0fd6833c26d6e"
+      "sha256": "951c3ddb34cf2ce513a500dc56df2659cfed581b1c2248cbb21210c25a407b74"
     },
     {
       "partId": "P_LEG_AB_L",
@@ -1042,27 +1042,27 @@
         ],
         [
           "translateZ",
-          16.000000000000004
+          16.000000000000014
         ]
       ],
       "boundsMm": [
         28.0,
         21.799011648850346,
-        26.0
+        26.000000000000004
       ],
-      "nativeVolumeMm3": 1738.3557854223354,
+      "nativeVolumeMm3": 1774.4068440891165,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 2.76987194732064e-05,
+      "volumeRelativeDifference": 1.8147810639812137e-05,
       "meshExtentMm": [
         28.0,
         21.799012184143066,
-        26.0
+        25.999999999999993
       ],
-      "sha256": "b984a2d5c5f1e4a76cfac573e2424887e08e5ad4fc59043841ba2bb3ae99302e"
+      "sha256": "6211ac39b0579e0069b04773405e5b85b65e1c2a1f9527e343bdec6b8e981d56"
     },
     {
       "partId": "P_FOOT_ROCKER_L",
@@ -1107,19 +1107,19 @@
         11.997627957240788,
         12.000000000000007
       ],
-      "nativeVolumeMm3": 2150.718509553742,
+      "nativeVolumeMm3": 2140.075100502787,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 0.00024256156623942988,
+      "volumeRelativeDifference": 0.00023646976997341042,
       "meshExtentMm": [
         32.0,
         11.997628211975098,
         12.0
       ],
-      "sha256": "29bcadf1112d6effa1a50993c7460ba8e671236e909c852aae5c3566996ca386"
+      "sha256": "e0feca99838d30179424798ed4671c71af7d385d3002fe5dc09567919134f01d"
     },
     {
       "partId": "P_LEG_AB_R",
@@ -1348,27 +1348,27 @@
         ],
         [
           "translateZ",
-          16.000000000000018
+          16.000000000000025
         ]
       ],
       "boundsMm": [
         28.0,
         21.799011648850325,
-        26.00000000000001
+        26.000000000000004
       ],
-      "nativeVolumeMm3": 1738.3557854223366,
+      "nativeVolumeMm3": 1774.4068440891167,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 2.7698719473467977e-05,
+      "volumeRelativeDifference": 1.8147810639940276e-05,
       "meshExtentMm": [
         28.0,
         21.799012184143066,
-        26.000000000000007
+        25.999999999999993
       ],
-      "sha256": "ddd730cb4dfad47bde93bc0b5a4a4746ff88e84110a6a41453c01d0a7aff6762"
+      "sha256": "3a6b47d85a5c6d142ba874b4d4aa5b40abe8e2347c558f6e1e8729936e16d853"
     },
     {
       "partId": "P_FOOT_ROCKER_R",
@@ -1413,19 +1413,19 @@
         11.997627957240788,
         12.0
       ],
-      "nativeVolumeMm3": 2150.7185095537416,
+      "nativeVolumeMm3": 2140.075100502787,
       "linearDeflectionMm": 0.04,
       "angularDeflectionRad": 0.08,
       "supportsMayBeRequired": true,
       "sliced": false,
       "watertight": true,
-      "volumeRelativeDifference": 0.0002425615662392185,
+      "volumeRelativeDifference": 0.00023646976997298544,
       "meshExtentMm": [
         32.0,
         11.997628211975098,
         12.0
       ],
-      "sha256": "9ebd933684c965d79c1ccca6d6f91033c8981a59394532b34aa3f3b1ed9d0f47"
+      "sha256": "a3908c939f2b596e9a6e0dfbf626a48899cc9bcdb878f815048dec26978fc610"
     },
     {
       "partId": "P_ROTOR",
@@ -1461,8 +1461,8 @@
       "partId": "S_GUARD_LEFT",
       "svg": "docs/ver3/integrated_r7/C/S_GUARD_LEFT_cut.svg",
       "thicknessMm": 0.5,
-      "outlineWidthMm": 219.00000000000014,
-      "outlineHeightMm": 254.165785583451,
+      "outlineWidthMm": 219.00000000000017,
+      "outlineHeightMm": 237.26445955794756,
       "scale": 1,
       "chordDeflectionMm": 0.02,
       "pdf": "docs/ver3/integrated_r7/C/S_GUARD_LEFT_cut.pdf",
@@ -1470,14 +1470,14 @@
         297.0000023735894,
         420.0000311957465
       ],
-      "pdfSha256": "c5b93d707e7c90a95693c62158aa93e95dc090d428d70de16c7256b84e2f565a"
+      "pdfSha256": "8734cd575f9ddfea36fdcd1373cc5f1b33ca6f5106c118b33c4f07f0f608426d"
     },
     {
       "partId": "S_GUARD_LOWER_RIGHT",
       "svg": "docs/ver3/integrated_r7/C/S_GUARD_LOWER_RIGHT_cut.svg",
-      "thicknessMm": 0.5,
+      "thicknessMm": 0.5000000000000071,
       "outlineWidthMm": 219.0,
-      "outlineHeightMm": 121.93,
+      "outlineHeightMm": 113.58000000000003,
       "scale": 1,
       "chordDeflectionMm": 0.02,
       "pdf": "docs/ver3/integrated_r7/C/S_GUARD_LOWER_RIGHT_cut.pdf",
@@ -1485,14 +1485,14 @@
         297.0000023735894,
         420.0000311957465
       ],
-      "pdfSha256": "f6c83a51f008a3fccf4d81d82f513629464a70a8d0724bf4bc692ec104534d62"
+      "pdfSha256": "e0d89ccc5ca8c25bcce8f62b86965d253e882147f148e08cf0004b3cfc3372ff"
     },
     {
       "partId": "S_GUARD_UPPER_RIGHT",
       "svg": "docs/ver3/integrated_r7/C/S_GUARD_UPPER_RIGHT_cut.svg",
       "thicknessMm": 0.5000000000000007,
       "outlineWidthMm": 165.5,
-      "outlineHeightMm": 152.235785583451,
+      "outlineHeightMm": 143.68445955794738,
       "scale": 1,
       "chordDeflectionMm": 0.02,
       "pdf": "docs/ver3/integrated_r7/C/S_GUARD_UPPER_RIGHT_cut.pdf",
@@ -1500,7 +1500,7 @@
         297.0000023735894,
         420.0000311957465
       ],
-      "pdfSha256": "da659bc9f5f71d8a1dc0e5a63d9c62de54051cab6e969c76168fd78c1ecd82dd"
+      "pdfSha256": "718cdc140149355a8bcf2f062f71ad4408e32fb0b4a42901c07b937640bab324"
     }
   ],
   "noScalingOrMeshRepairApplied": true,

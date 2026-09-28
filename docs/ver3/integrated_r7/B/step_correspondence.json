@@ -94,8 +94,8 @@
     "nativeName": "CAP_MAIN_L__84_0",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 1822.6386253043702,
-    "stepVolumeMm3": 1822.63862530456,
-    "relativeVolumeDifference": 1.0416602411429404e-13
+    "stepVolumeMm3": 1822.6386253045607,
+    "relativeVolumeDifference": 1.0454027330272864e-13
   },
   {
     "nativeName": "BEARING_MAIN_L__84_0",
@@ -115,22 +115,22 @@
     "nativeName": "BEARING_MAIN_L__84_0",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 12.307063556731839,
-    "stepVolumeMm3": 12.307063556732327,
-    "relativeVolumeDifference": 3.969250086206513e-14
+    "stepVolumeMm3": 12.307063556732324,
+    "relativeVolumeDifference": 3.940382812852284e-14
   },
   {
     "nativeName": "BEARING_MAIN_L__84_0",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 12.307063556731839,
-    "stepVolumeMm3": 12.307063556732327,
-    "relativeVolumeDifference": 3.969250086206513e-14
+    "stepVolumeMm3": 12.307063556732324,
+    "relativeVolumeDifference": 3.940382812852284e-14
   },
   {
     "nativeName": "H_BOLT_M3_20_001",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 204.52756457938,
-    "stepVolumeMm3": 204.5275645793817,
-    "relativeVolumeDifference": 8.337764004237134e-15
+    "stepVolumeMm3": 204.52756457938165,
+    "relativeVolumeDifference": 8.05983853742923e-15
   },
   {
     "nativeName": "H_WASHER_3_001",
@@ -171,15 +171,15 @@
     "nativeName": "H_NUT_M3_008",
     "boundsDeltaMaxMm": 1.1226575225009583e-11,
     "nativeVolumeMm3": 50.90322232233628,
-    "stepVolumeMm3": 50.90322232215558,
-    "relativeVolumeDifference": 3.54997621593035e-12
+    "stepVolumeMm3": 50.903222322155585,
+    "relativeVolumeDifference": 3.5498366289448225e-12
   },
   {
     "nativeName": "H_BOLT_M3_20_002",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 204.52756457938005,
-    "stepVolumeMm3": 204.5275645793818,
-    "relativeVolumeDifference": 8.476726737641085e-15
+    "stepVolumeMm3": 204.52756457938176,
+    "relativeVolumeDifference": 8.337764004237132e-15
   },
   {
     "nativeName": "H_WASHER_3_004",
@@ -213,22 +213,22 @@
     "nativeName": "H_NUT_M3_009",
     "boundsDeltaMaxMm": 8.768097359279636e-12,
     "nativeVolumeMm3": 50.90322232233627,
-    "stepVolumeMm3": 50.903222322402556,
-    "relativeVolumeDifference": 1.3022069879842028e-12
+    "stepVolumeMm3": 50.90322232240256,
+    "relativeVolumeDifference": 1.30234657496973e-12
   },
   {
     "nativeName": "H_NUT_M3_010",
     "boundsDeltaMaxMm": 8.768097359279636e-12,
     "nativeVolumeMm3": 50.90322232233627,
-    "stepVolumeMm3": 50.903222322402634,
-    "relativeVolumeDifference": 1.303742444825003e-12
+    "stepVolumeMm3": 50.90322232240263,
+    "relativeVolumeDifference": 1.3036028578394757e-12
   },
   {
     "nativeName": "CAP_MAIN_R__84_0",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 1566.8637091884461,
-    "stepVolumeMm3": 1566.8637091882422,
-    "relativeVolumeDifference": 1.3016715217574145e-13
+    "stepVolumeMm3": 1566.863709188242,
+    "relativeVolumeDifference": 1.3031226605776568e-13
   },
   {
     "nativeName": "BEARING_MAIN_R__84_0",
@@ -248,29 +248,29 @@
     "nativeName": "BEARING_MAIN_R__84_0",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 12.307063556731839,
-    "stepVolumeMm3": 12.307063556732327,
-    "relativeVolumeDifference": 3.969250086206513e-14
+    "stepVolumeMm3": 12.307063556732324,
+    "relativeVolumeDifference": 3.940382812852284e-14
   },
   {
     "nativeName": "BEARING_MAIN_R__84_0",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 12.307063556731839,
-    "stepVolumeMm3": 12.307063556732327,
-    "relativeVolumeDifference": 3.969250086206513e-14
+    "stepVolumeMm3": 12.307063556732324,
+    "relativeVolumeDifference": 3.940382812852284e-14
   },
   {
     "nativeName": "H_BOLT_M4_20_001",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 389.67699504496335,
-    "stepVolumeMm3": 389.67699504497,
-    "relativeVolumeDifference": 1.7067160985336436e-14
+    "stepVolumeMm3": 389.6769950449699,
+    "relativeVolumeDifference": 1.677541464370675e-14
   },
   {
     "nativeName": "H_WASHER_4_003",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.276191355179435,
-    "relativeVolumeDifference": 3.256366975102627e-15
+    "stepVolumeMm3": 39.27619135517945,
+    "relativeVolumeDifference": 2.8945484223134466e-15
   },
   {
     "nativeName": "H_WASHER_4_004",
@@ -283,15 +283,15 @@
     "nativeName": "H_WASHER_6_001",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 57.35919866924239,
-    "stepVolumeMm3": 57.35919866924223,
-    "relativeVolumeDifference": 2.725271717421061e-15
+    "stepVolumeMm3": 57.35919866924225,
+    "relativeVolumeDifference": 2.4775197431100554e-15
   },
   {
     "nativeName": "H_WASHER_4_005",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.276191355179634,
-    "stepVolumeMm3": 39.27619135517963,
-    "relativeVolumeDifference": 1.8090927639459007e-16
+    "stepVolumeMm3": 39.27619135517962,
+    "relativeVolumeDifference": 3.6181855278918013e-16
   },
   {
     "nativeName": "H_NYLOCK4_001",
@@ -311,22 +311,22 @@
     "nativeName": "H_WASHER_4_006",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.27619135517954,
-    "stepVolumeMm3": 39.27619135517945,
-    "relativeVolumeDifference": 2.3518205931296766e-15
+    "stepVolumeMm3": 39.276191355179456,
+    "relativeVolumeDifference": 2.170911316735086e-15
   },
   {
     "nativeName": "H_WASHER_4_007",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 39.27619135517954,
-    "stepVolumeMm3": 39.276191355179805,
-    "relativeVolumeDifference": 6.6936432265998484e-15
+    "stepVolumeMm3": 39.2761913551798,
+    "relativeVolumeDifference": 6.512733950205258e-15
   },
   {
     "nativeName": "H_WASHER_6_002",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 57.35919866924239,
-    "stepVolumeMm3": 57.35919866924222,
-    "relativeVolumeDifference": 2.9730236917320665e-15
+    "stepVolumeMm3": 57.35919866924225,
+    "relativeVolumeDifference": 2.4775197431100554e-15
   },
   {
     "nativeName": "H_WASHER_4_008",
@@ -339,8 +339,8 @@
     "nativeName": "H_NYLOCK4_002",
     "boundsDeltaMaxMm": 6.153300091682468e-12,
     "nativeVolumeMm3": 176.18774568740434,
-    "stepVolumeMm3": 176.18774568732232,
-    "relativeVolumeDifference": 4.655548153824295e-13
+    "stepVolumeMm3": 176.18774568732238,
+    "relativeVolumeDifference": 4.652321855727396e-13
   },
   {
     "nativeName": "H_MAIN_HEX100_002",
@@ -430,8 +430,8 @@
     "nativeName": "CAP_MAIN_L_0_0",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 1822.6386253043702,
-    "stepVolumeMm3": 1822.6386253046187,
-    "relativeVolumeDifference": 1.3635145431966873e-13
+    "stepVolumeMm3": 1822.638625304619,
+    "relativeVolumeDifference": 1.3647620404914693e-13
   },
   {
     "nativeName": "BEARING_MAIN_L_0_0",
@@ -451,36 +451,36 @@
     "nativeName": "BEARING_MAIN_L_0_0",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 12.307063556731839,
-    "stepVolumeMm3": 12.307063556732338,
-    "relativeVolumeDifference": 4.055851906269201e-14
+    "stepVolumeMm3": 12.307063556732334,
+    "relativeVolumeDifference": 4.026984632914972e-14
   },
   {
     "nativeName": "BEARING_MAIN_L_0_0",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 12.307063556731839,
-    "stepVolumeMm3": 12.307063556732341,
-    "relativeVolumeDifference": 4.08471917962343e-14
+    "stepVolumeMm3": 12.307063556732334,
+    "relativeVolumeDifference": 4.026984632914972e-14
   },
   {
     "nativeName": "H_BOLT_M3_20_003",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 204.52756457938,
-    "stepVolumeMm3": 204.52756457938173,
-    "relativeVolumeDifference": 8.476726737641086e-15
+    "stepVolumeMm3": 204.5275645793817,
+    "relativeVolumeDifference": 8.337764004237134e-15
   },
   {
     "nativeName": "H_WASHER_3_007",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 15.221016406642548,
-    "stepVolumeMm3": 15.221016406642548,
-    "relativeVolumeDifference": 0.0
+    "stepVolumeMm3": 15.221016406642544,
+    "relativeVolumeDifference": 2.334084389561576e-16
   },
   {
     "nativeName": "H_WASHER_3_008",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 15.221016406642548,
-    "stepVolumeMm3": 15.221016406642548,
-    "relativeVolumeDifference": 0.0
+    "stepVolumeMm3": 15.221016406642544,
+    "relativeVolumeDifference": 2.334084389561576e-16
   },
   {
     "nativeName": "H_WASHER_4_009",
@@ -493,8 +493,8 @@
     "nativeName": "H_WASHER_3_009",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 15.221016406642548,
-    "stepVolumeMm3": 15.221016406642548,
-    "relativeVolumeDifference": 0.0
+    "stepVolumeMm3": 15.221016406642544,
+    "relativeVolumeDifference": 2.334084389561576e-16
   },
   {
     "nativeName": "H_NUT_M3_017",
@@ -507,8 +507,8 @@
     "nativeName": "H_NUT_M3_018",
     "boundsDeltaMaxMm": 8.764544645600836e-12,
     "nativeVolumeMm3": 50.90322232233626,
-    "stepVolumeMm3": 50.903222322402556,
-    "relativeVolumeDifference": 1.3023465749697302e-12
+    "stepVolumeMm3": 50.90322232240256,
+    "relativeVolumeDifference": 1.3024861619552576e-12
   },
   {
     "nativeName": "H_BOLT_M3_20_004",
@@ -535,8 +535,8 @@
     "nativeName": "H_WASHER_4_010",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 39.27619135517954,
-    "stepVolumeMm3": 39.27619135517945,
-    "relativeVolumeDifference": 2.3518205931296766e-15
+    "stepVolumeMm3": 39.276191355179435,
+    "relativeVolumeDifference": 2.7136391459188575e-15
   },
   {
     "nativeName": "H_WASHER_3_012",
@@ -549,22 +549,22 @@
     "nativeName": "H_NUT_M3_019",
     "boundsDeltaMaxMm": 2.646771690706373e-13,
     "nativeVolumeMm3": 50.90322232233626,
-    "stepVolumeMm3": 50.90322232232994,
-    "relativeVolumeDifference": 1.2423241711929902e-13
+    "stepVolumeMm3": 50.903222322329924,
+    "relativeVolumeDifference": 1.2451159109035362e-13
   },
   {
     "nativeName": "H_NUT_M3_020",
     "boundsDeltaMaxMm": 2.646771690706373e-13,
     "nativeVolumeMm3": 50.90322232233626,
-    "stepVolumeMm3": 50.90322232233001,
-    "relativeVolumeDifference": 1.22836547264026e-13
+    "stepVolumeMm3": 50.90322232233,
+    "relativeVolumeDifference": 1.229761342495533e-13
   },
   {
     "nativeName": "CAP_MAIN_R_0_0",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 1566.8637091884461,
-    "stepVolumeMm3": 1566.8637091886346,
-    "relativeVolumeDifference": 1.2029940819809326e-13
+    "stepVolumeMm3": 1566.8637091886349,
+    "relativeVolumeDifference": 1.204445220801175e-13
   },
   {
     "nativeName": "BEARING_MAIN_R_0_0",
@@ -584,22 +584,22 @@
     "nativeName": "BEARING_MAIN_R_0_0",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 12.307063556731839,
-    "stepVolumeMm3": 12.307063556732341,
-    "relativeVolumeDifference": 4.08471917962343e-14
+    "stepVolumeMm3": 12.307063556732334,
+    "relativeVolumeDifference": 4.026984632914972e-14
   },
   {
     "nativeName": "BEARING_MAIN_R_0_0",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 12.307063556731839,
-    "stepVolumeMm3": 12.307063556732338,
-    "relativeVolumeDifference": 4.055851906269201e-14
+    "stepVolumeMm3": 12.307063556732334,
+    "relativeVolumeDifference": 4.026984632914972e-14
   },
   {
     "nativeName": "H_BOLT_M4_20_003",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 389.6769950449632,
-    "stepVolumeMm3": 389.6769950449699,
-    "relativeVolumeDifference": 1.7213034156151283e-14
+    "stepVolumeMm3": 389.67699504497,
+    "relativeVolumeDifference": 1.7504780497780968e-14
   },
   {
     "nativeName": "H_WASHER_4_011",
@@ -612,8 +612,8 @@
     "nativeName": "H_WASHER_4_012",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517981,
-    "relativeVolumeDifference": 6.331824673810664e-15
+    "stepVolumeMm3": 39.2761913551798,
+    "relativeVolumeDifference": 5.9700061210214834e-15
   },
   {
     "nativeName": "H_WASHER_6_003",
@@ -626,36 +626,36 @@
     "nativeName": "H_WASHER_4_013",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.27619135517963,
-    "stepVolumeMm3": 39.27619135517964,
-    "relativeVolumeDifference": 3.6181855278918023e-16
+    "stepVolumeMm3": 39.27619135517962,
+    "relativeVolumeDifference": 1.8090927639459012e-16
   },
   {
     "nativeName": "H_NYLOCK4_003",
     "boundsDeltaMaxMm": 5.405453862294962e-12,
     "nativeVolumeMm3": 176.1877456874043,
-    "stepVolumeMm3": 176.18774568723694,
-    "relativeVolumeDifference": 9.498221597268696e-13
+    "stepVolumeMm3": 176.187745687237,
+    "relativeVolumeDifference": 9.494995299171797e-13
   },
   {
     "nativeName": "H_BOLT_M4_20_004",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 389.67699504496306,
-    "stepVolumeMm3": 389.67699504496284,
-    "relativeVolumeDifference": 5.834926832593657e-16
+    "stepVolumeMm3": 389.67699504496295,
+    "relativeVolumeDifference": 2.9174634162968287e-16
   },
   {
     "nativeName": "H_WASHER_4_014",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.27619135517954,
-    "stepVolumeMm3": 39.27619135517945,
-    "relativeVolumeDifference": 2.3518205931296766e-15
+    "stepVolumeMm3": 39.276191355179456,
+    "relativeVolumeDifference": 2.170911316735086e-15
   },
   {
     "nativeName": "H_WASHER_4_015",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 39.27619135517954,
-    "stepVolumeMm3": 39.276191355179805,
-    "relativeVolumeDifference": 6.6936432265998484e-15
+    "stepVolumeMm3": 39.2761913551798,
+    "relativeVolumeDifference": 6.512733950205258e-15
   },
   {
     "nativeName": "H_WASHER_6_004",
@@ -675,8 +675,8 @@
     "nativeName": "H_NYLOCK4_004",
     "boundsDeltaMaxMm": 9.059419880941277e-13,
     "nativeVolumeMm3": 176.1877456874043,
-    "stepVolumeMm3": 176.18774568738615,
-    "relativeVolumeDifference": 1.0291890929105686e-13
+    "stepVolumeMm3": 176.18774568738613,
+    "relativeVolumeDifference": 1.0308022419590178e-13
   },
   {
     "nativeName": "H_MAIN_HEX100_003",
@@ -708,7 +708,7 @@
   },
   {
     "nativeName": "H_BOLT_M3_16_007",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 176.2532306970719,
     "stepVolumeMm3": 176.25323069707358,
     "relativeVolumeDifference": 9.514043230650946e-15
@@ -773,8 +773,8 @@
     "nativeName": "CAP_MAIN_L_84_0",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 1822.6386253043697,
-    "stepVolumeMm3": 1822.6386253043593,
-    "relativeVolumeDifference": 5.7384875559970385e-15
+    "stepVolumeMm3": 1822.6386253043581,
+    "relativeVolumeDifference": 6.362236203388021e-15
   },
   {
     "nativeName": "BEARING_MAIN_L_84_0",
@@ -808,22 +808,22 @@
     "nativeName": "H_BOLT_M3_20_005",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 204.52756457938,
-    "stepVolumeMm3": 204.52756457938077,
-    "relativeVolumeDifference": 3.7519938019067105e-15
+    "stepVolumeMm3": 204.5275645793807,
+    "relativeVolumeDifference": 3.474068335098806e-15
   },
   {
     "nativeName": "H_WASHER_3_013",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 15.221016406642548,
-    "stepVolumeMm3": 15.221016406642555,
-    "relativeVolumeDifference": 4.668168779123152e-16
+    "stepVolumeMm3": 15.221016406642558,
+    "relativeVolumeDifference": 7.002253168684729e-16
   },
   {
     "nativeName": "H_WASHER_3_014",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 15.221016406642548,
-    "stepVolumeMm3": 15.221016406642555,
-    "relativeVolumeDifference": 4.668168779123152e-16
+    "stepVolumeMm3": 15.221016406642558,
+    "relativeVolumeDifference": 7.002253168684729e-16
   },
   {
     "nativeName": "H_WASHER_4_017",
@@ -836,8 +836,8 @@
     "nativeName": "H_WASHER_3_015",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 15.221016406642548,
-    "stepVolumeMm3": 15.221016406642555,
-    "relativeVolumeDifference": 4.668168779123152e-16
+    "stepVolumeMm3": 15.221016406642558,
+    "relativeVolumeDifference": 7.002253168684729e-16
   },
   {
     "nativeName": "H_NUT_M3_027",
@@ -850,8 +850,8 @@
     "nativeName": "H_NUT_M3_028",
     "boundsDeltaMaxMm": 2.7000623958883807e-13,
     "nativeVolumeMm3": 50.903222322336276,
-    "stepVolumeMm3": 50.90322232232989,
-    "relativeVolumeDifference": 1.2548869998904471e-13
+    "stepVolumeMm3": 50.90322232232988,
+    "relativeVolumeDifference": 1.25628286974572e-13
   },
   {
     "nativeName": "H_BOLT_M3_20_006",
@@ -906,8 +906,8 @@
     "nativeName": "CAP_MAIN_R_84_0",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 1566.8637091884466,
-    "stepVolumeMm3": 1566.8637091884323,
-    "relativeVolumeDifference": 9.142174567526988e-15
+    "stepVolumeMm3": 1566.8637091884318,
+    "relativeVolumeDifference": 9.432402331575464e-15
   },
   {
     "nativeName": "BEARING_MAIN_R_84_0",
@@ -941,8 +941,8 @@
     "nativeName": "H_BOLT_M4_20_005",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 389.67699504496346,
-    "stepVolumeMm3": 389.6769950449632,
-    "relativeVolumeDifference": 7.293658540742064e-16
+    "stepVolumeMm3": 389.67699504496306,
+    "relativeVolumeDifference": 1.0211121957038889e-15
   },
   {
     "nativeName": "H_WASHER_4_019",
@@ -955,22 +955,22 @@
     "nativeName": "H_WASHER_4_020",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.2761913551798,
-    "relativeVolumeDifference": 5.9700061210214834e-15
+    "stepVolumeMm3": 39.27619135517979,
+    "relativeVolumeDifference": 5.789096844626893e-15
   },
   {
     "nativeName": "H_WASHER_6_005",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 57.35919866924238,
-    "stepVolumeMm3": 57.35919866924222,
-    "relativeVolumeDifference": 2.849147704576564e-15
+    "stepVolumeMm3": 57.35919866924225,
+    "relativeVolumeDifference": 2.353643755954553e-15
   },
   {
     "nativeName": "H_WASHER_4_021",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.276191355179634,
-    "stepVolumeMm3": 39.27619135517963,
-    "relativeVolumeDifference": 1.8090927639459007e-16
+    "stepVolumeMm3": 39.27619135517961,
+    "relativeVolumeDifference": 5.427278291837702e-16
   },
   {
     "nativeName": "H_NYLOCK4_005",
@@ -997,22 +997,22 @@
     "nativeName": "H_WASHER_4_023",
     "boundsDeltaMaxMm": 7.105427357601002e-15,
     "nativeVolumeMm3": 39.27619135517955,
-    "stepVolumeMm3": 39.276191355179776,
-    "relativeVolumeDifference": 5.789096844626895e-15
+    "stepVolumeMm3": 39.27619135517977,
+    "relativeVolumeDifference": 5.6081875682323045e-15
   },
   {
     "nativeName": "H_WASHER_6_006",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 57.35919866924239,
-    "stepVolumeMm3": 57.35919866924222,
-    "relativeVolumeDifference": 2.9730236917320665e-15
+    "stepVolumeMm3": 57.35919866924225,
+    "relativeVolumeDifference": 2.4775197431100554e-15
   },
   {
     "nativeName": "H_WASHER_4_024",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.276191355179606,
-    "stepVolumeMm3": 39.276191355179606,
-    "relativeVolumeDifference": 0.0
+    "stepVolumeMm3": 39.2761913551796,
+    "relativeVolumeDifference": 1.8090927639459021e-16
   },
   {
     "nativeName": "H_NYLOCK4_006",
@@ -1051,45 +1051,45 @@
   },
   {
     "nativeName": "H_NMB1680_007",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.7763568394002505e-15,
     "nativeVolumeMm3": 116.64105204248196,
-    "stepVolumeMm3": 116.64105204248213,
-    "relativeVolumeDifference": 1.462008903351755e-15
+    "stepVolumeMm3": 116.64105204248202,
+    "relativeVolumeDifference": 4.873363011172517e-16
   },
   {
     "nativeName": "H_NMB1680_007",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.7763568394002505e-15,
     "nativeVolumeMm3": 210.1218903436179,
-    "stepVolumeMm3": 210.12189034361768,
-    "relativeVolumeDifference": 1.082103702148319e-15
-  },
-  {
-    "nativeName": "H_NMB1680_007",
-    "boundsDeltaMaxMm": 0.0,
-    "nativeVolumeMm3": 12.307063556731885,
-    "stepVolumeMm3": 12.307063556731901,
-    "relativeVolumeDifference": 1.2990273009403086e-15
+    "stepVolumeMm3": 210.1218903436178,
+    "relativeVolumeDifference": 5.410518510741595e-16
   },
   {
     "nativeName": "H_NMB1680_007",
     "boundsDeltaMaxMm": 1.7763568394002505e-15,
     "nativeVolumeMm3": 12.307063556731885,
-    "stepVolumeMm3": 12.307063556731897,
-    "relativeVolumeDifference": 1.0103545673980177e-15
+    "stepVolumeMm3": 12.307063556731896,
+    "relativeVolumeDifference": 8.660182006268723e-16
+  },
+  {
+    "nativeName": "H_NMB1680_007",
+    "boundsDeltaMaxMm": 1.7763568394002505e-15,
+    "nativeVolumeMm3": 12.307063556731885,
+    "stepVolumeMm3": 12.307063556731896,
+    "relativeVolumeDifference": 8.660182006268723e-16
   },
   {
     "nativeName": "P_IDLER_CAP_001",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 8.881784197001252e-16,
     "nativeVolumeMm3": 529.4704464697916,
-    "stepVolumeMm3": 529.4704464697658,
-    "relativeVolumeDifference": 4.874098702745863e-14
+    "stepVolumeMm3": 529.4704464697659,
+    "relativeVolumeDifference": 4.852626902293238e-14
   },
   {
     "nativeName": "H_BOLT_M3_20_007",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 204.52756457938003,
-    "stepVolumeMm3": 204.52756457938176,
-    "relativeVolumeDifference": 8.476726737641085e-15
+    "stepVolumeMm3": 204.5275645793817,
+    "relativeVolumeDifference": 8.198801270833181e-15
   },
   {
     "nativeName": "H_WASHER_3_019",
@@ -1109,22 +1109,22 @@
     "nativeName": "H_NUT_M3_033",
     "boundsDeltaMaxMm": 8.768097359279636e-12,
     "nativeVolumeMm3": 50.903222322336276,
-    "stepVolumeMm3": 50.90322232240257,
-    "relativeVolumeDifference": 1.3023465749697298e-12
+    "stepVolumeMm3": 50.90322232240258,
+    "relativeVolumeDifference": 1.3024861619552572e-12
   },
   {
     "nativeName": "H_NUT_M3_034",
     "boundsDeltaMaxMm": 8.768097359279636e-12,
     "nativeVolumeMm3": 50.903222322336276,
-    "stepVolumeMm3": 50.90322232240256,
-    "relativeVolumeDifference": 1.3022069879842026e-12
+    "stepVolumeMm3": 50.90322232240257,
+    "relativeVolumeDifference": 1.3023465749697298e-12
   },
   {
     "nativeName": "H_BOLT_M3_20_008",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 204.52756457938003,
-    "stepVolumeMm3": 204.52756457938176,
-    "relativeVolumeDifference": 8.476726737641085e-15
+    "stepVolumeMm3": 204.52756457938173,
+    "relativeVolumeDifference": 8.337764004237134e-15
   },
   {
     "nativeName": "H_WASHER_3_021",
@@ -1156,14 +1156,14 @@
   },
   {
     "nativeName": "P_IDLER_JOURNAL_001",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.7763568394002505e-15,
     "nativeVolumeMm3": 234.67697122315747,
     "stepVolumeMm3": 234.6769712231574,
     "relativeVolumeDifference": 2.422198418725749e-16
   },
   {
     "nativeName": "P_IDLER_INNER_WASHER_001",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 8.881784197001252e-16,
     "nativeVolumeMm3": 94.71901850573222,
     "stepVolumeMm3": 94.71901850573224,
     "relativeVolumeDifference": 1.5003169310017702e-16
@@ -1186,15 +1186,15 @@
     "nativeName": "H_WASHER_2_001",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.750088092227767,
-    "stepVolumeMm3": 4.750088092227763,
-    "relativeVolumeDifference": 7.479258510202275e-16
+    "stepVolumeMm3": 4.750088092227764,
+    "relativeVolumeDifference": 5.609443882651706e-16
   },
   {
     "nativeName": "H_WASHER_2_002",
     "boundsDeltaMaxMm": 3.552713678800501e-15,
     "nativeVolumeMm3": 4.750088092227771,
-    "stepVolumeMm3": 4.750088092227722,
-    "relativeVolumeDifference": 1.0283980451528118e-14
+    "stepVolumeMm3": 4.750088092227723,
+    "relativeVolumeDifference": 1.0096998988773061e-14
   },
   {
     "nativeName": "H_NUT_M2_001",
@@ -1247,38 +1247,38 @@
   },
   {
     "nativeName": "H_NMB1680_008",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.7763568394002505e-15,
     "nativeVolumeMm3": 116.64105204248196,
-    "stepVolumeMm3": 116.64105204248213,
-    "relativeVolumeDifference": 1.462008903351755e-15
+    "stepVolumeMm3": 116.64105204248202,
+    "relativeVolumeDifference": 4.873363011172517e-16
   },
   {
     "nativeName": "H_NMB1680_008",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.7763568394002505e-15,
     "nativeVolumeMm3": 210.1218903436179,
-    "stepVolumeMm3": 210.12189034361768,
-    "relativeVolumeDifference": 1.082103702148319e-15
-  },
-  {
-    "nativeName": "H_NMB1680_008",
-    "boundsDeltaMaxMm": 0.0,
-    "nativeVolumeMm3": 12.307063556731885,
-    "stepVolumeMm3": 12.307063556731901,
-    "relativeVolumeDifference": 1.2990273009403086e-15
+    "stepVolumeMm3": 210.1218903436178,
+    "relativeVolumeDifference": 5.410518510741595e-16
   },
   {
     "nativeName": "H_NMB1680_008",
     "boundsDeltaMaxMm": 1.7763568394002505e-15,
     "nativeVolumeMm3": 12.307063556731885,
-    "stepVolumeMm3": 12.307063556731897,
-    "relativeVolumeDifference": 1.0103545673980177e-15
+    "stepVolumeMm3": 12.3070635567319,
+    "relativeVolumeDifference": 1.154690934169163e-15
+  },
+  {
+    "nativeName": "H_NMB1680_008",
+    "boundsDeltaMaxMm": 1.7763568394002505e-15,
+    "nativeVolumeMm3": 12.307063556731885,
+    "stepVolumeMm3": 12.3070635567319,
+    "relativeVolumeDifference": 1.154690934169163e-15
   },
   {
     "nativeName": "P_IDLER_CAP_002",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 8.881784197001252e-16,
     "nativeVolumeMm3": 529.4704464697916,
-    "stepVolumeMm3": 529.4704464697885,
-    "relativeVolumeDifference": 5.797386122208736e-15
+    "stepVolumeMm3": 529.4704464697886,
+    "relativeVolumeDifference": 5.582668117682486e-15
   },
   {
     "nativeName": "H_BOLT_M3_20_009",
@@ -1319,15 +1319,15 @@
     "nativeName": "H_BOLT_M3_20_010",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 204.52756457938003,
-    "stepVolumeMm3": 204.52756457938082,
-    "relativeVolumeDifference": 3.890956535310662e-15
+    "stepVolumeMm3": 204.5275645793808,
+    "relativeVolumeDifference": 3.75199380190671e-15
   },
   {
     "nativeName": "H_WASHER_3_025",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 15.221016406642546,
-    "stepVolumeMm3": 15.221016406642542,
-    "relativeVolumeDifference": 2.3340843895615767e-16
+    "stepVolumeMm3": 15.221016406642539,
+    "relativeVolumeDifference": 4.668168779123153e-16
   },
   {
     "nativeName": "H_WASHER_3_026",
@@ -1347,19 +1347,19 @@
     "nativeName": "H_NUT_M3_042",
     "boundsDeltaMaxMm": 2.7000623958883807e-13,
     "nativeVolumeMm3": 50.90322232233628,
-    "stepVolumeMm3": 50.90322232233002,
-    "relativeVolumeDifference": 1.2297613424955326e-13
+    "stepVolumeMm3": 50.90322232233003,
+    "relativeVolumeDifference": 1.2283654726402595e-13
   },
   {
     "nativeName": "P_IDLER_JOURNAL_002",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.7763568394002505e-15,
     "nativeVolumeMm3": 234.67697122315747,
     "stepVolumeMm3": 234.6769712231574,
     "relativeVolumeDifference": 2.422198418725749e-16
   },
   {
     "nativeName": "P_IDLER_INNER_WASHER_002",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 8.881784197001252e-16,
     "nativeVolumeMm3": 94.71901850573222,
     "stepVolumeMm3": 94.71901850573224,
     "relativeVolumeDifference": 1.5003169310017702e-16
@@ -1375,22 +1375,22 @@
     "nativeName": "H_BOLT_M2_16_002",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 70.99922425783997,
-    "stepVolumeMm3": 70.9992242578411,
-    "relativeVolumeDifference": 1.6012405615694083e-14
+    "stepVolumeMm3": 70.99922425784109,
+    "relativeVolumeDifference": 1.5812250545497906e-14
   },
   {
     "nativeName": "H_WASHER_2_003",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.750088092227767,
-    "stepVolumeMm3": 4.750088092227763,
-    "relativeVolumeDifference": 7.479258510202275e-16
+    "stepVolumeMm3": 4.750088092227764,
+    "relativeVolumeDifference": 5.609443882651706e-16
   },
   {
     "nativeName": "H_WASHER_2_004",
     "boundsDeltaMaxMm": 3.552713678800501e-15,
     "nativeVolumeMm3": 4.750088092227771,
-    "stepVolumeMm3": 4.750088092227722,
-    "relativeVolumeDifference": 1.0283980451528118e-14
+    "stepVolumeMm3": 4.750088092227723,
+    "relativeVolumeDifference": 1.0096998988773061e-14
   },
   {
     "nativeName": "H_NUT_M2_003",
@@ -1445,8 +1445,8 @@
     "nativeName": "P_COMPOUND_1_001",
     "boundsDeltaMaxMm": 9.15179043659009e-12,
     "nativeVolumeMm3": 10142.878434597455,
-    "stepVolumeMm3": 10142.878434605602,
-    "relativeVolumeDifference": 8.03248662696334e-13
+    "stepVolumeMm3": 10142.878434605569,
+    "relativeVolumeDifference": 8.000206037705618e-13
   },
   {
     "nativeName": "H_INTER_HEX58_001",
@@ -1494,14 +1494,14 @@
     "nativeName": "BEARING_INTER_L_1",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 116.64105204248202,
-    "stepVolumeMm3": 116.64105204248202,
-    "relativeVolumeDifference": 0.0
+    "stepVolumeMm3": 116.64105204248207,
+    "relativeVolumeDifference": 4.873363011172515e-16
   },
   {
     "nativeName": "BEARING_INTER_L_1",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 210.12189034361757,
-    "stepVolumeMm3": 210.12189034361745,
+    "stepVolumeMm3": 210.12189034361768,
     "relativeVolumeDifference": 5.410518510741604e-16
   },
   {
@@ -1529,15 +1529,15 @@
     "nativeName": "H_WASHER_3_027",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 15.221016406642558,
-    "stepVolumeMm3": 15.221016406642555,
-    "relativeVolumeDifference": 2.3340843895615747e-16
+    "stepVolumeMm3": 15.221016406642551,
+    "relativeVolumeDifference": 4.668168779123149e-16
   },
   {
     "nativeName": "H_WASHER_3_028",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 15.221016406642558,
-    "stepVolumeMm3": 15.221016406642555,
-    "relativeVolumeDifference": 2.3340843895615747e-16
+    "stepVolumeMm3": 15.221016406642551,
+    "relativeVolumeDifference": 4.668168779123149e-16
   },
   {
     "nativeName": "H_NUT_M3_047",
@@ -1557,8 +1557,8 @@
     "nativeName": "H_BOLT_M3_16_015",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 176.2532306970721,
-    "stepVolumeMm3": 176.2532306970737,
-    "relativeVolumeDifference": 9.030278320617837e-15
+    "stepVolumeMm3": 176.25323069707366,
+    "relativeVolumeDifference": 8.869023350606805e-15
   },
   {
     "nativeName": "H_WASHER_3_029",
@@ -1592,43 +1592,43 @@
     "nativeName": "CAP_INTER_R_1",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 1110.6059380575284,
-    "stepVolumeMm3": 1110.605938057564,
-    "relativeVolumeDifference": 3.1937784729642665e-14
+    "stepVolumeMm3": 1110.6059380575643,
+    "relativeVolumeDifference": 3.234724350822783e-14
   },
   {
     "nativeName": "BEARING_INTER_R_1",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 116.64105204248202,
-    "stepVolumeMm3": 116.64105204248202,
-    "relativeVolumeDifference": 0.0
+    "stepVolumeMm3": 116.64105204248207,
+    "relativeVolumeDifference": 4.873363011172515e-16
   },
   {
     "nativeName": "BEARING_INTER_R_1",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 210.12189034361757,
-    "stepVolumeMm3": 210.12189034361745,
+    "stepVolumeMm3": 210.12189034361768,
     "relativeVolumeDifference": 5.410518510741604e-16
   },
   {
     "nativeName": "BEARING_INTER_R_1",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 12.307063556731883,
-    "stepVolumeMm3": 12.307063556731901,
-    "relativeVolumeDifference": 1.4433636677114541e-15
+    "stepVolumeMm3": 12.307063556731904,
+    "relativeVolumeDifference": 1.732036401253745e-15
   },
   {
     "nativeName": "BEARING_INTER_R_1",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 12.307063556731872,
-    "stepVolumeMm3": 12.307063556731862,
-    "relativeVolumeDifference": 8.660182006268732e-16
+    "stepVolumeMm3": 12.307063556731865,
+    "relativeVolumeDifference": 5.773454670845821e-16
   },
   {
     "nativeName": "H_BOLT_M3_20_011",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 204.52756457938017,
-    "stepVolumeMm3": 204.52756457938185,
-    "relativeVolumeDifference": 8.198801270833175e-15
+    "stepVolumeMm3": 204.5275645793818,
+    "relativeVolumeDifference": 7.920875804025271e-15
   },
   {
     "nativeName": "H_WASHER_3_031",
@@ -1641,15 +1641,15 @@
     "nativeName": "H_WASHER_3_032",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 15.221016406642555,
-    "stepVolumeMm3": 15.221016406642555,
-    "relativeVolumeDifference": 0.0
+    "stepVolumeMm3": 15.221016406642551,
+    "relativeVolumeDifference": 2.334084389561575e-16
   },
   {
     "nativeName": "H_WASHER_3_033",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 15.221016406642558,
-    "stepVolumeMm3": 15.221016406642555,
-    "relativeVolumeDifference": 2.3340843895615747e-16
+    "stepVolumeMm3": 15.221016406642551,
+    "relativeVolumeDifference": 4.668168779123149e-16
   },
   {
     "nativeName": "H_WASHER_3_034",
@@ -1676,8 +1676,8 @@
     "nativeName": "H_BOLT_M3_20_012",
     "boundsDeltaMaxMm": 7.560174708487466e-12,
     "nativeVolumeMm3": 204.52756457938017,
-    "stepVolumeMm3": 204.5275645793818,
-    "relativeVolumeDifference": 7.920875804025271e-15
+    "stepVolumeMm3": 204.52756457938168,
+    "relativeVolumeDifference": 7.365024870409462e-15
   },
   {
     "nativeName": "H_WASHER_3_035",
@@ -1718,8 +1718,8 @@
     "nativeName": "H_NUT_M3_054",
     "boundsDeltaMaxMm": 8.764544645600836e-12,
     "nativeVolumeMm3": 50.90322232233626,
-    "stepVolumeMm3": 50.90322232240243,
-    "relativeVolumeDifference": 1.2998340092302389e-12
+    "stepVolumeMm3": 50.903222322402435,
+    "relativeVolumeDifference": 1.299973596215766e-12
   },
   {
     "nativeName": "P_COMPOUND_2_001",
@@ -1767,8 +1767,8 @@
     "nativeName": "CAP_INTER_L_2",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 1646.773381662405,
-    "stepVolumeMm3": 1646.7733816624027,
-    "relativeVolumeDifference": 1.3807223141638353e-15
+    "stepVolumeMm3": 1646.773381662403,
+    "relativeVolumeDifference": 1.2426500827474518e-15
   },
   {
     "nativeName": "BEARING_INTER_L_2",
@@ -1781,8 +1781,8 @@
     "nativeName": "BEARING_INTER_L_2",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 210.12189034361757,
-    "stepVolumeMm3": 210.12189034361757,
-    "relativeVolumeDifference": 0.0
+    "stepVolumeMm3": 210.12189034361768,
+    "relativeVolumeDifference": 5.410518510741604e-16
   },
   {
     "nativeName": "BEARING_INTER_L_2",
@@ -1823,8 +1823,8 @@
     "nativeName": "H_NUT_M3_057",
     "boundsDeltaMaxMm": 8.768097359279636e-12,
     "nativeVolumeMm3": 50.90322232233627,
-    "stepVolumeMm3": 50.90322232240243,
-    "relativeVolumeDifference": 1.2996944222447113e-12
+    "stepVolumeMm3": 50.90322232240244,
+    "relativeVolumeDifference": 1.2999735962157658e-12
   },
   {
     "nativeName": "H_NUT_M3_058",
@@ -1837,22 +1837,22 @@
     "nativeName": "H_BOLT_M3_16_018",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 176.2532306970721,
-    "stepVolumeMm3": 176.25323069707284,
-    "relativeVolumeDifference": 4.1926292202868525e-15
+    "stepVolumeMm3": 176.2532306970728,
+    "relativeVolumeDifference": 4.03137425027582e-15
   },
   {
     "nativeName": "H_WASHER_3_041",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 15.221016406642555,
-    "stepVolumeMm3": 15.221016406642558,
-    "relativeVolumeDifference": 2.334084389561575e-16
+    "stepVolumeMm3": 15.221016406642555,
+    "relativeVolumeDifference": 0.0
   },
   {
     "nativeName": "H_WASHER_3_042",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 15.221016406642555,
-    "stepVolumeMm3": 15.221016406642558,
-    "relativeVolumeDifference": 2.334084389561575e-16
+    "stepVolumeMm3": 15.221016406642555,
+    "relativeVolumeDifference": 0.0
   },
   {
     "nativeName": "H_NUT_M3_059",
@@ -1886,15 +1886,15 @@
     "nativeName": "BEARING_INTER_R_2",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 210.12189034361757,
-    "stepVolumeMm3": 210.12189034361757,
-    "relativeVolumeDifference": 0.0
+    "stepVolumeMm3": 210.12189034361768,
+    "relativeVolumeDifference": 5.410518510741604e-16
   },
   {
     "nativeName": "BEARING_INTER_R_2",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 12.307063556731883,
-    "stepVolumeMm3": 12.307063556731901,
-    "relativeVolumeDifference": 1.4433636677114541e-15
+    "stepVolumeMm3": 12.307063556731904,
+    "relativeVolumeDifference": 1.732036401253745e-15
   },
   {
     "nativeName": "BEARING_INTER_R_2",
@@ -1907,8 +1907,8 @@
     "nativeName": "H_BOLT_M3_20_013",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 204.5275645793802,
-    "stepVolumeMm3": 204.52756457938185,
-    "relativeVolumeDifference": 8.059838537429222e-15
+    "stepVolumeMm3": 204.52756457938173,
+    "relativeVolumeDifference": 7.503987603813413e-15
   },
   {
     "nativeName": "H_WASHER_3_043",
@@ -1921,15 +1921,15 @@
     "nativeName": "H_WASHER_3_044",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 15.221016406642555,
-    "stepVolumeMm3": 15.221016406642555,
-    "relativeVolumeDifference": 0.0
+    "stepVolumeMm3": 15.221016406642551,
+    "relativeVolumeDifference": 2.334084389561575e-16
   },
   {
     "nativeName": "H_WASHER_3_045",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 15.221016406642558,
-    "stepVolumeMm3": 15.221016406642555,
-    "relativeVolumeDifference": 2.3340843895615747e-16
+    "stepVolumeMm3": 15.221016406642551,
+    "relativeVolumeDifference": 4.668168779123149e-16
   },
   {
     "nativeName": "H_WASHER_3_046",
@@ -1942,8 +1942,8 @@
     "nativeName": "H_NUT_M3_061",
     "boundsDeltaMaxMm": 8.768097359279636e-12,
     "nativeVolumeMm3": 50.90322232233628,
-    "stepVolumeMm3": 50.90322232240248,
-    "relativeVolumeDifference": 1.3003923571723474e-12
+    "stepVolumeMm3": 50.90322232240247,
+    "relativeVolumeDifference": 1.3002527701868202e-12
   },
   {
     "nativeName": "H_NUT_M3_062",
@@ -1956,8 +1956,8 @@
     "nativeName": "H_BOLT_M3_20_014",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 204.5275645793802,
-    "stepVolumeMm3": 204.52756457938094,
-    "relativeVolumeDifference": 3.613031068502755e-15
+    "stepVolumeMm3": 204.52756457938085,
+    "relativeVolumeDifference": 3.1961428682908983e-15
   },
   {
     "nativeName": "H_WASHER_3_047",
@@ -1991,22 +1991,22 @@
     "nativeName": "H_NUT_M3_063",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 50.90322232233626,
-    "stepVolumeMm3": 50.90322232232998,
-    "relativeVolumeDifference": 1.233948952061352e-13
+    "stepVolumeMm3": 50.903222322329974,
+    "relativeVolumeDifference": 1.2353448219166252e-13
   },
   {
     "nativeName": "H_NUT_M3_064",
     "boundsDeltaMaxMm": 1.6200374375330284e-12,
     "nativeVolumeMm3": 50.90322232233626,
-    "stepVolumeMm3": 50.90322232232998,
-    "relativeVolumeDifference": 1.233948952061352e-13
+    "stepVolumeMm3": 50.903222322329974,
+    "relativeVolumeDifference": 1.2353448219166252e-13
   },
   {
     "nativeName": "P_OUTPUT_WHEEL_001",
     "boundsDeltaMaxMm": 2.1600499167107046e-12,
     "nativeVolumeMm3": 11615.656320752832,
-    "stepVolumeMm3": 11615.656320742997,
-    "relativeVolumeDifference": 8.467257840093364e-13
+    "stepVolumeMm3": 11615.656320742979,
+    "relativeVolumeDifference": 8.482917647454365e-13
   },
   {
     "nativeName": "H_INPUT_SHAFT_001",
@@ -2033,8 +2033,8 @@
     "nativeName": "H_INPUT_COLLAR_001",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 2225.785542457356,
-    "stepVolumeMm3": 2225.7855424572026,
-    "relativeVolumeDifference": 6.885203193455218e-14
+    "stepVolumeMm3": 2225.785542457202,
+    "relativeVolumeDifference": 6.90563406346547e-14
   },
   {
     "nativeName": "H_INPUT_COLLAR_001",
@@ -2046,16 +2046,16 @@
   {
     "nativeName": "H_INPUT_COLLAR_002",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
-    "nativeVolumeMm3": 2225.785542457355,
+    "nativeVolumeMm3": 2225.7855424573568,
     "stepVolumeMm3": 2225.7855424572685,
-    "relativeVolumeDifference": 3.8818653019480474e-14
+    "relativeVolumeDifference": 3.963588781989056e-14
   },
   {
     "nativeName": "H_INPUT_COLLAR_002",
     "boundsDeltaMaxMm": 8.753886504564434e-12,
-    "nativeVolumeMm3": 153.9380400258999,
-    "stepVolumeMm3": 153.93804002575945,
-    "relativeVolumeDifference": 9.124456046174445e-13
+    "nativeVolumeMm3": 153.9380400259001,
+    "stepVolumeMm3": 153.93804002575942,
+    "relativeVolumeDifference": 9.13922651326658e-13
   },
   {
     "nativeName": "H_INPUT_HUB_001",
@@ -2075,36 +2075,36 @@
     "nativeName": "CAP_INPUT_FIXED",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 1385.6967319905632,
-    "stepVolumeMm3": 1385.6967319905466,
-    "relativeVolumeDifference": 1.1978290721312734e-14
+    "stepVolumeMm3": 1385.696731990546,
+    "relativeVolumeDifference": 1.2470549244106408e-14
   },
   {
     "nativeName": "BEARING_INPUT_FIXED",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 143.02139825375656,
-    "stepVolumeMm3": 143.0213982537565,
-    "relativeVolumeDifference": 3.974469523780857e-16
+    "stepVolumeMm3": 143.02139825375656,
+    "relativeVolumeDifference": 0.0
   },
   {
     "nativeName": "BEARING_INPUT_FIXED",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 188.652638848067,
-    "stepVolumeMm3": 188.6526388480671,
-    "relativeVolumeDifference": 6.026252185805611e-16
+    "stepVolumeMm3": 188.65263884806706,
+    "relativeVolumeDifference": 3.0131260929028056e-16
   },
   {
     "nativeName": "BEARING_INPUT_FIXED",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 7.046416392813271,
-    "stepVolumeMm3": 7.046416392813591,
-    "relativeVolumeDifference": 4.5502904119995276e-14
+    "stepVolumeMm3": 7.0464163928135894,
+    "relativeVolumeDifference": 4.525081046836095e-14
   },
   {
     "nativeName": "BEARING_INPUT_FIXED",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 7.046416392813271,
-    "stepVolumeMm3": 7.046416392813593,
-    "relativeVolumeDifference": 4.57549977716296e-14
+    "stepVolumeMm3": 7.0464163928135894,
+    "relativeVolumeDifference": 4.525081046836095e-14
   },
   {
     "nativeName": "H_BOLT_M4_20_007",
@@ -2117,8 +2117,8 @@
     "nativeName": "H_WASHER_4_025",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 39.276191355179556,
-    "stepVolumeMm3": 39.27619135517982,
-    "relativeVolumeDifference": 6.693643226599846e-15
+    "stepVolumeMm3": 39.276191355179826,
+    "relativeVolumeDifference": 6.874552502994436e-15
   },
   {
     "nativeName": "H_WASHER_4_026",
@@ -2131,8 +2131,8 @@
     "nativeName": "H_NYLOCK4_007",
     "boundsDeltaMaxMm": 6.153300091682468e-12,
     "nativeVolumeMm3": 176.18774568740434,
-    "stepVolumeMm3": 176.18774568732238,
-    "relativeVolumeDifference": 4.652321855727396e-13
+    "stepVolumeMm3": 176.18774568732243,
+    "relativeVolumeDifference": 4.649095557630499e-13
   },
   {
     "nativeName": "H_BOLT_M4_20_008",
@@ -2166,15 +2166,15 @@
     "nativeName": "P_ROTOR_CAGE_FRONT_001",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 20849.105431138967,
-    "stepVolumeMm3": 20849.10543112314,
-    "relativeVolumeDifference": 7.592098299822031e-13
+    "stepVolumeMm3": 20849.10543112313,
+    "relativeVolumeDifference": 7.595588117473064e-13
   },
   {
     "nativeName": "H_BOLT_M3_16_019",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 176.25323069707184,
-    "stepVolumeMm3": 176.25323069707258,
-    "relativeVolumeDifference": 4.192629220286859e-15
+    "stepVolumeMm3": 176.25323069707247,
+    "relativeVolumeDifference": 3.5476093402427268e-15
   },
   {
     "nativeName": "H_WASHER_3_051",
@@ -2208,22 +2208,22 @@
     "nativeName": "H_BOLT_M3_16_020",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 176.25323069707184,
-    "stepVolumeMm3": 176.2532306970735,
-    "relativeVolumeDifference": 9.352788260639917e-15
+    "stepVolumeMm3": 176.25323069707338,
+    "relativeVolumeDifference": 8.707768380595783e-15
   },
   {
     "nativeName": "H_WASHER_3_053",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 15.221016406642564,
-    "stepVolumeMm3": 15.22101640664256,
-    "relativeVolumeDifference": 2.3340843895615737e-16
+    "stepVolumeMm3": 15.221016406642557,
+    "relativeVolumeDifference": 4.668168779123147e-16
   },
   {
     "nativeName": "H_WASHER_3_054",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 15.221016406642564,
-    "stepVolumeMm3": 15.22101640664256,
-    "relativeVolumeDifference": 2.3340843895615737e-16
+    "stepVolumeMm3": 15.221016406642557,
+    "relativeVolumeDifference": 4.668168779123147e-16
   },
   {
     "nativeName": "H_NUT_M3_067",
@@ -2243,22 +2243,22 @@
     "nativeName": "H_BOLT_M3_16_021",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 176.25323069707179,
-    "stepVolumeMm3": 176.25323069715634,
-    "relativeVolumeDifference": 4.797335357828235e-13
+    "stepVolumeMm3": 176.25323069715623,
+    "relativeVolumeDifference": 4.790885159027793e-13
   },
   {
     "nativeName": "H_WASHER_3_055",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 15.221016406642569,
-    "stepVolumeMm3": 15.221016406642574,
-    "relativeVolumeDifference": 3.5011265843423594e-16
+    "stepVolumeMm3": 15.221016406642573,
+    "relativeVolumeDifference": 2.3340843895615732e-16
   },
   {
     "nativeName": "H_WASHER_3_056",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 15.221016406642569,
-    "stepVolumeMm3": 15.221016406642574,
-    "relativeVolumeDifference": 3.5011265843423594e-16
+    "stepVolumeMm3": 15.221016406642573,
+    "relativeVolumeDifference": 2.3340843895615732e-16
   },
   {
     "nativeName": "H_NUT_M3_069",
@@ -2271,29 +2271,29 @@
     "nativeName": "H_NUT_M3_070",
     "boundsDeltaMaxMm": 5.7056581681536045e-11,
     "nativeVolumeMm3": 50.90322232233625,
-    "stepVolumeMm3": 50.90322232223729,
-    "relativeVolumeDifference": 1.9440279474387392e-12
+    "stepVolumeMm3": 50.90322232223728,
+    "relativeVolumeDifference": 1.9441675344242666e-12
   },
   {
     "nativeName": "CAP_INPUT_FLOAT",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 15621.210530231647,
-    "stepVolumeMm3": 15621.210530289529,
-    "relativeVolumeDifference": 3.705350599955993e-12
+    "stepVolumeMm3": 15621.210530289594,
+    "relativeVolumeDifference": 3.709542568203326e-12
   },
   {
     "nativeName": "BEARING_INPUT_FLOAT",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 143.02139825375656,
-    "stepVolumeMm3": 143.0213982537565,
-    "relativeVolumeDifference": 3.974469523780857e-16
+    "stepVolumeMm3": 143.02139825375653,
+    "relativeVolumeDifference": 1.9872347618904286e-16
   },
   {
     "nativeName": "BEARING_INPUT_FLOAT",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 188.65263884806694,
-    "stepVolumeMm3": 188.6526388480671,
-    "relativeVolumeDifference": 9.03937827870842e-16
+    "stepVolumeMm3": 188.65263884806706,
+    "relativeVolumeDifference": 6.026252185805613e-16
   },
   {
     "nativeName": "BEARING_INPUT_FLOAT",
@@ -2306,43 +2306,43 @@
     "nativeName": "BEARING_INPUT_FLOAT",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 7.046416392813271,
-    "stepVolumeMm3": 7.046416392813595,
-    "relativeVolumeDifference": 4.600709142326392e-14
+    "stepVolumeMm3": 7.046416392813593,
+    "relativeVolumeDifference": 4.57549977716296e-14
   },
   {
     "nativeName": "H_BOLT_M4_20_009",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 389.6769950449642,
-    "stepVolumeMm3": 389.67699504497074,
-    "relativeVolumeDifference": 1.6775414643706716e-14
+    "stepVolumeMm3": 389.6769950449706,
+    "relativeVolumeDifference": 1.6483668302077035e-14
   },
   {
     "nativeName": "H_WASHER_4_029",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517948,
-    "relativeVolumeDifference": 2.1709113167350847e-15
+    "stepVolumeMm3": 39.27619135517947,
+    "relativeVolumeDifference": 2.3518205931296754e-15
   },
   {
     "nativeName": "H_WASHER_4_030",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517948,
-    "relativeVolumeDifference": 2.1709113167350847e-15
+    "stepVolumeMm3": 39.27619135517947,
+    "relativeVolumeDifference": 2.3518205931296754e-15
   },
   {
     "nativeName": "H_NYLOCK4_009",
     "boundsDeltaMaxMm": 6.153300091682468e-12,
     "nativeVolumeMm3": 176.18774568740434,
-    "stepVolumeMm3": 176.18774568732238,
-    "relativeVolumeDifference": 4.652321855727396e-13
+    "stepVolumeMm3": 176.18774568732243,
+    "relativeVolumeDifference": 4.649095557630499e-13
   },
   {
     "nativeName": "H_BOLT_M4_20_010",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 389.67699504496403,
-    "stepVolumeMm3": 389.67699504496386,
-    "relativeVolumeDifference": 4.376195124445232e-16
+    "stepVolumeMm3": 389.6769950449638,
+    "relativeVolumeDifference": 5.834926832593643e-16
   },
   {
     "nativeName": "H_WASHER_4_031",
@@ -2375,13 +2375,13 @@
   {
     "nativeName": "CHASSIS_R",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
-    "nativeVolumeMm3": 77988.30571891331,
+    "nativeVolumeMm3": 77988.30571891334,
     "stepVolumeMm3": 77988.30495796089,
-    "relativeVolumeDifference": 9.757263107459133e-09
+    "relativeVolumeDifference": 9.75726348064111e-09
   },
   {
     "nativeName": "H_BOLT_M3_20_015",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 2.220446049250313e-16,
     "nativeVolumeMm3": 204.52756457938003,
     "stepVolumeMm3": 204.52756457944892,
     "relativeVolumeDifference": 3.368456657711802e-13
@@ -2411,12 +2411,12 @@
     "nativeName": "H_NUT_M3_072",
     "boundsDeltaMaxMm": 5.7056581681536045e-11,
     "nativeVolumeMm3": 50.903222322336276,
-    "stepVolumeMm3": 50.903222322237475,
-    "relativeVolumeDifference": 1.9409570337571375e-12
+    "stepVolumeMm3": 50.90322232223747,
+    "relativeVolumeDifference": 1.941096620742665e-12
   },
   {
     "nativeName": "H_BOLT_M3_20_016",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 2.220446049250313e-16,
     "nativeVolumeMm3": 204.52756457938003,
     "stepVolumeMm3": 204.52756457944892,
     "relativeVolumeDifference": 3.368456657711802e-13
@@ -2446,12 +2446,12 @@
     "nativeName": "H_NUT_M3_074",
     "boundsDeltaMaxMm": 5.7056581681536045e-11,
     "nativeVolumeMm3": 50.903222322336276,
-    "stepVolumeMm3": 50.903222322237475,
-    "relativeVolumeDifference": 1.9409570337571375e-12
+    "stepVolumeMm3": 50.90322232223747,
+    "relativeVolumeDifference": 1.941096620742665e-12
   },
   {
     "nativeName": "H_BOLT_M3_20_017",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 2.220446049250313e-16,
     "nativeVolumeMm3": 204.52756457938003,
     "stepVolumeMm3": 204.52756457938077,
     "relativeVolumeDifference": 3.613031068502758e-15
@@ -2486,7 +2486,7 @@
   },
   {
     "nativeName": "H_BOLT_M3_20_018",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 2.220446049250313e-16,
     "nativeVolumeMm3": 204.52756457938003,
     "stepVolumeMm3": 204.52756457938077,
     "relativeVolumeDifference": 3.613031068502758e-15
@@ -2572,22 +2572,22 @@
     "nativeName": "H_WASHER_2_005",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.75008809222775,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.048499494386553e-15
+    "stepVolumeMm3": 4.750088092227724,
+    "relativeVolumeDifference": 5.4224624198966684e-15
   },
   {
     "nativeName": "H_WASHER_2_006",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.750088092227751,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.235480957141609e-15
+    "stepVolumeMm3": 4.750088092227723,
+    "relativeVolumeDifference": 5.796425345406782e-15
   },
   {
     "nativeName": "H_BOLT_M2_30_001",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 114.98152140809712,
-    "stepVolumeMm3": 114.9815214080931,
-    "relativeVolumeDifference": 3.4976680036510254e-14
+    "stepVolumeMm3": 114.98152140809314,
+    "relativeVolumeDifference": 3.460590250962145e-14
   },
   {
     "nativeName": "H_NUT_M2_005",
@@ -2614,29 +2614,29 @@
     "nativeName": "P_LAYER_SPACER_7_4_001",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 264.5016810800125,
-    "stepVolumeMm3": 264.50168108001225,
-    "relativeVolumeDifference": 8.596303604378639e-16
+    "stepVolumeMm3": 264.50168108001236,
+    "relativeVolumeDifference": 4.2981518021893196e-16
   },
   {
     "nativeName": "H_WASHER_4_034",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.27619135517955,
-    "stepVolumeMm3": 39.27619135517943,
-    "relativeVolumeDifference": 3.075457698708038e-15
+    "stepVolumeMm3": 39.276191355179435,
+    "relativeVolumeDifference": 2.8945484223134474e-15
   },
   {
     "nativeName": "H_SLEEVE_2_20_002",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 175.30087007031025,
-    "stepVolumeMm3": 175.30087007031054,
-    "relativeVolumeDifference": 1.6213102318890107e-15
+    "stepVolumeMm3": 175.30087007031065,
+    "relativeVolumeDifference": 2.269834324644615e-15
   },
   {
     "nativeName": "H_WASHER_2_007",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.75008809222775,
-    "stepVolumeMm3": 4.750088092227725,
-    "relativeVolumeDifference": 5.235480957141611e-15
+    "stepVolumeMm3": 4.750088092227724,
+    "relativeVolumeDifference": 5.4224624198966684e-15
   },
   {
     "nativeName": "H_BOLT_M2_25_001",
@@ -2656,8 +2656,8 @@
     "nativeName": "H_NUT_M2_008",
     "boundsDeltaMaxMm": 5.850608886248665e-11,
     "nativeVolumeMm3": 18.62351789468488,
-    "stepVolumeMm3": 18.623517894475622,
-    "relativeVolumeDifference": 1.1236243849221972e-11
+    "stepVolumeMm3": 18.62351789447562,
+    "relativeVolumeDifference": 1.1236434614130023e-11
   },
   {
     "nativeName": "H_WASHER_4_035",
@@ -2670,22 +2670,22 @@
     "nativeName": "H_SLEEVE_2_8_003",
     "boundsDeltaMaxMm": 3.069544618483633e-12,
     "nativeVolumeMm3": 70.1203480281242,
-    "stepVolumeMm3": 70.12034802812425,
-    "relativeVolumeDifference": 8.106551159445043e-16
+    "stepVolumeMm3": 70.12034802812423,
+    "relativeVolumeDifference": 4.0532755797225214e-16
   },
   {
     "nativeName": "H_WASHER_2_008",
     "boundsDeltaMaxMm": 3.069544618483633e-12,
     "nativeVolumeMm3": 4.75008809222775,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.048499494386553e-15
+    "stepVolumeMm3": 4.750088092227725,
+    "relativeVolumeDifference": 5.235480957141611e-15
   },
   {
     "nativeName": "H_WASHER_2_009",
     "boundsDeltaMaxMm": 3.069544618483633e-12,
     "nativeVolumeMm3": 4.75008809222775,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.048499494386553e-15
+    "stepVolumeMm3": 4.750088092227725,
+    "relativeVolumeDifference": 5.235480957141611e-15
   },
   {
     "nativeName": "H_BOLT_M2_16_003",
@@ -2698,8 +2698,8 @@
     "nativeName": "H_NUT_M2_009",
     "boundsDeltaMaxMm": 3.169020601490047e-11,
     "nativeVolumeMm3": 18.623517894684884,
-    "stepVolumeMm3": 18.623517894396528,
-    "relativeVolumeDifference": 1.548343376211102e-11
+    "stepVolumeMm3": 18.62351789439652,
+    "relativeVolumeDifference": 1.5483815291927124e-11
   },
   {
     "nativeName": "H_NUT_M2_010",
@@ -2712,43 +2712,43 @@
     "nativeName": "H_WASHER_4_036",
     "boundsDeltaMaxMm": 3.069544618483633e-12,
     "nativeVolumeMm3": 39.27619135517955,
-    "stepVolumeMm3": 39.27619135517942,
-    "relativeVolumeDifference": 3.2563669751026283e-15
+    "stepVolumeMm3": 39.276191355179435,
+    "relativeVolumeDifference": 2.8945484223134474e-15
   },
   {
     "nativeName": "H_SLEEVE_2_20_003",
     "boundsDeltaMaxMm": 2.3931079340400174e-11,
     "nativeVolumeMm3": 175.30087007031057,
-    "stepVolumeMm3": 175.30087007031085,
-    "relativeVolumeDifference": 1.621310231889008e-15
+    "stepVolumeMm3": 175.3008700703107,
+    "relativeVolumeDifference": 8.10655115944504e-16
   },
   {
     "nativeName": "H_WASHER_2_010",
     "boundsDeltaMaxMm": 2.3931079340400174e-11,
     "nativeVolumeMm3": 4.7500880922277515,
-    "stepVolumeMm3": 4.750088092227727,
-    "relativeVolumeDifference": 5.2354809571416085e-15
+    "stepVolumeMm3": 4.750088092227726,
+    "relativeVolumeDifference": 5.422462419896666e-15
   },
   {
     "nativeName": "H_WASHER_2_011",
     "boundsDeltaMaxMm": 2.3931079340400174e-11,
     "nativeVolumeMm3": 4.7500880922277515,
-    "stepVolumeMm3": 4.750088092227727,
-    "relativeVolumeDifference": 5.2354809571416085e-15
+    "stepVolumeMm3": 4.750088092227725,
+    "relativeVolumeDifference": 5.6094438826517236e-15
   },
   {
     "nativeName": "H_BOLT_M2_25_002",
     "boundsDeltaMaxMm": 2.3931079340400174e-11,
     "nativeVolumeMm3": 99.27355814014817,
-    "stepVolumeMm3": 99.27355814019828,
-    "relativeVolumeDifference": 5.047413899989731e-13
+    "stepVolumeMm3": 99.27355814019832,
+    "relativeVolumeDifference": 5.051708353109406e-13
   },
   {
     "nativeName": "H_NUT_M2_011",
     "boundsDeltaMaxMm": 2.2566837287740782e-11,
     "nativeVolumeMm3": 18.623517894684873,
-    "stepVolumeMm3": 18.6235178944605,
-    "relativeVolumeDifference": 1.2047757768078877e-11
+    "stepVolumeMm3": 18.623517894460495,
+    "relativeVolumeDifference": 1.2048139297894982e-11
   },
   {
     "nativeName": "H_NUT_M2_012",
@@ -2761,29 +2761,29 @@
     "nativeName": "H_WASHER_4_037",
     "boundsDeltaMaxMm": 2.3931079340400174e-11,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517945,
-    "relativeVolumeDifference": 2.8945484223134466e-15
+    "stepVolumeMm3": 39.27619135517944,
+    "relativeVolumeDifference": 3.075457698708037e-15
   },
   {
     "nativeName": "P_LAYER_SPACER_3_3_001",
     "boundsDeltaMaxMm": 2.3931079340400174e-11,
     "nativeVolumeMm3": 117.95345237351887,
-    "stepVolumeMm3": 117.95345237351911,
-    "relativeVolumeDifference": 2.0481344572553687e-15
+    "stepVolumeMm3": 117.95345237351908,
+    "relativeVolumeDifference": 1.807177462284149e-15
   },
   {
     "nativeName": "H_WASHER_4_038",
     "boundsDeltaMaxMm": 2.3931079340400174e-11,
     "nativeVolumeMm3": 39.276191355179556,
-    "stepVolumeMm3": 39.27619135517979,
-    "relativeVolumeDifference": 5.970006121021484e-15
+    "stepVolumeMm3": 39.276191355179805,
+    "relativeVolumeDifference": 6.3318246738106655e-15
   },
   {
     "nativeName": "H_WASHER_4_039",
     "boundsDeltaMaxMm": 2.3931079340400174e-11,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517945,
-    "relativeVolumeDifference": 2.8945484223134466e-15
+    "stepVolumeMm3": 39.27619135517944,
+    "relativeVolumeDifference": 3.075457698708037e-15
   },
   {
     "nativeName": "P_PIN_TAIL_4_3_001",
@@ -2796,22 +2796,22 @@
     "nativeName": "H_SLEEVE_2_8_004",
     "boundsDeltaMaxMm": 8.44124770082999e-12,
     "nativeVolumeMm3": 70.12034802812423,
-    "stepVolumeMm3": 70.12034802812431,
-    "relativeVolumeDifference": 1.215982673916756e-15
+    "stepVolumeMm3": 70.12034802812428,
+    "relativeVolumeDifference": 8.10655115944504e-16
   },
   {
     "nativeName": "H_WASHER_2_012",
     "boundsDeltaMaxMm": 8.44124770082999e-12,
     "nativeVolumeMm3": 4.7500880922277515,
-    "stepVolumeMm3": 4.750088092227727,
-    "relativeVolumeDifference": 5.2354809571416085e-15
+    "stepVolumeMm3": 4.750088092227726,
+    "relativeVolumeDifference": 5.422462419896666e-15
   },
   {
     "nativeName": "H_WASHER_2_013",
     "boundsDeltaMaxMm": 8.44124770082999e-12,
     "nativeVolumeMm3": 4.7500880922277515,
-    "stepVolumeMm3": 4.750088092227727,
-    "relativeVolumeDifference": 5.2354809571416085e-15
+    "stepVolumeMm3": 4.750088092227726,
+    "relativeVolumeDifference": 5.422462419896666e-15
   },
   {
     "nativeName": "H_BOLT_M2_16_004",
@@ -2845,29 +2845,29 @@
     "nativeName": "H_SLEEVE_2_20_004",
     "boundsDeltaMaxMm": 4.099831585335778e-11,
     "nativeVolumeMm3": 175.30087007031057,
-    "stepVolumeMm3": 175.3008700703106,
-    "relativeVolumeDifference": 1.6213102318890079e-16
+    "stepVolumeMm3": 175.30087007031065,
+    "relativeVolumeDifference": 4.863930695667024e-16
   },
   {
     "nativeName": "H_WASHER_2_014",
     "boundsDeltaMaxMm": 4.099831585335778e-11,
     "nativeVolumeMm3": 4.7500880922277515,
-    "stepVolumeMm3": 4.750088092227725,
-    "relativeVolumeDifference": 5.6094438826517236e-15
+    "stepVolumeMm3": 4.750088092227726,
+    "relativeVolumeDifference": 5.422462419896666e-15
   },
   {
     "nativeName": "H_WASHER_2_015",
     "boundsDeltaMaxMm": 4.099831585335778e-11,
     "nativeVolumeMm3": 4.750088092227752,
-    "stepVolumeMm3": 4.750088092227724,
-    "relativeVolumeDifference": 5.983406808161837e-15
+    "stepVolumeMm3": 4.750088092227726,
+    "relativeVolumeDifference": 5.609443882651723e-15
   },
   {
     "nativeName": "H_BOLT_M2_25_003",
     "boundsDeltaMaxMm": 4.099831585335778e-11,
     "nativeVolumeMm3": 99.2735581401482,
-    "stepVolumeMm3": 99.27355814011037,
-    "relativeVolumeDifference": 3.810611401523727e-13
+    "stepVolumeMm3": 99.27355814011041,
+    "relativeVolumeDifference": 3.806316948404054e-13
   },
   {
     "nativeName": "H_NUT_M2_015",
@@ -2887,15 +2887,15 @@
     "nativeName": "H_WASHER_4_041",
     "boundsDeltaMaxMm": 4.099831585335778e-11,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517944,
-    "relativeVolumeDifference": 3.075457698708037e-15
+    "stepVolumeMm3": 39.27619135517945,
+    "relativeVolumeDifference": 2.8945484223134466e-15
   },
   {
     "nativeName": "P_LAYER_SPACER_3_3_002",
     "boundsDeltaMaxMm": 4.099831585335778e-11,
     "nativeVolumeMm3": 117.95345237351887,
-    "stepVolumeMm3": 117.9534523735191,
-    "relativeVolumeDifference": 1.927655959769759e-15
+    "stepVolumeMm3": 117.95345237351908,
+    "relativeVolumeDifference": 1.807177462284149e-15
   },
   {
     "nativeName": "H_WASHER_4_042",
@@ -2914,30 +2914,30 @@
   {
     "nativeName": "P_FOOT_SLIDER_L_001",
     "boundsDeltaMaxMm": 9.565326308802469e-11,
-    "nativeVolumeMm3": 1738.3557854223354,
-    "stepVolumeMm3": 1738.3557854263286,
-    "relativeVolumeDifference": 2.2970766523286284e-12
+    "nativeVolumeMm3": 1774.4068440891172,
+    "stepVolumeMm3": 1774.4068440921415,
+    "relativeVolumeDifference": 1.7043990036134793e-12
   },
   {
     "nativeName": "P_FOOT_ROCKER_L_001",
     "boundsDeltaMaxMm": 6.227196536201518e-11,
-    "nativeVolumeMm3": 2150.718509553743,
-    "stepVolumeMm3": 2150.718509555276,
-    "relativeVolumeDifference": 7.127633453790967e-13
+    "nativeVolumeMm3": 2140.0751005027882,
+    "stepVolumeMm3": 2140.075100497956,
+    "relativeVolumeDifference": 2.2579326068437064e-12
   },
   {
     "nativeName": "H_FOOT_SPRING_001",
     "boundsDeltaMaxMm": 9.328005035058595e-11,
     "nativeVolumeMm3": 38.87091194973653,
-    "stepVolumeMm3": 38.87091125604449,
-    "relativeVolumeDifference": 1.7846045010425713e-08
+    "stepVolumeMm3": 38.87091125604433,
+    "relativeVolumeDifference": 1.784604903192647e-08
   },
   {
     "nativeName": "H_FOOT_SPRING_002",
     "boundsDeltaMaxMm": 9.328005035058595e-11,
     "nativeVolumeMm3": 38.87091194973655,
-    "stepVolumeMm3": 38.87091194959788,
-    "relativeVolumeDifference": 3.5674367632602195e-12
+    "stepVolumeMm3": 38.87091194959772,
+    "relativeVolumeDifference": 3.5716410595071443e-12
   },
   {
     "nativeName": "H_SLEEVE_2_20_005",
@@ -3011,66 +3011,59 @@
   },
   {
     "nativeName": "H_BOLT_M2_16_005",
-    "boundsDeltaMaxMm": 7.938183443911839e-11,
-    "nativeVolumeMm3": 70.99922425784013,
-    "stepVolumeMm3": 70.99922425764267,
-    "relativeVolumeDifference": 2.78115470037586e-12
+    "boundsDeltaMaxMm": 8.36735125631094e-11,
+    "nativeVolumeMm3": 58.43285364348093,
+    "stepVolumeMm3": 58.43285364359251,
+    "relativeVolumeDifference": 1.9094827453948347e-12
   },
   {
     "nativeName": "H_WASHER_2_017",
-    "boundsDeltaMaxMm": 7.30580040908535e-11,
-    "nativeVolumeMm3": 4.750088092227775,
-    "stepVolumeMm3": 4.750088091547621,
-    "relativeVolumeDifference": 1.4318759945588096e-10
+    "boundsDeltaMaxMm": 7.524647571699461e-11,
+    "nativeVolumeMm3": 4.750088092227763,
+    "stepVolumeMm3": 4.750088093023729,
+    "relativeVolumeDifference": 1.6756867332890146e-10
   },
   {
     "nativeName": "H_WASHER_2_018",
-    "boundsDeltaMaxMm": 9.617906471248716e-11,
-    "nativeVolumeMm3": 4.750088092227776,
-    "stepVolumeMm3": 4.750088091547624,
-    "relativeVolumeDifference": 1.4318741247441817e-10
+    "boundsDeltaMaxMm": 4.928324415232055e-11,
+    "nativeVolumeMm3": 4.750088092227763,
+    "stepVolumeMm3": 4.750088091542039,
+    "relativeVolumeDifference": 1.4436034719028104e-10
   },
   {
     "nativeName": "H_NUT_M2_019",
-    "boundsDeltaMaxMm": 5.03632691106759e-11,
-    "nativeVolumeMm3": 18.62351789468493,
-    "stepVolumeMm3": 18.62351789414791,
-    "relativeVolumeDifference": 2.8835641971455327e-11
-  },
-  {
-    "nativeName": "H_NUT_M2_020",
-    "boundsDeltaMaxMm": 6.146194664324867e-11,
-    "nativeVolumeMm3": 18.623517894684923,
-    "stepVolumeMm3": 18.623517895234723,
-    "relativeVolumeDifference": 2.9521823345721505e-11
+    "boundsDeltaMaxMm": 7.177902716648532e-11,
+    "nativeVolumeMm3": 38.3007666256549,
+    "stepVolumeMm3": 38.30076662591551,
+    "relativeVolumeDifference": 6.804191721326306e-12
   },
   {
     "nativeName": "H_WASHER_4_045",
-    "boundsDeltaMaxMm": 7.452172212651931e-11,
-    "nativeVolumeMm3": 39.27619135517965,
-    "stepVolumeMm3": 39.27619135415054,
-    "relativeVolumeDifference": 2.620181413733405e-11
+    "boundsDeltaMaxMm": 1.0007283890445251e-10,
+    "nativeVolumeMm3": 17.18058482431926,
+    "stepVolumeMm3": 17.180584825074952,
+    "relativeVolumeDifference": 4.398515119931253e-11
   },
   {
     "nativeName": "H_WASHER_4_046",
-    "boundsDeltaMaxMm": 7.028688742138911e-11,
-    "nativeVolumeMm3": 39.27619135517969,
-    "stepVolumeMm3": 39.27619135414987,
-    "relativeVolumeDifference": 2.621990506497348e-11
+    "boundsDeltaMaxMm": 4.9894310905074235e-11,
+    "nativeVolumeMm3": 17.18058482431926,
+    "stepVolumeMm3": 17.180584825074494,
+    "relativeVolumeDifference": 4.395847573574411e-11
   },
   {
     "nativeName": "P_LEG_AB_R_001",
-    "boundsDeltaMaxMm": 3.313971319585107e-11,
+    "boundsDeltaMaxMm": 3.3097080631705467e-11,
     "nativeVolumeMm3": 853.2952746883046,
-    "stepVolumeMm3": 853.2952746885675,
-    "relativeVolumeDifference": 3.0803401426122867e-13
+    "stepVolumeMm3": 853.2952746886024,
+    "relativeVolumeDifference": 3.4893645473622747e-13
   },
   {
     "nativeName": "P_LEG_AC_R_001",
-    "boundsDeltaMaxMm": 7.94102561485488e-11,
-    "nativeVolumeMm3": 1021.1447746883024,
-    "stepVolumeMm3": 1021.1447746859634,
-    "relativeVolumeDifference": 2.290559631956683e-12
+    "boundsDeltaMaxMm": 7.935341272968799e-11,
+    "nativeVolumeMm3": 1021.1447746883036,
+    "stepVolumeMm3": 1021.1447746859633,
+    "relativeVolumeDifference": 2.29189562474289e-12
   },
   {
     "nativeName": "P_LEG_PC_R_001",
@@ -3081,49 +3074,49 @@
   },
   {
     "nativeName": "P_LEG_PBD_R_001",
-    "boundsDeltaMaxMm": 2.864908310584724e-11,
-    "nativeVolumeMm3": 1841.1977555773278,
+    "boundsDeltaMaxMm": 2.8677504815277644e-11,
+    "nativeVolumeMm3": 1841.1977555773306,
     "stepVolumeMm3": 1841.197755576196,
-    "relativeVolumeDifference": 6.147444797430247e-13
+    "relativeVolumeDifference": 6.162263868858355e-13
   },
   {
     "nativeName": "P_LEG_DE_R_001",
-    "boundsDeltaMaxMm": 2.8620661396416835e-11,
-    "nativeVolumeMm3": 703.7822746883055,
+    "boundsDeltaMaxMm": 2.8677504815277644e-11,
+    "nativeVolumeMm3": 703.7822746883048,
     "stepVolumeMm3": 703.782274688596,
-    "relativeVolumeDifference": 4.1272689129230153e-13
+    "relativeVolumeDifference": 4.136961129548279e-13
   },
   {
     "nativeName": "P_LEG_CEF_R_001",
-    "boundsDeltaMaxMm": 2.077626959362533e-11,
-    "nativeVolumeMm3": 4948.468042593538,
+    "boundsDeltaMaxMm": 2.0833113012486137e-11,
+    "nativeVolumeMm3": 4948.468042593544,
     "stepVolumeMm3": 4948.468042530546,
-    "relativeVolumeDifference": 1.272951598405767e-11
+    "relativeVolumeDifference": 1.273080253635174e-11
   },
   {
     "nativeName": "H_SLEEVE_2_20_006",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 175.30087007031034,
-    "stepVolumeMm3": 175.30087007031062,
-    "relativeVolumeDifference": 1.62131023188901e-15
+    "stepVolumeMm3": 175.30087007031068,
+    "relativeVolumeDifference": 1.945572278266812e-15
   },
   {
     "nativeName": "H_WASHER_2_019",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.75008809222775,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.048499494386553e-15
+    "stepVolumeMm3": 4.750088092227725,
+    "relativeVolumeDifference": 5.235480957141611e-15
   },
   {
     "nativeName": "H_WASHER_2_020",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.750088092227751,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.235480957141609e-15
+    "stepVolumeMm3": 4.750088092227724,
+    "relativeVolumeDifference": 5.609443882651724e-15
   },
   {
     "nativeName": "H_BOLT_M2_30_003",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.4210854715202004e-14,
     "nativeVolumeMm3": 114.98152140809714,
     "stepVolumeMm3": 114.98152140809307,
     "relativeVolumeDifference": 3.534745756339905e-14
@@ -3151,17 +3144,17 @@
   },
   {
     "nativeName": "P_LAYER_SPACER_7_4_002",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.4210854715202004e-14,
     "nativeVolumeMm3": 264.5016810800125,
-    "stepVolumeMm3": 264.50168108001225,
-    "relativeVolumeDifference": 8.596303604378639e-16
+    "stepVolumeMm3": 264.50168108001236,
+    "relativeVolumeDifference": 4.2981518021893196e-16
   },
   {
     "nativeName": "H_WASHER_4_048",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.27619135517955,
-    "stepVolumeMm3": 39.27619135517943,
-    "relativeVolumeDifference": 3.075457698708038e-15
+    "stepVolumeMm3": 39.276191355179435,
+    "relativeVolumeDifference": 2.8945484223134474e-15
   },
   {
     "nativeName": "H_SLEEVE_2_20_007",
@@ -3179,10 +3172,10 @@
   },
   {
     "nativeName": "H_BOLT_M2_25_004",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.4210854715202004e-14,
     "nativeVolumeMm3": 99.27355814014814,
-    "stepVolumeMm3": 99.27355814017365,
-    "relativeVolumeDifference": 2.569514449938052e-13
+    "stepVolumeMm3": 99.27355814017366,
+    "relativeVolumeDifference": 2.5709459343112767e-13
   },
   {
     "nativeName": "H_NUT_M2_023",
@@ -3265,22 +3258,22 @@
     "nativeName": "H_WASHER_2_024",
     "boundsDeltaMaxMm": 7.9424467003264e-11,
     "nativeVolumeMm3": 4.750088092227751,
-    "stepVolumeMm3": 4.750088092227727,
-    "relativeVolumeDifference": 5.0484994943865526e-15
+    "stepVolumeMm3": 4.750088092227726,
+    "relativeVolumeDifference": 5.235480957141609e-15
   },
   {
     "nativeName": "H_WASHER_2_025",
     "boundsDeltaMaxMm": 7.9424467003264e-11,
     "nativeVolumeMm3": 4.750088092227751,
-    "stepVolumeMm3": 4.750088092227727,
-    "relativeVolumeDifference": 5.0484994943865526e-15
+    "stepVolumeMm3": 4.750088092227725,
+    "relativeVolumeDifference": 5.422462419896667e-15
   },
   {
     "nativeName": "H_BOLT_M2_25_005",
     "boundsDeltaMaxMm": 7.9424467003264e-11,
     "nativeVolumeMm3": 99.27355814014818,
-    "stepVolumeMm3": 99.27355814015375,
-    "relativeVolumeDifference": 5.6114187430402e-14
+    "stepVolumeMm3": 99.2735581401538,
+    "relativeVolumeDifference": 5.654363274236936e-14
   },
   {
     "nativeName": "H_NUT_M2_027",
@@ -3314,8 +3307,8 @@
     "nativeName": "H_WASHER_4_052",
     "boundsDeltaMaxMm": 7.94386778579792e-11,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517979,
-    "relativeVolumeDifference": 5.789096844626893e-15
+    "stepVolumeMm3": 39.276191355179805,
+    "relativeVolumeDifference": 6.150915397416074e-15
   },
   {
     "nativeName": "H_WASHER_4_053",
@@ -3335,8 +3328,8 @@
     "nativeName": "H_SLEEVE_2_8_007",
     "boundsDeltaMaxMm": 2.864908310584724e-11,
     "nativeVolumeMm3": 70.1203480281243,
-    "stepVolumeMm3": 70.12034802812438,
-    "relativeVolumeDifference": 1.2159826739167547e-15
+    "stepVolumeMm3": 70.12034802812437,
+    "relativeVolumeDifference": 1.013318894930629e-15
   },
   {
     "nativeName": "H_WASHER_2_026",
@@ -3356,8 +3349,8 @@
     "nativeName": "H_BOLT_M2_16_007",
     "boundsDeltaMaxMm": 2.864908310584724e-11,
     "nativeVolumeMm3": 70.9992242578401,
-    "stepVolumeMm3": 70.9992242578351,
-    "relativeVolumeDifference": 7.045458470905384e-14
+    "stepVolumeMm3": 70.99922425783511,
+    "relativeVolumeDifference": 7.025442963885766e-14
   },
   {
     "nativeName": "H_NUT_M2_029",
@@ -3370,8 +3363,8 @@
     "nativeName": "H_NUT_M2_030",
     "boundsDeltaMaxMm": 7.014477887423709e-11,
     "nativeVolumeMm3": 18.623517894684884,
-    "stepVolumeMm3": 18.623517894816544,
-    "relativeVolumeDifference": 7.06955672753123e-12
+    "stepVolumeMm3": 18.62351789481654,
+    "relativeVolumeDifference": 7.069365962623177e-12
   },
   {
     "nativeName": "H_WASHER_4_054",
@@ -3384,8 +3377,8 @@
     "nativeName": "H_SLEEVE_2_20_009",
     "boundsDeltaMaxMm": 2.0804691303055733e-11,
     "nativeVolumeMm3": 175.30087007031062,
-    "stepVolumeMm3": 175.3008700703109,
-    "relativeVolumeDifference": 1.6213102318890074e-15
+    "stepVolumeMm3": 175.30087007031085,
+    "relativeVolumeDifference": 1.297048185511206e-15
   },
   {
     "nativeName": "H_WASHER_2_028",
@@ -3405,8 +3398,8 @@
     "nativeName": "H_BOLT_M2_25_006",
     "boundsDeltaMaxMm": 2.0804691303055733e-11,
     "nativeVolumeMm3": 99.27355814014827,
-    "stepVolumeMm3": 99.2735581401538,
-    "relativeVolumeDifference": 5.568474211843459e-14
+    "stepVolumeMm3": 99.27355814015382,
+    "relativeVolumeDifference": 5.59710389930795e-14
   },
   {
     "nativeName": "H_NUT_M2_031",
@@ -3433,8 +3426,8 @@
     "nativeName": "P_LAYER_SPACER_3_3_004",
     "boundsDeltaMaxMm": 2.0804691303055733e-11,
     "nativeVolumeMm3": 117.9534523735188,
-    "stepVolumeMm3": 117.95345237351901,
-    "relativeVolumeDifference": 1.80717746228415e-15
+    "stepVolumeMm3": 117.95345237351899,
+    "relativeVolumeDifference": 1.56622046731293e-15
   },
   {
     "nativeName": "H_WASHER_4_056",
@@ -3447,43 +3440,43 @@
     "nativeName": "P_PIN_TAIL_8_4_002",
     "boundsDeltaMaxMm": 2.0804691303055733e-11,
     "nativeVolumeMm3": 298.45797797541957,
-    "stepVolumeMm3": 298.45797797541877,
-    "relativeVolumeDifference": 2.6663983635138527e-15
+    "stepVolumeMm3": 298.4579779754186,
+    "relativeVolumeDifference": 3.237769441409678e-15
   },
   {
     "nativeName": "P_FOOT_SLIDER_R_001",
     "boundsDeltaMaxMm": 4.332889602665091e-11,
-    "nativeVolumeMm3": 1738.3557854223354,
-    "stepVolumeMm3": 1738.355785414409,
-    "relativeVolumeDifference": 4.559753398065614e-12
+    "nativeVolumeMm3": 1774.4068440891174,
+    "stepVolumeMm3": 1774.4068440792355,
+    "relativeVolumeDifference": 5.569121501845381e-12
   },
   {
     "nativeName": "P_FOOT_ROCKER_R_001",
     "boundsDeltaMaxMm": 3.083755473198835e-12,
-    "nativeVolumeMm3": 2150.718509553741,
-    "stepVolumeMm3": 2150.7185095535406,
-    "relativeVolumeDifference": 9.324492296415957e-14
+    "nativeVolumeMm3": 2140.0751005027887,
+    "stepVolumeMm3": 2140.0751005024576,
+    "relativeVolumeDifference": 1.5469367003408788e-13
   },
   {
     "nativeName": "H_FOOT_SPRING_003",
     "boundsDeltaMaxMm": 9.08073616301408e-11,
-    "nativeVolumeMm3": 38.87091194973648,
-    "stepVolumeMm3": 38.870911949571756,
-    "relativeVolumeDifference": 4.237747821411243e-12
+    "nativeVolumeMm3": 38.870911949736545,
+    "stepVolumeMm3": 38.87091194957148,
+    "relativeVolumeDifference": 4.246522004883079e-12
   },
   {
     "nativeName": "H_FOOT_SPRING_004",
     "boundsDeltaMaxMm": 9.08073616301408e-11,
-    "nativeVolumeMm3": 38.87091194973649,
-    "stepVolumeMm3": 38.87091194957075,
-    "relativeVolumeDifference": 4.263887576337775e-12
+    "nativeVolumeMm3": 38.87091194973653,
+    "stepVolumeMm3": 38.870911949570484,
+    "relativeVolumeDifference": 4.27174778236463e-12
   },
   {
     "nativeName": "H_SLEEVE_2_20_010",
     "boundsDeltaMaxMm": 5.007905201637186e-11,
-    "nativeVolumeMm3": 175.3008700703104,
+    "nativeVolumeMm3": 175.30087007031057,
     "stepVolumeMm3": 175.30087007015476,
-    "relativeVolumeDifference": 8.878294829824216e-13
+    "relativeVolumeDifference": 8.888022691215541e-13
   },
   {
     "nativeName": "H_BOLT_M2_30_004",
@@ -3495,9 +3488,9 @@
   {
     "nativeName": "H_WASHER_2_030",
     "boundsDeltaMaxMm": 5.994138518872205e-11,
-    "nativeVolumeMm3": 4.750088092227754,
+    "nativeVolumeMm3": 4.750088092227761,
     "stepVolumeMm3": 4.7500880923682125,
-    "relativeVolumeDifference": 2.956962248301028e-11
+    "relativeVolumeDifference": 2.95681266313082e-11
   },
   {
     "nativeName": "H_NUT_M2_033",
@@ -3516,9 +3509,9 @@
   {
     "nativeName": "H_WASHER_3_067",
     "boundsDeltaMaxMm": 7.479172836610815e-11,
-    "nativeVolumeMm3": 15.221016406642562,
+    "nativeVolumeMm3": 15.221016406642564,
     "stepVolumeMm3": 15.22101640710918,
-    "relativeVolumeDifference": 3.065621448516015e-11
+    "relativeVolumeDifference": 3.065609778094067e-11
   },
   {
     "nativeName": "H_WASHER_4_057",
@@ -3530,16 +3523,16 @@
   {
     "nativeName": "H_WASHER_4_058",
     "boundsDeltaMaxMm": 7.149481007218128e-11,
-    "nativeVolumeMm3": 39.276191355179584,
+    "nativeVolumeMm3": 39.276191355179634,
     "stepVolumeMm3": 39.27619135640685,
-    "relativeVolumeDifference": 3.124701203742643e-11
+    "relativeVolumeDifference": 3.124574567249162e-11
   },
   {
     "nativeName": "H_WASHER_3_068",
     "boundsDeltaMaxMm": 2.893330020015128e-11,
-    "nativeVolumeMm3": 15.221016406642562,
+    "nativeVolumeMm3": 15.221016406642557,
     "stepVolumeMm3": 15.221016407109008,
-    "relativeVolumeDifference": 3.064489417587078e-11
+    "relativeVolumeDifference": 3.064524428852922e-11
   },
   {
     "nativeName": "H_SLEEVE_2_8_008",
@@ -3550,66 +3543,59 @@
   },
   {
     "nativeName": "H_BOLT_M2_16_008",
-    "boundsDeltaMaxMm": 3.072386789426673e-11,
-    "nativeVolumeMm3": 70.99922425783998,
-    "stepVolumeMm3": 70.99922425762031,
-    "relativeVolumeDifference": 3.0939970750924886e-12
+    "boundsDeltaMaxMm": 7.631228982063476e-12,
+    "nativeVolumeMm3": 58.432853643480804,
+    "stepVolumeMm3": 58.43285364357243,
+    "relativeVolumeDifference": 1.568030312797965e-12
   },
   {
     "nativeName": "H_WASHER_2_031",
-    "boundsDeltaMaxMm": 8.327560863108374e-12,
-    "nativeVolumeMm3": 4.750088092227769,
-    "stepVolumeMm3": 4.7500880922836055,
-    "relativeVolumeDifference": 1.1754776637559398e-11
+    "boundsDeltaMaxMm": 9.393374966748524e-12,
+    "nativeVolumeMm3": 4.750088092227766,
+    "stepVolumeMm3": 4.7500880922741215,
+    "relativeVolumeDifference": 9.75893650411193e-12
   },
   {
     "nativeName": "H_WASHER_2_032",
-    "boundsDeltaMaxMm": 7.815970093361102e-12,
-    "nativeVolumeMm3": 4.7500880922277675,
-    "stepVolumeMm3": 4.750088092155409,
-    "relativeVolumeDifference": 1.523300580772897e-11
+    "boundsDeltaMaxMm": 6.750155989720952e-12,
+    "nativeVolumeMm3": 4.750088092227768,
+    "stepVolumeMm3": 4.750088092155211,
+    "relativeVolumeDifference": 1.52748896553861e-11
   },
   {
     "nativeName": "H_NUT_M2_035",
-    "boundsDeltaMaxMm": 9.393374966748524e-12,
-    "nativeVolumeMm3": 18.62351789468491,
-    "stepVolumeMm3": 18.623517894691272,
-    "relativeVolumeDifference": 3.4165995032268586e-13
-  },
-  {
-    "nativeName": "H_NUT_M2_036",
-    "boundsDeltaMaxMm": 9.166001291305292e-12,
-    "nativeVolumeMm3": 18.623517894684905,
-    "stepVolumeMm3": 18.62351789469252,
-    "relativeVolumeDifference": 4.0880919795729534e-13
+    "boundsDeltaMaxMm": 4.661160346586257e-12,
+    "nativeVolumeMm3": 38.300766625654795,
+    "stepVolumeMm3": 38.30076662568936,
+    "relativeVolumeDifference": 9.025381771751389e-13
   },
   {
     "nativeName": "H_WASHER_4_059",
-    "boundsDeltaMaxMm": 1.0189182830799837e-11,
-    "nativeVolumeMm3": 39.27619135517958,
-    "stepVolumeMm3": 39.27619135536608,
-    "relativeVolumeDifference": 4.748506686805207e-12
+    "boundsDeltaMaxMm": 5.7269744502264075e-12,
+    "nativeVolumeMm3": 17.180584824319162,
+    "stepVolumeMm3": 17.180584824328538,
+    "relativeVolumeDifference": 5.457096771865018e-13
   },
   {
     "nativeName": "H_WASHER_4_060",
-    "boundsDeltaMaxMm": 5.9685589803848416e-12,
-    "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.276191354968574,
-    "relativeVolumeDifference": 5.371920053260967e-12
+    "boundsDeltaMaxMm": 2.9984903449076228e-12,
+    "nativeVolumeMm3": 17.180584824319155,
+    "stepVolumeMm3": 17.180584824328534,
+    "relativeVolumeDifference": 5.459164637257921e-13
   },
   {
     "nativeName": "P_LEG_AB_L_002",
-    "boundsDeltaMaxMm": 3.147704319417244e-12,
+    "boundsDeltaMaxMm": 3.112177182629239e-12,
     "nativeVolumeMm3": 853.2952746883046,
-    "stepVolumeMm3": 853.2952746889117,
-    "relativeVolumeDifference": 7.114626453957444e-13
+    "stepVolumeMm3": 853.2952746889468,
+    "relativeVolumeDifference": 7.526315512810038e-13
   },
   {
     "nativeName": "P_LEG_AC_L_002",
-    "boundsDeltaMaxMm": 9.407585821463726e-12,
-    "nativeVolumeMm3": 1021.1447746883019,
+    "boundsDeltaMaxMm": 9.372058684675721e-12,
+    "nativeVolumeMm3": 1021.1447746883036,
     "stepVolumeMm3": 1021.1447746878603,
-    "relativeVolumeDifference": 4.325276645354194e-13
+    "relativeVolumeDifference": 4.341976555181809e-13
   },
   {
     "nativeName": "P_LEG_PC_L_002",
@@ -3620,38 +3606,38 @@
   },
   {
     "nativeName": "P_LEG_PBD_L_002",
-    "boundsDeltaMaxMm": 8.625988812127616e-12,
-    "nativeVolumeMm3": 1841.1977555773278,
+    "boundsDeltaMaxMm": 8.668621376273222e-12,
+    "nativeVolumeMm3": 1841.1977555773308,
     "stepVolumeMm3": 1841.1977555768929,
-    "relativeVolumeDifference": 2.362406970165541e-13
+    "relativeVolumeDifference": 2.378460964212663e-13
   },
   {
     "nativeName": "P_LEG_DE_L_002",
-    "boundsDeltaMaxMm": 8.618883384770015e-12,
-    "nativeVolumeMm3": 703.7822746883055,
+    "boundsDeltaMaxMm": 8.668621376273222e-12,
+    "nativeVolumeMm3": 703.7822746883046,
     "stepVolumeMm3": 703.7822746885281,
-    "relativeVolumeDifference": 3.1628933587096924e-13
+    "relativeVolumeDifference": 3.175816314210042e-13
   },
   {
     "nativeName": "P_LEG_CEF_L_002",
-    "boundsDeltaMaxMm": 4.579447931973846e-12,
-    "nativeVolumeMm3": 4948.468042593541,
+    "boundsDeltaMaxMm": 4.60786964140425e-12,
+    "nativeVolumeMm3": 4948.468042593549,
     "stepVolumeMm3": 4948.46804257319,
-    "relativeVolumeDifference": 4.112556304638669e-12
+    "relativeVolumeDifference": 4.114210443302487e-12
   },
   {
     "nativeName": "H_SLEEVE_2_20_011",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 175.30087007031025,
-    "stepVolumeMm3": 175.30087007031028,
-    "relativeVolumeDifference": 1.6213102318890108e-16
+    "stepVolumeMm3": 175.30087007031042,
+    "relativeVolumeDifference": 9.727861391334064e-16
   },
   {
     "nativeName": "H_WASHER_2_033",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.750088092227751,
-    "stepVolumeMm3": 4.750088092227723,
-    "relativeVolumeDifference": 5.796425345406782e-15
+    "stepVolumeMm3": 4.750088092227722,
+    "relativeVolumeDifference": 5.9834068081618394e-15
   },
   {
     "nativeName": "H_WASHER_2_034",
@@ -3664,8 +3650,8 @@
     "nativeName": "H_BOLT_M2_30_005",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 114.98152140809707,
-    "stepVolumeMm3": 114.98152140810123,
-    "relativeVolumeDifference": 3.621260512613961e-14
+    "stepVolumeMm3": 114.98152140810129,
+    "relativeVolumeDifference": 3.670697516199135e-14
   },
   {
     "nativeName": "H_NUT_M2_037",
@@ -3692,8 +3678,8 @@
     "nativeName": "P_LAYER_SPACER_7_4_003",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 264.5016810800124,
-    "stepVolumeMm3": 264.50168108001236,
-    "relativeVolumeDifference": 2.1490759010946603e-16
+    "stepVolumeMm3": 264.5016810800124,
+    "relativeVolumeDifference": 0.0
   },
   {
     "nativeName": "H_WASHER_4_062",
@@ -3706,36 +3692,36 @@
     "nativeName": "H_SLEEVE_2_20_012",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 175.3008700703104,
-    "stepVolumeMm3": 175.30087007031034,
-    "relativeVolumeDifference": 3.242620463778019e-16
+    "stepVolumeMm3": 175.30087007031028,
+    "relativeVolumeDifference": 6.485240927556038e-16
   },
   {
     "nativeName": "H_WASHER_2_035",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.7500880922277515,
-    "stepVolumeMm3": 4.750088092227721,
-    "relativeVolumeDifference": 6.357369733671954e-15
+    "stepVolumeMm3": 4.7500880922277195,
+    "relativeVolumeDifference": 6.731332659182068e-15
   },
   {
     "nativeName": "H_BOLT_M2_25_007",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 99.27355814014811,
-    "stepVolumeMm3": 99.27355814014399,
-    "relativeVolumeDifference": 4.1513046823511714e-14
+    "stepVolumeMm3": 99.27355814014402,
+    "relativeVolumeDifference": 4.122674994886681e-14
   },
   {
     "nativeName": "H_NUT_M2_039",
     "boundsDeltaMaxMm": 8.5051965470484e-12,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.62351789463551,
-    "relativeVolumeDifference": 2.6508691623026527e-12
+    "stepVolumeMm3": 18.623517894635512,
+    "relativeVolumeDifference": 2.6506783973945996e-12
   },
   {
     "nativeName": "H_NUT_M2_040",
     "boundsDeltaMaxMm": 8.5051965470484e-12,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.623517894635672,
-    "relativeVolumeDifference": 2.6420939765322208e-12
+    "stepVolumeMm3": 18.623517894635675,
+    "relativeVolumeDifference": 2.6419032116241677e-12
   },
   {
     "nativeName": "H_WASHER_4_063",
@@ -3748,8 +3734,8 @@
     "nativeName": "H_SLEEVE_2_8_009",
     "boundsDeltaMaxMm": 3.154809746774845e-12,
     "nativeVolumeMm3": 70.12034802812417,
-    "stepVolumeMm3": 70.12034802812411,
-    "relativeVolumeDifference": 8.106551159445046e-16
+    "stepVolumeMm3": 70.12034802812408,
+    "relativeVolumeDifference": 1.215982673916757e-15
   },
   {
     "nativeName": "H_WASHER_2_036",
@@ -3769,8 +3755,8 @@
     "nativeName": "H_BOLT_M2_16_009",
     "boundsDeltaMaxMm": 3.154809746774845e-12,
     "nativeVolumeMm3": 70.99922425783996,
-    "stepVolumeMm3": 70.99922425783478,
-    "relativeVolumeDifference": 7.285644555140809e-14
+    "stepVolumeMm3": 70.99922425783477,
+    "relativeVolumeDifference": 7.305660062160427e-14
   },
   {
     "nativeName": "H_NUT_M2_041",
@@ -3783,8 +3769,8 @@
     "nativeName": "H_NUT_M2_042",
     "boundsDeltaMaxMm": 4.654054919228656e-12,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.623517894699475,
-    "relativeVolumeDifference": 7.838530071892343e-13
+    "stepVolumeMm3": 18.62351789469948,
+    "relativeVolumeDifference": 7.840437720972871e-13
   },
   {
     "nativeName": "H_WASHER_4_064",
@@ -3797,8 +3783,8 @@
     "nativeName": "H_SLEEVE_2_20_013",
     "boundsDeltaMaxMm": 9.42890210353653e-12,
     "nativeVolumeMm3": 175.30087007031048,
-    "stepVolumeMm3": 175.30087007031045,
-    "relativeVolumeDifference": 1.6213102318890086e-16
+    "stepVolumeMm3": 175.30087007031037,
+    "relativeVolumeDifference": 6.485240927556034e-16
   },
   {
     "nativeName": "H_WASHER_2_038",
@@ -3818,22 +3804,22 @@
     "nativeName": "H_BOLT_M2_25_008",
     "boundsDeltaMaxMm": 9.42890210353653e-12,
     "nativeVolumeMm3": 99.27355814014811,
-    "stepVolumeMm3": 99.27355814014393,
-    "relativeVolumeDifference": 4.208564057280153e-14
+    "stepVolumeMm3": 99.27355814014402,
+    "relativeVolumeDifference": 4.122674994886681e-14
   },
   {
     "nativeName": "H_NUT_M2_043",
     "boundsDeltaMaxMm": 7.929656931082718e-12,
     "nativeVolumeMm3": 18.62351789468487,
-    "stepVolumeMm3": 18.623517894635622,
-    "relativeVolumeDifference": 2.644383155428856e-12
+    "stepVolumeMm3": 18.623517894635626,
+    "relativeVolumeDifference": 2.6441923905208034e-12
   },
   {
     "nativeName": "H_NUT_M2_044",
     "boundsDeltaMaxMm": 7.929656931082718e-12,
     "nativeVolumeMm3": 18.623517894684873,
-    "stepVolumeMm3": 18.62351789463546,
-    "relativeVolumeDifference": 2.6533491061073403e-12
+    "stepVolumeMm3": 18.623517894635462,
+    "relativeVolumeDifference": 2.6531583411992876e-12
   },
   {
     "nativeName": "H_WASHER_4_065",
@@ -3846,15 +3832,15 @@
     "nativeName": "P_LAYER_SPACER_3_3_005",
     "boundsDeltaMaxMm": 9.42890210353653e-12,
     "nativeVolumeMm3": 117.95345237351881,
-    "stepVolumeMm3": 117.95345237351913,
-    "relativeVolumeDifference": 2.6505269446834197e-15
+    "stepVolumeMm3": 117.9534523735191,
+    "relativeVolumeDifference": 2.4095699497121997e-15
   },
   {
     "nativeName": "H_WASHER_4_066",
     "boundsDeltaMaxMm": 9.42890210353653e-12,
     "nativeVolumeMm3": 39.276191355179556,
-    "stepVolumeMm3": 39.27619135517982,
-    "relativeVolumeDifference": 6.693643226599846e-15
+    "stepVolumeMm3": 39.27619135517981,
+    "relativeVolumeDifference": 6.512733950205256e-15
   },
   {
     "nativeName": "H_WASHER_4_067",
@@ -3874,8 +3860,8 @@
     "nativeName": "H_SLEEVE_2_8_010",
     "boundsDeltaMaxMm": 8.640199666842818e-12,
     "nativeVolumeMm3": 70.12034802812423,
-    "stepVolumeMm3": 70.1203480281242,
-    "relativeVolumeDifference": 4.05327557972252e-16
+    "stepVolumeMm3": 70.12034802812418,
+    "relativeVolumeDifference": 6.07991336958378e-16
   },
   {
     "nativeName": "H_WASHER_2_040",
@@ -3888,15 +3874,15 @@
     "nativeName": "H_WASHER_2_041",
     "boundsDeltaMaxMm": 8.640199666842818e-12,
     "nativeVolumeMm3": 4.750088092227753,
-    "stepVolumeMm3": 4.750088092227722,
-    "relativeVolumeDifference": 6.544351196427008e-15
+    "stepVolumeMm3": 4.750088092227721,
+    "relativeVolumeDifference": 6.731332659182066e-15
   },
   {
     "nativeName": "H_BOLT_M2_16_010",
     "boundsDeltaMaxMm": 8.640199666842818e-12,
     "nativeVolumeMm3": 70.99922425783998,
-    "stepVolumeMm3": 70.99922425783589,
-    "relativeVolumeDifference": 5.764466021649869e-14
+    "stepVolumeMm3": 70.9992242578359,
+    "relativeVolumeDifference": 5.74445051463025e-14
   },
   {
     "nativeName": "H_NUT_M2_045",
@@ -3923,36 +3909,36 @@
     "nativeName": "H_SLEEVE_2_20_014",
     "boundsDeltaMaxMm": 8.313350008393172e-13,
     "nativeVolumeMm3": 175.30087007031048,
-    "stepVolumeMm3": 175.30087007031042,
-    "relativeVolumeDifference": 3.242620463778017e-16
+    "stepVolumeMm3": 175.30087007031037,
+    "relativeVolumeDifference": 6.485240927556034e-16
   },
   {
     "nativeName": "H_WASHER_2_042",
     "boundsDeltaMaxMm": 8.313350008393172e-13,
     "nativeVolumeMm3": 4.750088092227753,
-    "stepVolumeMm3": 4.750088092227722,
-    "relativeVolumeDifference": 6.544351196427008e-15
+    "stepVolumeMm3": 4.750088092227721,
+    "relativeVolumeDifference": 6.731332659182066e-15
   },
   {
     "nativeName": "H_WASHER_2_043",
     "boundsDeltaMaxMm": 8.313350008393172e-13,
     "nativeVolumeMm3": 4.750088092227753,
-    "stepVolumeMm3": 4.750088092227722,
-    "relativeVolumeDifference": 6.544351196427008e-15
+    "stepVolumeMm3": 4.750088092227721,
+    "relativeVolumeDifference": 6.731332659182066e-15
   },
   {
     "nativeName": "H_BOLT_M2_25_009",
     "boundsDeltaMaxMm": 8.313350008393172e-13,
     "nativeVolumeMm3": 99.27355814014813,
-    "stepVolumeMm3": 99.27355814014395,
-    "relativeVolumeDifference": 4.2085640572801524e-14
+    "stepVolumeMm3": 99.27355814014402,
+    "relativeVolumeDifference": 4.136989838618925e-14
   },
   {
     "nativeName": "H_NUT_M2_047",
     "boundsDeltaMaxMm": 2.3234747459355276e-12,
     "nativeVolumeMm3": 18.623517894684873,
-    "stepVolumeMm3": 18.62351789466973,
-    "relativeVolumeDifference": 8.130400381213233e-13
+    "stepVolumeMm3": 18.623517894669735,
+    "relativeVolumeDifference": 8.128492732132704e-13
   },
   {
     "nativeName": "H_NUT_M2_048",
@@ -3972,57 +3958,57 @@
     "nativeName": "P_LAYER_SPACER_3_3_006",
     "boundsDeltaMaxMm": 8.384404281969182e-13,
     "nativeVolumeMm3": 117.9534523735188,
-    "stepVolumeMm3": 117.95345237351913,
-    "relativeVolumeDifference": 2.77100544216903e-15
+    "stepVolumeMm3": 117.9534523735191,
+    "relativeVolumeDifference": 2.53004844719781e-15
   },
   {
     "nativeName": "H_WASHER_4_070",
     "boundsDeltaMaxMm": 8.384404281969182e-13,
     "nativeVolumeMm3": 39.276191355179556,
-    "stepVolumeMm3": 39.276191355179805,
-    "relativeVolumeDifference": 6.3318246738106655e-15
+    "stepVolumeMm3": 39.2761913551798,
+    "relativeVolumeDifference": 6.150915397416075e-15
   },
   {
     "nativeName": "P_PIN_TAIL_8_4_003",
     "boundsDeltaMaxMm": 8.384404281969182e-13,
     "nativeVolumeMm3": 298.4579779754196,
-    "stepVolumeMm3": 298.4579779754191,
-    "relativeVolumeDifference": 1.7141132336874764e-15
+    "stepVolumeMm3": 298.45797797541894,
+    "relativeVolumeDifference": 2.2854843115833016e-15
   },
   {
     "nativeName": "P_FOOT_SLIDER_L_002",
-    "boundsDeltaMaxMm": 3.979039320256561e-13,
-    "nativeVolumeMm3": 1738.3557854223352,
-    "stepVolumeMm3": 1738.355785422471,
-    "relativeVolumeDifference": 7.808647998178973e-14
+    "boundsDeltaMaxMm": 2.637889906509372e-12,
+    "nativeVolumeMm3": 1774.4068440891153,
+    "stepVolumeMm3": 1774.406844089334,
+    "relativeVolumeDifference": 1.2327132106429357e-13
   },
   {
     "nativeName": "P_FOOT_ROCKER_L_002",
-    "boundsDeltaMaxMm": 3.0730973321624333e-12,
-    "nativeVolumeMm3": 2150.718509553741,
-    "stepVolumeMm3": 2150.7185095531886,
-    "relativeVolumeDifference": 2.568992775543172e-13
+    "boundsDeltaMaxMm": 3.076650045841234e-12,
+    "nativeVolumeMm3": 2140.0751005027882,
+    "stepVolumeMm3": 2140.0751005024613,
+    "relativeVolumeDifference": 1.5278124828916103e-13
   },
   {
     "nativeName": "H_FOOT_SPRING_005",
     "boundsDeltaMaxMm": 8.78941364135244e-12,
-    "nativeVolumeMm3": 38.870911949736495,
-    "stepVolumeMm3": 38.87091194973285,
-    "relativeVolumeDifference": 9.377408585532359e-14
+    "nativeVolumeMm3": 38.870911949736545,
+    "stepVolumeMm3": 38.87091194973309,
+    "relativeVolumeDifference": 8.883860765241172e-14
   },
   {
     "nativeName": "H_FOOT_SPRING_006",
-    "boundsDeltaMaxMm": 8.782308213994838e-12,
-    "nativeVolumeMm3": 38.870911949736495,
-    "stepVolumeMm3": 38.87091194973517,
-    "relativeVolumeDifference": 3.418275644238891e-14
+    "boundsDeltaMaxMm": 8.79651906871004e-12,
+    "nativeVolumeMm3": 38.870911949736545,
+    "stepVolumeMm3": 38.87091194973543,
+    "relativeVolumeDifference": 2.869889177248691e-14
   },
   {
     "nativeName": "H_SLEEVE_2_20_015",
     "boundsDeltaMaxMm": 4.0110137433657655e-12,
-    "nativeVolumeMm3": 175.30087007031025,
+    "nativeVolumeMm3": 175.3008700703106,
     "stepVolumeMm3": 175.30087007030895,
-    "relativeVolumeDifference": 7.45802706668945e-15
+    "relativeVolumeDifference": 9.403599344956244e-15
   },
   {
     "nativeName": "H_BOLT_M2_30_006",
@@ -4034,9 +4020,9 @@
   {
     "nativeName": "H_WASHER_2_044",
     "boundsDeltaMaxMm": 2.497557716196752e-12,
-    "nativeVolumeMm3": 4.750088092227759,
+    "nativeVolumeMm3": 4.750088092227772,
     "stepVolumeMm3": 4.750088092182228,
-    "relativeVolumeDifference": 9.585230725212497e-12
+    "relativeVolumeDifference": 9.588035447153795e-12
   },
   {
     "nativeName": "H_NUT_M2_049",
@@ -4055,30 +4041,30 @@
   {
     "nativeName": "H_WASHER_3_069",
     "boundsDeltaMaxMm": 7.311484750971431e-12,
-    "nativeVolumeMm3": 15.22101640664254,
+    "nativeVolumeMm3": 15.221016406642565,
     "stepVolumeMm3": 15.22101640657265,
-    "relativeVolumeDifference": 4.591727515365013e-12
+    "relativeVolumeDifference": 4.593361374437699e-12
   },
   {
     "nativeName": "H_WASHER_4_071",
     "boundsDeltaMaxMm": 7.887024366937112e-12,
-    "nativeVolumeMm3": 39.2761913551796,
+    "nativeVolumeMm3": 39.27619135517964,
     "stepVolumeMm3": 39.27619135525367,
-    "relativeVolumeDifference": 1.8859792064136034e-12
+    "relativeVolumeDifference": 1.884893750755234e-12
   },
   {
     "nativeName": "H_WASHER_4_072",
-    "boundsDeltaMaxMm": 2.5508484213787597e-12,
-    "nativeVolumeMm3": 39.27619135517959,
+    "boundsDeltaMaxMm": 2.5579538487363607e-12,
+    "nativeVolumeMm3": 39.27619135517964,
     "stepVolumeMm3": 39.276191355253545,
-    "relativeVolumeDifference": 1.8829037487148955e-12
+    "relativeVolumeDifference": 1.881637383780131e-12
   },
   {
     "nativeName": "H_WASHER_3_070",
     "boundsDeltaMaxMm": 1.4566126083082054e-12,
-    "nativeVolumeMm3": 15.22101640664254,
+    "nativeVolumeMm3": 15.221016406642562,
     "stepVolumeMm3": 15.221016406572614,
-    "relativeVolumeDifference": 4.5940615997545746e-12
+    "relativeVolumeDifference": 4.5954620503883054e-12
   },
   {
     "nativeName": "H_SLEEVE_2_8_011",
@@ -4089,52 +4075,45 @@
   },
   {
     "nativeName": "H_BOLT_M2_16_011",
-    "boundsDeltaMaxMm": 2.2009061240169103e-12,
-    "nativeVolumeMm3": 70.99922425784004,
-    "stepVolumeMm3": 70.99922425784473,
-    "relativeVolumeDifference": 6.605117316473803e-14
+    "boundsDeltaMaxMm": 1.801225835151854e-12,
+    "nativeVolumeMm3": 58.43285364348082,
+    "stepVolumeMm3": 58.43285364348899,
+    "relativeVolumeDifference": 1.398398495321954e-13
   },
   {
     "nativeName": "H_WASHER_2_045",
-    "boundsDeltaMaxMm": 8.329337219947774e-12,
-    "nativeVolumeMm3": 4.750088092227765,
-    "stepVolumeMm3": 4.750088092283487,
-    "relativeVolumeDifference": 1.1730843010326762e-11
+    "boundsDeltaMaxMm": 9.405809464624326e-12,
+    "nativeVolumeMm3": 4.750088092227763,
+    "stepVolumeMm3": 4.750088092274197,
+    "relativeVolumeDifference": 9.77539087283438e-12
   },
   {
     "nativeName": "H_WASHER_2_046",
-    "boundsDeltaMaxMm": 8.952838470577262e-13,
+    "boundsDeltaMaxMm": 5.506706202140776e-13,
     "nativeVolumeMm3": 4.750088092227763,
-    "stepVolumeMm3": 4.750088092219412,
-    "relativeVolumeDifference": 1.757999712823046e-12
+    "stepVolumeMm3": 4.750088092219397,
+    "relativeVolumeDifference": 1.761178397689882e-12
   },
   {
     "nativeName": "H_NUT_M2_051",
-    "boundsDeltaMaxMm": 8.512301974406e-12,
-    "nativeVolumeMm3": 18.6235178946849,
-    "stepVolumeMm3": 18.623517894635512,
-    "relativeVolumeDifference": 2.651822986842914e-12
-  },
-  {
-    "nativeName": "H_NUT_M2_052",
-    "boundsDeltaMaxMm": 8.512301974406e-12,
-    "nativeVolumeMm3": 18.62351789468489,
-    "stepVolumeMm3": 18.623517894641925,
-    "relativeVolumeDifference": 2.307110797991383e-12
+    "boundsDeltaMaxMm": 6.686207143502543e-12,
+    "nativeVolumeMm3": 38.30076662565479,
+    "stepVolumeMm3": 38.30076662566419,
+    "relativeVolumeDifference": 2.4543843954834716e-13
   },
   {
     "nativeName": "H_WASHER_4_073",
-    "boundsDeltaMaxMm": 1.0182077403442236e-11,
-    "nativeVolumeMm3": 39.27619135517958,
-    "stepVolumeMm3": 39.2761913553658,
-    "relativeVolumeDifference": 4.741451225025818e-12
+    "boundsDeltaMaxMm": 5.730527163905208e-12,
+    "nativeVolumeMm3": 17.180584824319173,
+    "stepVolumeMm3": 17.180584824328573,
+    "relativeVolumeDifference": 5.47157182961532e-13
   },
   {
     "nativeName": "H_WASHER_4_074",
-    "boundsDeltaMaxMm": 1.1386447340555605e-12,
-    "nativeVolumeMm3": 39.27619135517958,
-    "stepVolumeMm3": 39.27619135516714,
-    "relativeVolumeDifference": 3.165912336905331e-13
+    "boundsDeltaMaxMm": 1.0444978215673473e-12,
+    "nativeVolumeMm3": 17.18058482431917,
+    "stepVolumeMm3": 17.180584824300766,
+    "relativeVolumeDifference": 1.071154273522576e-12
   },
   {
     "nativeName": "P_LEG_AB_R_002",
@@ -4182,8 +4161,8 @@
     "nativeName": "H_SLEEVE_2_20_016",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 175.30087007031025,
-    "stepVolumeMm3": 175.30087007031028,
-    "relativeVolumeDifference": 1.6213102318890108e-16
+    "stepVolumeMm3": 175.3008700703104,
+    "relativeVolumeDifference": 8.106551159445054e-16
   },
   {
     "nativeName": "H_WASHER_2_047",
@@ -4201,10 +4180,10 @@
   },
   {
     "nativeName": "H_BOLT_M2_30_007",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.4210854715202004e-14,
     "nativeVolumeMm3": 114.98152140809702,
-    "stepVolumeMm3": 114.98152140809817,
-    "relativeVolumeDifference": 1.0010993225997644e-14
+    "stepVolumeMm3": 114.98152140809819,
+    "relativeVolumeDifference": 1.0134585734960576e-14
   },
   {
     "nativeName": "H_NUT_M2_053",
@@ -4224,22 +4203,22 @@
     "nativeName": "H_WASHER_4_075",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.276191355179535,
-    "stepVolumeMm3": 39.276191355179435,
-    "relativeVolumeDifference": 2.5327298695242676e-15
+    "stepVolumeMm3": 39.27619135517945,
+    "relativeVolumeDifference": 2.1709113167350863e-15
   },
   {
     "nativeName": "P_LAYER_SPACER_7_4_004",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.4210854715202004e-14,
     "nativeVolumeMm3": 264.5016810800124,
-    "stepVolumeMm3": 264.50168108001236,
-    "relativeVolumeDifference": 2.1490759010946603e-16
+    "stepVolumeMm3": 264.5016810800123,
+    "relativeVolumeDifference": 4.2981518021893206e-16
   },
   {
     "nativeName": "H_WASHER_4_076",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.276191355179535,
-    "stepVolumeMm3": 39.27619135517945,
-    "relativeVolumeDifference": 2.1709113167350863e-15
+    "stepVolumeMm3": 39.276191355179456,
+    "relativeVolumeDifference": 1.990002040340496e-15
   },
   {
     "nativeName": "H_SLEEVE_2_20_017",
@@ -4257,10 +4236,10 @@
   },
   {
     "nativeName": "H_BOLT_M2_25_010",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.4210854715202004e-14,
     "nativeVolumeMm3": 99.2735581401481,
-    "stepVolumeMm3": 99.273558140144,
-    "relativeVolumeDifference": 4.1226749948866815e-14
+    "stepVolumeMm3": 99.27355814014399,
+    "relativeVolumeDifference": 4.1369898386189264e-14
   },
   {
     "nativeName": "H_NUT_M2_055",
@@ -4273,8 +4252,8 @@
     "nativeName": "H_NUT_M2_056",
     "boundsDeltaMaxMm": 8.5051965470484e-12,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.623517894635675,
-    "relativeVolumeDifference": 2.6419032116241677e-12
+    "stepVolumeMm3": 18.623517894635672,
+    "relativeVolumeDifference": 2.6420939765322208e-12
   },
   {
     "nativeName": "H_WASHER_4_077",
@@ -4294,15 +4273,15 @@
     "nativeName": "H_WASHER_2_050",
     "boundsDeltaMaxMm": 3.0659919048048323e-12,
     "nativeVolumeMm3": 4.7500880922277515,
-    "stepVolumeMm3": 4.750088092227722,
-    "relativeVolumeDifference": 6.170388270916896e-15
+    "stepVolumeMm3": 4.750088092227723,
+    "relativeVolumeDifference": 5.983406808161839e-15
   },
   {
     "nativeName": "H_WASHER_2_051",
     "boundsDeltaMaxMm": 3.0659919048048323e-12,
     "nativeVolumeMm3": 4.7500880922277515,
-    "stepVolumeMm3": 4.750088092227722,
-    "relativeVolumeDifference": 6.170388270916896e-15
+    "stepVolumeMm3": 4.750088092227721,
+    "relativeVolumeDifference": 6.357369733671954e-15
   },
   {
     "nativeName": "H_BOLT_M2_16_012",
@@ -4329,22 +4308,22 @@
     "nativeName": "H_WASHER_4_078",
     "boundsDeltaMaxMm": 3.0659919048048323e-12,
     "nativeVolumeMm3": 39.27619135517955,
-    "stepVolumeMm3": 39.27619135517944,
-    "relativeVolumeDifference": 2.713639145918857e-15
+    "stepVolumeMm3": 39.276191355179435,
+    "relativeVolumeDifference": 2.8945484223134474e-15
   },
   {
     "nativeName": "H_SLEEVE_2_20_018",
     "boundsDeltaMaxMm": 3.929301328753354e-12,
     "nativeVolumeMm3": 175.3008700703104,
-    "stepVolumeMm3": 175.30087007031042,
-    "relativeVolumeDifference": 1.6213102318890096e-16
+    "stepVolumeMm3": 175.30087007031045,
+    "relativeVolumeDifference": 3.242620463778019e-16
   },
   {
     "nativeName": "H_WASHER_2_052",
     "boundsDeltaMaxMm": 3.929301328753354e-12,
     "nativeVolumeMm3": 4.7500880922277515,
-    "stepVolumeMm3": 4.750088092227724,
-    "relativeVolumeDifference": 5.796425345406781e-15
+    "stepVolumeMm3": 4.750088092227722,
+    "relativeVolumeDifference": 6.170388270916896e-15
   },
   {
     "nativeName": "H_WASHER_2_053",
@@ -4371,15 +4350,15 @@
     "nativeName": "H_NUT_M2_060",
     "boundsDeltaMaxMm": 5.424993787528365e-12,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.62351789469946,
-    "relativeVolumeDifference": 7.830899475570229e-13
+    "stepVolumeMm3": 18.623517894699464,
+    "relativeVolumeDifference": 7.832807124650757e-13
   },
   {
     "nativeName": "H_WASHER_4_079",
     "boundsDeltaMaxMm": 3.929301328753354e-12,
     "nativeVolumeMm3": 39.276191355179556,
-    "stepVolumeMm3": 39.27619135517946,
-    "relativeVolumeDifference": 2.3518205931296758e-15
+    "stepVolumeMm3": 39.27619135517945,
+    "relativeVolumeDifference": 2.7136391459188567e-15
   },
   {
     "nativeName": "P_LAYER_SPACER_3_3_007",
@@ -4392,22 +4371,22 @@
     "nativeName": "H_WASHER_4_080",
     "boundsDeltaMaxMm": 3.929301328753354e-12,
     "nativeVolumeMm3": 39.27619135517955,
-    "stepVolumeMm3": 39.27619135517982,
-    "relativeVolumeDifference": 6.874552502994438e-15
+    "stepVolumeMm3": 39.276191355179805,
+    "relativeVolumeDifference": 6.5127339502052566e-15
   },
   {
     "nativeName": "H_WASHER_4_081",
     "boundsDeltaMaxMm": 3.929301328753354e-12,
     "nativeVolumeMm3": 39.276191355179556,
-    "stepVolumeMm3": 39.276191355179456,
-    "relativeVolumeDifference": 2.532729869524266e-15
+    "stepVolumeMm3": 39.27619135517945,
+    "relativeVolumeDifference": 2.7136391459188567e-15
   },
   {
     "nativeName": "P_PIN_TAIL_4_3_004",
     "boundsDeltaMaxMm": 3.929301328753354e-12,
     "nativeVolumeMm3": 151.90974926892605,
-    "stepVolumeMm3": 151.90974926892596,
-    "relativeVolumeDifference": 5.612880588741348e-16
+    "stepVolumeMm3": 151.90974926892594,
+    "relativeVolumeDifference": 7.483840784988464e-16
   },
   {
     "nativeName": "H_SLEEVE_2_8_013",
@@ -4462,8 +4441,8 @@
     "nativeName": "H_SLEEVE_2_20_019",
     "boundsDeltaMaxMm": 1.0089706847793423e-12,
     "nativeVolumeMm3": 175.30087007031048,
-    "stepVolumeMm3": 175.30087007031045,
-    "relativeVolumeDifference": 1.6213102318890086e-16
+    "stepVolumeMm3": 175.30087007031042,
+    "relativeVolumeDifference": 3.242620463778017e-16
   },
   {
     "nativeName": "H_WASHER_2_056",
@@ -4483,8 +4462,8 @@
     "nativeName": "H_BOLT_M2_25_012",
     "boundsDeltaMaxMm": 1.0089706847793423e-12,
     "nativeVolumeMm3": 99.27355814014805,
-    "stepVolumeMm3": 99.27355814014828,
-    "relativeVolumeDifference": 2.290374997159268e-15
+    "stepVolumeMm3": 99.27355814014831,
+    "relativeVolumeDifference": 2.5766718718041767e-15
   },
   {
     "nativeName": "H_NUT_M2_063",
@@ -4497,8 +4476,8 @@
     "nativeName": "H_NUT_M2_064",
     "boundsDeltaMaxMm": 2.5082158572331537e-12,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.62351789469947,
-    "relativeVolumeDifference": 7.836622422811814e-13
+    "stepVolumeMm3": 18.623517894699475,
+    "relativeVolumeDifference": 7.838530071892343e-13
   },
   {
     "nativeName": "H_WASHER_4_083",
@@ -4525,36 +4504,36 @@
     "nativeName": "P_PIN_TAIL_8_4_004",
     "boundsDeltaMaxMm": 1.0089706847793423e-12,
     "nativeVolumeMm3": 298.45797797541957,
-    "stepVolumeMm3": 298.4579779754191,
-    "relativeVolumeDifference": 1.5236562077222015e-15
+    "stepVolumeMm3": 298.457977975419,
+    "relativeVolumeDifference": 1.9045702596527518e-15
   },
   {
     "nativeName": "P_FOOT_SLIDER_R_002",
     "boundsDeltaMaxMm": 5.6772364587232005e-12,
-    "nativeVolumeMm3": 1738.355785422337,
-    "stepVolumeMm3": 1738.3557854220057,
-    "relativeVolumeDifference": 1.9057286655522198e-13
+    "nativeVolumeMm3": 1774.4068440891174,
+    "stepVolumeMm3": 1774.4068440888968,
+    "relativeVolumeDifference": 1.242964463953894e-13
   },
   {
     "nativeName": "P_FOOT_ROCKER_R_002",
     "boundsDeltaMaxMm": 2.2737367544323206e-12,
-    "nativeVolumeMm3": 2150.7185095537434,
-    "stepVolumeMm3": 2150.718509553588,
-    "relativeVolumeDifference": 7.231238923751143e-14
+    "nativeVolumeMm3": 2140.0751005027887,
+    "stepVolumeMm3": 2140.0751005029097,
+    "relativeVolumeDifference": 5.6522687127839805e-14
   },
   {
     "nativeName": "H_FOOT_SPRING_007",
     "boundsDeltaMaxMm": 4.39825953435502e-12,
     "nativeVolumeMm3": 38.870911949736545,
-    "stepVolumeMm3": 38.87091194970043,
-    "relativeVolumeDifference": 9.291494705703883e-13
+    "stepVolumeMm3": 38.87091194970027,
+    "relativeVolumeDifference": 9.331709713283164e-13
   },
   {
     "nativeName": "H_FOOT_SPRING_008",
     "boundsDeltaMaxMm": 4.39825953435502e-12,
     "nativeVolumeMm3": 38.87091194973653,
-    "stepVolumeMm3": 38.87091194969942,
-    "relativeVolumeDifference": 9.547408390299312e-13
+    "stepVolumeMm3": 38.87091194969926,
+    "relativeVolumeDifference": 9.587623397878592e-13
   },
   {
     "nativeName": "H_SLEEVE_2_20_020",
@@ -4628,52 +4607,45 @@
   },
   {
     "nativeName": "H_BOLT_M2_16_014",
-    "boundsDeltaMaxMm": 4.401812248033821e-12,
-    "nativeVolumeMm3": 70.99922425784015,
-    "stepVolumeMm3": 70.99922425787271,
-    "relativeVolumeDifference": 4.585552658194381e-13
+    "boundsDeltaMaxMm": 6.295408638834488e-12,
+    "nativeVolumeMm3": 58.432853643480925,
+    "stepVolumeMm3": 58.43285364343167,
+    "relativeVolumeDifference": 8.429302930062405e-13
   },
   {
     "nativeName": "H_WASHER_2_059",
-    "boundsDeltaMaxMm": 8.37019342725398e-12,
+    "boundsDeltaMaxMm": 5.272227099339943e-12,
     "nativeVolumeMm3": 4.750088092227768,
-    "stepVolumeMm3": 4.750088092288578,
-    "relativeVolumeDifference": 1.2801872828987718e-11
+    "stepVolumeMm3": 4.750088092282889,
+    "relativeVolumeDifference": 1.1604069578578824e-11
   },
   {
     "nativeName": "H_WASHER_2_060",
-    "boundsDeltaMaxMm": 6.181721801112872e-12,
-    "nativeVolumeMm3": 4.750088092227774,
-    "stepVolumeMm3": 4.750088092140349,
-    "relativeVolumeDifference": 1.8404772360442974e-11
+    "boundsDeltaMaxMm": 4.586553359331447e-12,
+    "nativeVolumeMm3": 4.750088092227775,
+    "stepVolumeMm3": 4.750088092282944,
+    "relativeVolumeDifference": 1.1614353559030337e-11
   },
   {
     "nativeName": "H_NUT_M2_067",
-    "boundsDeltaMaxMm": 6.416200903913705e-12,
-    "nativeVolumeMm3": 18.623517894684934,
-    "stepVolumeMm3": 18.623517894740676,
-    "relativeVolumeDifference": 2.9931014073494887e-12
-  },
-  {
-    "nativeName": "H_NUT_M2_068",
-    "boundsDeltaMaxMm": 5.4285465012071654e-12,
-    "nativeVolumeMm3": 18.623517894684937,
-    "stepVolumeMm3": 18.623517894629348,
-    "relativeVolumeDifference": 2.9848985163032148e-12
+    "boundsDeltaMaxMm": 3.4141578453272814e-12,
+    "nativeVolumeMm3": 38.30076662565487,
+    "stepVolumeMm3": 38.300766625617584,
+    "relativeVolumeDifference": 9.735910285334263e-13
   },
   {
     "nativeName": "H_WASHER_4_087",
-    "boundsDeltaMaxMm": 4.568789790937444e-12,
-    "nativeVolumeMm3": 39.27619135517966,
-    "stepVolumeMm3": 39.27619135506935,
-    "relativeVolumeDifference": 2.808616516026009e-12
+    "boundsDeltaMaxMm": 1.007194327939942e-11,
+    "nativeVolumeMm3": 17.180584824319208,
+    "stepVolumeMm3": 17.18058482443176,
+    "relativeVolumeDifference": 6.551204351248775e-12
   },
   {
     "nativeName": "H_WASHER_4_088",
-    "boundsDeltaMaxMm": 1.0036416142611415e-11,
-    "nativeVolumeMm3": 39.27619135517965,
-    "stepVolumeMm3": 39.27619135552872,
-    "relativeVolumeDifference": 8.887530021437024e-12
+    "boundsDeltaMaxMm": 9.912071163853398e-12,
+    "nativeVolumeMm3": 17.180584824319222,
+    "stepVolumeMm3": 17.180584824431694,
+    "relativeVolumeDifference": 6.546448260845098e-12
   },
   {
     "nativeName": "P_LEG_AB_L_003",
@@ -4721,36 +4693,36 @@
     "nativeName": "H_SLEEVE_2_20_021",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 175.30087007031034,
-    "stepVolumeMm3": 175.30087007031062,
-    "relativeVolumeDifference": 1.62131023188901e-15
+    "stepVolumeMm3": 175.30087007031068,
+    "relativeVolumeDifference": 1.945572278266812e-15
   },
   {
     "nativeName": "H_WASHER_2_061",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.750088092227751,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.235480957141609e-15
+    "stepVolumeMm3": 4.750088092227724,
+    "relativeVolumeDifference": 5.609443882651724e-15
   },
   {
     "nativeName": "H_WASHER_2_062",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.750088092227751,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.235480957141609e-15
+    "stepVolumeMm3": 4.750088092227723,
+    "relativeVolumeDifference": 5.796425345406782e-15
   },
   {
     "nativeName": "H_BOLT_M2_30_009",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 114.98152140809714,
-    "stepVolumeMm3": 114.98152140809833,
-    "relativeVolumeDifference": 1.0381770752886435e-14
+    "stepVolumeMm3": 114.98152140809839,
+    "relativeVolumeDifference": 1.0876140788738169e-14
   },
   {
     "nativeName": "H_NUT_M2_069",
     "boundsDeltaMaxMm": 4.973799150320701e-13,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.62351789468685,
-    "relativeVolumeDifference": 1.058745239693417e-13
+    "stepVolumeMm3": 18.62351789468684,
+    "relativeVolumeDifference": 1.0549299415323596e-13
   },
   {
     "nativeName": "H_NUT_M2_070",
@@ -4777,29 +4749,29 @@
     "nativeName": "H_WASHER_4_090",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.27619135517955,
-    "stepVolumeMm3": 39.27619135517943,
-    "relativeVolumeDifference": 3.075457698708038e-15
+    "stepVolumeMm3": 39.276191355179435,
+    "relativeVolumeDifference": 2.8945484223134474e-15
   },
   {
     "nativeName": "H_SLEEVE_2_20_022",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 175.3008700703104,
-    "stepVolumeMm3": 175.30087007031034,
-    "relativeVolumeDifference": 3.242620463778019e-16
+    "stepVolumeMm3": 175.3008700703103,
+    "relativeVolumeDifference": 4.863930695667028e-16
   },
   {
     "nativeName": "H_WASHER_2_063",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.750088092227753,
-    "stepVolumeMm3": 4.750088092227722,
-    "relativeVolumeDifference": 6.544351196427008e-15
+    "stepVolumeMm3": 4.75008809222772,
+    "relativeVolumeDifference": 6.918314121937123e-15
   },
   {
     "nativeName": "H_BOLT_M2_25_013",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 99.2735581401481,
-    "stepVolumeMm3": 99.27355814014925,
-    "relativeVolumeDifference": 1.159502342311879e-14
+    "stepVolumeMm3": 99.27355814014922,
+    "relativeVolumeDifference": 1.1308726548473882e-14
   },
   {
     "nativeName": "H_NUT_M2_071",
@@ -4819,15 +4791,15 @@
     "nativeName": "H_WASHER_4_091",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517946,
-    "relativeVolumeDifference": 2.5327298695242657e-15
+    "stepVolumeMm3": 39.276191355179456,
+    "relativeVolumeDifference": 2.713639145918856e-15
   },
   {
     "nativeName": "H_SLEEVE_2_8_015",
     "boundsDeltaMaxMm": 2.4158453015843406e-13,
     "nativeVolumeMm3": 70.12034802812417,
-    "stepVolumeMm3": 70.12034802812418,
-    "relativeVolumeDifference": 2.0266377898612614e-16
+    "stepVolumeMm3": 70.12034802812423,
+    "relativeVolumeDifference": 8.106551159445046e-16
   },
   {
     "nativeName": "H_WASHER_2_064",
@@ -4854,78 +4826,78 @@
     "nativeName": "H_NUT_M2_073",
     "boundsDeltaMaxMm": 4.263256414560601e-13,
     "nativeVolumeMm3": 18.62351789468488,
-    "stepVolumeMm3": 18.62351789468179,
-    "relativeVolumeDifference": 1.6596547000599506e-13
+    "stepVolumeMm3": 18.623517894681783,
+    "relativeVolumeDifference": 1.6634699982210079e-13
   },
   {
     "nativeName": "H_NUT_M2_074",
     "boundsDeltaMaxMm": 4.263256414560601e-13,
     "nativeVolumeMm3": 18.62351789468488,
-    "stepVolumeMm3": 18.623517894681623,
-    "relativeVolumeDifference": 1.7493142068447985e-13
+    "stepVolumeMm3": 18.623517894681626,
+    "relativeVolumeDifference": 1.7474065577642698e-13
   },
   {
     "nativeName": "H_WASHER_4_092",
     "boundsDeltaMaxMm": 2.4158453015843406e-13,
     "nativeVolumeMm3": 39.27619135517954,
-    "stepVolumeMm3": 39.276191355179435,
-    "relativeVolumeDifference": 2.7136391459188575e-15
+    "stepVolumeMm3": 39.27619135517942,
+    "relativeVolumeDifference": 3.0754576987080384e-15
   },
   {
     "nativeName": "H_SLEEVE_2_20_023",
     "boundsDeltaMaxMm": 3.907985046680551e-13,
     "nativeVolumeMm3": 175.3008700703105,
-    "stepVolumeMm3": 175.30087007031062,
-    "relativeVolumeDifference": 6.485240927556033e-16
+    "stepVolumeMm3": 175.30087007031065,
+    "relativeVolumeDifference": 8.106551159445042e-16
   },
   {
     "nativeName": "H_WASHER_2_066",
     "boundsDeltaMaxMm": 3.907985046680551e-13,
     "nativeVolumeMm3": 4.750088092227751,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.235480957141609e-15
+    "stepVolumeMm3": 4.750088092227725,
+    "relativeVolumeDifference": 5.422462419896667e-15
   },
   {
     "nativeName": "H_WASHER_2_067",
     "boundsDeltaMaxMm": 3.907985046680551e-13,
     "nativeVolumeMm3": 4.750088092227751,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.235480957141609e-15
+    "stepVolumeMm3": 4.750088092227724,
+    "relativeVolumeDifference": 5.609443882651724e-15
   },
   {
     "nativeName": "H_BOLT_M2_25_014",
     "boundsDeltaMaxMm": 3.907985046680551e-13,
     "nativeVolumeMm3": 99.27355814014817,
-    "stepVolumeMm3": 99.27355814014807,
-    "relativeVolumeDifference": 1.0020390612571788e-15
+    "stepVolumeMm3": 99.27355814014811,
+    "relativeVolumeDifference": 5.7259374928981645e-16
   },
   {
     "nativeName": "H_NUT_M2_075",
     "boundsDeltaMaxMm": 4.618527782440651e-13,
     "nativeVolumeMm3": 18.623517894684873,
-    "stepVolumeMm3": 18.623517894683783,
-    "relativeVolumeDifference": 5.856482677223046e-14
+    "stepVolumeMm3": 18.62351789468378,
+    "relativeVolumeDifference": 5.875559168028333e-14
   },
   {
     "nativeName": "H_NUT_M2_076",
     "boundsDeltaMaxMm": 4.618527782440651e-13,
     "nativeVolumeMm3": 18.62351789468488,
-    "stepVolumeMm3": 18.62351789468362,
-    "relativeVolumeDifference": 6.77215423587681e-14
+    "stepVolumeMm3": 18.623517894683616,
+    "relativeVolumeDifference": 6.791230726682097e-14
   },
   {
     "nativeName": "H_WASHER_4_093",
     "boundsDeltaMaxMm": 3.907985046680551e-13,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517945,
-    "relativeVolumeDifference": 2.8945484223134466e-15
+    "stepVolumeMm3": 39.27619135517944,
+    "relativeVolumeDifference": 3.075457698708037e-15
   },
   {
     "nativeName": "P_LAYER_SPACER_3_3_009",
     "boundsDeltaMaxMm": 3.907985046680551e-13,
     "nativeVolumeMm3": 117.95345237351887,
-    "stepVolumeMm3": 117.95345237351911,
-    "relativeVolumeDifference": 2.0481344572553687e-15
+    "stepVolumeMm3": 117.95345237351908,
+    "relativeVolumeDifference": 1.807177462284149e-15
   },
   {
     "nativeName": "H_WASHER_4_094",
@@ -4938,8 +4910,8 @@
     "nativeName": "H_WASHER_4_095",
     "boundsDeltaMaxMm": 3.907985046680551e-13,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517945,
-    "relativeVolumeDifference": 2.8945484223134466e-15
+    "stepVolumeMm3": 39.27619135517944,
+    "relativeVolumeDifference": 3.075457698708037e-15
   },
   {
     "nativeName": "P_PIN_TAIL_4_3_005",
@@ -4973,15 +4945,15 @@
     "nativeName": "H_BOLT_M2_16_016",
     "boundsDeltaMaxMm": 4.973799150320701e-13,
     "nativeVolumeMm3": 70.99922425783997,
-    "stepVolumeMm3": 70.9992242578396,
-    "relativeVolumeDifference": 5.204031825100577e-15
+    "stepVolumeMm3": 70.99922425783959,
+    "relativeVolumeDifference": 5.404186895296753e-15
   },
   {
     "nativeName": "H_NUT_M2_077",
     "boundsDeltaMaxMm": 6.821210263296962e-13,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.623517894685236,
-    "relativeVolumeDifference": 1.926725571333966e-14
+    "stepVolumeMm3": 18.623517894685232,
+    "relativeVolumeDifference": 1.907649080528679e-14
   },
   {
     "nativeName": "H_NUT_M2_078",
@@ -5001,8 +4973,8 @@
     "nativeName": "H_SLEEVE_2_20_024",
     "boundsDeltaMaxMm": 3.552713678800501e-14,
     "nativeVolumeMm3": 175.3008700703105,
-    "stepVolumeMm3": 175.30087007031045,
-    "relativeVolumeDifference": 3.2426204637780167e-16
+    "stepVolumeMm3": 175.3008700703104,
+    "relativeVolumeDifference": 6.485240927556033e-16
   },
   {
     "nativeName": "H_WASHER_2_070",
@@ -5022,22 +4994,22 @@
     "nativeName": "H_BOLT_M2_25_015",
     "boundsDeltaMaxMm": 3.552713678800501e-14,
     "nativeVolumeMm3": 99.27355814014805,
-    "stepVolumeMm3": 99.2735581401492,
-    "relativeVolumeDifference": 1.1595023423118795e-14
+    "stepVolumeMm3": 99.27355814014928,
+    "relativeVolumeDifference": 1.2310765609731067e-14
   },
   {
     "nativeName": "H_NUT_M2_079",
     "boundsDeltaMaxMm": 4.831690603168681e-13,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.62351789468183,
-    "relativeVolumeDifference": 1.6367629110936067e-13
+    "stepVolumeMm3": 18.623517894681825,
+    "relativeVolumeDifference": 1.6386705601741354e-13
   },
   {
     "nativeName": "H_NUT_M2_080",
     "boundsDeltaMaxMm": 4.831690603168681e-13,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.623517894681658,
-    "relativeVolumeDifference": 1.7283300669589834e-13
+    "stepVolumeMm3": 18.623517894681665,
+    "relativeVolumeDifference": 1.724514768797926e-13
   },
   {
     "nativeName": "H_WASHER_4_097",
@@ -5057,43 +5029,43 @@
     "nativeName": "H_WASHER_4_098",
     "boundsDeltaMaxMm": 3.552713678800501e-14,
     "nativeVolumeMm3": 39.276191355179556,
-    "stepVolumeMm3": 39.27619135517981,
-    "relativeVolumeDifference": 6.512733950205256e-15
+    "stepVolumeMm3": 39.27619135517982,
+    "relativeVolumeDifference": 6.693643226599846e-15
   },
   {
     "nativeName": "P_PIN_TAIL_8_4_005",
     "boundsDeltaMaxMm": 3.552713678800501e-14,
     "nativeVolumeMm3": 298.4579779754196,
-    "stepVolumeMm3": 298.457977975419,
-    "relativeVolumeDifference": 2.0950272856180265e-15
+    "stepVolumeMm3": 298.45797797541894,
+    "relativeVolumeDifference": 2.2854843115833016e-15
   },
   {
     "nativeName": "P_FOOT_SLIDER_L_003",
-    "boundsDeltaMaxMm": 7.531752999057062e-13,
-    "nativeVolumeMm3": 1738.3557854223357,
-    "stepVolumeMm3": 1738.3557854221478,
-    "relativeVolumeDifference": 1.0803925036006416e-13
+    "boundsDeltaMaxMm": 2.3447910280083306e-12,
+    "nativeVolumeMm3": 1774.406844089119,
+    "stepVolumeMm3": 1774.406844088999,
+    "relativeVolumeDifference": 6.765827185233562e-14
   },
   {
     "nativeName": "P_FOOT_ROCKER_L_003",
     "boundsDeltaMaxMm": 4.884981308350689e-13,
-    "nativeVolumeMm3": 2150.718509553744,
-    "stepVolumeMm3": 2150.7185095537557,
-    "relativeVolumeDifference": 5.497433099927768e-15
+    "nativeVolumeMm3": 2140.0751005027882,
+    "stepVolumeMm3": 2140.0751005027964,
+    "relativeVolumeDifference": 3.824843489853823e-15
   },
   {
     "nativeName": "H_FOOT_SPRING_009",
     "boundsDeltaMaxMm": 8.78941364135244e-12,
     "nativeVolumeMm3": 38.870911949736545,
-    "stepVolumeMm3": 38.870911949720536,
-    "relativeVolumeDifference": 4.1183823670963704e-13
+    "stepVolumeMm3": 38.87091194972038,
+    "relativeVolumeDifference": 4.1585973746756513e-13
   },
   {
     "nativeName": "H_FOOT_SPRING_010",
     "boundsDeltaMaxMm": 8.79651906871004e-12,
     "nativeVolumeMm3": 38.870911949736545,
-    "stepVolumeMm3": 38.87091194972291,
-    "relativeVolumeDifference": 3.5078454338472857e-13
+    "stepVolumeMm3": 38.870911949722746,
+    "relativeVolumeDifference": 3.549888396316534e-13
   },
   {
     "nativeName": "H_SLEEVE_2_20_025",
@@ -5167,66 +5139,59 @@
   },
   {
     "nativeName": "H_BOLT_M2_16_017",
-    "boundsDeltaMaxMm": 4.201083925181592e-12,
-    "nativeVolumeMm3": 70.99922425784018,
-    "stepVolumeMm3": 70.99922425783778,
-    "relativeVolumeDifference": 3.382620686315365e-14
+    "boundsDeltaMaxMm": 3.5837999234900053e-12,
+    "nativeVolumeMm3": 58.43285364348095,
+    "stepVolumeMm3": 58.432853643478296,
+    "relativeVolumeDifference": 4.5356751196094577e-14
   },
   {
     "nativeName": "H_WASHER_2_073",
-    "boundsDeltaMaxMm": 9.450218385609332e-13,
-    "nativeVolumeMm3": 4.7500880922277675,
-    "stepVolumeMm3": 4.7500880922293005,
-    "relativeVolumeDifference": 3.227300047152281e-13
+    "boundsDeltaMaxMm": 1.0373923942097463e-12,
+    "nativeVolumeMm3": 4.750088092227766,
+    "stepVolumeMm3": 4.750088092223611,
+    "relativeVolumeDifference": 8.746992827681561e-13
   },
   {
     "nativeName": "H_WASHER_2_074",
-    "boundsDeltaMaxMm": 8.171241461241152e-13,
-    "nativeVolumeMm3": 4.750088092227765,
-    "stepVolumeMm3": 4.750088092229197,
-    "relativeVolumeDifference": 3.0141411796115175e-13
+    "boundsDeltaMaxMm": 7.247535904753022e-13,
+    "nativeVolumeMm3": 4.750088092227767,
+    "stepVolumeMm3": 4.7500880922236135,
+    "relativeVolumeDifference": 8.743253198426459e-13
   },
   {
     "nativeName": "H_NUT_M2_083",
-    "boundsDeltaMaxMm": 8.512301974406e-12,
-    "nativeVolumeMm3": 18.62351789468493,
-    "stepVolumeMm3": 18.623517894636244,
-    "relativeVolumeDifference": 2.6142422999564943e-12
-  },
-  {
-    "nativeName": "H_NUT_M2_084",
-    "boundsDeltaMaxMm": 8.512301974406e-12,
-    "nativeVolumeMm3": 18.62351789468493,
-    "stepVolumeMm3": 18.62351789463385,
-    "relativeVolumeDifference": 2.742817847984127e-12
+    "boundsDeltaMaxMm": 6.686207143502543e-12,
+    "nativeVolumeMm3": 38.300766625654866,
+    "stepVolumeMm3": 38.30076662566247,
+    "relativeVolumeDifference": 1.9850274400357592e-13
   },
   {
     "nativeName": "H_WASHER_4_101",
-    "boundsDeltaMaxMm": 1.4779288903810084e-12,
-    "nativeVolumeMm3": 39.27619135517966,
-    "stepVolumeMm3": 39.27619135520688,
-    "relativeVolumeDifference": 6.93063437867674e-13
+    "boundsDeltaMaxMm": 1.3571366253017914e-12,
+    "nativeVolumeMm3": 17.18058482431919,
+    "stepVolumeMm3": 17.18058482433517,
+    "relativeVolumeDifference": 9.301258537267453e-13
   },
   {
     "nativeName": "H_WASHER_4_102",
-    "boundsDeltaMaxMm": 1.0800249583553523e-12,
-    "nativeVolumeMm3": 39.276191355179655,
-    "stepVolumeMm3": 39.27619135516117,
-    "relativeVolumeDifference": 4.707259371787232e-13
+    "boundsDeltaMaxMm": 9.663381206337363e-13,
+    "nativeVolumeMm3": 17.18058482431919,
+    "stepVolumeMm3": 17.180584824303182,
+    "relativeVolumeDifference": 9.31780146041066e-13
   },
   {
     "nativeName": "P_LEG_AB_R_003",
-    "boundsDeltaMaxMm": 2.5579538487363607e-13,
+    "boundsDeltaMaxMm": 2.1316282072803006e-13,
     "nativeVolumeMm3": 853.2952746883046,
-    "stepVolumeMm3": 853.295274688906,
-    "relativeVolumeDifference": 7.048010101392299e-13
+    "stepVolumeMm3": 853.295274688941,
+    "relativeVolumeDifference": 7.45836683319359e-13
   },
   {
     "nativeName": "P_LEG_AC_R_003",
-    "boundsDeltaMaxMm": 4.050093593832571e-13,
-    "nativeVolumeMm3": 1021.144774688302,
-    "stepVolumeMm3": 1021.1447746877958,
-    "relativeVolumeDifference": 4.957646564160161e-13
+    "boundsDeltaMaxMm": 3.552713678800501e-13,
+    "nativeVolumeMm3": 1021.1447746883039,
+    "stepVolumeMm3": 1021.1447746877909,
+    "relativeVolumeDifference": 5.0233328761488e-13
   },
   {
     "nativeName": "P_LEG_PC_R_003",
@@ -5237,49 +5202,49 @@
   },
   {
     "nativeName": "P_LEG_PBD_R_003",
-    "boundsDeltaMaxMm": 4.547473508864641e-13,
-    "nativeVolumeMm3": 1841.1977555773278,
+    "boundsDeltaMaxMm": 4.405364961712621e-13,
+    "nativeVolumeMm3": 1841.1977555773303,
     "stepVolumeMm3": 1841.197755576938,
-    "relativeVolumeDifference": 2.1166573689826123e-13
+    "relativeVolumeDifference": 2.130241517791716e-13
   },
   {
     "nativeName": "P_LEG_DE_R_003",
-    "boundsDeltaMaxMm": 4.121147867408581e-13,
-    "nativeVolumeMm3": 703.7822746883056,
+    "boundsDeltaMaxMm": 4.618527782440651e-13,
+    "nativeVolumeMm3": 703.7822746883046,
     "stepVolumeMm3": 703.7822746885064,
-    "relativeVolumeDifference": 2.852742426701387e-13
+    "relativeVolumeDifference": 2.8672807516392805e-13
   },
   {
     "nativeName": "P_LEG_CEF_R_003",
-    "boundsDeltaMaxMm": 5.151434834260726e-13,
-    "nativeVolumeMm3": 4948.468042593536,
-    "stepVolumeMm3": 4948.46804257389,
-    "relativeVolumeDifference": 3.970116586364855e-12
+    "boundsDeltaMaxMm": 4.583000645652646e-13,
+    "nativeVolumeMm3": 4948.468042593544,
+    "stepVolumeMm3": 4948.4680425739025,
+    "relativeVolumeDifference": 3.969197620440501e-12
   },
   {
     "nativeName": "H_SLEEVE_2_20_026",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 175.30087007031034,
-    "stepVolumeMm3": 175.30087007031062,
-    "relativeVolumeDifference": 1.62131023188901e-15
+    "stepVolumeMm3": 175.30087007031068,
+    "relativeVolumeDifference": 1.945572278266812e-15
   },
   {
     "nativeName": "H_WASHER_2_075",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.75008809222775,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.048499494386553e-15
+    "stepVolumeMm3": 4.750088092227725,
+    "relativeVolumeDifference": 5.235480957141611e-15
   },
   {
     "nativeName": "H_WASHER_2_076",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 4.750088092227751,
-    "stepVolumeMm3": 4.750088092227726,
-    "relativeVolumeDifference": 5.235480957141609e-15
+    "stepVolumeMm3": 4.750088092227724,
+    "relativeVolumeDifference": 5.609443882651724e-15
   },
   {
     "nativeName": "H_BOLT_M2_30_011",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.4210854715202004e-14,
     "nativeVolumeMm3": 114.98152140809712,
     "stepVolumeMm3": 114.98152140809833,
     "relativeVolumeDifference": 1.050536326184937e-14
@@ -5288,8 +5253,8 @@
     "nativeName": "H_NUT_M2_085",
     "boundsDeltaMaxMm": 4.973799150320701e-13,
     "nativeVolumeMm3": 18.623517894684877,
-    "stepVolumeMm3": 18.62351789468685,
-    "relativeVolumeDifference": 1.058745239693417e-13
+    "stepVolumeMm3": 18.62351789468684,
+    "relativeVolumeDifference": 1.0549299415323596e-13
   },
   {
     "nativeName": "H_NUT_M2_086",
@@ -5307,17 +5272,17 @@
   },
   {
     "nativeName": "P_LAYER_SPACER_7_4_006",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.4210854715202004e-14,
     "nativeVolumeMm3": 264.5016810800125,
-    "stepVolumeMm3": 264.50168108001225,
-    "relativeVolumeDifference": 8.596303604378639e-16
+    "stepVolumeMm3": 264.50168108001236,
+    "relativeVolumeDifference": 4.2981518021893196e-16
   },
   {
     "nativeName": "H_WASHER_4_104",
     "boundsDeltaMaxMm": 0.0,
     "nativeVolumeMm3": 39.27619135517955,
-    "stepVolumeMm3": 39.27619135517943,
-    "relativeVolumeDifference": 3.075457698708038e-15
+    "stepVolumeMm3": 39.276191355179435,
+    "relativeVolumeDifference": 2.8945484223134474e-15
   },
   {
     "nativeName": "H_SLEEVE_2_20_027",
@@ -5335,7 +5300,7 @@
   },
   {
     "nativeName": "H_BOLT_M2_25_016",
-    "boundsDeltaMaxMm": 0.0,
+    "boundsDeltaMaxMm": 1.4210854715202004e-14,
     "nativeVolumeMm3": 99.2735581401481,
     "stepVolumeMm3": 99.27355814014925,
     "relativeVolumeDifference": 1.159502342311879e-14
@@ -5372,15 +5337,15 @@
     "nativeName": "H_WASHER_2_078",
     "boundsDeltaMaxMm": 2.5579538487363607e-13,
     "nativeVolumeMm3": 4.750088092227752,
-    "stepVolumeMm3": 4.750088092227721,
-    "relativeVolumeDifference": 6.54435119642701e-15
+    "stepVolumeMm3": 4.750088092227722,
+    "relativeVolumeDifference": 6.357369733671952e-15
   },
   {
     "nativeName": "H_WASHER_2_079",
     "boundsDeltaMaxMm": 2.5579538487363607e-13,
     "nativeVolumeMm3": 4.750088092227752,
-    "stepVolumeMm3": 4.750088092227721,
-    "relativeVolumeDifference": 6.54435119642701e-15
+    "stepVolumeMm3": 4.750088092227722,
+    "relativeVolumeDifference": 6.357369733671952e-15
   },
   {
     "nativeName": "H_BOLT_M2_16_018",
@@ -5414,8 +5379,8 @@
     "nativeName": "H_SLEEVE_2_20_028",
     "boundsDeltaMaxMm": 4.263256414560601e-13,
     "nativeVolumeMm3": 175.30087007031048,
-    "stepVolumeMm3": 175.30087007031042,
-    "relativeVolumeDifference": 3.242620463778017e-16
+    "stepVolumeMm3": 175.30087007031034,
+    "relativeVolumeDifference": 8.106551159445044e-16
   },
   {
     "nativeName": "H_WASHER_2_080",
@@ -5435,8 +5400,8 @@
     "nativeName": "H_BOLT_M2_25_017",
     "boundsDeltaMaxMm": 4.263256414560601e-13,
     "nativeVolumeMm3": 99.27355814014814,
-    "stepVolumeMm3": 99.27355814014776,
-    "relativeVolumeDifference": 3.865007807706262e-15
+    "stepVolumeMm3": 99.27355814014778,
+    "relativeVolumeDifference": 3.578710933061354e-15
   },
   {
     "nativeName": "H_NUT_M2_091",
@@ -5449,8 +5414,8 @@
     "nativeName": "H_NUT_M2_092",
     "boundsDeltaMaxMm": 6.963318810448982e-13,
     "nativeVolumeMm3": 18.62351789468488,
-    "stepVolumeMm3": 18.62351789468506,
-    "relativeVolumeDifference": 9.729010310696263e-15
+    "stepVolumeMm3": 18.623517894685065,
+    "relativeVolumeDifference": 9.91977521874913e-15
   },
   {
     "nativeName": "H_WASHER_4_107",
@@ -5477,8 +5442,8 @@
     "nativeName": "H_WASHER_4_109",
     "boundsDeltaMaxMm": 4.263256414560601e-13,
     "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.27619135517946,
-    "relativeVolumeDifference": 2.5327298695242657e-15
+    "stepVolumeMm3": 39.276191355179456,
+    "relativeVolumeDifference": 2.713639145918856e-15
   },
   {
     "nativeName": "P_PIN_TAIL_4_3_006",
@@ -5512,8 +5477,8 @@
     "nativeName": "H_BOLT_M2_16_019",
     "boundsDeltaMaxMm": 4.476419235288631e-13,
     "nativeVolumeMm3": 70.99922425784,
-    "stepVolumeMm3": 70.99922425783959,
-    "relativeVolumeDifference": 5.8044970356891024e-15
+    "stepVolumeMm3": 70.99922425783961,
+    "relativeVolumeDifference": 5.404186895296751e-15
   },
   {
     "nativeName": "H_NUT_M2_093",
@@ -5526,8 +5491,8 @@
     "nativeName": "H_NUT_M2_094",
     "boundsDeltaMaxMm": 7.673861546209082e-13,
     "nativeVolumeMm3": 18.623517894684873,
-    "stepVolumeMm3": 18.62351789468507,
-    "relativeVolumeDifference": 1.0492069942907737e-14
+    "stepVolumeMm3": 18.62351789468506,
+    "relativeVolumeDifference": 1.0110540126802002e-14
   },
   {
     "nativeName": "H_WASHER_4_110",
@@ -5561,22 +5526,22 @@
     "nativeName": "H_BOLT_M2_25_018",
     "boundsDeltaMaxMm": 1.7053025658242404e-13,
     "nativeVolumeMm3": 99.27355814014811,
-    "stepVolumeMm3": 99.27355814014749,
-    "relativeVolumeDifference": 6.2985312421879846e-15
+    "stepVolumeMm3": 99.27355814014751,
+    "relativeVolumeDifference": 6.012234367543076e-15
   },
   {
     "nativeName": "H_NUT_M2_095",
     "boundsDeltaMaxMm": 3.232969447708456e-13,
     "nativeVolumeMm3": 18.62351789468488,
-    "stepVolumeMm3": 18.623517894683836,
-    "relativeVolumeDifference": 5.608488296754316e-14
+    "stepVolumeMm3": 18.62351789468384,
+    "relativeVolumeDifference": 5.589411805949029e-14
   },
   {
     "nativeName": "H_NUT_M2_096",
     "boundsDeltaMaxMm": 3.232969447708456e-13,
     "nativeVolumeMm3": 18.62351789468488,
-    "stepVolumeMm3": 18.623517894683673,
-    "relativeVolumeDifference": 6.486006873797509e-14
+    "stepVolumeMm3": 18.623517894683676,
+    "relativeVolumeDifference": 6.466930382992221e-14
   },
   {
     "nativeName": "H_WASHER_4_111",
@@ -5596,8 +5561,8 @@
     "nativeName": "H_WASHER_4_112",
     "boundsDeltaMaxMm": 1.7053025658242404e-13,
     "nativeVolumeMm3": 39.276191355179556,
-    "stepVolumeMm3": 39.27619135517982,
-    "relativeVolumeDifference": 6.693643226599846e-15
+    "stepVolumeMm3": 39.27619135517981,
+    "relativeVolumeDifference": 6.512733950205256e-15
   },
   {
     "nativeName": "P_PIN_TAIL_8_4_006",
@@ -5609,37 +5574,37 @@
   {
     "nativeName": "P_FOOT_SLIDER_R_003",
     "boundsDeltaMaxMm": 2.7355895326763857e-12,
-    "nativeVolumeMm3": 1738.3557854223345,
-    "stepVolumeMm3": 1738.355785422416,
-    "relativeVolumeDifference": 4.682572836428934e-14
+    "nativeVolumeMm3": 1774.406844089117,
+    "stepVolumeMm3": 1774.406844089134,
+    "relativeVolumeDifference": 9.610549979024958e-15
   },
   {
     "nativeName": "P_FOOT_ROCKER_R_003",
-    "boundsDeltaMaxMm": 3.161915174132446e-13,
-    "nativeVolumeMm3": 2150.718509553741,
-    "stepVolumeMm3": 2150.7185095537398,
-    "relativeVolumeDifference": 6.343192038378202e-16
+    "boundsDeltaMaxMm": 3.206324095117452e-13,
+    "nativeVolumeMm3": 2140.0751005027882,
+    "stepVolumeMm3": 2140.0751005027646,
+    "relativeVolumeDifference": 1.1049547859577709e-14
   },
   {
     "nativeName": "H_FOOT_SPRING_011",
-    "boundsDeltaMaxMm": 3.694822225952521e-13,
-    "nativeVolumeMm3": 38.87091194973648,
-    "stepVolumeMm3": 38.87091194973678,
-    "relativeVolumeDifference": 7.677410537862753e-15
+    "boundsDeltaMaxMm": 3.623767952376511e-13,
+    "nativeVolumeMm3": 38.87091194973654,
+    "stepVolumeMm3": 38.87091194973652,
+    "relativeVolumeDifference": 5.483864669901958e-16
   },
   {
     "nativeName": "H_FOOT_SPRING_012",
-    "boundsDeltaMaxMm": 3.694822225952521e-13,
-    "nativeVolumeMm3": 38.870911949736474,
-    "stepVolumeMm3": 38.87091194973574,
-    "relativeVolumeDifference": 1.8827935366663423e-14
+    "boundsDeltaMaxMm": 3.623767952376511e-13,
+    "nativeVolumeMm3": 38.870911949736524,
+    "stepVolumeMm3": 38.870911949735486,
+    "relativeVolumeDifference": 2.6688141393522876e-14
   },
   {
     "nativeName": "H_SLEEVE_2_20_030",
-    "boundsDeltaMaxMm": 4.597211500367848e-12,
-    "nativeVolumeMm3": 175.3008700703104,
+    "boundsDeltaMaxMm": 4.604316927725449e-12,
+    "nativeVolumeMm3": 175.30087007031054,
     "stepVolumeMm3": 175.30087007031437,
-    "relativeVolumeDifference": 2.2698343246446132e-14
+    "relativeVolumeDifference": 2.188768813050161e-14
   },
   {
     "nativeName": "H_BOLT_M2_30_012",
@@ -5651,9 +5616,9 @@
   {
     "nativeName": "H_WASHER_2_086",
     "boundsDeltaMaxMm": 8.526512829121202e-13,
-    "nativeVolumeMm3": 4.75008809222777,
+    "nativeVolumeMm3": 4.750088092227772,
     "stepVolumeMm3": 4.750088092219404,
-    "relativeVolumeDifference": 1.7611783976898793e-12
+    "relativeVolumeDifference": 1.7615523606153888e-12
   },
   {
     "nativeName": "H_NUT_M2_097",
@@ -5671,31 +5636,31 @@
   },
   {
     "nativeName": "H_WASHER_3_075",
-    "boundsDeltaMaxMm": 1.0800249583553523e-12,
-    "nativeVolumeMm3": 15.221016406642544,
+    "boundsDeltaMaxMm": 1.0835776720341528e-12,
+    "nativeVolumeMm3": 15.221016406642567,
     "stepVolumeMm3": 15.22101640664407,
-    "relativeVolumeDifference": 1.0024892453166973e-13
+    "relativeVolumeDifference": 9.873176967845455e-14
   },
   {
     "nativeName": "H_WASHER_4_113",
     "boundsDeltaMaxMm": 1.3713474800169934e-12,
-    "nativeVolumeMm3": 39.276191355179606,
+    "nativeVolumeMm3": 39.276191355179634,
     "stepVolumeMm3": 39.276191355167185,
-    "relativeVolumeDifference": 3.162294151377437e-13
+    "relativeVolumeDifference": 3.169530522433218e-13
   },
   {
     "nativeName": "H_WASHER_4_114",
-    "boundsDeltaMaxMm": 1.6058265828178264e-12,
-    "nativeVolumeMm3": 39.2761913551796,
+    "boundsDeltaMaxMm": 1.6129320101754274e-12,
+    "nativeVolumeMm3": 39.27619135517964,
     "stepVolumeMm3": 39.27619135519595,
-    "relativeVolumeDifference": 4.1627224498395217e-13
+    "relativeVolumeDifference": 4.1518678932558416e-13
   },
   {
     "nativeName": "H_WASHER_3_076",
     "boundsDeltaMaxMm": 1.0444978215673473e-12,
-    "nativeVolumeMm3": 15.221016406642544,
+    "nativeVolumeMm3": 15.221016406642564,
     "stepVolumeMm3": 15.22101640662636,
-    "relativeVolumeDifference": 1.0632921436647764e-12
+    "relativeVolumeDifference": 1.0645758900790338e-12
   },
   {
     "nativeName": "H_SLEEVE_2_8_020",
@@ -5706,59 +5671,52 @@
   },
   {
     "nativeName": "H_BOLT_M2_16_020",
-    "boundsDeltaMaxMm": 3.6290970228947117e-12,
-    "nativeVolumeMm3": 70.99922425783996,
-    "stepVolumeMm3": 70.99922425784077,
-    "relativeVolumeDifference": 1.1408839001182037e-14
+    "boundsDeltaMaxMm": 3.12105896682624e-12,
+    "nativeVolumeMm3": 58.432853643480804,
+    "stepVolumeMm3": 58.432853643487675,
+    "relativeVolumeDifference": 1.1758707347620258e-13
   },
   {
     "nativeName": "H_WASHER_2_087",
-    "boundsDeltaMaxMm": 5.258016244624741e-13,
-    "nativeVolumeMm3": 4.75008809222777,
-    "stepVolumeMm3": 4.750088092219505,
-    "relativeVolumeDifference": 1.7400494923985579e-12
+    "boundsDeltaMaxMm": 9.43245481721533e-13,
+    "nativeVolumeMm3": 4.750088092227766,
+    "stepVolumeMm3": 4.7500880922102,
+    "relativeVolumeDifference": 3.69793238890676e-12
   },
   {
     "nativeName": "H_WASHER_2_088",
-    "boundsDeltaMaxMm": 8.952838470577262e-13,
-    "nativeVolumeMm3": 4.750088092227767,
-    "stepVolumeMm3": 4.750088092219512,
-    "relativeVolumeDifference": 1.7378057148454985e-12
+    "boundsDeltaMaxMm": 5.684341886080801e-13,
+    "nativeVolumeMm3": 4.750088092227768,
+    "stepVolumeMm3": 4.750088092219494,
+    "relativeVolumeDifference": 1.741919307026109e-12
   },
   {
     "nativeName": "H_NUT_M2_099",
-    "boundsDeltaMaxMm": 4.831690603168681e-13,
-    "nativeVolumeMm3": 18.623517894684905,
-    "stepVolumeMm3": 18.62351789468366,
-    "relativeVolumeDifference": 6.695848272655654e-14
-  },
-  {
-    "nativeName": "H_NUT_M2_100",
-    "boundsDeltaMaxMm": 8.260059303211165e-13,
-    "nativeVolumeMm3": 18.623517894684912,
-    "stepVolumeMm3": 18.62351789469014,
-    "relativeVolumeDifference": 2.806151797457682e-13
+    "boundsDeltaMaxMm": 4.050093593832571e-13,
+    "nativeVolumeMm3": 38.300766625654795,
+    "stepVolumeMm3": 38.300766625652955,
+    "relativeVolumeDifference": 4.8048795043856315e-14
   },
   {
     "nativeName": "H_WASHER_4_115",
-    "boundsDeltaMaxMm": 1.1937117960769683e-12,
-    "nativeVolumeMm3": 39.27619135517956,
-    "stepVolumeMm3": 39.276191355166894,
-    "relativeVolumeDifference": 3.225612398115547e-13
+    "boundsDeltaMaxMm": 9.379164112033322e-13,
+    "nativeVolumeMm3": 17.180584824319162,
+    "stepVolumeMm3": 17.180584824300563,
+    "relativeVolumeDifference": 1.0825275331835305e-12
   },
   {
     "nativeName": "H_WASHER_4_116",
-    "boundsDeltaMaxMm": 1.1510792319313623e-12,
-    "nativeVolumeMm3": 39.27619135517955,
-    "stepVolumeMm3": 39.27619135516676,
-    "relativeVolumeDifference": 3.2563669751026287e-13
+    "boundsDeltaMaxMm": 1.0462741784067475e-12,
+    "nativeVolumeMm3": 17.180584824319155,
+    "stepVolumeMm3": 17.18058482430048,
+    "relativeVolumeDifference": 1.0868700505086224e-12
   },
   {
     "nativeName": "P_ROTOR_001",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 70943.91132769808,
-    "stepVolumeMm3": 70943.9113276421,
-    "relativeVolumeDifference": 7.890912248260968e-13
+    "stepVolumeMm3": 70943.91132764213,
+    "relativeVolumeDifference": 7.886809876413678e-13
   },
   {
     "nativeName": "H_WASHER_4_117",
@@ -5771,8 +5729,8 @@
     "nativeName": "H_BOLT_M4_12_001",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 289.1460301300905,
-    "stepVolumeMm3": 289.14603013010077,
-    "relativeVolumeDifference": 3.5582915695495636e-14
+    "stepVolumeMm3": 289.1460301301007,
+    "relativeVolumeDifference": 3.5386325001045386e-14
   },
   {
     "nativeName": "H_WASHER_4_118",
@@ -5785,50 +5743,50 @@
     "nativeName": "H_BOLT_M4_12_002",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 289.1460301300905,
-    "stepVolumeMm3": 289.14603013010077,
-    "relativeVolumeDifference": 3.5582915695495636e-14
+    "stepVolumeMm3": 289.1460301301007,
+    "relativeVolumeDifference": 3.5386325001045386e-14
   },
   {
     "nativeName": "H_WASHER_4_119",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 39.27619135517962,
-    "stepVolumeMm3": 39.27619135517963,
-    "relativeVolumeDifference": 1.8090927639459014e-16
+    "stepVolumeMm3": 39.27619135517964,
+    "relativeVolumeDifference": 5.427278291837704e-16
   },
   {
     "nativeName": "H_BOLT_M4_12_003",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 289.1460301300904,
-    "stepVolumeMm3": 289.1460301301009,
-    "relativeVolumeDifference": 3.61726877788464e-14
+    "stepVolumeMm3": 289.1460301301008,
+    "relativeVolumeDifference": 3.597609708439615e-14
   },
   {
     "nativeName": "H_WASHER_4_120",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 39.27619135517962,
-    "stepVolumeMm3": 39.27619135517963,
-    "relativeVolumeDifference": 1.8090927639459014e-16
+    "stepVolumeMm3": 39.27619135517964,
+    "relativeVolumeDifference": 5.427278291837704e-16
   },
   {
     "nativeName": "H_BOLT_M4_12_004",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
     "nativeVolumeMm3": 289.1460301300904,
-    "stepVolumeMm3": 289.1460301301009,
-    "relativeVolumeDifference": 3.61726877788464e-14
+    "stepVolumeMm3": 289.1460301301008,
+    "relativeVolumeDifference": 3.597609708439615e-14
   },
   {
     "nativeName": "S_GUARD_LEFT_001",
     "boundsDeltaMaxMm": 3.524291969370097e-12,
-    "nativeVolumeMm3": 19090.72662659847,
-    "stepVolumeMm3": 19090.726626596173,
-    "relativeVolumeDifference": 1.202450106889351e-13
+    "nativeVolumeMm3": 16000.217021062515,
+    "stepVolumeMm3": 16000.217021061137,
+    "relativeVolumeDifference": 8.617345415207366e-14
   },
   {
     "nativeName": "S_GUARD_LOWER_RIGHT_001",
-    "boundsDeltaMaxMm": 1.1397105481592007e-11,
-    "nativeVolumeMm3": 11195.73810116914,
-    "stepVolumeMm3": 11195.73810116938,
-    "relativeVolumeDifference": 2.144625026937522e-14
+    "boundsDeltaMaxMm": 1.0032863428932615e-11,
+    "nativeVolumeMm3": 8105.228495633128,
+    "stepVolumeMm3": 8105.228495633291,
+    "relativeVolumeDifference": 2.0085744862722383e-14
   },
   {
     "nativeName": "S_GUARD_UPPER_RIGHT_1_001",

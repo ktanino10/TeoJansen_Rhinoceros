@@ -1,0 +1,22 @@
+{
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
+  "sourceCommit": "299711c11bb755be1d8a19de132129e59eab944e",
+  "sourceHash": "0052499d81d46db6ae9b3834162dfe6e546f80d1f14b46571e90d9f64f2fd530",
+  "status": "PUBLICATION_HELD_FOR_BUDGET_CONFIRMATION",
+  "allOtherPackageChecksCompleted": true,
+  "recordedApprovedApproximateBudgetJpyPerMachine": 23000,
+  "proposedApproximateBudgetJpyPerMachine": 24000,
+  "proposedBudgetApproved": false,
+  "standaloneReferencePartsAndMaterialJpy": {
+    "A": 23305.13,
+    "B": 23735.37,
+    "C": 23154.43
+  },
+  "budgetScope": "Same reference FX and1.2x solid+accessory print-material basis; shipping and uncertain taxes separate. An unowned DN-03 hand tool is additional,approximately396JPY from the manufacturer's list price plus10% tax.",
+  "verificationGate": "verify_integrated_package completed all other source/resource/geometry/instance/BOM/floor/tool/frame/slicing/link checks and stopped at the recorded budget comparison. No geometry failure is being relabeled as a budget issue.",
+  "newCorrectionPushedOrMerged": false,
+  "newSiteOrMediaPublished": false,
+  "manufacturingRelease": false,
+  "qualifiedWalkingPrototypeCount": 0,
+  "actualAirflowSelfStartOr30cmWalkingVerified": false
+}

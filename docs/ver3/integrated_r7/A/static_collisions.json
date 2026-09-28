@@ -1,10 +1,10 @@
 {
   "designId": "A",
-  "revisionId": "v3-integrated-walkers-r7-15",
+  "revisionId": "v3-integrated-walkers-r7-16-floor2",
   "poses": [
     "saved reference assembly"
   ],
-  "exactPairsTested": 1903,
+  "exactPairsTested": 1876,
   "limited": false,
   "unintendedIntersections": [],
   "declaredThreadAndClampInterfaces": [
@@ -519,11 +519,6 @@
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_005",
-      "b": "H_NUT_M2_020",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
       "a": "H_BOLT_M2_30_003",
       "b": "H_NUT_M2_021",
       "reason": "coaxial corresponding screw/nut nominal threads"
@@ -596,11 +591,6 @@
     {
       "a": "H_BOLT_M2_16_008",
       "b": "H_NUT_M2_035",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_16_008",
-      "b": "H_NUT_M2_036",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
@@ -679,11 +669,6 @@
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_011",
-      "b": "H_NUT_M2_052",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
       "a": "H_BOLT_M2_30_007",
       "b": "H_NUT_M2_053",
       "reason": "coaxial corresponding screw/nut nominal threads"
@@ -756,11 +741,6 @@
     {
       "a": "H_BOLT_M2_16_014",
       "b": "H_NUT_M2_067",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_16_014",
-      "b": "H_NUT_M2_068",
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
@@ -839,11 +819,6 @@
       "reason": "coaxial corresponding screw/nut nominal threads"
     },
     {
-      "a": "H_BOLT_M2_16_017",
-      "b": "H_NUT_M2_084",
-      "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
       "a": "H_BOLT_M2_30_011",
       "b": "H_NUT_M2_085",
       "reason": "coaxial corresponding screw/nut nominal threads"
@@ -917,14 +892,9 @@
       "a": "H_BOLT_M2_16_020",
       "b": "H_NUT_M2_099",
       "reason": "coaxial corresponding screw/nut nominal threads"
-    },
-    {
-      "a": "H_BOLT_M2_16_020",
-      "b": "H_NUT_M2_100",
-      "reason": "coaxial corresponding screw/nut nominal threads"
     }
   ],
   "status": "PASS",
-  "elapsedSeconds": 61.17255645800469,
+  "elapsedSeconds": 117.37313383299625,
   "scope": "static saved B-reps only; no full-cycle or tolerance sweep approval"
 }
