@@ -146,6 +146,7 @@ def report():
 |名目質量|{a["nominalTotalMassG"]:.3f}g。実CADソリッド体積・仮密度・購入品の表示値/明示推定の合計|
 |基準姿勢の重心 X,Y,Z|{", ".join(f"{x:.3f}" for x in a["nominalCenterOfMassMm"])}mm|
 |購入・初回材料|{cost["sourceDisplayedPlusMaterialWithoutUncertainTaxReservesJpy"]:,.0f}円。送料別|
+|別費用|送料・未確定税等、未保有のDN-03約396円等の工具費。共同購入平均とは区別|
 |国内税の未確定分／任意輸入税準備金|{cost["includedUnclearDomesticTaxReserveJpy"]:,.0f}円／{cost["optionalImportTaxReserve10PercentJpy"]:,.0f}円。確定税額ではない|
 |初回試験片・組立台|{cost["firstBuildAccessoryMassG"]:.2f}g分を費用に含む。歩行質量には含まない|
 |承認予算|1台約{approval["approvedApproximateBudgetJpyPerMachine"]:,.0f}円、{approval["recordedDateJst"]} JSTにユーザー承認（親調整担当から伝達）。送料・未確定税等別|
@@ -230,7 +231,8 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
             body+="\nC第1対は旧C/A/Bと混用しません。[C相手2点の追加実層と支持面の警告](SLICING_ja.md)も確認してください。\n"
         (OUT/name/"README_ja.md").write_text(body)
     result={"revisionId":revision,"manufacturingRelease":False,"qualifiedWalkingPrototypeCount":0,
-            "rows":rows,"published":False,"physicalTestsPerformed":False}
+            "rows":rows,"publicationStateSource":"Repository main and Pages deployments; this report generator does not publish.",
+            "physicalTestsPerformed":False}
     (OUT/"comparison.json").write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
     with (OUT/"comparison.csv").open("w",newline="") as stream:
         writer=csv.DictWriter(stream,fieldnames=rows[0].keys(),lineterminator="\n")
@@ -239,7 +241,7 @@ low/nominal/highは、軸受1個あたり0.1/0.3/1.0mN·m、摺動摩擦係数0.
              "旧r3/r4/r6と公開first-cutは不変。このフォルダーは新しい全機CAD、全BOM、接地・駆動計算、組立経路を同版でまとめた設計資料です。",
              "製作リリース=false、合格歩行機数=0。購入・印刷・ドライヤー操作は実施していません。既存リポジトリ／Pagesへの設計資料公開と現物認定を区別します。","",
              "[独立レビューの履歴](REVIEW_ja.md)は旧r7-15とR7-I1に限定されます。現行の[床干渉是正](FLOOR_CORRECTION_ja.md)ではCの段配分、全案のPET下縁とロッカーピン周辺を実体変更し、質量・荷重・全物体対床を同版へ更新しています。新しい独立レビューの追認とはしていません。","",
-             f'現在の設計予算は**1台約{approval["approvedApproximateBudgetJpyPerMachine"]:,.0f}円**（{approval["recordedDateJst"]} JSTユーザー承認）。送料・未確定税等別。購入はしていません。',
+             f'現在の設計予算は**1台の部材費目安約{approval["approvedApproximateBudgetJpyPerMachine"]:,.0f}円**（{approval["recordedDateJst"]} JSTユーザー承認）。送料・未確定税等、未保有DN-03約396円等の工具費は別。個別初回と共同lotを区別し、購入はしていません。',
              "",
              "|案|径／減速比|名目g|個別初回 円|原代理／名目要求 mN·m|滑り仕事 Nmm/cycle|仮120RPMの30cm 分|",
              "|---|---:|---:|---:|---:|---:|---:|"]

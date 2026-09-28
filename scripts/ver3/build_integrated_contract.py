@@ -295,7 +295,8 @@ def source_identity():
         "slice_integrated_representatives.py","inspect_integrated_toolpaths.py",
         "test_slicing_inspection.py","test_contact_frames.py","walker_floor.py",
         "export_floor_envelopes.py","check_integrated_floor.py","test_walker_floor.py",
-        "refresh_integrated_floor_details.py","check_rocker_pin_access.py","refresh_stock_labels.py"]
+        "refresh_integrated_floor_details.py","check_rocker_pin_access.py","refresh_stock_labels.py",
+        "refresh_integrated_budget.py","test_integrated_budget.py"]
     sources=[resource(ROOT/"scripts/ver3"/name) for name in source_files]
     dependencies=[resource(ROOT/"docs/ver3/common_input_r4/assembly.json"),
                   resource(ROOT/"FreeCAD/Ver.3/common_input_r4/CommonInputR4.FCStd"),
@@ -395,6 +396,7 @@ def build(source_commit):
                      for name in "ABC"}
     contract["budgetConfirmationPending"]=any(value>cfg["requirements"]["materialBudgetJpy"] for value in reference_costs.values())
     contract["standaloneReferenceCostsJpy"]=reference_costs
+    contract["budgetMetadataUpdate"]=resource(OUT/"budget_metadata_update.json")
     contract["renderingLimits"].append("Contact frames are decimated converged small-angle quasi-static states,not dynamics. Missing independent rocker angles remain null; never replace them with zero or arbitrary poses.")
     contract["integrationReview"]={"summary":resource(OUT/"REVIEW_ja.md"),
         "initialReview":resource(OUT/"review/initial_review_record.json"),

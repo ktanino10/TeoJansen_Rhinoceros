@@ -277,6 +277,10 @@ def main():
         raise ValueError("The reported first-face C slicing warning changed")
     if budget_exceptions:
         raise ValueError("All other package checks completed; standalone reference costs require budget confirmation: "+json.dumps(budget_exceptions))
+    from refresh_integrated_budget import verify_budget_update
+    verify_budget_update()
+    if contract["budgetConfirmationPending"]:
+        raise ValueError("An approved budget is still marked pending")
     print("PASS: current hashes,three native sets,instances/BOM/mass,declared finite checks,all-instance floor cases,required-tool access,stage operations,links and approved standalone budgets.")
     print("Physical qualification remains0. Five representative toolpaths are inspected,with exposed first-layer support removal unresolved; actual airflow,friction,fit,strength,tools and30cm travel remain unverified.")
 
