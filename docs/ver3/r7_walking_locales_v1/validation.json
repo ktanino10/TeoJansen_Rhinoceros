@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "revisionId": "r7-floor2-walking-localized-v1",
+  "status": "PASS",
+  "designs": {
+    "A": {
+      "frameCount": 433,
+      "fps": 24,
+      "sourceNativeSha256": "342ac88380bcf4128d8ed5a4b814063c8b3eec0a40da8983ce955245c617fa58",
+      "motionSha256": "a9f01a708e3a2a7ee348f78450feddad7c6e3a6821907a64c3bf56e7b81b906b",
+      "sameCleanFramesForBothLanguages": true,
+      "modelPixelsUnchangedBeforeDeliveryEncoding": true,
+      "sharedDecodedFramesSha256": "54f6fd535c5d6bfa4f8d110f4d503e63d6e13eea3e486c147aa45f0a161d482e",
+      "masterQuality": {
+        "minimumPsnrDb": 39.73838277785687,
+        "thresholdPsnrDb": 38,
+        "samples": [
+          {
+            "frameIndex": 0,
+            "psnrDb": 45.99878736102532,
+            "meanAbsoluteChannelError": 0.8694584297839506
+          },
+          {
+            "frameIndex": 39,
+            "psnrDb": 42.21856447666155,
+            "meanAbsoluteChannelError": 1.2951490162037036
+          },
+          {
+            "frameIndex": 432,
+            "psnrDb": 39.73838277785687,
+            "meanAbsoluteChannelError": 1.592550636574074
+          }
+        ]
+      },
+      "languages": {
+        "ja": {
+          "width": 960,
+          "height": 720,
+          "fps": "24/1",
+          "frameCount": 433,
+          "durationSeconds": 18.041667,
+          "codec": "h264",
+          "pixelFormat": "yuv420p",
+          "bytes": 1483034,
+          "lastAnnotationBoxesPx": {
+            "title": [
+              24,
+              18,
+              320,
+              37
+            ],
+            "subtitle": [
+              24,
+              47,
+              277,
+              62
+            ],
+            "conditions": [
+              24,
+              70,
+              378,
+              86
+            ],
+            "telemetry": [
+              24,
+              646,
+              427,
+              662
+            ],
+            "method": [
+              24,
+              675,
+              421,
+              689
+            ],
+            "caution": [
+              24,
+              700,
+              448,
+              714
+            ]
+          }
+        },
+        "en": {
+          "width": 960,
+          "height": 720,
+          "fps": "24/1",
+          "frameCount": 433,
+          "durationSeconds": 18.041667,
+          "codec": "h264",
+          "pixelFormat": "yuv420p",
+          "bytes": 1481081,
+          "lastAnnotationBoxesPx": {
+            "title": [
+              24,
+              18,
+              312,
+              36
+            ],
+            "subtitle": [
+              24,
+              47,
+              401,
+              60
+            ],
+            "conditions": [
+              24,
+              70,
+              473,
+              83
+            ],
+            "telemetry": [
+              24,
+              646,
+              471,
+              660
+            ],
+            "method": [
+              23,
+              675,
+              512,
+              687
+            ],
+            "caution": [
+              24,
+              700,
+              515,
+              712
+            ]
+          }
+        }
+      }
+    },
+    "B": {
+      "frameCount": 1537,
+      "fps": 24,
+      "sourceNativeSha256": "342ac88380bcf4128d8ed5a4b814063c8b3eec0a40da8983ce955245c617fa58",
+      "motionSha256": "481854ecae9ece8fab1000f7ecd0b0e0a6d6ecca29a0afceffccb032b8a23e56",
+      "sameCleanFramesForBothLanguages": true,
+      "modelPixelsUnchangedBeforeDeliveryEncoding": true,
+      "sharedDecodedFramesSha256": "ce4e72bb319f57ab73eb134c60ea0f800cc03d2319f618b5962ace0fe6aa483c",
+      "masterQuality": {
+        "minimumPsnrDb": 39.5466196849475,
+        "thresholdPsnrDb": 38,
+        "samples": [
+          {
+            "frameIndex": 0,
+            "psnrDb": 46.86641121916617,
+            "meanAbsoluteChannelError": 0.7813363233024692
+          },
+          {
+            "frameIndex": 39,
+            "psnrDb": 42.48538152009174,
+            "meanAbsoluteChannelError": 1.2564052854938272
+          },
+          {
+            "frameIndex": 1536,
+            "psnrDb": 39.5466196849475,
+            "meanAbsoluteChannelError": 1.5971812307098765
+          }
+        ]
+      },
+      "languages": {
+        "ja": {
+          "width": 960,
+          "height": 720,
+          "fps": "24/1",
+          "frameCount": 1537,
+          "durationSeconds": 64.041667,
+          "codec": "h264",
+          "pixelFormat": "yuv420p",
+          "bytes": 4610861,
+          "lastAnnotationBoxesPx": {
+            "title": [
+              24,
+              18,
+              319,
+              37
+            ],
+            "subtitle": [
+              24,
+              47,
+              277,
+              62
+            ],
+            "conditions": [
+              24,
+              70,
+              378,
+              86
+            ],
+            "telemetry": [
+              24,
+              646,
+              437,
+              662
+            ],
+            "method": [
+              24,
+              675,
+              421,
+              689
+            ],
+            "caution": [
+              24,
+              700,
+              448,
+              714
+            ]
+          }
+        },
+        "en": {
+          "width": 960,
+          "height": 720,
+          "fps": "24/1",
+          "frameCount": 1537,
+          "durationSeconds": 64.041667,
+          "codec": "h264",
+          "pixelFormat": "yuv420p",
+          "bytes": 4629013,
+          "lastAnnotationBoxesPx": {
+            "title": [
+              24,
+              18,
+              314,
+              36
+            ],
+            "subtitle": [
+              24,
+              47,
+              401,
+              60
+            ],
+            "conditions": [
+              24,
+              70,
+              473,
+              83
+            ],
+            "telemetry": [
+              24,
+              646,
+              479,
+              660
+            ],
+            "method": [
+              23,
+              675,
+              512,
+              687
+            ],
+            "caution": [
+              24,
+              700,
+              515,
+              712
+            ]
+          }
+        }
+      }
+    },
+    "C": {
+      "frameCount": 469,
+      "fps": 24,
+      "sourceNativeSha256": "342ac88380bcf4128d8ed5a4b814063c8b3eec0a40da8983ce955245c617fa58",
+      "motionSha256": "1bb4aef6a9d1d9fedb277a4924ef7d2bbc477bb36b05283226971a388e0c6e6d",
+      "sameCleanFramesForBothLanguages": true,
+      "modelPixelsUnchangedBeforeDeliveryEncoding": true,
+      "sharedDecodedFramesSha256": "bd265ea098a85c11ce649861047bd5dd78cf101c6fd00cf07571e7a4b22aad4c",
+      "masterQuality": {
+        "minimumPsnrDb": 39.26017398855877,
+        "thresholdPsnrDb": 38,
+        "samples": [
+          {
+            "frameIndex": 0,
+            "psnrDb": 46.190589171812356,
+            "meanAbsoluteChannelError": 0.8510325038580246
+          },
+          {
+            "frameIndex": 39,
+            "psnrDb": 42.11465709845834,
+            "meanAbsoluteChannelError": 1.3061656057098765
+          },
+          {
+            "frameIndex": 468,
+            "psnrDb": 39.26017398855877,
+            "meanAbsoluteChannelError": 1.650072337962963
+          }
+        ]
+      },
+      "languages": {
+        "ja": {
+          "width": 960,
+          "height": 720,
+          "fps": "24/1",
+          "frameCount": 469,
+          "durationSeconds": 19.541667,
+          "codec": "h264",
+          "pixelFormat": "yuv420p",
+          "bytes": 1642570,
+          "lastAnnotationBoxesPx": {
+            "title": [
+              24,
+              18,
+              320,
+              37
+            ],
+            "subtitle": [
+              24,
+              47,
+              277,
+              62
+            ],
+            "conditions": [
+              24,
+              70,
+              378,
+              86
+            ],
+            "telemetry": [
+              24,
+              646,
+              427,
+              662
+            ],
+            "method": [
+              24,
+              675,
+              421,
+              689
+            ],
+            "caution": [
+              24,
+              700,
+              448,
+              714
+            ]
+          }
+        },
+        "en": {
+          "width": 960,
+          "height": 720,
+          "fps": "24/1",
+          "frameCount": 469,
+          "durationSeconds": 19.541667,
+          "codec": "h264",
+          "pixelFormat": "yuv420p",
+          "bytes": 1655681,
+          "lastAnnotationBoxesPx": {
+            "title": [
+              24,
+              18,
+              315,
+              36
+            ],
+            "subtitle": [
+              24,
+              47,
+              401,
+              60
+            ],
+            "conditions": [
+              24,
+              70,
+              473,
+              83
+            ],
+            "telemetry": [
+              24,
+              646,
+              471,
+              660
+            ],
+            "method": [
+              23,
+              675,
+              512,
+              687
+            ],
+            "caution": [
+              24,
+              700,
+              515,
+              712
+            ]
+          }
+        }
+      }
+    }
+  },
+  "scope": "Annotation/language-only change. Original CAD, poses, camera, motion scale, frame count, timing and rendering settings retained. No new physics or qualification."
+}

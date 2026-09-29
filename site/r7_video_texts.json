@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "revisionId": "r7-floor2-walking-localized-v1",
+  "layout": {
+    "id": "single-language-compact-v1",
+    "referenceWidth": 960,
+    "referenceHeight": 720,
+    "scale": 1,
+    "meaning": "Compact single-language burned annotations. Oversized duplicate browser captions are optional, not shown by default; no blanket reduction of user accessibility caption settings.",
+    "fontSizesPx": {
+      "title": 18,
+      "subtitle": 13,
+      "conditions": 13,
+      "telemetry": 14,
+      "method": 12,
+      "caution": 12
+    },
+    "positionsPx": {
+      "title": [24, 18],
+      "subtitle": [24, 47],
+      "conditions": [24, 70],
+      "telemetry": [24, 646],
+      "method": [24, 675],
+      "caution": [24, 700]
+    },
+    "maximumTextWidthPx": 912,
+    "textColorRgb": [15, 27, 21],
+    "safeAnnotationRegionsPx": [[16, 10, 944, 94], [16, 638, 944, 719]]
+  },
+  "locales": {
+    "ja": {
+      "label": "日本語",
+      "font": "Hiragino Sans W6",
+      "title": "r7 {design}案 | 連続歩行シミュレーション",
+      "subtitle": "床是正版の実CAD | 計算表示・実機未検証",
+      "conditions": "規定入力120 rpm | 時間圧縮16倍 | 減速比{ratio}:1 | 4周期",
+      "telemetry": "クランク {phase:.1f}° | 規定時間 {seconds:.1f}秒 | 計算上の前進 {forward:.1f} mm",
+      "method": "空中ロッカー：中立復帰の表示仮定 | ばね：実座・固定線径の手続き形状",
+      "caution": "風・衝撃の動力学ではありません。実自己始動・実30 cm歩行は未確認です。",
+      "accessibleTitle": "{design}案の連続歩行",
+      "description": "r7床是正版。規定入力120 rpm・時間圧縮16倍で4周期、計算上{forward:.1f} mm進みます。実機の歩行実証ではありません。",
+      "captionLabel": "日本語のモデル説明",
+      "captions": [
+        "{design}案・r7床是正版の連続歩行計算です。実機の映像ではありません。\n入力120 rpmを規定し、16倍の時間圧縮で表示しています。",
+        "実寸の歯車・クランク・リンクがつながり、六脚の荷重足と戻り足が交代します。\n同じ入力条件では512:1のB案はA・C案より遅く進みます。",
+        "空中ロッカーは中立復帰の表示仮定、12本のばねは座・線径・巻数を保持する手続き形状です。\n元解析の独立ロッカー角nullは変更していません。",
+        "4周期の計算上の前進は{forward:.1f} mmです。実測距離ではありません。\n風・実自己始動・実30 cm歩行は未確認、実機合格0のままです。"
+      ]
+    },
+    "en": {
+      "label": "English",
+      "font": "Arial",
+      "title": "r7 {design} | Continuous walking simulation",
+      "subtitle": "Floor-corrected CAD | Calculated visualization, not a physical test",
+      "conditions": "Prescribed input 120 rpm | Time compression 16x | Reduction {ratio}:1 | 4 cycles",
+      "telemetry": "Crank {phase:.1f} deg | Prescribed time {seconds:.1f} s | Calculated advance {forward:.1f} mm",
+      "method": "Airborne rocker: neutral-return display assumption | Springs: fixed-wire procedural geometry",
+      "caution": "Not wind or impact dynamics. Physical self-start and actual 30 cm walking remain unverified.",
+      "accessibleTitle": "Design {design}: continuous walking",
+      "description": "Floor-corrected r7. Four cycles at a prescribed 120 rpm input and 16x time compression give {forward:.1f} mm of calculated advance. This is not a physical walking test.",
+      "captionLabel": "English model explanation",
+      "captions": [
+        "Design {design}: continuous walking calculation using floor-corrected r7 CAD, not physical footage.\nInput is prescribed at 120 rpm and shown with 16x time compression.",
+        "The actual gears, crank and links move together as the six legs alternate support and recovery.\nAt the same input speed, design B's 512:1 reduction makes it slower than A and C.",
+        "Airborne rockers use an assumed neutral-return display rule. All twelve procedural springs retain their seats, wire diameter and turn count.\nThe original analysis's independent rocker angles remain null.",
+        "Four cycles give {forward:.1f} mm of calculated advance, not a measured distance.\nWind-driven self-start and physical 30 cm walking remain unverified. Qualified physical prototypes: zero."
+      ]
+    }
+  }
+}
