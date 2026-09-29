@@ -14,7 +14,15 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "site/dist/TeoJansen_Rhinoceros"
 PUBLIC_URL = "https://ktanino10.github.io/TeoJansen_Rhinoceros/"
-PAGES = {"index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html"}
+ROOT_PAGES = {"index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html"}
+PAGES = ROOT_PAGES | {"en/" + page for page in ROOT_PAGES}
+STATIC_FILES = ("styles.css", "viewer.css", "calculations.css", "r7.css", "walking.css", "app.js",
+                "i18n.js", "viewer-loader.js", "walking-loader.js", "calculations.js", "favicon.svg")
+DOCUMENT_EXAMPLES = (
+    "docs/ver3/DESIGN_en.md",
+    "docs/ver3/integrated_r7/ASSEMBLY_en.md",
+    "docs/ver3/r7_walking_v1/MODEL_en.md",
+)
 
 
 def fetch_bytes(url):
@@ -48,9 +56,12 @@ def verify(expected_commit):
         raise ValueError("Published external image references differ from the fixed local source")
     for page in sorted(PAGES):
         text = fetch_bytes(PUBLIC_URL + page).decode("utf-8")
-        if '<html lang="ja">' not in text or "{{" in text or "/Users/" in text:
+        locale = "en" if page.startswith("en/") else "ja"
+        if f'<html lang="{locale}">' not in text or "{{" in text or "/Users/" in text:
             raise ValueError(f"Invalid deployed HTML: {page}")
-    for filename in ("styles.css", "viewer.css", "calculations.css", "r7.css", "walking.css", "app.js", "viewer-loader.js", "walking-loader.js", "calculations.js", "favicon.svg"):
+        if text != (OUTPUT / page).read_text():
+            raise ValueError(f"Deployed HTML differs from the expected build: {page}")
+    for filename in STATIC_FILES:
         if fetch_bytes(PUBLIC_URL + filename) != (ROOT / "site" / filename).read_bytes():
             raise ValueError(f"Deployed static source differs: {filename}")
 
@@ -81,10 +92,14 @@ def verify(expected_commit):
             raise ValueError(f"External reference size/hash differs: {url}")
         from calculation_data import svg_dimensions
         svg_dimensions(data)
+    for path in DOCUMENT_EXAMPLES:
+        url = f"https://raw.githubusercontent.com/ktanino10/TeoJansen_Rhinoceros/{expected_commit}/{path}"
+        if fetch_bytes(url) != (ROOT / path).read_bytes():
+            raise ValueError(f"Published English document differs: {path}")
     return {"url": PUBLIC_URL, "source_commit": expected_commit, "pages": len(PAGES),
             "assets": len(sizes), "asset_bytes": sum(sizes), "all_gets": 200,
             "external_images": len(local.get("external_images", {})),
-            "asset_hashes": "matched", "display_metadata": "removed"}
+            "asset_hashes": "matched", "display_metadata": "removed", "english_documents": len(DOCUMENT_EXAMPLES)}
 
 
 if __name__ == "__main__":

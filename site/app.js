@@ -1,4 +1,5 @@
 const videos = [...document.querySelectorAll("video")];
+const localText = (ja, en) => document.documentElement.lang === "en" ? en : ja;
 
 function showMediaError(element) {
   const container = element.closest(".media");
@@ -31,8 +32,10 @@ for (const button of document.querySelectorAll(".video-toggle")) {
   button.hidden = false;
   const label = button.dataset.label;
   const update = () => {
-    button.textContent = `${label}を${video.paused ? "再生" : "一時停止"}`;
+    button.textContent = localText(`${label}を${video.paused ? "再生" : "一時停止"}`,
+      `${video.paused ? "Play" : "Pause"} ${label}`);
   };
+  update();
   video.addEventListener("play", update);
   video.addEventListener("pause", update);
   video.addEventListener("ended", update);
@@ -63,7 +66,7 @@ if (gifButton || preview) {
     preview.src = stillImage;
     preview.alt = stillAlt;
     gifButton.setAttribute("aria-pressed", "false");
-    gifButton.textContent = "歩行GIFを再生（33秒・約2.9 MB）";
+    gifButton.textContent = localText("歩行GIFを再生（33秒・約2.9 MB）", "Play walking GIF (33 s, about 2.9 MB)");
   }
 
   gifButton.hidden = false;
@@ -74,9 +77,10 @@ if (gifButton || preview) {
     }
     for (const video of videos) video.pause();
     preview.src = gifButton.dataset.animation;
-    preview.alt = "Ver.3 A・B・Cの規定入力による歩行GIF。実機未検証、接触目標未達。";
+    preview.alt = localText("Ver.3 A・B・Cの規定入力による歩行GIF。実機未検証、接触目標未達。",
+      "Prescribed-input walking GIF of Ver.3 A, B and C. Physically unverified; contact targets unmet.");
     gifButton.setAttribute("aria-pressed", "true");
-    gifButton.textContent = "GIFを停止して静止画に戻す";
+    gifButton.textContent = localText("GIFを停止して静止画に戻す", "Stop GIF and return to still image");
   });
 
   function applyMotionPreference() {

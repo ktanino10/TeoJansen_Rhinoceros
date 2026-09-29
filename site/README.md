@@ -1,6 +1,6 @@
 # Ver.1 / Ver.2 / Ver.3 紹介サイト
 
-既存READMEと是正済みの機械資料を読むための、日本語中心の静的サイトです。機械CAD・正規の物理結果は変更しません。`r7.html` は床是正版の比較・360°・12工程・同版CG／説明動画／限定診断図、`walking.html` は別版の運動学・準静的な表示モデルによるA/B/C連続歩行3Dと新規MP4です。`index.html` は全体紹介、`production.html` はVer.1/2製作記録、`comparison.html` と `viewer.html` は第一カットのMatrix・360°・組立履歴、`calculations.html` は別版r3の固定計算資料とr4入力軸カードです。旧動画は第一カットの履歴に限定し、新r7の歩行実証として使いません。
+既存READMEと是正済みの機械資料を読むための、日英を分離した静的サイトです。機械CAD・正規の物理結果は変更しません。`r7.html` は床是正版の比較・360°・12工程・同版CG／説明動画／限定診断図、`walking.html` は別版の運動学・準静的な表示モデルによるA/B/C連続歩行3Dと新規MP4です。`index.html` は全体紹介、`production.html` はVer.1/2製作記録、`comparison.html` と `viewer.html` は第一カットのMatrix・360°・組立履歴、`calculations.html` は別版r3の固定計算資料とr4入力軸カードです。旧動画は第一カットの履歴に限定し、新r7の歩行実証として使いません。
 
 ## ローカル生成・確認
 
@@ -9,12 +9,25 @@
 ```bash
 python3 -m pip install -r site/requirements.txt
 npm ci --prefix site --ignore-scripts
+python3 site/localization.py --documents --check
 python3 site/build.py
 npm --prefix site run test:static
 cd site
 npx playwright install chromium
 npm test
 ```
+
+## 日英のページと主要資料
+
+ルートの7ページは日本語の従来URL、`en/` の同名7ページは英語です。元テンプレート・数値adapter・3D／歩行エンジンを共有し、`localization.py` が見える本文・alt・メタデータを翻訳します。`i18n.js` は共有アセットの基準URL、動的表示、現在のクエリとアンカーを保持する言語切替を担当します。GLB・数値JSON・原画像を英語ディレクトリへ重複コピーしません。
+
+`locales/sources.json` は正規化した日本語メッセージ・出典、`en.json` はサイトと対話表示、`documents.en.json` は主要資料と組立字幕の英訳です。数字・案ID・インラインコード等は番号付きパラメーターとして保持し、欠落・重複・未訳は失敗にします。組立JSONのハッシュを確認した**後**に表示文字列だけを変え、数量・全ID・配置・経路・元hashは保持します。
+
+18主要文書は隣接する `*_en.md` へ全文の説明を生成し、固定原本を編集しません。対応・出典hash・原図／補助履歴の言語は [日本語資料一覧](../docs/README_ja.md)／[English documents](../docs/README_en.md) と `docs/translation-manifest.json` が正本です。7つのBOMは元から英語・共通項目で同一原本を参照します。旧組立MP4は共有し、英訳VTT6点は元の全キュー時刻を保持します。
+
+翻訳更新は `python3 site/localization.py --documents`、不変確認は `--documents --check`。新しい日本語を追加した場合はビルドが未訳で止まるため、生成途中の日本語出力から `python3 site/localization.py --inventory` で出典を収集し、対応する英訳を追加して再生成します。英訳文書を手で別仕様へ改訂せず、原本の改訂・版固定と翻訳を明示的に統合してください。
+
+`test_localization.py` は全パラメーター、ID・数量・座標・hashの不変、全14ページのアンカーと英語資料リンク、文書の相対リンク、字幕時刻を確認します。`localization.spec.mjs` は全ページ両言語のdesktop／375px、実CADのA/B/Cと工程、歩行再生／停止、失敗時・無JS、axe、言語切替を確認します。`verify_live.py` は実公開14ページの本文・全配信assetと代表英訳MDのGET/hashを検査します。
 
 既存Chromeを使う場合は、`PLAYWRIGHT_CHROMIUM_EXECUTABLE` にその実行ファイルを指定すればブラウザーの追加ダウンロードを省略できます。テストはヘッドレスの独立プロファイルで行い、使用中のブラウザーを操作しません。
 
@@ -28,7 +41,7 @@ npm test
 - 写真／CG／スライサー形状画像は明示した48画像だけをWebPへ縮小。原写真の画面・周囲の私物が入る範囲を表示用にトリミングし、EXIF・XMP・ICCなどを派生表示画像から除去します。原本は変更しません。顔の写る着用写真は派生に含めません。
 - 既存のMP4五本と、操作するまで読まないGIF一本を選別コピーします。初期表示で動画/GIF/YouTube/外部フォントは取得しません。
 - CAD、STL、BOM、文書等は確定コミットを参照するGitHubリンクです。全リポジトリや原データ162 MBをPagesへ配信しません。
-- `site/dist/TeoJansen_Rhinoceros/` のみを配信します。従来の静的資産12 MB／操作時3D18 MB、r7比較・組立30 MBの枠を維持し、新しい操作時歩行JSON・エンジン・3本のMP4等を別枠16 MB（全体76 MB以内）で選別配信します。同じr7 GLBを再利用し重複コピーしません。全CAD／STL／Blenderや一時フレームはPagesへコピーせず、GitHubの確定版へリンクします。ページ間アンカー、許可ファイル、メタデータを検証し、`build-manifest.json` に各版の出典・ハッシュを保存。非選択モデルや動画は初期ロードしません。
+- `site/dist/TeoJansen_Rhinoceros/` のみを配信します。従来の静的資産12 MB／操作時3D18 MB、r7比較・組立30 MBと全体76 MBの上限を維持します。日英6本のMP4を含む歩行枠だけ、実測約17.33 MBに対して18 MBへ再配分しました（以前の単一言語枠は16 MB）。全体の実測は約72.04 MBです。同じr7 GLB・運動JSONを再利用し重複コピーしません。全CAD／STL／Blenderや一時フレームはPagesへコピーせず、GitHubの確定版へリンクします。ページ間アンカー、許可ファイル、メタデータを検証し、`build-manifest.json` に各版の出典・ハッシュを保存。非選択モデルや動画は初期ロードしません。
 - CIのPR実行は生成と実ブラウザー確認のみ。`main`へのpushまたは`main`の手動実行は、同じ検証に合格した静的出力だけを公式Pages Actionsで配信します。deploy jobのみ`pages:write`/`id-token:write`を持ちます。
 
 公開後は `SITE_URL` にデプロイが返した実URLを指定して `npm --prefix site test` を実行できます。公開URLのGET、主要画像・MP4、GitHub側の代表ダウンロードも確認します。CI成功だけを実配信の確認として扱いません。
@@ -160,3 +173,9 @@ CIはそこから表示派生を作るだけでBlenderや物理計算を再実�
 新MP4の実デコード・フレーム数・字幕・媒体メタデータを結び付けます。
 Playwrightは実際の3DのA/B/C切替・再生／停止・位相・速度・リセット、desktop／375px、
 reduced-motion、キーボード、エラー、動画、JavaScriptなしを確認します。
+
+### 日英の歩行注記と任意字幕
+
+`r7_walking_locales_v1/manifest.json` は既存の歩行manifestと同じnative・motion・評価器のhash、433/1537/469フレーム、24 fps、960×720、120 rpm／16×／4周期を保持します。新規の `r7_video_locales.py`／`r7_video_texts.json` は同じclean frameから日英を合成し、注記域外0画素変更と全MP4デコードを記録します。既存pinned生成器とnativeは変更しません。公開ビルドは媒体24ファイルのallowlist・hash・字幕言語・同一時刻・画質記録を照合し、公開するMP4は日英各3本、posterはメタデータ除去済みWebPへ変換します。古い日本語歩行MP4や非公開のclean masterを重複配信しません。
+
+過大な表示の主因だった、焼込み注記と既定VTTの二重表示を解消しました。歩行VTTは正しい言語・ラベルで任意ON、`default`なしです。JavaScriptで明示的なCC選択をOFFへ戻したり、`::cue`を一律縮小したりしません。焼込みは960px基準で18/13/14/12pxの単一言語注記で、25%の機械的縮小ではなくC試写の可読性を優先した値です。小さい埋込動画だけで全注記が読めるとはせず、全画面・任意CC・近接する同言語本文を残しています。`localization.py` はこの検証済み媒体manifestのタイトル・説明・字幕ラベルも使い、言語別の実MP4／poster／VTTへ接続します。

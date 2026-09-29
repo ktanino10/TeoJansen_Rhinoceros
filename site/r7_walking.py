@@ -1,8 +1,11 @@
 """Publish only the separately versioned, source-pinned walking visualization."""
 
 import argparse
+from html import escape
 import json
+import math
 from pathlib import Path
+import re
 import shutil
 import subprocess
 
@@ -13,12 +16,93 @@ from r7_data import ROOT, Snapshot, digest
 WALK = ROOT / "docs/ver3/r7_walking_v1"
 REVISION = "r7-floor2-walking-kinematic-v1"
 NATIVE = "Blender/Ver.3/integrated_r7/r7_walking_v1.blend"
+LOCALIZED = ROOT / "docs/ver3/r7_walking_locales_v1"
+LOCALIZED_REVISION = "r7-floor2-walking-localized-v1"
+
+
+def validate_localized_media(media, base, source):
+    prefix = "docs/ver3/r7_walking_locales_v1/"
+    allowed = {"site/r7_video_locales.py", "site/r7_video_texts.json", prefix + "validation.json"}
+    allowed.update(prefix + f"render_{design}.json" for design in "ABC")
+    allowed.update(prefix + f"{locale}/walking_{design}.{extension}"
+                   for locale in ("ja", "en") for design in "ABC" for extension in ("mp4", "png", "vtt"))
+    base_bytes = (WALK / "walking-manifest.json").read_bytes()
+    if (media["schemaVersion"] != 1 or media["revisionId"] != LOCALIZED_REVISION
+            or media["manufacturingRelease"] is not False or media["physicalQualifiedCount"] != 0
+            or media["baseManifest"] != {"path": "docs/ver3/r7_walking_v1/walking-manifest.json",
+                                        "sha256": digest(base_bytes), "bytes": len(base_bytes)}
+            or any(media[key] != source.source[key] for key in ("artifactCommit", "inputCommit", "sourceHash"))
+            or media["defaults"] != {"captionTrackMode": "disabled", "inputRpm": 120, "timeFactor": 16}
+            or set(media["designs"]) != set("ABC") or set(media["files"]) != allowed):
+        raise ValueError("Localized walking source, qualification, defaults or allowlist differs")
+    for name, expected in media["files"].items():
+        path = ROOT / name
+        if (not path.resolve().is_relative_to(ROOT) or path.is_symlink() or not path.is_file()
+                or path.stat().st_size != expected["bytes"] or digest(path.read_bytes()) != expected["sha256"]):
+            raise ValueError(f"Localized walking artifact fingerprint differs: {name}")
+    validation = json.loads((LOCALIZED / "validation.json").read_text())
+    text_catalog = json.loads((ROOT / "site/r7_video_texts.json").read_text())
+    texts = text_catalog["locales"]
+    if media["layout"] != text_catalog["layout"] or text_catalog["revisionId"] != LOCALIZED_REVISION:
+        raise ValueError("Localized walking annotation layout differs from its pinned catalog")
+    if validation["status"] != "PASS" or validation["revisionId"] != LOCALIZED_REVISION:
+        raise ValueError("Localized walking media validation is incomplete")
+    for design, entry in media["designs"].items():
+        original = json.loads((WALK / f"render_{design}.json").read_text())
+        render = json.loads((LOCALIZED / f"render_{design}.json").read_text())
+        checks = validation["designs"][design]
+        for field in ("fps", "frameCount", "width", "height", "prescribedSeconds", "timeFactor", "cycles", "motionSha256"):
+            if entry[field] != original[field]:
+                raise ValueError(f"{design}: localization changed the original {field}")
+        if (not math.isclose(entry["durationSeconds"], original["durationSeconds"], abs_tol=1e-6)
+                or entry["forwardMm"] != base["movies"][design]["forwardMm"]
+                or set(entry["locales"]) != {"ja", "en"}
+                or checks["sameCleanFramesForBothLanguages"] is not True
+                or checks["modelPixelsUnchangedBeforeDeliveryEncoding"] is not True
+                or checks["sourceNativeSha256"] != base["files"][NATIVE]["sha256"]
+                or checks["motionSha256"] != entry["motionSha256"]
+                or render["evaluatorSha256"] != original["evaluatorSha256"]
+                or render["privateMaster"]["cameraAndMechanicalTransformsUnchanged"] is not True
+                or render["privateMaster"]["mechanicalInstanceCount"] != source.source["expectedInstances"][design]
+                or render["captionCatalog"] != media["files"]["site/r7_video_texts.json"]
+                or render["maximumChangedPixelOutsideAnnotationRegions"] != 0
+                or render["sharedDecodedFramesSha256"] != checks["sharedDecodedFramesSha256"]
+                or checks["masterQuality"]["minimumPsnrDb"] < checks["masterQuality"]["thresholdPsnrDb"]):
+            raise ValueError(f"{design}: localized media changed motion, source or model pixels")
+        original_cues = re.findall(r"^.* --> .*$", (WALK / f"walking_{design}.vtt").read_text(), re.M)
+        for locale, variant in entry["locales"].items():
+            for kind, extension in (("video", "mp4"), ("poster", "png"), ("captions", "vtt")):
+                expected_path = prefix + f"{locale}/walking_{design}.{extension}"
+                record = variant[kind]
+                if (record["path"] != expected_path
+                        or any(record[field] != media["files"][expected_path][field] for field in ("sha256", "bytes"))):
+                    raise ValueError(f"{design}/{locale}: localized {kind} does not match its pinned file")
+            captions = variant["captions"]
+            if (captions["lang"] != locale or captions["default"] is not False
+                    or variant["title"] != texts[locale]["accessibleTitle"].format(design=design)
+                    or variant["description"] != texts[locale]["description"].format(design=design, forward=entry["forwardMm"])
+                    or captions["label"] != texts[locale]["captionLabel"]
+                    or (variant["poster"]["width"], variant["poster"]["height"]) != (960, 720)):
+                raise ValueError(f"{design}/{locale}: caption language, description or poster differs")
+            cues = (ROOT / captions["path"]).read_text()
+            if re.findall(r"^.* --> .*$", cues, re.M) != original_cues:
+                raise ValueError(f"{design}/{locale}: caption timing changed")
+            if locale == "en" and re.search(r"[ぁ-ゖァ-ヺ一-龯]", cues + variant["title"] + variant["description"]):
+                raise ValueError(f"{design}: English walking media retains Japanese captions")
+            decoded = checks["languages"][locale]
+            if (decoded["frameCount"] != entry["frameCount"] or decoded["fps"] != "24/1"
+                    or (decoded["width"], decoded["height"]) != (960, 720)
+                    or not math.isclose(decoded["durationSeconds"], entry["durationSeconds"], abs_tol=1e-6)
+                    or decoded["bytes"] != variant["video"]["bytes"]):
+                raise ValueError(f"{design}/{locale}: decoded media no longer matches its delivery record")
+    return media
 
 
 def build_walking(output, guides, ref, *, preview=False):
     from build import source_url
     source = Snapshot(use_git=False)
     media = None
+    localized = None
     if not preview:
         media = json.loads((WALK / "walking-manifest.json").read_text())
         if (media["revisionId"] != REVISION or media["artifactCommit"] != source.commit
@@ -40,6 +124,7 @@ def build_walking(output, guides, ref, *, preview=False):
             path = ROOT / name
             if path.is_symlink() or not path.is_file() or path.stat().st_size != entry["bytes"] or digest(path.read_bytes()) != entry["sha256"]:
                 raise ValueError(f"Walking artifact fingerprint differs: {name}")
+        localized = validate_localized_media(json.loads((LOCALIZED / "manifest.json").read_text()), media, source)
     assets, entries, reports, films = {}, {}, {}, []
 
     def copy(path, filename):
@@ -91,17 +176,19 @@ def build_walking(output, guides, ref, *, preview=False):
         }
         reports[design] = report
         if media:
-            for extension in ("mp4", "vtt", "png"):
-                path = WALK / f"walking_{design}.{extension}"
-                if str(path.relative_to(ROOT)) not in media["files"]:
-                    raise ValueError("An unpinned walking movie cannot be published")
-                copy(path, f"assets/r7-walking-{design}.{extension}")
-            title = f"{design}案の連続歩行"
+            for locale, variant in localized["designs"][design]["locales"].items():
+                suffix = "" if locale == "ja" else "-en"
+                for kind, extension in (("video", "mp4"), ("captions", "vtt"), ("poster", "png")):
+                    filename = copy(ROOT / variant[kind]["path"], f"assets/r7-walking-{design}{suffix}.{extension}")
+                    assets[filename].update(locale=locale, media_revision=LOCALIZED_REVISION)
+            variant = localized["designs"][design]["locales"]["ja"]
+            title = escape(variant["title"], quote=True)
+            caption = variant["captions"]
             films.append(f'''<article class="walk-film media" id="walking-film-{design}"><h3>{title} · {abs(motion["inputTurnsPerCrank"]):g}:1</h3>
               <video id="r7-walking-{design}" controls playsinline preload="none" width="960" height="720"
-                poster="assets/r7-walking-{design}.webp" aria-label="{title}" aria-describedby="walking-note-{design}">
+                poster="assets/r7-walking-{design}.webp" aria-label="{title}" title="{escape(variant["description"], quote=True)}" aria-describedby="walking-note-{design}">
                 <source src="assets/r7-walking-{design}.mp4" type="video/mp4">
-                <track kind="captions" src="assets/r7-walking-{design}.vtt" srclang="ja" label="日本語のモデル説明" default>
+                <track kind="captions" src="assets/r7-walking-{design}.vtt" srclang="{caption["lang"]}" label="{escape(caption["label"], quote=True)}">
                 MP4のダウンロードをご利用ください。</video>
               <div class="video-caption"><button type="button" class="button video-toggle" data-video="r7-walking-{design}"
                 data-label="{title}" aria-controls="r7-walking-{design}" hidden>{title}を再生</button>
@@ -111,6 +198,9 @@ def build_walking(output, guides, ref, *, preview=False):
               <a href="assets/r7-walking-{design}.mp4" download>歩行MP4をダウンロード</a></div></article>''')
     if not entries or (not preview and set(entries) != set("ABC")):
         raise ValueError("Walking delivery requires all three designs")
+    if localized:
+        copy(LOCALIZED / "manifest.json", "assets/r7-walking-locales-manifest.json")
+        copy(LOCALIZED / "validation.json", "assets/r7-walking-locales-validation.json")
     catalog = {"schemaVersion": 1, "revisionId": REVISION, "artifactCommit": source.commit, "designs": entries}
     filename = "assets/r7-walking-index.json"
     data = (json.dumps(catalog, separators=(",", ":")) + "\n").encode()
@@ -128,12 +218,14 @@ def build_walking(output, guides, ref, *, preview=False):
     sources = "" if preview else (
         f'<a href="{source_url("source", "docs/ver3/r7_walking_v1/MODEL_ja.md", ref)}">モデル・仮定・再現方法</a>'
         f'<a href="{source_url("source", "docs/ver3/r7_walking_v1/walking-manifest.json", ref)}">媒体・ソースのハッシュ</a>'
+        '<a href="assets/r7-walking-locales-manifest.json">日英動画・字幕の来歴</a>'
         f'<a href="{source_url("download", NATIVE, ref)}">編集可能な歩行Blender原本</a>'
         f'<a href="{source_url("source", "site/r7_walk_render.py", ref)}">同じ運動データからの再生成スクリプト</a>')
     replacements = {
         "{{walk_preview_notice}}": "初回ローカルプレビュー。動画は未生成です。" if preview else "",
         "{{walk_design_options}}": "".join(f'<option value="{d}">{d} · {ratios[d]}</option>' for d in entries),
-        "{{walk_movies}}": "".join(films) if media else '<p class="record-scope">まず上の操作可能な連続歩行をご覧ください。このローカルプレビューの動画は次工程で生成します。</p>',
+        "{{walk_movies}}": ('<p class="small-note" id="walking-caption-help">注記はページと同じ言語です。CCは任意に表示できます。小さい画面では全画面表示・CC・この本文をご利用ください。</p>'
+                            + "".join(films)) if media else '<p class="record-scope">まず上の操作可能な連続歩行をご覧ください。このローカルプレビューの動画は次工程で生成します。</p>',
         "{{walk_validation}}": '<div class="walk-validation"><h3>この表示モデルの有限標本確認</h3>' + validation + "</div>",
         "{{walk_sources}}": sources,
         "{{r7_walking}}": '''<section class="section" id="r7-walking"><p class="eyebrow">NEW / CONTINUOUS WALKING</p>

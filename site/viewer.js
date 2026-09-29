@@ -3,7 +3,11 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { r7State, frameEvidence } from "./r7-player.js";
 
-const CATEGORY = { printed: "印刷品", purchased: "購入品", cut_to_length: "購入・切断加工品", sheet_cut: "シート切出し品" };
+const { text: l, translate: tr, localizeData, asset } = globalThis.RhinoLocale;
+const CATEGORY = {
+  printed: l("印刷品", "Printed"), purchased: l("購入品", "Purchased"),
+  cut_to_length: l("購入・切断加工品", "Purchased / cut to length"), sheet_cut: l("シート切出し品", "Sheet cut"),
+};
 const DIRECTIONS = {
   isometric: [1.1, 0.75, 1.3], front: [0, 0, 1], back: [0, 0, -1],
   left: [-1, 0, 0], right: [1, 0, 0], top: [0, 1, 0.0001], bottom: [0, -1, 0.0001],
@@ -28,7 +32,7 @@ function paragraph(text, className = "") {
 }
 
 async function jsonAt(path, expectedHash) {
-  const response = await fetch(path);
+  const response = await fetch(asset(path));
   if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
   if (!expectedHash) return response.json();
   const bytes = await response.arrayBuffer();
@@ -65,7 +69,8 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
   const canvas = renderer.domElement;
   canvas.tabIndex = 0;
   canvas.setAttribute("role", "img");
-  canvas.setAttribute("aria-label", "CAD由来の3D模型。矢印キーで回転、Shiftと矢印で移動できます。");
+  canvas.setAttribute("aria-label", l("CAD由来の3D模型。矢印キーで回転、Shiftと矢印で移動できます。",
+    "CAD-derived 3D model. Arrow keys rotate; Shift and arrows pan."));
   canvas.setAttribute("aria-describedby", "canvas-help");
   host.replaceChildren(canvas);
 
@@ -136,8 +141,10 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
           Math.min(...projected.map((point) => point.z)), Math.max(...projected.map((point) => point.z)),
         ]);
       }
-      diagnostics.textContent = `視点角 ${THREE.MathUtils.radToDeg(controls.getAzimuthalAngle()).toFixed(1)}° / `
-        + `${THREE.MathUtils.radToDeg(controls.getPolarAngle()).toFixed(1)}° · 描画 ${renderer.info.render.calls} batches`;
+      diagnostics.textContent = l("視点角 ", "View angles ")
+        + `${THREE.MathUtils.radToDeg(controls.getAzimuthalAngle()).toFixed(1)}° / `
+        + `${THREE.MathUtils.radToDeg(controls.getPolarAngle()).toFixed(1)}° · `
+        + l("描画 ", "Rendered ") + `${renderer.info.render.calls} batches`;
     });
   }
   controls.addEventListener("change", render);
@@ -153,15 +160,18 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
   canvas.addEventListener("webglcontextlost", (event) => {
     event.preventDefault();
     contextLost = true;
-    $("viewer-error").textContent = "WebGLコンテキストが失われました。静止画・STEP原本・静的組立手順をご利用ください。復帰後に再読み込みできます。";
+    $("viewer-error").textContent = l("WebGLコンテキストが失われました。静止画・STEP原本・静的組立手順をご利用ください。復帰後に再読み込みできます。",
+      "WebGL context was lost. Use stills, original STEP files and static assembly instructions. Reload after recovery.");
     $("viewer-error").hidden = false;
     $("viewer-fallback").hidden = false;
     $("viewer-workspace").hidden = true;
-    $("viewer-status").textContent = "3D描画が停止しました。実物や元データは変更していません。";
+    $("viewer-status").textContent = l("3D描画が停止しました。実物や元データは変更していません。",
+      "3D rendering stopped. Physical objects and source data are unchanged.");
   });
   canvas.addEventListener("webglcontextrestored", () => {
     contextLost = false;
-    $("viewer-status").textContent = "WebGLが復帰しました。「この案を再読み込み」で表示をやり直せます。";
+    $("viewer-status").textContent = l("WebGLが復帰しました。「この案を再読み込み」で表示をやり直せます。",
+      "WebGL recovered. Choose “Reload this design” to restart the display.");
   });
 
   function clearArrows() {
@@ -317,25 +327,30 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
     const description = $("part-description");
     description.replaceChildren();
     if (!selectedPart) {
-      description.textContent = "部品はまだ選択されていません。";
+      description.textContent = tr("部品はまだ選択されていません。");
       return;
     }
     const part = guide.parts[selectedPart];
     const heading = document.createElement("strong");
     heading.textContent = `${part.name} · ${selectedPart}`;
     description.append(heading,
-      paragraph(`${CATEGORY[part.category]} / 正規組立数量 ${part.quantity} 点`
-        + (part.quantity === 0 ? "（試験片・本体には組み込みません）" : "")),
-      paragraph(selectedInstance ? `インスタンスID：${selectedInstance}` : `表示中の同じ部品：${records.filter((r) => r.partId === selectedPart && isVisible(r)).length} 点`),
+      paragraph(`${CATEGORY[part.category]} / ` + l(`正規組立数量 ${part.quantity} 点`, `Canonical assembly quantity: ${part.quantity}`)
+        + (part.quantity === 0 ? l("（試験片・本体には組み込みません）", " (coupon; not installed in machine)") : "")),
+      paragraph(selectedInstance ? l(`インスタンスID：${selectedInstance}`, `Instance ID: ${selectedInstance}`)
+        : l(`表示中の同じ部品：${records.filter((r) => r.partId === selectedPart && isVisible(r)).length} 点`,
+          `Visible instances of this part: ${records.filter((r) => r.partId === selectedPart && isVisible(r)).length}`)),
       paragraph(part.description, "small-note"),
-      paragraph(`原メッシュ ${part.vertices.toLocaleString()} 頂点 / ${part.triangles.toLocaleString()} 三角形。表示adapterによる形状の簡略化なし。`, "small-note"));
+      paragraph(l(`原メッシュ ${part.vertices.toLocaleString()} 頂点 / ${part.triangles.toLocaleString()} 三角形。表示adapterによる形状の簡略化なし。`,
+        `Original mesh: ${part.vertices.toLocaleString("en-US")} vertices / ${part.triangles.toLocaleString("en-US")} triangles. No display-adapter geometry simplification.`), "small-note"));
     if (guide.schemaVersion === 2 && selectedInstance) {
       const record = records.find((item) => item.instanceId === selectedInstance);
       const label = guide.instances[selectedInstance].displayLabel;
       if (label && label !== selectedInstance) {
-        description.append(paragraph(`現行の表示ラベル：${label}。追跡ID中の旧寸法名ではなく、現行part ID・BOMを参照してください。`, "small-note"));
+        description.append(paragraph(l(`現行の表示ラベル：${label}。追跡ID中の旧寸法名ではなく、現行part ID・BOMを参照してください。`,
+          `Current display label: ${label}. Use the current part ID/BOM, not old dimension names in tracking IDs.`), "small-note"));
       }
-      description.append(paragraph(`この状態の一時移動 X/Y/Z：${(record.offsetMm || [0, 0, 0]).join(" / ")} mm。`, "small-note"));
+      description.append(paragraph(l(`この状態の一時移動 X/Y/Z：${(record.offsetMm || [0, 0, 0]).join(" / ")} mm。`,
+        `Temporary X/Y/Z offset in this state: ${(record.offsetMm || [0, 0, 0]).join(" / ")} mm.`), "small-note"));
     }
   }
 
@@ -356,7 +371,7 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
     const container = $("stage-parts");
     container.replaceChildren();
     if (!quantities.size) {
-      container.append(paragraph("この状態では部品を追加表示していません。", "small-note"));
+      container.append(paragraph(l("この状態では部品を追加表示していません。", "No parts are additionally displayed in this state."), "small-note"));
       return;
     }
     const table = document.createElement("table");
@@ -364,7 +379,7 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
     for (const text of ["部品ID・名称", "数量", "区分"]) {
       const cell = document.createElement("th");
       cell.scope = "col";
-      cell.textContent = text;
+      cell.textContent = tr(text);
       head.append(cell);
     }
     const body = table.createTBody();
@@ -423,18 +438,21 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
     $("step-range").value = String(stepIndex);
     $("step-previous").disabled = stepIndex === 0;
     $("step-next").disabled = stepIndex === guide.completeStep;
-    $("instance-count").textContent = `表示 ${visible.size} / ${guide.model.instanceCount} 点 · 試験片 ${couponParts.size} 種類`
-      + (inspection ? " · 部分組立の工具確認" : ` · 工程 ${stepIndex} / ${guide.completeStep}`);
+    $("instance-count").textContent = l(`表示 ${visible.size} / ${guide.model.instanceCount} 点 · 試験片 ${couponParts.size} 種類`,
+      `Displayed ${visible.size} / ${guide.model.instanceCount} instances · ${couponParts.size} coupon types`)
+      + (inspection ? l(" · 部分組立の工具確認", " · Partial-assembly tool check")
+        : l(` · 工程 ${stepIndex} / ${guide.completeStep}`, ` · Stage ${stepIndex} / ${guide.completeStep}`));
     $("instance-count").dataset.visible = String(visible.size);
     $("instance-count").dataset.coupons = String(couponParts.size);
     $("stage-title").textContent = inspection ? inspection.title
-      : `${step.id} · ${completeMode ? "全完成の参照表示 / " : ""}${step.title}`;
+      : `${step.id} · ${completeMode ? l("全完成の参照表示 / ", "Complete reference / ") : ""}${step.title}`;
     $("stage-operation").textContent = inspection ? inspection.operation : step.operation;
-    $("stage-tools").textContent = `工具：${inspection ? inspection.tool : step.tools}`;
+    $("stage-tools").textContent = l("工具：", "Tools: ") + (inspection ? inspection.tool : step.tools);
     $("stage-cautions").textContent = inspection ? inspection.cautions : step.cautions;
     $("temporary-note").textContent = hidden.size
-      ? `工具空間のため、原典で一時的に外す／まだ取り付けない ${hidden.size} 点を非表示にしています。最終工程で戻します。`
-      : (step.preview.length ? "仕分けの参照表示です。組付け済み数量ではありません。" : "");
+      ? l(`工具空間のため、原典で一時的に外す／まだ取り付けない ${hidden.size} 点を非表示にしています。最終工程で戻します。`,
+        `${hidden.size} source-specified removed/not-yet-installed parts are hidden for tool access. They return in the final stage.`)
+      : (step.preview.length ? l("仕分けの参照表示です。組付け済み数量ではありません。", "Sorting reference, not installed quantity.") : "");
     tableOf(inspection ? inspection.highlight : (step.add.length ? step.add : step.preview), couponParts);
     for (const option of $("part-select").options) {
       option.disabled = !!option.value && !records.some((r) => r.partId === option.value && isVisible(r));
@@ -476,8 +494,8 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
     $("r7-operation-range").value = String(operationIndex);
     $("r7-operation-previous").disabled = operationIndex === 0;
     $("r7-operation-next").disabled = operationIndex === stage.frames.length - 1;
-    $("instance-count").textContent = `本体の在庫 ${installed.length} / ${guide.model.instanceCount} 点 · `
-      + `表示中のシーン ${shown.length} 点 · 工程 ${stepIndex} / 12 · 操作 ${operationIndex + 1} / ${stage.frames.length}`;
+    $("instance-count").textContent = l(`本体の在庫 ${installed.length} / ${guide.model.instanceCount} 点 · 表示中のシーン ${shown.length} 点 · 工程 ${stepIndex} / 12 · 操作 ${operationIndex + 1} / ${stage.frames.length}`,
+      `Installed ${installed.length} / ${guide.model.instanceCount} instances · Scene ${shown.length} instances · Stage ${stepIndex} / 12 · Operation ${operationIndex + 1} / ${stage.frames.length}`);
     $("instance-count").dataset.visible = String(shown.length);
     $("instance-count").dataset.installed = String(installed.length);
     $("instance-count").dataset.inventory = frame.inventory;
@@ -485,27 +503,35 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
     $("instance-count").dataset.coupons = "0";
     $("stage-title").textContent = `${stage.id} · ${stage.title}`;
     $("stage-operation").textContent = frame.label;
-    const tools = { HEX_1P5: "1.5 mm六角キー", HEX_2P5: "2.5 mm六角キー", HEX_3: "3 mm六角キー",
-      WRENCH_4: "4 mmスパナ", WRENCH_5P5: "5.5 mmスパナ", WRENCH_7: "7 mmスパナ",
-      NUT_DRIVER_4P5: "ENGINEER DN-03（対辺4.5 mm）" };
-    $("stage-tools").textContent = `工具：${stage.tools.map((key) => tools[key] || key).join("、") || "この操作の指定なし"}。停止角 ${frame.stopCrankDeg}°。締付トルクは未指定です。`;
+    const tools = { HEX_1P5: l("1.5 mm六角キー", "1.5 mm hex key"), HEX_2P5: l("2.5 mm六角キー", "2.5 mm hex key"), HEX_3: l("3 mm六角キー", "3 mm hex key"),
+      WRENCH_4: l("4 mmスパナ", "4 mm wrench"), WRENCH_5P5: l("5.5 mmスパナ", "5.5 mm wrench"), WRENCH_7: l("7 mmスパナ", "7 mm wrench"),
+      NUT_DRIVER_4P5: l("ENGINEER DN-03（対辺4.5 mm）", "ENGINEER DN-03 (4.5 mm across flats)") };
+    const toolList = stage.tools.map((key) => tools[key] || key).join(l("、", ", ")) || l("この操作の指定なし", "none specified for this operation");
+    $("stage-tools").textContent = l(`工具：${toolList}。停止角 ${frame.stopCrankDeg}°。締付トルクは未指定です。`,
+      `Tools: ${toolList}. Stop angle ${frame.stopCrankDeg}°. Tightening torque is unspecified.`);
     $("stage-cautions").textContent = stage.cautions;
     if (stage.clockingAlreadyIncludedInCadTransforms) {
-      $("stage-cautions").textContent += " カラーの追加クロックはCADに反映済み："
-        + stage.collarClocking.collars.map((collar) => `${collar.name} ${collar.additionalClockingDeg.toFixed(2)}°`).join("、")
-        + "。表示側で二重回転しません。";
+      $("stage-cautions").textContent += l(" カラーの追加クロックはCADに反映済み：", " Additional collar clocking already in CAD: ")
+        + stage.collarClocking.collars.map((collar) => `${collar.name} ${collar.additionalClockingDeg.toFixed(2)}°`).join(l("、", ", "))
+        + l("。表示側で二重回転しません。", ". Not rotated twice in the display.");
     }
     const separate = ["preparation", "foot-bench"].includes(frame.kind) || frame.sceneKind === "isolated_preassembly";
     $("temporary-note").textContent = [
-      separate ? "別作業台の独立シーン。本体の装着在庫へ加算していません。" : "",
-      frame.removed.length ? `一時取外し ${frame.removed.length}点。下の在庫一覧から同じIDの再挿入を追えます。` : "",
-      stage.temporarilyHandSupported.length ? "入力軸を通すまで部分組立と仮置き品を手で支持します。自己保持の実証ではありません。" : "",
-      stage.prepareOnly.length ? "準備品は取り付け済みではありません。完成参照座標を使う準備表示です。" : "",
+      separate ? l("別作業台の独立シーン。本体の装着在庫へ加算していません。", "Independent workbench scene; not added to installed inventory.") : "",
+      frame.removed.length ? l(`一時取外し ${frame.removed.length}点。下の在庫一覧から同じIDの再挿入を追えます。`,
+        `${frame.removed.length} temporarily removed parts. Track same-ID reinsertion in the inventory below.`) : "",
+      stage.temporarilyHandSupported.length ? l("入力軸を通すまで部分組立と仮置き品を手で支持します。自己保持の実証ではありません。",
+        "Hand-support subassemblies and temporarily placed parts until the input shaft is inserted. Self-support is not demonstrated.") : "",
+      stage.prepareOnly.length ? l("準備品は取り付け済みではありません。完成参照座標を使う準備表示です。",
+        "Prepared parts are not installed. Preparation is displayed at final reference coordinates.") : "",
     ].filter(Boolean).join(" ");
     $("r7-path-note").textContent = frame.kind === "path-sample"
-      ? `原典の有限経路標本 ${frame.distanceMm} mm。${frame.movingIds.length}点を移動し、固定${frame.fixedIds.length}点を残しています。連続全経路・実公差・手指の保証ではありません。`
-      : "操作境界の在庫表示です。経路の標本検査がない中間状態を、物理的に組み付け可能という証明にはしていません。";
-    if (frame.clampReferenceContacts?.length) $("r7-path-note").textContent += " Dハブとの名目接触は開放／締結状態UNKNOWNの例外として記録されています。";
+      ? l(`原典の有限経路標本 ${frame.distanceMm} mm。${frame.movingIds.length}点を移動し、固定${frame.fixedIds.length}点を残しています。連続全経路・実公差・手指の保証ではありません。`,
+        `Finite source path sample: ${frame.distanceMm} mm. ${frame.movingIds.length} moving and ${frame.fixedIds.length} retained fixed parts. Not a guarantee of continuous paths, real tolerances or finger clearance.`)
+      : l("操作境界の在庫表示です。経路の標本検査がない中間状態を、物理的に組み付け可能という証明にはしていません。",
+        "Operation-boundary inventory display. Unsampled intermediate states are not proof of physically possible assembly.");
+    if (frame.clampReferenceContacts?.length) $("r7-path-note").textContent += l(" Dハブとの名目接触は開放／締結状態UNKNOWNの例外として記録されています。",
+      " Nominal D-hub contact is recorded as an exception with open/clamped state UNKNOWN.");
     $("r7-inventory").textContent = JSON.stringify(frameEvidence(state, guide), null, 2);
     tableOf(frame.focusIds, []);
     for (const option of $("part-select").options) {
@@ -515,7 +541,8 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
     drawModel();
     const arrow = frame.kind === "path-sample" ? {
       instance: frame.movingIds[0], direction: frame.pathDirection.map((v) => -v),
-      label: `${frame.pathId} · 標本列の挿入方向。寸法・固定部品は正規契約のまま。`,
+      label: l(`${frame.pathId} · 標本列の挿入方向。寸法・固定部品は正規契約のまま。`,
+        `${frame.pathId} · Insertion direction of recorded samples. Dimensions and fixed parts retain the canonical contract.`),
     } : null;
     arrowFor(arrow);
     if (fitCamera) fit(r7SceneBox(state), DIRECTIONS.isometric);
@@ -559,7 +586,7 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
       operationIndex = complete ? stage.frames.length - 1 : stage.defaultFrame ?? 0;
       $("r7-operation-select").replaceChildren(...stage.frames.map((frame, i) => new Option(`${i + 1} · ${frame.label}`, String(i))));
       $("r7-operation-range").max = String(stage.frames.length - 1);
-      $("r7-path-select").replaceChildren(new Option("操作境界を選択", ""));
+      $("r7-path-select").replaceChildren(new Option(tr("操作境界を選択"), ""));
       for (const id of new Set(stage.frames.map((frame) => frame.pathId).filter(Boolean))) {
         $("r7-path-select").add(new Option(id, id));
       }
@@ -674,7 +701,7 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
       || data.revision.canonicalCommit !== index.revision.canonicalCommit || data.revision.localOnly !== index.revision.localOnly) {
       throw new Error("異なる版の工程データを混在できません");
     }
-    const response = await fetch(assertLocalAsset(data.modelUrl));
+    const response = await fetch(asset(assertLocalAsset(data.modelUrl)));
     if (!response.ok) throw new Error(`GLB: HTTP ${response.status}`);
     let bytes = await response.arrayBuffer();
     if (data.model.compression === "gzip") {
@@ -704,7 +731,7 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
       if (!["assembly", "coupon"].includes(meta.role) || !data.parts[meta.partId]) throw new Error("GLBに未知の部品があります");
       const part = data.parts[meta.partId];
       if (object.geometry.getAttribute("position").count !== part.vertices || object.geometry.index.count !== part.triangles * 3) {
-        throw new Error(`CADメッシュの数量が一致しません：${meta.partId}`);
+        throw new Error(l(`CADメッシュの数量が一致しません：${meta.partId}`, `CAD mesh count mismatch: ${meta.partId}`));
       }
       geometries.add(object.geometry);
       for (const material of Array.isArray(object.material) ? object.material : [object.material]) materials.add(material);
@@ -718,7 +745,7 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
     for (const geometry of geometries) geometry.computeVertexNormals();
     for (const material of materials) material.dispose();
     records = loaded;
-    guide = data;
+    guide = localizeData(data);
     grid.visible = !r7;
     const [lo, hi] = guide.model.boundsMm;
     fullBox = new THREE.Box3(
@@ -732,24 +759,28 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
       $("step-select").add(option);
     });
     $("step-range").max = String(guide.completeStep);
-    $("part-select").replaceChildren(new Option("未選択", ""));
+    $("part-select").replaceChildren(new Option(tr("未選択"), ""));
     for (const [part, definition] of Object.entries(guide.parts).sort()) {
       $("part-select").add(new Option(`${part} · ${definition.name}（${CATEGORY[definition.category]}）`, part));
     }
-    $("access-select").replaceChildren(new Option("通常の組立表示", ""));
+    $("access-select").replaceChildren(new Option(tr("通常の組立表示"), ""));
     for (const inspection of guide.inspections || []) $("access-select").add(new Option(inspection.title, inspection.id));
     $("section-source").href = guide.links.section;
-    $("model-stats").textContent = `${design}案：正規 ${guide.model.instanceCount} 点・${Object.keys(guide.parts).length} 部品定義`
-      + (r7 ? "。試験片・組立台は別枠で歩行質量には含みません。" : "（本体数量0の試験片2種類を含む）。")
-      + `原CAD外接寸法 X/Y/Z：${hi.map((value, i) => (value - lo[i]).toFixed(2)).join(" / ")} mm。`;
+    $("model-stats").textContent = l(`${design}案：正規 ${guide.model.instanceCount} 点・${Object.keys(guide.parts).length} 部品定義`,
+      `Design ${design}: ${guide.model.instanceCount} canonical instances; ${Object.keys(guide.parts).length} part definitions`)
+      + (r7 ? l("。試験片・組立台は別枠で歩行質量には含みません。", ". Coupons/stand are separate and excluded from walking mass.")
+        : l("（本体数量0の試験片2種類を含む）。", " (including 2 coupon types with machine quantity 0)."))
+      + l("原CAD外接寸法 X/Y/Z：", " Original CAD bounds X/Y/Z: ") + `${hi.map((value, i) => (value - lo[i]).toFixed(2)).join(" / ")} mm.`;
     $("source-stats").textContent = `${guide.revision.label} · ${guide.revision.revisionId} · ${guide.revision.canonicalCommit}`;
-    canvas.setAttribute("aria-label", `Ver.3 ${design}案のCAD由来3D模型。${guide.model.instanceCount}点。矢印キーで回転、Shiftと矢印で移動。`);
+    canvas.setAttribute("aria-label", l(`Ver.3 ${design}案のCAD由来3D模型。${guide.model.instanceCount}点。矢印キーで回転、Shiftと矢印で移動。`,
+      `Ver.3 design ${design} CAD-derived 3D model. ${guide.model.instanceCount} instances. Arrows rotate; Shift and arrows pan.`));
     $("clip-section").checked = false;
     goStep(guide.completeStep, true);
     if (focus && (focusPredicates[focus] || (r7 && data.focusGroups?.[focus]))) {
       const predicate = r7 && data.focusGroups?.[focus] ? (r) => data.focusGroups[focus].includes(r.instanceId) : focusPredicates[focus];
       highlighted = new Set(records.filter((r) => r.role === "assembly" && predicate(r)).map((r) => r.instanceId));
-      $("stage-operation").textContent = `Matrixの対象「${focus}」を強調しています。組立工程を選ぶと、対応する工程表示へ切り替わります。`;
+      $("stage-operation").textContent = l(`Matrixの対象「${focus}」を強調しています。組立工程を選ぶと、対応する工程表示へ切り替わります。`,
+        `Highlighting matrix group “${focus}”. Select an assembly stage to switch to its stage display.`);
       drawModel();
     }
     renderer.setSize(host.clientWidth, host.clientHeight, false);

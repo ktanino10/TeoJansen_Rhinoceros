@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 1,
+  "revisionId": "r7-floor2-walking-localized-v1",
+  "baseManifest": {
+    "path": "docs/ver3/r7_walking_v1/walking-manifest.json",
+    "sha256": "ca5a031e8d8aa4b095edc234e7297b641816c8ddb63b6fb20309fe06b7bbc12e",
+    "bytes": 9230
+  },
+  "artifactCommit": "09d49e396ec0a4b527ff6545c955df91995fd197",
+  "inputCommit": "369434e046acc5cb8f9da0f9f338308d29938d1e",
+  "sourceHash": "5074478881da48673648df953a591c0924f3b1d8ed390fad3830d6a0057ed5e4",
+  "manufacturingRelease": false,
+  "physicalQualifiedCount": 0,
+  "defaults": {
+    "captionTrackMode": "disabled",
+    "inputRpm": 120,
+    "timeFactor": 16
+  },
+  "layout": {
+    "id": "single-language-compact-v1",
+    "referenceWidth": 960,
+    "referenceHeight": 720,
+    "scale": 1,
+    "meaning": "Compact single-language burned annotations. Oversized duplicate browser captions are optional, not shown by default; no blanket reduction of user accessibility caption settings.",
+    "fontSizesPx": {
+      "title": 18,
+      "subtitle": 13,
+      "conditions": 13,
+      "telemetry": 14,
+      "method": 12,
+      "caution": 12
+    },
+    "positionsPx": {
+      "title": [
+        24,
+        18
+      ],
+      "subtitle": [
+        24,
+        47
+      ],
+      "conditions": [
+        24,
+        70
+      ],
+      "telemetry": [
+        24,
+        646
+      ],
+      "method": [
+        24,
+        675
+      ],
+      "caution": [
+        24,
+        700
+      ]
+    },
+    "maximumTextWidthPx": 912,
+    "textColorRgb": [
+      15,
+      27,
+      21
+    ],
+    "safeAnnotationRegionsPx": [
+      [
+        16,
+        10,
+        944,
+        94
+      ],
+      [
+        16,
+        638,
+        944,
+        719
+      ]
+    ]
+  },
+  "designs": {
+    "A": {
+      "fps": 24,
+      "frameCount": 433,
+      "durationSeconds": 18.041666666666668,
+      "prescribedSeconds": 288,
+      "timeFactor": 16,
+      "cycles": 4,
+      "motionSha256": "a9f01a708e3a2a7ee348f78450feddad7c6e3a6821907a64c3bf56e7b81b906b",
+      "width": 960,
+      "height": 720,
+      "forwardMm": 369.52814357592473,
+      "locales": {
+        "ja": {
+          "video": {
+            "path": "docs/ver3/r7_walking_locales_v1/ja/walking_A.mp4",
+            "sha256": "bd262b9689edfcfef2c760c19949786dbe790a234d5e2e73ab5ba0d0a9df7930",
+            "bytes": 1483034
+          },
+          "poster": {
+            "path": "docs/ver3/r7_walking_locales_v1/ja/walking_A.png",
+            "sha256": "20dcc8d43690d8111d51d9b0b25329daf9d6d2e7a2333e022ea7f70795ff4d73",
+            "bytes": 900694,
+            "width": 960,
+            "height": 720
+          },
+          "captions": {
+            "path": "docs/ver3/r7_walking_locales_v1/ja/walking_A.vtt",
+            "sha256": "8baef205a92e7bace5cafe43584a709fddabb2e0db5cc40fa81d5b57c0d2ea01",
+            "bytes": 852,
+            "lang": "ja",
+            "label": "日本語のモデル説明",
+            "default": false
+          },
+          "title": "A案の連続歩行",
+          "description": "r7床是正版。規定入力120 rpm・時間圧縮16倍で4周期、計算上369.5 mm進みます。実機の歩行実証ではありません。"
+        },
+        "en": {
+          "video": {
+            "path": "docs/ver3/r7_walking_locales_v1/en/walking_A.mp4",
+            "sha256": "62dfb9a811dd567abb835c4edea03229b19ba0da7645cbaf534c79b7bede87ff",
+            "bytes": 1481081
+          },
+          "poster": {
+            "path": "docs/ver3/r7_walking_locales_v1/en/walking_A.png",
+            "sha256": "4def2f8a43e61331921a8cfcf1e11a7cd2f02e8098592bbb0e03038044a07458",
+            "bytes": 897816,
+            "width": 960,
+            "height": 720
+          },
+          "captions": {
+            "path": "docs/ver3/r7_walking_locales_v1/en/walking_A.vtt",
+            "sha256": "7e37f253f1b388c33c6827232717f9e539dbd530f35e7d9532e9b6c3aa4182ef",
+            "bytes": 854,
+            "lang": "en",
+            "label": "English model explanation",
+            "default": false
+          },
+          "title": "Design A: continuous walking",
+          "description": "Floor-corrected r7. Four cycles at a prescribed 120 rpm input and 16x time compression give 369.5 mm of calculated advance. This is not a physical walking test."
+        }
+      }
+    },
+    "B": {
+      "fps": 24,
+      "frameCount": 1537,
+      "durationSeconds": 64.04166666666667,
+      "prescribedSeconds": 1024,
+      "timeFactor": 16,
+      "cycles": 4,
+      "motionSha256": "481854ecae9ece8fab1000f7ecd0b0e0a6d6ecca29a0afceffccb032b8a23e56",
+      "width": 960,
+      "height": 720,
+      "forwardMm": 370.3353806951015,
+      "locales": {
+        "ja": {
+          "video": {
+            "path": "docs/ver3/r7_walking_locales_v1/ja/walking_B.mp4",
+            "sha256": "0faf5c7db9931fb9c394fd766df980873f04c97b1cf4fe2e51a409f22f7f5a2e",
+            "bytes": 4610861
+          },
+          "poster": {
+            "path": "docs/ver3/r7_walking_locales_v1/ja/walking_B.png",
+            "sha256": "abf26594c93877c57152de681ee0a3f3a554b549646bb210962c05d0ae586005",
+            "bytes": 907910,
+            "width": 960,
+            "height": 720
+          },
+          "captions": {
+            "path": "docs/ver3/r7_walking_locales_v1/ja/walking_B.vtt",
+            "sha256": "b351d923fc1ffa612bf7c69d80e79e97ce5f170694697c8d11c98e6ff8ec2665",
+            "bytes": 852,
+            "lang": "ja",
+            "label": "日本語のモデル説明",
+            "default": false
+          },
+          "title": "B案の連続歩行",
+          "description": "r7床是正版。規定入力120 rpm・時間圧縮16倍で4周期、計算上370.3 mm進みます。実機の歩行実証ではありません。"
+        },
+        "en": {
+          "video": {
+            "path": "docs/ver3/r7_walking_locales_v1/en/walking_B.mp4",
+            "sha256": "0cc3df5676f28844afa2a2413137a48c4ac6447ca49c5602865152b24a94994e",
+            "bytes": 4629013
+          },
+          "poster": {
+            "path": "docs/ver3/r7_walking_locales_v1/en/walking_B.png",
+            "sha256": "29c3c82259ec9b0c7f806665c1bc94c7b5fd628f9e037dfee09e2a0bfc9d6df6",
+            "bytes": 905301,
+            "width": 960,
+            "height": 720
+          },
+          "captions": {
+            "path": "docs/ver3/r7_walking_locales_v1/en/walking_B.vtt",
+            "sha256": "982382d9683c89ab8a3bdcfeb14905afcb3e3d08718ca89a2045cc337f209b33",
+            "bytes": 854,
+            "lang": "en",
+            "label": "English model explanation",
+            "default": false
+          },
+          "title": "Design B: continuous walking",
+          "description": "Floor-corrected r7. Four cycles at a prescribed 120 rpm input and 16x time compression give 370.3 mm of calculated advance. This is not a physical walking test."
+        }
+      }
+    },
+    "C": {
+      "fps": 24,
+      "frameCount": 469,
+      "durationSeconds": 19.541666666666668,
+      "prescribedSeconds": 312,
+      "timeFactor": 16,
+      "cycles": 4,
+      "motionSha256": "1bb4aef6a9d1d9fedb277a4924ef7d2bbc477bb36b05283226971a388e0c6e6d",
+      "width": 960,
+      "height": 720,
+      "forwardMm": 369.5525395849578,
+      "locales": {
+        "ja": {
+          "video": {
+            "path": "docs/ver3/r7_walking_locales_v1/ja/walking_C.mp4",
+            "sha256": "834d67cc39d85c8ccbe665b6c32192674211b81fc2ce531bff84cb7edfa8d4ac",
+            "bytes": 1642570
+          },
+          "poster": {
+            "path": "docs/ver3/r7_walking_locales_v1/ja/walking_C.png",
+            "sha256": "226740c5310ba91c2ac60b6a2d36c6196322cebeee15bfb12aaf80506187e858",
+            "bytes": 904179,
+            "width": 960,
+            "height": 720
+          },
+          "captions": {
+            "path": "docs/ver3/r7_walking_locales_v1/ja/walking_C.vtt",
+            "sha256": "61776e43dbe874d59c654d131637b5088e3266bf72d72881513f481320156a62",
+            "bytes": 852,
+            "lang": "ja",
+            "label": "日本語のモデル説明",
+            "default": false
+          },
+          "title": "C案の連続歩行",
+          "description": "r7床是正版。規定入力120 rpm・時間圧縮16倍で4周期、計算上369.6 mm進みます。実機の歩行実証ではありません。"
+        },
+        "en": {
+          "video": {
+            "path": "docs/ver3/r7_walking_locales_v1/en/walking_C.mp4",
+            "sha256": "c604ac567235a14bafc4d49b5febbf7ed97a86182c3f737274e50bb4c2fc3c90",
+            "bytes": 1655681
+          },
+          "poster": {
+            "path": "docs/ver3/r7_walking_locales_v1/en/walking_C.png",
+            "sha256": "199c98a313782cc95c7c8f7d8a3355a0c740158bf87f2fd5c935b1d91302fcb6",
+            "bytes": 900941,
+            "width": 960,
+            "height": 720
+          },
+          "captions": {
+            "path": "docs/ver3/r7_walking_locales_v1/en/walking_C.vtt",
+            "sha256": "06bcd37525a2048edbe8c592637de917e53033dda5441bfff1c472efd7467a63",
+            "bytes": 854,
+            "lang": "en",
+            "label": "English model explanation",
+            "default": false
+          },
+          "title": "Design C: continuous walking",
+          "description": "Floor-corrected r7. Four cycles at a prescribed 120 rpm input and 16x time compression give 369.6 mm of calculated advance. This is not a physical walking test."
+        }
+      }
+    }
+  },
+  "files": {
+    "site/r7_video_texts.json": {
+      "sha256": "17f86d27b1e28aacf280570006214e87f8624da23b11eb14b2155c03d2468de8",
+      "bytes": 4474
+    },
+    "site/r7_video_locales.py": {
+      "sha256": "04134fe08aeccbef03ebef91103b2ca3818e39e86bab7f1dcccf06311ff44abf",
+      "bytes": 23755
+    },
+    "docs/ver3/r7_walking_locales_v1/render_A.json": {
+      "sha256": "11a9317ab801678debbd60edbf36da8a96386c50fc7ace7ec7fbb1c943943d01",
+      "bytes": 4546
+    },
+    "docs/ver3/r7_walking_locales_v1/ja/walking_A.mp4": {
+      "sha256": "bd262b9689edfcfef2c760c19949786dbe790a234d5e2e73ab5ba0d0a9df7930",
+      "bytes": 1483034
+    },
+    "docs/ver3/r7_walking_locales_v1/ja/walking_A.png": {
+      "sha256": "20dcc8d43690d8111d51d9b0b25329daf9d6d2e7a2333e022ea7f70795ff4d73",
+      "bytes": 900694
+    },
+    "docs/ver3/r7_walking_locales_v1/ja/walking_A.vtt": {
+      "sha256": "8baef205a92e7bace5cafe43584a709fddabb2e0db5cc40fa81d5b57c0d2ea01",
+      "bytes": 852
+    },
+    "docs/ver3/r7_walking_locales_v1/en/walking_A.mp4": {
+      "sha256": "62dfb9a811dd567abb835c4edea03229b19ba0da7645cbaf534c79b7bede87ff",
+      "bytes": 1481081
+    },
+    "docs/ver3/r7_walking_locales_v1/en/walking_A.png": {
+      "sha256": "4def2f8a43e61331921a8cfcf1e11a7cd2f02e8098592bbb0e03038044a07458",
+      "bytes": 897816
+    },
+    "docs/ver3/r7_walking_locales_v1/en/walking_A.vtt": {
+      "sha256": "7e37f253f1b388c33c6827232717f9e539dbd530f35e7d9532e9b6c3aa4182ef",
+      "bytes": 854
+    },
+    "docs/ver3/r7_walking_locales_v1/render_B.json": {
+      "sha256": "b11f77534555030ef9b97945b120a9fc10b1eaf101886e9f8a168b848cfd2238",
+      "bytes": 4545
+    },
+    "docs/ver3/r7_walking_locales_v1/ja/walking_B.mp4": {
+      "sha256": "0faf5c7db9931fb9c394fd766df980873f04c97b1cf4fe2e51a409f22f7f5a2e",
+      "bytes": 4610861
+    },
+    "docs/ver3/r7_walking_locales_v1/ja/walking_B.png": {
+      "sha256": "abf26594c93877c57152de681ee0a3f3a554b549646bb210962c05d0ae586005",
+      "bytes": 907910
+    },
+    "docs/ver3/r7_walking_locales_v1/ja/walking_B.vtt": {
+      "sha256": "b351d923fc1ffa612bf7c69d80e79e97ce5f170694697c8d11c98e6ff8ec2665",
+      "bytes": 852
+    },
+    "docs/ver3/r7_walking_locales_v1/en/walking_B.mp4": {
+      "sha256": "0cc3df5676f28844afa2a2413137a48c4ac6447ca49c5602865152b24a94994e",
+      "bytes": 4629013
+    },
+    "docs/ver3/r7_walking_locales_v1/en/walking_B.png": {
+      "sha256": "29c3c82259ec9b0c7f806665c1bc94c7b5fd628f9e037dfee09e2a0bfc9d6df6",
+      "bytes": 905301
+    },
+    "docs/ver3/r7_walking_locales_v1/en/walking_B.vtt": {
+      "sha256": "982382d9683c89ab8a3bdcfeb14905afcb3e3d08718ca89a2045cc337f209b33",
+      "bytes": 854
+    },
+    "docs/ver3/r7_walking_locales_v1/render_C.json": {
+      "sha256": "96a16dc93eb489f6d81e4f9d0412b4fa7d30771082f66028b61fdda5af2dd8ea",
+      "bytes": 4535
+    },
+    "docs/ver3/r7_walking_locales_v1/ja/walking_C.mp4": {
+      "sha256": "834d67cc39d85c8ccbe665b6c32192674211b81fc2ce531bff84cb7edfa8d4ac",
+      "bytes": 1642570
+    },
+    "docs/ver3/r7_walking_locales_v1/ja/walking_C.png": {
+      "sha256": "226740c5310ba91c2ac60b6a2d36c6196322cebeee15bfb12aaf80506187e858",
+      "bytes": 904179
+    },
+    "docs/ver3/r7_walking_locales_v1/ja/walking_C.vtt": {
+      "sha256": "61776e43dbe874d59c654d131637b5088e3266bf72d72881513f481320156a62",
+      "bytes": 852
+    },
+    "docs/ver3/r7_walking_locales_v1/en/walking_C.mp4": {
+      "sha256": "c604ac567235a14bafc4d49b5febbf7ed97a86182c3f737274e50bb4c2fc3c90",
+      "bytes": 1655681
+    },
+    "docs/ver3/r7_walking_locales_v1/en/walking_C.png": {
+      "sha256": "199c98a313782cc95c7c8f7d8a3355a0c740158bf87f2fd5c935b1d91302fcb6",
+      "bytes": 900941
+    },
+    "docs/ver3/r7_walking_locales_v1/en/walking_C.vtt": {
+      "sha256": "06bcd37525a2048edbe8c592637de917e53033dda5441bfff1c472efd7467a63",
+      "bytes": 854
+    },
+    "docs/ver3/r7_walking_locales_v1/validation.json": {
+      "sha256": "364da667078d69d278af75899f3c79414f017b7adcb53911820c13724c860b3e",
+      "bytes": 9489
+    }
+  }
+}
