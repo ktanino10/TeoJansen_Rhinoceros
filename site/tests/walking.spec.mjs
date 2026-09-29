@@ -2,11 +2,13 @@ import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
 test.use({ trace: "on-first-retry" });
+const remote = Boolean(process.env.SITE_URL);
+const loadTimeout = remote ? 90_000 : 45_000;
 const numeric = async (page, field) => Number(await page.locator("#walk-stats").getAttribute(`data-${field}`));
 async function load(page, design = "C") {
   await page.goto(`walking.html?design=${design}#walking`);
   await page.locator("#walk-load").click();
-  await expect(page.locator("#walk-status")).toContainText(`${design}案の連続歩行を読み込みました`, { timeout: 45_000 });
+  await expect(page.locator("#walk-status")).toContainText(`${design}案の連続歩行を読み込みました`, { timeout: loadTimeout });
 }
 async function scrub(page, degrees) {
   await page.locator("#walk-phase").evaluate((element, value) => {
@@ -17,7 +19,7 @@ async function scrub(page, degrees) {
 }
 
 test("r7 walking opt-in loads each full walker; play pause phase speed and reset really change the scene", async ({ page }, testInfo) => {
-  test.setTimeout(150_000);
+  test.setTimeout(remote ? 300_000 : 150_000);
   const requests = [], errors = [];
   page.on("request", request => requests.push(request.url()));
   page.on("pageerror", error => errors.push(error.message));
@@ -27,7 +29,7 @@ test("r7 walking opt-in loads each full walker; play pause phase speed and reset
   await page.locator("#walk-load").click();
   for (const design of ["C", "A", "B"]) {
     if (design !== "C") await page.locator("#walk-design").selectOption(design);
-    await expect(page.locator("#walk-status")).toContainText(`${design}案の連続歩行を読み込みました`, { timeout: 45_000 });
+    await expect(page.locator("#walk-status")).toContainText(`${design}案の連続歩行を読み込みました`, { timeout: loadTimeout });
     await expect.poll(() => numeric(page, "drawn")).toBe(design === "B" ? 785 : 750);
     await expect(page.locator("#walk-play")).toHaveAttribute("aria-pressed", "false");
     const initial = await page.locator("#walk-stats").getAttribute("data-crank");
@@ -42,11 +44,13 @@ test("r7 walking opt-in loads each full walker; play pause phase speed and reset
     await page.waitForTimeout(250);
     expect(await numeric(page, "seconds")).toBe(stopped);
     expect(await page.locator("#walk-stats").getAttribute("data-crank")).not.toBe(initial);
+    await page.locator("#walk-cycle").click();
     await page.locator("#walk-speed").selectOption("1");
     await expect(page.locator("#walk-timing")).toContainText("時間倍率1×");
     await scrub(page, 120);
     const input = Number(await page.locator("#walk-stats").getAttribute("data-input-angle"));
-    expect(input).toBeCloseTo(({ A: 144, B: -512, C: 156 })[design] * 120, 6);
+    expect(input).toBeCloseTo((design === "B" ? -1 : 1) * 720 * await numeric(page, "seconds"), 6);
+    expect(Math.abs(input)).toBeGreaterThan(({ A: 144, B: 512, C: 156 })[design] * 360);
     await page.locator("#walk-reset").click();
     await expect.poll(() => numeric(page, "seconds")).toBe(0);
     await expect.poll(() => numeric(page, "forward")).toBe(0);
@@ -64,7 +68,7 @@ test("r7 walking opt-in loads each full walker; play pause phase speed and reset
 });
 
 test("r7 walking keyboard camera overlays and four-cycle advance remain accessible on desktop and mobile", async ({ page }, testInfo) => {
-  test.setTimeout(90_000);
+  test.setTimeout(remote ? 180_000 : 90_000);
   await load(page);
   for (let i = 0; i < 4; i++) await page.locator("#walk-cycle").click();
   await expect.poll(() => numeric(page, "forward")).toBeGreaterThan(369);

@@ -10,8 +10,8 @@ export default defineConfig({
   workers: 1,
   retries: process.env.CI ? 1 : 0,
   reporter: "list",
-  timeout: 45_000,
-  expect: { timeout: 12_000 },
+  timeout: remoteURL ? 120_000 : 45_000,
+  expect: { timeout: remoteURL ? 60_000 : 12_000 },
   use: {
     baseURL,
     browserName: "chromium",
