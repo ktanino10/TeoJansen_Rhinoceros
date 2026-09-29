@@ -1,0 +1,17 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:16.010
+Design B: continuous walking calculation using floor-corrected r7 CAD, not physical footage.
+Input is prescribed at 120 rpm and shown with 16x time compression.
+
+00:00:16.010 --> 00:00:32.021
+The actual gears, crank and links move together as the six legs alternate support and recovery.
+At the same input speed, design B's 512:1 reduction makes it slower than A and C.
+
+00:00:32.021 --> 00:00:48.031
+Airborne rockers use an assumed neutral-return display rule. All twelve procedural springs retain their seats, wire diameter and turn count.
+The original analysis's independent rocker angles remain null.
+
+00:00:48.031 --> 00:01:04.042
+Four cycles give 370.3 mm of calculated advance, not a measured distance.
+Wind-driven self-start and physical 30 cm walking remain unverified. Qualified physical prototypes: zero.
