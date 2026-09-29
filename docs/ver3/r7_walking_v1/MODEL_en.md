@@ -4,6 +4,8 @@
 
 > Presentation-only translation of the unchanged Japanese source. Source SHA256: `6bf9c2c8fdf7890d9792d0bbab41c10c56d88ecbcd2977cc02bb76d606f4a1a5`. Numbers, part IDs, equations, code and qualification limits are retained; this is not a new engineering revision.
 
+> This frozen base-model record describes its original annotation pipeline and media budget. The separate [Japanese/English media revision](../r7_walking_locales_v1/manifest.json) reuses the same motion and timing. See the [current website guide](../../USER_GUIDE_en.md); historical pipeline/budget statements below are not silently rewritten.
+
 **Calculated visualization, not a physical walking demonstration.** Retains `manufacturingRelease=false`, physically qualified count 0,
 and UNKNOWN physical self-starting/30 cm walking. Not CFD or impact dynamics predicting rpm from wind speed.
 

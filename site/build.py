@@ -23,7 +23,7 @@ DEFAULT_OUTPUT = SITE / "dist" / SLUG
 MAX_BUNDLE_BYTES = 76_000_000
 MAX_STATIC_BYTES = 12_000_000
 MAX_R7_BYTES = 30_000_000
-MAX_WALKING_BYTES = 16_000_000
+MAX_WALKING_BYTES = 18_000_000
 HISTORY_PAGES = ("index.html", "production.html", "comparison.html", "viewer.html", "calculations.html")
 PAGES = (*HISTORY_PAGES, "r7.html", "walking.html")
 IMAGES = {
@@ -326,7 +326,7 @@ def validate(output: Path, manifest: dict) -> None:
     display = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("loading") == "on-demand" and entry.get("bundle_group") not in {"r7", "walking"})
     if (total > MAX_BUNDLE_BYTES or total - display - r7 - walking > MAX_STATIC_BYTES
             or display > 18_000_000 or r7 > MAX_R7_BYTES or walking > MAX_WALKING_BYTES):
-        raise ValueError("Public bundle exceeded 12 MB history static / 18 MB history 3D / 30 MB r7 / 16 MB opt-in walking")
+        raise ValueError("Public bundle exceeded 12 MB history static / 18 MB history 3D / 30 MB r7 / 18 MB opt-in bilingual walking")
     for name in manifest["assets"]:
         path = output / name
         if path.suffix in {".webp", ".png"}:

@@ -87,7 +87,7 @@ class PublicBuildTests(unittest.TestCase):
         self.assertLess(total - opt_in - r7 - walking, 12_000_000)
         self.assertLess(opt_in, 18_000_000)
         self.assertLess(r7, 30_000_000)
-        self.assertLess(walking, 16_000_000)
+        self.assertLess(walking, 18_000_000)
         self.assertEqual(len([a for a in self.manifest["assets"].values() if a.get("bundle_group") not in {"r7", "walking", "localization"}]), 83)
         pages = ["index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html"]
         self.assertEqual(self.manifest["pages"], pages + ["en/" + page for page in pages])

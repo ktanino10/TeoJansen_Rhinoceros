@@ -41,7 +41,7 @@ npm test
 - 写真／CG／スライサー形状画像は明示した48画像だけをWebPへ縮小。原写真の画面・周囲の私物が入る範囲を表示用にトリミングし、EXIF・XMP・ICCなどを派生表示画像から除去します。原本は変更しません。顔の写る着用写真は派生に含めません。
 - 既存のMP4五本と、操作するまで読まないGIF一本を選別コピーします。初期表示で動画/GIF/YouTube/外部フォントは取得しません。
 - CAD、STL、BOM、文書等は確定コミットを参照するGitHubリンクです。全リポジトリや原データ162 MBをPagesへ配信しません。
-- `site/dist/TeoJansen_Rhinoceros/` のみを配信します。従来の静的資産12 MB／操作時3D18 MB、r7比較・組立30 MBの枠を維持し、新しい操作時歩行JSON・エンジン・3本のMP4等を別枠16 MB（全体76 MB以内）で選別配信します。同じr7 GLBを再利用し重複コピーしません。全CAD／STL／Blenderや一時フレームはPagesへコピーせず、GitHubの確定版へリンクします。ページ間アンカー、許可ファイル、メタデータを検証し、`build-manifest.json` に各版の出典・ハッシュを保存。非選択モデルや動画は初期ロードしません。
+- `site/dist/TeoJansen_Rhinoceros/` のみを配信します。従来の静的資産12 MB／操作時3D18 MB、r7比較・組立30 MBと全体76 MBの上限を維持します。日英6本のMP4を含む歩行枠だけ、実測約17.33 MBに対して18 MBへ再配分しました（以前の単一言語枠は16 MB）。全体の実測は約72.04 MBです。同じr7 GLB・運動JSONを再利用し重複コピーしません。全CAD／STL／Blenderや一時フレームはPagesへコピーせず、GitHubの確定版へリンクします。ページ間アンカー、許可ファイル、メタデータを検証し、`build-manifest.json` に各版の出典・ハッシュを保存。非選択モデルや動画は初期ロードしません。
 - CIのPR実行は生成と実ブラウザー確認のみ。`main`へのpushまたは`main`の手動実行は、同じ検証に合格した静的出力だけを公式Pages Actionsで配信します。deploy jobのみ`pages:write`/`id-token:write`を持ちます。
 
 公開後は `SITE_URL` にデプロイが返した実URLを指定して `npm --prefix site test` を実行できます。公開URLのGET、主要画像・MP4、GitHub側の代表ダウンロードも確認します。CI成功だけを実配信の確認として扱いません。
@@ -173,3 +173,9 @@ CIはそこから表示派生を作るだけでBlenderや物理計算を再実�
 新MP4の実デコード・フレーム数・字幕・媒体メタデータを結び付けます。
 Playwrightは実際の3DのA/B/C切替・再生／停止・位相・速度・リセット、desktop／375px、
 reduced-motion、キーボード、エラー、動画、JavaScriptなしを確認します。
+
+### 日英の歩行注記と任意字幕
+
+`r7_walking_locales_v1/manifest.json` は既存の歩行manifestと同じnative・motion・評価器のhash、433/1537/469フレーム、24 fps、960×720、120 rpm／16×／4周期を保持します。新規の `r7_video_locales.py`／`r7_video_texts.json` は同じclean frameから日英を合成し、注記域外0画素変更と全MP4デコードを記録します。既存pinned生成器とnativeは変更しません。公開ビルドは媒体24ファイルのallowlist・hash・字幕言語・同一時刻・画質記録を照合し、公開するMP4は日英各3本、posterはメタデータ除去済みWebPへ変換します。古い日本語歩行MP4や非公開のclean masterを重複配信しません。
+
+過大な表示の主因だった、焼込み注記と既定VTTの二重表示を解消しました。歩行VTTは正しい言語・ラベルで任意ON、`default`なしです。JavaScriptで明示的なCC選択をOFFへ戻したり、`::cue`を一律縮小したりしません。焼込みは960px基準で18/13/14/12pxの単一言語注記で、25%の機械的縮小ではなくC試写の可読性を優先した値です。小さい埋込動画だけで全注記が読めるとはせず、全画面・任意CC・近接する同言語本文を残しています。`localization.py` はこの検証済み媒体manifestのタイトル・説明・字幕ラベルも使い、言語別の実MP4／poster／VTTへ接続します。

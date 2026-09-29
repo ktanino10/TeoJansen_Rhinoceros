@@ -9956,16 +9956,16 @@
       "walking.html"
     ]
   },
-  "fd472dcf1b010665": {
-    "source": "{0}案の連続歩行 · {1}:{2}",
-    "example": "C案の連続歩行 · 156:1",
+  "af268fa3880e9fb9": {
+    "source": "注記はページと同じ言語です。CCは任意に表示できます。小さい画面では全画面表示・CC・この本文をご利用ください。",
+    "example": "注記はページと同じ言語です。CCは任意に表示できます。小さい画面では全画面表示・CC・この本文をご利用ください。",
     "origins": [
       "walking.html"
     ]
   },
-  "5a4da43b5f94f2b9": {
-    "source": "{0}案の連続歩行",
-    "example": "C案の連続歩行",
+  "fd472dcf1b010665": {
+    "source": "{0}案の連続歩行 · {1}:{2}",
+    "example": "C案の連続歩行 · 156:1",
     "origins": [
       "walking.html"
     ]
@@ -10134,6 +10134,13 @@
   "655f4a269c278a93": {
     "source": "媒体・ソースのハッシュ",
     "example": "媒体・ソースのハッシュ",
+    "origins": [
+      "walking.html"
+    ]
+  },
+  "ca4b6918f33100c5": {
+    "source": "日英動画・字幕の来歴",
+    "example": "日英動画・字幕の来歴",
     "origins": [
       "walking.html"
     ]

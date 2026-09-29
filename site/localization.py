@@ -22,7 +22,7 @@ REPOSITORY = "https://github.com/ktanino10/TeoJansen_Rhinoceros"
 JAPANESE = re.compile(r"[ぁ-ヿ㐀-鿿]")
 VALUES = re.compile(r"`[^`]+`|https?://[^\s<>)]*|(?<![A-Za-z_])[ABC](?![A-Za-z_])|[+−-]?\d+(?:[.,]\d+)*")
 SLOTS = re.compile(r"\{(\d+)\}")
-TEXT_ATTRIBUTES = {"alt", "title", "aria-label", "data-label", "data-title", "placeholder"}
+TEXT_ATTRIBUTES = {"alt", "title", "aria-label", "data-label", "data-title", "placeholder", "label"}
 DOCUMENTS = (
     "docs/ver3/DESIGN_ja.md",
     "docs/ver3/ASSEMBLY_ja.md",
@@ -157,6 +157,19 @@ class LocalizedHTML(HTMLParser):
         super().__init__(convert_charrefs=False)
         self.catalog, self.page, self.ref = catalog, page, ref
         self.output = []
+        media = json.loads((ROOT / "docs/ver3/r7_walking_locales_v1/manifest.json").read_text())
+        self.media_copy = {}
+        for entry in media["designs"].values():
+            ja, en = entry["locales"]["ja"], entry["locales"]["en"]
+            for japanese, english in ((ja["title"], en["title"]), (ja["description"], en["description"]),
+                                      (ja["captions"]["label"], en["captions"]["label"])):
+                self.media_copy[" ".join(japanese.split())] = english
+
+    def translate(self, value):
+        paired = self.media_copy.get(" ".join(value.split()))
+        if paired is not None:
+            return value if self.catalog.collecting else paired
+        return self.catalog.text(value, self.page)
 
     def handle_starttag(self, tag, attrs):
         if tag in {"a", "strong", "em", "code", "small", "span"}:
@@ -167,8 +180,6 @@ class LocalizedHTML(HTMLParser):
             if value is None:
                 result.append(key)
                 continue
-            if key in TEXT_ATTRIBUTES or (tag == "meta" and key == "content" and JAPANESE.search(value)):
-                value = self.catalog.text(value, self.page)
             if tag == "html" and key == "lang":
                 value = "en"
             if tag == "track" and dict(attrs).get("src", "").startswith(("assets/r7-assembly-", "assets/r7-disassembly-")):
@@ -178,6 +189,12 @@ class LocalizedHTML(HTMLParser):
                     value = "en"
                 elif key == "label":
                     value = "English stage descriptions"
+            if tag == "track" and dict(attrs).get("src", "").startswith("assets/r7-walking-") and key == "srclang":
+                value = "en"
+            if key in TEXT_ATTRIBUTES or (tag == "meta" and key == "content" and JAPANESE.search(value)):
+                value = self.translate(value)
+            if key in {"href", "src", "poster"} and re.fullmatch(r"assets/r7-walking-[ABC]\.(mp4|webp|vtt)", value):
+                value = re.sub(r"(\.[a-z0-9]+)$", r"-en\1", value)
             if key == "href" and not original_language:
                 value = translated_link(value, self.ref)
             if key == "href" and value.startswith("assets/"):
@@ -198,7 +215,7 @@ class LocalizedHTML(HTMLParser):
             self.output.append(" ")
 
     def handle_data(self, data):
-        translated = self.catalog.text(data, self.page)
+        translated = self.translate(data)
         if not self.catalog.collecting:
             translated = translated.translate(str.maketrans({"。": ".", "／": "/", "（": "(", "）": ")"}))
         self.output.append(escape(translated, quote=False))
@@ -376,7 +393,12 @@ def document_outputs() -> dict[str, str]:
         first, rest = body.split("\n", 1)
         text = (first + f"\n\n[日本語 (original)]({original}) | **English** | [Document languages]({guide})\n\n"
                 f"> Presentation-only translation of the unchanged Japanese source. Source SHA256: `{source_hash}`. "
-                "Numbers, part IDs, equations, code and qualification limits are retained; this is not a new engineering revision.\n\n" + rest.lstrip())
+                "Numbers, part IDs, equations, code and qualification limits are retained; this is not a new engineering revision.\n\n")
+        if source == "docs/ver3/r7_walking_v1/MODEL_ja.md":
+            text += ("> This frozen base-model record describes its original annotation pipeline and media budget. "
+                     "The separate [Japanese/English media revision](../r7_walking_locales_v1/manifest.json) reuses the same motion and timing. "
+                     "See the [current website guide](../../USER_GUIDE_en.md); historical pipeline/budget statements below are not silently rewritten.\n\n")
+        text += rest.lstrip()
         outputs[target] = text
         entries.append({"source": source, "sourceLanguage": "ja", "sourceSha256": source_hash,
                         "target": target, "targetLanguage": "en", "targetSha256": digest(text.encode()),
@@ -420,6 +442,11 @@ def document_outputs() -> dict[str, str]:
                               for path in archives],
         "sharedResources": ["Native CAD", "STEP", "STL", "GLB", "math JSON/CSV", "original photographs", "English-labeled analysis SVG"],
         "sharedDataNotice": "Machine-readable numerical sources are shared; original source annotations can be Japanese. Use paired prose for interpretation.",
+        "walkingMedia": {
+            "manifest": "docs/ver3/r7_walking_locales_v1/manifest.json",
+            "sha256": digest((ROOT / "docs/ver3/r7_walking_locales_v1/manifest.json").read_bytes()),
+            "languages": ["ja", "en"], "coverage": "separate burned notes, posters and optional captions; same source motion and timing",
+        },
     }
     outputs["docs/translation-manifest.json"] = json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
     for locale in ("ja", "en"):

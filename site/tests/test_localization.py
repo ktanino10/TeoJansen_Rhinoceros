@@ -15,6 +15,8 @@ OUTPUT = SITE / "dist/TeoJansen_Rhinoceros"
 sys.path.insert(0, str(SITE))
 from localization import Catalog, DOCUMENTS, CSV_DOCUMENTS, CAPTIONS, document_outputs, english_path, SLOTS
 from test_build import Tags
+from r7_data import Snapshot
+from r7_walking import validate_localized_media
 
 
 class Page(HTMLParser):
@@ -141,6 +143,57 @@ class LocalizationTests(unittest.TestCase):
             self.assertEqual(track["srclang"], "en")
             self.assertIn("English", track["label"])
             self.assertTrue((OUTPUT / "en" / track["src"]).resolve().is_file())
+
+    def test_bilingual_movies_share_original_motion_timing_and_explicit_provenance(self):
+        base = json.loads((ROOT / "docs/ver3/r7_walking_v1/walking-manifest.json").read_text())
+        media = json.loads((ROOT / "docs/ver3/r7_walking_locales_v1/manifest.json").read_text())
+        self.assertIs(validate_localized_media(media, base, Snapshot(use_git=False)), media)
+        manifest = json.loads((OUTPUT / "build-manifest.json").read_text())
+        movies = {name: record for name, record in manifest["assets"].items()
+                  if record.get("bundle_group") == "walking" and name.endswith(".mp4")}
+        self.assertEqual(len(movies), 6)
+        self.assertEqual(sum(item["bytes"] for item in movies.values()), 15_502_240)
+        for locale, prefix in (("ja", ""), ("en", "en/")):
+            tags = Tags()
+            tags.feed((OUTPUT / prefix / "walking.html").read_text())
+            videos = [attrs for tag, attrs in tags.items if tag == "video"]
+            tracks = [attrs for tag, attrs in tags.items if tag == "track"]
+            self.assertEqual(len(videos), 3)
+            self.assertEqual(len(tracks), 3)
+            for video, track in zip(videos, tracks):
+                design = video["id"][-1]
+                variant = media["designs"][design]["locales"][locale]
+                suffix = "" if locale == "ja" else "-en"
+                name = f"assets/r7-walking-{design}{suffix}.mp4"
+                self.assertEqual(movies[name]["source"], variant["video"]["path"])
+                self.assertEqual(movies[name]["sha256"], variant["video"]["sha256"])
+                self.assertEqual(movies[name]["locale"], locale)
+                self.assertEqual(video["aria-label"], variant["title"])
+                self.assertEqual(video["title"], variant["description"])
+                self.assertEqual(track["srclang"], locale)
+                self.assertEqual(track["label"], variant["captions"]["label"])
+                self.assertNotIn("default", track)
+                self.assertEqual(video["preload"], "none")
+                self.assertNotIn("autoplay", video)
+        self.assertLess(sum(a["bytes"] for a in manifest["assets"].values() if a.get("bundle_group") == "walking"), 18_000_000)
+        self.assertLess(sum(path.stat().st_size for path in OUTPUT.rglob("*") if path.is_file()), 76_000_000)
+
+    def test_localized_movie_contract_rejects_default_captions_changed_timing_and_missing_language(self):
+        base = json.loads((ROOT / "docs/ver3/r7_walking_v1/walking-manifest.json").read_text())
+        original = json.loads((ROOT / "docs/ver3/r7_walking_locales_v1/manifest.json").read_text())
+        source = Snapshot(use_git=False)
+        for mutate in (
+            lambda data: data["defaults"].update(captionTrackMode="showing"),
+            lambda data: data["designs"]["A"].update(frameCount=432),
+            lambda data: data["designs"]["B"]["locales"].pop("en"),
+            lambda data: data["designs"]["C"]["locales"]["en"]["captions"].update(default=True),
+            lambda data: data["files"].update({"private-master.mp4": {"bytes": 1, "sha256": "0" * 64}}),
+            lambda data: data.update(manufacturingRelease=True),
+        ):
+            modified = copy.deepcopy(original)
+            mutate(modified)
+            with self.assertRaises(ValueError):
+                validate_localized_media(modified, base, source)
 
 
 if __name__ == "__main__":

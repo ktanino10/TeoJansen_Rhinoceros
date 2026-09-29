@@ -35,6 +35,7 @@ for (const button of document.querySelectorAll(".video-toggle")) {
     button.textContent = localText(`${label}を${video.paused ? "再生" : "一時停止"}`,
       `${video.paused ? "Play" : "Pause"} ${label}`);
   };
+  update();
   video.addEventListener("play", update);
   video.addEventListener("pause", update);
   video.addEventListener("ended", update);

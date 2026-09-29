@@ -193,7 +193,7 @@
       "sourceSha256": "6bf9c2c8fdf7890d9792d0bbab41c10c56d88ecbcd2977cc02bb76d606f4a1a5",
       "target": "docs/ver3/r7_walking_v1/MODEL_en.md",
       "targetLanguage": "en",
-      "targetSha256": "40baca317f1e895dbf0a9e228d2020cf97ea81fd79889cdd26593445f754c70c",
+      "targetSha256": "9664ec8227bf65f81c58454ef728f397ba57028905de17df73464c774772b2cc",
       "coverage": "full-source-prose; equations/code/data preserved"
     },
     {
@@ -424,10 +424,10 @@
     {
       "source": "docs/USER_GUIDE_ja.md",
       "sourceLanguage": "ja",
-      "sourceSha256": "5326658ad2b53bfe0258cada1a9366bb5385f2056dbf1d2cd197e6d53af1ae96",
+      "sourceSha256": "551a95c9aeaf90a776ab01739265063337cbdb9c6b03a0b16ff3911de5455c7f",
       "target": "docs/USER_GUIDE_en.md",
       "targetLanguage": "en",
-      "targetSha256": "265e79843ea6b3421b4f2c4d7fc39e8974265870f80fa3df17776eca2e7a3b70",
+      "targetSha256": "fd5cc6411bf09de8768f8f016c19a7e86eadc74d27139f24b1b3e03875bb867b",
       "coverage": "website and document use; shared-resource legend"
     }
   ],
@@ -484,5 +484,14 @@
     "original photographs",
     "English-labeled analysis SVG"
   ],
-  "sharedDataNotice": "Machine-readable numerical sources are shared; original source annotations can be Japanese. Use paired prose for interpretation."
+  "sharedDataNotice": "Machine-readable numerical sources are shared; original source annotations can be Japanese. Use paired prose for interpretation.",
+  "walkingMedia": {
+    "manifest": "docs/ver3/r7_walking_locales_v1/manifest.json",
+    "sha256": "18629d44ad607f1f0acdba7909033eab450df414ad2c3a90c67f9ed0c24cb22b",
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "coverage": "separate burned notes, posters and optional captions; same source motion and timing"
+  }
 }

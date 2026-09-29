@@ -1370,7 +1370,6 @@
   "4f58f5f4415b3405": "Walking videos from the same calculated model",
   "c56b08ad4cc7f43e": "New renderings use the same floor-corrected geometry and motion data as {0}D. Every design uses {1} rpm input and {2}× time compression. With {4}:{5} reduction, {3} advances more slowly than {6}/{7} at the same factor. About {9} cm over {8} cycles is calculated, not measured.",
   "fd472dcf1b010665": "Design {0} continuous walking · {1}:{2}",
-  "5a4da43b5f94f2b9": "Design {0} continuous walking",
   "52d055cc877fa4f2": "Use the MP{0} download.",
   "2bfa8bfc38ba9fd9": "Play design {0} continuous walking",
   "7f71699cfb3056c0": "Prescribed {0} rpm input / {1}× time compression / physically unverified.",
@@ -1561,5 +1560,7 @@
   "cb6d2769ea130a38": "Unknown walking instance",
   "ab1f4c9cb908e74d": "Walking-part quantity mismatch",
   "4a676cca120c0fc0": "Frozen commit referenced by this site:",
-  "a464e2578d5ce42d": "Referenced frozen commit:"
+  "a464e2578d5ce42d": "Referenced frozen commit:",
+  "af268fa3880e9fb9": "On-screen notes match the page language. Captions (CC) are optional. On small screens use fullscreen, captions or the accompanying page text.",
+  "ca4b6918f33100c5": "Japanese/English video and caption provenance"
 }

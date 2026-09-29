@@ -117,3 +117,52 @@ test("localization English loading failures and JavaScript-free fallback stay En
   await englishSurface(noScript);
   await context.close();
 });
+
+for (const locale of ["ja", "en"]) {
+  test(`localization ${locale} walking videos: matching media, optional CC and unchanged timing`, async ({ page, request }, testInfo) => {
+    const requests = [];
+    const errors = [];
+    page.on("request", request => requests.push(request.url()));
+    page.on("pageerror", error => errors.push(error.message));
+    const media = await (await request.get("assets/r7-walking-locales-manifest.json")).json();
+    await page.goto(`${locale === "en" ? "en/" : ""}walking.html#walking-films`);
+    expect(requests.filter(url => url.endsWith(".mp4"))).toEqual([]);
+    for (const design of ["C", "A", "B"]) {
+      const expected = media.designs[design];
+      const variant = expected.locales[locale];
+      const video = page.locator(`#r7-walking-${design}`);
+      const track = video.locator("track");
+      await expect(video).toHaveAttribute("aria-label", variant.title);
+      await expect(video).toHaveAttribute("title", variant.description);
+      await expect(track).toHaveAttribute("srclang", locale);
+      await expect(track).toHaveAttribute("label", variant.captions.label);
+      expect(await track.getAttribute("default")).toBeNull();
+      const suffix = locale === "en" ? "-en" : "";
+      await expect(video.locator("source")).toHaveAttribute("src", new RegExp(`r7-walking-${design}${suffix}\\.mp4$`));
+      expect(await video.evaluate(v => v.textTracks[0].mode)).toBe("disabled");
+      const play = locale === "en" ? `Play ${variant.title}` : `${variant.title}を再生`;
+      const pause = locale === "en" ? `Pause ${variant.title}` : `${variant.title}を一時停止`;
+      await page.getByRole("button", { name: play, exact: true }).click();
+      await expect.poll(() => video.evaluate(v => !v.paused && v.currentTime > .05)).toBe(true);
+      expect(await video.evaluate(v => [v.videoWidth, v.videoHeight])).toEqual([960, 720]);
+      const box = await video.boundingBox();
+      expect(box.width / box.height).toBeCloseTo(4 / 3, 2);
+      expect(await video.evaluate(v => v.duration)).toBeCloseTo(expected.durationSeconds, 3);
+      await page.getByRole("button", { name: pause, exact: true }).click();
+      await page.locator(`#walking-film-${design}`).screenshot({
+        path: testInfo.outputPath(`${locale}-walking-${design}-single-overlay.png`),
+        style: ".site-header,.skip-link{visibility:hidden}",
+      });
+      await video.evaluate(v => { v.textTracks[0].mode = "showing"; });
+      await expect.poll(() => video.evaluate(v => v.textTracks[0].cues?.length || 0)).toBe(4);
+      const cues = await video.evaluate(v => [...v.textTracks[0].cues].map(cue => cue.text).join("\n"));
+      expect(cues).toContain("120 rpm");
+      if (locale === "en") expect(cues).not.toMatch(japanese);
+      else expect(cues).toContain("実機");
+      await page.getByRole("button", { name: play, exact: true }).click();
+      await page.getByRole("button", { name: pause, exact: true }).click();
+      expect(await video.evaluate(v => v.textTracks[0].mode)).toBe("showing");
+    }
+    expect(errors).toEqual([]);
+  });
+}

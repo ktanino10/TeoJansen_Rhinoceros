@@ -14,7 +14,7 @@
 .walk-readouts dd { margin: .25rem 0 0; font-weight: 700; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 #walk-workspace details p { overflow-wrap: anywhere; }
 .walk-film { margin-block: 2rem; }
-.walk-film video { display: block; width: 100%; height: auto; max-height: 76vh; background: #182725; }
+.walk-film video { display: block; width: 100%; max-width: calc(76vh * 4 / 3); aspect-ratio: 4 / 3; height: auto; max-height: 76vh; margin-inline: auto; background: #182725; }
 .walk-validation { padding: 1rem; background: #eef3e7; overflow-wrap: anywhere; }
 @media (max-width: 620px) {
   .walk-canvas { height: 460px; min-height: 340px; }

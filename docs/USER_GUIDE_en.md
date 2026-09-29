@@ -26,6 +26,8 @@ Videos do not autoplay. Japanese walking pages use Japanese on-screen notes; Eng
 
 All walking videos use **prescribed 120 rpm input, 16× time compression and 4 cycles**. A about 18 s/B about 64 s/C about 20 s and about 37 cm advance are calculated displays, not measured distance or actual walking performance. Airborne-rocker neutral return and procedural springs are declared display assumptions; canonical independent rocker angles remain null.
 
+[Bilingual media provenance](ver3/r7_walking_locales_v1/manifest.json) records language-specific notes, posters and captions from the same motion and timing. The original model document and its first-release media/delivery-budget statements remain frozen historical records, separate from the current bilingual presentation.
+
 ## Document and fabrication-file legend
 
 The 18 major English documents translate unchanged Japanese originals. Each English header links to the original and records its SHA256. The [coverage manifest](translation-manifest.json) records scope and hashes. The existing bilingual repository READMEs preserve Ver.1/2 build records.
