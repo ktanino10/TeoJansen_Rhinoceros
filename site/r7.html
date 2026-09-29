@@ -34,9 +34,12 @@
         <a href="viewer.html">第一カット・360°／組立履歴</a><a href="comparison.html">旧V2→第一カットのMatrix</a>
         <a href="calculations.html">r3研究・r4入力軸カード</a><a href="production.html">Ver.1・Ver.2製作記録</a>
       </nav>
-      <p>既存の第一カットA300／B90／C180 mm、r3計算・r4カードとは別の全体モデルです。旧動画・旧CGをr7の動作として表示せず、新しい空力図・歩行アニメーションも生成していません。</p>
+      <p>既存の第一カットA300／B90／C180 mm、r3計算・r4カードとは別の全体モデルです。旧動画・旧CGをr7の動作として表示しません。
+        新しい連続歩行は明示した仮定を含む別の表示モデルで、空力予測や実機実証ではありません。</p>
       {{r7_comparison_image}}
     </section>
+
+    {{r7_walking}}
 
     <section class="section" id="r7-comparison" aria-labelledby="r7-comparison-title">
       <p class="eyebrow">PROPOSED IMPROVEMENTS &amp; TRADEOFFS</p><h2 id="r7-comparison-title">変えた点と、代償を同じ条件で。</h2>
@@ -51,7 +54,7 @@
             <tr><th scope="row">軸方向保持</th><td>部品の抜けと支持の不安定さ。</td><td>固定側／浮動側、肩・キャップ・カラー・平滑スリーブを区別。<a href="r7.html?design=A&amp;focus=retention#viewer">保持部品を見る</a></td><td>過締め・クリープ・実公差による抵抗は未確認。</td></tr>
             <tr><th scope="row">摩擦と軸受</th><td>丸棒のたわみ・摩擦ロス。焼付きが確認されたわけではない。</td><td>金属ジャーナル・市販軸受、ねじ山でない摺動面。<a href="r7.html?design=B&amp;focus=bearings#viewer">支持を見る</a></td><td>入力抵抗は感度仮定であり、購入品を選んだだけで低抵抗を実証しない。</td></tr>
             <tr><th scope="row">風入力・減速</th><td>V2の初動動画はあるが同条件トルク実測表はない。</td><td>A144／B512／C156:1を実歯車・軸配置で比較。<a href="r7.html?design=C&amp;focus=drivetrain#viewer">段構成を見る</a></td><td>静止空力代理は未校正。高抵抗・不利風・偏心で不足し、仮120 rpmは実速度ではない。</td></tr>
-            <tr><th scope="row">脚・支持・床</th><td>フック受け面などを改良。定量的な滑り比較は未計測。</td><td>PC26.5 mm・84 mm同期軸・市販ばね・案内・ロッカーと、床是正ガード。<a href="r7.html?design=C&amp;focus=legs#viewer">脚部を見る</a></td><td>滑り仕事は残る。独立ロッカー角は未解決、実30 cm歩行はUNKNOWN。</td></tr>
+            <tr><th scope="row">脚・支持・床</th><td>フック受け面などを改良。定量的な滑り比較は未計測。</td><td>PC26.5 mm・84 mm同期軸・市販ばね・案内・ロッカーと、床是正ガード。<a href="r7.html?design=C&amp;focus=legs#viewer">脚部を見る</a></td><td>滑り仕事は残る。正規解析の独立ロッカー角はnull。連続表示の角は別モデルで、実30 cm歩行はUNKNOWN。</td></tr>
             <tr><th scope="row">構造・質量</th><td>実物の製作改良記録が中心。</td><td>全実CAD・名目重心を計算条件へ結合し、保存旧Aも同じ式で比較。</td><td>名目質量は実測・スライス値ではない。入力低減だけでなく重量・滑り仕事の増加も表示。</td></tr>
             <tr><th scope="row">組立・工具</th><td>V2詳細工程・編集可能nativeは未提供。</td><td>12工程・全在庫・退避／再挿入／有限経路、市販M2×12とDN-03。<a href="#r7-guides">全案の工程を見る</a></td><td>支持除去・実組立・保持トルクは未確認。表示上の状態を実作業済みとしない。</td></tr>
             <tr><th scope="row">調達と予算</th><td>材料・工具リンクはあるが完成機の同条件BOMではない。</td><td>個別初回の最低購入lot・付属品・税の未確定を分けた24,000円目安。</td><td>DN-03等の未保有工具・送料・税は別。共同購入平均への置換、在庫・納期保証はしない。</td></tr>

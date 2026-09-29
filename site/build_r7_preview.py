@@ -171,7 +171,7 @@ def create_preview():
         "{{r7_scope_label}}": "LOCAL CANDIDATE", "{{r7_status_title}}": "ローカル表示 · 実機未検証の設計候補",
         "{{r7_resource_notice}}": "このプレビューの資料はローカルにコピーした原本です。公開サイトへの差替えとは別です。",
         "{{r7_scope_short}}": "ローカル表示", "{{r7_footer_note}}": "r7ローカル表示 · 物理的な合格は未確認。",
-        "{{r7_comparison_image}}": "", "{{r7_media}}": "", "{{r7_diagnostics}}": "",
+        "{{r7_comparison_image}}": "", "{{r7_media}}": "", "{{r7_diagnostics}}": "", "{{r7_walking}}": "",
         "{{r7_revision}}": snapshot.source["revisionId"],
         "{{r7_candidate_revision}}": snapshot.source["candidateRevision"],
         "{{r7_commit}}": snapshot.commit,

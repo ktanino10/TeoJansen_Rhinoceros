@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "revisionId": "r7-floor2-walking-kinematic-v1",
+  "status": "PASS",
+  "artifactCommit": "09d49e396ec0a4b527ff6545c955df91995fd197",
+  "inputCommit": "369434e046acc5cb8f9da0f9f338308d29938d1e",
+  "sourceHash": "5074478881da48673648df953a591c0924f3b1d8ed390fad3830d6a0057ed5e4",
+  "contractSha256": "f7d82bf3bcb7bd5c0258fb3002bd5b4590a80879dee27788a86b1721f6662671",
+  "manufacturingRelease": false,
+  "physicalQualifiedCount": 0,
+  "physicalTestsPerformed": false,
+  "newMotionStatesAreVisualizationExtension": true,
+  "canonicalRockerNullsUnmodified": true,
+  "movies": {
+    "A": {
+      "width": 960,
+      "height": 720,
+      "fps": 24,
+      "frameCount": 433,
+      "durationSeconds": 18.041667,
+      "prescribedSeconds": 288,
+      "timeFactor": 16,
+      "cycles": 4,
+      "forwardMm": 369.52814357592473,
+      "decoded": true,
+      "sampledLegRegionFrames": 36,
+      "distinctSampledLegRegionFrames": 36
+    },
+    "B": {
+      "width": 960,
+      "height": 720,
+      "fps": 24,
+      "frameCount": 1537,
+      "durationSeconds": 64.041667,
+      "prescribedSeconds": 1024,
+      "timeFactor": 16,
+      "cycles": 4,
+      "forwardMm": 370.3353806951015,
+      "decoded": true,
+      "sampledLegRegionFrames": 128,
+      "distinctSampledLegRegionFrames": 128
+    },
+    "C": {
+      "width": 960,
+      "height": 720,
+      "fps": 24,
+      "frameCount": 469,
+      "durationSeconds": 19.541667,
+      "prescribedSeconds": 312,
+      "timeFactor": 16,
+      "cycles": 4,
+      "forwardMm": 369.5525395849578,
+      "decoded": true,
+      "sampledLegRegionFrames": 39,
+      "distinctSampledLegRegionFrames": 39
+    }
+  },
+  "native": {
+    "schemaVersion": 1,
+    "revisionId": "r7-floor2-walking-kinematic-v1",
+    "status": "PASS",
+    "nativeSha256": "342ac88380bcf4128d8ed5a4b814063c8b3eec0a40da8983ce955245c617fa58",
+    "instanceCounts": {
+      "A": 750,
+      "B": 785,
+      "C": 750
+    },
+    "proceduralSpringsPerDesign": 12,
+    "tolerances": {
+      "baseVertexMm": 1e-05,
+      "worldCornerMm": 0.15,
+      "rotationGram": 2e-06,
+      "rockerFloorMm": 0.001
+    },
+    "designs": {
+      "A": {
+        "instanceCount": 750,
+        "comparedCanonicalMeshes": 75,
+        "proceduralSprings": 12,
+        "sampledFilmFrames": [
+          1,
+          2,
+          19,
+          37,
+          216,
+          432,
+          433
+        ],
+        "maximumNativeBaseVertexDifferenceMm": 0.0,
+        "maximumSampledWorldCornerDifferenceMm": 0.014946348889326633,
+        "maximumNativeRotationGramError": 3.5762786865234375e-07,
+        "minimumSampledRockerVertexZMm": 1.912484302868389e-05,
+        "motionSha256": "a9f01a708e3a2a7ee348f78450feddad7c6e3a6821907a64c3bf56e7b81b906b",
+        "evaluatorSha256": "29b2387801755faf0518fcedef0f3bb3c700ee7399c001df1bc62ce6f4481e3e"
+      },
+      "B": {
+        "instanceCount": 785,
+        "comparedCanonicalMeshes": 78,
+        "proceduralSprings": 12,
+        "sampledFilmFrames": [
+          1,
+          2,
+          19,
+          37,
+          768,
+          1536,
+          1537
+        ],
+        "maximumNativeBaseVertexDifferenceMm": 0.0,
+        "maximumSampledWorldCornerDifferenceMm": 0.040535440952602586,
+        "maximumNativeRotationGramError": 2.384185791015625e-07,
+        "minimumSampledRockerVertexZMm": 0.0002829363570377996,
+        "motionSha256": "481854ecae9ece8fab1000f7ecd0b0e0a6d6ecca29a0afceffccb032b8a23e56",
+        "evaluatorSha256": "29b2387801755faf0518fcedef0f3bb3c700ee7399c001df1bc62ce6f4481e3e"
+      },
+      "C": {
+        "instanceCount": 750,
+        "comparedCanonicalMeshes": 75,
+        "proceduralSprings": 12,
+        "sampledFilmFrames": [
+          1,
+          2,
+          19,
+          37,
+          234,
+          468,
+          469
+        ],
+        "maximumNativeBaseVertexDifferenceMm": 0.0,
+        "maximumSampledWorldCornerDifferenceMm": 0.01586932579919062,
+        "maximumNativeRotationGramError": 2.384185791015625e-07,
+        "minimumSampledRockerVertexZMm": 4.020897365064613e-06,
+        "motionSha256": "1bb4aef6a9d1d9fedb277a4924ef7d2bbc477bb36b05283226971a388e0c6e6d",
+        "evaluatorSha256": "29b2387801755faf0518fcedef0f3bb3c700ee7399c001df1bc62ce6f4481e3e"
+      }
+    },
+    "scope": "Exact base vertices/triangles and IDs; sampled keyed rigid poses include Blender float32 Euler/quaternion quantization. Procedural coils use fixed wire/radius/turns. Not a new collision or physical qualification."
+  },
+  "files": {
+    "Blender/Ver.3/integrated_r7/r7_walking_v1.blend": {
+      "bytes": 39815850,
+      "sha256": "342ac88380bcf4128d8ed5a4b814063c8b3eec0a40da8983ce955245c617fa58"
+    },
+    "docs/ver3/r7_walking_v1/native-validation.json": {
+      "bytes": 2650,
+      "sha256": "b303267a09770a552024f99e2aa0926008c0da5b59c415c03814ec150cc76782"
+    },
+    "docs/ver3/r7_walking_v1/MODEL_ja.md": {
+      "bytes": 9373,
+      "sha256": "6bf9c2c8fdf7890d9792d0bbab41c10c56d88ecbcd2977cc02bb76d606f4a1a5"
+    },
+    "site/r7-walk-math.js": {
+      "bytes": 10432,
+      "sha256": "29b2387801755faf0518fcedef0f3bb3c700ee7399c001df1bc62ce6f4481e3e"
+    },
+    "site/r7-walk-export.mjs": {
+      "bytes": 2658,
+      "sha256": "3cf031b132564b9b0ecbf041acc302c0e0e69a5f1a6bb41ca8b383963906ac57"
+    },
+    "site/r7_walk_model.py": {
+      "bytes": 23070,
+      "sha256": "dfe0ca460f5f0193b41b5c7ed95b72f0cde9af8e03463dbc3b8f5534a65fa6d3"
+    },
+    "site/r7_walk_render.py": {
+      "bytes": 24882,
+      "sha256": "a10cd943cd4d0f80d5551217c4c92f331dea3e4688e943b8940293ccedc2fd69"
+    },
+    "site/r7_walk_verify_native.py": {
+      "bytes": 6181,
+      "sha256": "a797e7e28366c6a3dce515951bcca0ebb9aebc14a136785edbda5e848d51abeb"
+    },
+    "site/r7_walk_finalize.py": {
+      "bytes": 6460,
+      "sha256": "e40a15e57a9c143be9f7deea62dac56518a30bddfa1f5c808c2c84f0046d7025"
+    },
+    "docs/ver3/r7_walking_v1/motion_A.json": {
+      "bytes": 232831,
+      "sha256": "a9f01a708e3a2a7ee348f78450feddad7c6e3a6821907a64c3bf56e7b81b906b"
+    },
+    "docs/ver3/r7_walking_v1/validation_A.json": {
+      "bytes": 1383,
+      "sha256": "8f6789ab99f75fa9003ac1536cfd635705c966e9c3f936d3621eb006615e4c57"
+    },
+    "docs/ver3/r7_walking_v1/reference_A.json": {
+      "bytes": 153216,
+      "sha256": "a46d06a323c0a1a2520c68149d7f38b0957e19c2f2a9f7baff37126a24e593ac"
+    },
+    "docs/ver3/r7_walking_v1/render_A.json": {
+      "bytes": 1192,
+      "sha256": "8c652d5629b5bb01eb926bddcbbdaff4925abf0bf818b87b9cb3052165502222"
+    },
+    "docs/ver3/r7_walking_v1/walking_A.mp4": {
+      "bytes": 1613337,
+      "sha256": "dc2c4c886052d474995e6261dc9df65612f7f44beb935c26a3df6433d3f1c6f9"
+    },
+    "docs/ver3/r7_walking_v1/walking_A.png": {
+      "bytes": 761690,
+      "sha256": "a5cd368d1f8cb9e7e7ff2aa0e51ab2b8f82c4ef5f84fc02ae86a2e38dafc6edf"
+    },
+    "docs/ver3/r7_walking_v1/walking_A.vtt": {
+      "bytes": 852,
+      "sha256": "8baef205a92e7bace5cafe43584a709fddabb2e0db5cc40fa81d5b57c0d2ea01"
+    },
+    "docs/ver3/r7_walking_v1/motion_B.json": {
+      "bytes": 234605,
+      "sha256": "481854ecae9ece8fab1000f7ecd0b0e0a6d6ecca29a0afceffccb032b8a23e56"
+    },
+    "docs/ver3/r7_walking_v1/validation_B.json": {
+      "bytes": 1384,
+      "sha256": "503bb5b43a041c862e966f43490fefd15cf70979d0253899ef2ce4f4f983cf16"
+    },
+    "docs/ver3/r7_walking_v1/reference_B.json": {
+      "bytes": 154718,
+      "sha256": "7ddb86b8b766b35da5aba33b5322129353a2464668bfb39d15da7f9db0c5ab76"
+    },
+    "docs/ver3/r7_walking_v1/render_B.json": {
+      "bytes": 1194,
+      "sha256": "dea35e72a6c898c4d12d9f94e205aa10bc372b8e29fbd56b2e92a1fecd372e08"
+    },
+    "docs/ver3/r7_walking_v1/walking_B.mp4": {
+      "bytes": 4851575,
+      "sha256": "7d5eab2f4046c9ddd4b5935b3bfb60779a102d5b4c6322f54fee71a5ec55fd3a"
+    },
+    "docs/ver3/r7_walking_v1/walking_B.png": {
+      "bytes": 758956,
+      "sha256": "222b74de8cc10e7a4663adcdef7ad5de0b41a9f2fc7a94123841e9fe6287a707"
+    },
+    "docs/ver3/r7_walking_v1/walking_B.vtt": {
+      "bytes": 852,
+      "sha256": "b351d923fc1ffa612bf7c69d80e79e97ce5f170694697c8d11c98e6ff8ec2665"
+    },
+    "docs/ver3/r7_walking_v1/motion_C.json": {
+      "bytes": 232893,
+      "sha256": "1bb4aef6a9d1d9fedb277a4924ef7d2bbc477bb36b05283226971a388e0c6e6d"
+    },
+    "docs/ver3/r7_walking_v1/validation_C.json": {
+      "bytes": 1389,
+      "sha256": "5048ca7a4d662fec142bcfcbc51c18d31bd17f1a32fd9bd6136bf3f128ed5384"
+    },
+    "docs/ver3/r7_walking_v1/reference_C.json": {
+      "bytes": 153177,
+      "sha256": "913d06ad3c4845df533ea036cb2a22b15735199102ee5a014e63a28e424e4b72"
+    },
+    "docs/ver3/r7_walking_v1/render_C.json": {
+      "bytes": 1192,
+      "sha256": "c871f084b1826e3452572cbf3190c396a4a462630e4eab160b8dd68d6aaf09ad"
+    },
+    "docs/ver3/r7_walking_v1/walking_C.mp4": {
+      "bytes": 1808769,
+      "sha256": "1408b9a991c023e05615f97fe060ed77a294bf0314be193e3f629a5d734a50a5"
+    },
+    "docs/ver3/r7_walking_v1/walking_C.png": {
+      "bytes": 759735,
+      "sha256": "9035865a5faf232ef917257421c4c426cd4cc94760846e47cf28d4265e7516f0"
+    },
+    "docs/ver3/r7_walking_v1/walking_C.vtt": {
+      "bytes": 852,
+      "sha256": "61776e43dbe874d59c654d131637b5088e3266bf72d72881513f481320156a62"
+    }
+  }
+}

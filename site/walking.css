@@ -1,0 +1,26 @@
+.walk-toolbar, .walk-controls { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; margin-block: 1rem; }
+.walk-toolbar label, .walk-controls label { display: flex; align-items: center; gap: .5rem; }
+.walk-toolbar select, .walk-controls select { padding: .6rem; max-width: 100%; border: 1px solid #64776d; border-radius: .4rem; background: #fff; color: #19382a; }
+.walk-timing { padding: .8rem 1rem; color: #19382a; background: #e4efce; font-weight: 700; border-left: 4px solid #446525; }
+.walk-canvas { height: min(68vh, 620px); min-height: 380px; background: #edf1e9; border: 1px solid #a8bba8; border-radius: .65rem; overflow: hidden; }
+.walk-canvas canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.walk-canvas canvas:focus-visible { outline: 3px solid #19382a; outline-offset: -4px; }
+.walk-phase-label { display: block; font-weight: 700; }
+.walk-phase-label output { font-variant-numeric: tabular-nums; }
+#walk-phase { display: block; width: 100%; min-height: 44px; accent-color: #355b30; }
+.walk-readouts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+.walk-readouts div { background: #f1f4ec; border: 1px solid #d0dbc8; border-radius: .5rem; padding: .8rem; }
+.walk-readouts dt { font-size: .8rem; color: #425347; }
+.walk-readouts dd { margin: .25rem 0 0; font-weight: 700; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+#walk-workspace details p { overflow-wrap: anywhere; }
+.walk-film { margin-block: 2rem; }
+.walk-film video { display: block; width: 100%; height: auto; max-height: 76vh; background: #182725; }
+.walk-validation { padding: 1rem; background: #eef3e7; overflow-wrap: anywhere; }
+@media (max-width: 620px) {
+  .walk-canvas { height: 460px; min-height: 340px; }
+  .walk-controls { gap: .5rem; }
+  .walk-controls .button { padding: .65rem .75rem; }
+  .walk-readouts { gap: .5rem; font-size: .86rem; }
+  .walk-toolbar label { width: 100%; }
+  .walk-toolbar select { flex: 1; min-width: 0; }
+}

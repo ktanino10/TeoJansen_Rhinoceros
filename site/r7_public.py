@@ -108,15 +108,16 @@ def build_public_r7(output, ref):
                                  f'<div class="r7-diagnostic-grid">{frames}</div>'
                                  f'<a href="{source_url("source", str((MEDIA_ROOT/f"diagnostic_{ident}.json").relative_to(ROOT)), ref)}">姿勢・省略ID・位置差の正本</a></details>')
     diagnostic_html = ('<section class="chapter-tinted" id="r7-diagnostics"><div class="section"><p class="eyebrow">SAVED CONTACT DATA / LIMITED VISUALIZATION</p>'
-                       '<h2>計算された位置を、3つの時点で確認する。</h2><p><strong>未計算の足部品は省略しています。完全なCAD歩行映像ではありません。</strong>'
+                       '<h2>以前の3位相診断：計算された位置を確認する。</h2><p><strong>この歴史資料では未計算の足部品は省略しています。完全なCAD歩行映像ではありません。</strong>'
                        '73保存フレームの前進・高さ・勾配・足圧縮を使い、0／120／240°だけを表示しました。独立ロッカー角と完全な剛体姿勢は未解決です。'
                        '正規の小角写像を全頂点へ掛けてせん断せず、表示専用の直交フレームと計算点の差を記録しています。'
-                       '歩行動画は未生成で、存在しない再生ボタンや旧動画の転用はありません。</p>'
+                       '当時の診断結果と省略は保持し、後から別モデルで計算した連続歩行と混同しません。'
+                       '<a href="walking.html">新しい連続歩行3D・動画と、その追加仮定はこちら</a>。</p>'
                        + "".join(diagnostic_groups) + '</div></section>')
     comparison, baseline = comparison_html(guides, source)
     links = catalog["links"]
     replacements = {
-        "{{r7_robots}}": "", "{{r7_page_title}}": "r7床是正版 — 三案の360°・組立・診断資料",
+        "{{r7_robots}}": "", "{{r7_page_title}}": "r7床是正版 — 三案の連続歩行・360°・組立",
         "{{r7_local_only}}": "false", "{{r7_brand_note}}": "r7床是正版 · 実機未検証",
         "{{r7_scope_label}}": "SOURCE-BOUND DESIGN CANDIDATES",
         "{{r7_status_title}}": "r7床是正版 · 比較設計候補であり、実機の合格ではありません",
@@ -140,4 +141,8 @@ def build_public_r7(output, ref):
     for entry in assets.values():
         entry.setdefault("source_sha256", digest((ROOT/entry["source"]).read_bytes()))
         entry["bundle_group"] = "r7"
+    from r7_walking import build_walking
+    walking_html, walking_assets = build_walking(output, guides, ref)
+    replacements.update(walking_html)
+    assets.update(walking_assets)
     return replacements, assets, source.source

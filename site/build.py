@@ -20,11 +20,12 @@ SITE = ROOT / "site"
 REPOSITORY = "ktanino10/TeoJansen_Rhinoceros"
 SLUG = "TeoJansen_Rhinoceros"
 DEFAULT_OUTPUT = SITE / "dist" / SLUG
-MAX_BUNDLE_BYTES = 60_000_000
+MAX_BUNDLE_BYTES = 76_000_000
 MAX_STATIC_BYTES = 12_000_000
 MAX_R7_BYTES = 30_000_000
+MAX_WALKING_BYTES = 16_000_000
 HISTORY_PAGES = ("index.html", "production.html", "comparison.html", "viewer.html", "calculations.html")
-PAGES = (*HISTORY_PAGES, "r7.html")
+PAGES = (*HISTORY_PAGES, "r7.html", "walking.html")
 IMAGES = {
     "hero": ("docs/images/テオヤンセンver2完成3.jpg", (320, 0, 1240, 1100), 1100),
     "v1-photo": ("docs/images/テオヤンセンver1完成1.jpg", (70, 0, 1240, 1090), 1050),
@@ -315,16 +316,20 @@ def validate(output: Path, manifest: dict) -> None:
     expected = {*manifest["pages"], "styles.css", "viewer.css", "calculations.css", "r7.css", "app.js", "viewer-loader.js", "calculations.js",
                 "favicon.svg", ".nojekyll", "build-manifest.json",
                 *manifest["assets"].keys()}
+    if "walking.html" in manifest["pages"]:
+        expected.update(("walking.css", "walking-loader.js"))
     if actual != expected:
         raise ValueError(f"Unexpected output files: {actual ^ expected}")
     total = sum(path.stat().st_size for path in output.rglob("*") if path.is_file())
     r7 = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("bundle_group") == "r7")
-    display = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("loading") == "on-demand" and entry.get("bundle_group") != "r7")
-    if total > MAX_BUNDLE_BYTES or total - display - r7 > MAX_STATIC_BYTES or display > 18_000_000 or r7 > MAX_R7_BYTES:
-        raise ValueError("Public bundle exceeded the 12 MB history static / 18 MB history 3D / 30 MB r7 budgets")
+    walking = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("bundle_group") == "walking")
+    display = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("loading") == "on-demand" and entry.get("bundle_group") not in {"r7", "walking"})
+    if (total > MAX_BUNDLE_BYTES or total - display - r7 - walking > MAX_STATIC_BYTES
+            or display > 18_000_000 or r7 > MAX_R7_BYTES or walking > MAX_WALKING_BYTES):
+        raise ValueError("Public bundle exceeded 12 MB history static / 18 MB history 3D / 30 MB r7 / 16 MB opt-in walking")
     for name in manifest["assets"]:
         path = output / name
-        if path.suffix == ".webp":
+        if path.suffix in {".webp", ".png"}:
             with Image.open(path) as photo:
                 if photo.getexif() or any(key in photo.info for key in ("exif", "xmp", "icc_profile")):
                     raise ValueError(f"Display derivative retained metadata: {name}")
@@ -371,12 +376,16 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
         from r7_public import build_public_r7
         r7_html, r7_assets, r7_source = build_public_r7(output, ref)
         assets.update(r7_assets)
-    subprocess.run(["node", str(SITE / "build-viewer.mjs"), str(output)], cwd=ROOT, check=True)
-    for name, original in (("viewer-engine.js", "site/viewer.js"),
-                           ("three-LICENSE.txt", "site/node_modules/three/LICENSE")):
+    subprocess.run(["node", str(SITE / "build-viewer.mjs"), str(output), *(["--walking"] if include_r7 else [])], cwd=ROOT, check=True)
+    engines = [("viewer-engine.js", "site/viewer.js"), ("three-LICENSE.txt", "site/node_modules/three/LICENSE")]
+    if include_r7:
+        engines.append(("walking-engine.js", "site/walking.js"))
+    for name, original in engines:
         destination = output / "assets" / name
         assets[f"assets/{name}"] = {"source": original, "source_sha256": sha256(ROOT / original),
                                    "sha256": sha256(destination), "bytes": destination.stat().st_size}
+        if name == "walking-engine.js":
+            assets[f"assets/{name}"].update(bundle_group="walking", loading="on-demand")
     comparison = json.loads((ROOT / "docs/ver3/comparison.json").read_text())
     records = comparison["designs"]
     if [r["comparison"]["prototype"] for r in records] != list("ABC"):
@@ -426,7 +435,10 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
         html = re.sub(r"\{\{(source|tree|download):([^}]+)\}\}",
                       lambda match: escape(source_url(match[1], match[2], ref), quote=True), html)
         (output / name).write_text(html)
-    for name in ("styles.css", "viewer.css", "calculations.css", "r7.css", "app.js", "viewer-loader.js", "calculations.js", "favicon.svg"):
+    static_files = ["styles.css", "viewer.css", "calculations.css", "r7.css", "app.js", "viewer-loader.js", "calculations.js", "favicon.svg"]
+    if include_r7:
+        static_files.extend(("walking.css", "walking-loader.js"))
+    for name in static_files:
         shutil.copyfile(SITE / name, output / name)
     (output / ".nojekyll").write_text("")
     manifest = {"schema": 1, "repository": REPOSITORY, "source_commit": ref, "pages": list(pages),
@@ -436,6 +448,7 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
                 "static_budget_bytes": MAX_STATIC_BYTES, "on_demand_3d_budget_bytes": 18_000_000,
                 "engineering_source": viewer_source,
                 "r7_source": r7_source, "r7_budget_bytes": MAX_R7_BYTES,
+                "walking_budget_bytes": MAX_WALKING_BYTES,
                 "calculation_source": calculation_source,
                 "cartridge_source": cartridge_source, "external_images": external_images,
                 "note": "Only selected display derivatives and existing media are deployed. Exact-mesh GLBs are opt-in display data; native CAD/STL/BOM downloads remain on GitHub."}

@@ -19,6 +19,19 @@ await build({
   legalComments: "inline",
   logLevel: "warning",
 });
+if (process.argv.includes("--walking")) {
+  await build({
+    entryPoints: [path.join(site, "walking.js")],
+    outfile: path.join(output, "assets/walking-engine.js"),
+    bundle: true,
+    minify: true,
+    format: "esm",
+    target: ["es2022"],
+    sourcemap: false,
+    legalComments: "inline",
+    logLevel: "warning",
+  });
+}
 await copyFile(
   path.join(site, "node_modules/three/LICENSE"),
   path.join(output, "assets/three-LICENSE.txt"),
