@@ -26,11 +26,11 @@ class LiveVerificationTests(unittest.TestCase):
     def test_all_pages_assets_and_source_hashes_are_checked(self):
         with patch.object(verify_live, "fetch_bytes", side_effect=self.fixture_fetch) as fetch:
             report = verify_live.verify(self.manifest["source_commit"])
-        self.assertEqual(report["pages"], 6)
+        self.assertEqual(report["pages"], 7)
         self.assertEqual(report["assets"], len(self.manifest["assets"]))
         self.assertEqual(report["all_gets"], 200)
         self.assertEqual(report["external_images"], 1)
-        self.assertEqual(fetch.call_count, 1 + 6 + 8 + len(self.manifest["assets"]) + 1)
+        self.assertEqual(fetch.call_count, 1 + 7 + 10 + len(self.manifest["assets"]) + 1)
 
     def test_stale_commit_and_external_paths_are_rejected(self):
         with self.assertRaisesRegex(ValueError, "Published commit differs"):

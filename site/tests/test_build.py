@@ -65,7 +65,7 @@ class PublicBuildTests(unittest.TestCase):
         cls.production = (OUTPUT / "production.html").read_text()
         cls.production_tags = Tags()
         cls.production_tags.feed(cls.production)
-        cls.extra_documents = [(OUTPUT / page).read_text() for page in ("comparison.html", "viewer.html", "calculations.html", "r7.html")]
+        cls.extra_documents = [(OUTPUT / page).read_text() for page in ("comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html")]
         cls.extra_tags = []
         for document in cls.extra_documents:
             tags = Tags()
@@ -81,13 +81,15 @@ class PublicBuildTests(unittest.TestCase):
         self.assertFalse(any(p.suffix.lower() in forbidden for p in files))
         total = sum(p.stat().st_size for p in files)
         r7 = sum(asset["bytes"] for asset in self.manifest["assets"].values() if asset.get("bundle_group") == "r7")
-        opt_in = sum(asset["bytes"] for asset in self.manifest["assets"].values() if asset.get("loading") == "on-demand" and asset.get("bundle_group") != "r7")
-        self.assertLess(total, 60_000_000)
-        self.assertLess(total - opt_in - r7, 12_000_000)
+        walking = sum(asset["bytes"] for asset in self.manifest["assets"].values() if asset.get("bundle_group") == "walking")
+        opt_in = sum(asset["bytes"] for asset in self.manifest["assets"].values() if asset.get("loading") == "on-demand" and asset.get("bundle_group") not in {"r7", "walking"})
+        self.assertLess(total, 76_000_000)
+        self.assertLess(total - opt_in - r7 - walking, 12_000_000)
         self.assertLess(opt_in, 18_000_000)
         self.assertLess(r7, 30_000_000)
-        self.assertEqual(len([a for a in self.manifest["assets"].values() if a.get("bundle_group") != "r7"]), 83)
-        self.assertEqual(self.manifest["pages"], ["index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html"])
+        self.assertLess(walking, 16_000_000)
+        self.assertEqual(len([a for a in self.manifest["assets"].values() if a.get("bundle_group") not in {"r7", "walking"}]), 83)
+        self.assertEqual(self.manifest["pages"], ["index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html"])
         for asset, data in self.manifest["assets"].items():
             self.assertEqual(hashlib.sha256((OUTPUT / asset).read_bytes()).hexdigest(), data["sha256"])
             self.assertEqual(hashlib.sha256((ROOT / data["source"]).read_bytes()).hexdigest(), data["source_sha256"])
@@ -134,7 +136,7 @@ class PublicBuildTests(unittest.TestCase):
                         self.assertEqual(int(attrs["width"]), image.width)
                         self.assertEqual(int(attrs["height"]), image.height)
             self.assertNotEqual(name, "iframe")
-        self.assertEqual(len(videos), 11)
+        self.assertEqual(len(videos), 14)
 
     def test_canonical_source_and_limits_are_visible(self):
         data = ROOT / "docs/ver3/comparison.json"

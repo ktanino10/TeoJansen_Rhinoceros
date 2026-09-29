@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "revisionId": "r7-floor2-walking-kinematic-v1",
+  "status": "PASS",
+  "nativeSha256": "342ac88380bcf4128d8ed5a4b814063c8b3eec0a40da8983ce955245c617fa58",
+  "instanceCounts": {
+    "A": 750,
+    "B": 785,
+    "C": 750
+  },
+  "proceduralSpringsPerDesign": 12,
+  "tolerances": {
+    "baseVertexMm": 1e-05,
+    "worldCornerMm": 0.15,
+    "rotationGram": 2e-06,
+    "rockerFloorMm": 0.001
+  },
+  "designs": {
+    "A": {
+      "instanceCount": 750,
+      "comparedCanonicalMeshes": 75,
+      "proceduralSprings": 12,
+      "sampledFilmFrames": [
+        1,
+        2,
+        19,
+        37,
+        216,
+        432,
+        433
+      ],
+      "maximumNativeBaseVertexDifferenceMm": 0.0,
+      "maximumSampledWorldCornerDifferenceMm": 0.014946348889326633,
+      "maximumNativeRotationGramError": 3.5762786865234375e-07,
+      "minimumSampledRockerVertexZMm": 1.912484302868389e-05,
+      "motionSha256": "a9f01a708e3a2a7ee348f78450feddad7c6e3a6821907a64c3bf56e7b81b906b",
+      "evaluatorSha256": "29b2387801755faf0518fcedef0f3bb3c700ee7399c001df1bc62ce6f4481e3e"
+    },
+    "B": {
+      "instanceCount": 785,
+      "comparedCanonicalMeshes": 78,
+      "proceduralSprings": 12,
+      "sampledFilmFrames": [
+        1,
+        2,
+        19,
+        37,
+        768,
+        1536,
+        1537
+      ],
+      "maximumNativeBaseVertexDifferenceMm": 0.0,
+      "maximumSampledWorldCornerDifferenceMm": 0.040535440952602586,
+      "maximumNativeRotationGramError": 2.384185791015625e-07,
+      "minimumSampledRockerVertexZMm": 0.0002829363570377996,
+      "motionSha256": "481854ecae9ece8fab1000f7ecd0b0e0a6d6ecca29a0afceffccb032b8a23e56",
+      "evaluatorSha256": "29b2387801755faf0518fcedef0f3bb3c700ee7399c001df1bc62ce6f4481e3e"
+    },
+    "C": {
+      "instanceCount": 750,
+      "comparedCanonicalMeshes": 75,
+      "proceduralSprings": 12,
+      "sampledFilmFrames": [
+        1,
+        2,
+        19,
+        37,
+        234,
+        468,
+        469
+      ],
+      "maximumNativeBaseVertexDifferenceMm": 0.0,
+      "maximumSampledWorldCornerDifferenceMm": 0.01586932579919062,
+      "maximumNativeRotationGramError": 2.384185791015625e-07,
+      "minimumSampledRockerVertexZMm": 4.020897365064613e-06,
+      "motionSha256": "1bb4aef6a9d1d9fedb277a4924ef7d2bbc477bb36b05283226971a388e0c6e6d",
+      "evaluatorSha256": "29b2387801755faf0518fcedef0f3bb3c700ee7399c001df1bc62ce6f4481e3e"
+    }
+  },
+  "scope": "Exact base vertices/triangles and IDs; sampled keyed rigid poses include Blender float32 Euler/quaternion quantization. Procedural coils use fixed wire/radius/turns. Not a new collision or physical qualification."
+}

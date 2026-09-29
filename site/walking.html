@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>r7 連続歩行シミュレーション — RHINOCEROS</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="walking.css">
+  <script src="app.js" defer></script>
+  <script src="walking-loader.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="r7.html"><span>RHINOCEROS<small>r7床是正版 · 連続歩行</small></span></a>
+    <nav aria-label="メインナビゲーション"><a href="#walking">歩行3D</a><a href="#walking-films">動画</a><a href="#walking-method">モデルの範囲</a><a href="r7.html">比較・組立へ</a></nav>
+  </div></header>
+  <main id="main" tabindex="-1">
+    <section class="section" id="top">
+      <p class="eyebrow">CONTINUOUS KINEMATIC SIMULATION / R7 FLOOR2</p>
+      <h1>風車から六脚まで、<br><span>連続した歩行を見る。</span></h1>
+      <p>床是正版の実CAD形状を使い、歯車・クランク・リンク・足をつないだ新しい計算表示です。
+        3枚の診断図や旧モデルの映像とは別に、地面の上を複数周期進めます。</p>
+      <aside class="warning" id="walk-scope"><h2>計算上の歩行です。実機の歩行実証ではありません。</h2>
+        <p><strong>入力120 rpmを規定した運動学・準静的な表示モデル。</strong>風速から回転数を予測した動画ではありません。
+          manufacturingRelease=false／実機合格0。実自己始動・実30 cm歩行はUNKNOWNのままです。</p>
+        <p>原解析の独立ロッカー角nullは変更せず、<a href="#walking-method">別版の接地再整合・空中中立復帰・ばね表示</a>を追加しました。
+          床を下げたり、リンクを伸縮したりしていません。{{walk_preview_notice}}</p>
+      </aside>
+    </section>
+    <section class="section" id="walking" aria-labelledby="walk-title">
+      <p class="eyebrow">PLAY / PAUSE / PHASE / SAME INPUT RPM</p><h2 id="walk-title">同じ入力条件で、A・B・Cを動かす。</h2>
+      <div class="walk-toolbar">
+        <label for="walk-design">案を選択<select id="walk-design">{{walk_design_options}}</select></label>
+        <button type="button" class="button primary" id="walk-load" hidden>選んだ案の歩行3Dを読み込む</button>
+      </div>
+      <p class="small-note">最初は停止状態です。選んだ案のデータだけを操作時に読み込みます。マウス・タッチで視点を変えられます。</p>
+      <p id="walk-status" role="status" aria-live="polite">歩行3Dはまだ読み込んでいません。下の動画・説明も参照できます。</p>
+      <p id="walk-error" class="media-error" role="alert" hidden></p>
+      <noscript><p class="record-scope">JavaScriptなしでは3D操作はできません。下のMP4とモデルの説明をご利用ください。</p></noscript>
+      <div id="walk-workspace" hidden>
+        <div class="walk-controls" role="group" aria-label="歩行の再生操作">
+          <button class="button primary" id="walk-play" type="button" aria-pressed="false">歩行を再生</button>
+          <button class="button" id="walk-reset" type="button">リセット</button>
+          <label for="walk-speed">時間倍率<select id="walk-speed"><option value="1">1×（規定時間）</option><option value="4">4×</option><option value="8">8×</option><option value="16" selected>16×（時間圧縮）</option></select></label>
+          <button class="button" type="button" id="walk-cycle">1周期先へ</button>
+        </div>
+        <p class="walk-timing" id="walk-timing">入力120 rpm · 時間圧縮16×</p>
+        <div id="walk-canvas" class="walk-canvas"></div>
+        <div class="walk-controls" role="group" aria-label="歩行の視点">
+          <button class="button" type="button" id="walk-three-quarter">斜め</button>
+          <button class="button" type="button" id="walk-side">側面</button>
+          <button class="button" type="button" id="walk-fit">全体を収める</button>
+          <label><input id="walk-follow" type="checkbox" checked> 本体を追従</label>
+          <label><input id="walk-guards" type="checkbox" checked> ガードを透明表示</label>
+        </div>
+        <label for="walk-phase" class="walk-phase-label">クランク位相 <output id="walk-phase-label" for="walk-phase" aria-live="off">0.0°</output>
+          <input type="range" id="walk-phase" min="0" max="360" step="0.1" value="0">
+        </label>
+        <dl class="walk-readouts">
+          <div><dt>計算上の累積前進</dt><dd id="walk-distance">0.0 mm</dd></div>
+          <div><dt>規定入力での経過時間</dt><dd id="walk-seconds">0.0 秒</dd></div>
+          <div><dt>クランク回転数／完了周期</dt><dd id="walk-crank">—</dd></div>
+          <div><dt>荷重足（合力の2%以上）／入力軸角</dt><dd id="walk-contact">—</dd></div>
+        </dl>
+        <div class="walk-controls">
+          <label><input type="checkbox" id="walk-forces"> 接地・法線力</label>
+          <label><input type="checkbox" id="walk-paths"> 足中心の軌跡（1周期）</label>
+        </div>
+        <p class="small-note" id="walk-help">ドラッグ／指1本で回転、ホイール／指2本で拡大・移動。
+          3Dにフォーカスして矢印で回転、＋／−で拡大縮小、Homeで全体、Spaceで再生／停止。再生中の位相操作は一時停止します。</p>
+        <p class="small-note">床の細線10 mm／濃い線50 mm。緑＝接地（弱い接触を含む）、橙＝空中の足中心。荷重足の法線矢印は1 N＝6 mm。
+          軌跡は足中心であり、無滑りの接地点ではありません。高速の風車には表示fpsによる残像・見かけの回転がありますが、角度は非折返しの時間から計算します。</p>
+        <details><summary>描画・接地・出典</summary><p id="walk-stats"></p><p id="walk-source"></p></details>
+      </div>
+    </section>
+    <section class="chapter-tinted" id="walking-films"><div class="section">
+      <p class="eyebrow">SAME GEOMETRY / SAME MOTION PACKET</p><h2>同じ計算モデルの歩行動画</h2>
+      <p>3Dと同じ床是正版・運動データから新たに描画しています。全案とも入力120 rpm・時間圧縮16×。
+        Bは512:1なので、同じ倍率ではA・Cより遅く進みます。4周期の計算上の前進は約37 cmですが、実測距離ではありません。</p>
+      {{walk_movies}}
+    </div></section>
+    <section class="section" id="walking-method">
+      <p class="eyebrow">NEW DISPLAY STATES, UNCHANGED CANONICAL RESULTS</p><h2>新しく計算したものと、未確認のもの。</h2>
+      <div class="two-column">
+        <article class="download-card"><h3>実寸を保持する連続リンク</h3><p>円交差の同じ組立分岐でリンクを毎位相解き、各部品には剛体変換だけを適用。
+          A144:1／B512:1／C156:1の符号と段構成を保持します。C上段のm0.9・20°・転位＋0.35／−0.35、下段m1・25°も変更していません。</p></article>
+        <article class="download-card"><h3>実ガイドと二つの丸いパッド</h3><p>保存された支持荷重・荷重中心を基準に、直交した本体姿勢と片側接触のばね圧縮を再整合。
+          接地するロッカーは二つのパッド軸を等高にします。空中では3 mmの隙間を使って中立へ滑らかに戻す<strong>表示専用の仮定</strong>で、重力・衝撃応答の予測ではありません。</p></article>
+        <article class="download-card"><h3>ばねと移動量の扱い</h3><p>12本のばねは同じID・両端の座・線径・平均半径・巻数を保持した手続き形状です。線材全体を縮尺変更せずピッチを変えます。
+          前進は元の接地モデルの積算値から取り、周期をヨー角とともにつなぎます。床滑りは残り、新しい摩擦・風力解ではありません。</p></article>
+        <article class="download-card"><h3>合格の意味を限定</h3><p>全周期の有限標本でリンク閉鎖、回転の直交性、ストローク、ストッパー、床との隙間、荷重・支持を確認します。
+          これは全干渉の連続証明、CFD、衝撃動力学、応力・耐久、製造公差、ドライヤーによる自己始動や実歩行の認定ではありません。</p></article>
+      </div>
+      {{walk_validation}}
+      <div class="document-strip">{{walk_sources}}</div>
+      <p><a href="r7.html#r7-diagnostics">以前の3位相診断は不足状態・省略のある歴史資料として保持</a>し、新しいモデルの結果で書き換えません。
+        <a href="r7.html#r7-guides">正規CAD・BOM・12工程へ</a>。</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>r7連続歩行 · 計算表示／実機未検証</span></div><a href="r7.html">r7比較へ</a><a href="#top">先頭へ ↑</a></footer>
+</body>
+</html>
