@@ -4,13 +4,14 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { createMotion, coilMesh, TAU } from "./r7-walk-math.js";
 
 const $ = id => document.getElementById(id);
+const { text: l, asset } = globalThis.RhinoLocale;
 const checksum = async bytes => [...new Uint8Array(await crypto.subtle.digest("SHA-256", bytes))].map(x => x.toString(16).padStart(2, "0")).join("");
 const localAsset = path => {
   if (!/^assets\/(?:r7-[ABC]\.glb\.gz|r7-walk-[ABC]\.json|r7-walking-index\.json)$/.test(path)) throw new Error("許可されていない歩行アセットです");
   return path;
 };
 async function bytesAt(path, hash) {
-  const response = await fetch(localAsset(path));
+  const response = await fetch(asset(localAsset(path)));
   if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
   const bytes = await response.arrayBuffer();
   if (hash && await checksum(bytes) !== hash) throw new Error("歩行データのハッシュが一致しません");
@@ -30,7 +31,8 @@ export function createWalkingViewer({ onError }) {
   const canvas = renderer.domElement;
   canvas.tabIndex = 0;
   canvas.setAttribute("role", "img");
-  canvas.setAttribute("aria-label", "r7全体の連続歩行3D。地面・風車・歯車・六脚を表示します。");
+  canvas.setAttribute("aria-label", l("r7全体の連続歩行3D。地面・風車・歯車・六脚を表示します。",
+    "Whole-machine r7 continuous walking 3D, showing ground, rotor, gears and six legs."));
   canvas.setAttribute("aria-describedby", "walk-help");
   host.replaceChildren(canvas);
   const scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(36, 1, .001, 30);
@@ -89,10 +91,12 @@ export function createWalkingViewer({ onError }) {
   function pause() {
     playing = false;
     last = null;
-    $("walk-play").textContent = "歩行を再生";
+    $("walk-play").textContent = l("歩行を再生", "Play walking");
     $("walk-play").setAttribute("aria-pressed", "false");
     $("walk-stats").dataset.playing = "false";
-    if (packet && !$("walk-workspace").inert) $("walk-status").textContent = `${packet.designId}案の連続歩行は停止中です。位相・速度・視点を操作できます。`;
+    if (packet && !$("walk-workspace").inert) $("walk-status").textContent = l(
+      `${packet.designId}案の連続歩行は停止中です。位相・速度・視点を操作できます。`,
+      `Design ${packet.designId} continuous walking is paused. Adjust phase, speed and viewpoint.`);
     schedule();
   }
   function play() {
@@ -100,11 +104,13 @@ export function createWalkingViewer({ onError }) {
     playing = !playing;
     if (playing) { scrubbed = false; phaseCycle = Math.floor(theta / TAU); }
     last = null;
-    $("walk-play").textContent = playing ? "歩行を一時停止" : "歩行を再生";
+    $("walk-play").textContent = playing ? l("歩行を一時停止", "Pause walking") : l("歩行を再生", "Play walking");
     $("walk-play").setAttribute("aria-pressed", String(playing));
     $("walk-status").textContent = playing
-      ? `${packet.designId}案の連続歩行を再生中です。規定入力120 rpmの計算表示です。`
-      : `${packet.designId}案の連続歩行は停止中です。位相・速度・視点を操作できます。`;
+      ? l(`${packet.designId}案の連続歩行を再生中です。規定入力120 rpmの計算表示です。`,
+        `Design ${packet.designId} continuous walking is playing. Calculated display with prescribed 120 rpm input.`)
+      : l(`${packet.designId}案の連続歩行は停止中です。位相・速度・視点を操作できます。`,
+        `Design ${packet.designId} continuous walking is paused. Adjust phase, speed and viewpoint.`);
     schedule();
   }
   function clearPaths() {
@@ -216,11 +222,16 @@ export function createWalkingViewer({ onError }) {
       $("walk-phase").value = String(phaseDegrees);
     }
     $("walk-phase-label").textContent = `${Number($("walk-phase").value).toFixed(1)}°`;
-    $("walk-distance").textContent = `${pose.forwardMm.toFixed(1)} mm（${(pose.forwardMm / 10).toFixed(1)} cm）`;
-    $("walk-seconds").textContent = `${pose.seconds.toFixed(1)} 秒`;
-    $("walk-crank").textContent = `${(60 / motion.cycleSeconds).toFixed(3)} rpm ／ ${pose.cycle}周期`;
-    $("walk-contact").textContent = `${loaded} / 6脚 ／ ${pose.inputDegUnwrapped.toFixed(1)}°`;
-    $("walk-timing").textContent = `${packet.designId}案 · 規定入力120 rpm · ${Math.abs(packet.inputTurnsPerCrank)}:1 · 時間${$("walk-speed").value === "1" ? "倍率1×" : `圧縮${$("walk-speed").value}×`} · 1周期 ${motion.cycleSeconds.toFixed(0)}秒（規定時間）`;
+    $("walk-distance").textContent = l(`${pose.forwardMm.toFixed(1)} mm（${(pose.forwardMm / 10).toFixed(1)} cm）`,
+      `${pose.forwardMm.toFixed(1)} mm (${(pose.forwardMm / 10).toFixed(1)} cm)`);
+    $("walk-seconds").textContent = l(`${pose.seconds.toFixed(1)} 秒`, `${pose.seconds.toFixed(1)} s`);
+    $("walk-crank").textContent = l(`${(60 / motion.cycleSeconds).toFixed(3)} rpm ／ ${pose.cycle}周期`,
+      `${(60 / motion.cycleSeconds).toFixed(3)} rpm / ${pose.cycle} cycles`);
+    $("walk-contact").textContent = l(`${loaded} / 6脚 ／ ${pose.inputDegUnwrapped.toFixed(1)}°`,
+      `${loaded} / 6 feet / ${pose.inputDegUnwrapped.toFixed(1)}°`);
+    $("walk-timing").textContent = l(
+      `${packet.designId}案 · 規定入力120 rpm · ${Math.abs(packet.inputTurnsPerCrank)}:1 · 時間${$("walk-speed").value === "1" ? "倍率1×" : `圧縮${$("walk-speed").value}×`} · 1周期 ${motion.cycleSeconds.toFixed(0)}秒（規定時間）`,
+      `Design ${packet.designId} · Prescribed input 120 rpm · ${Math.abs(packet.inputTurnsPerCrank)}:1 · ${$("walk-speed").value === "1" ? "1× prescribed time" : `${$("walk-speed").value}× time compression`} · 1 cycle ${motion.cycleSeconds.toFixed(0)} s (prescribed time)`);
     const stats = $("walk-stats");
     stats.dataset.phase = String(phaseDegrees);
     stats.dataset.seconds = String(pose.seconds);
@@ -230,10 +241,14 @@ export function createWalkingViewer({ onError }) {
     stats.dataset.playing = String(playing);
     stats.dataset.body = JSON.stringify(pose.body);
     stats.dataset.crank = JSON.stringify(pose.groups[packet.motionGroups.findIndex(m => m.kind === "crank")]);
-    stats.textContent = `全${records.length + springs.length}点（うち12本は座を保持した手続きばね）／`
+    stats.textContent = l(`全${records.length + springs.length}点（うち12本は座を保持した手続きばね）／`
       + `最大圧縮 ${Math.max(...pose.feet.map(f => f.compression)).toFixed(3)} mm／`
       + `最小パッドZ ${Math.min(...pose.feet.map(f => f.padMinimum)).toFixed(6)} mm。`
-      + `原モデルの荷重期間最大滑り ${packet.sourceSlipMaximumMm.toFixed(2)} mmは未解消。`;
+      + `原モデルの荷重期間最大滑り ${packet.sourceSlipMaximumMm.toFixed(2)} mmは未解消。`,
+      `${records.length + springs.length} total instances (including 12 procedural springs retaining their seats) / `
+      + `maximum compression ${Math.max(...pose.feet.map(f => f.compression)).toFixed(3)} mm / `
+      + `minimum pad Z ${Math.min(...pose.feet.map(f => f.padMinimum)).toFixed(6)} mm. `
+      + `The source model's maximum loaded-episode slip of ${packet.sourceSlipMaximumMm.toFixed(2)} mm remains unresolved.`);
   }
   function tick(time) {
     pending = false;
@@ -251,7 +266,7 @@ export function createWalkingViewer({ onError }) {
     } catch (error) {
       playing = false;
       last = null;
-      $("walk-play").textContent = "歩行を再生";
+      $("walk-play").textContent = l("歩行を再生", "Play walking");
       $("walk-play").setAttribute("aria-pressed", "false");
       $("walk-stats").dataset.playing = "false";
       onError(error);
@@ -377,7 +392,8 @@ export function createWalkingViewer({ onError }) {
     }
     box.min.y = Math.min(0, box.min.y);
     box.expandByScalar(.012);
-    $("walk-source").textContent = `${data.revisionId} / ${data.source.geometryRevision} / 機械artifact ${data.source.artifactCommit} / contact SHA256 ${data.source.contactFramesSha256}`;
+    $("walk-source").textContent = `${data.revisionId} / ${data.source.geometryRevision} / `
+      + l("機械artifact ", "mechanical artifact ") + `${data.source.artifactCommit} / contact SHA256 ${data.source.contactFramesSha256}`;
     transparency(); fit(); schedule();
   }
   return { load, clear };

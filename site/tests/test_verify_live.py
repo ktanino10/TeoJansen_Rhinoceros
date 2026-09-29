@@ -19,6 +19,11 @@ class LiveVerificationTests(unittest.TestCase):
     def fixture_fetch(self, url):
         if url in self.manifest.get("external_images", {}):
             return (ROOT / self.manifest["external_images"][url]["source"]).read_bytes()
+        raw_prefix = f"https://raw.githubusercontent.com/ktanino10/TeoJansen_Rhinoceros/{self.manifest['source_commit']}/"
+        if url.startswith(raw_prefix):
+            path = url.removeprefix(raw_prefix)
+            self.assertIn(path, verify_live.DOCUMENT_EXAMPLES)
+            return (ROOT / path).read_bytes()
         self.assertTrue(url.startswith(verify_live.PUBLIC_URL))
         path = url.removeprefix(verify_live.PUBLIC_URL)
         return (self.output / path).read_bytes()
@@ -26,11 +31,12 @@ class LiveVerificationTests(unittest.TestCase):
     def test_all_pages_assets_and_source_hashes_are_checked(self):
         with patch.object(verify_live, "fetch_bytes", side_effect=self.fixture_fetch) as fetch:
             report = verify_live.verify(self.manifest["source_commit"])
-        self.assertEqual(report["pages"], 7)
+        self.assertEqual(report["pages"], 14)
         self.assertEqual(report["assets"], len(self.manifest["assets"]))
         self.assertEqual(report["all_gets"], 200)
         self.assertEqual(report["external_images"], 1)
-        self.assertEqual(fetch.call_count, 1 + 7 + 10 + len(self.manifest["assets"]) + 1)
+        self.assertEqual(report["english_documents"], 3)
+        self.assertEqual(fetch.call_count, 1 + 14 + len(verify_live.STATIC_FILES) + len(self.manifest["assets"]) + 1 + 3)
 
     def test_stale_commit_and_external_paths_are_rejected(self):
         with self.assertRaisesRegex(ValueError, "Published commit differs"):

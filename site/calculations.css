@@ -24,7 +24,7 @@
 .calculation-topic > h3 { font-size: 1.5rem; }
 .calculation-figure-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; }
 .calculation-figure { margin: 28px 0; padding: 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); }
-.calculation-figure h4 { font-size: 1.14rem; }
+.calculation-figure :is(h3, h4) { font-size: 1.14rem; }
 .calculation-figure img { background: #101722; }
 .calculation-figure figcaption { font-size: 0.85rem; }
 .calculation-figure figcaption p { margin-bottom: 10px; }

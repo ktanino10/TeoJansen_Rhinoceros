@@ -146,10 +146,11 @@ def figure(stem, record, source):
             if kind == "deflection" else
             "図は原典のままです。loadcase IDは資料の管理キーで、図中の低・名目・高抵抗や角度の区別は凡例を優先してください。")
     href = asset_name(record["file"])
+    heading = "h4" if record["designId"] else "h3"
     figure_units = record["figureUnits"].replace("mN*m", "mN·m").replace("deg_or_scenario_index", "角度°／ケース番号").replace(",", "・")
     return f'''<figure class="media calculation-figure" id="figure-{stem}" data-figure="{stem}"
       data-revision="{escape(record["revisionId"])}" data-design="{record["designId"] or "shared"}">
-      <h4>{escape(title)}</h4>
+      <{heading}>{escape(title)}</{heading}>
       <img src="{href}" alt="{escape(title)}。{escape(METHODS[kind])} 支点・荷重・単位は図と説明に記載。"
         width="{width}" height="{height}" loading="lazy" decoding="async">
       <p class="media-error" role="status" hidden>図を読み込めませんでした。下の原典SVGをご確認ください。</p>

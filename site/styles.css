@@ -251,3 +251,38 @@ summary { cursor: pointer; font-weight: 700; padding: 4px 0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.language-switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .65rem;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: .35rem clamp(1rem, 4vw, 3rem) .65rem;
+  font-size: .9rem;
+}
+.language-switch a {
+  padding: .35rem .55rem;
+  border-radius: .25rem;
+  text-underline-offset: .2em;
+}
+.language-switch [aria-current="page"] {
+  font-weight: 750;
+  text-decoration: none;
+}
+html[lang="en"] :is(h1, h2, h3, th, td, .small-note) {
+  overflow-wrap: anywhere;
+}
+html[lang="en"] .header-inner > nav {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0 .8rem;
+}
+html[lang="en"] .header-inner > nav a {
+  flex: 0 0 auto;
+  max-width: 100%;
+  overflow-wrap: normal;
+}
+@media (max-width: 720px) {
+  html[lang="en"] .header-inner > nav { justify-content: flex-start; }
+}

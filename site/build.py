@@ -293,7 +293,7 @@ def validate(output: Path, manifest: dict) -> None:
                 if split.scheme != "https":
                     raise ValueError(f"Insecure or unsupported external link: {url}")
                 continue
-            target = (output / unquote(split.path or name)).resolve()
+            target = ((output / name).parent / unquote(split.path)).resolve() if split.path else (output / name).resolve()
             if split.path.startswith("/") or not target.is_relative_to(output):
                 raise ValueError(f"Repository-subpath unsafe link: {url}")
             if not target.is_file():
@@ -314,7 +314,7 @@ def validate(output: Path, manifest: dict) -> None:
                     raise ValueError("External image is not a fixed, dimensioned source reference")
     actual = {str(path.relative_to(output)) for path in output.rglob("*") if path.is_file()}
     expected = {*manifest["pages"], "styles.css", "viewer.css", "calculations.css", "r7.css", "app.js", "viewer-loader.js", "calculations.js",
-                "favicon.svg", ".nojekyll", "build-manifest.json",
+                "favicon.svg", "i18n.js", ".nojekyll", "build-manifest.json",
                 *manifest["assets"].keys()}
     if "walking.html" in manifest["pages"]:
         expected.update(("walking.css", "walking-loader.js"))
@@ -434,12 +434,18 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
                       lambda match: figure(match[1], match[2], match[3], ref), html)
         html = re.sub(r"\{\{(source|tree|download):([^}]+)\}\}",
                       lambda match: escape(source_url(match[1], match[2], ref), quote=True), html)
+        if not include_r7 and 'src="i18n.js"' not in html:
+            html = html.replace("<head>", '<head>\n<script src="i18n.js" defer></script>')
         (output / name).write_text(html)
-    static_files = ["styles.css", "viewer.css", "calculations.css", "r7.css", "app.js", "viewer-loader.js", "calculations.js", "favicon.svg"]
+    static_files = ["styles.css", "viewer.css", "calculations.css", "r7.css", "app.js", "i18n.js", "viewer-loader.js", "calculations.js", "favicon.svg"]
     if include_r7:
         static_files.extend(("walking.css", "walking-loader.js"))
     for name in static_files:
         shutil.copyfile(SITE / name, output / name)
+    if include_r7:
+        from localization import build_locales
+        assets.update(build_locales(output, pages, ref))
+        pages = (*pages, *(f"en/{page}" for page in pages))
     (output / ".nojekyll").write_text("")
     manifest = {"schema": 1, "repository": REPOSITORY, "source_commit": ref, "pages": list(pages),
                 "repository_subpath": f"/{SLUG}/",
@@ -452,6 +458,10 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
                 "calculation_source": calculation_source,
                 "cartridge_source": cartridge_source, "external_images": external_images,
                 "note": "Only selected display derivatives and existing media are deployed. Exact-mesh GLBs are opt-in display data; native CAD/STL/BOM downloads remain on GitHub."}
+    if include_r7:
+        manifest["locales"] = {"default": "ja", "english_prefix": "en/",
+                              "source_catalog_sha256": sha256(SITE / "locales/sources.json"),
+                              "english_catalog_sha256": sha256(SITE / "locales/en.json")}
     (output / "build-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     if validate_output:
         validate(output, manifest)

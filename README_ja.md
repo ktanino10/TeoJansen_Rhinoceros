@@ -1,6 +1,10 @@
 # テオ・ヤンセン リノセウス 試作2号機  
 🇺🇸 [English version available here](./README.md)
 
+**サイト：** [日本語](https://ktanino10.github.io/TeoJansen_Rhinoceros/) · [English](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/)
+
+**資料：** [日本語資料と英語版の対応一覧](docs/README_ja.md) · [使い方・資料の凡例](docs/USER_GUIDE_ja.md)。CAD・数値データは共通で、Ver.1原図PDFは日本語のまま保持します。
+
 ---
 
 ## 背景  
@@ -564,4 +568,6 @@ Copilot を活用すると、開発スピードが向上するだけでなく、
 
 **Ver.3第一カットを詳しく見る：** [Ver.2からの変更と確認状況の画像付きMatrix](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html) / [A・B・Cの360°・部品選択・具体的組立ガイド](https://ktanino10.github.io/TeoJansen_Rhinoceros/viewer.html) — 既存CADの全メッシュと部品IDを使う表示資料です。準備・部分組立・一時取外しを区別し、実機未検証・接地目標未達・Bの入力不足を保持しています。
 
-**r7床是正版：** [三案の比較・360°・12工程・同版CG／診断図・正規ダウンロード](https://ktanino10.github.io/TeoJansen_Rhinoceros/r7.html) — 全2285部品の床是正後の版です。材料費24,000円／台の承認目安と工具・送料・税を分け、元5点＋新C歯車2点の層確認を記載しています。実機未検証・合格歩行機0、完全なCAD歩行動画は未生成です。第一カット・研究資料・旧反例は履歴として保持しています。
+**r7床是正版：** [三案の比較・360°・12工程・同版CG／診断図・正規ダウンロード](https://ktanino10.github.io/TeoJansen_Rhinoceros/r7.html) — 全2285部品の床是正後の版です。材料費24,000円／台の承認目安と工具・送料・税を分け、元5点＋新C歯車2点の層確認を記載しています。実機未検証・合格歩行機0です。第一カット・研究資料・旧反例は履歴として保持しています。
+
+**連続歩行：** [対話3Dと日英の歩行動画](https://ktanino10.github.io/TeoJansen_Rhinoceros/walking.html)は、規定入力120 rpmの別版の運動学・準静的表示です。接地再整合・空中ロッカー・ばねの表示仮定を明示し、動画は時間圧縮16×です。実風による自己始動・実30 cm歩行の実証ではなく、正規解析のロッカー角nullも変更しません。

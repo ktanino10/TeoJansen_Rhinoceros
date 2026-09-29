@@ -1,0 +1,488 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguage": "ja",
+  "englishSitePrefix": "en/",
+  "pagePairs": [
+    {
+      "ja": "index.html",
+      "en": "en/index.html"
+    },
+    {
+      "ja": "production.html",
+      "en": "en/production.html"
+    },
+    {
+      "ja": "comparison.html",
+      "en": "en/comparison.html"
+    },
+    {
+      "ja": "viewer.html",
+      "en": "en/viewer.html"
+    },
+    {
+      "ja": "calculations.html",
+      "en": "en/calculations.html"
+    },
+    {
+      "ja": "r7.html",
+      "en": "en/r7.html"
+    },
+    {
+      "ja": "walking.html",
+      "en": "en/walking.html"
+    }
+  ],
+  "engineeringInvariant": "Translation only: no CAD, kinematics, physics, quantities, prices, release status or qualification changes.",
+  "entries": [
+    {
+      "source": "docs/ver3/DESIGN_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "1751d32707447164ab5b30562961aa254eff08529389edfbdf06e7810b632228",
+      "target": "docs/ver3/DESIGN_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "f8a6ec006521f1c8f145790b1665aaf4fa1019d373bfe72415f27a65bd6480fa",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/ASSEMBLY_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "531fee38939b848a58a7b2d4d98a59ea927f72f80a0afeca2ceb94770a057616",
+      "target": "docs/ver3/ASSEMBLY_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "fe1d0b143cafe00346c6afd56d916edaf87464aec66c713d952e15dd97594b1c",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/REVIEW_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "1a7ad82e2b4366130d5654dcb9819ee2e3a1d23e465ee8eb1dfa99c16a88f58a",
+      "target": "docs/ver3/REVIEW_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "823581305697f9fc15f84f7b8a31e0ceff3d4c49d8e8a6cd9638765b83471726",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/commercial_basis_r3/DESIGN_GATE_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "3d1ac38b0d92d8dc49ce1a525ea870f0dc450a73c117df2a6d03fc4cbd880368",
+      "target": "docs/ver3/commercial_basis_r3/DESIGN_GATE_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "c6e18b5d25da10c9fad072b832a72a235130ad2ad8eb2e1995812bf0d3f0f0fe",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/commercial_basis_r3/V2_CHECK_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "93ae46cdda304243b5b5683a59862208c1d47d6ddad47ac7a0156fedc5a294a1",
+      "target": "docs/ver3/commercial_basis_r3/V2_CHECK_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "b99b61a3ac7475fc79f89efbeae42631ad4fa537c127c11384a67b5415fa8e4f",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/common_input_r4/README_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "85509d69ae32ea690813f2ff591a5b669c379f4e1ef80a25ecb1a6807ac23db8",
+      "target": "docs/ver3/common_input_r4/README_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "8c6b90c559d7875da53a0b711a32b7fd16b7485435742e82b13ea1beb4185b3f",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/common_input_r4/ASSEMBLY_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "75095ecd6051ff8c18796e634a3bb7f79c1be22b6fe8187d0f0531d7dced68d0",
+      "target": "docs/ver3/common_input_r4/ASSEMBLY_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "6bcf446aee51afa49f6f5c6c4eb221a551f5a3a403e255b3c02cb06e63b139d1",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/integrated_r7/README_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "cd8bf579f31b2316acab4d63d9c7b04016f498f3dcd0c633e6b3f991be0511b8",
+      "target": "docs/ver3/integrated_r7/README_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "ef85e23dd8c9963f29ed3008565765d9dceb1e1b734d054d61aab7634fb246f2",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/integrated_r7/ASSEMBLY_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "b0b41df69184339e29f430740899f1e2cad6e5a9525b19df65f16457672dd69d",
+      "target": "docs/ver3/integrated_r7/ASSEMBLY_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "8faf21484ac2a4c782568697569c9a6b977ca25a050a1374bba55d0614550cda",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/integrated_r7/REVIEW_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "8093daac68b4b20cfb9f8e5a11bfb4daa3ec0aedcfa1a446aef32058a8ffe108",
+      "target": "docs/ver3/integrated_r7/REVIEW_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "c751fc1f2281030031c916f516196dd56cad5585ddd2cf81fcc86c37a02e377a",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/integrated_r7/FLOOR_CORRECTION_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "f8c2f0b6322a1d868d31d570d0dfa3f20c20d20ee5d4266dc07910f30944280d",
+      "target": "docs/ver3/integrated_r7/FLOOR_CORRECTION_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "be56fe775696eb83f2e5ba2d1aa2ccc741923ef0da8dc16898f3e8a1cda40d16",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/integrated_r7/CONTACT_FRAMES_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "bf472a485ea9bd2cb79a1290cfb8640df271071156c820c5a10b40e69df0c8f1",
+      "target": "docs/ver3/integrated_r7/CONTACT_FRAMES_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "e8243b030770a68346a3439c6c8683b58624516269d336bb6f5015cfcf807b7d",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/integrated_r7/SLICING_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "fb6df3ee3a57392dd7894fef37f7b2c97ece06357014e80230f7de2eac55f82e",
+      "target": "docs/ver3/integrated_r7/SLICING_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "d47126324f3826ff0df71f82d8fc0ce1492e2aa88996243102bf4a70c60d32ba",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/integrated_r7/A/README_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "10404b22ceb7bfd9e878878c29b75603489c364f727c986b1b9e545ceca710c3",
+      "target": "docs/ver3/integrated_r7/A/README_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "224cbd5af4bd7beb094a38e36c099ba85f7130c903bf4f5858b11038cf387cda",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/integrated_r7/B/README_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "628136ffaf8b61f5d8f73788f7aa1d980f0bfda7ae350db7e07d2b15434e327a",
+      "target": "docs/ver3/integrated_r7/B/README_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "e7600b1eb0fc7efe9ac3b1d3d02ad35bb36e9dbeece742888d409e6a2a297ed6",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/integrated_r7/C/README_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "7eb9f08eb92270fd35069ed75b254d6dbb86195eaf532cf8ab28464153e4197f",
+      "target": "docs/ver3/integrated_r7/C/README_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "e702e689d03442b57f305852990ba10b3db5b6d05f4fbb94d498416e7135de9b",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/integrated_r7/C/SLICING_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "620cdcfb9cb10f65e62d307b0ce2be9ef41f49a2f7e38064d5401177bdae3877",
+      "target": "docs/ver3/integrated_r7/C/SLICING_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "4b00148dd90241111ba8f43a1a09357e9b3b1e2a02af255bd3547394280cb4bc",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/r7_walking_v1/MODEL_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "6bf9c2c8fdf7890d9792d0bbab41c10c56d88ecbcd2977cc02bb76d606f4a1a5",
+      "target": "docs/ver3/r7_walking_v1/MODEL_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "40baca317f1e895dbf0a9e228d2020cf97ea81fd79889cdd26593445f754c70c",
+      "coverage": "full-source-prose; equations/code/data preserved"
+    },
+    {
+      "source": "docs/ver3/BOM_A.csv",
+      "sourceLanguage": "en-neutral",
+      "sourceSha256": "cddba2f1fe4f85425e8ff7b70c2819a34fe8d6c829dcca05e6f0a1378f51ab96",
+      "target": "docs/ver3/BOM_A.csv",
+      "targetLanguage": "shared",
+      "coverage": "unchanged shared BOM",
+      "rowIdentity": "part_id",
+      "rows": 99,
+      "columns": [
+        "prototype",
+        "part_id",
+        "category",
+        "quantity",
+        "specification",
+        "nominal_unit_mass_g",
+        "nominal_total_mass_g",
+        "mass_basis"
+      ]
+    },
+    {
+      "source": "docs/ver3/BOM_B.csv",
+      "sourceLanguage": "en-neutral",
+      "sourceSha256": "ac20913dba2fee4ef1a4c60e610eaa148c0704cf3adc69e272baa6868deaff9f",
+      "target": "docs/ver3/BOM_B.csv",
+      "targetLanguage": "shared",
+      "coverage": "unchanged shared BOM",
+      "rowIdentity": "part_id",
+      "rows": 94,
+      "columns": [
+        "prototype",
+        "part_id",
+        "category",
+        "quantity",
+        "specification",
+        "nominal_unit_mass_g",
+        "nominal_total_mass_g",
+        "mass_basis"
+      ]
+    },
+    {
+      "source": "docs/ver3/BOM_C.csv",
+      "sourceLanguage": "en-neutral",
+      "sourceSha256": "5f076206e03ba9eac0d33ac40a439a67c309da1be7573f73210f1d0bd8295360",
+      "target": "docs/ver3/BOM_C.csv",
+      "targetLanguage": "shared",
+      "coverage": "unchanged shared BOM",
+      "rowIdentity": "part_id",
+      "rows": 90,
+      "columns": [
+        "prototype",
+        "part_id",
+        "category",
+        "quantity",
+        "specification",
+        "nominal_unit_mass_g",
+        "nominal_total_mass_g",
+        "mass_basis"
+      ]
+    },
+    {
+      "source": "docs/ver3/common_input_r4/BOM.csv",
+      "sourceLanguage": "en-neutral",
+      "sourceSha256": "1dff98bac0aef0ab2f432993ab72b9db061d77820ade72eeb771cead263f7929",
+      "target": "docs/ver3/common_input_r4/BOM.csv",
+      "targetLanguage": "shared",
+      "coverage": "unchanged shared BOM",
+      "rowIdentity": "part_id",
+      "rows": 13,
+      "columns": [
+        "part_id",
+        "category",
+        "assembly_qty",
+        "sku",
+        "purchase_packs",
+        "purchase_pieces",
+        "minimum_lot_usd",
+        "unit_mass_g",
+        "assembly_mass_g",
+        "mass_basis",
+        "spec",
+        "source"
+      ]
+    },
+    {
+      "source": "docs/ver3/integrated_r7/A/BOM.csv",
+      "sourceLanguage": "en-neutral",
+      "sourceSha256": "7af6511d24766bee25e8cc68635e70bcaffb3f356fa8d01b6eac2c1ce97c90e2",
+      "target": "docs/ver3/integrated_r7/A/BOM.csv",
+      "targetLanguage": "shared",
+      "coverage": "unchanged shared BOM",
+      "rowIdentity": "part_id",
+      "rows": 75,
+      "columns": [
+        "part_id",
+        "category",
+        "quantity",
+        "sku",
+        "unit_nominal_mass_g",
+        "total_nominal_mass_g",
+        "basis",
+        "spec"
+      ]
+    },
+    {
+      "source": "docs/ver3/integrated_r7/B/BOM.csv",
+      "sourceLanguage": "en-neutral",
+      "sourceSha256": "c4c2217fb37089c7e20e5c36f4d00039064e72f9a27b4b0ac1ed375ef9cfccba",
+      "target": "docs/ver3/integrated_r7/B/BOM.csv",
+      "targetLanguage": "shared",
+      "coverage": "unchanged shared BOM",
+      "rowIdentity": "part_id",
+      "rows": 78,
+      "columns": [
+        "part_id",
+        "category",
+        "quantity",
+        "sku",
+        "unit_nominal_mass_g",
+        "total_nominal_mass_g",
+        "basis",
+        "spec"
+      ]
+    },
+    {
+      "source": "docs/ver3/integrated_r7/C/BOM.csv",
+      "sourceLanguage": "en-neutral",
+      "sourceSha256": "669e94f1d28aee0c6ee85b573a31b1d06ad786cfd00ffc61cff8d4753b8cc7ac",
+      "target": "docs/ver3/integrated_r7/C/BOM.csv",
+      "targetLanguage": "shared",
+      "coverage": "unchanged shared BOM",
+      "rowIdentity": "part_id",
+      "rows": 75,
+      "columns": [
+        "part_id",
+        "category",
+        "quantity",
+        "sku",
+        "unit_nominal_mass_g",
+        "total_nominal_mass_g",
+        "basis",
+        "spec"
+      ]
+    },
+    {
+      "source": "docs/ver3/r7_display_floor2/assembly_A.vtt",
+      "sourceLanguage": "ja",
+      "sourceSha256": "cfe78946ac0334b36f7dacc0861dd1f19ea659aafa1640107d88e761becce24c",
+      "target": "docs/ver3/r7_display_floor2/assembly_A_en.vtt",
+      "targetLanguage": "en",
+      "targetSha256": "8c48c8f8ee3bb62d0af694d77ee0b9662174844475d4e90a6489dd79d47bbb3e",
+      "coverage": "complete captions; cue timing unchanged"
+    },
+    {
+      "source": "docs/ver3/r7_display_floor2/assembly_B.vtt",
+      "sourceLanguage": "ja",
+      "sourceSha256": "d594ff92276f8a8a3b75f32780f64640f8e9ac3f84535ca47bb1ba23ce93ebff",
+      "target": "docs/ver3/r7_display_floor2/assembly_B_en.vtt",
+      "targetLanguage": "en",
+      "targetSha256": "ed15c268779e204af9d7bdba34117ac1b80d05ba87088dfad38f1d0327588950",
+      "coverage": "complete captions; cue timing unchanged"
+    },
+    {
+      "source": "docs/ver3/r7_display_floor2/assembly_C.vtt",
+      "sourceLanguage": "ja",
+      "sourceSha256": "cfe78946ac0334b36f7dacc0861dd1f19ea659aafa1640107d88e761becce24c",
+      "target": "docs/ver3/r7_display_floor2/assembly_C_en.vtt",
+      "targetLanguage": "en",
+      "targetSha256": "8c48c8f8ee3bb62d0af694d77ee0b9662174844475d4e90a6489dd79d47bbb3e",
+      "coverage": "complete captions; cue timing unchanged"
+    },
+    {
+      "source": "docs/ver3/r7_display_floor2/disassembly_A.vtt",
+      "sourceLanguage": "ja",
+      "sourceSha256": "e2e467aa48b2e7eed85d1f9664a3aef14b9450eda9933c3bc99a8ae2bdbc249b",
+      "target": "docs/ver3/r7_display_floor2/disassembly_A_en.vtt",
+      "targetLanguage": "en",
+      "targetSha256": "67f827141ee570e9b1096e1662171d7c483cc859ce4420f0bd374e9e97d941e4",
+      "coverage": "complete captions; cue timing unchanged"
+    },
+    {
+      "source": "docs/ver3/r7_display_floor2/disassembly_B.vtt",
+      "sourceLanguage": "ja",
+      "sourceSha256": "f7b77234b3b7647a27c9dada7363a5d752fc4ef653ae1f1082763c6da4217709",
+      "target": "docs/ver3/r7_display_floor2/disassembly_B_en.vtt",
+      "targetLanguage": "en",
+      "targetSha256": "3213abcc9601b784c904977b021f5034207f6b26363fe88ded2e57e06ead03ba",
+      "coverage": "complete captions; cue timing unchanged"
+    },
+    {
+      "source": "docs/ver3/r7_display_floor2/disassembly_C.vtt",
+      "sourceLanguage": "ja",
+      "sourceSha256": "e2e467aa48b2e7eed85d1f9664a3aef14b9450eda9933c3bc99a8ae2bdbc249b",
+      "target": "docs/ver3/r7_display_floor2/disassembly_C_en.vtt",
+      "targetLanguage": "en",
+      "targetSha256": "67f827141ee570e9b1096e1662171d7c483cc859ce4420f0bd374e9e97d941e4",
+      "coverage": "complete captions; cue timing unchanged"
+    },
+    {
+      "source": "docs/テオヤンセン2Dv1.pdf",
+      "sourceLanguage": "ja",
+      "sourceSha256": "0afd1a34352ab9fbfe220e341e75e5c71769f8575ce5b9bf27807486b9913535",
+      "target": "docs/テオヤンセン2Dv1.pdf",
+      "targetLanguage": "ja-original",
+      "coverage": "unchanged original drawing; not an English drawing"
+    },
+    {
+      "source": "docs/テオヤンセン2D図面最新.pdf",
+      "sourceLanguage": "ja",
+      "sourceSha256": "49de1c6ed53ec255e4f26b4596f789d04a75d1b04dfeb4eefda74947239bb689",
+      "target": "docs/テオヤンセン2D図面最新.pdf",
+      "targetLanguage": "ja-original",
+      "coverage": "unchanged original drawing; not an English drawing"
+    }
+  ],
+  "existingPairs": [
+    {
+      "source": "README_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "55a9de3359dd0611f785cd2f8970875e76a5052b838ac0ae9f31ae06826c4ae4",
+      "target": "README.md",
+      "targetLanguage": "en",
+      "targetSha256": "1934e057406fdc00d1bf020ed06cba1ffa5a61f64fe34284253b3b38b37e33dd",
+      "coverage": "existing historical V1/V2 production records"
+    },
+    {
+      "source": "docs/USER_GUIDE_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "5326658ad2b53bfe0258cada1a9366bb5385f2056dbf1d2cd197e6d53af1ae96",
+      "target": "docs/USER_GUIDE_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "265e79843ea6b3421b4f2c4d7fc39e8974265870f80fa3df17776eca2e7a3b70",
+      "coverage": "website and document use; shared-resource legend"
+    }
+  ],
+  "archivalOriginals": [
+    {
+      "path": "docs/ver3/feasibility_r2/GATE_ja.md",
+      "language": "ja",
+      "sourceSha256": "d9a484be92429883c7e3676aaa0075d1240cf0d4b4f5cdbcb71bedd8cae26671",
+      "coverage": "linked archival source, explicitly labeled Japanese"
+    },
+    {
+      "path": "docs/ver3/feasibility_r2/MEASUREMENT_ja.md",
+      "language": "ja",
+      "sourceSha256": "21a9d9383ca7e46b57f25efad59238128f1ad84bc41722e697d8ac6946603414",
+      "coverage": "linked archival source, explicitly labeled Japanese"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/review/FOLLOWUP_R7-I1_ja.md",
+      "language": "ja",
+      "sourceSha256": "db06c1bf63591b171b32726155642f61b2be2f1698ccd6440f9a7dad400d88bc",
+      "coverage": "linked archival source, explicitly labeled Japanese"
+    },
+    {
+      "path": "docs/ver3/integrated_r7/review/INITIAL_REVIEW_ja.md",
+      "language": "ja",
+      "sourceSha256": "96d3a3cd8adc8bf9f2da1cf09766008796bf2dceab3a130396f55f0cb2e9fbdb",
+      "coverage": "linked archival source, explicitly labeled Japanese"
+    },
+    {
+      "path": "docs/ver3/wind_module_r6/ASSEMBLY_ja.md",
+      "language": "ja",
+      "sourceSha256": "15440f5c103fd4ade602fe5558c5d8fd9dd7c8f29d93ffdcc0c13b4705b4e495",
+      "coverage": "linked archival source, explicitly labeled Japanese"
+    },
+    {
+      "path": "docs/ver3/wind_module_r6/README_ja.md",
+      "language": "ja",
+      "sourceSha256": "5b0383b6e09fb75132bc35479badfea2c5bb6158d75063d2db5ea8e879b1844f",
+      "coverage": "linked archival source, explicitly labeled Japanese"
+    },
+    {
+      "path": "docs/ver3/wind_module_r6/REVIEW_ja.md",
+      "language": "ja",
+      "sourceSha256": "79f245c4939c1d72e36d85326979261d11dc78cacb436447548255acb4299337",
+      "coverage": "linked archival source, explicitly labeled Japanese"
+    }
+  ],
+  "sharedResources": [
+    "Native CAD",
+    "STEP",
+    "STL",
+    "GLB",
+    "math JSON/CSV",
+    "original photographs",
+    "English-labeled analysis SVG"
+  ],
+  "sharedDataNotice": "Machine-readable numerical sources are shared; original source annotations can be Japanese. Use paired prose for interpretation."
+}

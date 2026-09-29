@@ -1,4 +1,5 @@
 const selector = document.getElementById("analysis-select");
+const { text: l, asset, languageLinks } = globalThis.RhinoLocale;
 const designs = [...document.querySelectorAll(".analysis-design")];
 const choice = document.getElementById("analysis-choice");
 const status = document.getElementById("analysis-status");
@@ -17,8 +18,12 @@ function showDesign(design, updateHash = false) {
     section.open = active;
   }
   selector.value = design;
-  status.textContent = `${design}案の条件付き解析を表示しています。三案とも未合格・実物未測定です。`;
-  if (updateHash) history.replaceState(null, "", `#analysis-${design}`);
+  status.textContent = l(`${design}案の条件付き解析を表示しています。三案とも未合格・実物未測定です。`,
+    `Showing design ${design}'s conditional analysis. All three designs are unqualified and physically unmeasured.`);
+  if (updateHash) {
+    history.replaceState(null, "", `#analysis-${design}`);
+    languageLinks();
+  }
 }
 
 function designFromHash() {
@@ -35,7 +40,8 @@ function zoom(value) {
   if (!figureImage) throw new Error("No calculation figure is open");
   const width = value === "fit" ? Math.min(sourceWidth, viewport.clientWidth) : sourceWidth * Number(value);
   figureImage.style.width = `${width}px`;
-  zoomStatus.textContent = `画像の表示倍率：${Math.round(width / sourceWidth * 100)}%。横・縦にスクロールできます。図の変形拡大倍率は変更していません。`;
+  zoomStatus.textContent = l(`画像の表示倍率：${Math.round(width / sourceWidth * 100)}%。横・縦にスクロールできます。図の変形拡大倍率は変更していません。`,
+    `Image zoom: ${Math.round(width / sourceWidth * 100)}%. Scroll horizontally and vertically. The figure's deformation amplification is unchanged.`);
 }
 
 for (const button of document.querySelectorAll("[data-enlarge]")) {
@@ -45,15 +51,17 @@ for (const button of document.querySelectorAll("[data-enlarge]")) {
     opener = button;
     sourceWidth = Number(button.dataset.width);
     document.getElementById("figure-dialog-title").textContent = button.dataset.title;
-    document.getElementById("dialog-svg").href = button.dataset.enlarge;
+    document.getElementById("dialog-svg").href = asset(button.dataset.enlarge);
     figureImage = document.createElement("img");
     figureImage.width = sourceWidth;
     figureImage.height = Number(button.dataset.height);
-    figureImage.alt = `${button.dataset.title}の拡大表示。元SVGと同じ計算図です。`;
+    figureImage.alt = l(`${button.dataset.title}の拡大表示。元SVGと同じ計算図です。`,
+      `Enlarged ${button.dataset.title}. The same calculation figure as the original SVG.`);
     figureImage.addEventListener("error", () => {
-      zoomStatus.textContent = "拡大図を読み込めませんでした。元SVGまたは本文の原典リンクをご確認ください。";
+      zoomStatus.textContent = l("拡大図を読み込めませんでした。元SVGまたは本文の原典リンクをご確認ください。",
+        "The enlarged figure could not load. Use the original SVG or source links in the text.");
     });
-    figureImage.src = button.dataset.enlarge;
+    figureImage.src = asset(button.dataset.enlarge);
     viewport.replaceChildren(figureImage);
     dialog.showModal();
     zoom("1");

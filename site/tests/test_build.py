@@ -88,8 +88,9 @@ class PublicBuildTests(unittest.TestCase):
         self.assertLess(opt_in, 18_000_000)
         self.assertLess(r7, 30_000_000)
         self.assertLess(walking, 16_000_000)
-        self.assertEqual(len([a for a in self.manifest["assets"].values() if a.get("bundle_group") not in {"r7", "walking"}]), 83)
-        self.assertEqual(self.manifest["pages"], ["index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html"])
+        self.assertEqual(len([a for a in self.manifest["assets"].values() if a.get("bundle_group") not in {"r7", "walking", "localization"}]), 83)
+        pages = ["index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html"]
+        self.assertEqual(self.manifest["pages"], pages + ["en/" + page for page in pages])
         for asset, data in self.manifest["assets"].items():
             self.assertEqual(hashlib.sha256((OUTPUT / asset).read_bytes()).hexdigest(), data["sha256"])
             self.assertEqual(hashlib.sha256((ROOT / data["source"]).read_bytes()).hexdigest(), data["source_sha256"])
@@ -196,7 +197,13 @@ class PublicBuildTests(unittest.TestCase):
         for tag, attrs in self.production_tags.items:
             if tag in {"img", "script", "link"}:
                 url = attrs.get("src", attrs.get("href", ""))
-                self.assertFalse(urlsplit(url).scheme, url)
+                if tag == "link" and attrs.get("rel") in {"canonical", "alternate"}:
+                    self.assertIn(url, {
+                        "https://ktanino10.github.io/TeoJansen_Rhinoceros/production.html",
+                        "https://ktanino10.github.io/TeoJansen_Rhinoceros/en/production.html",
+                    })
+                else:
+                    self.assertFalse(urlsplit(url).scheme, url)
             if tag != "a":
                 continue
             href = attrs["href"]

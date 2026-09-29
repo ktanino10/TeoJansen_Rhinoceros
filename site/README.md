@@ -1,6 +1,6 @@
 # Ver.1 / Ver.2 / Ver.3 紹介サイト
 
-既存READMEと是正済みの機械資料を読むための、日本語中心の静的サイトです。機械CAD・正規の物理結果は変更しません。`r7.html` は床是正版の比較・360°・12工程・同版CG／説明動画／限定診断図、`walking.html` は別版の運動学・準静的な表示モデルによるA/B/C連続歩行3Dと新規MP4です。`index.html` は全体紹介、`production.html` はVer.1/2製作記録、`comparison.html` と `viewer.html` は第一カットのMatrix・360°・組立履歴、`calculations.html` は別版r3の固定計算資料とr4入力軸カードです。旧動画は第一カットの履歴に限定し、新r7の歩行実証として使いません。
+既存READMEと是正済みの機械資料を読むための、日英を分離した静的サイトです。機械CAD・正規の物理結果は変更しません。`r7.html` は床是正版の比較・360°・12工程・同版CG／説明動画／限定診断図、`walking.html` は別版の運動学・準静的な表示モデルによるA/B/C連続歩行3Dと新規MP4です。`index.html` は全体紹介、`production.html` はVer.1/2製作記録、`comparison.html` と `viewer.html` は第一カットのMatrix・360°・組立履歴、`calculations.html` は別版r3の固定計算資料とr4入力軸カードです。旧動画は第一カットの履歴に限定し、新r7の歩行実証として使いません。
 
 ## ローカル生成・確認
 
@@ -9,12 +9,25 @@
 ```bash
 python3 -m pip install -r site/requirements.txt
 npm ci --prefix site --ignore-scripts
+python3 site/localization.py --documents --check
 python3 site/build.py
 npm --prefix site run test:static
 cd site
 npx playwright install chromium
 npm test
 ```
+
+## 日英のページと主要資料
+
+ルートの7ページは日本語の従来URL、`en/` の同名7ページは英語です。元テンプレート・数値adapter・3D／歩行エンジンを共有し、`localization.py` が見える本文・alt・メタデータを翻訳します。`i18n.js` は共有アセットの基準URL、動的表示、現在のクエリとアンカーを保持する言語切替を担当します。GLB・数値JSON・原画像を英語ディレクトリへ重複コピーしません。
+
+`locales/sources.json` は正規化した日本語メッセージ・出典、`en.json` はサイトと対話表示、`documents.en.json` は主要資料と組立字幕の英訳です。数字・案ID・インラインコード等は番号付きパラメーターとして保持し、欠落・重複・未訳は失敗にします。組立JSONのハッシュを確認した**後**に表示文字列だけを変え、数量・全ID・配置・経路・元hashは保持します。
+
+18主要文書は隣接する `*_en.md` へ全文の説明を生成し、固定原本を編集しません。対応・出典hash・原図／補助履歴の言語は [日本語資料一覧](../docs/README_ja.md)／[English documents](../docs/README_en.md) と `docs/translation-manifest.json` が正本です。7つのBOMは元から英語・共通項目で同一原本を参照します。旧組立MP4は共有し、英訳VTT6点は元の全キュー時刻を保持します。
+
+翻訳更新は `python3 site/localization.py --documents`、不変確認は `--documents --check`。新しい日本語を追加した場合はビルドが未訳で止まるため、生成途中の日本語出力から `python3 site/localization.py --inventory` で出典を収集し、対応する英訳を追加して再生成します。英訳文書を手で別仕様へ改訂せず、原本の改訂・版固定と翻訳を明示的に統合してください。
+
+`test_localization.py` は全パラメーター、ID・数量・座標・hashの不変、全14ページのアンカーと英語資料リンク、文書の相対リンク、字幕時刻を確認します。`localization.spec.mjs` は全ページ両言語のdesktop／375px、実CADのA/B/Cと工程、歩行再生／停止、失敗時・無JS、axe、言語切替を確認します。`verify_live.py` は実公開14ページの本文・全配信assetと代表英訳MDのGET/hashを検査します。
 
 既存Chromeを使う場合は、`PLAYWRIGHT_CHROMIUM_EXECUTABLE` にその実行ファイルを指定すればブラウザーの追加ダウンロードを省略できます。テストはヘッドレスの独立プロファイルで行い、使用中のブラウザーを操作しません。
 

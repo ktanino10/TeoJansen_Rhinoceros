@@ -38,7 +38,7 @@ jobs:
   validate:
     name: Build and browser checks
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -71,7 +71,7 @@ jobs:
         run: |
           if [ "$VERIFY_LIVE" = "true" ]; then
             python site/verify_live.py --expected-commit "$EXPECTED_COMMIT"
-            npm --prefix site test -- --grep 'versions, source-bound|production journey|3D is opt-in|mobile touch|Matrix is complete|all three concrete guides|calculation|r7 public|r7 walking'
+            npm --prefix site test -- --grep 'versions, source-bound|production journey|3D is opt-in|mobile touch|Matrix is complete|all three concrete guides|calculation|r7 public|r7 walking|localization'
           else
             npm --prefix site test
           fi
