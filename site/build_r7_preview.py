@@ -25,6 +25,42 @@ def table(headers, rows):
             + '</tbody></table></div>')
 
 
+def overview_html(guides, image, links, *, walking_url="walking.html"):
+    cards, downloads = [], []
+    for ident, guide in guides.items():
+        row = guide["summary"]
+        cards.append(f'''<article class="download-card current-design" id="current-{ident}">
+          <h3>Ver.3.1 {ident}案</h3>
+          {image(f"hero_{ident}", f"Ver.3.1 {ident}案・床是正版の実CAD由来CG。実物ではありません。")}
+          <dl class="specs">
+            <div><dt>風車径</dt><dd>{row["rotorDiameterMm"]:g} mm</dd></div>
+            <div><dt>総減速比</dt><dd>{row["reduction"]:g} : 1</dd></div>
+            <div><dt>名目全体質量</dt><dd>{row["cadMassG"]:.2f} g</dd></div>
+            <div><dt>正規部品数</dt><dd>{guide["model"]["instanceCount"]}</dd></div>
+          </dl>
+          <p>個別初回部材費：{row["firstBuildCostJpy"]:,.2f}円</p>
+          <div class="link-list"><a href="r7.html?design={ident}#viewer">{ident}の360°・12工程へ →</a>
+          <a href="{walking_url}?design={ident}#walking">{ident}の連続歩行表示へ →</a></div>
+        </article>''')
+        items = "".join(f'<li><a href="{guide["links"][key]}">{label}</a></li>' for key, label in (
+            ("native", "FreeCAD · FCStd"), ("cad", "交換用 · STEP"), ("stl", "印刷部品 · STL一覧"),
+            ("bom", "使用数量BOM · CSV"), ("stages", "正規12工程 · JSON"), ("readme", "案別の説明")))
+        downloads.append(f'<article class="download-card"><h3>Ver.3.1 {ident}案</h3><ul>{items}</ul></article>')
+    sources = "".join(f'<a href="{links[key]}">{label}</a>' for key, label in (
+        ("readme", "Ver.3.1 全体設計資料"), ("contract", "統合契約・原本ハッシュ"),
+        ("comparisonCsv", "床是正版の比較CSV"), ("floorCorrection", "床是正と有限検査の範囲"),
+        ("slicingReport", "代表5点の層確認"), ("cSlicing", "C追加2点の層確認"),
+        ("stockTools", "市販締結品とDN-03"), ("contactFrames", "保存接地フレームの近似"),
+        ("accessories", "試験片・組立台"), ("sharedLots", "共同購入lot（個別費用とは別）")))
+    return {
+        "{{current_hero}}": image("comparison", "Ver.3.1のA・B・Cを同一尺度で並べた床是正版CG。実物ではありません。", eager=True),
+        "{{current_cards}}": "".join(cards), "{{current_downloads}}": "".join(downloads),
+        "{{current_sources}}": f'<a href="r7.html#r7-guides">Ver.3.1 全案の12工程・組立資料</a>' + sources,
+        "{{current_walk_link}}": f'<a class="text-link" href="{walking_url}">Ver.3.1の連続歩行表示 →</a>',
+        "{{current_revision}}": guides["A"]["revision"]["revisionId"],
+    }
+
+
 def comparison_html(guides, snapshot):
     cards = []
     for ident, guide in guides.items():
@@ -108,7 +144,7 @@ def static_guides(guides):
                          + (f'<details><summary>操作境界に対応する有限経路標本</summary><ul class="r7-path-list">{route_items}</ul></details>' if routes else "")
                          + '</article>')
         sections.append(f'<section class="static-guide" id="r7-guide-{ident}" aria-labelledby="r7-guide-{ident}-title">'
-                        f'<h3 id="r7-guide-{ident}-title">r7 {ident}案 · 12工程／{guide["model"]["instanceCount"]}点</h3>'
+                        f'<h3 id="r7-guide-{ident}-title">Ver.3.1 {ident}案 · 12工程／{guide["model"]["instanceCount"]}点</h3>'
                         f'<div class="r7-downloads">{downloads}</div>{"".join(items)}</section>')
     return "".join(sections)
 
@@ -188,6 +224,13 @@ def create_preview():
             ("accessories", "別枠の試験片・組立台"), ("sharedLots", "共同購入lot（個別費用とは別）"))
             for url in [catalog["links"][key]]),
     }
+    def preview_image(stem, caption, *, eager=False):
+        if stem == "comparison":
+            return "".join(fallbacks)
+        return fallbacks[list(guides).index(stem[-1])]
+
+    substitutions.update(overview_html(guides, preview_image, catalog["links"],
+                                      walking_url="https://ktanino10.github.io/TeoJansen_Rhinoceros/walking.html"))
     html = (ROOT / "site/r7.html").read_text()
     for key, value in substitutions.items():
         html = html.replace(key, value)
@@ -197,7 +240,10 @@ def create_preview():
               '<a href="r7.html">別版r7候補を表示</a> · r7の公開・合格を意味しません。</aside>')
     for page in public_manifest["pages"]:
         path = OUTPUT / page
-        text = path.read_text().replace('<main id="main" tabindex="-1">', '<main id="main" tabindex="-1">' + banner)
+        text = path.read_text()
+        for key, value in substitutions.items():
+            text = text.replace(key, value)
+        text = re.sub(r'(<main\b[^>]*>)', lambda match: match[1] + banner, text, count=1)
         text = text.replace('</head>', '<link rel="stylesheet" href="r7.css">\n</head>')
         path.write_text(text)
     handoff = {

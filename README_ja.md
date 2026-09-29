@@ -1,9 +1,21 @@
-# テオ・ヤンセン リノセウス 試作2号機  
+# テオ・ヤンセン リノセウス — Ver.3.1と試作の記録
 🇺🇸 [English version available here](./README.md)
 
 **サイト：** [日本語](https://ktanino10.github.io/TeoJansen_Rhinoceros/) · [English](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/)
 
 **資料：** [日本語資料と英語版の対応一覧](docs/README_ja.md) · [使い方・資料の凡例](docs/USER_GUIDE_ja.md)。CAD・数値データは共通で、Ver.1原図PDFは日本語のまま保持します。
+
+## Ver.3.1 — 現行設計
+
+[現行の比較・360°・12工程](https://ktanino10.github.io/TeoJansen_Rhinoceros/r7.html) · [連続歩行表示と日本語動画](https://ktanino10.github.io/TeoJansen_Rhinoceros/walking.html) · [現行CAD・STEP・STL・BOMのダウンロード](https://ktanino10.github.io/TeoJansen_Rhinoceros/index.html#downloads)
+
+![Ver.3.1の床是正版A・B・Cを同一尺度で比較。実物ではなくCAD由来のCG](docs/ver3/r7_display_floor2/comparison.png)
+
+**Ver.3.1は、既存の床是正版につけた公開名です。新しい機械改訂ではありません。** 内部設計IDは `v3-integrated-walkers-r7-16-floor2`。確定成果物・入力コミットとハッシュは[出典契約](site/r7-source.json)のままです。[設計とBOMの入口](docs/ver3/integrated_r7/README_ja.md) · [組立](docs/ver3/integrated_r7/ASSEMBLY_ja.md) · [床是正](docs/ver3/integrated_r7/FLOOR_CORRECTION_ja.md) · [別版の歩行表示モデル](docs/ver3/r7_walking_v1/MODEL_ja.md)。
+
+`manufacturingRelease=false`、実機合格0、実風・実自己始動・実30 cm歩行はUNKNOWN。代表7部品の層確認は全機の実造形・はめあい認定ではありません。歩行は規定入力120 rpm・16倍の計算表示で、実測ではありません。媒体に残るr7表記もこのVer.3.1形状を指し、元の物理結果・null・BOMは変更していません。
+
+**版の案内：** Ver.1/2＝過去の実物記録、[Ver.3.0＝初期比較案・旧CADと動画の履歴](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html)、Ver.3.1＝現行設計。内部研究r2/r3/r4/r6は作品の公開版番号ではありません。以下の製作ログは当時のVer.1/2の記録を保持しています。
 
 ---
 
@@ -524,13 +536,15 @@ Copilot を活用すると、開発スピードが向上するだけでなく、
 
 ---
 
-## Ver.3 — 実形状を伴う三つの比較試作
+## Ver.3.0 — 初期比較案（履歴）
+
+> 第一カットの保存資料です。**現行設計・現在の推奨ダウンロードではありません。** 以下の原資料の「Ver.3」は、このVer.3.0を指します。床是正版は[Ver.3.1の現行設計・資料](https://ktanino10.github.io/TeoJansen_Rhinoceros/index.html#ver3)をご覧ください。
 
 **FreeCAD・STEP・印刷部品・部品表・組立資料・Blender 可視化を揃えた、レビュー用の第一カットです。製造リリースや、風で自律的に始動・歩行する実機性能の確認ではありません。**
 
 主故障を「風車・歯車と棒の接合部が滑って一体で回らないこと」と捉え、**8 mm REX 軸の平面と金属ハブの形状係合、ボルト接続、軸端止め、内輪専用スペーサ、脱着ガード**へ変更しました。カラーをトルクキーの代用にはしていません。軸受の焼付きは確認された原因ではなく、摩擦・芯ずれは別途測定する仮説です。
 
-![Ver.3 三案の実寸スケール比較 CG](./docs/ver3/media/comparison.png)
+![履歴のVer.3.0 三案の実寸スケール比較CG](./docs/ver3/media/comparison.png)
 
 | 案 | 風車径 × 幅 | 駆動とトレードオフ | ネイティブ・交換形式 | 印刷部品・部品表 |
 |---|---:|---|---|---|
@@ -562,12 +576,12 @@ Copilot を活用すると、開発スピードが向上するだけでなく、
 
 ここで実行した GD は**パラメトリック生成設計**です。Autodesk Generative Design、CFD、トポロジー最適化や実機試験を実行したとは称しません。Ver.3 の STL は **実寸 mm・100%**で、過去の 150% 設定を重ねません。Ver.2 の未提供ネイティブ CAD を復元したものでも、無加工の差替え部品でもありません。
 
-**作品紹介サイト：** [Ver.1・Ver.2・Ver.3の制作記録と資料をまとめて見る](https://ktanino10.github.io/TeoJansen_Rhinoceros/) — 実物写真と設計CGの区別、規定歩行動画、版ごとのダウンロードを掲載。Ver.3の実機未検証・接地目標未達の制限も併記しています。
+**作品紹介サイト：** [現行Ver.3.1とVer.1/2/3.0の履歴を見る](https://ktanino10.github.io/TeoJansen_Rhinoceros/) — 各ページから同内容の英語版へ切り替えられます。現行と旧版の形状・媒体・配布先を分け、実機未検証の制限を保持しています。
 
 **写真でたどる製作記録：** [Ver.1の設計・出力・仕上げ・組立](https://ktanino10.github.io/TeoJansen_Rhinoceros/production.html#ver1) / [Ver.2への改良・完成写真・テスト](https://ktanino10.github.io/TeoJansen_Rhinoceros/production.html#ver2) — 本READMEの工程と版対応を整理し、各版6方向の実写真と参考図への導線をまとめています。未記録のVer.2専用工程やネイティブCADを復元したものではありません。
 
-**Ver.3第一カットを詳しく見る：** [Ver.2からの変更と確認状況の画像付きMatrix](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html) / [A・B・Cの360°・部品選択・具体的組立ガイド](https://ktanino10.github.io/TeoJansen_Rhinoceros/viewer.html) — 既存CADの全メッシュと部品IDを使う表示資料です。準備・部分組立・一時取外しを区別し、実機未検証・接地目標未達・Bの入力不足を保持しています。
+**Ver.3.0の履歴：** [初期案のMatrix・旧動画・旧配布資料](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html) / [旧A・B・Cの360°・組立ガイド](https://ktanino10.github.io/TeoJansen_Rhinoceros/viewer.html) — 元のCADメッシュ・部品IDと、第一カットの接地目標未達・Bの入力不足などの制限を保持しています。
 
-**r7床是正版：** [三案の比較・360°・12工程・同版CG／診断図・正規ダウンロード](https://ktanino10.github.io/TeoJansen_Rhinoceros/r7.html) — 全2285部品の床是正後の版です。材料費24,000円／台の承認目安と工具・送料・税を分け、元5点＋新C歯車2点の層確認を記載しています。実機未検証・合格歩行機0です。第一カット・研究資料・旧反例は履歴として保持しています。
+**Ver.3.1現行設計（内部r7/floor2）：** [比較・360°・12工程・現行ダウンロード](https://ktanino10.github.io/TeoJansen_Rhinoceros/r7.html) — 全2285部品を保持し、部材費24,000円の目安と工具・送料・未確定税を分けています。代表7点の層確認は実造形の認定ではありません。実機未検証・合格歩行機0で、第一カットと内部研究は履歴として残します。
 
 **連続歩行：** [対話3Dと日英の歩行動画](https://ktanino10.github.io/TeoJansen_Rhinoceros/walking.html)は、規定入力120 rpmの別版の運動学・準静的表示です。接地再整合・空中ロッカー・ばねの表示仮定を明示し、動画は時間圧縮16×です。実風による自己始動・実30 cm歩行の実証ではなく、正規解析のロッカー角nullも変更しません。

@@ -10,6 +10,57 @@ async function englishSurface(page, selector = "body") {
 }
 
 for (const locale of ["ja", "en"]) {
+  test(`localization ${locale} current version journey: home, exact CAD, assembly, walking and downloads`, async ({ page }, testInfo) => {
+    test.setTimeout(240_000);
+    const prefix = locale === "en" ? "en/" : "";
+    const manifest = await (await page.request.get("build-manifest.json")).json();
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto(`${prefix}index.html#ver3`);
+    await expect(page.locator("#ver3")).toHaveAttribute("data-engineering-revision", manifest.r7_source.revisionId);
+    for (const design of ["A", "B", "C"]) {
+      await page.locator(`#current-${design} a[href^="r7.html?"]`).click();
+      await expect(page).toHaveURL(new RegExp(`/${prefix}r7\\.html\\?design=${design}#viewer$`));
+      await expect(page.locator("h1")).toContainText("Ver.3.1");
+      await page.locator("#load-viewer").click();
+      await expect(page.locator("#viewer-workspace")).toHaveAttribute("aria-busy", "false", { timeout: 80_000 });
+      await expect(page.locator("#instance-count")).toHaveAttribute("data-visible", design === "B" ? "785" : "750");
+      await expect(page.locator("#step-select option")).toHaveCount(13);
+      await page.locator("#step-first").click();
+      await expect(page.locator("#instance-count")).toHaveAttribute("data-visible", "0");
+      await page.locator("#step-next").click();
+      await expect(page.locator("#stage-title")).not.toBeEmpty();
+      await page.locator("#step-complete").click();
+      await expect(page.locator("#instance-count")).toHaveAttribute("data-visible", design === "B" ? "785" : "750");
+      await page.locator("[data-language-link]").click();
+      await expect(page.locator("html")).toHaveAttribute("lang", locale === "en" ? "ja" : "en");
+      await expect(page).toHaveURL(new RegExp(`r7\\.html\\?design=${design}#viewer$`));
+      await page.goto(`${prefix}index.html#ver3`);
+    }
+    await page.locator('#current-C a[href^="walking.html?"]').click();
+    await expect(page).toHaveURL(new RegExp(`/${prefix}walking\\.html\\?design=C#walking$`));
+    await expect(page.locator("h1")).toContainText("Ver.3.1");
+    await expect(page.locator("#walking-version-note")).toContainText("r7-floor2-walking-kinematic-v1");
+    await page.locator("#walk-load").click();
+    await expect(page.locator("#walk-workspace")).toHaveAttribute("aria-busy", "false", { timeout: 90_000 });
+    await expect(page.locator("#walk-stats")).toHaveAttribute("data-drawn", "750");
+    await page.locator("#walk-cycle").click();
+    await expect.poll(async () => Number(await page.locator("#walk-stats").getAttribute("data-forward"))).toBeGreaterThan(92);
+    await page.goto(`${prefix}index.html#downloads`);
+    for (const design of ["A", "B", "C"]) {
+      const guide = await (await page.request.get(`assets/r7-assembly-${design}.json`)).json();
+      for (const key of ["native", "cad", "stl", "bom"]) {
+        await expect(page.locator(`#current-downloads a[href="${guide.links[key]}"]`)).toHaveCount(1);
+      }
+    }
+    await page.locator('.version-nav a[href="comparison.html"]').click();
+    await expect(page).toHaveURL(new RegExp(`/${prefix}comparison\\.html$`));
+    await expect(page.locator("h1")).toContainText("Ver.3.0");
+    await page.screenshot({ path: testInfo.outputPath(`${locale}-version-archive-navigation.png`) });
+    await page.locator(".archive-notice a").click();
+    await expect(page).toHaveURL(new RegExp(`/${prefix}r7\\.html#r7-change-matrix$`));
+    await expect(page.locator("h1")).toContainText("Ver.3.1");
+  });
+
   for (const filename of pages) {
     test(`localization ${locale} ${filename}: equivalent route, metadata and accessible layout`, async ({ page }, testInfo) => {
       const errors = [];
@@ -132,7 +183,7 @@ for (const locale of ["ja", "en"]) {
       const variant = expected.locales[locale];
       const video = page.locator(`#r7-walking-${design}`);
       const track = video.locator("track");
-      await expect(video).toHaveAttribute("aria-label", variant.title);
+      await expect(video).toHaveAttribute("aria-label", `Ver.3.1 · ${variant.title}`);
       await expect(video).toHaveAttribute("title", variant.description);
       await expect(track).toHaveAttribute("srclang", locale);
       await expect(track).toHaveAttribute("label", variant.captions.label);

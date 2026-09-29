@@ -47,9 +47,12 @@ nav a { color: var(--ink); text-decoration: none; padding-block: 8px; }
 nav a:hover { color: var(--teal); text-decoration: underline; }
 .hero { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 60px; align-items: center; padding-top: 58px; padding-bottom: 70px; }
 .hero-copy .intro { max-width: 34rem; color: var(--muted); }
+.hero h1 span { font-size: .75em; }
 .hero-visual { position: relative; }
 .hero-visual::before { content: ""; position: absolute; inset: 20px -16px 45px 25px; border: 1px solid #96b2a5; border-radius: 160px 160px 14px 14px; z-index: -1; }
 .hero-visual img { aspect-ratio: 0.86; object-fit: cover; border-radius: 150px 150px 10px 10px; }
+.hero-visual.current-visual img { aspect-ratio: auto; object-fit: contain; border-radius: 7px; }
+.hero-visual.current-visual::before { display: none; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin: 1.6rem 0; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 48px; padding: 11px 18px; background: var(--white); border: 1px solid var(--teal); border-radius: 5px; text-decoration: none; color: var(--teal); font-size: 0.9rem; font-weight: 700; }
 .button:hover { background: var(--teal-light); }
@@ -62,6 +65,16 @@ nav a:hover { color: var(--teal); text-decoration: underline; }
 .section-heading p:last-child { color: var(--muted); }
 .version-overview { border-top: 1px solid var(--line); padding-top: 48px; }
 .version-grid, .principles, .download-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.version-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.version-nav.section { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px 18px; padding-block: 14px; }
+.version-nav a { font-size: .8rem; padding: 5px 8px; border-bottom: 2px solid transparent; }
+.version-nav [aria-current="page"] { border-color: var(--teal); background: var(--teal-light); }
+.version-link.current { border: 2px solid var(--teal); }
+.version-link.archive { border-style: dashed; }
+.record-scope.archive-notice { border-color: var(--gold); background: var(--warning-bg); }
+.archive-notice .button { margin-top: 16px; }
+.current-design-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-block: 30px; }
+.current-design .specs dd { font-size: 1.1rem; }
 .version-link { position: relative; padding: 28px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); color: var(--ink); text-decoration: none; }
 .version-link:hover { border-color: var(--teal); background: #f0f5ef; }
 .version-link p { color: var(--muted); font-size: 0.94rem; }
@@ -189,6 +202,7 @@ summary { cursor: pointer; font-weight: 700; padding: 4px 0; }
 .change-record dd { margin: 0; font-size: 0.94rem; }
 .resource-limits { margin-bottom: 0; }
 @media (max-width: 1000px) {
+  .version-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero { gap: 30px; }
   .hero h1 { font-size: 2.65rem; }
   .prototype > .video-card { grid-template-columns: 1fr; }
@@ -211,7 +225,7 @@ summary { cursor: pointer; font-weight: 700; padding: 4px 0; }
   .hero-visual img { max-height: 470px; border-radius: 110px 110px 8px 8px; }
   .hero-visual::before { right: -7px; }
   .hero-actions { gap: 16px; }
-  .version-grid, .principles, .story-grid, .generation-block, .two-column, .download-grid, .sources-section, .gif-panel { grid-template-columns: 1fr; }
+  .version-grid, .principles, .story-grid, .generation-block, .two-column, .download-grid, .current-design-grid, .sources-section, .gif-panel { grid-template-columns: 1fr; }
   .version-grid { gap: 16px; }
   .version-link { padding: 22px; }
   .version-number { font-size: 2.1rem; margin-bottom: 12px; }

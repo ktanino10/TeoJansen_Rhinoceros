@@ -163,7 +163,7 @@ def design_cards(records: list[dict], ref: str) -> str:
         result.append(f'''<article class="prototype" id="prototype-{ident}" aria-labelledby="title-{ident}">
           <div class="prototype-heading"><span class="prototype-letter">{ident}</span>
             <div><p class="eyebrow">ENGINEERING CONCEPT</p><h3 id="title-{ident}">{titles[ident]}</h3></div></div>
-          {figure(f"hero-{ident}", f"Ver.3 {ident}案の実CADに基づく完成予想CG。実物ではない。", "Ver.3 · 設計CG／実物ではありません", ref)}
+          {figure(f"hero-{ident}", f"Ver.3.0 {ident}案の実CADに基づく完成予想CG。実物ではない。", "Ver.3.0 · 履歴の設計CG／実物ではありません", ref)}
           <dl class="specs">
             <div><dt>風車径 × 幅</dt><dd>{row["rotor_diameter_mm"]:g} × {row["rotor_span_mm"]:g} mm</dd></div>
             <div><dt>総減速比</dt><dd>{row["reduction"]:g} : 1</dd></div>
@@ -193,8 +193,20 @@ def download_cards(records: list[dict], ref: str) -> str:
                 size = (ROOT / path).stat().st_size
                 label += f" ({size/1e6:.1f} MB)" if size >= 1_000_000 else f" ({size/1000:.0f} KB)"
             items.append(f"<li>{link(kind, path, label, ref)}</li>")
-        result.append(f'<article class="download-card"><h4>Ver.3 {ident}案</h4><ul>{"".join(items)}</ul></article>')
+        result.append(f'<article class="download-card"><h3>Ver.3.0 {ident}案 · 旧資料</h3><ul>{"".join(items)}</ul></article>')
     return "".join(result)
+
+
+def version_navigation(page: str) -> str:
+    archive = page in {"comparison.html", "viewer.html"}
+    current = page in {"index.html", "r7.html", "walking.html"}
+    return ('<nav class="version-nav section" aria-label="公開版を選ぶ">'
+            '<a href="index.html#ver1">Ver.1 · 実物記録</a>'
+            '<a href="index.html#ver2">Ver.2 · 実物記録</a>'
+            '<a href="comparison.html"' + (' aria-current="page"' if archive else "")
+            + '>Ver.3.0 · 初期案・履歴</a>'
+            '<a href="index.html#ver3"' + (' aria-current="page"' if current else "")
+            + '>Ver.3.1 · 現行設計</a></nav>')
 
 
 def cartridge_card() -> tuple[str, dict, dict]:
@@ -402,8 +414,8 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
         "{{v1_photo}}": figure("v1-photo", "六枚羽の風車を備えたVer.1実物の斜めからの写真。", "Ver.1 · 実物の完成写真", ref),
         "{{v1_cg}}": figure("v1-cg", "Ver.1設計CG。屋外の背景を使ったレンダリングで、実物の屋外撮影ではない。", "Ver.1 · Fusion 360設計CG／実物写真ではありません", ref),
         "{{v2_photo}}": figure("v2-photo", "Ver.2の実物。カップ状の風車と脚・歯車の構成が見える。", "Ver.2 · 実物の完成写真（表示用トリミング）", ref),
-        "{{comparison}}": figure("comparison", "Ver.3のA・B・Cを同じ尺度で比較した設計CG。風車径は300・90・180mm。", "Ver.3 · 同一実寸スケールの設計CG／実機未検証", ref),
-        "{{frame_c}}": figure("frame-c", "Ver.3 C案の制約付き生成リブ構造を示すCAD由来のCG。", "Ver.3 C · 生成したフレームの設計CG", ref),
+        "{{comparison}}": figure("comparison", "Ver.3.0のA・B・Cを同じ尺度で比較した設計CG。風車径は300・90・180mm。", "Ver.3.0 · 同一実寸スケールの設計CG／実機未検証", ref),
+        "{{frame_c}}": figure("frame-c", "Ver.3.0 C案の制約付き生成リブ構造を示すCAD由来のCG。", "Ver.3.0 C · 生成したフレームの設計CG", ref),
         "{{design_cards}}": design_cards(records, ref),
         "{{download_cards}}": download_cards(records, ref),
         "{{operation}}": video("operation", "drive", "駆動機構", "<strong>規定運動・実機未検証。</strong> CADと同じ軸・歯車比を表示。風や接触動力学の実証ではありません。", ref),
@@ -417,7 +429,7 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
         "{{viewer_revision_id}}": escape(viewer_source["revisionId"]),
         "{{viewer_source}}": f"https://github.com/{REPOSITORY}/tree/{viewer_source['canonicalCommit']}",
         "{{matrix_specs}}": '<div class="matrix-summary">' + "".join(
-            f'<article><h3>Ver.3 {r["comparison"]["prototype"]}案</h3>'
+            f'<article><h3>Ver.3.0 {r["comparison"]["prototype"]}案</h3>'
             f'<p>風車 {r["comparison"]["rotor_diameter_mm"]:g} × {r["comparison"]["rotor_span_mm"]:g} mm<br>'
             f'総減速比 {r["comparison"]["reduction"]:g} : 1<br>'
             f'名目質量 {r["comparison"]["nominal_solid_and_hardware_mass_g"]/1000:.2f} kg</p>'
@@ -434,6 +446,7 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
                       lambda match: figure(match[1], match[2], match[3], ref), html)
         html = re.sub(r"\{\{(source|tree|download):([^}]+)\}\}",
                       lambda match: escape(source_url(match[1], match[2], ref), quote=True), html)
+        html = re.sub(r"(<main\b[^>]*>)", lambda match: match[1] + version_navigation(name), html, count=1)
         if not include_r7 and 'src="i18n.js"' not in html:
             html = html.replace("<head>", '<head>\n<script src="i18n.js" defer></script>')
         (output / name).write_text(html)
@@ -462,6 +475,18 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
         manifest["locales"] = {"default": "ja", "english_prefix": "en/",
                               "source_catalog_sha256": sha256(SITE / "locales/sources.json"),
                               "english_catalog_sha256": sha256(SITE / "locales/en.json")}
+        manifest["public_versions"] = {
+            "3.1": {"status": "current-design", "overview": "index.html#ver3",
+                    "comparison": "r7.html#r7-change-matrix", "viewer": "r7.html#viewer",
+                    "walking": "walking.html", "downloads": "index.html#downloads",
+                    "data": "docs/ver3/integrated_r7/comparison.json",
+                    "revisionId": r7_source["revisionId"], "artifactCommit": r7_source["artifactCommit"],
+                    "inputCommit": r7_source["inputCommit"], "sourceHash": r7_source["sourceHash"]},
+            "3.0": {"status": "archive", "overview": "comparison.html",
+                    "viewer": "viewer.html", "downloads": "comparison.html#downloads",
+                    "data": "docs/ver3/comparison.json", "revisionId": viewer_source["revisionId"],
+                    "artifactCommit": viewer_source["canonicalCommit"]},
+        }
     (output / "build-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     if validate_output:
         validate(output, manifest)

@@ -8,13 +8,17 @@ The [Japanese site](https://ktanino10.github.io/TeoJansen_Rhinoceros/) retains t
 
 | Page | Content and revision |
 |---|---|
-| [Overview](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/index.html) | Physical Ver.1/2 records and entry points to first-cut Ver.3 and current r7 |
+| [Overview](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/index.html) | Current Ver.3.1 images, values and downloads first; Ver.1/2/3.0 history is separate |
 | [Build records](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/production.html) | Ver.1 fabrication and the recorded Ver.2 improvements, completed photographs and historical tests |
-| [First-cut comparison](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/comparison.html) | Changes and limitations of historical A300/B90/C180 mm |
-| [First-cut 360° and assembly](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/viewer.html) | Exact meshes, part IDs and source-bound stages from that same historical revision |
+| [Ver.3.0 initial concepts / archive](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/comparison.html) | Historical A300/B90/C180 mm matrix, CG, prescribed videos and old downloads |
+| [Ver.3.0 archived 360° and assembly](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/viewer.html) | Exact meshes, part IDs and source-bound stages of the old revision, not the current design |
 | [Calculations](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/calculations.html) | Separate r3 materials/structures/fluid models and r4 input cartridge |
-| [r7 comparison, 360° and 12 stages](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/r7.html) | Floor-corrected A750/B785/C750 = 2,285 parts; separate from the first cut |
-| [Continuous walking](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/walking.html) | Separately versioned kinematic/quasi-static display model and videos using r7 geometry |
+| [Ver.3.1 comparison, 360° and 12 stages](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/r7.html) | Current floor-corrected A750/B785/C750 = 2,285 parts; engineering ID r7/floor2 |
+| [Ver.3.1 continuous walking](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/walking.html) | Separately versioned kinematic/quasi-static display model and bilingual videos using the same current geometry |
+
+Ver.3.1 is the public name of the existing floor-corrected design, not a change to engineering originals. The [source contract](../site/r7-source.json) retains `v3-integrated-walkers-r7-16-floor2` and the artifact/source commits and hashes. Existing r7 media labels refer to this geometry. `r7-floor2-walking-kinematic-v1` is a separate pose extension on the same geometry. Internal r2/r3/r4/r6 research and subassembly IDs are not public Ver.2 or Ver.3.1.
+
+Old `index.html#ver3` bookmarks now lead to Ver.3.1. `comparison.html` and `viewer.html` retain Ver.3.0 history with clear current-design links. Do not mix [current downloads](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/index.html#downloads) with [archived downloads](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/comparison.html#downloads).
 
 ## Operate 3D and videos
 
@@ -42,6 +46,6 @@ Do not apply historical Ver.1/2 scaling of 150% / legs 160% to Ver.3, which uses
 
 ## Distinguish status and cost
 
-Current r7 materials guideline: **about JPY 24,000 per machine**. Individual initial estimates A JPY 23,305.13/B JPY 23,735.37/C JPY 23,154.43 exclude unowned tools such as DN-03 at about JPY 396, shipping and unresolved taxes. Shared-purchase averages do not replace individual costs. Old JPY 20,000/23,000 conditions remain historical to their respective revisions.
+Current Ver.3.1 (engineering r7/floor2) materials guideline: **about JPY 24,000 per machine**. Individual initial estimates A JPY 23,305.13/B JPY 23,735.37/C JPY 23,154.43 exclude unowned tools such as DN-03 at about JPY 396, shipping and unresolved taxes. Shared-purchase averages do not replace individual costs. Old JPY 20,000/23,000 conditions remain historical to their respective revisions.
 
 `manufacturingRelease=false`, physically qualified count 0, and real wind, physical self-starting and physical 30 cm walking remain UNKNOWN. Finite digital PASS does not qualify every continuous path, tolerance, CFD/FEM, endurance or physical operation. Follow actual product/material, bonding/curing and tool instructions; historical records alone do not guarantee safety.

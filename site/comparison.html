@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="Ver.2の実物記録からVer.3第一カットへ、接合・保持・摩擦・風入力・脚・質量・組立・調達を画像付きMatrixで比較。設計変更と未検証性能を区別します。">
-  <title>Ver.2 → Ver.3 改良Matrix — リノセウス</title>
+  <meta name="description" content="Ver.3.0の初期比較案・履歴。旧第一カットのMatrix・CG・規定動画・CADを保存。現行Ver.3.1の比較・360°・ダウンロードは別ページです。">
+  <title>Ver.3.0 初期比較案・履歴 — リノセウス</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="viewer.css">
@@ -13,12 +13,12 @@
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
-  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span>RHINOCEROS<small>風で歩く仕組みの探究</small></span></a><nav aria-label="メインナビゲーション"><a href="production.html#ver2">Ver.2の記録</a><a href="#matrix">Matrix</a><a href="viewer.html">360°・組立</a><a href="#sources">出典</a></nav></div></header>
-  <main id="main" tabindex="-1">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span>RHINOCEROS<small>Ver.3.0 · 初期比較案・履歴</small></span></a><nav aria-label="メインナビゲーション"><a href="r7.html">現行Ver.3.1へ</a><a href="#matrix">旧Matrix</a><a href="viewer.html">Ver.3.0 360°</a><a href="#downloads">旧資料</a></nav></div></header>
+  <main id="main" tabindex="-1" data-public-version="3.0">
     <section class="section viewer-intro" id="top" aria-labelledby="matrix-title">
-      <p class="eyebrow">VER.2 → VER.3 / CHANGE &amp; EVIDENCE MATRIX</p>
-      <h1 id="matrix-title">何を変えたか。<br><span>何が、まだ確かでないか。</span></h1>
-      <p class="record-scope"><strong>このMatrixは第一カットの履歴です。</strong> <a href="r7.html#r7-change-matrix">新しいr7床是正版の変更Matrix・比較へ →</a>。版・形状・計算基準は混在させていません。</p>
+      <p class="eyebrow">VER.3.0 / INITIAL CONCEPTS / ARCHIVE</p>
+      <h1 id="matrix-title">Ver.3.0<br><span>初期比較案の記録。</span></h1>
+      <aside class="record-scope archive-notice"><strong>このページはVer.3.0（第一カット）の履歴です。現行設計ではありません。</strong><p>旧本文・原資料の「Ver.3」はこの初期案を指します。形状・計算・旧配布ファイルを保存し、Ver.3.1とは混用しません。</p><a class="button primary" href="r7.html#r7-change-matrix">現行Ver.3.1の改良Matrix・比較へ →</a></aside>
       <p>Ver.2の実物で残った課題から、Ver.3のA・B・Cはどこを変えたのか。写真・CAD由来のCG・部品を選べる3Dで、変更点と確認の範囲を見比べます。</p>
       <aside class="warning"><h2>対象：{{viewer_revision}}。性能改善の実証一覧ではありません。</h2><p><strong>「設計に反映したこと」と「実物で改善したこと」は別です。</strong> Ver.2は作者の実物記録、Ver.3は設計・仮定計算・限定したCAD確認。Ver.2の未計測値とVer.3の計算値を、同じ実測値として比較していません。</p><p><strong>Ver.3の実機の風力歩行は未検証、全案の接地残差3 mm目標は未達、Bは名目トルク入力も不足。</strong> 全項目を満たす完成機とは表示しません。</p></aside>
       {{matrix_specs}}
@@ -28,7 +28,7 @@
 
     <section class="section viewer-section" id="matrix" aria-labelledby="comparison-title">
       <div class="section-heading"><p class="eyebrow">EIGHT QUESTIONS / THREE CONCEPTS</p><h2 id="comparison-title">Ver.2からの変更を、八つの観点で。</h2><p id="matrix-help">狭い画面では表を左右にスクロールできます。キーボードでは表の領域にフォーカスして左右キーを使います。「3Dで見る」は該当する部品群を強調するビューへのリンクです。</p></div>
-      <div class="matrix-scroll" role="region" aria-label="Ver.2からVer.3への改良比較表" aria-describedby="matrix-help" tabindex="0">
+      <div class="matrix-scroll" role="region" aria-label="Ver.2からVer.3.0への改良比較表（履歴）" aria-describedby="matrix-help" tabindex="0">
         <table class="improvement-matrix">
           <thead><tr><th scope="col">観点</th><th scope="col">Ver.2 · 実物と記録</th><th scope="col">Ver.3 · 何をどう変えるか</th><th scope="col">A / B / Cの違いと検証状態</th></tr></thead>
           <tbody>
@@ -54,7 +54,7 @@
               <th scope="row">4<br>風入力・減速・速度</th>
               <td>{{figure:v2-view-2|Ver.2完成実物のサボニウス型風車と脚列を正面から撮影。|Ver.2実写真 · カップ形状の風車。}}<p>六枚羽からサボニウス型へ変更し、ギア比も見直して実際の動作を記録。ただし、風速・風向・ローター角をそろえた起動トルク表はありません。</p><a href="https://youtu.be/T3U7c1Mr3Y8">既存のVer.2実物テスト</a></td>
               <td>{{figure:comparison|Ver.3のA・B・Cを同一実寸尺度で比較したCAD由来CG。|Ver.3設計CG · 同一尺度。大風車・高減速・中間案を比較。}}<p>風車の大きさと総減速比を三案で変え、入力と要求トルクを仮定条件で比較。<strong>減速によって入力エネルギー自体が増えるわけではありません。</strong></p><a href="viewer.html?design=A&amp;focus=drivetrain">3Dで各案の風車・段を見る →</a></td>
-              <td><span class="status-tag caution">Bは名目入力不足</span><p><strong>A：</strong>大風車、ベルト2:1＋歯車3:1。<strong>B：</strong>小風車、4:1を三段。<strong>C：</strong>中間風車、4:1を二段。正規値は上の三案カードに表示しています。</p><p>動画は規定120 rpm入力の可視化です。A1倍・B8倍・C2倍表示を実歩行速度と取り違えません。特定風速や全ローター角での自己始動は未実証です。</p><a href="index.html#prototype-B">Bの未達と規定動画</a></td>
+              <td><span class="status-tag caution">Bは名目入力不足</span><p><strong>A：</strong>大風車、ベルト2:1＋歯車3:1。<strong>B：</strong>小風車、4:1を三段。<strong>C：</strong>中間風車、4:1を二段。正規値は上の三案カードに表示しています。</p><p>動画は規定120 rpm入力の可視化です。A1倍・B8倍・C2倍表示を実歩行速度と取り違えません。特定風速や全ローター角での自己始動は未実証です。</p><a href="#prototype-B">Ver.3.0 Bの未達と規定動画</a></td>
             </tr>
             <tr id="matrix-support">
               <th scope="row">5<br>脚・支持・重心</th>
@@ -84,11 +84,47 @@
         </table>
       </div>
     </section>
+    <section class="chapter section" id="concepts" aria-labelledby="concepts-title">
+      <div class="section-heading"><p class="eyebrow">VER.3.0 / PRESERVED FIRST CUT</p><h2 id="concepts-title">初期三案のCG・規定歩行・生成設計。</h2><p>ここからの画像・動画・数値もVer.3.0の履歴です。現行Ver.3.1の姿や歩行表示ではありません。</p></div>
+      {{comparison}}
+      <div class="principles"><div><span class="principle-index">01</span><h3>接着剤頼みの接合から</h3><p>金属REX軸の平面と金属ハブを形状で係合し、樹脂部品は実在する穴とボルトで結合。接着剤を主トルク経路にしません。</p></div><div><span class="principle-index">02</span><h3>抜け止め・支持・組立順まで</h3><p>軸端止め、内輪専用スペーサ、ベアリング、脱着ガードを具体化。キャリアを先に外す工具経路と、ねじの逃げも是正しました。</p></div><div><span class="principle-index">03</span><h3>一つの機械データから</h3><p>CAD、BOM、CG、規定歩行を同じ部品・寸法・配置へ結び付け、別コンテキストのAIレビューで4件を是正。人の有資格者による設計承認ではありません。</p></div></div>
+      <p class="small-note">以下の寸法・比率・質量・残差は <a href="{{source:docs/ver3/comparison.json}}">Ver.3.0の正規comparison.json</a> から生成しています。名目質量は全ソリッドCADと購入品の仮定／カタログ値の合計で、実測・スライサー質量ではありません。</p>
+      <div class="prototype-grid">{{design_cards}}</div>
+      <div class="contact-note"><h3>「前進する動画」と「実機で歩ける」は別です。</h3><p>本体の並進・姿勢は接地靴の形状と持続する材料点アンカーから求め、棒を伸縮させたり任意の前進速度を足したりしていません。ただし、規定入力と接地近似による可視化であり、風・摩擦・衝撃を含む接触動力学ではありません。</p><p>表示する残差は、総荷重の2%以上を受け持つ一つの継続区間内の最大水平偏差です。動画開始時の部分区間を含み、三周期の合計滑り量ではありません。近接足と負荷足は区別され、小さい正の支持余裕も実用安定を保証しません。</p><a href="{{source:docs/ver3/comparison.json}}">指標の定義・重心と風の感度を見る ↗</a></div>
+      <div class="gif-panel media">
+        <div><p class="eyebrow">VER.3.0 / ARCHIVAL MOTION</p><h3>初期三案の規定歩行をまとめて見る</h3><p>GIFは操作するまで読み込みません。自動再生しない静止プレビューです。</p><button class="button" id="gif-toggle" type="button" aria-controls="gif-preview" aria-pressed="false" data-animation="assets/walk_preview.gif" hidden>歩行GIFを再生（33秒・約2.9 MB）</button><p id="motion-preference" class="small-note" hidden>動きを減らす設定を尊重し、自動では再生しません。ボタンを押した場合だけ動きます。</p><p><a href="{{source:docs/ver3/media/walk_preview.gif}}">GIFをGitHubで開く ↗</a></p></div>
+        <div><img id="gif-preview" src="assets/comparison.webp" alt="Ver.3.0三案の静止比較。ボタン操作後は旧規定歩行のGIFを表示。" width="1280" height="720" loading="lazy"><p class="media-error" role="status" hidden>プレビューを読み込めませんでした。GitHubへのリンクをご利用ください。</p></div>
+      </div>
+      <div class="section-heading subsection-heading"><p class="eyebrow">VER.3.0 / DRIVE &amp; ASSEMBLY</p><h3>動かし方と、組み方を切り分ける。</h3></div>
+      <div class="two-column">{{operation}}{{exploded}}</div>
+      <div class="generation-block">
+        {{frame_c}}
+        <div><p class="eyebrow">PARAMETRIC GENERATIVE DESIGN</p><h3>必要な領域を残し、条件の中で探す。</h3><p>軸受・ボルト座の保存領域、風車と脚の可動域、他の貫通軸、印刷寸法を制約に、歯数・軸位置・リブ幅・厚さを実際に探索しました。</p><p>Cの同じ軸配置・荷重条件では、8 × 14 mmリブ候補から8 × 8 mm候補へ、<strong>部材加算体積の代理量が約{{generation_reduction}}%減少</strong>。変位の代理値は増えています。<strong>装置全体の質量がこの割合で減った、という意味ではありません。</strong></p><p>これはパラメトリック生成設計です。Autodesk Generative Design、CFD、連続体FEA、トポロジー最適化、実機試験を実施したとは称しません。</p><a href="{{source:docs/ver3/DESIGN_ja.md}}">探索条件・比較値・根拠を読む ↗</a></div>
+      </div>
+    </section>
+    <section class="downloads-section" id="downloads" aria-labelledby="downloads-title"><div class="section">
+      <p class="eyebrow">VER.3.0 / ARCHIVAL DOWNLOADS</p><h2 id="downloads-title">Ver.3.0の旧CAD・比較検討資料。</h2>
+      <p class="record-scope"><strong>初期比較案の保存用です。現行部品ではありません。</strong> <a href="index.html#downloads">Ver.3.1の正規ダウンロードへ →</a></p>
+      <div class="download-grid">{{download_cards}}</div>
+      <div class="shared-downloads">
+        <a href="{{source:docs/ver3/ASSEMBLY_ja.md}}">番号付き組立手順・ベンチ確認票</a>
+        <a href="{{source:docs/ver3/DESIGN_ja.md}}">設計・計算・再生成方法</a>
+        <a href="{{source:docs/ver3/REVIEW_ja.md}}">独立AIレビューと是正記録</a>
+        <a href="{{tree:docs/ver3/drawings}}">実断面・段別カバー型紙</a>
+        <a href="{{download:docs/ver3/comparison.csv}}">三案の比較CSV</a>
+        <a href="{{download:Blender/Ver.3/ver3_ABC.blend}}">Ver.3.0 Blenderネイティブ（約28.3 MB）</a>
+        <a href="{{tree:scripts/ver3}}">生成スクリプトと設定（複数の内部改訂を含む）</a>
+        <a href="{{tree:docs/ver3/media}}">Ver.3.0のCG・GIF・MP4</a>
+        <a href="viewer.html#assembly-guides">Ver.3.0の工程別部品表と組立ガイド</a>
+        <a href="#matrix">Ver.2から初期案への変更と確認状況</a>
+      </div>
+      <p class="small-note">Ver.3.0はVer.2の無加工差替え部品ではありません。STLはmm・100%。Aの最大フレームは256 mm境界に達し、造形面の余白・ブリムを保証しません。実物での滑りトルク、軸方向すきま、全周手回し、重心、転倒の確認が必要です。</p>
+    </div></section>
     <section class="section sources-section" id="sources" aria-labelledby="sources-title">
       <div><p class="eyebrow">HOW TO READ THE EVIDENCE</p><h2 id="sources-title">変更した設計と、残る実測を分ける。</h2></div>
       <div><p>Ver.2側の写真・CGは元READMEの版対応に従い、後の接合滑りの報告は公開済み設計ノートと照合しています。Ver.3側は{{viewer_revision}}の正規資料・既存CGです。CGの存在やCADチェックの成功だけを、物理・機械・調達の全条件合格とは呼びません。</p><p>確認待ちは、滑りトルク・関節と軸受の抵抗・実物のすきま・角度別風車入力・質量と重心・滑りと転倒・印刷適合・実購入品の条件です。別の機械設計改訂が出る場合は、古いCG・BOMと混ぜず、まとまった版として切り替えます。</p><div class="link-list"><a href="{{source:README_ja.md}}">Ver.1／Ver.2の原典</a><a href="{{source:docs/ver3/DESIGN_ja.md}}">Ver.3の設計・根拠・限界</a><a href="{{source:docs/ver3/comparison.json}}">正規比較値と定義</a><a href="{{source:docs/ver3/ASSEMBLY_ja.md}}">組立と未実施のベンチ確認票</a><a href="{{viewer_source}}">3Dと手順が参照する確定版</a></div></div>
     </section>
   </main>
-  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>比較するのは、対策と根拠。その先は実測へ。</span></div><a href="#top">先頭へ ↑</a><a href="viewer.html">360°・組立ガイド</a><a href="index.html#ver3">三案の概要</a></footer>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>Ver.3.0 · 初期比較案・履歴</span></div><a href="#top">先頭へ ↑</a><a href="viewer.html">Ver.3.0 360°・組立ガイド</a><a href="index.html#ver3">現行Ver.3.1へ</a></footer>
 </body>
 </html>

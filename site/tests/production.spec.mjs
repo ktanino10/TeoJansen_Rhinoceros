@@ -22,7 +22,7 @@ test("production journey is discoverable and every stage anchor works", async ({
   for (const version of [1, 2]) {
     await expect(page.locator(`#ver${version}-gallery img`)).toHaveCount(6);
   }
-  await page.getByRole("link", { name: "Ver.3の三案と、現在の検証限界へ" }).click();
+  await page.getByRole("link", { name: "Ver.3.1の三案と、現在の検証限界へ" }).click();
   await expect(page).toHaveURL(/index\.html#ver3$/);
   await expect(page.locator("#ver3-warning")).toBeVisible();
   expect(errors).toEqual([]);

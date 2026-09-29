@@ -25,6 +25,15 @@ DOCUMENT_EXAMPLES = (
 )
 
 
+def engineering_examples(manifest):
+    source = manifest["r7_source"]
+    contract = json.loads((ROOT / source["contract"]).read_text())
+    designs = {design["id"]: design for design in contract["designs"]}
+    return {source["contract"]: source["contractSha256"],
+            designs["A"]["native"]["path"]: designs["A"]["native"]["sha256"],
+            designs["C"]["bom"]["path"]: designs["C"]["bom"]["sha256"]}
+
+
 def fetch_bytes(url):
     with urlopen(Request(url, headers={"User-Agent": "Rhinoceros-Pages-verification"}), timeout=45) as response:
         if response.status != 200:
@@ -54,6 +63,8 @@ def verify(expected_commit):
         raise ValueError("Published assets differ from the local build allowlist")
     if remote.get("external_images", {}) != local.get("external_images", {}):
         raise ValueError("Published external image references differ from the fixed local source")
+    if remote.get("public_versions") != local["public_versions"] or remote.get("r7_source") != local["r7_source"]:
+        raise ValueError("Published public-version mapping or engineering source differs")
     for page in sorted(PAGES):
         text = fetch_bytes(PUBLIC_URL + page).decode("utf-8")
         locale = "en" if page.startswith("en/") else "ja"
@@ -96,10 +107,17 @@ def verify(expected_commit):
         url = f"https://raw.githubusercontent.com/ktanino10/TeoJansen_Rhinoceros/{expected_commit}/{path}"
         if fetch_bytes(url) != (ROOT / path).read_bytes():
             raise ValueError(f"Published English document differs: {path}")
+    examples = engineering_examples(local)
+    for path, expected_hash in examples.items():
+        url = f"https://raw.githubusercontent.com/ktanino10/TeoJansen_Rhinoceros/{local['r7_source']['publicSourceCommit']}/{path}"
+        if hashlib.sha256(fetch_bytes(url)).hexdigest() != expected_hash:
+            raise ValueError(f"Current engineering download differs: {path}")
     return {"url": PUBLIC_URL, "source_commit": expected_commit, "pages": len(PAGES),
             "assets": len(sizes), "asset_bytes": sum(sizes), "all_gets": 200,
             "external_images": len(local.get("external_images", {})),
-            "asset_hashes": "matched", "display_metadata": "removed", "english_documents": len(DOCUMENT_EXAMPLES)}
+            "asset_hashes": "matched", "display_metadata": "removed", "english_documents": len(DOCUMENT_EXAMPLES),
+            "current_version": "3.1", "archive_version": "3.0",
+            "engineering_downloads": len(examples), "engineering_source_hash": local["r7_source"]["sourceHash"]}
 
 
 if __name__ == "__main__":

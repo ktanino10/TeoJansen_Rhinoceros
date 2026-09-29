@@ -31,10 +31,8 @@
     "example": "風で歩く仕組みの探究",
     "origins": [
       "calculations.html",
-      "comparison.html",
       "index.html",
-      "production.html",
-      "viewer.html"
+      "production.html"
     ]
   },
   "b05800bc20638cdf": {
@@ -71,11 +69,65 @@
       "calculations.html"
     ]
   },
-  "c1fc59fa9f577dde": {
-    "source": "旧版{0}°",
-    "example": "旧版360°",
+  "b4479bd543372dc7": {
+    "source": "現行Ver.{0}へ",
+    "example": "現行Ver.3.1へ",
     "origins": [
-      "calculations.html"
+      "calculations.html",
+      "comparison.html",
+      "viewer.html"
+    ]
+  },
+  "12bea0e1e25a5f10": {
+    "source": "公開版を選ぶ",
+    "example": "公開版を選ぶ",
+    "origins": [
+      "calculations.html",
+      "comparison.html",
+      "index.html",
+      "production.html",
+      "r7.html",
+      "viewer.html",
+      "walking.html"
+    ]
+  },
+  "90e3f191a619b6ba": {
+    "source": "Ver.{0} · 実物記録",
+    "example": "Ver.1 · 実物記録",
+    "origins": [
+      "calculations.html",
+      "comparison.html",
+      "index.html",
+      "production.html",
+      "r7.html",
+      "viewer.html",
+      "walking.html"
+    ]
+  },
+  "882661132062f797": {
+    "source": "Ver.{0} · 初期案・履歴",
+    "example": "Ver.3.0 · 初期案・履歴",
+    "origins": [
+      "calculations.html",
+      "comparison.html",
+      "index.html",
+      "production.html",
+      "r7.html",
+      "viewer.html",
+      "walking.html"
+    ]
+  },
+  "f735474c26912e06": {
+    "source": "Ver.{0} · 現行設計",
+    "example": "Ver.3.1 · 現行設計",
+    "origins": [
+      "calculations.html",
+      "comparison.html",
+      "index.html",
+      "production.html",
+      "r7.html",
+      "viewer.html",
+      "walking.html"
     ]
   },
   "4608a443aa48a4b4": {
@@ -136,9 +188,16 @@
       "r7.html"
     ]
   },
-  "6dcf0ebe8792cb0d": {
-    "source": "既存の{0}°とは、別の骨格・別の版です。",
-    "example": "既存の360°とは、別の骨格・別の版です。",
+  "49f62b23adedf989": {
+    "source": "作品の公開版ではなく、別条件の内部研究です。",
+    "example": "作品の公開版ではなく、別条件の内部研究です。",
+    "origins": [
+      "calculations.html"
+    ]
+  },
+  "2974c0545f157cf9": {
+    "source": "r{0}・r{1}・r{2}・r{3}は研究・部分設計の改訂IDです。Ver.{4}実物、Ver.{5}初期案、現行Ver.{6}とは番号体系も条件も異なります。",
+    "example": "r2・r3・r4・r6は研究・部分設計の改訂IDです。Ver.2実物、Ver.3.0初期案、現行Ver.3.1とは番号体系も条件も異なります。",
     "origins": [
       "calculations.html"
     ]
@@ -164,9 +223,9 @@
       "calculations.html"
     ]
   },
-  "aa0e6219e74544d1": {
-    "source": "公開{0}°：",
-    "example": "公開360°：",
+  "23c9e18565919f32": {
+    "source": "Ver.{0}の旧{1}°：",
+    "example": "Ver.3.0の旧360°：",
     "origins": [
       "calculations.html"
     ]
@@ -178,9 +237,16 @@
       "calculations.html"
     ]
   },
-  "9a9941c2c67c507c": {
-    "source": "第一カットの{0}°・組立ガイドへ（別版） →",
-    "example": "第一カットの360°・組立ガイドへ（別版） →",
+  "74eb6f306cba80f2": {
+    "source": "現行Ver.{0}の{1}°・{2}工程へ →",
+    "example": "現行Ver.3.1の360°・12工程へ →",
+    "origins": [
+      "calculations.html"
+    ]
+  },
+  "3171f7d8f0dda86d": {
+    "source": "Ver.{0} 第一カットの旧{1}°・組立履歴へ →",
+    "example": "Ver.3.0 第一カットの旧360°・組立履歴へ →",
     "origins": [
       "calculations.html"
     ]
@@ -1392,11 +1458,12 @@
       "calculations.html"
     ]
   },
-  "7dbc56c19f284fdc": {
-    "source": "第一カットのV{0}→V{1} Matrix（別版）",
-    "example": "第一カットのV2→V3 Matrix（別版）",
+  "d9fe6e0f940d9691": {
+    "source": "Ver.{0}の旧Matrix",
+    "example": "Ver.3.0の旧Matrix",
     "origins": [
-      "calculations.html"
+      "calculations.html",
+      "r7.html"
     ]
   },
   "6acca92981c3174a": {
@@ -1515,8 +1582,7 @@
     "source": "組立手順",
     "example": "組立手順",
     "origins": [
-      "calculations.html",
-      "viewer.html"
+      "calculations.html"
     ]
   },
   "f9c186b00accea86": {
@@ -1625,79 +1691,75 @@
       "viewer.html"
     ]
   },
-  "b3f7225979082f8c": {
-    "source": "第一カット{0}°",
-    "example": "第一カット360°",
+  "98872d8b7504484b": {
+    "source": "Ver.{0} 旧{1}°／組立履歴",
+    "example": "Ver.3.0 旧360°／組立履歴",
     "origins": [
-      "calculations.html"
+      "calculations.html",
+      "r7.html"
     ]
   },
-  "883846357642a7b1": {
-    "source": "Ver.{0}の実物記録からVer.{1}第一カットへ、接合・保持・摩擦・風入力・脚・質量・組立・調達を画像付きMatrixで比較。設計変更と未検証性能を区別します。",
-    "example": "Ver.2の実物記録からVer.3第一カットへ、接合・保持・摩擦・風入力・脚・質量・組立・調達を画像付きMatrixで比較。設計変更と未検証性能を区別します。",
-    "origins": [
-      "comparison.html"
-    ]
-  },
-  "a7c95494193761c3": {
-    "source": "Ver.{0} → Ver.{1} 改良Matrix — リノセウス",
-    "example": "Ver.2 → Ver.3 改良Matrix — リノセウス",
+  "208f4b4e7adfff52": {
+    "source": "Ver.{0}の初期比較案・履歴。旧第一カットのMatrix・CG・規定動画・CADを保存。現行Ver.{1}の比較・{2}°・ダウンロードは別ページです。",
+    "example": "Ver.3.0の初期比較案・履歴。旧第一カットのMatrix・CG・規定動画・CADを保存。現行Ver.3.1の比較・360°・ダウンロードは別ページです。",
     "origins": [
       "comparison.html"
     ]
   },
-  "2119a3c4f336ef32": {
-    "source": "Ver.{0}の記録",
-    "example": "Ver.2の記録",
+  "6e1557f182ef0644": {
+    "source": "Ver.{0} 初期比較案・履歴 — リノセウス",
+    "example": "Ver.3.0 初期比較案・履歴 — リノセウス",
     "origins": [
       "comparison.html"
     ]
   },
-  "e7fa6da960979840": {
-    "source": "{0}°・組立",
-    "example": "360°・組立",
+  "89a4b350dd950416": {
+    "source": "Ver.{0} · 初期比較案・履歴",
+    "example": "Ver.3.0 · 初期比較案・履歴",
+    "origins": [
+      "comparison.html",
+      "index.html",
+      "viewer.html"
+    ]
+  },
+  "1277eb6a0fed7d23": {
+    "source": "旧Matrix",
+    "example": "旧Matrix",
     "origins": [
       "comparison.html"
     ]
   },
-  "2c65ff97090bd563": {
-    "source": "出典",
-    "example": "出典",
+  "e0879b13b5992628": {
+    "source": "旧資料",
+    "example": "旧資料",
     "origins": [
       "comparison.html"
     ]
   },
-  "0b70b0b0f7d7df00": {
-    "source": "何を変えたか。",
-    "example": "何を変えたか。",
+  "2376ad517730f7cb": {
+    "source": "初期比較案の記録。",
+    "example": "初期比較案の記録。",
     "origins": [
       "comparison.html"
     ]
   },
-  "f400793d441085aa": {
-    "source": "何が、まだ確かでないか。",
-    "example": "何が、まだ確かでないか。",
+  "ad1592bb411d880b": {
+    "source": "このページはVer.{0}（第一カット）の履歴です。現行設計ではありません。",
+    "example": "このページはVer.3.0（第一カット）の履歴です。現行設計ではありません。",
     "origins": [
       "comparison.html"
     ]
   },
-  "efb79803eb15956f": {
-    "source": "このMatrixは第一カットの履歴です。",
-    "example": "このMatrixは第一カットの履歴です。",
+  "e5ba6fa4389ab961": {
+    "source": "旧本文・原資料の「Ver.{0}」はこの初期案を指します。形状・計算・旧配布ファイルを保存し、Ver.{1}とは混用しません。",
+    "example": "旧本文・原資料の「Ver.3」はこの初期案を指します。形状・計算・旧配布ファイルを保存し、Ver.3.1とは混用しません。",
     "origins": [
       "comparison.html"
     ]
   },
-  "92f3c4cdf02fea04": {
-    "source": "新しいr{0}床是正版の変更Matrix・比較へ →",
-    "example": "新しいr7床是正版の変更Matrix・比較へ →",
-    "origins": [
-      "comparison.html"
-    ]
-  },
-  "c659f31d52c4ceb9": {
-    "source": "。版・形状・計算基準は混在させていません。",
-    "example": "。版・形状・計算基準は混在させていません。",
+  "2c0c126d018325fe": {
+    "source": "現行Ver.{0}の改良Matrix・比較へ →",
+    "example": "現行Ver.3.1の改良Matrix・比較へ →",
     "origins": [
       "comparison.html"
     ]
@@ -1746,7 +1808,7 @@
   },
   "acab9622578da3fa": {
     "source": "Ver.{0} {1}案",
-    "example": "Ver.3 A案",
+    "example": "Ver.3.0 A案",
     "origins": [
       "comparison.html",
       "index.html"
@@ -1799,7 +1861,6 @@
     "example": "新しい解析途中の検討を見る：材料・構造・流体の計算 →",
     "origins": [
       "comparison.html",
-      "index.html",
       "viewer.html"
     ]
   },
@@ -1807,8 +1868,7 @@
     "source": "別版",
     "example": "別版",
     "origins": [
-      "comparison.html",
-      "index.html"
+      "comparison.html"
     ]
   },
   "0bf9b7b3db78b9f1": {
@@ -1832,9 +1892,9 @@
       "comparison.html"
     ]
   },
-  "72292c48b7e07013": {
-    "source": "Ver.{0}からVer.{1}への改良比較表",
-    "example": "Ver.2からVer.3への改良比較表",
+  "af8009f661b72536": {
+    "source": "Ver.{0}からVer.{1}への改良比較表（履歴）",
+    "example": "Ver.2からVer.3.0への改良比較表（履歴）",
     "origins": [
       "comparison.html"
     ]
@@ -2302,9 +2362,9 @@
       "comparison.html"
     ]
   },
-  "86f078c686a6d826": {
-    "source": "{0}の未達と規定動画",
-    "example": "Bの未達と規定動画",
+  "859a9aa1ce223da9": {
+    "source": "Ver.{0} {1}の未達と規定動画",
+    "example": "Ver.3.0 Bの未達と規定動画",
     "origins": [
       "comparison.html"
     ]
@@ -2688,6 +2748,606 @@
       "comparison.html"
     ]
   },
+  "14800d27d6a738ff": {
+    "source": "初期三案のCG・規定歩行・生成設計。",
+    "example": "初期三案のCG・規定歩行・生成設計。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "993d79d230fa967f": {
+    "source": "ここからの画像・動画・数値もVer.{0}の履歴です。現行Ver.{1}の姿や歩行表示ではありません。",
+    "example": "ここからの画像・動画・数値もVer.3.0の履歴です。現行Ver.3.1の姿や歩行表示ではありません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "782c5a284e9d7575": {
+    "source": "Ver.{0}の{1}・{2}・{3}を同じ尺度で比較した設計CG。風車径は{4}・{5}・{6}mm。",
+    "example": "Ver.3.0のA・B・Cを同じ尺度で比較した設計CG。風車径は300・90・180mm。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "9d3a55dfbcdf4f7a": {
+    "source": "Ver.{0} · 同一実寸スケールの設計CG／実機未検証",
+    "example": "Ver.3.0 · 同一実寸スケールの設計CG／実機未検証",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "549c30c7872ecf14": {
+    "source": "接着剤頼みの接合から",
+    "example": "接着剤頼みの接合から",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "20e4f0d422a9ef0a": {
+    "source": "金属REX軸の平面と金属ハブを形状で係合し、樹脂部品は実在する穴とボルトで結合。接着剤を主トルク経路にしません。",
+    "example": "金属REX軸の平面と金属ハブを形状で係合し、樹脂部品は実在する穴とボルトで結合。接着剤を主トルク経路にしません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "9f57bda236ffc66a": {
+    "source": "抜け止め・支持・組立順まで",
+    "example": "抜け止め・支持・組立順まで",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "0911f4180bc87d02": {
+    "source": "軸端止め、内輪専用スペーサ、ベアリング、脱着ガードを具体化。キャリアを先に外す工具経路と、ねじの逃げも是正しました。",
+    "example": "軸端止め、内輪専用スペーサ、ベアリング、脱着ガードを具体化。キャリアを先に外す工具経路と、ねじの逃げも是正しました。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "e5c8c5ef209ecf56": {
+    "source": "一つの機械データから",
+    "example": "一つの機械データから",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "f347f9776e5d2ec8": {
+    "source": "CAD、BOM、CG、規定歩行を同じ部品・寸法・配置へ結び付け、別コンテキストのAIレビューで{0}件を是正。人の有資格者による設計承認ではありません。",
+    "example": "CAD、BOM、CG、規定歩行を同じ部品・寸法・配置へ結び付け、別コンテキストのAIレビューで4件を是正。人の有資格者による設計承認ではありません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "18ef715e910231b9": {
+    "source": "以下の寸法・比率・質量・残差は",
+    "example": "以下の寸法・比率・質量・残差は",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "8208a7c50f098e69": {
+    "source": "Ver.{0}の正規comparison.json",
+    "example": "Ver.3.0の正規comparison.json",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "39c42e28b3441ba5": {
+    "source": "から生成しています。名目質量は全ソリッドCADと購入品の仮定／カタログ値の合計で、実測・スライサー質量ではありません。",
+    "example": "から生成しています。名目質量は全ソリッドCADと購入品の仮定／カタログ値の合計で、実測・スライサー質量ではありません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "c8f699157c405a62": {
+    "source": "大風車・少段減速",
+    "example": "大風車・少段減速",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "9d2afba675867fe9": {
+    "source": "Ver.{0} {1}案の実CADに基づく完成予想CG。実物ではない。",
+    "example": "Ver.3.0 A案の実CADに基づく完成予想CG。実物ではない。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "48f2299091907ce7": {
+    "source": "Ver.{0} · 履歴の設計CG／実物ではありません",
+    "example": "Ver.3.0 · 履歴の設計CG／実物ではありません",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "de65c7e098e40b71": {
+    "source": "風車径 × 幅",
+    "example": "風車径 × 幅",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "7a4ac323665f9749": {
+    "source": "総減速比",
+    "example": "総減速比",
+    "origins": [
+      "comparison.html",
+      "index.html"
+    ]
+  },
+  "5d46d808669c8384": {
+    "source": "名目質量",
+    "example": "名目質量",
+    "origins": [
+      "comparison.html",
+      "docs/ver3/integrated_r7/A/README_ja.md",
+      "docs/ver3/integrated_r7/B/README_ja.md",
+      "docs/ver3/integrated_r7/C/README_ja.md"
+    ]
+  },
+  "5c1f8608bea3ae31": {
+    "source": "材料点残差",
+    "example": "材料点残差",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "7ff04ddcc8fb8c69": {
+    "source": "目標未達",
+    "example": "目標未達",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "c9655acebe4afeed": {
+    "source": "受風面積を広げ、HTD{0}M歯付きベルト{1}:{2}と平歯車{3}:{4}を組み合わせる。風荷重と張力調整が代償。",
+    "example": "受風面積を広げ、HTD5M歯付きベルト2:1と平歯車3:1を組み合わせる。風荷重と張力調整が代償。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "e2bf0df62ea1b348": {
+    "source": "{0}案の歩行",
+    "example": "A案の歩行",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "c5db220b4393d753": {
+    "source": "お使いのブラウザーでは動画を表示できません。下のMP{0}リンクをご利用ください。",
+    "example": "お使いのブラウザーでは動画を表示できません。下のMP4リンクをご利用ください。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "ef7a7725151445ee": {
+    "source": "{0}案の歩行を再生",
+    "example": "A案の歩行を再生",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "0821794064995680": {
+    "source": "実機未検証・{0} mm目標未達。",
+    "example": "実機未検証・3 mm目標未達。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "bee5a83ce0584b29": {
+    "source": "規定入力 {0} rpm、{1}周期。動画 {2} 秒／モデル時間 {3} 秒、",
+    "example": "規定入力 120 rpm、3周期。動画 9 秒／モデル時間 9 秒、",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "dc74cb8c6b6353c8": {
+    "source": "{0}倍表示",
+    "example": "1倍表示",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "529ff5298b45c7ef": {
+    "source": "。材料点の最大水平残差は {0} mm。風・接触動力学の実証ではありません。",
+    "example": "。材料点の最大水平残差は 9.55 mm。風・接触動力学の実証ではありません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "9b2ad2730ae5852b": {
+    "source": "動画を再生できませんでした。MP{0}をGitHubで開いてください。",
+    "example": "動画を再生できませんでした。MP4をGitHubで開いてください。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "008efc3231dab349": {
+    "source": "MP{0}をGitHubで開く ↗",
+    "example": "MP4をGitHubで開く ↗",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "33c6f09856867d9a": {
+    "source": "小風車・高減速",
+    "example": "小風車・高減速",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "fc804d5fa0a6a3bb": {
+    "source": "{0} mmの風車を維持し、{1}:{2}の平歯車を三段に。低速化に加え、段数と軸受の始動抵抗が増える。",
+    "example": "90 mmの風車を維持し、4:1の平歯車を三段に。低速化に加え、段数と軸受の始動抵抗が増える。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "596a366949a4824b": {
+    "source": "{0}は名目トルク入力も不足しています。",
+    "example": "Bは名目トルク入力も不足しています。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "b026e5b1f6761e71": {
+    "source": "中間風車・生成軽量",
+    "example": "中間風車・生成軽量",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "e7dcf95a31ea49a3": {
+    "source": "{0}:{1}の平歯車を二段にし、リブ形状を制約付きで探索。組立・接合・抵抗測定の最初の候補。",
+    "example": "4:1の平歯車を二段にし、リブ形状を制約付きで探索。組立・接合・抵抗測定の最初の候補。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "0bcfa9ccbcfcebe0": {
+    "source": "「前進する動画」と「実機で歩ける」は別です。",
+    "example": "「前進する動画」と「実機で歩ける」は別です。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "76b77857875c1f10": {
+    "source": "本体の並進・姿勢は接地靴の形状と持続する材料点アンカーから求め、棒を伸縮させたり任意の前進速度を足したりしていません。ただし、規定入力と接地近似による可視化であり、風・摩擦・衝撃を含む接触動力学ではありません。",
+    "example": "本体の並進・姿勢は接地靴の形状と持続する材料点アンカーから求め、棒を伸縮させたり任意の前進速度を足したりしていません。ただし、規定入力と接地近似による可視化であり、風・摩擦・衝撃を含む接触動力学ではありません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "e3b0e848b5edcb68": {
+    "source": "表示する残差は、総荷重の{0}%以上を受け持つ一つの継続区間内の最大水平偏差です。動画開始時の部分区間を含み、三周期の合計滑り量ではありません。近接足と負荷足は区別され、小さい正の支持余裕も実用安定を保証しません。",
+    "example": "表示する残差は、総荷重の2%以上を受け持つ一つの継続区間内の最大水平偏差です。動画開始時の部分区間を含み、三周期の合計滑り量ではありません。近接足と負荷足は区別され、小さい正の支持余裕も実用安定を保証しません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "d6a35dbb8308deef": {
+    "source": "指標の定義・重心と風の感度を見る ↗",
+    "example": "指標の定義・重心と風の感度を見る ↗",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "3ea9aa7ba3b46e37": {
+    "source": "初期三案の規定歩行をまとめて見る",
+    "example": "初期三案の規定歩行をまとめて見る",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "9d83ef6c3b349b55": {
+    "source": "GIFは操作するまで読み込みません。自動再生しない静止プレビューです。",
+    "example": "GIFは操作するまで読み込みません。自動再生しない静止プレビューです。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "f950a9bd56b25020": {
+    "source": "歩行GIFを再生（{0}秒・約{1} MB）",
+    "example": "歩行GIFを再生（33秒・約2.9 MB）",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "eb318f739db30c11": {
+    "source": "動きを減らす設定を尊重し、自動では再生しません。ボタンを押した場合だけ動きます。",
+    "example": "動きを減らす設定を尊重し、自動では再生しません。ボタンを押した場合だけ動きます。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "00c47b99c0d8b3c0": {
+    "source": "GIFをGitHubで開く ↗",
+    "example": "GIFをGitHubで開く ↗",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "bf779e61428279bd": {
+    "source": "Ver.{0}三案の静止比較。ボタン操作後は旧規定歩行のGIFを表示。",
+    "example": "Ver.3.0三案の静止比較。ボタン操作後は旧規定歩行のGIFを表示。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "931afd856a3a1994": {
+    "source": "プレビューを読み込めませんでした。GitHubへのリンクをご利用ください。",
+    "example": "プレビューを読み込めませんでした。GitHubへのリンクをご利用ください。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "463d1e99e458f442": {
+    "source": "動かし方と、組み方を切り分ける。",
+    "example": "動かし方と、組み方を切り分ける。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "e30f61c3d71244d2": {
+    "source": "駆動機構",
+    "example": "駆動機構",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "a864566f8d46d4f5": {
+    "source": "駆動機構を再生",
+    "example": "駆動機構を再生",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "acfac9792d1736ba": {
+    "source": "規定運動・実機未検証。",
+    "example": "規定運動・実機未検証。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "65885db0d4a980dd": {
+    "source": "CADと同じ軸・歯車比を表示。風や接触動力学の実証ではありません。",
+    "example": "CADと同じ軸・歯車比を表示。風や接触動力学の実証ではありません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "0c8e38d76474b284": {
+    "source": "分解説明",
+    "example": "分解説明",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "3362129ce076ab67": {
+    "source": "分解説明を再生",
+    "example": "分解説明を再生",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "e94487598cc738d1": {
+    "source": "説明用の分解オフセット。",
+    "example": "説明用の分解オフセット。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "2d794629d48fe218": {
+    "source": "同時に動かす映像だけでは組立経路を証明しません。実際の順序は組立資料を参照してください。",
+    "example": "同時に動かす映像だけでは組立経路を証明しません。実際の順序は組立資料を参照してください。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "b76efdb9db8f36c1": {
+    "source": "Ver.{0} {1}案の制約付き生成リブ構造を示すCAD由来のCG。",
+    "example": "Ver.3.0 C案の制約付き生成リブ構造を示すCAD由来のCG。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "3ef74a58cb72451b": {
+    "source": "Ver.{0} {1} · 生成したフレームの設計CG",
+    "example": "Ver.3.0 C · 生成したフレームの設計CG",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "38d49bd629ece3e5": {
+    "source": "必要な領域を残し、条件の中で探す。",
+    "example": "必要な領域を残し、条件の中で探す。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "8b7c1ca4f576c9f8": {
+    "source": "軸受・ボルト座の保存領域、風車と脚の可動域、他の貫通軸、印刷寸法を制約に、歯数・軸位置・リブ幅・厚さを実際に探索しました。",
+    "example": "軸受・ボルト座の保存領域、風車と脚の可動域、他の貫通軸、印刷寸法を制約に、歯数・軸位置・リブ幅・厚さを実際に探索しました。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "08e1bad5d75ad928": {
+    "source": "{0}の同じ軸配置・荷重条件では、{1} × {2} mmリブ候補から{3} × {4} mm候補へ、",
+    "example": "Cの同じ軸配置・荷重条件では、8 × 14 mmリブ候補から8 × 8 mm候補へ、",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "59ff1e6744ece82d": {
+    "source": "部材加算体積の代理量が約{0}%減少",
+    "example": "部材加算体積の代理量が約35.25%減少",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "9785fddafa0756ec": {
+    "source": "。変位の代理値は増えています。",
+    "example": "。変位の代理値は増えています。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "01e95d4bca4d9435": {
+    "source": "装置全体の質量がこの割合で減った、という意味ではありません。",
+    "example": "装置全体の質量がこの割合で減った、という意味ではありません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "01b3db906893228e": {
+    "source": "これはパラメトリック生成設計です。Autodesk Generative Design、CFD、連続体FEA、トポロジー最適化、実機試験を実施したとは称しません。",
+    "example": "これはパラメトリック生成設計です。Autodesk Generative Design、CFD、連続体FEA、トポロジー最適化、実機試験を実施したとは称しません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "ca73021f6a3e3319": {
+    "source": "探索条件・比較値・根拠を読む ↗",
+    "example": "探索条件・比較値・根拠を読む ↗",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "13b76e4609321812": {
+    "source": "Ver.{0}の旧CAD・比較検討資料。",
+    "example": "Ver.3.0の旧CAD・比較検討資料。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "ef8e3123bb387e02": {
+    "source": "初期比較案の保存用です。現行部品ではありません。",
+    "example": "初期比較案の保存用です。現行部品ではありません。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "e475d9a8e6d84cd9": {
+    "source": "Ver.{0}の正規ダウンロードへ →",
+    "example": "Ver.3.1の正規ダウンロードへ →",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "c279bff8cc785bec": {
+    "source": "Ver.{0} {1}案 · 旧資料",
+    "example": "Ver.3.0 A案 · 旧資料",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "23877b2ed2063511": {
+    "source": "交換用 · STEP ({0} MB)",
+    "example": "交換用 · STEP (17.1 MB)",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "b878078598dcaf88": {
+    "source": "印刷部品 · STL一覧",
+    "example": "印刷部品 · STL一覧",
+    "origins": [
+      "comparison.html",
+      "index.html"
+    ]
+  },
+  "d3dd027cadc22d3a": {
+    "source": "部品表 · CSV ({0} KB)",
+    "example": "部品表 · CSV (17 KB)",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "a5863a795c80ba02": {
+    "source": "正規組立データ · JSON",
+    "example": "正規組立データ · JSON",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "9938ee91d16ea782": {
+    "source": "番号付き組立手順・ベンチ確認票",
+    "example": "番号付き組立手順・ベンチ確認票",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "692a8239296b5a74": {
+    "source": "設計・計算・再生成方法",
+    "example": "設計・計算・再生成方法",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "06f6d2b04236fbf8": {
+    "source": "独立AIレビューと是正記録",
+    "example": "独立AIレビューと是正記録",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "2252eb9105da8470": {
+    "source": "実断面・段別カバー型紙",
+    "example": "実断面・段別カバー型紙",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "6d88c45e7436272a": {
+    "source": "三案の比較CSV",
+    "example": "三案の比較CSV",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "9477e0cdebc71296": {
+    "source": "Ver.{0} Blenderネイティブ（約{1} MB）",
+    "example": "Ver.3.0 Blenderネイティブ（約28.3 MB）",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "6ec62f3c7810fb37": {
+    "source": "生成スクリプトと設定（複数の内部改訂を含む）",
+    "example": "生成スクリプトと設定（複数の内部改訂を含む）",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "0eafcc449a1790fa": {
+    "source": "Ver.{0}のCG・GIF・MP{1}",
+    "example": "Ver.3.0のCG・GIF・MP4",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "87ac51b72658b80f": {
+    "source": "Ver.{0}の工程別部品表と組立ガイド",
+    "example": "Ver.3.0の工程別部品表と組立ガイド",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "34250fbb59492c94": {
+    "source": "Ver.{0}から初期案への変更と確認状況",
+    "example": "Ver.2から初期案への変更と確認状況",
+    "origins": [
+      "comparison.html"
+    ]
+  },
+  "0be1fc37b53cfd69": {
+    "source": "Ver.{0}はVer.{1}の無加工差替え部品ではありません。STLはmm・{2}%。{3}の最大フレームは{4} mm境界に達し、造形面の余白・ブリムを保証しません。実物での滑りトルク、軸方向すきま、全周手回し、重心、転倒の確認が必要です。",
+    "example": "Ver.3.0はVer.2の無加工差替え部品ではありません。STLはmm・100%。Aの最大フレームは256 mm境界に達し、造形面の余白・ブリムを保証しません。実物での滑りトルク、軸方向すきま、全周手回し、重心、転倒の確認が必要です。",
+    "origins": [
+      "comparison.html"
+    ]
+  },
   "0305452742fa69b4": {
     "source": "変更した設計と、残る実測を分ける。",
     "example": "変更した設計と、残る実測を分ける。",
@@ -2744,38 +3404,23 @@
       "comparison.html"
     ]
   },
-  "3c1147b89ecc8918": {
-    "source": "比較するのは、対策と根拠。その先は実測へ。",
-    "example": "比較するのは、対策と根拠。その先は実測へ。",
+  "32a19cacc76d3eb2": {
+    "source": "Ver.{0} {1}°・組立ガイド",
+    "example": "Ver.3.0 360°・組立ガイド",
     "origins": [
       "comparison.html"
     ]
   },
-  "8a6da5662fabf530": {
-    "source": "{0}°・組立ガイド",
-    "example": "360°・組立ガイド",
-    "origins": [
-      "comparison.html"
-    ]
-  },
-  "525d1dc913f01ee6": {
-    "source": "三案の概要",
-    "example": "三案の概要",
-    "origins": [
-      "comparison.html",
-      "viewer.html"
-    ]
-  },
-  "637546628d88b324": {
-    "source": "テオ・ヤンセン機構に着想を得たリノセウス。Ver.{0}・Ver.{1}の実物制作記録と、Ver.{2}の三つの比較設計、歩行可視化、CAD・STL・組立資料を紹介します。",
-    "example": "テオ・ヤンセン機構に着想を得たリノセウス。Ver.1・Ver.2の実物制作記録と、Ver.3の三つの比較設計、歩行可視化、CAD・STL・組立資料を紹介します。",
+  "78d5ff58032752ba": {
+    "source": "リノセウスの現行設計Ver.{0}。床是正版の{1}・{2}・{3}、{4}°・{5}工程・連続歩行表示と正規CAD・STL・BOMへ。Ver.{6}/{7}の実物記録とVer.{8}の初期比較案は履歴として区別します。",
+    "example": "リノセウスの現行設計Ver.3.1。床是正版のA・B・C、360°・12工程・連続歩行表示と正規CAD・STL・BOMへ。Ver.1/2の実物記録とVer.3.0の初期比較案は履歴として区別します。",
     "origins": [
       "index.html"
     ]
   },
-  "bf3aa4f881de3b6b": {
-    "source": "リノセウス — 風と、試作と。Ver.{0} / Ver.{1} / Ver.{2}",
-    "example": "リノセウス — 風と、試作と。Ver.1 / Ver.2 / Ver.3",
+  "c3a9f12abb635236": {
+    "source": "リノセウス — Ver.{0} 現行設計と、Ver.{1} / Ver.{2} / Ver.{3}の記録",
+    "example": "リノセウス — Ver.3.1 現行設計と、Ver.1 / Ver.2 / Ver.3.0の記録",
     "origins": [
       "index.html"
     ]
@@ -2783,6 +3428,13 @@
   "7a94fabb33e71de4": {
     "source": "リノセウス・ページ先頭",
     "example": "リノセウス・ページ先頭",
+    "origins": [
+      "index.html"
+    ]
+  },
+  "5ce5e4f9f62c0e7e": {
+    "source": "版を選ぶ",
+    "example": "版を選ぶ",
     "origins": [
       "index.html"
     ]
@@ -2801,121 +3453,109 @@
       "index.html"
     ]
   },
-  "9e50eaa2cc984721": {
-    "source": "風と、試作と。",
-    "example": "風と、試作と。",
+  "e673178692ba12b9": {
+    "source": "歩く仕組みを、見直す。",
+    "example": "歩く仕組みを、見直す。",
     "origins": [
       "index.html"
     ]
   },
-  "8c2ed4071ef09bd2": {
-    "source": "歩く仕組みをつくる。",
-    "example": "歩く仕組みをつくる。",
+  "95e7dc606fae39ce": {
+    "source": "テオ・ヤンセンのストランビーストに着想を得た歩行模型「リノセウス」。現行の床是正版を、同じ形状の比較・{0}°・組立・連続歩行表示と資料でたどれます。",
+    "example": "テオ・ヤンセンのストランビーストに着想を得た歩行模型「リノセウス」。現行の床是正版を、同じ形状の比較・360°・組立・連続歩行表示と資料でたどれます。",
     "origins": [
       "index.html"
     ]
   },
-  "0ef156b779ce6544": {
-    "source": "テオ・ヤンセンのストランビーストに着想を得た、{0}Dプリントの歩行模型「リノセウス」。形にする、動きを見直す、接合から考え直す。三つの版に、その試行錯誤を残しています。",
-    "example": "テオ・ヤンセンのストランビーストに着想を得た、3Dプリントの歩行模型「リノセウス」。形にする、動きを見直す、接合から考え直す。三つの版に、その試行錯誤を残しています。",
+  "832eaac2fa677e15": {
+    "source": "Ver.{0}の三案を見る",
+    "example": "Ver.3.1の三案を見る",
     "origins": [
       "index.html"
     ]
   },
-  "4b7202b3a99e1142": {
-    "source": "三つの版を見比べる",
-    "example": "三つの版を見比べる",
+  "7620cdcec3e305f8": {
+    "source": "Ver.{0}の連続歩行表示 →",
+    "example": "Ver.3.1の連続歩行表示 →",
     "origins": [
       "index.html"
     ]
   },
-  "df01c39eb83f84e7": {
-    "source": "制作記録の原文 ↗",
-    "example": "制作記録の原文 ↗",
+  "e8ce8fbef8c9f2bb": {
+    "source": "現行設計であって、実機の完成・合格ではありません。",
+    "example": "現行設計であって、実機の完成・合格ではありません。",
     "origins": [
       "index.html"
     ]
   },
-  "ceb23289331b7adb": {
-    "source": "Ver.{0} / Ver.{1} は実物の制作記録。",
-    "example": "Ver.1 / Ver.2 は実物の制作記録。",
+  "c0c36660ff36b62e": {
+    "source": "Ver.{0} / Ver.{1} は実物記録、Ver.{2} は旧初期比較案。内部設計ID r{3}/floor{4}を、公開名Ver.{5}として案内しています。",
+    "example": "Ver.1 / Ver.2 は実物記録、Ver.3.0 は旧初期比較案。内部設計ID r7/floor2を、公開名Ver.3.1として案内しています。",
     "origins": [
       "index.html"
     ]
   },
-  "0f75cce623af7306": {
-    "source": "Ver.{0} は比較検討用の設計・CGで、実機の風力歩行は未検証です。",
-    "example": "Ver.3 は比較検討用の設計・CGで、実機の風力歩行は未検証です。",
+  "862b87431de0fed1": {
+    "source": "Ver.{0}の{1}・{2}・{3}を同一尺度で並べた床是正版CG。実物ではありません。",
+    "example": "Ver.3.1のA・B・Cを同一尺度で並べた床是正版CG。実物ではありません。",
     "origins": [
       "index.html"
     ]
   },
-  "02e18a42a7ef1540": {
-    "source": "サボニウス型風車を備えたVer.{0}の実物。白いフレームと黒い足を持つ歩行模型。",
-    "example": "サボニウス型風車を備えたVer.2の実物。白いフレームと黒い足を持つ歩行模型。",
+  "e6f0860b27ffd9fe": {
+    "source": "画像を読み込めませんでした。原本リンクをご利用ください。",
+    "example": "画像を読み込めませんでした。原本リンクをご利用ください。",
+    "origins": [
+      "index.html",
+      "r7.html"
+    ]
+  },
+  "76b6c8e990a93e3f": {
+    "source": "原寸画像 ↗",
+    "example": "原寸画像 ↗",
+    "origins": [
+      "index.html",
+      "r7.html"
+    ]
+  },
+  "33129a3e14c1b507": {
+    "source": "最新はVer.{0}。初期案はVer.{1}の履歴へ。",
+    "example": "最新はVer.3.1。初期案はVer.3.0の履歴へ。",
     "origins": [
       "index.html"
     ]
   },
-  "76a8cf5855731d71": {
-    "source": "Ver.{0} · 実物の制作記録（表示用トリミング）",
-    "example": "Ver.2 · 実物の制作記録（表示用トリミング）",
+  "17597c6b6ad139e3": {
+    "source": "公開名を分け、旧CGや旧BOMへ迷わず進めるようにしました。設計原本・部品ID・解析結果は変更していません。",
+    "example": "公開名を分け、旧CGや旧BOMへ迷わず進めるようにしました。設計原本・部品ID・解析結果は変更していません。",
     "origins": [
       "index.html"
     ]
   },
-  "e2c9dc6b14172a55": {
-    "source": "r{0}床是正版：三案を、形と工程から比べる。",
-    "example": "r7床是正版：三案を、形と工程から比べる。",
+  "4d38c737de05de59": {
+    "source": "Ver.{0} 比較・{1}°・{2}工程 →",
+    "example": "Ver.3.1 比較・360°・12工程 →",
     "origins": [
       "index.html"
     ]
   },
-  "2a3f97f7cbacea4e": {
-    "source": "是正した全{0}部品の{1}°、{2}工程の組立・取外し説明、同尺度CG、限定した接地診断図と正規資料を公開しています。",
-    "example": "是正した全2285部品の360°、12工程の組立・取外し説明、同尺度CG、限定した接地診断図と正規資料を公開しています。",
+  "3b27b01ceaad71f6": {
+    "source": "Ver.{0} 初期比較案・旧資料を見る",
+    "example": "Ver.3.0 初期比較案・旧資料を見る",
     "origins": [
       "index.html"
     ]
   },
-  "416828efe2656f08": {
-    "source": "実機未検証の設計候補で、完全なCAD歩行動画・実{0} cm歩行の合格ではありません。",
-    "example": "実機未検証の設計候補で、完全なCAD歩行動画・実30 cm歩行の合格ではありません。",
+  "6f63e108a39287f1": {
+    "source": "実物の記録から、現行設計へ。",
+    "example": "実物の記録から、現行設計へ。",
     "origins": [
       "index.html"
     ]
   },
-  "e7df1b85c781bfe6": {
-    "source": "r{0}床是正版の比較・{1}°・資料 →",
-    "example": "r7床是正版の比較・360°・資料 →",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "5403eb67744e1648": {
-    "source": "同版の組立／取外し説明",
-    "example": "同版の組立／取外し説明",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "ecf71718a04798c3": {
-    "source": "計算位置の{0}時点診断",
-    "example": "計算位置の3時点診断",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "679c1f15cf6be0e1": {
-    "source": "部材費の承認目安は{0}円／台。工具・送料・未確定税は別。元{1}点＋新{2}歯車{3}点の層確認を、実造形・実はめあいの認定とは区別しています。下の第一カットやVer.{4}/{5}の記録は履歴として残しています。",
-    "example": "部材費の承認目安は24,000円／台。工具・送料・未確定税は別。元5点＋新C歯車2点の層確認を、実造形・実はめあいの認定とは区別しています。下の第一カットやVer.1/2の記録は履歴として残しています。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "d8b6025e256d5f4b": {
-    "source": "三つの版、三つの問い。",
-    "example": "三つの版、三つの問い。",
+  "b8a36bdb2f387d22": {
+    "source": "公開版と内部研究の改訂番号を分けています。r{0}・r{1}・r{2}・r{3}は研究・部分設計のIDで、作品のVer.{4}やVer.{5}を意味しません。",
+    "example": "公開版と内部研究の改訂番号を分けています。r2・r3・r4・r6は研究・部分設計のIDで、作品のVer.2やVer.3.1を意味しません。",
     "origins": [
       "index.html"
     ]
@@ -2969,23 +3609,58 @@
       "index.html"
     ]
   },
-  "c6514b1a93b0e331": {
-    "source": "比較設計・実機未検証",
-    "example": "比較設計・実機未検証",
+  "d57da5ff4bb58b5e": {
+    "source": "初期比較案・履歴",
+    "example": "初期比較案・履歴",
     "origins": [
       "index.html"
     ]
   },
-  "d5d0a6fdf60c5a5b": {
-    "source": "力の伝わり方を、変える。",
-    "example": "力の伝わり方を、変える。",
+  "c00bb0837dfef983": {
+    "source": "最初の三案を残す。",
+    "example": "最初の三案を残す。",
     "origins": [
       "index.html"
     ]
   },
-  "eff0633bbc5cf683": {
-    "source": "金属軸と正係合。風車と減速の三案を、実CADと共通条件で比較。",
-    "example": "金属軸と正係合。風車と減速の三案を、実CADと共通条件で比較。",
+  "4ad77aac4503367b": {
+    "source": "第一カットの形状・比較・動画・旧CAD。現行設計のダウンロードとは別です。",
+    "example": "第一カットの形状・比較・動画・旧CAD。現行設計のダウンロードとは別です。",
+    "origins": [
+      "index.html"
+    ]
+  },
+  "8f2a13f834b41ec1": {
+    "source": "Ver.{0}の履歴",
+    "example": "Ver.3.0の履歴",
+    "origins": [
+      "index.html"
+    ]
+  },
+  "f7fba320cbec9d9c": {
+    "source": "現行設計・実機未検証",
+    "example": "現行設計・実機未検証",
+    "origins": [
+      "index.html"
+    ]
+  },
+  "a36a50912ac0019d": {
+    "source": "床是正後の三案へ。",
+    "example": "床是正後の三案へ。",
+    "origins": [
+      "index.html"
+    ]
+  },
+  "643cc88d36c7b427": {
+    "source": "同じ全体モデルの比較・{0}°・{1}工程。連続歩行は追加仮定を明示した計算表示です。",
+    "example": "同じ全体モデルの比較・360°・12工程。連続歩行は追加仮定を明示した計算表示です。",
+    "origins": [
+      "index.html"
+    ]
+  },
+  "b323be47b983bc70": {
+    "source": "Ver.{0}を見る",
+    "example": "Ver.3.1を見る",
     "origins": [
       "index.html"
     ]
@@ -3411,558 +4086,322 @@
       "index.html"
     ]
   },
-  "6b10e82325de030e": {
-    "source": "以下は第一カットの設計履歴です。",
-    "example": "以下は第一カットの設計履歴です。",
+  "a917c01323a630dd": {
+    "source": "現行設計を、三案から選ぶ。",
+    "example": "現行設計を、三案から選ぶ。",
     "origins": [
       "index.html"
     ]
   },
-  "63fdb780154db27b": {
-    "source": "新しいr{0}床是正版の三案へ →",
-    "example": "新しいr7床是正版の三案へ →",
+  "396c5e1ab7609544": {
+    "source": "床是正版の形状・部品表・{0}工程を共通の出典でつなぎます。旧第一カットのCGや諸元ではありません。",
+    "example": "床是正版の形状・部品表・12工程を共通の出典でつなぎます。旧第一カットのCGや諸元ではありません。",
     "origins": [
       "index.html"
     ]
   },
-  "f95af2f6c3f2abc8": {
-    "source": "。旧CG・規定歩行動画を新r{0}の動作として扱っていません。",
-    "example": "。旧CG・規定歩行動画を新r7の動作として扱っていません。",
+  "fdbfd2015e4521df": {
+    "source": "Ver.{0}は設計候補です。実機の風力歩行は未検証です。",
+    "example": "Ver.3.1は設計候補です。実機の風力歩行は未検証です。",
     "origins": [
       "index.html"
     ]
   },
-  "85a119ffe59724ee": {
-    "source": "接合から考え直す、三つの案。",
-    "example": "接合から考え直す、三つの案。",
+  "fc9cb83e31efde55": {
+    "source": "manufacturingRelease=false／実機合格{0}。実自己始動・実{1} cm歩行はUNKNOWN。",
+    "example": "manufacturingRelease=false／実機合格0。実自己始動・実30 cm歩行はUNKNOWN。",
     "origins": [
       "index.html"
     ]
   },
-  "4f3ca07a699c65ac": {
-    "source": "実形状・共通条件・明示した限界。CGを、実機の完成と取り違えないために。",
-    "example": "実形状・共通条件・明示した限界。CGを、実機の完成と取り違えないために。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "faf1641903921889": {
-    "source": "Ver.{0}は比較設計です。実機の風力歩行は未検証です。",
-    "example": "Ver.3は比較設計です。実機の風力歩行は未検証です。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "2076338adca95f5f": {
-    "source": "全{0}案で接地残差{1} mm目標は未達。{2}は名目条件でも入力トルクが不足。",
-    "example": "全3案で接地残差3 mm目標は未達。Bは名目条件でも入力トルクが不足。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "877cec5de600149d": {
-    "source": "{0}は組立・接合・抵抗測定の候補であって、風力で動く完成機としての推奨ではありません。部材強度、印刷公差、重心、転倒、悪い風車角での自己始動は確認待ちです。",
-    "example": "Cは組立・接合・抵抗測定の候補であって、風力で動く完成機としての推奨ではありません。部材強度、印刷公差、重心、転倒、悪い風車角での自己始動は確認待ちです。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "b22856f9a80b2a46": {
-    "source": "Ver.{0}から何を変えたか。どの順番で組むか。",
-    "example": "Ver.2から何を変えたか。どの順番で組むか。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "b78c497ebcd5c893": {
-    "source": "接合の空転から調達まで八つの観点を、実写真・CG・検証状況のMatrixで整理しました。第一カット{0}/{1}/{2}の正規CADを{3}°回して部品を選び、原典に対応する具体的な組立段階も確認できます。形状を見ることと、実機性能の確認は別です。",
-    "example": "接合の空転から調達まで八つの観点を、実写真・CG・検証状況のMatrixで整理しました。第一カットA/B/Cの正規CADを360°回して部品を選び、原典に対応する具体的な組立段階も確認できます。形状を見ることと、実機性能の確認は別です。",
+  "a14aa76e5f8c81df": {
+    "source": "代表{0}部品の層確認は限定した条件での検査で、全機の造形・支持除去・はめあいを認定するものではありません。",
+    "example": "代表7部品の層確認は限定した条件での検査で、全機の造形・支持除去・はめあいを認定するものではありません。",
     "origins": [
       "index.html"
     ]
   },
   "12f0743d24518b65": {
     "source": "Ver.{0} → Ver.{1} 改良Matrix",
-    "example": "Ver.2 → Ver.3 改良Matrix",
+    "example": "Ver.2 → Ver.3.1 改良Matrix",
     "origins": [
       "index.html"
     ]
   },
-  "a8331344955d910e": {
-    "source": "{0}°・部品選択・組立ガイド",
-    "example": "360°・部品選択・組立ガイド",
+  "36c2acd6cf998d57": {
+    "source": "Ver.{0} {1}°・部品選択・組立ガイド",
+    "example": "Ver.3.1 360°・部品選択・組立ガイド",
     "origins": [
       "index.html"
     ]
   },
-  "04cc4f6657133783": {
-    "source": "の骨格計算です。三案とも未合格・最終CADなし。以下の第一カットCG／{0}°に新しい解析結果を貼り付けたものではありません。",
-    "example": "の骨格計算です。三案とも未合格・最終CADなし。以下の第一カットCG／360°に新しい解析結果を貼り付けたものではありません。",
+  "48ba5f51a24f2c51": {
+    "source": "Ver.{0} {1}案・床是正版の実CAD由来CG。実物ではありません。",
+    "example": "Ver.3.1 A案・床是正版の実CAD由来CG。実物ではありません。",
     "origins": [
       "index.html"
     ]
   },
-  "782c5a284e9d7575": {
-    "source": "Ver.{0}の{1}・{2}・{3}を同じ尺度で比較した設計CG。風車径は{4}・{5}・{6}mm。",
-    "example": "Ver.3のA・B・Cを同じ尺度で比較した設計CG。風車径は300・90・180mm。",
+  "54ff6b7d4c06056a": {
+    "source": "風車径",
+    "example": "風車径",
     "origins": [
       "index.html"
     ]
   },
-  "9d3a55dfbcdf4f7a": {
-    "source": "Ver.{0} · 同一実寸スケールの設計CG／実機未検証",
-    "example": "Ver.3 · 同一実寸スケールの設計CG／実機未検証",
+  "d0f4c31c1782af30": {
+    "source": "名目全体質量",
+    "example": "名目全体質量",
     "origins": [
       "index.html"
     ]
   },
-  "549c30c7872ecf14": {
-    "source": "接着剤頼みの接合から",
-    "example": "接着剤頼みの接合から",
+  "304c6acf38838ae5": {
+    "source": "正規部品数",
+    "example": "正規部品数",
     "origins": [
       "index.html"
     ]
   },
-  "20e4f0d422a9ef0a": {
-    "source": "金属REX軸の平面と金属ハブを形状で係合し、樹脂部品は実在する穴とボルトで結合。接着剤を主トルク経路にしません。",
-    "example": "金属REX軸の平面と金属ハブを形状で係合し、樹脂部品は実在する穴とボルトで結合。接着剤を主トルク経路にしません。",
+  "602dfe4e3e4dffd0": {
+    "source": "個別初回部材費：{0}円",
+    "example": "個別初回部材費：23,305.13円",
     "origins": [
       "index.html"
     ]
   },
-  "9f57bda236ffc66a": {
-    "source": "抜け止め・支持・組立順まで",
-    "example": "抜け止め・支持・組立順まで",
+  "bec33df3fc9b7a97": {
+    "source": "{0}の{1}°・{2}工程へ →",
+    "example": "Aの360°・12工程へ →",
     "origins": [
       "index.html"
     ]
   },
-  "0911f4180bc87d02": {
-    "source": "軸端止め、内輪専用スペーサ、ベアリング、脱着ガードを具体化。キャリアを先に外す工具経路と、ねじの逃げも是正しました。",
-    "example": "軸端止め、内輪専用スペーサ、ベアリング、脱着ガードを具体化。キャリアを先に外す工具経路と、ねじの逃げも是正しました。",
+  "cac54ec8069a1599": {
+    "source": "{0}の連続歩行表示へ →",
+    "example": "Aの連続歩行表示へ →",
     "origins": [
       "index.html"
     ]
   },
-  "e5c8c5ef209ecf56": {
-    "source": "一つの機械データから",
-    "example": "一つの機械データから",
+  "e5e0cd8245fd32ac": {
+    "source": "寸法・減速比・名目質量・個別初回費用は、床是正版の正規比較データから生成しています。質量は実測・スライス値ではありません。部材費の承認目安は約{0}円／台。未保有DN{1}約{2}円・送料・未確定税は別です。",
+    "example": "寸法・減速比・名目質量・個別初回費用は、床是正版の正規比較データから生成しています。質量は実測・スライス値ではありません。部材費の承認目安は約24,000円／台。未保有DN-03約396円・送料・未確定税は別です。",
     "origins": [
       "index.html"
     ]
   },
-  "f347f9776e5d2ec8": {
-    "source": "CAD、BOM、CG、規定歩行を同じ部品・寸法・配置へ結び付け、別コンテキストのAIレビューで{0}件を是正。人の有資格者による設計承認ではありません。",
-    "example": "CAD、BOM、CG、規定歩行を同じ部品・寸法・配置へ結び付け、別コンテキストのAIレビューで4件を是正。人の有資格者による設計承認ではありません。",
+  "94509e34c4ecb2ec": {
+    "source": "内部設計ID：",
+    "example": "内部設計ID：",
     "origins": [
       "index.html"
     ]
   },
-  "18ef715e910231b9": {
-    "source": "以下の寸法・比率・質量・残差は",
-    "example": "以下の寸法・比率・質量・残差は",
+  "49b75671ce45a4a5": {
+    "source": "動画内のr{0}表記もこのVer.{1}形状を指します。連続歩行は同じ形状に別版の姿勢モデルを追加した計算表示です。規定入力{2} rpm・{3}倍表示・約{4} cmは実測ではなく、原解析のnullや判定は変更していません。",
+    "example": "動画内のr7表記もこのVer.3.1形状を指します。連続歩行は同じ形状に別版の姿勢モデルを追加した計算表示です。規定入力120 rpm・16倍表示・約37 cmは実測ではなく、原解析のnullや判定は変更していません。",
     "origins": [
       "index.html"
     ]
   },
-  "b98024814586a6c8": {
-    "source": "正規のcomparison.json",
-    "example": "正規のcomparison.json",
+  "8f1bbb913ab620bf": {
+    "source": "同条件の費用・入力要求・代償を詳しく見る",
+    "example": "同条件の費用・入力要求・代償を詳しく見る",
     "origins": [
       "index.html"
     ]
   },
-  "39c42e28b3441ba5": {
-    "source": "から生成しています。名目質量は全ソリッドCADと購入品の仮定／カタログ値の合計で、実測・スライサー質量ではありません。",
-    "example": "から生成しています。名目質量は全ソリッドCADと購入品の仮定／カタログ値の合計で、実測・スライサー質量ではありません。",
+  "40ba67f15d69cdf6": {
+    "source": "Ver.{0} 初期比較案・旧動画・旧資料",
+    "example": "Ver.3.0 初期比較案・旧動画・旧資料",
     "origins": [
       "index.html"
     ]
   },
-  "c8f699157c405a62": {
-    "source": "大風車・少段減速",
-    "example": "大風車・少段減速",
+  "0b4b3d7bdd72758c": {
+    "source": "内部研究r{0}／r{1}の計算資料（別条件）",
+    "example": "内部研究r3／r4の計算資料（別条件）",
     "origins": [
       "index.html"
     ]
   },
-  "9d2afba675867fe9": {
-    "source": "Ver.{0} {1}案の実CADに基づく完成予想CG。実物ではない。",
-    "example": "Ver.3 A案の実CADに基づく完成予想CG。実物ではない。",
+  "aee72c1d30271f01": {
+    "source": "Ver.{0}の正規資料・ダウンロード。",
+    "example": "Ver.3.1の正規資料・ダウンロード。",
     "origins": [
       "index.html"
     ]
   },
-  "13d9bae1c1479e12": {
-    "source": "Ver.{0} · 設計CG／実物ではありません",
-    "example": "Ver.3 · 設計CG／実物ではありません",
+  "abc2d9604b894dd8": {
+    "source": "現行の床是正版へ直接リンクします。CAD・STL・BOMを旧Ver.{0}と混ぜず、同じ案・版で選んでください。",
+    "example": "現行の床是正版へ直接リンクします。CAD・STL・BOMを旧Ver.3.0と混ぜず、同じ案・版で選んでください。",
     "origins": [
       "index.html"
     ]
   },
-  "de65c7e098e40b71": {
-    "source": "風車径 × 幅",
-    "example": "風車径 × 幅",
+  "1e29ff20b675b6df": {
+    "source": "交換用 · STEP",
+    "example": "交換用 · STEP",
     "origins": [
       "index.html"
     ]
   },
-  "7a4ac323665f9749": {
-    "source": "総減速比",
-    "example": "総減速比",
+  "7279d40aa8ef1d61": {
+    "source": "使用数量BOM · CSV",
+    "example": "使用数量BOM · CSV",
     "origins": [
       "index.html"
     ]
   },
-  "5d46d808669c8384": {
-    "source": "名目質量",
-    "example": "名目質量",
+  "404ab0b251d6a07f": {
+    "source": "正規{0}工程 · JSON",
+    "example": "正規12工程 · JSON",
+    "origins": [
+      "index.html"
+    ]
+  },
+  "8816434142cf5974": {
+    "source": "案別の説明",
+    "example": "案別の説明",
     "origins": [
       "index.html",
-      "docs/ver3/integrated_r7/A/README_ja.md",
-      "docs/ver3/integrated_r7/B/README_ja.md",
-      "docs/ver3/integrated_r7/C/README_ja.md"
+      "r7.html"
     ]
   },
-  "5c1f8608bea3ae31": {
-    "source": "材料点残差",
-    "example": "材料点残差",
+  "80cf51f0cf5b220f": {
+    "source": "Ver.{0} 全案の{1}工程・組立資料",
+    "example": "Ver.3.1 全案の12工程・組立資料",
     "origins": [
       "index.html"
     ]
   },
-  "7ff04ddcc8fb8c69": {
-    "source": "目標未達",
-    "example": "目標未達",
+  "cd1c6e5d917ceef8": {
+    "source": "Ver.{0} 全体設計資料",
+    "example": "Ver.3.1 全体設計資料",
     "origins": [
       "index.html"
     ]
   },
-  "c9655acebe4afeed": {
-    "source": "受風面積を広げ、HTD{0}M歯付きベルト{1}:{2}と平歯車{3}:{4}を組み合わせる。風荷重と張力調整が代償。",
-    "example": "受風面積を広げ、HTD5M歯付きベルト2:1と平歯車3:1を組み合わせる。風荷重と張力調整が代償。",
+  "17ba5d206048f744": {
+    "source": "統合契約・原本ハッシュ",
+    "example": "統合契約・原本ハッシュ",
     "origins": [
       "index.html"
     ]
   },
-  "e2bf0df62ea1b348": {
-    "source": "{0}案の歩行",
-    "example": "A案の歩行",
+  "e1c2fcac907370c2": {
+    "source": "床是正版の比較CSV",
+    "example": "床是正版の比較CSV",
     "origins": [
       "index.html"
     ]
   },
-  "c5db220b4393d753": {
-    "source": "お使いのブラウザーでは動画を表示できません。下のMP{0}リンクをご利用ください。",
-    "example": "お使いのブラウザーでは動画を表示できません。下のMP4リンクをご利用ください。",
+  "8ecd8289b5ec36b1": {
+    "source": "床是正と有限検査の範囲",
+    "example": "床是正と有限検査の範囲",
+    "origins": [
+      "index.html",
+      "r7.html"
+    ]
+  },
+  "8ce67ec1b5732d1d": {
+    "source": "代表{0}点の層確認",
+    "example": "代表5点の層確認",
     "origins": [
       "index.html"
     ]
   },
-  "ef7a7725151445ee": {
-    "source": "{0}案の歩行を再生",
-    "example": "A案の歩行を再生",
+  "1e4192ca026303ce": {
+    "source": "{0}追加{1}点の層確認",
+    "example": "C追加2点の層確認",
+    "origins": [
+      "index.html",
+      "r7.html"
+    ]
+  },
+  "81db440c1533842d": {
+    "source": "市販締結品とDN{0}",
+    "example": "市販締結品とDN-03",
+    "origins": [
+      "index.html",
+      "r7.html"
+    ]
+  },
+  "756c59737f0a149b": {
+    "source": "保存接地フレームの近似",
+    "example": "保存接地フレームの近似",
+    "origins": [
+      "index.html",
+      "r7.html"
+    ]
+  },
+  "b5963520962009b2": {
+    "source": "試験片・組立台",
+    "example": "試験片・組立台",
+    "origins": [
+      "index.html",
+      "r7.html"
+    ]
+  },
+  "b43dbcc05c4e1285": {
+    "source": "共同購入lot（個別費用とは別）",
+    "example": "共同購入lot（個別費用とは別）",
+    "origins": [
+      "index.html",
+      "r7.html"
+    ]
+  },
+  "0cd5ace5bc4f8f23": {
+    "source": "モデル・仮定・再現方法",
+    "example": "モデル・仮定・再現方法",
+    "origins": [
+      "index.html",
+      "walking.html"
+    ]
+  },
+  "655f4a269c278a93": {
+    "source": "媒体・ソースのハッシュ",
+    "example": "媒体・ソースのハッシュ",
+    "origins": [
+      "index.html",
+      "walking.html"
+    ]
+  },
+  "ca4b6918f33100c5": {
+    "source": "日英動画・字幕の来歴",
+    "example": "日英動画・字幕の来歴",
+    "origins": [
+      "index.html",
+      "walking.html"
+    ]
+  },
+  "0724304ab4bc5212": {
+    "source": "編集可能な歩行Blender原本",
+    "example": "編集可能な歩行Blender原本",
+    "origins": [
+      "index.html",
+      "walking.html"
+    ]
+  },
+  "64674840329d735e": {
+    "source": "同じ運動データからの再生成スクリプト",
+    "example": "同じ運動データからの再生成スクリプト",
+    "origins": [
+      "index.html",
+      "walking.html"
+    ]
+  },
+  "febfa75ee59d8785": {
+    "source": "公開版と内部設計IDの対応",
+    "example": "公開版と内部設計IDの対応",
     "origins": [
       "index.html"
     ]
   },
-  "0821794064995680": {
-    "source": "実機未検証・{0} mm目標未達。",
-    "example": "実機未検証・3 mm目標未達。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "bee5a83ce0584b29": {
-    "source": "規定入力 {0} rpm、{1}周期。動画 {2} 秒／モデル時間 {3} 秒、",
-    "example": "規定入力 120 rpm、3周期。動画 9 秒／モデル時間 9 秒、",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "dc74cb8c6b6353c8": {
-    "source": "{0}倍表示",
-    "example": "1倍表示",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "529ff5298b45c7ef": {
-    "source": "。材料点の最大水平残差は {0} mm。風・接触動力学の実証ではありません。",
-    "example": "。材料点の最大水平残差は 9.55 mm。風・接触動力学の実証ではありません。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "9b2ad2730ae5852b": {
-    "source": "動画を再生できませんでした。MP{0}をGitHubで開いてください。",
-    "example": "動画を再生できませんでした。MP4をGitHubで開いてください。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "008efc3231dab349": {
-    "source": "MP{0}をGitHubで開く ↗",
-    "example": "MP4をGitHubで開く ↗",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "33c6f09856867d9a": {
-    "source": "小風車・高減速",
-    "example": "小風車・高減速",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "fc804d5fa0a6a3bb": {
-    "source": "{0} mmの風車を維持し、{1}:{2}の平歯車を三段に。低速化に加え、段数と軸受の始動抵抗が増える。",
-    "example": "90 mmの風車を維持し、4:1の平歯車を三段に。低速化に加え、段数と軸受の始動抵抗が増える。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "596a366949a4824b": {
-    "source": "{0}は名目トルク入力も不足しています。",
-    "example": "Bは名目トルク入力も不足しています。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "b026e5b1f6761e71": {
-    "source": "中間風車・生成軽量",
-    "example": "中間風車・生成軽量",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "e7dcf95a31ea49a3": {
-    "source": "{0}:{1}の平歯車を二段にし、リブ形状を制約付きで探索。組立・接合・抵抗測定の最初の候補。",
-    "example": "4:1の平歯車を二段にし、リブ形状を制約付きで探索。組立・接合・抵抗測定の最初の候補。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "0bcfa9ccbcfcebe0": {
-    "source": "「前進する動画」と「実機で歩ける」は別です。",
-    "example": "「前進する動画」と「実機で歩ける」は別です。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "76b77857875c1f10": {
-    "source": "本体の並進・姿勢は接地靴の形状と持続する材料点アンカーから求め、棒を伸縮させたり任意の前進速度を足したりしていません。ただし、規定入力と接地近似による可視化であり、風・摩擦・衝撃を含む接触動力学ではありません。",
-    "example": "本体の並進・姿勢は接地靴の形状と持続する材料点アンカーから求め、棒を伸縮させたり任意の前進速度を足したりしていません。ただし、規定入力と接地近似による可視化であり、風・摩擦・衝撃を含む接触動力学ではありません。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "e3b0e848b5edcb68": {
-    "source": "表示する残差は、総荷重の{0}%以上を受け持つ一つの継続区間内の最大水平偏差です。動画開始時の部分区間を含み、三周期の合計滑り量ではありません。近接足と負荷足は区別され、小さい正の支持余裕も実用安定を保証しません。",
-    "example": "表示する残差は、総荷重の2%以上を受け持つ一つの継続区間内の最大水平偏差です。動画開始時の部分区間を含み、三周期の合計滑り量ではありません。近接足と負荷足は区別され、小さい正の支持余裕も実用安定を保証しません。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "d6a35dbb8308deef": {
-    "source": "指標の定義・重心と風の感度を見る ↗",
-    "example": "指標の定義・重心と風の感度を見る ↗",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "e668191a6ac4c343": {
-    "source": "三案の歩行をまとめて見る",
-    "example": "三案の歩行をまとめて見る",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "9d83ef6c3b349b55": {
-    "source": "GIFは操作するまで読み込みません。自動再生しない静止プレビューです。",
-    "example": "GIFは操作するまで読み込みません。自動再生しない静止プレビューです。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "f950a9bd56b25020": {
-    "source": "歩行GIFを再生（{0}秒・約{1} MB）",
-    "example": "歩行GIFを再生（33秒・約2.9 MB）",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "eb318f739db30c11": {
-    "source": "動きを減らす設定を尊重し、自動では再生しません。ボタンを押した場合だけ動きます。",
-    "example": "動きを減らす設定を尊重し、自動では再生しません。ボタンを押した場合だけ動きます。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "00c47b99c0d8b3c0": {
-    "source": "GIFをGitHubで開く ↗",
-    "example": "GIFをGitHubで開く ↗",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "e1e29fc514410c23": {
-    "source": "Ver.{0}三案の静止比較。ボタン操作後は規定歩行のGIFを表示。",
-    "example": "Ver.3三案の静止比較。ボタン操作後は規定歩行のGIFを表示。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "931afd856a3a1994": {
-    "source": "プレビューを読み込めませんでした。GitHubへのリンクをご利用ください。",
-    "example": "プレビューを読み込めませんでした。GitHubへのリンクをご利用ください。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "463d1e99e458f442": {
-    "source": "動かし方と、組み方を切り分ける。",
-    "example": "動かし方と、組み方を切り分ける。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "e30f61c3d71244d2": {
-    "source": "駆動機構",
-    "example": "駆動機構",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "a864566f8d46d4f5": {
-    "source": "駆動機構を再生",
-    "example": "駆動機構を再生",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "acfac9792d1736ba": {
-    "source": "規定運動・実機未検証。",
-    "example": "規定運動・実機未検証。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "65885db0d4a980dd": {
-    "source": "CADと同じ軸・歯車比を表示。風や接触動力学の実証ではありません。",
-    "example": "CADと同じ軸・歯車比を表示。風や接触動力学の実証ではありません。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "0c8e38d76474b284": {
-    "source": "分解説明",
-    "example": "分解説明",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "3362129ce076ab67": {
-    "source": "分解説明を再生",
-    "example": "分解説明を再生",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "e94487598cc738d1": {
-    "source": "説明用の分解オフセット。",
-    "example": "説明用の分解オフセット。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "2d794629d48fe218": {
-    "source": "同時に動かす映像だけでは組立経路を証明しません。実際の順序は組立資料を参照してください。",
-    "example": "同時に動かす映像だけでは組立経路を証明しません。実際の順序は組立資料を参照してください。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "b76efdb9db8f36c1": {
-    "source": "Ver.{0} {1}案の制約付き生成リブ構造を示すCAD由来のCG。",
-    "example": "Ver.3 C案の制約付き生成リブ構造を示すCAD由来のCG。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "3ef74a58cb72451b": {
-    "source": "Ver.{0} {1} · 生成したフレームの設計CG",
-    "example": "Ver.3 C · 生成したフレームの設計CG",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "38d49bd629ece3e5": {
-    "source": "必要な領域を残し、条件の中で探す。",
-    "example": "必要な領域を残し、条件の中で探す。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "8b7c1ca4f576c9f8": {
-    "source": "軸受・ボルト座の保存領域、風車と脚の可動域、他の貫通軸、印刷寸法を制約に、歯数・軸位置・リブ幅・厚さを実際に探索しました。",
-    "example": "軸受・ボルト座の保存領域、風車と脚の可動域、他の貫通軸、印刷寸法を制約に、歯数・軸位置・リブ幅・厚さを実際に探索しました。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "08e1bad5d75ad928": {
-    "source": "{0}の同じ軸配置・荷重条件では、{1} × {2} mmリブ候補から{3} × {4} mm候補へ、",
-    "example": "Cの同じ軸配置・荷重条件では、8 × 14 mmリブ候補から8 × 8 mm候補へ、",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "59ff1e6744ece82d": {
-    "source": "部材加算体積の代理量が約{0}%減少",
-    "example": "部材加算体積の代理量が約35.25%減少",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "9785fddafa0756ec": {
-    "source": "。変位の代理値は増えています。",
-    "example": "。変位の代理値は増えています。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "01e95d4bca4d9435": {
-    "source": "装置全体の質量がこの割合で減った、という意味ではありません。",
-    "example": "装置全体の質量がこの割合で減った、という意味ではありません。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "01b3db906893228e": {
-    "source": "これはパラメトリック生成設計です。Autodesk Generative Design、CFD、連続体FEA、トポロジー最適化、実機試験を実施したとは称しません。",
-    "example": "これはパラメトリック生成設計です。Autodesk Generative Design、CFD、連続体FEA、トポロジー最適化、実機試験を実施したとは称しません。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "ca73021f6a3e3319": {
-    "source": "探索条件・比較値・根拠を読む ↗",
-    "example": "探索条件・比較値・根拠を読む ↗",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "c93c1bfd232bc68a": {
-    "source": "つくる前に、資料を確かめる。",
-    "example": "つくる前に、資料を確かめる。",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "ea1e2d4e75408442": {
-    "source": "大きなCADファイルはGitHubへ直接リンクしています。版と用途を選んで保存してください。",
-    "example": "大きなCADファイルはGitHubへ直接リンクしています。版と用途を選んで保存してください。",
+  "dc85fbca7a323030": {
+    "source": "試験片・組立台は別枠で費用に含み、歩行質量には加算しません。大きな原本はGitHubで必要なものだけ開きます。印刷済みキットや製造リリースではありません。",
+    "example": "試験片・組立台は別枠で費用に含み、歩行質量には加算しません。大きな原本はGitHubで必要なものだけ開きます。印刷済みキットや製造リリースではありません。",
     "origins": [
       "index.html"
     ]
@@ -3981,11 +4420,12 @@
       "index.html"
     ]
   },
-  "1b7b4cdcf5369e37": {
-    "source": "新しいVer.{0}のSTLはmm・{1}%",
-    "example": "新しいVer.3のSTLはmm・100%",
+  "be0b517911496859": {
+    "source": "Ver.{0}のSTLはmm・{1}%",
+    "example": "Ver.3.1のSTLはmm・100%",
     "origins": [
-      "index.html"
+      "index.html",
+      "production.html"
     ]
   },
   "5b9cbe29bb4c32ff": {
@@ -3995,16 +4435,16 @@
       "index.html"
     ]
   },
-  "ae129eeb8805ec2a": {
-    "source": "Ver.{0} · 初期試作",
-    "example": "Ver.1 · 初期試作",
+  "b081bd78b576f6e8": {
+    "source": "過去の実物と初期比較案の資料",
+    "example": "過去の実物と初期比較案の資料",
     "origins": [
       "index.html"
     ]
   },
-  "b878078598dcaf88": {
-    "source": "印刷部品 · STL一覧",
-    "example": "印刷部品 · STL一覧",
+  "ae129eeb8805ec2a": {
+    "source": "Ver.{0} · 初期試作",
+    "example": "Ver.1 · 初期試作",
     "origins": [
       "index.html"
     ]
@@ -4079,114 +4519,16 @@
       "index.html"
     ]
   },
-  "18b2b8735eba3ff7": {
-    "source": "Ver.{0} · 実CADと比較検討資料",
-    "example": "Ver.3 · 実CADと比較検討資料",
+  "f65078bdfb27ee29": {
+    "source": "旧FCStd・STEP・STL・BOM・Blenderは履歴ページへ →",
+    "example": "旧FCStd・STEP・STL・BOM・Blenderは履歴ページへ →",
     "origins": [
       "index.html"
     ]
   },
-  "23877b2ed2063511": {
-    "source": "交換用 · STEP ({0} MB)",
-    "example": "交換用 · STEP (17.1 MB)",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "d3dd027cadc22d3a": {
-    "source": "部品表 · CSV ({0} KB)",
-    "example": "部品表 · CSV (17 KB)",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "a5863a795c80ba02": {
-    "source": "正規組立データ · JSON",
-    "example": "正規組立データ · JSON",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "d917012e94203b4b": {
-    "source": "r{0}床是正版 · 全三案の正規CAD・BOM・{1}工程",
-    "example": "r7床是正版 · 全三案の正規CAD・BOM・12工程",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "9938ee91d16ea782": {
-    "source": "番号付き組立手順・ベンチ確認票",
-    "example": "番号付き組立手順・ベンチ確認票",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "692a8239296b5a74": {
-    "source": "設計・計算・再生成方法",
-    "example": "設計・計算・再生成方法",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "06f6d2b04236fbf8": {
-    "source": "独立AIレビューと是正記録",
-    "example": "独立AIレビューと是正記録",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "2252eb9105da8470": {
-    "source": "実断面・段別カバー型紙",
-    "example": "実断面・段別カバー型紙",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "6d88c45e7436272a": {
-    "source": "三案の比較CSV",
-    "example": "三案の比較CSV",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "208e6f03357e2db6": {
-    "source": "Blenderネイティブ（約{0} MB）",
-    "example": "Blenderネイティブ（約28.3 MB）",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "dbe674b2934038ee": {
-    "source": "生成スクリプトと設定",
-    "example": "生成スクリプトと設定",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "83e5c940331b5678": {
-    "source": "すべてのCG・GIF・MP{0}",
-    "example": "すべてのCG・GIF・MP4",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "87e487d4ff6e11a9": {
-    "source": "{0}/{1}/{2}の工程別部品表と組立ガイド",
-    "example": "A/B/Cの工程別部品表と組立ガイド",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "550d087b93274f0b": {
-    "source": "Ver.{0}からの変更と確認状況",
-    "example": "Ver.2からの変更と確認状況",
-    "origins": [
-      "index.html"
-    ]
-  },
-  "f3f71fd857954606": {
-    "source": "Ver.{0}はVer.{1}の無加工差替え部品ではありません。{2}の最大フレームは{3} mm境界に達し、造形面の余白・ブリムを保証しません。実物での滑りトルク、軸方向すきま、全周手回し、重心、転倒の確認が必要です。",
-    "example": "Ver.3はVer.2の無加工差替え部品ではありません。Aの最大フレームは256 mm境界に達し、造形面の余白・ブリムを保証しません。実物での滑りトルク、軸方向すきま、全周手回し、重心、転倒の確認が必要です。",
+  "fede61b6b8e3efe4": {
+    "source": "。現行Ver.{0}の部品とは混用しません。",
+    "example": "。現行Ver.3.1の部品とは混用しません。",
     "origins": [
       "index.html"
     ]
@@ -4235,9 +4577,9 @@
       "site provenance"
     ]
   },
-  "7cc6fbc4202ef706": {
-    "source": "Ver.{0} → Ver.{1} → Ver.{2} · つくる、見直す、記録する。",
-    "example": "Ver.1 → Ver.2 → Ver.3 · つくる、見直す、記録する。",
+  "8906bb58109f51ac": {
+    "source": "Ver.{0} → Ver.{1} → Ver.{2} → Ver.{3} · つくる、見直す、記録する。",
+    "example": "Ver.1 → Ver.2 → Ver.3.0 → Ver.3.1 · つくる、見直す、記録する。",
     "origins": [
       "index.html"
     ]
@@ -5798,9 +6140,9 @@
       "production.html"
     ]
   },
-  "85706a03b06c0098": {
-    "source": "公開済みのVer.{0}設計ノートは、この接合の滑りを出発点として記録しています。",
-    "example": "公開済みのVer.3設計ノートは、この接合の滑りを出発点として記録しています。",
+  "bfb32f3a3b54d5a5": {
+    "source": "初期比較案Ver.{0}の設計ノートは、この接合の滑りを出発点として記録しています。",
+    "example": "初期比較案Ver.3.0の設計ノートは、この接合の滑りを出発点として記録しています。",
     "origins": [
       "production.html"
     ]
@@ -5819,23 +6161,30 @@
       "production.html"
     ]
   },
-  "da5ca2ed5f9ba54e": {
-    "source": "現在のVer.{0}は第一カットの比較設計。実機の風力歩行は未検証、全案の接地残差{1} mm目標は未達、{2}は名目トルク入力も不足しています。この製作記録の追加によって、その制限は変わりません。",
-    "example": "現在のVer.3は第一カットの比較設計。実機の風力歩行は未検証、全案の接地残差3 mm目標は未達、Bは名目トルク入力も不足しています。この製作記録の追加によって、その制限は変わりません。",
+  "789cc9525beba95a": {
+    "source": "現行設計はVer.{0}（内部r{1}/floor{2}）です。実機の風力歩行は未検証・合格歩行機{3}のままです。第一カットの接地目標未達・{4}の入力不足はVer.{5}の履歴として保持し、現行の計算条件と混ぜません。",
+    "example": "現行設計はVer.3.1（内部r7/floor2）です。実機の風力歩行は未検証・合格歩行機0のままです。第一カットの接地目標未達・Bの入力不足はVer.3.0の履歴として保持し、現行の計算条件と混ぜません。",
     "origins": [
       "production.html"
     ]
   },
-  "e3c7eb2b21a70025": {
-    "source": "接合の滑り・仮説・残る測定を区別した公開設計ノート ↗",
-    "example": "接合の滑り・仮説・残る測定を区別した公開設計ノート ↗",
+  "85992f4100e7eeb7": {
+    "source": "Ver.{0}の接合滑り・仮説・残る測定の原記録 ↗",
+    "example": "Ver.3.0の接合滑り・仮説・残る測定の原記録 ↗",
     "origins": [
       "production.html"
     ]
   },
   "6ef1cc35bf3a7a60": {
     "source": "Ver.{0}の三案と、現在の検証限界へ",
-    "example": "Ver.3の三案と、現在の検証限界へ",
+    "example": "Ver.3.1の三案と、現在の検証限界へ",
+    "origins": [
+      "production.html"
+    ]
+  },
+  "90e15c019d4f571b": {
+    "source": "Ver.{0} 初期比較案の履歴へ",
+    "example": "Ver.3.0 初期比較案の履歴へ",
     "origins": [
       "production.html"
     ]
@@ -5980,13 +6329,6 @@
       "production.html"
     ]
   },
-  "be0b517911496859": {
-    "source": "Ver.{0}のSTLはmm・{1}%",
-    "example": "Ver.3のSTLはmm・100%",
-    "origins": [
-      "production.html"
-    ]
-  },
   "e98bba4443d5182a": {
     "source": "であり、旧版の拡大率は重ねません。",
     "example": "であり、旧版の拡大率は重ねません。",
@@ -6072,16 +6414,23 @@
       "production.html"
     ]
   },
-  "d3fb6b78ae1f8ec8": {
-    "source": "r{0}床是正版 — 三案の連続歩行・{1}°・組立",
-    "example": "r7床是正版 — 三案の連続歩行・360°・組立",
+  "6b0542af704f975b": {
+    "source": "Ver.{0}現行設計（内部ID r{1}/floor{2}）。床是正版の{3}・{4}・{5}を同尺度CG・{6}°・{7}工程・正規CADとBOMで比較。実機の風力歩行は未検証です。",
+    "example": "Ver.3.1現行設計（内部ID r7/floor2）。床是正版のA・B・Cを同尺度CG・360°・12工程・正規CADとBOMで比較。実機の風力歩行は未検証です。",
     "origins": [
       "r7.html"
     ]
   },
-  "65d88b29425af878": {
-    "source": "r{0}床是正版 · 実機未検証",
-    "example": "r7床是正版 · 実機未検証",
+  "d443936991690ec2": {
+    "source": "Ver.{0} 現行設計 — 三案の連続歩行・{1}°・組立",
+    "example": "Ver.3.1 現行設計 — 三案の連続歩行・360°・組立",
+    "origins": [
+      "r7.html"
+    ]
+  },
+  "12f1b17e1b91daad": {
+    "source": "Ver.{0} 現行設計 · 実機未検証",
+    "example": "Ver.3.1 現行設計 · 実機未検証",
     "origins": [
       "r7.html"
     ]
@@ -6107,16 +6456,16 @@
       "r7.html"
     ]
   },
-  "5d0c8f7a0399990f": {
-    "source": "第一カット履歴",
-    "example": "第一カット履歴",
+  "25d8d7bb3ff1c934": {
+    "source": "Ver.{0}履歴",
+    "example": "Ver.3.0履歴",
     "origins": [
       "r7.html"
     ]
   },
-  "267f251d7f56198e": {
-    "source": "新しい三案を、",
-    "example": "新しい三案を、",
+  "77199ba6954e0a79": {
+    "source": "Ver.{0} 現行設計",
+    "example": "Ver.3.1 現行設計",
     "origins": [
       "r7.html"
     ]
@@ -6128,9 +6477,9 @@
       "r7.html"
     ]
   },
-  "20902b1c1b587e5a": {
-    "source": "r{0}床是正版 · 比較設計候補であり、実機の合格ではありません",
-    "example": "r7床是正版 · 比較設計候補であり、実機の合格ではありません",
+  "4aa91a0f57fb8170": {
+    "source": "Ver.{0} 床是正版 · 比較設計候補であり、実機の合格ではありません",
+    "example": "Ver.3.1 床是正版 · 比較設計候補であり、実機の合格ではありません",
     "origins": [
       "r7.html"
     ]
@@ -6142,9 +6491,9 @@
       "r7.html"
     ]
   },
-  "65cddfe5af0f979f": {
-    "source": "候補：",
-    "example": "候補：",
+  "a19010b924e02445": {
+    "source": "公開名Ver.{0}／内部設計ID：",
+    "example": "公開名Ver.3.1／内部設計ID：",
     "origins": [
       "r7.html"
     ]
@@ -6170,23 +6519,16 @@
       "r7.html"
     ]
   },
-  "3c317ce1f7deb099": {
-    "source": "r{0}統合候補（床是正版）",
-    "example": "r7統合候補（床是正版）",
+  "d52dd1c4f638fcd2": {
+    "source": "Ver.{0} 現行設計（床是正版）",
+    "example": "Ver.3.1 現行設計（床是正版）",
     "origins": [
       "r7.html"
     ]
   },
-  "84b5ac370da2b0f1": {
-    "source": "第一カット・{0}°／組立履歴",
-    "example": "第一カット・360°／組立履歴",
-    "origins": [
-      "r7.html"
-    ]
-  },
-  "9c1e8805e6ab375a": {
-    "source": "旧V{0}→第一カットのMatrix",
-    "example": "旧V2→第一カットのMatrix",
+  "83c93765e8dd111e": {
+    "source": "Ver.{0} 初期比較案・旧Matrix",
+    "example": "Ver.3.0 初期比較案・旧Matrix",
     "origins": [
       "r7.html"
     ]
@@ -6198,37 +6540,23 @@
       "r7.html"
     ]
   },
-  "415bba3ce4d36188": {
-    "source": "既存の第一カット{0}{1}／{2}{3}／{4}{5} mm、r{6}計算・r{7}カードとは別の全体モデルです。旧動画・旧CGをr{8}の動作として表示しません。 新しい連続歩行は明示した仮定を含む別の表示モデルで、空力予測や実機実証ではありません。",
-    "example": "既存の第一カットA300／B90／C180 mm、r3計算・r4カードとは別の全体モデルです。旧動画・旧CGをr7の動作として表示しません。 新しい連続歩行は明示した仮定を含む別の表示モデルで、空力予測や実機実証ではありません。",
+  "3cc9c1e22e9eb384": {
+    "source": "Ver.{0}（第一カット）、内部研究r{1}・r{2}とは別の全体モデルです。媒体に残るr{3}/floor{4}表記は公開名Ver.{5}の内部設計IDです。 新しい連続歩行は同じ形状を使い、明示した仮定を含む別版の表示モデルです。空力予測や実機実証ではありません。",
+    "example": "Ver.3.0（第一カット）、内部研究r3・r4とは別の全体モデルです。媒体に残るr7/floor2表記は公開名Ver.3.1の内部設計IDです。 新しい連続歩行は同じ形状を使い、明示した仮定を含む別版の表示モデルです。空力予測や実機実証ではありません。",
     "origins": [
       "r7.html"
     ]
   },
-  "fc931fcbfdac174d": {
-    "source": "r{0}床是正版の{1}・{2}・{3}を同一尺度で並べた実CAD由来CG。無圧縮の組立基準姿勢で、実物ではありません。",
-    "example": "r7床是正版のA・B・Cを同一尺度で並べた実CAD由来CG。無圧縮の組立基準姿勢で、実物ではありません。",
+  "39abd982d712d7b8": {
+    "source": "Ver.{0}床是正版の{1}・{2}・{3}を同一尺度で並べた実CAD由来CG。無圧縮の組立基準姿勢で、実物ではありません。",
+    "example": "Ver.3.1床是正版のA・B・Cを同一尺度で並べた実CAD由来CG。無圧縮の組立基準姿勢で、実物ではありません。",
     "origins": [
       "r7.html"
     ]
   },
-  "e6f0860b27ffd9fe": {
-    "source": "画像を読み込めませんでした。原本リンクをご利用ください。",
-    "example": "画像を読み込めませんでした。原本リンクをご利用ください。",
-    "origins": [
-      "r7.html"
-    ]
-  },
-  "76b6c8e990a93e3f": {
-    "source": "原寸画像 ↗",
-    "example": "原寸画像 ↗",
-    "origins": [
-      "r7.html"
-    ]
-  },
-  "6f14a2db65eacb25": {
-    "source": "今度は、六脚の連続歩行へ。",
-    "example": "今度は、六脚の連続歩行へ。",
+  "736700b92c32bc21": {
+    "source": "Ver.{0} 六脚の連続歩行へ。",
+    "example": "Ver.3.1 六脚の連続歩行へ。",
     "origins": [
       "r7.html"
     ]
@@ -6240,9 +6568,9 @@
       "r7.html"
     ]
   },
-  "25e847e32819f81f": {
-    "source": "連続歩行シミュレーションを開く →",
-    "example": "連続歩行シミュレーションを開く →",
+  "e799da67c3923878": {
+    "source": "Ver.{0} 連続歩行シミュレーションを開く →",
+    "example": "Ver.3.1 連続歩行シミュレーションを開く →",
     "origins": [
       "r7.html"
     ]
@@ -6345,23 +6673,16 @@
       "r7.html"
     ]
   },
-  "dd55aa428b7b3095": {
-    "source": "V{0}の経験から、r{1}で具体化した対策",
-    "example": "V2の経験から、r7で具体化した対策",
+  "e447f72e11b54c16": {
+    "source": "Ver.{0}の経験から、Ver.{1}で具体化した対策",
+    "example": "Ver.2の経験から、Ver.3.1で具体化した対策",
     "origins": [
       "r7.html"
     ]
   },
-  "6511c96e82df6e36": {
-    "source": "V{0}は作者の実物観察、r{1}は計算と有限CAD確認です。未測定のV{2}値を計算値と同列に並べません。",
-    "example": "V2は作者の実物観察、r7は計算と有限CAD確認です。未測定のV2値を計算値と同列に並べません。",
-    "origins": [
-      "r7.html"
-    ]
-  },
-  "d9ec9623b6ac8733": {
-    "source": "第一カットの旧Matrix",
-    "example": "第一カットの旧Matrix",
+  "965e6b0ed87aab3d": {
+    "source": "Ver.{0}は作者の実物観察、Ver.{1}は計算と有限CAD確認です。未測定のVer.{2}値を計算値と同列に並べません。",
+    "example": "Ver.2は作者の実物観察、Ver.3.1は計算と有限CAD確認です。未測定のVer.2値を計算値と同列に並べません。",
     "origins": [
       "r7.html"
     ]
@@ -6373,23 +6694,23 @@
       "r7.html"
     ]
   },
-  "3803ef8931aa370f": {
-    "source": "V{0}からr{1}への変更Matrix",
-    "example": "V2からr7への変更Matrix",
+  "52b16bae2b519519": {
+    "source": "Ver.{0}からVer.{1}への変更Matrix",
+    "example": "Ver.2からVer.3.1への変更Matrix",
     "origins": [
       "r7.html"
     ]
   },
-  "a8a9b573f586661e": {
-    "source": "V{0}の記録／旧課題",
-    "example": "V2の記録／旧課題",
+  "95f787881be2141a": {
+    "source": "Ver.{0}の記録／旧課題",
+    "example": "Ver.2の記録／旧課題",
     "origins": [
       "r7.html"
     ]
   },
-  "6efc73ac4241dc75": {
-    "source": "r{0}で具体化したもの",
-    "example": "r7で具体化したもの",
+  "c248d87bc6ed5ce6": {
+    "source": "Ver.{0}で具体化したもの",
+    "example": "Ver.3.1で具体化したもの",
     "origins": [
       "r7.html"
     ]
@@ -6781,9 +7102,9 @@
       "r7.html"
     ]
   },
-  "646b73a45a893232": {
-    "source": "r{0}候補",
-    "example": "r7候補",
+  "849793d6893cbf24": {
+    "source": "Ver.{0}の案",
+    "example": "Ver.3.1の案",
     "origins": [
       "r7.html"
     ]
@@ -6810,9 +7131,9 @@
       "r7.html"
     ]
   },
-  "0f6c6674792e929a": {
-    "source": "r{0} {1}案の床是正版・実CAD由来CG。",
-    "example": "r7 A案の床是正版・実CAD由来CG。",
+  "f5649e9992aa198c": {
+    "source": "Ver.{0} {1}案の床是正版・実CAD由来CG。",
+    "example": "Ver.3.1 A案の床是正版・実CAD由来CG。",
     "origins": [
       "r7.html"
     ]
@@ -7388,9 +7709,9 @@
       "r7.html"
     ]
   },
-  "7cb3fe9e30a4f8ba": {
-    "source": "全案の{0}工程と正規資料",
-    "example": "全案の12工程と正規資料",
+  "d08025ee92da8052": {
+    "source": "Ver.{0} 全案の{1}工程と正規資料",
+    "example": "Ver.3.1 全案の12工程と正規資料",
     "origins": [
       "r7.html"
     ]
@@ -7402,16 +7723,16 @@
       "r7.html"
     ]
   },
-  "3801b09bf1f95a99": {
-    "source": "r{0}静的組立案",
-    "example": "r7静的組立案",
+  "297ffc66a5b612a2": {
+    "source": "Ver.{0}静的組立案",
+    "example": "Ver.3.1静的組立案",
     "origins": [
       "r7.html"
     ]
   },
-  "d7d34c1823b1ebf2": {
-    "source": "r{0} {1}案 · {2}工程／{3}点",
-    "example": "r7 A案 · 12工程／750点",
+  "7e20c885816afe91": {
+    "source": "Ver.{0} {1}案 · {2}工程／{3}点",
+    "example": "Ver.3.1 A案 · 12工程／750点",
     "origins": [
       "r7.html"
     ]
@@ -7468,13 +7789,6 @@
   "a058652d561c9885": {
     "source": "共通組立原文",
     "example": "共通組立原文",
-    "origins": [
-      "r7.html"
-    ]
-  },
-  "8816434142cf5974": {
-    "source": "案別の説明",
-    "example": "案別の説明",
     "origins": [
       "r7.html"
     ]
@@ -7978,37 +8292,9 @@
       "r7.html"
     ]
   },
-  "8ecd8289b5ec36b1": {
-    "source": "床是正と有限検査の範囲",
-    "example": "床是正と有限検査の範囲",
-    "origins": [
-      "r7.html"
-    ]
-  },
-  "81db440c1533842d": {
-    "source": "市販締結品とDN{0}",
-    "example": "市販締結品とDN-03",
-    "origins": [
-      "r7.html"
-    ]
-  },
   "2f10204eb143b03e": {
     "source": "従来{0}点の層確認",
     "example": "従来5点の層確認",
-    "origins": [
-      "r7.html"
-    ]
-  },
-  "1e4192ca026303ce": {
-    "source": "{0}追加{1}点の層確認",
-    "example": "C追加2点の層確認",
-    "origins": [
-      "r7.html"
-    ]
-  },
-  "756c59737f0a149b": {
-    "source": "保存接地フレームの近似",
-    "example": "保存接地フレームの近似",
     "origins": [
       "r7.html"
     ]
@@ -8020,93 +8306,86 @@
       "r7.html"
     ]
   },
-  "b5963520962009b2": {
-    "source": "試験片・組立台",
-    "example": "試験片・組立台",
+  "69d7d909f226b8bc": {
+    "source": "Ver.{0} · 実風・実始動・実{1}cm歩行は未確認。",
+    "example": "Ver.3.1 · 実風・実始動・実30cm歩行は未確認。",
     "origins": [
       "r7.html"
     ]
   },
-  "b43dbcc05c4e1285": {
-    "source": "共同購入lot（個別費用とは別）",
-    "example": "共同購入lot（個別費用とは別）",
+  "dd20c2a3d018cd1d": {
+    "source": "Ver.{0}の履歴へ",
+    "example": "Ver.3.0の履歴へ",
     "origins": [
       "r7.html"
     ]
   },
-  "9f5b372f22a84975": {
-    "source": "r{0}床是正版 · 実風・実始動・実{1}cm歩行は未確認。",
-    "example": "r7床是正版 · 実風・実始動・実30cm歩行は未確認。",
+  "4ebba874f76f6fe9": {
+    "source": "内部研究の資料へ",
+    "example": "内部研究の資料へ",
     "origins": [
       "r7.html"
     ]
   },
-  "2687fcb38353328e": {
-    "source": "第一カット履歴へ",
-    "example": "第一カット履歴へ",
-    "origins": [
-      "r7.html"
-    ]
-  },
-  "fd9256edc9297fa5": {
-    "source": "研究資料へ",
-    "example": "研究資料へ",
-    "origins": [
-      "r7.html"
-    ]
-  },
-  "b8125546de33943b": {
-    "source": "Ver.{0}第一カットの{1}・{2}・{3}を実CAD由来の{4}Dで回転・拡大し、部品IDと組立手順を確認。性能未達と実機未確認の範囲を明示した対話ガイドです。",
-    "example": "Ver.3第一カットのA・B・Cを実CAD由来の3Dで回転・拡大し、部品IDと組立手順を確認。性能未達と実機未確認の範囲を明示した対話ガイドです。",
+  "0a977dc198d97b49": {
+    "source": "Ver.{0}初期比較案の旧{1}°・組立ガイド。第一カットのCADと部品IDを保持した履歴ページです。現行Ver.{2}へは明示したリンクから移動できます。",
+    "example": "Ver.3.0初期比較案の旧360°・組立ガイド。第一カットのCADと部品IDを保持した履歴ページです。現行Ver.3.1へは明示したリンクから移動できます。",
     "origins": [
       "viewer.html"
     ]
   },
-  "b8bb62d4a4f6934b": {
-    "source": "Ver.{0} {1}°・組立ガイド — リノセウス",
-    "example": "Ver.3 360°・組立ガイド — リノセウス",
+  "5596d74a246e90e0": {
+    "source": "Ver.{0} 旧{1}°・組立ガイド（履歴） — リノセウス",
+    "example": "Ver.3.0 旧360°・組立ガイド（履歴） — リノセウス",
     "origins": [
       "viewer.html"
     ]
   },
-  "a0729e092ae28028": {
-    "source": "改良Matrix",
-    "example": "改良Matrix",
+  "73bb93df356726a3": {
+    "source": "Ver.{0}の概要",
+    "example": "Ver.3.0の概要",
     "origins": [
       "viewer.html"
     ]
   },
-  "f8f3729cd6fa363b": {
-    "source": "回して見る。",
-    "example": "回して見る。",
+  "0e3707e15be755ed": {
+    "source": "旧{0}°",
+    "example": "旧360°",
     "origins": [
       "viewer.html"
     ]
   },
-  "647b55cf2849f735": {
-    "source": "部品から、組み方を読む。",
-    "example": "部品から、組み方を読む。",
+  "42c697b9e4ecfa46": {
+    "source": "旧組立手順",
+    "example": "旧組立手順",
     "origins": [
       "viewer.html"
     ]
   },
-  "b14b50dfc68863e7": {
-    "source": "この{0}°は第一カットの履歴です。",
-    "example": "この360°は第一カットの履歴です。",
+  "14ca23affd6a8f03": {
+    "source": "初期案の{0}°・組立履歴。",
+    "example": "初期案の360°・組立履歴。",
     "origins": [
       "viewer.html"
     ]
   },
-  "ed8d01d441088204": {
-    "source": "r{0}床是正版の全{1}部品・{2}工程へ →",
-    "example": "r7床是正版の全2285部品・12工程へ →",
+  "f07e02a820d0da4f": {
+    "source": "この{0}°はVer.{1}（第一カット）の履歴です。現行設計ではありません。",
+    "example": "この360°はVer.3.0（第一カット）の履歴です。現行設計ではありません。",
     "origins": [
       "viewer.html"
     ]
   },
-  "a91ae955426e0480": {
-    "source": "。旧モデルを新型へ無断置換せず、それぞれの版を残しています。",
-    "example": "。旧モデルを新型へ無断置換せず、それぞれの版を残しています。",
+  "66ee30ca6dae62a4": {
+    "source": "旧モデルと部品IDを保存しています。原資料の「Ver.{0}」はこの初期案を指し、現行Ver.{1}とは形状・部品・工程が異なります。",
+    "example": "旧モデルと部品IDを保存しています。原資料の「Ver.3」はこの初期案を指し、現行Ver.3.1とは形状・部品・工程が異なります。",
+    "origins": [
+      "viewer.html"
+    ]
+  },
+  "2b49735aa0fcf8d2": {
+    "source": "現行Ver.{0}の全{1}部品・{2}工程へ →",
+    "example": "現行Ver.3.1の全2285部品・12工程へ →",
     "origins": [
       "viewer.html"
     ]
@@ -8202,16 +8481,16 @@
       "viewer.html"
     ]
   },
-  "c2302c6df3dffa3c": {
-    "source": "Ver.{0} {1}・{2}・{3}の正規CADによる比較CG。{4}Dを使えない場合の静止資料。",
-    "example": "Ver.3 A・B・Cの正規CADによる比較CG。3Dを使えない場合の静止資料。",
+  "78e5fbfad058e54a": {
+    "source": "Ver.{0} {1}・{2}・{3}の正規CADによる比較CG。旧{4}°の静止資料。",
+    "example": "Ver.3.0 A・B・Cの正規CADによる比較CG。旧360°の静止資料。",
     "origins": [
       "viewer.html"
     ]
   },
-  "169c70f95e8f920a": {
-    "source": "設計CG · 第一カット。実物ではなく、実機性能は未確認です。",
-    "example": "設計CG · 第一カット。実物ではなく、実機性能は未確認です。",
+  "7d8dcc69e34c6ce6": {
+    "source": "Ver.{0}設計CG · 第一カットの履歴。実物ではなく、実機性能は未確認です。",
+    "example": "Ver.3.0設計CG · 第一カットの履歴。実物ではなく、実機性能は未確認です。",
     "origins": [
       "viewer.html"
     ]
@@ -9620,30 +9899,23 @@
       "viewer.html"
     ]
   },
-  "e010d27dae45b413": {
-    "source": "Ver.{0} · 形状の閲覧と、性能の実証は別。",
-    "example": "Ver.3 · 形状の閲覧と、性能の実証は別。",
-    "origins": [
-      "viewer.html"
-    ]
-  },
-  "4a6c6732582991b6": {
-    "source": "比較設計の概要",
-    "example": "比較設計の概要",
-    "origins": [
-      "viewer.html"
-    ]
-  },
-  "dfb86ec7e127146d": {
-    "source": "r{0} 連続歩行シミュレーション — RHINOCEROS",
-    "example": "r7 連続歩行シミュレーション — RHINOCEROS",
+  "9066e17c430c4a6e": {
+    "source": "Ver.{0}現行設計の連続歩行表示。r{1}/floor{2}形状と別版の運動学モデルによる{3}・{4}・{5}の{6}D・日英動画。規定入力{7} rpm・{8}倍表示で、実機の歩行実証ではありません。",
+    "example": "Ver.3.1現行設計の連続歩行表示。r7/floor2形状と別版の運動学モデルによるA・B・Cの3D・日英動画。規定入力120 rpm・16倍表示で、実機の歩行実証ではありません。",
     "origins": [
       "walking.html"
     ]
   },
-  "4b5c3fe848f16ce0": {
-    "source": "r{0}床是正版 · 連続歩行",
-    "example": "r7床是正版 · 連続歩行",
+  "773acb8699c674aa": {
+    "source": "Ver.{0} 連続歩行シミュレーション — RHINOCEROS",
+    "example": "Ver.3.1 連続歩行シミュレーション — RHINOCEROS",
+    "origins": [
+      "walking.html"
+    ]
+  },
+  "a903e1fb69df4e4a": {
+    "source": "Ver.{0} 現行設計 · 連続歩行",
+    "example": "Ver.3.1 現行設計 · 連続歩行",
     "origins": [
       "walking.html"
     ]
@@ -9669,23 +9941,16 @@
       "walking.html"
     ]
   },
-  "1774a3b50ca9a293": {
-    "source": "比較・組立へ",
-    "example": "比較・組立へ",
+  "0f4e7415b13f6c32": {
+    "source": "Ver.{0}比較・組立",
+    "example": "Ver.3.1比較・組立",
     "origins": [
       "walking.html"
     ]
   },
-  "efb0f44d06ea447f": {
-    "source": "風車から六脚まで、",
-    "example": "風車から六脚まで、",
-    "origins": [
-      "walking.html"
-    ]
-  },
-  "adcc4d51fdbbc14b": {
-    "source": "連続した歩行を見る。",
-    "example": "連続した歩行を見る。",
+  "e3721de400309601": {
+    "source": "風車から六脚まで、連続歩行。",
+    "example": "風車から六脚まで、連続歩行。",
     "origins": [
       "walking.html"
     ]
@@ -9693,6 +9958,20 @@
   "a2787397c171f514": {
     "source": "床是正版の実CAD形状を使い、歯車・クランク・リンク・足をつないだ新しい計算表示です。 {0}枚の診断図や旧モデルの映像とは別に、地面の上を複数周期進めます。",
     "example": "床是正版の実CAD形状を使い、歯車・クランク・リンク・足をつないだ新しい計算表示です。 3枚の診断図や旧モデルの映像とは別に、地面の上を複数周期進めます。",
+    "origins": [
+      "walking.html"
+    ]
+  },
+  "e3c82873c1cb0faf": {
+    "source": "公開名Ver.{0}／内部設計ID r{1}/floor{2}。動画・posterに残るr{3}表記はこの形状を指します。 運動学の拡張は別版",
+    "example": "公開名Ver.3.1／内部設計ID r7/floor2。動画・posterに残るr7表記はこの形状を指します。 運動学の拡張は別版",
+    "origins": [
+      "walking.html"
+    ]
+  },
+  "f44848ed2f1e0e9b": {
+    "source": "で、元の物理結果・BOM・未解決の値は保持しています。",
+    "example": "で、元の物理結果・BOM・未解決の値は保持しています。",
     "origins": [
       "walking.html"
     ]
@@ -9942,9 +10221,9 @@
       "walking.html"
     ]
   },
-  "4f58f5f4415b3405": {
-    "source": "同じ計算モデルの歩行動画",
-    "example": "同じ計算モデルの歩行動画",
+  "b7af84717bc02862": {
+    "source": "Ver.{0} 同じ計算モデルの歩行動画",
+    "example": "Ver.3.1 同じ計算モデルの歩行動画",
     "origins": [
       "walking.html"
     ]
@@ -9963,9 +10242,16 @@
       "walking.html"
     ]
   },
-  "fd472dcf1b010665": {
-    "source": "{0}案の連続歩行 · {1}:{2}",
-    "example": "C案の連続歩行 · 156:1",
+  "21411fccae139aaa": {
+    "source": "Ver.{0} · {1}案の連続歩行 · {2}:{3}",
+    "example": "Ver.3.1 · C案の連続歩行 · 156:1",
+    "origins": [
+      "walking.html"
+    ]
+  },
+  "565034b1341fa149": {
+    "source": "Ver.{0} · {1}案の連続歩行",
+    "example": "Ver.3.1 · C案の連続歩行",
     "origins": [
       "walking.html"
     ]
@@ -10124,41 +10410,6 @@
       "walking.html"
     ]
   },
-  "0cd5ace5bc4f8f23": {
-    "source": "モデル・仮定・再現方法",
-    "example": "モデル・仮定・再現方法",
-    "origins": [
-      "walking.html"
-    ]
-  },
-  "655f4a269c278a93": {
-    "source": "媒体・ソースのハッシュ",
-    "example": "媒体・ソースのハッシュ",
-    "origins": [
-      "walking.html"
-    ]
-  },
-  "ca4b6918f33100c5": {
-    "source": "日英動画・字幕の来歴",
-    "example": "日英動画・字幕の来歴",
-    "origins": [
-      "walking.html"
-    ]
-  },
-  "0724304ab4bc5212": {
-    "source": "編集可能な歩行Blender原本",
-    "example": "編集可能な歩行Blender原本",
-    "origins": [
-      "walking.html"
-    ]
-  },
-  "64674840329d735e": {
-    "source": "同じ運動データからの再生成スクリプト",
-    "example": "同じ運動データからの再生成スクリプト",
-    "origins": [
-      "walking.html"
-    ]
-  },
   "f8903af4027c65c5": {
     "source": "以前の{0}位相診断は不足状態・省略のある歴史資料として保持",
     "example": "以前の3位相診断は不足状態・省略のある歴史資料として保持",
@@ -10180,16 +10431,16 @@
       "walking.html"
     ]
   },
-  "d88ed3a55358c433": {
-    "source": "r{0}連続歩行 · 計算表示／実機未検証",
-    "example": "r7連続歩行 · 計算表示／実機未検証",
+  "41743b8ad3c85667": {
+    "source": "Ver.{0} 連続歩行 · 計算表示／実機未検証",
+    "example": "Ver.3.1 連続歩行 · 計算表示／実機未検証",
     "origins": [
       "walking.html"
     ]
   },
-  "b58a61d0733a2ab9": {
-    "source": "r{0}比較へ",
-    "example": "r7比較へ",
+  "425b24646d94c7cd": {
+    "source": "Ver.{0}比較へ",
+    "example": "Ver.3.1比較へ",
     "origins": [
       "walking.html"
     ]
@@ -10468,9 +10719,9 @@
       "viewer-index.json"
     ]
   },
-  "aa2b789341a187a6": {
-    "source": "r{0}統合候補・実機未検証",
-    "example": "r7統合候補・実機未検証",
+  "890c5fb4442b56b3": {
+    "source": "Ver.{0}（内部r{1}/floor{2}）・実機未検証",
+    "example": "Ver.3.1（内部r7/floor2）・実機未検証",
     "origins": [
       "r7-assembly-A.json",
       "r7-assembly-B.json",

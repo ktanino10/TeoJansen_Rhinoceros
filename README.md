@@ -1,10 +1,22 @@
-# Theo Jansen “Rhinoceros” – Prototype Ver.2  
+# Theo Jansen “Rhinoceros” — Ver.3.1 and prototype records
 
 [English](README.md) | [日本語](README_ja.md)
 
 **Website:** [English](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/) · [日本語](https://ktanino10.github.io/TeoJansen_Rhinoceros/)
 
 **Documents:** [English documents and Japanese counterparts](docs/README_en.md) · [How to use / resource legend](docs/USER_GUIDE_en.md). CAD and numerical data are shared; the original Ver.1 PDF drawings remain Japanese.
+
+## Ver.3.1 — Current design
+
+[Current comparison, 360° and 12-stage assembly](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/r7.html) · [Continuous walking display and English videos](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/walking.html) · [Current CAD / STEP / STL / BOM downloads](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/index.html#downloads)
+
+![Ver.3.1 floor-corrected A, B and C at the same scale; CAD rendering, not a physical build](docs/ver3/r7_display_floor2/comparison.png)
+
+**Ver.3.1 is the public name of the existing floor-corrected design, not a new mechanical revision.** Engineering ID: `v3-integrated-walkers-r7-16-floor2`; immutable artifact/source commits and hashes remain in [the source contract](site/r7-source.json). [Design and BOM index](docs/ver3/integrated_r7/README_en.md) · [Assembly](docs/ver3/integrated_r7/ASSEMBLY_en.md) · [Floor correction](docs/ver3/integrated_r7/FLOOR_CORRECTION_en.md) · [Separately versioned walking model](docs/ver3/r7_walking_v1/MODEL_en.md).
+
+`manufacturingRelease=false`, physically qualified count 0; real wind, self-starting and physical 30 cm walking remain UNKNOWN. Seven representative slicing inspections are not whole-machine print/fit qualification. Walking uses prescribed 120 rpm input and 16× time compression, not measured performance. Existing r7 labels inside media refer to this Ver.3.1 geometry; canonical results, nulls and BOMs are unchanged.
+
+**Version guide:** Ver.1/2 = historical physical builds; [Ver.3.0 = initial concepts, archived CAD and videos](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/comparison.html); Ver.3.1 = current design. Internal r2/r3/r4/r6 study IDs are not public product versions. The build log below preserves the historical Ver.1/2 account.
 
 ---
 ## Repository Contents
@@ -479,13 +491,15 @@ it speeds up development and broadens your creative options. 🚀
 
 ---
 
-## Ver.3 — Three inspectable engineering concepts
+## Ver.3.0 — Initial engineering concepts (archive)
+
+> Historical first cut, **not the current design or recommended current download**. “Ver.3” in the original documents below means this Ver.3.0 package. Use [Ver.3.1 current design and downloads](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/index.html#ver3) for the floor-corrected geometry.
 
 **This first-cut package includes real FreeCAD/STEP assemblies, custom printable parts, BOMs, assembly instructions and Blender visualizations. It is not a manufacturing release or a demonstration of autonomous wind-powered walking.**
 
 The confirmed failure was **slip at the turbine/gear-to-shaft joint**, not proven bearing seizure. The new load path uses metal 8 mm REX shafts and form-fitting metal hubs, bolted printed components, explicit axial retention, inner-ring spacers and removable guards. A collar is not treated as a torque key.
 
-![Ver.3 designs at a common physical scale](./docs/ver3/media/comparison.png)
+![Archived Ver.3.0 designs at a common physical scale](./docs/ver3/media/comparison.png)
 
 | Design | Rotor diameter × span | Drivetrain | CAD and parts |
 |---|---:|---|---|
@@ -510,12 +524,12 @@ Under the common nominal friction assumptions, peak required input torques are a
 
 “Generative Design” here means an **executed, reproducible parametric design-space search**, not Autodesk Generative Design, CFD, continuum FEA or topology optimization. Print Ver.3 STLs at **100% in millimetres**; do not reapply the historical 150% scaling. These are new concepts, not reconstructed native Ver.2 CAD or guaranteed drop-in replacements.
 
-**Project showcase:** [Explore Ver.1, Ver.2 and Ver.3 in English](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/) — physical build records, explicitly labelled concept renders, prescribed walking videos and version-specific downloads. Each page links to its Japanese counterpart. Ver.3's unvalidated physical performance and unmet contact targets remain prominent.
+**Project showcase:** [Explore current Ver.3.1 and the Ver.1/2/3.0 history in English](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/) — each page links to its Japanese counterpart. Current and archived geometry, media and downloads are explicitly separated; physical performance remains unverified.
 
 **Photo-led production history:** [Ver.1 design, printing, finishing and assembly](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/production.html#ver1) / [Ver.2 revisions, completed-model views and tests](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/production.html#ver2). These pages organize this README's records, with six authentic completed-model views per version. They do not reconstruct an undocumented Ver.2 manufacturing log or native CAD.
 
-**Inspect the Ver.3 first cut:** [Illustrated V2→V3 change/evidence matrix](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/comparison.html) / [A/B/C interactive 360° views, part selection and concrete assembly guides](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/viewer.html). Both languages retain the exact existing CAD meshes and instance IDs, distinguish preparation and temporary removal, and preserve the unverified physical performance, unmet contact target and B input-torque shortfall.
+**Ver.3.0 archive:** [Initial change/evidence matrix, videos and old downloads](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/comparison.html) / [Archived A/B/C 360° and assembly](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/viewer.html). Both languages retain the original CAD meshes, instance IDs and first-cut limitations, including the unmet contact target and B input-torque shortfall.
 
-**r7 floor-corrected revision:** [Three-design comparison, 360° views, 12-stage guides, same-source media and downloads](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/r7.html). This separate revision retains all 2,285 instances and distinguishes the JPY24,000 per-machine material reference from tools, shipping and taxes. Seven representative parts have recorded slicing inspections, not physical print qualification. No walking prototype is qualified. First-cut material, research and earlier floor-conflict controls remain available as history.
+**Ver.3.1 current design (engineering r7/floor2):** [Comparison, 360°, 12 stages and current downloads](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/r7.html). All 2,285 instances are retained; the JPY24,000 material reference excludes tools, shipping and unresolved taxes. Seven representative slicing inspections do not qualify physical printing. No walking prototype is qualified. Earlier first-cut material and internal research remain history.
 
 **Continuous walking:** [Interactive walking and language-specific videos](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/walking.html) use a separate prescribed-120-rpm kinematic/quasi-static display model, with explicit contact realignment, airborne-rocker and spring assumptions. Videos use 16× time compression. They do not demonstrate physical wind-driven self-starting or a measured 30 cm walk; canonical null rocker angles remain unchanged.

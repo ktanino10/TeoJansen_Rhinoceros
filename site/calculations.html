@@ -16,7 +16,7 @@
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header"><div class="header-inner">
     <a class="brand" href="index.html"><span>RHINOCEROS<small>風で歩く仕組みの探究</small></span></a>
-    <nav aria-label="メインナビゲーション"><a href="#study">計算図</a><a href="#shared-linkage">リンク・公差</a><a href="#shared-interface">適合・調達</a><a href="viewer.html">旧版360°</a></nav>
+    <nav aria-label="メインナビゲーション"><a href="#study">計算図</a><a href="#shared-linkage">リンク・公差</a><a href="#shared-interface">適合・調達</a><a href="r7.html">現行Ver.3.1へ</a></nav>
   </div></header>
   <main id="main" tabindex="-1">
     <section class="section calculation-intro" id="top" aria-labelledby="calculation-title">
@@ -29,11 +29,12 @@
         実自己始動・30 cm連続歩行は<strong>UNKNOWN（未実測）</strong>です。</p>
       </aside>
       <div class="version-boundary">
-        <h2>既存の360°とは、別の骨格・別の版です。</h2>
+        <h2>作品の公開版ではなく、別条件の内部研究です。</h2>
+        <p>r2・r3・r4・r6は研究・部分設計の改訂IDです。Ver.2実物、Ver.3.0初期案、現行Ver.3.1とは番号体系も条件も異なります。</p>
         <p>このページ：<strong>{{calculation_revision}}</strong>。Aは150 × 48 mm・16:1、Bは70 × 48 mm・125:1、Cは100 × 48 mm・25:1の条件付き解析です。<strong>最終mesh・組立・全BOMはありません。</strong></p>
-        <p>公開360°：<strong>ver3-first-cut-2026-09-26</strong>。A300／B90／C180 mmの第一カットです。
+        <p>Ver.3.0の旧360°：<strong>ver3-first-cut-2026-09-26</strong>。A300／B90／C180 mmの第一カットです。
         新しい解析色・たわみ・寸法を旧GLBに貼り付けてはいません。旧モデルが新たに合格したという意味でもありません。</p>
-        <a href="viewer.html">第一カットの360°・組立ガイドへ（別版） →</a>
+        <div class="link-list"><a href="r7.html#viewer">現行Ver.3.1の360°・12工程へ →</a><a href="viewer.html">Ver.3.0 第一カットの旧360°・組立履歴へ →</a></div>
       </div>
       <p class="small-note">図・比較値は<a href="{{calculation_gate_url}}">設計ゲート原文</a>と<a href="{{calculation_manifest_url}}">図の版・出典ハッシュ契約</a>に固定。
       入力commit <code>{{calculation_input_commit}}</code>／成果物commit <code>{{calculation_artifact_commit}}</code>。</p>
@@ -88,7 +89,7 @@
         <a href="assets/calculation-manifest.json">原manifest JSON · 版と図・データのハッシュ</a>
         <a href="assets/calculation-comparison.json">原比較JSON</a><a href="assets/calculation-comparison.csv">原比較CSV</a>
         <a href="assets/calculation-torque-decomposition.csv">原トルク内訳CSV · 全案・全抵抗ケース</a>
-        <a href="comparison.html">第一カットのV2→V3 Matrix（別版）</a></div>
+        <a href="comparison.html">Ver.3.0の旧Matrix</a></div>
       <p class="small-note">実自己始動・30 cm連続歩行、最終CAD・全BOM・工具経路・実接地は未確認です。仮定モデル内での数値改善、予算のFAIL、実物のUNKNOWNを別々に残しています。</p>
     </div></section>
     {{cartridge_card}}
@@ -99,6 +100,6 @@
     <p id="figure-zoom-status" class="small-note" role="status">画像の表示倍率と、図に記された変形拡大倍率は別です。</p>
     <div id="figure-viewport" class="figure-viewport" role="region" aria-label="拡大図。横・縦にスクロールできます" tabindex="0"></div>
   </dialog>
-  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>研究資料 · 数値の改善と、完成機の合格は別。</span></div><a href="#top">先頭へ ↑</a><a href="production.html">Ver.1・Ver.2製作記録</a><a href="viewer.html">第一カット360°</a></footer>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>研究資料 · 数値の改善と、完成機の合格は別。</span></div><a href="#top">先頭へ ↑</a><a href="production.html">Ver.1・Ver.2製作記録</a><a href="viewer.html">Ver.3.0 旧360°／組立履歴</a></footer>
 </body>
 </html>

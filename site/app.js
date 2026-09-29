@@ -77,8 +77,8 @@ if (gifButton || preview) {
     }
     for (const video of videos) video.pause();
     preview.src = gifButton.dataset.animation;
-    preview.alt = localText("Ver.3 A・B・Cの規定入力による歩行GIF。実機未検証、接触目標未達。",
-      "Prescribed-input walking GIF of Ver.3 A, B and C. Physically unverified; contact targets unmet.");
+    preview.alt = localText("Ver.3.0 A・B・Cの旧規定歩行GIF。履歴・実機未検証、接触目標未達。",
+      "Archived prescribed-input walking GIF of Ver.3.0 A, B and C. Physically unverified; contact targets unmet.");
     gifButton.setAttribute("aria-pressed", "true");
     gifButton.textContent = localText("GIFを停止して静止画に戻す", "Stop GIF and return to still image");
   });

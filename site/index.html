@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="テオ・ヤンセン機構に着想を得たリノセウス。Ver.1・Ver.2の実物制作記録と、Ver.3の三つの比較設計、歩行可視化、CAD・STL・組立資料を紹介します。">
-  <title>リノセウス — 風と、試作と。Ver.1 / Ver.2 / Ver.3</title>
+  <meta name="description" content="リノセウスの現行設計Ver.3.1。床是正版のA・B・C、360°・12工程・連続歩行表示と正規CAD・STL・BOMへ。Ver.1/2の実物記録とVer.3.0の初期比較案は履歴として区別します。">
+  <title>リノセウス — Ver.3.1 現行設計と、Ver.1 / Ver.2 / Ver.3.0の記録</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
@@ -19,37 +19,36 @@
         <span>RHINOCEROS<small>風で歩く仕組みの探究</small></span>
       </a>
       <nav aria-label="メインナビゲーション">
-        <a href="#ver1">Ver.1</a><a href="#ver2">Ver.2</a><a href="#ver3">Ver.3</a><a href="production.html">製作記録</a><a href="#downloads">資料・ダウンロード</a>
+        <a href="#ver3">Ver.3.1</a><a href="#versions">版を選ぶ</a><a href="production.html">製作記録</a><a href="#downloads">資料・ダウンロード</a>
       </nav>
     </div>
   </header>
   <main id="main" tabindex="-1">
     <section class="hero section" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">A KINETIC SCULPTURE / MAKING NOTES</p>
-        <h1 id="hero-title">風と、試作と。<br><span>歩く仕組みをつくる。</span></h1>
-        <p class="intro">テオ・ヤンセンのストランビーストに着想を得た、3Dプリントの歩行模型「リノセウス」。形にする、動きを見直す、接合から考え直す。三つの版に、その試行錯誤を残しています。</p>
-        <div class="hero-actions"><a class="button primary" href="#versions">三つの版を見比べる <span aria-hidden="true">↓</span></a><a class="text-link" href="{{source:README_ja.md}}">制作記録の原文 ↗</a></div>
-        <p class="small-note"><strong>Ver.1 / Ver.2 は実物の制作記録。</strong><br>Ver.3 は比較検討用の設計・CGで、実機の風力歩行は未検証です。</p>
+        <p class="eyebrow">CURRENT DESIGN / VER.3.1</p>
+        <h1 id="hero-title">Ver.3.1<br><span>歩く仕組みを、見直す。</span></h1>
+        <p class="intro">テオ・ヤンセンのストランビーストに着想を得た歩行模型「リノセウス」。現行の床是正版を、同じ形状の比較・360°・組立・連続歩行表示と資料でたどれます。</p>
+        <div class="hero-actions"><a class="button primary" href="#ver3">Ver.3.1の三案を見る <span aria-hidden="true">↓</span></a>{{current_walk_link}}</div>
+        <p class="small-note"><strong>現行設計であって、実機の完成・合格ではありません。</strong><br>Ver.1 / Ver.2 は実物記録、Ver.3.0 は旧初期比較案。内部設計ID r7/floor2を、公開名Ver.3.1として案内しています。</p>
       </div>
-      <div class="hero-visual">{{hero}}</div>
+      <div class="hero-visual current-visual">{{current_hero}}</div>
     </section>
 
     <section class="section r7-entry" aria-labelledby="r7-entry-title">
-      <p class="eyebrow">LATEST DESIGN RECORD / R7 FLOOR CORRECTION</p>
-      <h2 id="r7-entry-title">r7床是正版：三案を、形と工程から比べる。</h2>
-      <p>是正した全2285部品の360°、12工程の組立・取外し説明、同尺度CG、限定した接地診断図と正規資料を公開しています。
-      <strong>実機未検証の設計候補で、完全なCAD歩行動画・実30 cm歩行の合格ではありません。</strong></p>
-      <div class="hero-actions"><a class="button primary" href="r7.html">r7床是正版の比較・360°・資料 →</a><a class="button" href="r7.html#r7-media">同版の組立／取外し説明</a><a class="text-link" href="r7.html#r7-diagnostics">計算位置の3時点診断</a></div>
-      <p class="small-note">部材費の承認目安は24,000円／台。工具・送料・未確定税は別。元5点＋新C歯車2点の層確認を、実造形・実はめあいの認定とは区別しています。下の第一カットやVer.1/2の記録は履歴として残しています。</p>
+      <p class="eyebrow">LATEST / SAME GEOMETRY, CLEAR VERSION</p>
+      <h2 id="r7-entry-title">最新はVer.3.1。初期案はVer.3.0の履歴へ。</h2>
+      <p>公開名を分け、旧CGや旧BOMへ迷わず進めるようにしました。設計原本・部品ID・解析結果は変更していません。</p>
+      <div class="hero-actions"><a class="button primary" href="r7.html">Ver.3.1 比較・360°・12工程 →</a><a class="text-link" href="comparison.html">Ver.3.0 初期比較案・旧資料を見る</a></div>
     </section>
 
     <section class="version-overview section" id="versions" aria-labelledby="versions-title">
-      <div class="section-heading"><p class="eyebrow">THE EVOLUTION</p><h2 id="versions-title">三つの版、三つの問い。</h2></div>
+      <div class="section-heading"><p class="eyebrow">THE EVOLUTION</p><h2 id="versions-title">実物の記録から、現行設計へ。</h2><p>公開版と内部研究の改訂番号を分けています。r2・r3・r4・r6は研究・部分設計のIDで、作品のVer.2やVer.3.1を意味しません。</p></div>
       <div class="version-grid">
         <a class="version-link" href="#ver1"><span class="version-number">01</span><span class="status-tag">実物・制作記録</span><h3>まず、形にする。</h3><p>六枚羽の風車、歯車、脚リンク。自分の手で機構をつくる。</p><span class="link-arrow">Ver.1を読む <span aria-hidden="true">↗</span></span></a>
         <a class="version-link" href="#ver2"><span class="version-number">02</span><span class="status-tag">実物・改良記録</span><h3>動きから、見直す。</h3><p>風車・ギア比・軸の支持・フックを再検討し、試作を重ねる。</p><span class="link-arrow">Ver.2を読む <span aria-hidden="true">↗</span></span></a>
-        <a class="version-link concept" href="#ver3"><span class="version-number">03</span><span class="status-tag caution">比較設計・実機未検証</span><h3>力の伝わり方を、変える。</h3><p>金属軸と正係合。風車と減速の三案を、実CADと共通条件で比較。</p><span class="link-arrow">Ver.3を読む <span aria-hidden="true">↗</span></span></a>
+        <a class="version-link archive" href="comparison.html"><span class="version-number">3.0</span><span class="status-tag caution">初期比較案・履歴</span><h3>最初の三案を残す。</h3><p>第一カットの形状・比較・動画・旧CAD。現行設計のダウンロードとは別です。</p><span class="link-arrow">Ver.3.0の履歴 <span aria-hidden="true">↗</span></span></a>
+        <a class="version-link current" href="#ver3"><span class="version-number">3.1</span><span class="status-tag">現行設計・実機未検証</span><h3>床是正後の三案へ。</h3><p>同じ全体モデルの比較・360°・12工程。連続歩行は追加仮定を明示した計算表示です。</p><span class="link-arrow">Ver.3.1を見る <span aria-hidden="true">↗</span></span></a>
       </div>
     </section>
 
@@ -94,56 +93,31 @@
       </div>
     </section>
 
-    <section class="chapter section" id="ver3" aria-labelledby="ver3-title">
-      <p class="record-scope"><strong>以下は第一カットの設計履歴です。</strong> <a href="r7.html">新しいr7床是正版の三案へ →</a>。旧CG・規定歩行動画を新r7の動作として扱っていません。</p>
-      <div class="chapter-heading"><span class="chapter-number" aria-hidden="true">03</span><div><p class="eyebrow">VER.3 / THREE ENGINEERING CONCEPTS</p><h2 id="ver3-title">接合から考え直す、三つの案。</h2><p>実形状・共通条件・明示した限界。CGを、実機の完成と取り違えないために。</p></div></div>
-      <aside class="warning" aria-labelledby="ver3-warning"><h3 id="ver3-warning">Ver.3は比較設計です。実機の風力歩行は未検証です。</h3><p><strong>全3案で接地残差3 mm目標は未達。Bは名目条件でも入力トルクが不足。</strong> Cは組立・接合・抵抗測定の候補であって、風力で動く完成機としての推奨ではありません。部材強度、印刷公差、重心、転倒、悪い風車角での自己始動は確認待ちです。</p></aside>
-      <div class="making-preview"><h3>Ver.2から何を変えたか。どの順番で組むか。</h3><p>接合の空転から調達まで八つの観点を、実写真・CG・検証状況のMatrixで整理しました。第一カットA/B/Cの正規CADを360°回して部品を選び、原典に対応する具体的な組立段階も確認できます。形状を見ることと、実機性能の確認は別です。</p><div class="hero-actions"><a class="button primary" href="comparison.html">Ver.2 → Ver.3 改良Matrix</a><a class="button" href="viewer.html">360°・部品選択・組立ガイド</a></div></div>
-      <p class="record-scope"><a href="calculations.html">新しい解析途中の検討を見る：材料・構造・流体の計算 →</a><br>別版 <strong>v3-commercial-r3-01</strong> の骨格計算です。三案とも未合格・最終CADなし。以下の第一カットCG／360°に新しい解析結果を貼り付けたものではありません。</p>
-      {{comparison}}
-      <div class="principles"><div><span class="principle-index">01</span><h3>接着剤頼みの接合から</h3><p>金属REX軸の平面と金属ハブを形状で係合し、樹脂部品は実在する穴とボルトで結合。接着剤を主トルク経路にしません。</p></div><div><span class="principle-index">02</span><h3>抜け止め・支持・組立順まで</h3><p>軸端止め、内輪専用スペーサ、ベアリング、脱着ガードを具体化。キャリアを先に外す工具経路と、ねじの逃げも是正しました。</p></div><div><span class="principle-index">03</span><h3>一つの機械データから</h3><p>CAD、BOM、CG、規定歩行を同じ部品・寸法・配置へ結び付け、別コンテキストのAIレビューで4件を是正。人の有資格者による設計承認ではありません。</p></div></div>
-      <p class="small-note">以下の寸法・比率・質量・残差は <a href="{{source:docs/ver3/comparison.json}}">正規のcomparison.json</a> から生成しています。名目質量は全ソリッドCADと購入品の仮定／カタログ値の合計で、実測・スライサー質量ではありません。</p>
-      <div class="prototype-grid">{{design_cards}}</div>
-
-      <div class="contact-note"><h3>「前進する動画」と「実機で歩ける」は別です。</h3><p>本体の並進・姿勢は接地靴の形状と持続する材料点アンカーから求め、棒を伸縮させたり任意の前進速度を足したりしていません。ただし、規定入力と接地近似による可視化であり、風・摩擦・衝撃を含む接触動力学ではありません。</p><p>表示する残差は、総荷重の2%以上を受け持つ一つの継続区間内の最大水平偏差です。動画開始時の部分区間を含み、三周期の合計滑り量ではありません。近接足と負荷足は区別され、小さい正の支持余裕も実用安定を保証しません。</p><a href="{{source:docs/ver3/comparison.json}}">指標の定義・重心と風の感度を見る ↗</a></div>
-
-      <div class="gif-panel media">
-        <div><p class="eyebrow">AT A GLANCE</p><h3>三案の歩行をまとめて見る</h3><p>GIFは操作するまで読み込みません。自動再生しない静止プレビューです。</p><button class="button" id="gif-toggle" type="button" aria-controls="gif-preview" aria-pressed="false" data-animation="assets/walk_preview.gif" hidden>歩行GIFを再生（33秒・約2.9 MB）</button><p id="motion-preference" class="small-note" hidden>動きを減らす設定を尊重し、自動では再生しません。ボタンを押した場合だけ動きます。</p><p><a href="{{source:docs/ver3/media/walk_preview.gif}}">GIFをGitHubで開く ↗</a></p></div>
-        <div><img id="gif-preview" src="assets/comparison.webp" alt="Ver.3三案の静止比較。ボタン操作後は規定歩行のGIFを表示。" width="1280" height="720" loading="lazy"><p class="media-error" role="status" hidden>プレビューを読み込めませんでした。GitHubへのリンクをご利用ください。</p></div>
-      </div>
-
-      <div class="section-heading subsection-heading"><p class="eyebrow">DRIVE &amp; ASSEMBLY</p><h3>動かし方と、組み方を切り分ける。</h3></div>
-      <div class="two-column">{{operation}}{{exploded}}</div>
-      <div class="generation-block">
-        {{frame_c}}
-        <div><p class="eyebrow">PARAMETRIC GENERATIVE DESIGN</p><h3>必要な領域を残し、条件の中で探す。</h3><p>軸受・ボルト座の保存領域、風車と脚の可動域、他の貫通軸、印刷寸法を制約に、歯数・軸位置・リブ幅・厚さを実際に探索しました。</p><p>Cの同じ軸配置・荷重条件では、8 × 14 mmリブ候補から8 × 8 mm候補へ、<strong>部材加算体積の代理量が約{{generation_reduction}}%減少</strong>。変位の代理値は増えています。<strong>装置全体の質量がこの割合で減った、という意味ではありません。</strong></p><p>これはパラメトリック生成設計です。Autodesk Generative Design、CFD、連続体FEA、トポロジー最適化、実機試験を実施したとは称しません。</p><a href="{{source:docs/ver3/DESIGN_ja.md}}">探索条件・比較値・根拠を読む ↗</a></div>
-      </div>
+    <section class="chapter section" id="ver3" aria-labelledby="ver3-title" data-public-version="3.1" data-engineering-revision="{{current_revision}}">
+      <div class="chapter-heading"><span class="chapter-number" aria-hidden="true">3.1</span><div><p class="eyebrow">VER.3.1 / CURRENT DESIGN</p><h2 id="ver3-title">現行設計を、三案から選ぶ。</h2><p>床是正版の形状・部品表・12工程を共通の出典でつなぎます。旧第一カットのCGや諸元ではありません。</p></div></div>
+      <aside class="warning" aria-labelledby="ver3-warning"><h3 id="ver3-warning">Ver.3.1は設計候補です。実機の風力歩行は未検証です。</h3><p><strong>manufacturingRelease=false／実機合格0。実自己始動・実30 cm歩行はUNKNOWN。</strong> 代表7部品の層確認は限定した条件での検査で、全機の造形・支持除去・はめあいを認定するものではありません。</p></aside>
+      <div class="hero-actions"><a class="button primary" href="r7.html#r7-change-matrix">Ver.2 → Ver.3.1 改良Matrix</a><a class="button" href="r7.html#viewer">Ver.3.1 360°・部品選択・組立ガイド</a>{{current_walk_link}}</div>
+      <div class="current-design-grid">{{current_cards}}</div>
+      <p class="small-note">寸法・減速比・名目質量・個別初回費用は、床是正版の正規比較データから生成しています。質量は実測・スライス値ではありません。部材費の承認目安は約24,000円／台。未保有DN-03約396円・送料・未確定税は別です。</p>
+      <p class="record-scope"><strong>内部設計ID：<code>{{current_revision}}</code>。</strong> 動画内のr7表記もこのVer.3.1形状を指します。連続歩行は同じ形状に別版の姿勢モデルを追加した計算表示です。規定入力120 rpm・16倍表示・約37 cmは実測ではなく、原解析のnullや判定は変更していません。</p>
+      <div class="document-strip"><a href="r7.html#r7-comparison">同条件の費用・入力要求・代償を詳しく見る</a><a href="comparison.html">Ver.3.0 初期比較案・旧動画・旧資料</a><a href="calculations.html">内部研究r3／r4の計算資料（別条件）</a></div>
     </section>
 
     <section class="downloads-section" id="downloads" aria-labelledby="downloads-title">
       <div class="section">
-        <div class="section-heading"><p class="eyebrow">FILES &amp; SOURCES</p><h2 id="downloads-title">つくる前に、資料を確かめる。</h2><p>大きなCADファイルはGitHubへ直接リンクしています。版と用途を選んで保存してください。</p></div>
-        <div class="scale-warning"><strong>拡大率を混ぜないでください。</strong><p>Ver.1/2の過去の制作記録には150%（脚160%推奨）の指示があります。<strong>新しいVer.3のSTLはmm・100%</strong>です。過去の倍率を重ねず、まずフィット試験片と購入部品を照合してください。設定済みのスライス／G-codeは提供していません。</p></div>
+        <div class="section-heading"><p class="eyebrow">VER.3.1 / CURRENT FILES &amp; SOURCES</p><h2 id="downloads-title">Ver.3.1の正規資料・ダウンロード。</h2><p>現行の床是正版へ直接リンクします。CAD・STL・BOMを旧Ver.3.0と混ぜず、同じ案・版で選んでください。</p></div>
+        <div id="current-downloads" data-public-version="3.1">
+          <div class="download-grid">{{current_downloads}}</div>
+          <div class="shared-downloads">{{current_sources}}</div>
+          <p class="small-note">試験片・組立台は別枠で費用に含み、歩行質量には加算しません。大きな原本はGitHubで必要なものだけ開きます。印刷済みキットや製造リリースではありません。</p>
+        </div>
+        <div class="scale-warning"><strong>拡大率を混ぜないでください。</strong><p>Ver.1/2の過去の制作記録には150%（脚160%推奨）の指示があります。<strong>Ver.3.1のSTLはmm・100%</strong>です。過去の倍率を重ねず、まずフィット試験片と購入部品を照合してください。設定済みのスライス／G-codeは提供していません。</p></div>
+        <h3 class="download-heading">過去の実物と初期比較案の資料</h3>
         <div class="two-column">
           <article class="download-card"><h3>Ver.1 · 初期試作</h3><ul><li><a href="{{tree:STL/Ver.1}}">印刷部品 · STL一覧</a></li><li><a href="{{download:docs/テオヤンセン2Dv1.pdf}}">組立参考図 · PDF</a></li><li><a href="{{download:docs/テオヤンセン2D図面最新.pdf}}">詳細参考図 · PDF</a></li><li><a href="production.html#ver1">工程別の製作記録と実写真</a></li><li><a href="{{source:README_ja.md}}">原典の制作記録</a></li></ul><p>参考図と既存映像を併用する資料です。完全な工程別キットではありません。</p></article>
           <article class="download-card"><h3>Ver.2 · 改良試作</h3><ul><li><a href="{{tree:STL/Ver.2}}">印刷部品 · STL一覧</a></li><li><a href="https://makerworld.com/ja/models/1971139-n-gundam-style-strandbeest-ver-2">MakerWorld既存ページ</a></li><li><a href="production.html#ver2">試作比較と完成写真・テスト</a></li><li><a href="{{source:README_ja.md}}">改良内容と過去の動画</a></li></ul><p>専用図面PDFと詳細な番号付き手順書、編集可能な旧Fusionモデルは提供されていません。</p></article>
         </div>
-        <h3 class="download-heading">Ver.3 · 実CADと比較検討資料</h3>
-        <div class="download-grid">{{download_cards}}</div>
-        <div class="shared-downloads">
-          <a href="r7.html#r7-guides">r7床是正版 · 全三案の正規CAD・BOM・12工程</a>
-          <a href="{{source:docs/ver3/ASSEMBLY_ja.md}}">番号付き組立手順・ベンチ確認票</a>
-          <a href="{{source:docs/ver3/DESIGN_ja.md}}">設計・計算・再生成方法</a>
-          <a href="{{source:docs/ver3/REVIEW_ja.md}}">独立AIレビューと是正記録</a>
-          <a href="{{tree:docs/ver3/drawings}}">実断面・段別カバー型紙</a>
-          <a href="{{download:docs/ver3/comparison.csv}}">三案の比較CSV</a>
-          <a href="{{download:Blender/Ver.3/ver3_ABC.blend}}">Blenderネイティブ（約28.3 MB）</a>
-          <a href="{{tree:scripts/ver3}}">生成スクリプトと設定</a>
-          <a href="{{tree:docs/ver3/media}}">すべてのCG・GIF・MP4</a>
-          <a href="viewer.html#assembly-guides">A/B/Cの工程別部品表と組立ガイド</a>
-          <a href="comparison.html#matrix">Ver.2からの変更と確認状況</a>
-        </div>
-        <p class="small-note">Ver.3はVer.2の無加工差替え部品ではありません。Aの最大フレームは256 mm境界に達し、造形面の余白・ブリムを保証しません。実物での滑りトルク、軸方向すきま、全周手回し、重心、転倒の確認が必要です。</p>
+        <p class="record-scope"><span class="status-tag caution">Ver.3.0 · 初期比較案・履歴</span> <a href="comparison.html#downloads">旧FCStd・STEP・STL・BOM・Blenderは履歴ページへ →</a>。現行Ver.3.1の部品とは混用しません。</p>
       </div>
     </section>
 
@@ -152,6 +126,6 @@
       <div><p>このサイトは、同じリポジトリの公開済みREADME・写真・CGと、是正済みVer.3の機械可読データを要約しています。Ver.1/2の実物記録とVer.3のデジタル確認は別の証拠です。写真の表示用派生にはトリミングとメタデータ除去を行い、原本は保持しています。</p><p>テオ・ヤンセン氏の機構から着想した個人の試作プロジェクトで、公式製品・玩具認証・有資格者による設計承認ではありません。第三者のCAD原本や無関係な作品をこのサイトへ再配布していません。素材の出典と利用条件はリポジトリの原典を確認してください。</p><div class="link-list"><a href="{{source:README_ja.md}}">日本語の原典README</a><a href="{{source:README.md}}">English README</a><a href="{{source:LICENSE}}">リポジトリのLICENSE</a><a href="{{source_tree}}">このサイトが参照する確定コミット {{source_commit}}</a></div></div>
     </section>
   </main>
-  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>Ver.1 → Ver.2 → Ver.3 · つくる、見直す、記録する。</span></div><a href="#top">ページ先頭へ ↑</a><a href="{{repository_url}}">GitHubリポジトリ ↗</a></footer>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>Ver.1 → Ver.2 → Ver.3.0 → Ver.3.1 · つくる、見直す、記録する。</span></div><a href="#top">ページ先頭へ ↑</a><a href="{{repository_url}}">GitHubリポジトリ ↗</a></footer>
 </body>
 </html>

@@ -8,13 +8,17 @@
 
 | ページ | 内容と版 |
 |---|---|
-| [全体紹介](https://ktanino10.github.io/TeoJansen_Rhinoceros/index.html) | Ver.1/2の実物記録と、Ver.3第一カット・現行r7への入口 |
+| [全体紹介](https://ktanino10.github.io/TeoJansen_Rhinoceros/index.html) | 現行Ver.3.1の画像・比較値・配布先を主入口に、Ver.1/2/3.0の履歴を分離 |
 | [製作記録](https://ktanino10.github.io/TeoJansen_Rhinoceros/production.html) | Ver.1の工程と、記録が残るVer.2の改良・完成写真・当時のテスト |
-| [第一カット比較](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html) | 旧A300/B90/C180 mmの変更と限界 |
-| [第一カット360°・組立](https://ktanino10.github.io/TeoJansen_Rhinoceros/viewer.html) | 同じ旧版の全メッシュ・部品ID・原典対応工程 |
+| [Ver.3.0 初期比較案・履歴](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html) | 旧A300/B90/C180 mmのMatrix・CG・規定動画・旧ダウンロード |
+| [Ver.3.0 旧360°・組立](https://ktanino10.github.io/TeoJansen_Rhinoceros/viewer.html) | 同じ旧版の全メッシュ・部品ID・原典対応工程。現行ではない |
 | [計算資料](https://ktanino10.github.io/TeoJansen_Rhinoceros/calculations.html) | 別版r3の材料・構造・流体モデル、r4入力カートリッジ |
-| [r7比較・360°・12工程](https://ktanino10.github.io/TeoJansen_Rhinoceros/r7.html) | 床是正版A750/B785/C750＝2285部品。第一カットとは別版 |
-| [連続歩行](https://ktanino10.github.io/TeoJansen_Rhinoceros/walking.html) | r7形状を使う、別版の運動学・準静的な表示モデルと動画 |
+| [Ver.3.1 比較・360°・12工程](https://ktanino10.github.io/TeoJansen_Rhinoceros/r7.html) | 現行の床是正版A750/B785/C750＝2285部品。内部ID r7/floor2 |
+| [Ver.3.1 連続歩行](https://ktanino10.github.io/TeoJansen_Rhinoceros/walking.html) | 同じ現行形状を使う、別版の運動学・準静的な表示モデルと日英動画 |
+
+Ver.3.1は既存の床是正版の公開名で、設計原本の改訂ではありません。内部ID `v3-integrated-walkers-r7-16-floor2` と成果物・入力コミット・ハッシュは[出典契約](../site/r7-source.json)で追えます。動画のr7表記もこの形状を指します。`r7-floor2-walking-kinematic-v1` は同じ形状に追加した別版の姿勢モデルです。r2/r3/r4/r6は内部研究・部分設計のIDで、作品のVer.2やVer.3.1を意味しません。
+
+古い `index.html#ver3` も現在はVer.3.1へ案内します。旧 `comparison.html`／`viewer.html` はVer.3.0履歴として残し、現行へのリンクを明示しています。[現行の配布資料](https://ktanino10.github.io/TeoJansen_Rhinoceros/index.html#downloads)と[旧配布資料](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html#downloads)は混用しません。
 
 ## 3Dと動画を操作する
 
@@ -42,6 +46,6 @@ Ver.1/2の過去の倍率150%／脚160%をVer.3へ重ねません。Ver.3はmm�
 
 ## 判定と予算を読み分ける
 
-現行r7の部材費目安は**約24,000円／台**。個別初回A23,305.13円/B23,735.37円/C23,154.43円と、未保有DN-03約396円・送料・未確定税等は区別します。共同購入平均を個別費用へ置換せず、旧20,000円／23,000円条件はその版の履歴です。
+現行Ver.3.1（内部r7/floor2）の部材費目安は**約24,000円／台**。個別初回A23,305.13円/B23,735.37円/C23,154.43円と、未保有DN-03約396円・送料・未確定税等は区別します。共同購入平均を個別費用へ置換せず、旧20,000円／23,000円条件はその版の履歴です。
 
 `manufacturingRelease=false`、実機合格数0、実風・実自己始動・実30 cm歩行はUNKNOWNです。デジタルの有限標本PASSは、連続する全経路・全公差・CFD/FEM・耐久・実機運転の認定ではありません。使用材料や接着・硬化・工具は製品の指示と現物確認を優先し、過去の記録だけを安全保証にしないでください。

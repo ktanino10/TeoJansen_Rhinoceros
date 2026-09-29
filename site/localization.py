@@ -197,7 +197,7 @@ class LocalizedHTML(HTMLParser):
                 value = re.sub(r"(\.[a-z0-9]+)$", r"-en\1", value)
             if key == "href" and not original_language:
                 value = translated_link(value, self.ref)
-            if key == "href" and value.startswith("assets/"):
+            if key == "href" and (value.startswith("assets/") or value == "build-manifest.json"):
                 value = "../" + value
             if key in {"src", "poster", "data-animation"} or (key == "href" and tag == "link"):
                 if value and not value.startswith(("#", "https://", "http://", "../")):
@@ -433,7 +433,7 @@ def document_outputs() -> dict[str, str]:
             {"source": ja, "sourceLanguage": "ja", "sourceSha256": digest((ROOT / ja).read_bytes()),
              "target": en, "targetLanguage": "en", "targetSha256": digest((ROOT / en).read_bytes()), "coverage": coverage}
             for ja, en, coverage in (
-                ("README_ja.md", "README.md", "existing historical V1/V2 production records"),
+                ("README_ja.md", "README.md", "current Ver.3.1 entry point and historical Ver.1/2/3.0 records"),
                 ("docs/USER_GUIDE_ja.md", "docs/USER_GUIDE_en.md", "website and document use; shared-resource legend"),
             )
         ],
@@ -459,12 +459,34 @@ def document_outputs() -> dict[str, str]:
                  f"[{'English website' if english else '日本語サイト'}]({PUBLIC_URL}{'en/' if english else ''}) · "
                  f"[{'How to use / resource legend' if english else '使い方・資料の凡例'}](USER_GUIDE_{locale}.md) · "
                  f"[{'Source and coverage manifest' if english else '出典・対応範囲manifest'}](translation-manifest.json)", "",
-                 "| Document | 日本語 | English |" if english else "| 資料 | 日本語 | English |",
-                 "|---|---|---|"]
-        for source in DOCUMENTS:
-            target = english_path(source)
-            heading = (outputs[target] if english else (ROOT / source).read_text()).splitlines()[0].lstrip("# ")
-            lines.append(f"| {heading} | [日本語]({source.removeprefix('docs/')}) | [English]({target.removeprefix('docs/')}) |")
+                 ("**Current: Ver.3.1** (engineering `v3-integrated-walkers-r7-16-floor2`). "
+                  "**Archive: Ver.3.0** (first-cut concepts). Original engineering titles, IDs and hashes are retained; "
+                  "r2/r3/r4/r6 are internal study/subassembly revisions, not public product versions."
+                  if english else "**現行：Ver.3.1**（内部設計ID `v3-integrated-walkers-r7-16-floor2`）。"
+                  "**履歴：Ver.3.0**（第一カットの初期比較案）。原資料の題名・ID・ハッシュは保持しています。"
+                  "r2/r3/r4/r6は内部研究・部分設計の改訂で、作品の公開版番号ではありません。"), ""]
+        site_url = PUBLIC_URL + ("en/" if english else "")
+        lines += [
+            f"[{'Ver.3.1 comparison / 360° / assembly' if english else 'Ver.3.1 比較・360°・組立'}]({site_url}r7.html) · "
+            f"[{'Current native CAD / STEP / STL / BOM' if english else '現行CAD・STEP・STL・BOM'}]({site_url}index.html#downloads) · "
+            f"[{'Current walking display / videos' if english else '現行の連続歩行表示・動画'}]({site_url}walking.html)", "",
+        ]
+        current = [source for source in DOCUMENTS if "/integrated_r7/" in source or "/r7_walking_v1/" in source]
+        archive = list(DOCUMENTS[:3])
+        research = [source for source in DOCUMENTS if source not in current + archive]
+        for heading, documents in (
+            ("Ver.3.1 — Current design and source records" if english else "Ver.3.1 — 現行設計と出典資料", current),
+            ("Ver.3.0 — Initial concepts (archive)" if english else "Ver.3.0 — 初期比較案（履歴）", archive),
+            ("Internal studies and subassemblies (separate conditions)" if english else "内部研究・部分設計（別条件）", research),
+        ):
+            lines += ["## " + heading, "",
+                      "| Document | 日本語 | English |" if english else "| 資料 | 日本語 | English |",
+                      "|---|---|---|"]
+            for source in documents:
+                target = english_path(source)
+                title = (outputs[target] if english else (ROOT / source).read_text()).splitlines()[0].lstrip("# ")
+                lines.append(f"| {title} | [日本語]({source.removeprefix('docs/')}) | [English]({target.removeprefix('docs/')}) |")
+            lines.append("")
         lines += ["", "## Shared and original-language resources" if english else "## 共通データと原本の言語", "",
                   ("The seven BOMs already use English/neutral fields and are shared byte-for-byte: part IDs, quantities, SKUs, prices and URLs are unchanged. "
                    "CAD/STEP/STL/GLB and numerical sources are shared, not remodeled. Source JSON annotations may be Japanese; paired prose supplies the English explanation. "

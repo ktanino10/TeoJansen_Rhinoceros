@@ -8,7 +8,7 @@ import shutil
 from PIL import Image
 
 from r7_data import ROOT, BASE, Snapshot, build_candidate, digest
-from build_r7_preview import comparison_html, static_guides
+from build_r7_preview import comparison_html, overview_html, static_guides
 
 MEDIA_ROOT = ROOT / "docs/ver3/r7_display_floor2"
 NATIVE_PATH = "Blender/Ver.3/integrated_r7/r7_floor2.blend"
@@ -58,9 +58,10 @@ def build_public_r7(output, ref):
             assets[filename].update(width=dimensions[0], height=dimensions[1], metadata_removed=True)
             displays[path.stem] = (filename, dimensions)
 
-    def image(stem, caption):
+    def image(stem, caption, *, eager=False):
         filename, (width, height) = displays[stem]
-        return (f'<figure class="media"><img src="{filename}" width="{width}" height="{height}" loading="lazy" decoding="async" '
+        loading = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
+        return (f'<figure class="media"><img src="{filename}" width="{width}" height="{height}" {loading} decoding="async" '
                 f'alt="{escape(caption)}"><p class="media-error" role="status" hidden>画像を読み込めませんでした。原本リンクをご利用ください。</p>'
                 f'<figcaption>{escape(caption)} <a href="{source_url("source", str((MEDIA_ROOT/(stem+".png")).relative_to(ROOT)), ref)}">'
                 '原寸画像 ↗</a></figcaption></figure>')
@@ -117,19 +118,19 @@ def build_public_r7(output, ref):
     comparison, baseline = comparison_html(guides, source)
     links = catalog["links"]
     replacements = {
-        "{{r7_robots}}": "", "{{r7_page_title}}": "r7床是正版 — 三案の連続歩行・360°・組立",
-        "{{r7_local_only}}": "false", "{{r7_brand_note}}": "r7床是正版 · 実機未検証",
+        "{{r7_robots}}": "", "{{r7_page_title}}": "Ver.3.1 現行設計 — 三案の連続歩行・360°・組立",
+        "{{r7_local_only}}": "false", "{{r7_brand_note}}": "Ver.3.1 現行設計 · 実機未検証",
         "{{r7_scope_label}}": "SOURCE-BOUND DESIGN CANDIDATES",
-        "{{r7_status_title}}": "r7床是正版 · 比較設計候補であり、実機の合格ではありません",
+        "{{r7_status_title}}": "Ver.3.1 床是正版 · 比較設計候補であり、実機の合格ではありません",
         "{{r7_resource_notice}}": "機械資料は床是正版の確定コミットへ、媒体は同じ形状・工程に基づく原本へリンクしています。大きなCAD／STL／BlenderはGitHubで必要なものだけ開けます。",
-        "{{r7_scope_short}}": "床是正版", "{{r7_footer_note}}": "r7床是正版 · 実風・実始動・実30cm歩行は未確認。",
+        "{{r7_scope_short}}": "床是正版", "{{r7_footer_note}}": "Ver.3.1 · 実風・実始動・実30cm歩行は未確認。",
         "{{r7_revision}}": source.source["revisionId"], "{{r7_candidate_revision}}": source.source["candidateRevision"],
         "{{r7_commit}}": source.source["publicSourceCommit"],
         "{{r7_slice_notice}}": "従来5点＋Cの新しい相手歯車2点を実層確認。Z0.2 mmの支持薄膜除去、支持面／歯下縁の仕上げ、実はめあいは未確認です。",
-        "{{r7_comparison_image}}": image("comparison", "r7床是正版のA・B・Cを同一尺度で並べた実CAD由来CG。無圧縮の組立基準姿勢で、実物ではありません。"),
+        "{{r7_comparison_image}}": image("comparison", "Ver.3.1床是正版のA・B・Cを同一尺度で並べた実CAD由来CG。無圧縮の組立基準姿勢で、実物ではありません。"),
         "{{r7_comparison}}": comparison, "{{r7_baseline}}": baseline,
         "{{r7_payload}}": "転送サイズ " + "／".join(f"{ident} {g['model']['transportBytes']/1e6:.2f} MB" for ident, g in guides.items()),
-        "{{r7_fallback}}": '<div class="r7-fallback">' + "".join(image(f"hero_{d}", f"r7 {d}案の床是正版・実CAD由来CG。") for d in "ABC") + "</div>",
+        "{{r7_fallback}}": '<div class="r7-fallback">' + "".join(image(f"hero_{d}", f"Ver.3.1 {d}案の床是正版・実CAD由来CG。") for d in "ABC") + "</div>",
         "{{r7_guides}}": static_guides(guides), "{{r7_media}}": media_html, "{{r7_diagnostics}}": diagnostic_html,
         "{{r7_sources}}": "".join(f'<a href="{links[key]}">{label}</a>' for key, label in (
             ("contract", "schema2統合契約"), ("manifest", "正規manifest"), ("readme", "全体設計資料"),
@@ -144,5 +145,8 @@ def build_public_r7(output, ref):
     from r7_walking import build_walking
     walking_html, walking_assets = build_walking(output, guides, ref)
     replacements.update(walking_html)
+    replacements.update(overview_html(guides, image, links))
+    replacements["{{current_sources}}"] += walking_html["{{walk_sources}}"]
+    replacements["{{current_sources}}"] += '<a href="build-manifest.json">公開版と内部設計IDの対応</a>'
     assets.update(walking_assets)
     return replacements, assets, source.source
