@@ -24,7 +24,9 @@ test("r7 walking opt-in loads each full walker; play pause phase speed and reset
   page.on("request", request => requests.push(request.url()));
   page.on("pageerror", error => errors.push(error.message));
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("walking.html#walking");
+  await page.goto("index.html#ver3");
+  await page.locator('#current-C a[href^="walking.html?"]').click();
+  await expect(page).toHaveURL(/walking\.html\?design=C#walking$/);
   expect(requests.some(url => /walking-engine|r7-walk-[ABC]\.json|r7-[ABC]\.glb|\.mp4$/.test(url))).toBe(false);
   await page.locator("#walk-load").click();
   for (const design of ["C", "A", "B"]) {

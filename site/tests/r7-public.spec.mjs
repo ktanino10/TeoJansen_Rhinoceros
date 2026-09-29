@@ -14,7 +14,9 @@ test("r7 public corrected revision loads all three exact models and retains the 
   const requests = [], errors = [];
   page.on("request", r => requests.push(r.url()));
   page.on("pageerror", e => errors.push(e.message));
-  await page.goto("r7.html");
+  await page.goto("index.html#ver3");
+  await page.locator('#current-A a[href^="r7.html?"]').click();
+  await expect(page).toHaveURL(/r7\.html\?design=A#viewer$/);
   await expect(page.locator("#r7-status")).toContainText("床是正版");
   expect(requests.some(url => /r7-[ABC]\.glb\.gz|\.mp4$/.test(url))).toBe(false);
   await page.locator("#load-viewer").click();

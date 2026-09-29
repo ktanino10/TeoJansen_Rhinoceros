@@ -10,8 +10,7 @@ async function englishSurface(page, selector = "body") {
 }
 
 for (const locale of ["ja", "en"]) {
-  test(`localization ${locale} current version journey: home, exact CAD, assembly, walking and downloads`, async ({ page }, testInfo) => {
-    test.setTimeout(240_000);
+  test(`localization ${locale} current version journey: page routing, sources and downloads`, async ({ page }, testInfo) => {
     const prefix = locale === "en" ? "en/" : "";
     const manifest = await (await page.request.get("build-manifest.json")).json();
     await page.emulateMedia({ reducedMotion: "reduce" });
@@ -21,16 +20,8 @@ for (const locale of ["ja", "en"]) {
       await page.locator(`#current-${design} a[href^="r7.html?"]`).click();
       await expect(page).toHaveURL(new RegExp(`/${prefix}r7\\.html\\?design=${design}#viewer$`));
       await expect(page.locator("h1")).toContainText("Ver.3.1");
-      await page.locator("#load-viewer").click();
-      await expect(page.locator("#viewer-workspace")).toHaveAttribute("aria-busy", "false", { timeout: 80_000 });
-      await expect(page.locator("#instance-count")).toHaveAttribute("data-visible", design === "B" ? "785" : "750");
-      await expect(page.locator("#step-select option")).toHaveCount(13);
-      await page.locator("#step-first").click();
-      await expect(page.locator("#instance-count")).toHaveAttribute("data-visible", "0");
-      await page.locator("#step-next").click();
-      await expect(page.locator("#stage-title")).not.toBeEmpty();
-      await page.locator("#step-complete").click();
-      await expect(page.locator("#instance-count")).toHaveAttribute("data-visible", design === "B" ? "785" : "750");
+      await expect(page.locator("#design-select")).toHaveValue(design);
+      await expect(page.locator("body")).toHaveAttribute("data-viewer-catalog", "assets/r7-viewer-index.json");
       await page.locator("[data-language-link]").click();
       await expect(page.locator("html")).toHaveAttribute("lang", locale === "en" ? "ja" : "en");
       await expect(page).toHaveURL(new RegExp(`r7\\.html\\?design=${design}#viewer$`));
@@ -40,11 +31,7 @@ for (const locale of ["ja", "en"]) {
     await expect(page).toHaveURL(new RegExp(`/${prefix}walking\\.html\\?design=C#walking$`));
     await expect(page.locator("h1")).toContainText("Ver.3.1");
     await expect(page.locator("#walking-version-note")).toContainText("r7-floor2-walking-kinematic-v1");
-    await page.locator("#walk-load").click();
-    await expect(page.locator("#walk-workspace")).toHaveAttribute("aria-busy", "false", { timeout: 90_000 });
-    await expect(page.locator("#walk-stats")).toHaveAttribute("data-drawn", "750");
-    await page.locator("#walk-cycle").click();
-    await expect.poll(async () => Number(await page.locator("#walk-stats").getAttribute("data-forward"))).toBeGreaterThan(92);
+    await expect(page.locator("#walk-design")).toHaveValue("C");
     await page.goto(`${prefix}index.html#downloads`);
     for (const design of ["A", "B", "C"]) {
       const guide = await (await page.request.get(`assets/r7-assembly-${design}.json`)).json();
@@ -100,7 +87,13 @@ for (const filename of ["viewer.html", "r7.html"]) {
       test.setTimeout(120_000);
       const errors = [];
       page.on("pageerror", error => errors.push(error.message));
-      await page.goto(`en/${filename}?design=${design}#viewer`);
+      if (filename === "r7.html") {
+        await page.goto("en/index.html#ver3");
+        await page.locator(`#current-${design} a[href^="r7.html?"]`).click();
+        await expect(page).toHaveURL(new RegExp(`/en/r7\\.html\\?design=${design}#viewer$`));
+      } else {
+        await page.goto(`en/${filename}?design=${design}#viewer`);
+      }
       await page.locator("#load-viewer").click();
       await expect(page.locator("#viewer-workspace")).toBeVisible();
       await expect(page.locator("#viewer-workspace")).toHaveAttribute("aria-busy", "false", { timeout: 80_000 });
@@ -135,7 +128,9 @@ for (const design of ["A", "B", "C"]) {
     test.setTimeout(150_000);
     const errors = [];
     page.on("pageerror", error => errors.push(error.message));
-    await page.goto(`en/walking.html?design=${design}#walking`);
+    await page.goto("en/index.html#ver3");
+    await page.locator(`#current-${design} a[href^="walking.html?"]`).click();
+    await expect(page).toHaveURL(new RegExp(`/en/walking\\.html\\?design=${design}#walking$`));
     await page.locator("#walk-load").click();
     await expect(page.locator("#walk-workspace")).toHaveAttribute("aria-busy", "false", { timeout: 90_000 });
     await expect(page.locator("#walk-error")).toBeHidden();
