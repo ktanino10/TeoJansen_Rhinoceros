@@ -415,19 +415,19 @@
     {
       "source": "README_ja.md",
       "sourceLanguage": "ja",
-      "sourceSha256": "55a9de3359dd0611f785cd2f8970875e76a5052b838ac0ae9f31ae06826c4ae4",
+      "sourceSha256": "5ec9a6d6062625900080ce019ec4c9d9ba6d1d617969c4d0fe822ccf42cfb8fe",
       "target": "README.md",
       "targetLanguage": "en",
-      "targetSha256": "1934e057406fdc00d1bf020ed06cba1ffa5a61f64fe34284253b3b38b37e33dd",
-      "coverage": "existing historical V1/V2 production records"
+      "targetSha256": "1385760ac34086f69458670e525f74cbdc219b17c3b73647e5cb9f90f0b5e672",
+      "coverage": "current Ver.3.1 entry point and historical Ver.1/2/3.0 records"
     },
     {
       "source": "docs/USER_GUIDE_ja.md",
       "sourceLanguage": "ja",
-      "sourceSha256": "551a95c9aeaf90a776ab01739265063337cbdb9c6b03a0b16ff3911de5455c7f",
+      "sourceSha256": "6a04217497204a620c08b6ed91fc495fdf62a5dad52be78d22017576625e93f3",
       "target": "docs/USER_GUIDE_en.md",
       "targetLanguage": "en",
-      "targetSha256": "fd5cc6411bf09de8768f8f016c19a7e86eadc74d27139f24b1b3e03875bb867b",
+      "targetSha256": "caca4907f51bc41fe2a9d8e4e0301f8ee26fdf74cdf3bffefe008c1e1716aefb",
       "coverage": "website and document use; shared-resource legend"
     }
   ],

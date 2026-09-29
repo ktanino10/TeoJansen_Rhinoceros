@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>r7 連続歩行シミュレーション — RHINOCEROS</title>
+  <meta name="description" content="Ver.3.1現行設計の連続歩行表示。r7/floor2形状と別版の運動学モデルによるA・B・Cの3D・日英動画。規定入力120 rpm・16倍表示で、実機の歩行実証ではありません。">
+  <title>Ver.3.1 連続歩行シミュレーション — RHINOCEROS</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="walking.css">
@@ -15,15 +16,17 @@
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header"><div class="header-inner">
-    <a class="brand" href="r7.html"><span>RHINOCEROS<small>r7床是正版 · 連続歩行</small></span></a>
-    <nav aria-label="メインナビゲーション"><a href="#walking">歩行3D</a><a href="#walking-films">動画</a><a href="#walking-method">モデルの範囲</a><a href="r7.html">比較・組立へ</a></nav>
+    <a class="brand" href="r7.html"><span>RHINOCEROS<small>Ver.3.1 現行設計 · 連続歩行</small></span></a>
+    <nav aria-label="メインナビゲーション"><a href="#walking">歩行3D</a><a href="#walking-films">動画</a><a href="#walking-method">モデルの範囲</a><a href="r7.html">Ver.3.1比較・組立</a></nav>
   </div></header>
-  <main id="main" tabindex="-1">
+  <main id="main" tabindex="-1" data-public-version="3.1">
     <section class="section" id="top">
-      <p class="eyebrow">CONTINUOUS KINEMATIC SIMULATION / R7 FLOOR2</p>
-      <h1>風車から六脚まで、<br><span>連続した歩行を見る。</span></h1>
+      <p class="eyebrow">VER.3.1 / CONTINUOUS KINEMATIC SIMULATION / R7 FLOOR2</p>
+      <h1>Ver.3.1<br><span>風車から六脚まで、連続歩行。</span></h1>
       <p>床是正版の実CAD形状を使い、歯車・クランク・リンク・足をつないだ新しい計算表示です。
         3枚の診断図や旧モデルの映像とは別に、地面の上を複数周期進めます。</p>
+      <p id="walking-version-note" class="record-scope">公開名Ver.3.1／内部設計ID r7/floor2。動画・posterに残るr7表記はこの形状を指します。
+        運動学の拡張は別版 <code>r7-floor2-walking-kinematic-v1</code> で、元の物理結果・BOM・未解決の値は保持しています。</p>
       <aside class="warning" id="walk-scope"><h2>計算上の歩行です。実機の歩行実証ではありません。</h2>
         <p><strong>入力120 rpmを規定した運動学・準静的な表示モデル。</strong>風速から回転数を予測した動画ではありません。
           manufacturingRelease=false／実機合格0。実自己始動・実30 cm歩行はUNKNOWNのままです。</p>
@@ -78,7 +81,7 @@
       </div>
     </section>
     <section class="chapter-tinted" id="walking-films"><div class="section">
-      <p class="eyebrow">SAME GEOMETRY / SAME MOTION PACKET</p><h2>同じ計算モデルの歩行動画</h2>
+      <p class="eyebrow">VER.3.1 / SAME GEOMETRY / SAME MOTION PACKET</p><h2>Ver.3.1 同じ計算モデルの歩行動画</h2>
       <p>3Dと同じ床是正版・運動データから新たに描画しています。全案とも入力120 rpm・時間圧縮16×。
         Bは512:1なので、同じ倍率ではA・Cより遅く進みます。4周期の計算上の前進は約37 cmですが、実測距離ではありません。</p>
       {{walk_movies}}
@@ -101,6 +104,6 @@
         <a href="r7.html#r7-guides">正規CAD・BOM・12工程へ</a>。</p>
     </section>
   </main>
-  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>r7連続歩行 · 計算表示／実機未検証</span></div><a href="r7.html">r7比較へ</a><a href="#top">先頭へ ↑</a></footer>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>Ver.3.1 連続歩行 · 計算表示／実機未検証</span></div><a href="r7.html">Ver.3.1比較へ</a><a href="#top">先頭へ ↑</a></footer>
 </body>
 </html>

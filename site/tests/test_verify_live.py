@@ -24,6 +24,11 @@ class LiveVerificationTests(unittest.TestCase):
             path = url.removeprefix(raw_prefix)
             self.assertIn(path, verify_live.DOCUMENT_EXAMPLES)
             return (ROOT / path).read_bytes()
+        engineering_prefix = f"https://raw.githubusercontent.com/ktanino10/TeoJansen_Rhinoceros/{self.manifest['r7_source']['publicSourceCommit']}/"
+        if url.startswith(engineering_prefix):
+            path = url.removeprefix(engineering_prefix)
+            self.assertIn(path, verify_live.engineering_examples(self.manifest))
+            return (ROOT / path).read_bytes()
         self.assertTrue(url.startswith(verify_live.PUBLIC_URL))
         path = url.removeprefix(verify_live.PUBLIC_URL)
         return (self.output / path).read_bytes()
@@ -36,7 +41,9 @@ class LiveVerificationTests(unittest.TestCase):
         self.assertEqual(report["all_gets"], 200)
         self.assertEqual(report["external_images"], 1)
         self.assertEqual(report["english_documents"], 3)
-        self.assertEqual(fetch.call_count, 1 + 14 + len(verify_live.STATIC_FILES) + len(self.manifest["assets"]) + 1 + 3)
+        self.assertEqual(report["current_version"], "3.1")
+        self.assertEqual(report["engineering_downloads"], 3)
+        self.assertEqual(fetch.call_count, 1 + 14 + len(verify_live.STATIC_FILES) + len(self.manifest["assets"]) + 1 + 3 + 3)
 
     def test_stale_commit_and_external_paths_are_rejected(self):
         with self.assertRaisesRegex(ValueError, "Published commit differs"):
@@ -52,6 +59,24 @@ class LiveVerificationTests(unittest.TestCase):
             return data + b"corrupt" if url.endswith("assets/ver3-C.glb") else data
         with patch.object(verify_live, "fetch_bytes", side_effect=corrupt):
             with self.assertRaisesRegex(ValueError, "size/hash differs"):
+                verify_live.verify(self.manifest["source_commit"])
+
+    def test_wrong_public_version_and_corrupt_current_native_cannot_pass(self):
+        def wrong_version(url):
+            if url.endswith("build-manifest.json"):
+                manifest = copy.deepcopy(self.manifest)
+                manifest["public_versions"]["3.1"]["data"] = "docs/ver3/comparison.json"
+                return json.dumps(manifest).encode()
+            return self.fixture_fetch(url)
+        with patch.object(verify_live, "fetch_bytes", side_effect=wrong_version):
+            with self.assertRaisesRegex(ValueError, "public-version mapping"):
+                verify_live.verify(self.manifest["source_commit"])
+
+        def corrupt_native(url):
+            data = self.fixture_fetch(url)
+            return data + b"corrupt" if url.endswith("Walker_A.FCStd") else data
+        with patch.object(verify_live, "fetch_bytes", side_effect=corrupt_native):
+            with self.assertRaisesRegex(ValueError, "engineering download differs"):
                 verify_live.verify(self.manifest["source_commit"])
 
 

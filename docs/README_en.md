@@ -6,15 +6,14 @@ Full English counterparts of the major public documents. Frozen Japanese enginee
 
 [English website](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/) · [How to use / resource legend](USER_GUIDE_en.md) · [Source and coverage manifest](translation-manifest.json)
 
+**Current: Ver.3.1** (engineering `v3-integrated-walkers-r7-16-floor2`). **Archive: Ver.3.0** (first-cut concepts). Original engineering titles, IDs and hashes are retained; r2/r3/r4/r6 are internal study/subassembly revisions, not public product versions.
+
+[Ver.3.1 comparison / 360° / assembly](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/r7.html) · [Current native CAD / STEP / STL / BOM](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/index.html#downloads) · [Current walking display / videos](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/walking.html)
+
+## Ver.3.1 — Current design and source records
+
 | Document | 日本語 | English |
 |---|---|---|
-| Ver.3 — Design, calculation and generative-design notes | [日本語](ver3/DESIGN_ja.md) | [English](ver3/DESIGN_en.md) |
-| Ver.3 — Assembly, installation paths and bench checks | [日本語](ver3/ASSEMBLY_ja.md) | [English](ver3/ASSEMBLY_en.md) |
-| Ver.3 independent review and corrections | [日本語](ver3/REVIEW_ja.md) | [English](ver3/REVIEW_en.md) |
-| Bounded redesign using a common commercial-dryer reference | [日本語](ver3/commercial_basis_r3/DESIGN_GATE_ja.md) | [English](ver3/commercial_basis_r3/DESIGN_GATE_en.md) |
-| Optional noninvasive V2 checks — No instrument purchase | [日本語](ver3/commercial_basis_r3/V2_CHECK_ja.md) | [English](ver3/commercial_basis_r3/V2_CHECK_en.md) |
-| Common input cartridge — Actual CAD of holder and test flange | [日本語](ver3/common_input_r4/README_ja.md) | [English](ver3/common_input_r4/README_en.md) |
-| Common input cartridge assembly and removal | [日本語](ver3/common_input_r4/ASSEMBLY_ja.md) | [English](ver3/common_input_r4/ASSEMBLY_en.md) |
 | Ver.3, 3 integrated designs: whole-machine geometry and conditional judgments | [日本語](ver3/integrated_r7/README_ja.md) | [English](ver3/integrated_r7/README_en.md) |
 | Common assembly — Whole-machine r7 | [日本語](ver3/integrated_r7/ASSEMBLY_ja.md) | [English](ver3/integrated_r7/ASSEMBLY_en.md) |
 | r7-15 independent integration review and bounded correction | [日本語](ver3/integrated_r7/REVIEW_ja.md) | [English](ver3/integrated_r7/REVIEW_en.md) |
@@ -26,6 +25,24 @@ Full English counterparts of the major public documents. Frozen Japanese enginee
 | C: whole-machine design assessment | [日本語](ver3/integrated_r7/C/README_ja.md) | [English](ver3/integrated_r7/C/README_en.md) |
 | C shifted gear pair: 2 additional slices | [日本語](ver3/integrated_r7/C/SLICING_ja.md) | [English](ver3/integrated_r7/C/SLICING_en.md) |
 | Floor-corrected r7: continuous-walking display model v1 | [日本語](ver3/r7_walking_v1/MODEL_ja.md) | [English](ver3/r7_walking_v1/MODEL_en.md) |
+
+## Ver.3.0 — Initial concepts (archive)
+
+| Document | 日本語 | English |
+|---|---|---|
+| Ver.3 — Design, calculation and generative-design notes | [日本語](ver3/DESIGN_ja.md) | [English](ver3/DESIGN_en.md) |
+| Ver.3 — Assembly, installation paths and bench checks | [日本語](ver3/ASSEMBLY_ja.md) | [English](ver3/ASSEMBLY_en.md) |
+| Ver.3 independent review and corrections | [日本語](ver3/REVIEW_ja.md) | [English](ver3/REVIEW_en.md) |
+
+## Internal studies and subassemblies (separate conditions)
+
+| Document | 日本語 | English |
+|---|---|---|
+| Bounded redesign using a common commercial-dryer reference | [日本語](ver3/commercial_basis_r3/DESIGN_GATE_ja.md) | [English](ver3/commercial_basis_r3/DESIGN_GATE_en.md) |
+| Optional noninvasive V2 checks — No instrument purchase | [日本語](ver3/commercial_basis_r3/V2_CHECK_ja.md) | [English](ver3/commercial_basis_r3/V2_CHECK_en.md) |
+| Common input cartridge — Actual CAD of holder and test flange | [日本語](ver3/common_input_r4/README_ja.md) | [English](ver3/common_input_r4/README_en.md) |
+| Common input cartridge assembly and removal | [日本語](ver3/common_input_r4/ASSEMBLY_ja.md) | [English](ver3/common_input_r4/ASSEMBLY_en.md) |
+
 
 ## Shared and original-language resources
 

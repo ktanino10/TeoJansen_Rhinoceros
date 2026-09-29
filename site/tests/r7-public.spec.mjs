@@ -14,7 +14,9 @@ test("r7 public corrected revision loads all three exact models and retains the 
   const requests = [], errors = [];
   page.on("request", r => requests.push(r.url()));
   page.on("pageerror", e => errors.push(e.message));
-  await page.goto("r7.html");
+  await page.goto("index.html#ver3");
+  await page.locator('#current-A a[href^="r7.html?"]').click();
+  await expect(page).toHaveURL(/r7\.html\?design=A#viewer$/);
   await expect(page.locator("#r7-status")).toContainText("床是正版");
   expect(requests.some(url => /r7-[ABC]\.glb\.gz|\.mp4$/.test(url))).toBe(false);
   await page.locator("#load-viewer").click();
@@ -31,7 +33,7 @@ test("r7 public corrected revision loads all three exact models and retains the 
   expect(requests.filter(url => /r7-[ABC]\.glb\.gz$/.test(url)).map(url => url.split("/").at(-1)))
     .toEqual(["r7-A.glb.gz", "r7-B.glb.gz", "r7-C.glb.gz"]);
   expect(errors).toEqual([]);
-  await page.getByRole("navigation", { name: "表示版を選ぶ" }).getByRole("link", { name: "第一カット・360°／組立履歴" }).click();
+  await page.getByRole("navigation", { name: "表示版を選ぶ" }).getByRole("link", { name: "Ver.3.0 旧360°／組立履歴" }).click();
   await expect(page).toHaveURL(/viewer\.html$/);
   await expect(page.locator("main")).toContainText("全案で接地残差3 mm目標は未達");
 });

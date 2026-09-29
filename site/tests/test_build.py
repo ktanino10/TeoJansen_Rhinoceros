@@ -3,6 +3,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import re
 import shutil
 import tempfile
 import unittest
@@ -144,9 +145,112 @@ class PublicBuildTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(data.read_bytes()).hexdigest(), self.manifest["comparison_sha256"])
         for text in ("3 mm目標未達", "名目トルク入力も不足", "規定入力 120 rpm",
                      "8倍表示", "2倍表示", "パラメトリック生成設計", "装置全体の質量"):
-            self.assertIn(text, self.document)
+            self.assertIn(text, self.extra_documents[0])
         self.assertIn("専用の組立PDF・詳細な手順書は未整備", self.document)
-        self.assertIn("新しいVer.3のSTLはmm・100%", self.document)
+        self.assertIn("Ver.3.1のSTLはmm・100%", self.document)
+        self.assertIn("manufacturingRelease=false／実機合格0", self.document)
+        self.assertIn("実自己始動・実30 cm歩行はUNKNOWN", self.document)
+
+    def test_current_home_uses_floor_corrected_geometry_values_and_downloads_in_both_languages(self):
+        from localization import translated_link
+
+        source = json.loads((ROOT / "site/r7-source.json").read_text())
+        current = json.loads((ROOT / "docs/ver3/integrated_r7/comparison.json").read_text())
+        self.assertEqual(current["revisionId"], source["revisionId"])
+        self.assertEqual([row["rotorDiameterMm"] for row in current["rows"]], [220, 160, 200])
+        self.assertEqual([row["reduction"] for row in current["rows"]], [144, 512, 156])
+        self.assertFalse(current["manufacturingRelease"])
+        self.assertEqual(current["qualifiedWalkingPrototypeCount"], 0)
+        for locale, prefix in (("ja", ""), ("en", "en/")):
+            html = (OUTPUT / prefix / "index.html").read_text()
+            sections = Sections()
+            sections.feed(html)
+            latest = sections.sections["ver3"]
+            self.assertIn('data-engineering-revision="' + source["revisionId"] + '"', html)
+            self.assertIn('data-public-version="3.1"', html)
+            self.assertIn("Ver.3.1", sections.sections["hero-title"]["text"])
+            hero = sections.sections["top"]["images"]
+            self.assertEqual(len(hero), 1)
+            self.assertEqual(hero[0]["loading"], "eager")
+            self.assertEqual(self.manifest["assets"][hero[0]["src"].removeprefix("../")]["source"],
+                             "docs/ver3/r7_display_floor2/comparison.png")
+            for row in current["rows"]:
+                ident = row["design"]
+                card = sections.sections[f"current-{ident}"]
+                for value in (f'{row["rotorDiameterMm"]:g} mm', f'{row["reduction"]:g} : 1',
+                              f'{row["cadMassG"]:.2f} g', f'{row["firstBuildCostJpy"]:,.2f}',
+                              str(row["instanceCount"])):
+                    self.assertIn(value, card["text"])
+                self.assertEqual(len(card["images"]), 1)
+                asset = self.manifest["assets"][card["images"][0]["src"].removeprefix("../")]
+                self.assertEqual(asset["source"], f"docs/ver3/r7_display_floor2/hero_{ident}.png")
+                self.assertEqual(asset["display_revision"], source["revisionId"])
+                self.assertIn(f"r7.html?design={ident}#viewer", card["links"])
+                self.assertIn(f"walking.html?design={ident}#walking", card["links"])
+                guide = json.loads((OUTPUT / f"assets/r7-assembly-{ident}.json").read_text())
+                for key in ("native", "cad", "stl", "bom", "stages", "readme"):
+                    expected = guide["links"][key]
+                    if locale == "en":
+                        expected = translated_link(expected, self.manifest["source_commit"])
+                    self.assertIn(expected, sections.sections["current-downloads"]["links"])
+            for link in ("r7.html#r7-change-matrix", "r7.html#viewer", "walking.html"):
+                self.assertIn(link, latest["links"])
+            for old in ("300 × 180 mm", "90 × 180 mm", "180 × 180 mm", "6 : 1", "64 : 1", "16 : 1"):
+                self.assertNotRegex(latest["text"], r"(?<!\d)" + re.escape(old))
+            for image in latest["images"]:
+                self.assertIn("/r7_display_floor2/", self.manifest["assets"][image["src"].removeprefix("../")]["source"])
+            for link in sections.sections["current-downloads"]["links"]:
+                self.assertNotRegex(unquote(link), r"/(?:Ver3_[ABC]\.|BOM_[ABC]\.csv|ver3_ABC\.blend)")
+                self.assertNotRegex(link, r"/STL/Ver\.3/[ABC](?:/|$)")
+            self.assertNotIn('id="walking_A"', html)
+            self.assertNotIn('src="assets/comparison.webp"', html)
+
+    def test_archived_geometry_is_preserved_with_explicit_version_and_current_routes(self):
+        for prefix in ("", "en/"):
+            for page, latest in (("comparison.html", "r7.html#r7-change-matrix"),
+                                 ("viewer.html", "r7.html#viewer")):
+                html = (OUTPUT / prefix / page).read_text()
+                self.assertIn('data-public-version="3.0"', html)
+                self.assertIn('class="record-scope archive-notice"', html)
+                sections = Sections()
+                sections.feed(html)
+                self.assertIn("Ver.3.0", sections.sections["top"]["text"])
+                self.assertIn(latest, sections.sections["top"]["links"])
+            archived = (OUTPUT / prefix / "comparison.html").read_text()
+            sections = Sections()
+            sections.feed(archived)
+            for row in json.loads((ROOT / "docs/ver3/comparison.json").read_text())["designs"]:
+                row = row["comparison"]
+                card = sections.sections[f'prototype-{row["prototype"]}']
+                self.assertIn(f'{row["rotor_diameter_mm"]:g} × {row["rotor_span_mm"]:g} mm', card["text"])
+                self.assertIn(f'{row["reduction"]:g} : 1', card["text"])
+            for ident in "ABC":
+                self.assertIn(f"/FreeCAD/Ver.3/{ident}/Ver3_{ident}.FCStd", archived)
+                self.assertIn(f'id="walking_{ident}"', archived)
+            self.assertIn("index.html#downloads", sections.sections["downloads"]["links"])
+
+    def test_public_version_mapping_and_document_indexes_keep_engineering_identity(self):
+        mapping = self.manifest["public_versions"]
+        source = self.manifest["r7_source"]
+        self.assertEqual(set(mapping), {"3.1", "3.0"})
+        for field in ("revisionId", "artifactCommit", "inputCommit", "sourceHash"):
+            self.assertEqual(mapping["3.1"][field], source[field])
+        self.assertEqual(mapping["3.1"]["data"], "docs/ver3/integrated_r7/comparison.json")
+        self.assertEqual(mapping["3.0"]["data"], "docs/ver3/comparison.json")
+        self.assertEqual(mapping["3.0"]["artifactCommit"], self.manifest["engineering_source"]["canonicalCommit"])
+        for locale in ("ja", "en"):
+            index = (ROOT / f"docs/README_{locale}.md").read_text()
+            self.assertLess(index.index("## Ver.3.1"), index.index("## Ver.3.0"))
+            for target in ("integrated_r7/ASSEMBLY_", "integrated_r7/FLOOR_CORRECTION_",
+                           "integrated_r7/SLICING_", "r7_walking_v1/MODEL_"):
+                self.assertIn(target + locale + ".md", index)
+            for href in re.findall(r"\]\(([^)]+)\)", index):
+                if not urlsplit(href).scheme:
+                    self.assertTrue((ROOT / "docs" / href).is_file(), href)
+        for name in ("README.md", "README_ja.md"):
+            readme = (ROOT / name).read_text()
+            self.assertLess(readme.index("## Ver.3.1"), readme.index("## Ver.3.0"))
+            self.assertIn("docs/ver3/r7_display_floor2/comparison.png", readme[:readme.index("## Ver.3.0")])
 
     def test_substantive_production_stages_and_media(self):
         stages = ("research", "design", "printing", "sanding", "cleaning",

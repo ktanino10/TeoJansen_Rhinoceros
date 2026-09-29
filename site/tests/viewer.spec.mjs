@@ -239,7 +239,7 @@ test("Matrix is complete, its assets load and it links to exact part-group views
     await expect.poll(() => image.evaluate((element) => element.complete && element.naturalWidth > 0)).toBe(true);
   }
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
-  const region = page.getByRole("region", { name: "Ver.2からVer.3への改良比較表" });
+  const region = page.getByRole("region", { name: "Ver.2からVer.3.0への改良比較表（履歴）" });
   await region.focus();
   if (testInfo.project.name === "mobile") {
     await page.keyboard.press("ArrowRight");

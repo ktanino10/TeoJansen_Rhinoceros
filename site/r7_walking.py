@@ -184,9 +184,9 @@ def build_walking(output, guides, ref, *, preview=False):
             variant = localized["designs"][design]["locales"]["ja"]
             title = escape(variant["title"], quote=True)
             caption = variant["captions"]
-            films.append(f'''<article class="walk-film media" id="walking-film-{design}"><h3>{title} · {abs(motion["inputTurnsPerCrank"]):g}:1</h3>
+            films.append(f'''<article class="walk-film media" id="walking-film-{design}"><h3>Ver.3.1 · {title} · {abs(motion["inputTurnsPerCrank"]):g}:1</h3>
               <video id="r7-walking-{design}" controls playsinline preload="none" width="960" height="720"
-                poster="assets/r7-walking-{design}.webp" aria-label="{title}" title="{escape(variant["description"], quote=True)}" aria-describedby="walking-note-{design}">
+                poster="assets/r7-walking-{design}.webp" aria-label="Ver.3.1 · {title}" title="{escape(variant["description"], quote=True)}" aria-describedby="walking-version-note walking-note-{design}">
                 <source src="assets/r7-walking-{design}.mp4" type="video/mp4">
                 <track kind="captions" src="assets/r7-walking-{design}.vtt" srclang="{caption["lang"]}" label="{escape(caption["label"], quote=True)}">
                 MP4のダウンロードをご利用ください。</video>
@@ -229,9 +229,9 @@ def build_walking(output, guides, ref, *, preview=False):
         "{{walk_validation}}": '<div class="walk-validation"><h3>この表示モデルの有限標本確認</h3>' + validation + "</div>",
         "{{walk_sources}}": sources,
         "{{r7_walking}}": '''<section class="section" id="r7-walking"><p class="eyebrow">NEW / CONTINUOUS WALKING</p>
-          <h2>今度は、六脚の連続歩行へ。</h2><p>床是正版の全体が地面を進む3Dと、A/B/Cそれぞれの新しい歩行MP4を用意しました。
+          <h2>Ver.3.1 六脚の連続歩行へ。</h2><p>床是正版の全体が地面を進む3Dと、A/B/Cそれぞれの新しい歩行MP4を用意しました。
           入力120 rpmの規定運動に、別版の接地再整合・空中ロッカー・ばね表示を追加。実機の自己始動・歩行実証ではありません。</p>
-          <a class="button primary" href="walking.html">連続歩行シミュレーションを開く →</a></section>''',
+          <a class="button primary" href="walking.html">Ver.3.1 連続歩行シミュレーションを開く →</a></section>''',
     }
     return replacements, assets
 

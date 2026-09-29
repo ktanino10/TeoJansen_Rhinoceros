@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{r7_robots}}
   <meta name="color-scheme" content="light">
+  <meta name="description" content="Ver.3.1現行設計（内部ID r7/floor2）。床是正版のA・B・Cを同尺度CG・360°・12工程・正規CADとBOMで比較。実機の風力歩行は未検証です。">
   <title>{{r7_page_title}}</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -18,25 +19,25 @@
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header"><div class="header-inner">
     <a class="brand" href="index.html"><span>RHINOCEROS<small>{{r7_brand_note}}</small></span></a>
-    <nav aria-label="メインナビゲーション"><a href="#r7-comparison">比較</a><a href="#viewer">360°・工程</a><a href="#r7-guides">12工程と資料</a><a href="viewer.html">第一カット履歴</a></nav>
+    <nav aria-label="メインナビゲーション"><a href="#r7-comparison">比較</a><a href="#viewer">360°・工程</a><a href="#r7-guides">12工程と資料</a><a href="comparison.html">Ver.3.0履歴</a></nav>
   </div></header>
-  <main id="main" tabindex="-1">
+  <main id="main" tabindex="-1" data-public-version="3.1" data-engineering-revision="{{r7_revision}}">
     <section class="section viewer-intro" id="top">
       <p class="eyebrow">{{r7_scope_label}} / R7 INTEGRATED ASSEMBLY</p>
-      <h1>新しい三案を、<br><span>同じ版の形と工程で見る。</span></h1>
+      <h1>Ver.3.1 現行設計<br><span>同じ版の形と工程で見る。</span></h1>
       <aside class="warning" id="r7-status"><h2>{{r7_status_title}}</h2>
         <p><strong>manufacturingRelease=false／qualifiedWalkingPrototypeCount=0。</strong>実自己始動・30 cm歩行はUNKNOWN。
         {{r7_slice_notice}} 印刷済み・完成機合格を示すものではありません。</p>
-        <p>候補：<strong>{{r7_revision}}</strong>／{{r7_candidate_revision}}。機械資料の確定commit <code>{{r7_commit}}</code>。
+        <p>公開名Ver.3.1／内部設計ID：<strong>{{r7_revision}}</strong>／{{r7_candidate_revision}}。機械資料の確定commit <code>{{r7_commit}}</code>。
         {{r7_resource_notice}}</p>
       </aside>
       <nav class="journey-nav" aria-label="表示版を選ぶ">
-        <a href="r7.html" aria-current="page">r7統合候補（{{r7_scope_short}}）</a>
-        <a href="viewer.html">第一カット・360°／組立履歴</a><a href="comparison.html">旧V2→第一カットのMatrix</a>
+        <a href="r7.html" aria-current="page">Ver.3.1 現行設計（{{r7_scope_short}}）</a>
+        <a href="viewer.html">Ver.3.0 旧360°／組立履歴</a><a href="comparison.html">Ver.3.0 初期比較案・旧Matrix</a>
         <a href="calculations.html">r3研究・r4入力軸カード</a><a href="production.html">Ver.1・Ver.2製作記録</a>
       </nav>
-      <p>既存の第一カットA300／B90／C180 mm、r3計算・r4カードとは別の全体モデルです。旧動画・旧CGをr7の動作として表示しません。
-        新しい連続歩行は明示した仮定を含む別の表示モデルで、空力予測や実機実証ではありません。</p>
+      <p>Ver.3.0（第一カット）、内部研究r3・r4とは別の全体モデルです。媒体に残るr7/floor2表記は公開名Ver.3.1の内部設計IDです。
+        新しい連続歩行は同じ形状を使い、明示した仮定を含む別版の表示モデルです。空力予測や実機実証ではありません。</p>
       {{r7_comparison_image}}
     </section>
 
@@ -46,11 +47,11 @@
       <p class="eyebrow">PROPOSED IMPROVEMENTS &amp; TRADEOFFS</p><h2 id="r7-comparison-title">変えた点と、代償を同じ条件で。</h2>
       {{r7_comparison}}
       <section id="r7-change-matrix" aria-labelledby="r7-change-matrix-title">
-        <h3 id="r7-change-matrix-title">V2の経験から、r7で具体化した対策</h3>
-        <p class="small-note">V2は作者の実物観察、r7は計算と有限CAD確認です。未測定のV2値を計算値と同列に並べません。
-        <a href="comparison.html">第一カットの旧Matrix</a>は歴史として分離しています。</p>
-        <div class="matrix-scroll" role="region" aria-label="V2からr7への変更Matrix" tabindex="0">
-          <table class="improvement-matrix"><thead><tr><th scope="col">観点</th><th scope="col">V2の記録／旧課題</th><th scope="col">r7で具体化したもの</th><th scope="col">未確認・代償</th></tr></thead><tbody>
+        <h3 id="r7-change-matrix-title">Ver.2の経験から、Ver.3.1で具体化した対策</h3>
+        <p class="small-note">Ver.2は作者の実物観察、Ver.3.1は計算と有限CAD確認です。未測定のVer.2値を計算値と同列に並べません。
+        <a href="comparison.html">Ver.3.0の旧Matrix</a>は歴史として分離しています。</p>
+        <div class="matrix-scroll" role="region" aria-label="Ver.2からVer.3.1への変更Matrix" tabindex="0">
+          <table class="improvement-matrix"><thead><tr><th scope="col">観点</th><th scope="col">Ver.2の記録／旧課題</th><th scope="col">Ver.3.1で具体化したもの</th><th scope="col">未確認・代償</th></tr></thead><tbody>
             <tr><th scope="row">接合の空転</th><td>風車・歯車と軸が一体で回らなくなる相対滑り。</td><td>入力金属6Dハブと下流5 mm-AF正係合。<a href="r7.html?design=A&amp;focus=connection#viewer">接合を3Dで選ぶ</a></td><td>実締付け・はめあい・耐久トルクは未測定。</td></tr>
             <tr><th scope="row">軸方向保持</th><td>部品の抜けと支持の不安定さ。</td><td>固定側／浮動側、肩・キャップ・カラー・平滑スリーブを区別。<a href="r7.html?design=A&amp;focus=retention#viewer">保持部品を見る</a></td><td>過締め・クリープ・実公差による抵抗は未確認。</td></tr>
             <tr><th scope="row">摩擦と軸受</th><td>丸棒のたわみ・摩擦ロス。焼付きが確認されたわけではない。</td><td>金属ジャーナル・市販軸受、ねじ山でない摺動面。<a href="r7.html?design=B&amp;focus=bearings#viewer">支持を見る</a></td><td>入力抵抗は感度仮定であり、購入品を選んだだけで低抵抗を実証しない。</td></tr>
@@ -75,7 +76,7 @@
 
     <section class="section viewer-section" id="viewer" aria-labelledby="interactive-title">
       <div class="section-heading"><p class="eyebrow">EXACT CAD MESH / SCHEMA 2</p><h2 id="interactive-title">全2285点と、12工程の操作境界。</h2><p>主軸の一時退避、部品の追加・取外し・同じIDの再挿入を省略しません。工程内の操作と実経路の標本は、下の「操作境界／経路標本」で選べます。</p></div>
-      <div class="viewer-toolbar"><label for="design-select">r7候補
+      <div class="viewer-toolbar"><label for="design-select">Ver.3.1の案
         <select id="design-select"><option value="A">A · 220 mm／144:1</option><option value="B">B · 160 mm／512:1</option><option value="C">C · 200 mm／156:1</option></select>
         </label><button type="button" class="button primary" id="load-viewer" hidden>選んだ案の3Dを読み込む</button>
         <p class="small-note" id="load-note">{{r7_payload}}。選択した案だけを操作時に取得します。gzipは転送の圧縮で、形状を簡略化していません。</p>
@@ -138,14 +139,14 @@
     {{r7_diagnostics}}
 
     <section class="downloads-section" id="r7-guides"><div class="section">
-      <p class="eyebrow">SOURCE FILES / FROZEN REVISION</p><h2>全案の12工程と正規資料</h2>
+      <p class="eyebrow">VER.3.1 / SOURCE FILES / FROZEN REVISION</p><h2>Ver.3.1 全案の12工程と正規資料</h2>
       <p>{{r7_resource_notice}}
         試験片・組立台は別枠で費用に含み、歩行質量へ加算しません。代表スライスは限定結果で、実部品の適合・強度の確認ではありません。</p>
-      <nav class="journey-nav" aria-label="r7静的組立案"><a href="#r7-guide-A">A</a><a href="#r7-guide-B">B</a><a href="#r7-guide-C">C</a></nav>
+      <nav class="journey-nav" aria-label="Ver.3.1静的組立案"><a href="#r7-guide-A">A</a><a href="#r7-guide-B">B</a><a href="#r7-guide-C">C</a></nav>
       {{r7_guides}}
       <div class="document-strip">{{r7_sources}}</div>
     </div></section>
   </main>
-  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>{{r7_footer_note}}</span></div><a href="#top">先頭へ ↑</a><a href="viewer.html">第一カット履歴へ</a><a href="calculations.html">研究資料へ</a></footer>
+  <footer class="site-footer"><div><strong>RHINOCEROS</strong><span>{{r7_footer_note}}</span></div><a href="#top">先頭へ ↑</a><a href="comparison.html">Ver.3.0の履歴へ</a><a href="calculations.html">内部研究の資料へ</a></footer>
 </body>
 </html>

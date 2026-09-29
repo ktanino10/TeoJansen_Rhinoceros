@@ -451,7 +451,7 @@ def build_candidate(output, snapshot=None, *, public_links=False):
         model["compression"] = "gzip"
         guide = {"schemaVersion": 2, "design": ident, "revision": {
             "revisionId": source["revisionId"], "candidateRevision": source["candidateRevision"],
-            "label": "r7統合候補・実機未検証" + ("" if public_links else "・ローカル表示"), "canonicalCommit": snapshot.commit,
+            "label": "Ver.3.1（内部r7/floor2）・実機未検証" + ("" if public_links else "・ローカル表示"), "canonicalCommit": snapshot.commit,
             "inputCommit": source["inputCommit"], "sourceHash": source["sourceHash"], "localOnly": not public_links},
             "model": model, "modelUrl": filename, **sequence,
             "parts": {part: {"name": part_name(part), "category": definition["category"],
