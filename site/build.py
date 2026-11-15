@@ -89,7 +89,7 @@ def source_url(kind: str, path: str, ref: str) -> str:
     if not local.exists() or not local.resolve().is_relative_to(ROOT):
         raise ValueError(f"Invalid repository source link: {path}")
     route = {"source": "blob", "tree": "tree", "download": "raw"}[kind]
-    if path in {"README.md", "README_ja.md"} or path.startswith(("docs/images/", "Fusion360/", "STL/Ver.1", "STL/Ver.2")) or (path.endswith(".pdf") and "/ver3/" not in path.lower()):
+    if path in {"README.md", "README_ja.md", "Fusion360"} or path.startswith(("docs/images/", "Fusion360/", "STL/Ver.1", "STL/Ver.2")) or (path.endswith(".pdf") and "/ver3/" not in path.lower()):
         ref = COMPLETED_BUILD_REF
     return f"https://github.com/{REPOSITORY}/{route}/{ref}/{quote(path, safe='/')}"
 

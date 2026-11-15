@@ -321,8 +321,9 @@ class PublicBuildTests(unittest.TestCase):
             url = urlsplit(href)
             if url.netloc in {"youtu.be", "www.youtube.com", "youtube.com", "makerworld.com", "www.tamiya.com"}:
                 self.assertIn(href, readmes)
-            if url.netloc == "github.com" and f"/{self.manifest['source_commit']}/" in url.path:
-                local = unquote(url.path.split(f"/{self.manifest['source_commit']}/")[1])
+            completed_ref = self.manifest["completed_build_source_commit"]
+            if url.netloc == "github.com" and f"/{completed_ref}/" in url.path:
+                local = unquote(url.path.split(f"/{completed_ref}/")[1])
                 self.assertTrue((ROOT / local).exists(), href)
                 downloads.append(local)
         for source in ("docs/テオヤンセン2Dv1.pdf", "docs/テオヤンセン2D図面最新.pdf",
