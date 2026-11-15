@@ -1,0 +1,63 @@
+{
+  "revisionId": "v3.4-a-m3-r1",
+  "publicVersion": "3.4",
+  "source31Commit": "18dd3f40fb811b3d50cfa527b6fafbfa55a6e781",
+  "manufacturingRelease": false,
+  "status": "INTEGRATED_DEVELOPMENT_NOT_PHYSICAL_RELEASE",
+  "native": "FreeCAD/Ver.3/m3_a34/Walker_A_3_4.FCStd",
+  "step": "FreeCAD/Ver.3/m3_a34/Walker_A_3_4.step",
+  "instances": 754,
+  "printedTypes": 45,
+  "printedQuantity": 115,
+  "changedPrintedQuantity": 38,
+  "oldBoltCounts": {
+    "M2x12": 6,
+    "M2x16": 14,
+    "M2x25": 18,
+    "M2x30": 12,
+    "M3x16": 18,
+    "M3x20": 16,
+    "M4x12": 4,
+    "M4x20": 10
+  },
+  "newBoltCounts": {
+    "M2x12": 6,
+    "M2x16": 8,
+    "M2x25": 18,
+    "M2x30": 6,
+    "M3x15": 6,
+    "M3x16": 16,
+    "M3x20": 18,
+    "M3x30": 6,
+    "M4x12": 4,
+    "M4x20": 10
+  },
+  "oldM3BoltCount": 34,
+  "newM3BoltCount": 46,
+  "oldNominalMassG": 1065.387580211831,
+  "newNominalMassG": 1119.4247391474596,
+  "wholeToolSetReduced": false,
+  "toolNote": "14 modified locations use2.5mm hex/5.5mm spanner. Complete machine still needs legacy M2/M4 and rocker tools; do not claim whole-tool elimination.",
+  "fullPurchaseCostJpy": null,
+  "budgetNote": "Historical3.1 estimate and the900JPY bench fastener packs are NOT the whole3.4 budget. On-hand counts, retained-part prices, tax/shipping remain unconfirmed.",
+  "retainedM2Reason": "P fixed pivot (M3 nut intersects AC),B (6mm sleeve/13mm thrust washer intersects frame during motion),C/E three-body joints,6 foot guides,6 rockers,2 synchronization idlers",
+  "sourcingException": "Continuous20mm6-OD metal sleeve CE-320N, domestic maker MOQ50; avoid unsupported splices/cutting. Explained before adoption in DESIGN_ja.md.",
+  "checks": {
+    "static": "checks.json",
+    "motion": "motion_check.json",
+    "floor": "floor_check.json",
+    "drive": "work_budget.json",
+    "comparison": "drive_comparison.json",
+    "access": "access_check.json"
+  },
+  "sourceHashes": {
+    "scripts/ver3/report_m3_a34.py": "08b1b2e0f69d32e6ab0814fc3c8bb38c089889577b507086fb1d96e7b25ae3d1",
+    "scripts/ver3/purchase_reference.py": "196bac4a4e1a2e74378b2741fca472110766c5e7d13dc0a86ded645000e13bd5",
+    "docs/ver3/m3_a34/assembly.json": "42d49b25e42ad820445ca9780f904d117243e66ca9f5b602fac7b81bba318278",
+    "docs/ver3/m3_a34/checks.json": "8d46e748d041b893c823a2643bfa849d5c993c7625132370bce37aa97cb83759",
+    "docs/ver3/m3_a34/motion_check.json": "0abb80a2c80799d94f8e7afea9435c7fac972030727b16462379b47b429a00b9",
+    "docs/ver3/m3_a34/floor_check.json": "a3ecdee0879a3c7c6fc282f9574f83ed0390400de660e0c15398e168b04488df",
+    "docs/ver3/m3_a34/drive_comparison.json": "c0363527a6f2a84d56747e5af6852f68ccf91ef6c551462c51c7c90ab8566e08",
+    "docs/ver3/m3_a34/access_check.json": "2120a9939e3323be8bd892a8ae1f97cb2227db485181bfdc167dde21bb245e05"
+  }
+}

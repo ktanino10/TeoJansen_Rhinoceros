@@ -20,12 +20,16 @@ SITE = ROOT / "site"
 REPOSITORY = "ktanino10/TeoJansen_Rhinoceros"
 SLUG = "TeoJansen_Rhinoceros"
 DEFAULT_OUTPUT = SITE / "dist" / SLUG
-MAX_BUNDLE_BYTES = 76_000_000
+MAX_BUNDLE_BYTES = 82_000_000
+MAX_HISTORY_BUNDLE_BYTES = 76_000_000
 MAX_STATIC_BYTES = 12_000_000
 MAX_R7_BYTES = 30_000_000
 MAX_WALKING_BYTES = 18_000_000
+MAX_DEVELOPMENT_BYTES = 6_000_000
+COMPLETED_BUILD_REF = "18dd3f40fb811b3d50cfa527b6fafbfa55a6e781"
 HISTORY_PAGES = ("index.html", "production.html", "comparison.html", "viewer.html", "calculations.html")
-PAGES = (*HISTORY_PAGES, "r7.html", "walking.html")
+DEVELOPMENT_PAGES = ("development.html", "ver3-2.html", "ver3-4.html")
+PAGES = (*HISTORY_PAGES, "r7.html", "walking.html", *DEVELOPMENT_PAGES)
 IMAGES = {
     "hero": ("docs/images/テオヤンセンver2完成3.jpg", (320, 0, 1240, 1100), 1100),
     "v1-photo": ("docs/images/テオヤンセンver1完成1.jpg", (70, 0, 1240, 1090), 1050),
@@ -85,6 +89,8 @@ def source_url(kind: str, path: str, ref: str) -> str:
     if not local.exists() or not local.resolve().is_relative_to(ROOT):
         raise ValueError(f"Invalid repository source link: {path}")
     route = {"source": "blob", "tree": "tree", "download": "raw"}[kind]
+    if path in {"README.md", "README_ja.md", "Fusion360"} or path.startswith(("docs/images/", "Fusion360/", "STL/Ver.1", "STL/Ver.2")) or (path.endswith(".pdf") and "/ver3/" not in path.lower()):
+        ref = COMPLETED_BUILD_REF
     return f"https://github.com/{REPOSITORY}/{route}/{ref}/{quote(path, safe='/')}"
 
 
@@ -335,10 +341,12 @@ def validate(output: Path, manifest: dict) -> None:
     total = sum(path.stat().st_size for path in output.rglob("*") if path.is_file())
     r7 = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("bundle_group") == "r7")
     walking = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("bundle_group") == "walking")
-    display = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("loading") == "on-demand" and entry.get("bundle_group") not in {"r7", "walking"})
-    if (total > MAX_BUNDLE_BYTES or total - display - r7 - walking > MAX_STATIC_BYTES
-            or display > 18_000_000 or r7 > MAX_R7_BYTES or walking > MAX_WALKING_BYTES):
-        raise ValueError("Public bundle exceeded 12 MB history static / 18 MB history 3D / 30 MB r7 / 18 MB opt-in bilingual walking")
+    development = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("bundle_group") == "ver3-development")
+    display = sum(entry["bytes"] for entry in manifest["assets"].values() if entry.get("loading") == "on-demand" and entry.get("bundle_group") not in {"r7", "walking", "ver3-development"})
+    if (total > MAX_BUNDLE_BYTES or total - development > MAX_HISTORY_BUNDLE_BYTES
+            or total - display - r7 - walking - development > MAX_STATIC_BYTES
+            or display > 18_000_000 or r7 > MAX_R7_BYTES or walking > MAX_WALKING_BYTES or development > MAX_DEVELOPMENT_BYTES):
+        raise ValueError("Public bundle exceeded a preserved history budget or the additional 6 MB opt-in development budget")
     for name in manifest["assets"]:
         path = output / name
         if path.suffix in {".webp", ".png"}:
@@ -383,11 +391,14 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
     calculation_html, calculation_assets, calculation_source = build_calculations(output)
     assets.update(calculation_assets)
     cartridge_html, external_images, cartridge_source = cartridge_card()
-    r7_html, r7_source = {}, None
+    r7_html, r7_source, development_html, development_source = {}, None, {}, None
     if include_r7:
         from r7_public import build_public_r7
         r7_html, r7_assets, r7_source = build_public_r7(output, ref)
         assets.update(r7_assets)
+        from ver3_data import build_development
+        development_html, development_assets, development_source = build_development(output, ref)
+        assets.update(development_assets)
     subprocess.run(["node", str(SITE / "build-viewer.mjs"), str(output), *(["--walking"] if include_r7 else [])], cwd=ROOT, check=True)
     engines = [("viewer-engine.js", "site/viewer.js"), ("three-LICENSE.txt", "site/node_modules/three/LICENSE")]
     if include_r7:
@@ -409,6 +420,7 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
     replacements = {
         **calculation_html,
         **r7_html,
+        **development_html,
         "{{cartridge_card}}": cartridge_html,
         "{{hero}}": figure("hero", "サボニウス型風車を備えたVer.2の実物。白いフレームと黒い足を持つ歩行模型。", "Ver.2 · 実物の制作記録（表示用トリミング）", ref, True),
         "{{v1_photo}}": figure("v1-photo", "六枚羽の風車を備えたVer.1実物の斜めからの写真。", "Ver.1 · 実物の完成写真", ref),
@@ -439,14 +451,20 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
     }
     pages = PAGES if include_r7 else HISTORY_PAGES
     for name in pages:
-        html = (SITE / name).read_text()
+        html = ((output if name in DEVELOPMENT_PAGES else SITE) / name).read_text()
+        page_ref = COMPLETED_BUILD_REF if name == "production.html" else ref
         for token, value in replacements.items():
+            if name == "production.html":
+                value = value.replace(f"/{ref}", f"/{page_ref}").replace(ref[:7], page_ref[:7])
             html = html.replace(token, value)
+        if include_r7 and name in {"index.html", "r7.html", "walking.html"}:
+            html = re.sub(r"</h1>", lambda _: "</h1>" + development_html["{{ver3_development_notice}}"], html, count=1)
         html = re.sub(r"\{\{figure:([\w-]+)\|([^|{}]+)\|([^|{}]+)\}\}",
-                      lambda match: figure(match[1], match[2], match[3], ref), html)
+                      lambda match: figure(match[1], match[2], match[3], page_ref), html)
         html = re.sub(r"\{\{(source|tree|download):([^}]+)\}\}",
-                      lambda match: escape(source_url(match[1], match[2], ref), quote=True), html)
-        html = re.sub(r"(<main\b[^>]*>)", lambda match: match[1] + version_navigation(name), html, count=1)
+                      lambda match: escape(source_url(match[1], match[2], page_ref), quote=True), html)
+        if name not in DEVELOPMENT_PAGES:
+            html = re.sub(r"(<main\b[^>]*>)", lambda match: match[1] + version_navigation(name), html, count=1)
         if not include_r7 and 'src="i18n.js"' not in html:
             html = html.replace("<head>", '<head>\n<script src="i18n.js" defer></script>')
         (output / name).write_text(html)
@@ -468,6 +486,10 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
                 "engineering_source": viewer_source,
                 "r7_source": r7_source, "r7_budget_bytes": MAX_R7_BYTES,
                 "walking_budget_bytes": MAX_WALKING_BYTES,
+                "development_budget_bytes": MAX_DEVELOPMENT_BYTES,
+                "history_bundle_budget_bytes": MAX_HISTORY_BUNDLE_BYTES,
+                "development_source": development_source,
+                "completed_build_source_commit": COMPLETED_BUILD_REF,
                 "calculation_source": calculation_source,
                 "cartridge_source": cartridge_source, "external_images": external_images,
                 "note": "Only selected display derivatives and existing media are deployed. Exact-mesh GLBs are opt-in display data; native CAD/STL/BOM downloads remain on GitHub."}
@@ -476,6 +498,12 @@ def build(output: Path, ref: str, *, include_r7=True, validate_output=True) -> d
                               "source_catalog_sha256": sha256(SITE / "locales/sources.json"),
                               "english_catalog_sha256": sha256(SITE / "locales/en.json")}
         manifest["public_versions"] = {
+            "2": {"status": "completed-build", "overview": "production.html", "sourceCommit": COMPLETED_BUILD_REF},
+            "3.4": {"status": "development", "overview": "ver3-4.html", "viewer": "ver3-4.html#viewer",
+                    "downloads": "ver3-4.html#files", "revisionId": development_source["3.4"]["revisionId"],
+                    "manufacturingRelease": False, "data": "docs/ver3/m3_a34/assembly.json"},
+            "3.2": {"status": "retained-bench-trial", "overview": "ver3-2.html",
+                    "revisionId": development_source["3.2"]["revisionId"], "manufacturingRelease": False},
             "3.1": {"status": "current-design", "overview": "index.html#ver3",
                     "comparison": "r7.html#r7-change-matrix", "viewer": "r7.html#viewer",
                     "walking": "walking.html", "downloads": "index.html#downloads",

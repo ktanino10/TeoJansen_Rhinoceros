@@ -1,0 +1,6 @@
+# Preserve native CAD exports byte-for-byte; review geometry, not generated text.
+FreeCAD/Ver.3/m3_r1/*.step binary
+FreeCAD/Ver.3/m3_a34/*.step binary
+# The generated CSV format uses CRLF; do not rewrite its recorded bytes.
+docs/ver3/m3_r1/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/ver3/m3_a34/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -50,7 +50,7 @@ class LocalizationTests(unittest.TestCase):
 
     def test_page_pairs_keep_every_anchor_and_have_correct_metadata_and_english_downloads(self):
         manifest = json.loads((OUTPUT / "build-manifest.json").read_text())
-        self.assertEqual(len(manifest["pages"]), 14)
+        self.assertEqual(len(manifest["pages"]), 20)
         for filename in [name for name in manifest["pages"] if "/" not in name]:
             parsers = []
             for locale, prefix in (("ja", ""), ("en", "en/")):
@@ -177,7 +177,10 @@ class LocalizationTests(unittest.TestCase):
                 self.assertEqual(video["preload"], "none")
                 self.assertNotIn("autoplay", video)
         self.assertLess(sum(a["bytes"] for a in manifest["assets"].values() if a.get("bundle_group") == "walking"), 18_000_000)
-        self.assertLess(sum(path.stat().st_size for path in OUTPUT.rglob("*") if path.is_file()), 76_000_000)
+        total = sum(path.stat().st_size for path in OUTPUT.rglob("*") if path.is_file())
+        development = sum(a["bytes"] for a in manifest["assets"].values() if a.get("bundle_group") == "ver3-development")
+        self.assertLess(total - development, 76_000_000)
+        self.assertLess(total, 82_000_000)
 
     def test_localized_movie_contract_rejects_default_captions_changed_timing_and_missing_language(self):
         base = json.loads((ROOT / "docs/ver3/r7_walking_v1/walking-manifest.json").read_text())

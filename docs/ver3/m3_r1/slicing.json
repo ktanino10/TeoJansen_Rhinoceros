@@ -1,0 +1,618 @@
+{
+  "revisionId": "v3.2-m3-r1-bench",
+  "orcaVersion": "2.4.2",
+  "profileNames": {
+    "machine": "Bambu Lab P1S 0.2 nozzle",
+    "process": "0.10mm Standard @BBL X1C 0.2 nozzle",
+    "filament": "Generic PETG @0.2 nozzle"
+  },
+  "sourceProfiles": {
+    "machine": [
+      {
+        "path": "profiles/BBL/machine/fdm_machine_common.json",
+        "sha256": "cdcaa5e5061934a9b960c94e203cc7d1e3b869a407182644f2dda9fdcbf5c2b3"
+      },
+      {
+        "path": "profiles/BBL/machine/fdm_bbl_3dp_001_common.json",
+        "sha256": "e90597a202d5461a2f8636a06c35409cffc79a2c1991bb726c6e465e9a0bd26c"
+      },
+      {
+        "path": "profiles/BBL/machine/Bambu Lab P1S 0.4 nozzle.json",
+        "sha256": "3e72ef1682406940986edb1ebd7d3b2c99afe59789b9c9389ffbdf6831e07b6a"
+      },
+      {
+        "path": "profiles/BBL/machine/Bambu Lab P1S 0.2 nozzle.json",
+        "sha256": "46ec15e69a736f34c10c76ccd56718dd41c0958ce59e4bc0652f0471f9ce5706"
+      }
+    ],
+    "process": [
+      {
+        "path": "profiles/BBL/process/fdm_process_common.json",
+        "sha256": "398fcb322a7f459edab00cb2daf524345a19b8cef074415af52f377f91e4bd5b"
+      },
+      {
+        "path": "profiles/BBL/process/fdm_process_single_common.json",
+        "sha256": "59fc5ca43dcf9850076708b8ca14b7f9098fe90b9b32ceffc6741b4fcaf3e73e"
+      },
+      {
+        "path": "profiles/BBL/process/fdm_process_single_0.10_nozzle_0.2.json",
+        "sha256": "c26d9e117daa06b8502f1910b8fcc5e116b5a80a4960b2102fb5430f6ff1f755"
+      },
+      {
+        "path": "profiles/BBL/process/0.10mm Standard @BBL X1C 0.2 nozzle.json",
+        "sha256": "657e08768d961e4048d24ecd2c16f7f50b9ac11ac1181d927169175870224336"
+      }
+    ],
+    "filament": [
+      {
+        "path": "profiles/BBL/filament/fdm_filament_common.json",
+        "sha256": "05725cc129f96ea903dc77c40d248fa1bd0137cfc41216d09d952cfdd37d3683"
+      },
+      {
+        "path": "profiles/BBL/filament/fdm_filament_pet.json",
+        "sha256": "9d49bae4fd046871c7ea9254af61c9c2e02fa343e15b3ff8d755ab0dd49bebe4"
+      },
+      {
+        "path": "profiles/BBL/filament/Generic PETG @base.json",
+        "sha256": "a8742f2dc6f1d73f8affe69eb12fefe3e16f0da5e7054c09cea400c145398708"
+      },
+      {
+        "path": "profiles/BBL/filament/Generic PETG @0.2 nozzle.json",
+        "sha256": "808e709057dc715bd436efbae0e80ba3b46605d29aee3c0f2b05299f697fb6fc"
+      }
+    ]
+  },
+  "processOverrides": {
+    "wall_generator": "arachne",
+    "wall_loops": "4",
+    "sparse_infill_density": "100%",
+    "sparse_infill_pattern": "rectilinear",
+    "enable_arc_fitting": "0",
+    "curr_bed_type": "Textured PEI Plate",
+    "support_type": "normal(auto)",
+    "support_style": "default",
+    "support_on_build_plate_only": "1",
+    "support_top_z_distance": "0.1",
+    "support_object_xy_distance": "0.25",
+    "brim_type": "outer_only",
+    "brim_width": "3",
+    "brim_object_gap": "0.1"
+  },
+  "actualHardwareAndMaterialMatched": false,
+  "printerContacted": false,
+  "physicalPrintingPerformed": false,
+  "scope": "Inspection-only P1S / Generic PETG; actual user printer and material UNKNOWN. No printer-ready G-code is distributed.",
+  "parts": [
+    {
+      "partId": "Q_SLEEVE_FIT",
+      "stl": "STL/Ver.3/m3_r1/Q_SLEEVE_FIT.stl",
+      "stlSha256": "f2d1c029a069914a5716260bfe08de2f7228e6d62e276b7a05ecc96c7df35669",
+      "effectiveSettingsSha256": "f119f25743c776a1799c6c0e9729d845b915696e2ae30168132964b1b0a2b867",
+      "gcodeSha256": "0fa16a24108c6bf44cc10122742eed08962be7a84e1be31fa48d29a1c20d065d",
+      "supportEnabled": false,
+      "layerCount": 40,
+      "metadata": {
+        "timeEstimate": "model printing time: 53m 38s; total estimated time: 1h 1m 7s",
+        "reportedLayerCount": 40,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 1271.98,
+        "filament used [cm3]": 3.06,
+        "filament used [g]": 3.89
+      },
+      "samples": [
+        {
+          "zMm": 0.1,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/Q_SLEEVE_FIT-0.1.png",
+          "modelHoleCenterClearanceMm": [
+            3.174599216635994,
+            3.2253152184035403,
+            3.275132354877016
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            3.174599216635994,
+            3.2253152184035403,
+            3.275132354877016
+          ]
+        },
+        {
+          "zMm": 2.0,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/Q_SLEEVE_FIT-2.png",
+          "modelHoleCenterClearanceMm": [
+            3.026727391762717,
+            3.076836846649735,
+            3.1261162791544197
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            3.026727391762717,
+            3.076836846649735,
+            3.1261162791544197
+          ]
+        },
+        {
+          "zMm": 3.9,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/Q_SLEEVE_FIT-3.9.png",
+          "modelHoleCenterClearanceMm": [
+            3.0271085766140375,
+            3.076624017850895,
+            3.1261162791544197
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            3.0271085766140375,
+            3.076624017850895,
+            3.1261162791544197
+          ]
+        }
+      ],
+      "gearChecks": [],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          104.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          119.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 0.0,
+      "physicalPrintFitStrength": "UNKNOWN"
+    },
+    {
+      "partId": "Q_NUT_HEX_FIT",
+      "stl": "STL/Ver.3/m3_r1/Q_NUT_HEX_FIT.stl",
+      "stlSha256": "572ac3e9af9600407513f64fca283d3f1c2159d682a056f32aa4c0fbd831eeb4",
+      "effectiveSettingsSha256": "f119f25743c776a1799c6c0e9729d845b915696e2ae30168132964b1b0a2b867",
+      "gcodeSha256": "3ddc79f9cb58c262ac39547da07799de95737848661a73886e6b1621c25c7f02",
+      "supportEnabled": false,
+      "layerCount": 40,
+      "metadata": {
+        "timeEstimate": "model printing time: 1h 17m 36s; total estimated time: 1h 25m 5s",
+        "reportedLayerCount": 40,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 1813.91,
+        "filament used [cm3]": 4.36,
+        "filament used [g]": 5.54
+      },
+      "samples": [
+        {
+          "zMm": 0.1,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/Q_NUT_HEX_FIT-0.1.png",
+          "modelHoleCenterClearanceMm": [
+            1.777276010946478,
+            1.7772254813965618,
+            1.7772254813965687
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            1.777276010946478,
+            1.7772254813965618,
+            1.7772254813965687
+          ]
+        },
+        {
+          "zMm": 1.3,
+          "layerHeightMm": 0.0999999,
+          "figure": "slicing/Q_NUT_HEX_FIT-1.3.png",
+          "modelHoleCenterClearanceMm": [
+            1.6338879039724878,
+            1.6325350485995562,
+            1.6369017630491274
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            1.6338879039724878,
+            1.6325350485995562,
+            1.6369017630491274
+          ]
+        },
+        {
+          "zMm": 2.0,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/Q_NUT_HEX_FIT-2.png",
+          "modelHoleCenterClearanceMm": [
+            2.7976581551144455,
+            2.8480298784179134,
+            2.898029381835405
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.7976581551144455,
+            2.8480298784179134,
+            2.898029381835405
+          ]
+        },
+        {
+          "zMm": 3.9,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/Q_NUT_HEX_FIT-3.9.png",
+          "modelHoleCenterClearanceMm": [
+            2.7976581551144455,
+            2.8480298784179134,
+            2.898029381835405
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.7976581551144455,
+            2.8480298784179134,
+            2.898029381835405
+          ]
+        }
+      ],
+      "gearChecks": [],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          104.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          115.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 0.0,
+      "physicalPrintFitStrength": "UNKNOWN"
+    },
+    {
+      "partId": "P_M3_GEAR42",
+      "stl": "STL/Ver.3/m3_r1/P_M3_GEAR42.stl",
+      "stlSha256": "0eee977aaa4ae768541672f787f96dd56f10a255dd34a49deee8bad02a0e67d1",
+      "effectiveSettingsSha256": "462a1b5a3cc173930b1c4838dd5382cec116e458d5526a22f1fc1908acf324c3",
+      "gcodeSha256": "11ddca7377317714c7aafb2a9b0b66da92620c74235e1bec66f271435d412360",
+      "supportEnabled": true,
+      "layerCount": 209,
+      "metadata": {
+        "timeEstimate": "model printing time: 1h 36m 17s; total estimated time: 1h 43m 45s",
+        "reportedLayerCount": 209,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 2030.5,
+        "filament used [cm3]": 4.88,
+        "filament used [g]": 6.2
+      },
+      "samples": [
+        {
+          "zMm": 1.0,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M3_GEAR42-1.png",
+          "modelHoleCenterClearanceMm": [
+            2.5588832145159164
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.5588832145159164
+          ]
+        },
+        {
+          "zMm": 2.8,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M3_GEAR42-2.8.png",
+          "modelHoleCenterClearanceMm": [
+            2.5588689164053977
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.5588689164053977
+          ]
+        },
+        {
+          "zMm": 10.2,
+          "layerHeightMm": 0.0999994,
+          "figure": "slicing/P_M3_GEAR42-10.2.png",
+          "modelHoleCenterClearanceMm": [
+            2.557805991433475
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.557805991433475
+          ]
+        },
+        {
+          "zMm": 17.1,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M3_GEAR42-17.1.png",
+          "modelHoleCenterClearanceMm": [
+            2.5584392204888875
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.5584392204888875
+          ]
+        }
+      ],
+      "gearChecks": [
+        {
+          "zMm": 1.0,
+          "layerHeightMm": 0.1,
+          "expectedTeeth": 42,
+          "nominalSectionTeeth": 42,
+          "depositedEnvelopeTeeth": 42,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 19.749841343417987,
+          "maximumTipRadialSetbackMm": 0.0010674932379046709,
+          "tipPathWidthRangeMm": [
+            0.219999,
+            0.219999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        },
+        {
+          "zMm": 2.8,
+          "layerHeightMm": 0.1,
+          "expectedTeeth": 42,
+          "nominalSectionTeeth": 42,
+          "depositedEnvelopeTeeth": 42,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 19.7499069726811,
+          "maximumTipRadialSetbackMm": 0.0010674920117601516,
+          "tipPathWidthRangeMm": [
+            0.219999,
+            0.219999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        }
+      ],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          -0.623489788,
+          -0.781831493,
+          0.0,
+          128.0
+        ],
+        [
+          0.781831493,
+          -0.623489788,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 128.57142757438058,
+      "physicalPrintFitStrength": "UNKNOWN"
+    },
+    {
+      "partId": "P_M3_LINK",
+      "stl": "STL/Ver.3/m3_r1/P_M3_LINK.stl",
+      "stlSha256": "357b34d0e2811d8aa50a78228595f39509ce2f02b2ff460849c7fa259e005d9f",
+      "effectiveSettingsSha256": "f119f25743c776a1799c6c0e9729d845b915696e2ae30168132964b1b0a2b867",
+      "gcodeSha256": "c61704f575ef179762b0b955b16060168638e2bec8cd976c895bc3aae230eb77",
+      "supportEnabled": false,
+      "layerCount": 54,
+      "metadata": {
+        "timeEstimate": "model printing time: 39m 31s; total estimated time: 46m 59s",
+        "reportedLayerCount": 54,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 932.78,
+        "filament used [cm3]": 2.24,
+        "filament used [g]": 2.85
+      },
+      "samples": [
+        {
+          "zMm": 0.1,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M3_LINK-0.1.png",
+          "modelHoleCenterClearanceMm": [
+            3.225892002963853,
+            3.2258920029638425
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            3.225892002963853,
+            3.2258920029638425
+          ]
+        },
+        {
+          "zMm": 2.7,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M3_LINK-2.7.png",
+          "modelHoleCenterClearanceMm": [
+            3.07637894664183,
+            3.077157074730434
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            3.07637894664183,
+            3.077157074730434
+          ]
+        },
+        {
+          "zMm": 5.3,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M3_LINK-5.3.png",
+          "modelHoleCenterClearanceMm": [
+            3.0763851191909932,
+            3.0766837941555467
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            3.0763851191909932,
+            3.0766837941555467
+          ]
+        }
+      ],
+      "gearChecks": [],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          114.748573
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 0.0,
+      "physicalPrintFitStrength": "UNKNOWN"
+    },
+    {
+      "partId": "P_M3_PIVOT",
+      "stl": "STL/Ver.3/m3_r1/P_M3_PIVOT.stl",
+      "stlSha256": "d088e617775ae7cbd6f1323938214c2c9cb9737b047e519b34d2c2ff60c4d38e",
+      "effectiveSettingsSha256": "462a1b5a3cc173930b1c4838dd5382cec116e458d5526a22f1fc1908acf324c3",
+      "gcodeSha256": "c0dc72e7b89edc5bdaa91ead4a544114af1cae07c27e189b8b722462f6facc10",
+      "supportEnabled": true,
+      "layerCount": 236,
+      "metadata": {
+        "timeEstimate": "model printing time: 47m 7s; total estimated time: 54m 36s",
+        "reportedLayerCount": 236,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 991.0,
+        "filament used [cm3]": 2.38,
+        "filament used [g]": 3.03
+      },
+      "samples": [
+        {
+          "zMm": 0.1,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M3_PIVOT-0.1.png",
+          "modelHoleCenterClearanceMm": [
+            3.199628407546613
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            -0.07400000000001228
+          ]
+        },
+        {
+          "zMm": 2.9,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M3_PIVOT-2.9.png",
+          "modelHoleCenterClearanceMm": [
+            3.0508945643961716
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            3.0508945643961716
+          ]
+        },
+        {
+          "zMm": 9.2,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M3_PIVOT-9.2.png",
+          "modelHoleCenterClearanceMm": [
+            3.0515792215291464
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            3.0515792215291464
+          ]
+        },
+        {
+          "zMm": 12.2,
+          "layerHeightMm": 0.0999994,
+          "figure": "slicing/P_M3_PIVOT-12.2.png",
+          "modelHoleCenterClearanceMm": [
+            4.0770468083297775
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            4.0770468083297775
+          ]
+        },
+        {
+          "zMm": 14.7,
+          "layerHeightMm": 0.0999994,
+          "figure": "slicing/P_M3_PIVOT-14.7.png",
+          "modelHoleCenterClearanceMm": [
+            2.8484581095200925
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.8484581095200925
+          ]
+        }
+      ],
+      "gearChecks": [],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          131.25
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 0.0,
+      "physicalPrintFitStrength": "UNKNOWN"
+    }
+  ]
+}

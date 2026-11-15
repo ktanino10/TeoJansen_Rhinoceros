@@ -83,14 +83,18 @@ class PublicBuildTests(unittest.TestCase):
         total = sum(p.stat().st_size for p in files)
         r7 = sum(asset["bytes"] for asset in self.manifest["assets"].values() if asset.get("bundle_group") == "r7")
         walking = sum(asset["bytes"] for asset in self.manifest["assets"].values() if asset.get("bundle_group") == "walking")
-        opt_in = sum(asset["bytes"] for asset in self.manifest["assets"].values() if asset.get("loading") == "on-demand" and asset.get("bundle_group") not in {"r7", "walking"})
-        self.assertLess(total, 76_000_000)
-        self.assertLess(total - opt_in - r7 - walking, 12_000_000)
+        development = sum(asset["bytes"] for asset in self.manifest["assets"].values() if asset.get("bundle_group") == "ver3-development")
+        opt_in = sum(asset["bytes"] for asset in self.manifest["assets"].values() if asset.get("loading") == "on-demand" and asset.get("bundle_group") not in {"r7", "walking", "ver3-development"})
+        self.assertLess(total, 82_000_000)
+        self.assertLess(total - development, 76_000_000)
+        self.assertLess(development, 6_000_000)
+        self.assertLess(total - opt_in - r7 - walking - development, 12_000_000)
         self.assertLess(opt_in, 18_000_000)
         self.assertLess(r7, 30_000_000)
         self.assertLess(walking, 18_000_000)
-        self.assertEqual(len([a for a in self.manifest["assets"].values() if a.get("bundle_group") not in {"r7", "walking", "localization"}]), 83)
-        pages = ["index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html"]
+        self.assertEqual(len([a for a in self.manifest["assets"].values() if a.get("bundle_group") not in {"r7", "walking", "localization", "ver3-development"}]), 83)
+        pages = ["index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html",
+                 "development.html", "ver3-2.html", "ver3-4.html"]
         self.assertEqual(self.manifest["pages"], pages + ["en/" + page for page in pages])
         for asset, data in self.manifest["assets"].items():
             self.assertEqual(hashlib.sha256((OUTPUT / asset).read_bytes()).hexdigest(), data["sha256"])
@@ -232,7 +236,10 @@ class PublicBuildTests(unittest.TestCase):
     def test_public_version_mapping_and_document_indexes_keep_engineering_identity(self):
         mapping = self.manifest["public_versions"]
         source = self.manifest["r7_source"]
-        self.assertEqual(set(mapping), {"3.1", "3.0"})
+        self.assertEqual(set(mapping), {"2", "3.4", "3.2", "3.1", "3.0"})
+        self.assertEqual(mapping["2"]["status"], "completed-build")
+        self.assertEqual(mapping["3.4"]["status"], "development")
+        self.assertFalse(mapping["3.4"]["manufacturingRelease"])
         for field in ("revisionId", "artifactCommit", "inputCommit", "sourceHash"):
             self.assertEqual(mapping["3.1"][field], source[field])
         self.assertEqual(mapping["3.1"]["data"], "docs/ver3/integrated_r7/comparison.json")
@@ -314,8 +321,9 @@ class PublicBuildTests(unittest.TestCase):
             url = urlsplit(href)
             if url.netloc in {"youtu.be", "www.youtube.com", "youtube.com", "makerworld.com", "www.tamiya.com"}:
                 self.assertIn(href, readmes)
-            if url.netloc == "github.com" and f"/{self.manifest['source_commit']}/" in url.path:
-                local = unquote(url.path.split(f"/{self.manifest['source_commit']}/")[1])
+            completed_ref = self.manifest["completed_build_source_commit"]
+            if url.netloc == "github.com" and f"/{completed_ref}/" in url.path:
+                local = unquote(url.path.split(f"/{completed_ref}/")[1])
                 self.assertTrue((ROOT / local).exists(), href)
                 downloads.append(local)
         for source in ("docs/テオヤンセン2Dv1.pdf", "docs/テオヤンセン2D図面最新.pdf",

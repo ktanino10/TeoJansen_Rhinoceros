@@ -14,7 +14,8 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "site/dist/TeoJansen_Rhinoceros"
 PUBLIC_URL = "https://ktanino10.github.io/TeoJansen_Rhinoceros/"
-ROOT_PAGES = {"index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html"}
+ROOT_PAGES = {"index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html",
+              "development.html", "ver3-2.html", "ver3-4.html"}
 PAGES = ROOT_PAGES | {"en/" + page for page in ROOT_PAGES}
 STATIC_FILES = ("styles.css", "viewer.css", "calculations.css", "r7.css", "walking.css", "app.js",
                 "i18n.js", "viewer-loader.js", "walking-loader.js", "calculations.js", "favicon.svg")
@@ -22,6 +23,7 @@ DOCUMENT_EXAMPLES = (
     "docs/ver3/DESIGN_en.md",
     "docs/ver3/integrated_r7/ASSEMBLY_en.md",
     "docs/ver3/r7_walking_v1/MODEL_en.md",
+    "docs/ver3/m3_a34/README_en.md",
 )
 
 
@@ -32,6 +34,15 @@ def engineering_examples(manifest):
     return {source["contract"]: source["contractSha256"],
             designs["A"]["native"]["path"]: designs["A"]["native"]["sha256"],
             designs["C"]["bom"]["path"]: designs["C"]["bom"]["sha256"]}
+
+
+def development_examples():
+    folder = ROOT / "docs/ver3/m3_a34"
+    summary = json.loads((folder / "summary.json").read_text())
+    hashes = json.loads((folder / "files.json").read_text())
+    paths = (summary["native"], "STL/Ver.3/m3_a34/P_M34_SYNC_DRIVE.stl",
+             "docs/ver3/m3_a34/BOM.csv", "docs/ver3/m3_a34/print-list.csv")
+    return {path: hashes[path] for path in paths}
 
 
 def fetch_bytes(url):
@@ -65,6 +76,10 @@ def verify(expected_commit):
         raise ValueError("Published external image references differ from the fixed local source")
     if remote.get("public_versions") != local["public_versions"] or remote.get("r7_source") != local["r7_source"]:
         raise ValueError("Published public-version mapping or engineering source differs")
+    completed = json.loads((ROOT / "docs/ver3/m3_a34/completed-baseline.json").read_text())
+    for name, entry in completed["publishedImageSources"].items():
+        if remote["assets"][name]["sha256"] != entry["sha256"]:
+            raise ValueError("Completed-build image changed: " + name)
     for page in sorted(PAGES):
         text = fetch_bytes(PUBLIC_URL + page).decode("utf-8")
         locale = "en" if page.startswith("en/") else "ja"
@@ -72,6 +87,8 @@ def verify(expected_commit):
             raise ValueError(f"Invalid deployed HTML: {page}")
         if text != (OUTPUT / page).read_text():
             raise ValueError(f"Deployed HTML differs from the expected build: {page}")
+        if page in completed["renderedProductionSha256"] and hashlib.sha256(text.encode()).hexdigest() != completed["renderedProductionSha256"][page]:
+            raise ValueError("Completed-build HTML changed: " + page)
     for filename in STATIC_FILES:
         if fetch_bytes(PUBLIC_URL + filename) != (ROOT / "site" / filename).read_bytes():
             raise ValueError(f"Deployed static source differs: {filename}")
@@ -112,11 +129,18 @@ def verify(expected_commit):
         url = f"https://raw.githubusercontent.com/ktanino10/TeoJansen_Rhinoceros/{local['r7_source']['publicSourceCommit']}/{path}"
         if hashlib.sha256(fetch_bytes(url)).hexdigest() != expected_hash:
             raise ValueError(f"Current engineering download differs: {path}")
+    development = development_examples()
+    for path, expected_hash in development.items():
+        url = f"https://raw.githubusercontent.com/ktanino10/TeoJansen_Rhinoceros/{expected_commit}/{path}"
+        if hashlib.sha256(fetch_bytes(url)).hexdigest() != expected_hash:
+            raise ValueError(f"Development engineering download differs: {path}")
     return {"url": PUBLIC_URL, "source_commit": expected_commit, "pages": len(PAGES),
             "assets": len(sizes), "asset_bytes": sum(sizes), "all_gets": 200,
             "external_images": len(local.get("external_images", {})),
             "asset_hashes": "matched", "display_metadata": "removed", "english_documents": len(DOCUMENT_EXAMPLES),
-            "current_version": "3.1", "archive_version": "3.0",
+            "completed_version": "2", "development_version": "3.4", "reference_version": "3.1", "archive_version": "3.0",
+            "completed_html_and_images": "unchanged",
+            "development_downloads": len(development),
             "engineering_downloads": len(examples), "engineering_source_hash": local["r7_source"]["sourceHash"]}
 
 

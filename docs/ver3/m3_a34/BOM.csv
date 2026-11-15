@@ -1,0 +1,85 @@
+part_id,category,quantity,sku,unit_nominal_mass_g,total_nominal_mass_g,spec
+H_NYLOCK4,purchased,10,2812-0004-0007,0.78,7.800000000000001,goBILDA2812-0004-0007 M4 prevailing torque nut; shared25-piece purchase lot
+H_INPUT_SHAFT,purchased,1,2101-0006-0140,30,30,goBILDA2101-0006-0140 stock140mm D shaft; no machining
+H_INPUT_BEARING,purchased,2,1611-0514-0006,3,6,"1611-0514-0006; original R4 dimensional envelope, not redistributed vendorCAD"
+H_INPUT_HUB,purchased,1,1309-0016-1006,14,14,"1309-0016-1006; original R4 dimensional envelope, not redistributed vendorCAD"
+H_INPUT_COLLAR,purchased,2,2910-0919-0006,7,14,"2910-0919-0006; original R4 dimensional envelope, not redistributed vendorCAD"
+H_INPUT_SPACER,purchased,2,1521-0008-0040,0.64,1.28,"1521-0008-0040; original R4 dimensional envelope, not redistributed vendorCAD"
+H_NMB1680,purchased,10,DDL-1680HH,4,40,"NMB DDL-1680HH8x16x5,Li9.68,Lo14.23;4g conservative UNVERIFIED unit-mass allowance"
+H_MAIN_HEX100,cut_to_length,3,HEX5,18.40303983041933,55.209119491257994,"C3604B5mm-AF stock cut100mm; tolerance acceptance+/-2,round8mm keyed journals are separate"
+H_INTER_HEX58,cut_to_length,1,HEX5,10.673763101643212,10.673763101643212,"C3604B5mm-AF stock cut58mm,+/-0.5mm acceptance; short flush end permits the upper PET panel's radial insertion; no end tapping"
+P_MAIN_INNER_STOP,printed,2,,1.0518534299037439,2.1037068598074877,"Keyed inner stop,0.2mm locating-bearing allowance; clamp is axialretention,hexprofile carries torque"
+H_BOLT_M3_16,purchased,16,BOLT_M3_16,1.3835878609720142,22.137405775552228,"BOLT_M3_16; metric dimensional model, no physical material certification"
+H_NUT_M3,purchased,64,NUT_M3,0.3995902952303397,25.57377889474174,"NUT_M3; metric dimensional model, no physical material certification"
+P_CAP_STEP_-14_-13_19_0_3_14.6,printed,3,,2.314751054136551,6.9442531624096535,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+H_BOLT_M3_20,purchased,16,BOLT_M3_20,1.6055413819481328,25.688662111170125,"BOLT_M3_20; metric dimensional model, no physical material certification"
+H_WASHER_3,purchased,64,WASHER_M3,0.11948497879214402,7.6470386426972174,"WASHER_M3; metric dimensional model, no physical material certification"
+H_WASHER_4,purchased,90,THRUST4,0.30831810213815986,27.748629192434386,"THRUST4; metric dimensional model, no physical material certification"
+P_CAP_WIDE_-14_-13_19_0_4_14.6,printed,3,,1.9899169106693266,5.96975073200798,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+H_BOLT_M4_20,purchased,10,BOLT_M4_20,3.0589644111029615,30.589644111029614,"BOLT_M4_20; metric dimensional model, no physical material certification"
+H_WASHER_6,purchased,6,THRUST6,0.45026970955355317,2.7016182573213188,"THRUST6; metric dimensional model, no physical material certification"
+P_SYNC_DRIVE,printed,1,,4.887088965815953,4.887088965815953,"42-tooth m1,25deg synchronous maingear; two-idler bus makes all mainshafts same direction"
+P_SYNC_IDLER,printed,2,,7.253078107141635,14.50615621428327,42-tooth idler with real8mm bearing; short fixed journal must not enter reducer planes
+P_IDLER_CAP,printed,2,,0.6724274670166356,1.3448549340332712,Outer ring cap with0.4mm front clearance;two M3 bolts
+P_IDLER_JOURNAL,printed,2,,0.29803975345341,0.59607950690682,Round8mm journal around4mm stationary brasssleeve;9.2mm inner-ring shoulder
+P_IDLER_INNER_WASHER,printed,2,,0.12029315350227994,0.24058630700455988,Inner-ring-only axial keeper;0.2mm total inner stack freedom
+H_SLEEVE_2_8,purchased,14,CE-2008N,0.5960229582390559,8.344321415346784,"CE-2008N; metric dimensional model, no physical material certification"
+H_BOLT_M2_16,purchased,8,BOLT_M2_16,0.557343910424044,4.458751283392352,"BOLT_M2_16; metric dimensional model, no physical material certification"
+H_WASHER_2,purchased,64,WASHER_M2,0.037288191523987976,2.3864442575352305,"WASHER_M2; metric dimensional model, no physical material certification"
+H_NUT_M2,purchased,64,NUT_M2,0.14619461547327647,9.356455390289694,"NUT_M2; metric dimensional model, no physical material certification"
+P_COMPOUND_1,printed,1,,15.485819091915841,15.485819091915841,Two rigid involute stages on one keyed carrier;8mm journals; exact two clocked tooth datums
+P_INTER_STOP,printed,1,,1.7726120325345869,1.7726120325345869,Removable5mm-AF intermediate clamp and9.2mm shoulder;0.4mm inner-stack freedom
+P_CAP_STEP_-17_0_17_0_3_14.6,printed,1,,2.091402194711255,2.091402194711255,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+P_CAP_PLAIN_-13_0_13_0_3_14.6,printed,1,,1.4104695413330608,1.4104695413330608,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+P_OUTPUT_WHEEL,printed,1,,14.75188352735583,14.75188352735583,Reducer output on the third common shaft;positive5mm-AF profile
+P_INPUT_PINION,printed,1,,1.1611634684607037,1.1611634684607037,"Positive6mmD pinion with integral spacerstem;0.4mm axial clearance between inner collar and metal hub,not an unsupported round-bore friction fit"
+P_CAP_PLAIN_-18_0_18_0_4_10.2,printed,1,,1.7598348496280152,1.7598348496280152,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+P_ROTOR_CAGE_FRONT,printed,1,,37.87961389640445,37.87961389640445,"Front cage basket: fit rotor/hub inside,lower radially into open chamber before threading the input shaft. Rear cap is separate."
+P_ROTOR_CAGE_CAP,printed,1,,28.562438056961845,28.562438056961845,"Outer-ring-only retainer; lands and pocket length define axial allowance,not torque preload"
+P_CHASSIS_L,printed,1,,70.48242491381862,70.48242491381862,"Real longitudinal frame half;4M3 bolts,front locating hex key and rear relieved key. Close around the shafts rather than trapping integral gears in a one-piece housing."
+P_CHASSIS_R,printed,1,,78.70768547117977,78.70768547117977,"Real longitudinal frame half;4M3 bolts,front locating hex key and rear relieved key. Close around the shafts rather than trapping integral gears in a one-piece housing."
+P_LEG_PC_L,printed,3,,0.9183309988541501,2.7549929965624504,Shared Jansen body with real smooth journals;PC
+P_LEG_CEF_L,printed,3,,6.284554414093794,18.85366324228138,Shared Jansen body with real smooth journals;CEF
+P_FOOT_SLIDER_L,printed,3,,2.253496691993178,6.7604900759795346,"Floor correction: same foot position/spring/rolling pads; recessed metal clamp seats, reduced non-contact boss and preserved axial stack."
+P_FOOT_ROCKER_L,printed,3,,2.717895377638539,8.153686132915617,"Floor correction: same foot position/spring/rolling pads; recessed metal clamp seats, reduced non-contact boss and preserved axial stack."
+P_LEG_PC_R,printed,3,,0.9183309988541501,2.7549929965624504,Shared Jansen body with real smooth journals;PC
+P_LEG_CEF_R,printed,3,,6.284554414093794,18.85366324228138,Shared Jansen body with real smooth journals;CEF
+P_FOOT_SLIDER_R,printed,3,,2.253496691993178,6.7604900759795346,"Floor correction: same foot position/spring/rolling pads; recessed metal clamp seats, reduced non-contact boss and preserved axial stack."
+P_FOOT_ROCKER_R,printed,3,,2.717895377638539,8.153686132915617,"Floor correction: same foot position/spring/rolling pads; recessed metal clamp seats, reduced non-contact boss and preserved axial stack."
+H_FOOT_SPRING,purchased,12,12-0721,0.31,3.7199999999999998,"SAMINI12-0721;OD7,wire0.6,free15,total6.8active4.8,rate0.882N/mm. Coil drawing is envelope;end pitch simplified."
+H_SLEEVE_2_20,purchased,24,CE-2020N,1.4900573955976388,35.761377494343336,"CE-2020N; metric dimensional model, no physical material certification"
+H_BOLT_M2_30,purchased,6,BOLT_M2_30,0.9026049430535621,5.4156296583213726,"BOLT_M2_30; metric dimensional model, no physical material certification"
+H_BOLT_M2_25,purchased,18,BOLT_M2_25,0.7792974314001627,14.027353765202928,"BOLT_M2_25; metric dimensional model, no physical material certification"
+P_LAYER_SPACER_3.3,printed,12,,0.14980088451436888,1.7976106141724264,Free axial spacing between nonadjacent link planes; not in the screw clamp path
+P_PIN_TAIL_4.3,printed,6,,0.19292538157153605,1.1575522894292163,"Free axial keeper around4mm sleeve; bolt load closes on metal sleeve,not this spacer"
+P_PIN_TAIL_8.4,printed,6,,0.37904163202878294,2.2742497921726974,"Free axial keeper around4mm sleeve; bolt load closes on metal sleeve,not this spacer"
+P_ROTOR,printed,1,,131.8139850497129,131.8139850497129,"16 bare curved blades;4mm spoke root+32mm active span+2mm outer end ring,matched6D hub;not air-calibrated"
+H_BOLT_M4_12,purchased,4,BOLT_M4_12,2.2697963365212064,9.079185346084826,"BOLT_M4_12; metric dimensional model, no physical material certification"
+S_GUARD_LEFT,sheet_cut,1,PAC34-05,19.91283378757927,19.91283378757927,PAC34-05 PET0.5mm flat sheet; full-thickness cuts only. Every retained piece has at least two declared supports; no adhesive or pocket milling.
+S_GUARD_LOWER_RIGHT,sheet_cut,1,PAC34-05,10.986583472431061,10.986583472431061,PAC34-05 PET0.5mm flat sheet; full-thickness cuts only. Every retained piece has at least two declared supports; no adhesive or pocket milling.
+S_GUARD_UPPER_RIGHT,sheet_cut,1,PAC34-05,11.94696854689459,11.94696854689459,PAC34-05 PET0.5mm flat sheet; full-thickness cuts only. Mounting uses explicitly relocated existing cap fasteners; no adhesive or pocket milling.
+H_WASHER_4_SMALL,purchased,12,THRUST4_SMALL,0.13486759087090558,1.6184110904508668,"THRUST4_SMALL; metric dimensional model, no physical material certification"
+H_BOLT_M2_12,purchased,6,BOLT_M2_12,0.4586979011013244,2.7521874066079466,"BOLT_M2_12; metric dimensional model, no physical material certification"
+H_LOCK_NUT_M2,purchased,6,LOCK_NUT_M2,0.30066101801139034,1.803966108068342,"LOCK_NUT_M2; metric dimensional model, no physical material certification; stock M2 nylon insert,AF4.5 x height2.5. Conservative all-steel mass envelope includes the insert; actual mass,prevailing torque and reuse unqualified"
+H_M34_BOLT_M3_15,purchased,6,M3_15,1.3365587130893093,8.019352278535855,"M3x15 socket head,2.5mm hex,nominal0.5pitch; Sengoku stainless grade not stated"
+H_M34_BOLT_M3_20,purchased,2,M3_20,1.6157677601771017,3.2315355203542033,"M3x20 socket head,2.5mm hex,nominal0.5pitch; Sengoku stainless grade not stated"
+H_M34_BOLT_M3_30,purchased,6,M3_30,2.174185854352688,13.04511512611613,"M3x30 socket head,2.5mm hex,nominal0.5pitch; Sengoku stainless grade not stated"
+H_M34_NUT_M3,purchased,28,114372,0.39022517387560557,10.926304868516956,Akizuki114372 brass M3x0.5; acceptance assumption AF5.5/H2.4
+H_M34_WASHER3,purchased,28,EEHD-6EC4,0.17944777237304899,5.024537626445372,"Sengoku BSW3mm M3x8x0.5,brass/Ni; ID acceptance3.2"
+H_M34_THRUST6,purchased,18,EEHD-6EC8,0.8547802371519788,15.386044268735619,"Sengoku BSW6mm M6x13x1.0,brass/Ni; ID acceptance6.4"
+H_M34_SLEEVE_8,purchased,6,EEHD-6CJF,1.3757662548600422,8.254597529160254,Smooth continuous6mm OD/3.2mm ID sleeve; no threaded sliding surface; actual OD/ID/ends must be measured
+H_M34_SLEEVE_20,purchased,6,CE-320N,3.439415637150105,20.63649382290063,Smooth continuous6mm OD/3.2mm ID sleeve; no threaded sliding surface; actual OD/ID/ends must be measured
+P_M34_LEG_AB_L,printed,3,,1.14406624383495,3.43219873150485,"AB/L: selected6.2 bores,13mm bosses and0.3mm face relief; original centres/layers preserved"
+P_M34_LEG_AC_L,printed,3,,1.3572351088349535,4.07170532650486,"AC/L: selected6.2 bores,13mm bosses and0.3mm face relief; original centres/layers preserved"
+P_M34_LEG_PBD_L,printed,3,,2.3631427822864115,7.0894283468592345,"PBD/L: selected6.2 bores,13mm bosses and0.3mm face relief; original centres/layers preserved"
+P_M34_LEG_DE_L,printed,3,,0.9541847338349495,2.8625542015048486,"DE/L: selected6.2 bores,13mm bosses and0.3mm face relief; original centres/layers preserved"
+P_M34_LEG_AB_R,printed,3,,1.1440662438349511,3.4321987315048537,"AB/R: selected6.2 bores,13mm bosses and0.3mm face relief; original centres/layers preserved"
+P_M34_LEG_AC_R,printed,3,,1.3572351088349504,4.071705326504851,"AC/R: selected6.2 bores,13mm bosses and0.3mm face relief; original centres/layers preserved"
+P_M34_LEG_PBD_R,printed,3,,2.3631427822864106,7.089428346859232,"PBD/R: selected6.2 bores,13mm bosses and0.3mm face relief; original centres/layers preserved"
+P_M34_LEG_DE_R,printed,3,,0.9541847338349503,2.862554201504851,"DE/R: selected6.2 bores,13mm bosses and0.3mm face relief; original centres/layers preserved"
+P_M34_CRANK_JOURNAL_-1_0,printed,2,,3.4213593789441106,6.842718757888221,"A root:6.2mm axial M3-head/tool channel,side-loaded8mm washer seat; continuous6mm sleeve; retained5mm-AF drive/journals"
+P_M34_CRANK_JOURNAL_1_180,printed,2,,3.6666571048805983,7.3333142097611965,"A root:6.2mm axial M3-head/tool channel,side-loaded8mm washer seat; continuous6mm sleeve; retained5mm-AF drive/journals"
+P_M34_CRANK_JOURNAL_-1_180,printed,1,,3.421359385523008,3.421359385523008,"A root:6.2mm axial M3-head/tool channel,side-loaded8mm washer seat; continuous6mm sleeve; retained5mm-AF drive/journals"
+P_M34_CRANK_JOURNAL_1_0,printed,1,,3.6666571048805983,3.6666571048805983,"A root:6.2mm axial M3-head/tool channel,side-loaded8mm washer seat; continuous6mm sleeve; retained5mm-AF drive/journals"
+P_M34_LAYER_SPACER_7_4,printed,6,,0.4451584796778322,2.670950878066993,A interlayer free spacer:6.3mm bore/10mm OD; not a clamp-load spacer
+P_M34_SYNC_DRIVE,printed,2,,6.3434847949451765,12.686969589890353,3.2 side-entry seat mapped into A front/centre sync gears; bore clocked30deg to existing metal shaft;42T plane unchanged

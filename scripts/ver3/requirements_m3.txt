@@ -1,0 +1,2 @@
+-r requirements.txt
+networkx>=3,<4

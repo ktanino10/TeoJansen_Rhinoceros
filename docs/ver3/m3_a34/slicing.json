@@ -1,0 +1,393 @@
+{
+  "revisionId": "v3.4-a-m3-r1",
+  "orcaVersion": "2.4.2",
+  "profileNames": {
+    "machine": "Bambu Lab P1S 0.2 nozzle",
+    "process": "0.10mm Standard @BBL X1C 0.2 nozzle",
+    "filament": "Generic PETG @0.2 nozzle"
+  },
+  "sourceProfiles": {
+    "machine": [
+      {
+        "path": "profiles/BBL/machine/fdm_machine_common.json",
+        "sha256": "cdcaa5e5061934a9b960c94e203cc7d1e3b869a407182644f2dda9fdcbf5c2b3"
+      },
+      {
+        "path": "profiles/BBL/machine/fdm_bbl_3dp_001_common.json",
+        "sha256": "e90597a202d5461a2f8636a06c35409cffc79a2c1991bb726c6e465e9a0bd26c"
+      },
+      {
+        "path": "profiles/BBL/machine/Bambu Lab P1S 0.4 nozzle.json",
+        "sha256": "3e72ef1682406940986edb1ebd7d3b2c99afe59789b9c9389ffbdf6831e07b6a"
+      },
+      {
+        "path": "profiles/BBL/machine/Bambu Lab P1S 0.2 nozzle.json",
+        "sha256": "46ec15e69a736f34c10c76ccd56718dd41c0958ce59e4bc0652f0471f9ce5706"
+      }
+    ],
+    "process": [
+      {
+        "path": "profiles/BBL/process/fdm_process_common.json",
+        "sha256": "398fcb322a7f459edab00cb2daf524345a19b8cef074415af52f377f91e4bd5b"
+      },
+      {
+        "path": "profiles/BBL/process/fdm_process_single_common.json",
+        "sha256": "59fc5ca43dcf9850076708b8ca14b7f9098fe90b9b32ceffc6741b4fcaf3e73e"
+      },
+      {
+        "path": "profiles/BBL/process/fdm_process_single_0.10_nozzle_0.2.json",
+        "sha256": "c26d9e117daa06b8502f1910b8fcc5e116b5a80a4960b2102fb5430f6ff1f755"
+      },
+      {
+        "path": "profiles/BBL/process/0.10mm Standard @BBL X1C 0.2 nozzle.json",
+        "sha256": "657e08768d961e4048d24ecd2c16f7f50b9ac11ac1181d927169175870224336"
+      }
+    ],
+    "filament": [
+      {
+        "path": "profiles/BBL/filament/fdm_filament_common.json",
+        "sha256": "05725cc129f96ea903dc77c40d248fa1bd0137cfc41216d09d952cfdd37d3683"
+      },
+      {
+        "path": "profiles/BBL/filament/fdm_filament_pet.json",
+        "sha256": "9d49bae4fd046871c7ea9254af61c9c2e02fa343e15b3ff8d755ab0dd49bebe4"
+      },
+      {
+        "path": "profiles/BBL/filament/Generic PETG @base.json",
+        "sha256": "a8742f2dc6f1d73f8affe69eb12fefe3e16f0da5e7054c09cea400c145398708"
+      },
+      {
+        "path": "profiles/BBL/filament/Generic PETG @0.2 nozzle.json",
+        "sha256": "808e709057dc715bd436efbae0e80ba3b46605d29aee3c0f2b05299f697fb6fc"
+      }
+    ]
+  },
+  "processOverrides": {
+    "wall_generator": "arachne",
+    "wall_loops": "4",
+    "sparse_infill_density": "100%",
+    "sparse_infill_pattern": "rectilinear",
+    "enable_arc_fitting": "0",
+    "curr_bed_type": "Textured PEI Plate",
+    "support_type": "normal(auto)",
+    "support_style": "default",
+    "support_on_build_plate_only": "1",
+    "support_top_z_distance": "0.1",
+    "support_object_xy_distance": "0.25",
+    "brim_type": "outer_only",
+    "brim_width": "3",
+    "brim_object_gap": "0.1"
+  },
+  "actualHardwareAndMaterialMatched": false,
+  "printerContacted": false,
+  "physicalPrintingPerformed": false,
+  "scope": "Inspection-only P1S / Generic PETG; actual user printer and material UNKNOWN. No printer-ready G-code is distributed.",
+  "parts": [
+    {
+      "partId": "P_M34_SYNC_DRIVE",
+      "stl": "STL/Ver.3/m3_a34/P_M34_SYNC_DRIVE.stl",
+      "stlSha256": "3e96f62b62e32c09386fa47b6c3da1f4eeca4abe57766b9cdfd6e2d08d8bfe29",
+      "effectiveSettingsSha256": "462a1b5a3cc173930b1c4838dd5382cec116e458d5526a22f1fc1908acf324c3",
+      "gcodeSha256": "24604b4bfeb8eea1e210cd5e8dc8cdd14bc078a5482d9df44c067f37518b428d",
+      "supportEnabled": true,
+      "layerCount": 209,
+      "metadata": {
+        "timeEstimate": "model printing time: 1h 36m 23s; total estimated time: 1h 43m 51s",
+        "reportedLayerCount": 209,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 2027.37,
+        "filament used [cm3]": 4.88,
+        "filament used [g]": 6.19
+      },
+      "samples": [
+        {
+          "zMm": 1.0,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M34_SYNC_DRIVE-1.png",
+          "modelHoleCenterClearanceMm": [
+            2.5577568087695877
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.5577568087695877
+          ]
+        },
+        {
+          "zMm": 2.8,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M34_SYNC_DRIVE-2.8.png",
+          "modelHoleCenterClearanceMm": [
+            2.557526975047681
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.557526975047681
+          ]
+        },
+        {
+          "zMm": 10.2,
+          "layerHeightMm": 0.0999994,
+          "figure": "slicing/P_M34_SYNC_DRIVE-10.2.png",
+          "modelHoleCenterClearanceMm": [
+            2.5576045268192678
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.5576045268192678
+          ]
+        },
+        {
+          "zMm": 17.1,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M34_SYNC_DRIVE-17.1.png",
+          "modelHoleCenterClearanceMm": [
+            2.5576045268192678
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.5576045268192678
+          ]
+        }
+      ],
+      "gearChecks": [
+        {
+          "zMm": 1.0,
+          "layerHeightMm": 0.1,
+          "expectedTeeth": 42,
+          "nominalSectionTeeth": 42,
+          "depositedEnvelopeTeeth": 42,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 19.749841344326505,
+          "maximumTipRadialSetbackMm": 0.001067492352358812,
+          "tipPathWidthRangeMm": [
+            0.219999,
+            0.219999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        },
+        {
+          "zMm": 2.8,
+          "layerHeightMm": 0.1,
+          "expectedTeeth": 42,
+          "nominalSectionTeeth": 42,
+          "depositedEnvelopeTeeth": 42,
+          "allDetectedTipsOnOneRootConnectedComponent": true,
+          "nominalRootRadiusMm": 19.749906972249978,
+          "maximumTipRadialSetbackMm": 0.0010674935784962258,
+          "tipPathWidthRangeMm": [
+            0.219999,
+            0.219999
+          ],
+          "depositedConnectedComponentCount": 1,
+          "method": "Actual positive-extrusion segments swept by annotated width; largest connected exterior, circular radial lobe count with 0.5mm prominence and 80 angular samples/tooth."
+        }
+      ],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          0.781831493,
+          -0.623489788,
+          0.0,
+          128.0
+        ],
+        [
+          0.623489788,
+          0.781831493,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 38.571427574380586,
+      "physicalPrintFitStrength": "UNKNOWN"
+    },
+    {
+      "partId": "P_M34_LEG_AB_R",
+      "stl": "STL/Ver.3/m3_a34/P_M34_LEG_AB_R.stl",
+      "stlSha256": "f8e3fbb1388eb4e5918732af8f5e27b857c5dde119c2df9921c808383aa7cbd8",
+      "effectiveSettingsSha256": "462a1b5a3cc173930b1c4838dd5382cec116e458d5526a22f1fc1908acf324c3",
+      "gcodeSha256": "04518358cc46bce28766f71fef915de4dcdd2d51261bb428b0777792296a2abc",
+      "supportEnabled": true,
+      "layerCount": 31,
+      "metadata": {
+        "timeEstimate": "model printing time: 16m 57s; total estimated time: 24m 25s",
+        "reportedLayerCount": 31,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 399.79,
+        "filament used [cm3]": 0.96,
+        "filament used [g]": 1.22
+      },
+      "samples": [
+        {
+          "zMm": 0.1,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M34_LEG_AB_R-0.1.png",
+          "modelHoleCenterClearanceMm": [
+            6.8227784195061965,
+            2.2232070318539754
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            -0.013486170500002573,
+            2.2232070318539754
+          ]
+        },
+        {
+          "zMm": 1.5,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M34_LEG_AB_R-1.5.png",
+          "modelHoleCenterClearanceMm": [
+            3.0823571716765463,
+            2.0754870424239416
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            3.0823571716765463,
+            2.0754870424239416
+          ]
+        },
+        {
+          "zMm": 2.9,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M34_LEG_AB_R-2.9.png",
+          "modelHoleCenterClearanceMm": [
+            6.673786175699941,
+            2.0717205603739264
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            6.673786175699941,
+            2.0717205603739264
+          ]
+        }
+      ],
+      "gearChecks": [],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          -0.578146697,
+          -0.815932838,
+          0.0,
+          120.683859
+        ],
+        [
+          0.815932838,
+          -0.578146697,
+          0.0,
+          133.648985
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": 125.32029649055198,
+      "physicalPrintFitStrength": "UNKNOWN"
+    },
+    {
+      "partId": "P_M34_CRANK_JOURNAL_1_180",
+      "stl": "STL/Ver.3/m3_a34/P_M34_CRANK_JOURNAL_1_180.stl",
+      "stlSha256": "da965aa2b2306cf2e905676343bcf7bcd62989be5b712db94d44a3515574f6a5",
+      "effectiveSettingsSha256": "462a1b5a3cc173930b1c4838dd5382cec116e458d5526a22f1fc1908acf324c3",
+      "gcodeSha256": "5b4c2574123b88c65c5bb32a8de10f4655774112b997bd06e14fe8f6f331fbd8",
+      "supportEnabled": true,
+      "layerCount": 391,
+      "metadata": {
+        "timeEstimate": "model printing time: 1h 18m 18s; total estimated time: 1h 25m 46s",
+        "reportedLayerCount": 391,
+        "gcodeXYToModelBedOffsetMm": [
+          0.0,
+          2.0
+        ],
+        "filament used [mm]": 1545.61,
+        "filament used [cm3]": 3.72,
+        "filament used [g]": 4.72
+      },
+      "samples": [
+        {
+          "zMm": 1.0,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M34_CRANK_JOURNAL_1_180-1.png",
+          "modelHoleCenterClearanceMm": [
+            2.557502779853433
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.557502779853433
+          ]
+        },
+        {
+          "zMm": 12.0,
+          "layerHeightMm": 0.1,
+          "figure": "slicing/P_M34_CRANK_JOURNAL_1_180-12.png",
+          "modelHoleCenterClearanceMm": [
+            2.557636262433716,
+            3.0772485353942276
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.557636262433716,
+            3.0772485353942276
+          ]
+        },
+        {
+          "zMm": 23.8,
+          "layerHeightMm": 0.0999985,
+          "figure": "slicing/P_M34_CRANK_JOURNAL_1_180-23.8.png",
+          "modelHoleCenterClearanceMm": [
+            2.557930749081157,
+            3.0491219269078536
+          ],
+          "allPathsHoleCenterClearanceMm": [
+            2.557930749081157,
+            3.0491219269078536
+          ]
+        }
+      ],
+      "gearChecks": [],
+      "sourceStlToBedTransformRowMajor4x4": [
+        [
+          0.338425653,
+          0.940993134,
+          0.0,
+          130.93748
+        ],
+        [
+          -0.940993134,
+          0.338425653,
+          0.0,
+          127.999678
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "arrangedRotationZDeg": -70.21901466748211,
+      "physicalPrintFitStrength": "UNKNOWN"
+    }
+  ]
+}

@@ -1,0 +1,858 @@
+{
+  "sourceCommit": "18dd3f40fb811b3d50cfa527b6fafbfa55a6e781",
+  "protectedFiles": {
+    "Fusion360/README.md": "1c287ae7fa1d4bfc8284238e842519dceb067cf8190940fa5cd2ccf21dbab86c",
+    "STL/README.md": "5777e3281e535a577841417132c660150295606035cd7787edcffe89d720350f",
+    "STL/Ver.1/Spur Gear (19 teeth).stl": "ba2adf6b044f19c6ae5f6e9afb305d834f884ecff3d3eefa1122dc510b659079",
+    "STL/Ver.1/Spur Gear (5 teeth).stl": "8d3d44c3547d4a24508c7aef5ffe24df27db6a49d21c1785593518c2c972da2c",
+    "STL/Ver.1/Spur Gear (8 teeth) (1).stl": "ec1a8818ad6139778a33e23722ec485a80c87ccded62b69f9d75b2ed5f8c11f3",
+    "STL/Ver.1/Spur Gear (8 teeth) (2).stl": "394296edb1ac8efdaa579ff0747235e6311f7c12f708dc8f3e275def9331e060",
+    "STL/Ver.1/Spur Gear (9 teeth).stl": "c340c5026cf3dd4f59aaa217491dbba26f0c0ebb9772cc60a30504aaa31f49a9",
+    "STL/Ver.1/body.7.4.stl": "d19cef8ff484a242a917d1b53cff187e1c9534cf6baf3277797b2a1a25adfe82",
+    "STL/Ver.1/body1.1.stl": "7d5a66381610ec57e132bfd9b9c9a4574988fc4fe05685971e3397af18fb0419",
+    "STL/Ver.1/body1.2.stl": "fe7f50a0bce31b67375f05e028cb3511cf93f585266a7645ced5814b06bf30f6",
+    "STL/Ver.1/body1.3.stl": "5e518e688663f105d2d4d9f2b71ab7c9024464bab644fc31d92ce4b28f93a2c8",
+    "STL/Ver.1/body1.4.stl": "a0aa128816db77923201594ede3d7b5729c7ce66b502688824b923225deaf2ef",
+    "STL/Ver.1/body1.5.stl": "0bf57d1f5237fca8eab21b6252c3848157c5cd3867401ef493da3345e8ddb8d0",
+    "STL/Ver.1/body1.6.stl": "17275b5cf861ba18d75d5f011b7945148b3884229f9c3515512657e88738afb7",
+    "STL/Ver.1/body1.7.stl": "d4f9ded4c6d58adfb38fdb83e736be41bad6e1a26fa2f3540a85b0f713190cb7",
+    "STL/Ver.1/body1.8.stl": "dce558f67b326ac15733e5e320a9008729953d333cbb245e55f37b1959f79077",
+    "STL/Ver.1/body10.1.stl": "ce4545d057fbcbb550992b8375f4d6fc8f8d8bd59bbbecc7feaf5fdb7bf4766b",
+    "STL/Ver.1/body10.2.stl": "b565b8c46ee5c71c4760e5ca85a28aac17d9c6915be36d11c9074ce169d6e848",
+    "STL/Ver.1/body10.3.stl": "85dc986a652a6c8207235a6667a4a3f543deb15fb5589c52b1002cb6491dc5ee",
+    "STL/Ver.1/body10.4.stl": "888f0a8f5916dc9ec9d96af1d2f4b18a5a5a5f64be357601d9790e40576c8d99",
+    "STL/Ver.1/body10.5.stl": "60c444eba5ed2d300701afa7520d3ed1a7ab89fcaf4ce03eb71fc2d2bb858aac",
+    "STL/Ver.1/body10.6.stl": "982e21363a70dc062fcdcb930bbd93c4506d84a03e6552750556009fcd1050d4",
+    "STL/Ver.1/body10.7.stl": "7b635005cc65669db17fb22c4611fb39e2e203b60ba55db0223899ea3f97d7a7",
+    "STL/Ver.1/body10.8.stl": "5b60c18ecf1c46898621c98311b80194876ea2da0564eefbc2d595621b1c772a",
+    "STL/Ver.1/body11.1.stl": "e7d6d2f18080d490add3fe7bd2d74d2f18557826d64497abfd054d2f77ddcb70",
+    "STL/Ver.1/body11.2.stl": "7e1ab9deb026871df67dcd0be57e597a986e97fd6b503040acc2cbaf8bf325d4",
+    "STL/Ver.1/body11.3.stl": "cc87dc106d4e9b15d6afdffaa31ed2119c834e33a98ddfa6c8c6894d945cfaf4",
+    "STL/Ver.1/body11.4.stl": "df971b08a775db3b6d849e3cd522db6df76986d62eccbee22e4023fabb673ce0",
+    "STL/Ver.1/body11.5.stl": "2c8c9f90d4571229e4bcb3ffdd7161cf6e4ca8fb7d9764f9887efe9ba9db9aed",
+    "STL/Ver.1/body11.6.stl": "e30b6b14b9291f3d061096065964adccf4a91a11bb8be26cc583e9059132d52f",
+    "STL/Ver.1/body11.7.stl": "be01b53cc6e9d53ae63086cd04238adfe2cfd6ff0b64c05a26e41e657e715019",
+    "STL/Ver.1/body11.8.stl": "f393f2b826bf7308684631c26ccf325431b1eb3728d81acc1eed60d1de2a54fd",
+    "STL/Ver.1/body12.1.stl": "5a1404b7d2a5bfa77922e765b5e2026f4ceab25bc141640d3081a2c502f6035f",
+    "STL/Ver.1/body12.2.stl": "03fa5e9e2e414501a453162371d8f31cf924c1159a94053b088011a55bec44a9",
+    "STL/Ver.1/body12.3.stl": "1a723b5db97cb664a61ad193cb1ffb437234c30ae91f7c174f6a2193ec1115a3",
+    "STL/Ver.1/body12.4.stl": "e65c9416ebbf11f08caa367bd1074621e55ee31f4052ce2711b7573e6209a1ff",
+    "STL/Ver.1/body12.5.stl": "c771dc2690782f71445aa4240be49630594985b2bec7f9d23600157edeaf63f9",
+    "STL/Ver.1/body12.6.stl": "f73ed707f85da627d0d27ee7b76f14855af47b5e8bd2bcf18a8387f5aff72d70",
+    "STL/Ver.1/body12.7.stl": "5efcf99513654f0f79b57f20538882fdbf6acb8b3c2a3d441e3de53a3fd6d57f",
+    "STL/Ver.1/body12.8.stl": "dd7e324fa2aaa3096ccb90927aced803e8298aede804ef10220b8d5aba93f45a",
+    "STL/Ver.1/body2.1.stl": "7dfbb734e57b724d9a4194fe2be300debdf3138e57436a83c8bbf6e0412e5a3e",
+    "STL/Ver.1/body2.2.stl": "64b10891e43d7d5e1bebfc4bee8becc04fa29aa59df80a733c87e35603f0b9bc",
+    "STL/Ver.1/body2.3.stl": "6a3576e4afa8307954d29c487a716339838d7b316a43f61ff8b512696f3d0402",
+    "STL/Ver.1/body2.4.stl": "16561e6110ebe75b6e38a008f2f6e9df730d75f53a4cb950c7854597657f1c3d",
+    "STL/Ver.1/body2.5.stl": "99d741c490af2ec415d23fcc87896b5e5af5127d37aa8fddb58562fd073791cf",
+    "STL/Ver.1/body2.6.stl": "9393c7fdf13b28ad4b804b3852996ad1d2c9b0870572beb807819bf9e1924d0c",
+    "STL/Ver.1/body2.7.stl": "24dd5239fd65e4cd0833dd01d482b4e9b244df453890a17e04020c9da427d4ea",
+    "STL/Ver.1/body2.8.stl": "1f8cc10848066bf92488fecbab92da4125a906932381b0ea14a905f248c0172a",
+    "STL/Ver.1/body3.1.stl": "79c5df174c61ff68e0288b95a1c66b8c2cd771194ef58fe364fb7453c76c7b18",
+    "STL/Ver.1/body3.2.stl": "7d02a37cab4552bff91a33d26d1de8e238e84e5da62c56fc39be0477d4c29b38",
+    "STL/Ver.1/body3.3.stl": "d4b5a9688db38abbfd86c20763a7e72c6330065098e88d57366315e265480891",
+    "STL/Ver.1/body3.4.stl": "e5953125fd933a926a47f07b978b467ab976ae3738d3d812c98b79b62c48a621",
+    "STL/Ver.1/body3.5.stl": "d38382b07d142ccb1ee99cf4e6a4a22b0f1c87e51995f099dd1af96b82a16d21",
+    "STL/Ver.1/body3.6.stl": "96e8dd95a261eeca84a4c3d1c3362492d99f0edde0269b96ebde94442d14e385",
+    "STL/Ver.1/body3.7.stl": "cf280ebf6faf531974b43aa66fe18e340bbac5fdd9ddeac5a85b638baf919dd4",
+    "STL/Ver.1/body3.8.stl": "7647288a3e4b8c5e525af9383d58a2ed40d8c212a236c2b98f74e90a5a3c509e",
+    "STL/Ver.1/body4.1.stl": "7b7d5bd9d28cd8426d0d533fb0ef823300148c2aed88ef1518738427a51fa445",
+    "STL/Ver.1/body4.2.stl": "19304bf0cfcf7bfa02bf78c8a44b3c53372ff02a113dd6da229b62e3fc21bdec",
+    "STL/Ver.1/body4.3.stl": "936b108c8462e4d2c91e794d3aed31706be26815d83b2bbac89e8a228a19f89a",
+    "STL/Ver.1/body4.4.stl": "718f81a1d29d332612694ac72ee728cc5c4b791b9999cd3448525b6d04dad279",
+    "STL/Ver.1/body4.5.stl": "2bdd97eee7496570024bd47bc042181ee88e44eb10be46d1a9ded47a72561783",
+    "STL/Ver.1/body4.6.stl": "451720ef17e1741f9ade567fd368bb7ba8289c3d09b5a92cf059b8cc9b3b47b2",
+    "STL/Ver.1/body4.7.stl": "42f8fb70fd085bf5c849c666bd9dbfab0650f3024d8e98f6bd4c373400ecd672",
+    "STL/Ver.1/body4.8.stl": "6b4580480e0eb1805962af787d8616fa564f26ecb4c57bac9beef1916e4ef82b",
+    "STL/Ver.1/body5.1.stl": "811519018ae1550c5289c54397a1108907de829a5a7aa3c54718512c0d17dc20",
+    "STL/Ver.1/body5.2.stl": "1b6559e2762a9f13f43ad8f555e0380245727c925f1e3eeeaa0a11c304ff74ed",
+    "STL/Ver.1/body5.3.stl": "8c30fd4eae6f91d0c57af7e145960bf6ac5febc712a57a4ac4dac297650f9d62",
+    "STL/Ver.1/body5.4.stl": "63cfadc3096cf63ede5c22f0522a9156a24b09821a0154ed6607a937d2f9d378",
+    "STL/Ver.1/body5.5.stl": "170bfa21a7bbb1a31be6b1c65a6cd3f0e682e60c2f6483e694ce7c3456f34202",
+    "STL/Ver.1/body5.6.stl": "0e717a5c6f7e7f22a6143bd921bc9cb6bab065c034bec6affde81b6aaeae8503",
+    "STL/Ver.1/body5.7.stl": "5d2ec669afa73bb6c1d54c91ad7ca6e629525143ba73ebe03a7ffede5a5689d6",
+    "STL/Ver.1/body5.8.stl": "87731d090c5432a08453678e83670899abdac286f09f042a8b5a6f6293ff6335",
+    "STL/Ver.1/body6.1.stl": "3dbafe4cbbb2e269961c7e8d529d2e93dca827a433ccb3cbf6b15765a6d30265",
+    "STL/Ver.1/body6.2.stl": "759ffccef5e2261371597b08de2d3b4632748d55a9b73e83bb1b01b0ecf814a9",
+    "STL/Ver.1/body6.3.stl": "914424157b17dff911e3573ed804e1c222b6c4a6ae15dcad073e58dfd364f478",
+    "STL/Ver.1/body6.4.stl": "00c51ae6740168680b7c2f97a88ae25d5bea29f2bce2d8715afc19972db8ec5c",
+    "STL/Ver.1/body6.5.stl": "a2c1453cdea0dbe06ca60a6dd46b1d57c595f042ca7137bdd7215855d44e3a47",
+    "STL/Ver.1/body6.6.stl": "2b177f787d90792a5dfdf55b7936560fb3dffc40f8b5160bcb51cdc490e03d93",
+    "STL/Ver.1/body6.7.stl": "4e02544482060869651c42432cd87c936b1578d0432d90db77b1ba8326188ec5",
+    "STL/Ver.1/body6.8.stl": "fdad06acbcc786716b2117815b2afbb8da241b489af4f5a25b8fa72956b8065e",
+    "STL/Ver.1/body7.1.stl": "9f59af00b14390fe2ed8ea4aa5d40ff56f5d9f4dc19749a32271d01186789955",
+    "STL/Ver.1/body7.2.stl": "ab2e79a5123c108e20bcf0791882d86392678a42036d4feb4ffb4a3401a7ca09",
+    "STL/Ver.1/body7.3.stl": "00cc63ec66f2bd538f4521658d6d78926c9027af355de4227b881021a2f73ec4",
+    "STL/Ver.1/body7.5.stl": "dbf5fc1078b333abe0245286795af8936cd736dd31fda6ad4f100bc376660780",
+    "STL/Ver.1/body7.6.stl": "709a031f3a6105225a021a5b6f832a79d776cdefb0d78a37beea069d7b667d24",
+    "STL/Ver.1/body7.7.stl": "46ab6c2af16316d20e080c8f6cd1bfc8d4830473c7889196019a3ef4534d09ce",
+    "STL/Ver.1/body7.8.stl": "ee970d013465d59d429c28bf459768d668e668880d2886a30fb60fc8732314fc",
+    "STL/Ver.1/body8.1.stl": "cac0ca4882a7941ce6b0a1e154108359fd7cea1a970b26bfc39c9dd656ad089d",
+    "STL/Ver.1/body8.2.stl": "9b2a5aaf6fe9cdc84f115057c62724f752c9a26168385b8311c293ddc59d3965",
+    "STL/Ver.1/body8.3.stl": "9f13e25d96f8a5f3c572d3aceae94fe5edea4e69a3a204194976568e6956c952",
+    "STL/Ver.1/body8.4.stl": "4fa05820525ec046e358646a55830a1558c5c34fc5130813a33ede0f02b8ed5b",
+    "STL/Ver.1/body8.5.stl": "d2ac0dcf27aeb0925043a8936543ef02bbaa2ba17d20df996976a13cce652a04",
+    "STL/Ver.1/body8.6.stl": "4525c7dd9e9ed8e3355ae294a4831a09ca506bf0c3dd57b0f200414f2dd700f6",
+    "STL/Ver.1/body8.7.stl": "449669dcdc4dc553d34f8ec6e219bc8992816ed973966a53c3e85674addc5f18",
+    "STL/Ver.1/body8.8.stl": "bf4acf5e8ed326428f40241973b2fb39959bf7b075531654cb5dcffe68bd03a5",
+    "STL/Ver.1/body9.1.stl": "c4dae27d85f0397552282e5d3b7123b3de43002cf2433569a5ac3c879dc22de0",
+    "STL/Ver.1/body9.2.stl": "aacadca6fc89cdaeb4808be3b0511c0bad50fdee6ed8b9e6e9f1d2c9c90f3d0c",
+    "STL/Ver.1/body9.3.stl": "60a22b13f181971f4ec596e438a3375b05ad7c2f1602e268171104a55533772f",
+    "STL/Ver.1/body9.4.stl": "de102f10bfd6c83d517697987fbbac70b79a4bb8fd746192970fe67e5b7b69d4",
+    "STL/Ver.1/body9.5.stl": "5b73a32abdd185d41c8f49aff09286570c8158b529f6406ac5041676a02900a2",
+    "STL/Ver.1/body9.6.stl": "a46db31ec4b74b2426957eb541d8a3e3c38df71acc1d2a45c975c88919538ed3",
+    "STL/Ver.1/body9.7.stl": "23a23f82ea40ab068f2bf3a21e13de73095a9eb8a893b93c7bea0e0255bf4201",
+    "STL/Ver.1/body9.8.stl": "3b389fd5c98112d5ee16ad7ad2751a3eb6c9831e845fce740d77dba4c184d887",
+    "STL/Ver.1/edge1.1.stl": "48b36c350f668bf2c0f86eb5e6d47fb2432713ca256069f25c6ea13bb1cc0125",
+    "STL/Ver.1/edge1.2.stl": "b923e175bc065f270c411de7133ab77a1b828e4b494ec528d2aa1751eb202729",
+    "STL/Ver.1/feather (1).stl": "8f3e52bcfbcfb197b4f57f382dbb9b498b91f648e62e91d6c610efbab8f3e5b3",
+    "STL/Ver.1/feather (2).stl": "d340dac67e678b608e9931071f2d98590d389ba0da0735e9c85b7e395488d400",
+    "STL/Ver.1/feather (3).stl": "09fdbf71285c99febe0385da5713f4e7d29b9780685bc430cbbaf028d76e9f23",
+    "STL/Ver.1/feather (4).stl": "50609ff5700a76618082dd8da77a29a93e9121f667aafe9b963cb98db0d0e3b0",
+    "STL/Ver.1/feather (5).stl": "6ab5f260e1af58b993383acb96f12a160abdb800f169e3f2c87a6b10fb6a6458",
+    "STL/Ver.1/feather.stl": "aa3e031bb38c2aab3794073a9bf706f85f433e3d6c4eedb0a1c65375efc8c568",
+    "STL/Ver.1/stick (1).stl": "1926d1e77650a58a788cbfd188500c315694622cde028202d04c89c812edd9c5",
+    "STL/Ver.1/stick (2).stl": "860fef3f40e05164a72d80a34e2e2898ec03007cc98dfce7ffee5bf6a6e9e21a",
+    "STL/Ver.1/stick (3).stl": "87151fc7fc467dd5b281e1eb5385197f8e68d784eaf6fcc226233fdf726a6d81",
+    "STL/Ver.1/stick.stl": "b9368383b37049077a2368b35e51b013af482786c8399a408db90cc70d8d2af2",
+    "STL/Ver.1/wheel1.2.stl": "6942ab568f906d5f11c8d0d72ed59035fd98d92ee85e902116f067d0b5dd260c",
+    "STL/Ver.1/wheel1.stl": "dc429afde54ecb0a96080dd4c06a3135cc8b397c355d3b0c128f6a8d32ead333",
+    "STL/Ver.1/wheelpart.stl": "5f25884fea530f3946b136062e4a2014024aec380c7da9300cf8ca110b176f21",
+    "STL/Ver.1/背骨1.stl": "28c82b0b96e6cd9055d8755f63569a54ebfb6c87012a997bab49c963acf8ec83",
+    "STL/Ver.1/背骨2.stl": "4f5749061c49edf248420a8bdacad4f767078780e9eb82804d1c2bf61eb9764d",
+    "STL/Ver.1/背骨3.stl": "cccf726a170bb6de59feaf1b2ea0432f751cb20d1091df2afc65da53bce32ad4",
+    "STL/Ver.1/背骨4.stl": "f2634c30f26697f50f6484b05ab59f15671b4b1530730f9f80479c0de96b4f05",
+    "STL/Ver.1/背骨5.stl": "75abf99407e39c20066d47f6de24854ec5d84939572d926a523d6d8f75c2e577",
+    "STL/Ver.1/背骨6.stl": "e06114236682cadaa7e96f29f305599e3191724ff00e80823b5f7fb8972e7883",
+    "STL/Ver.1/芯1.stl": "7826aa456c1687e990c1acc0e3968addf6a4edfff0790e7cd097daa1ccc6fd80",
+    "STL/Ver.1/芯2.stl": "17dff08b85b6831c2154a895e623dfe4802499710464fa5a12ded4e11899b260",
+    "STL/Ver.2/Crankshaft_Part1.stl": "423c0cbbe167e842408816b41c4ef23aa6bd1368adae113ff230181a51e3caff",
+    "STL/Ver.2/Crankshaft_Part2.stl": "6a15db77ef2345e49c6bfa43d9ca0924d40500c9b91e4567f86d9a8f3740f8f6",
+    "STL/Ver.2/Crankshaft_Part3.stl": "77fd57437e663232e11fe037a49ca6b186dcaf376385cf55338c2a445e0b73db",
+    "STL/Ver.2/Savonius Low-Profile Wind Turbine Model (Part 1 of 3).stl": "1ac6db404f5d23370e00738e70f7bf2cda44463df701228b5bb023f9a8c71ad5",
+    "STL/Ver.2/Savonius Low-Profile Wind Turbine Model (Part 2 of 3).stl": "a91e70b4035a6fee475bcc78da1795956a4412e82f193fb0bb5a2c059643596c",
+    "STL/Ver.2/Savonius Low-Profile Wind Turbine Model (Part 3 of 3).stl": "387e49349cfd3b2b93c00b339e9392b3099e095d1fde7b6acae7f28635031ce9",
+    "STL/Ver.2/Six-Blade Wind Turbine – Part 1 of 3.stl": "63eeb9da5745565db540a4d5fd6d9b44d97113530e5825e18d393131b289953e",
+    "STL/Ver.2/Six-Blade Wind Turbine – Part 2 of 3.stl": "6414012dbff4ea15ede4de727dff265043efc25fcd7d0bef99a146e5d736b1a2",
+    "STL/Ver.2/Six-Blade Wind Turbine – Part 3 of 3.stl": "7dfdeab92127b54e11b71e6ae96a811cc6a4072861bfce228efa503e1ead4a1a",
+    "STL/Ver.2/cap.stl": "046672b54ec380f5791b9f245d65e9d50e05ed8f58d3c9e57447054a2bd48f74",
+    "STL/Ver.2/cap2.stl": "6fd27501fa14cb642a8dbf709de9b169fa6e499ebc0ec76279cd159f78e14fdd",
+    "STL/Ver.2/cap3.stl": "2d2b2e62ec27cd2c1dc1d408233f7a13d3b8cbff857bc7d876dea2132739ab70",
+    "STL/Ver.2/edgev2A.stl": "12b818755d470486572b4e31fbccc06b115a27459e95a1ea09e67548e49954ad",
+    "STL/Ver.2/edgev2B.stl": "550573a7ad9f57ac973cbef0cdd87e760c5697d7115c0cb2301ae66b1c415daa",
+    "STL/Ver.2/edgev2C.stl": "d3bd3e204a92834ee7211f565fec014a1736e2fc2a7148607330f915b4f05464",
+    "STL/Ver.2/gear.stl": "c0e8dcc1d00b7f06a650334f36564654bb3418474fa6ab0ac6f75c115e9d8c76",
+    "STL/Ver.2/gear2.stl": "198becc191f3262e029a80883942d2a5465c3f4f47ea1c4228d4cc8ad4484f8f",
+    "STL/Ver.2/gear3.stl": "84226894d3bc631fce03f587ac1a94913bea7f69cd058cf10ccd4b343999256f",
+    "STL/Ver.2/gear4.stl": "8c2d1b9d96b29e6acd1dad589c9a959c7e942979ae6b5e9ac85e2a5639233983",
+    "STL/Ver.2/gear5.stl": "47c711da5cb0873ae7a1a7bf90cc23ab504c684cffba0ff3df3bef6f3d8f1b32",
+    "STL/Ver.2/hook1-2.stl": "d49acc367e67e231edaaae48cb98de992bc473fd3fe486fb35a2ad5146bc0c42",
+    "STL/Ver.2/hook1.stl": "ef779577f9f6a66196704d1cb19102f12615fcf6ea88834065957ec30e5f4020",
+    "STL/Ver.2/hook2-1.stl": "7f5f4f03bf99ab617f58d47a810450df2beeb885f11a81d25b6e81c4920590cb",
+    "STL/Ver.2/hook2-2.stl": "d3a79178c9f8cdc1715cc9a9d84c964b17af552d022036139dfe13df0095dc32",
+    "STL/Ver.2/support.stl": "40278373c9b7547772fa98d9f014d0d846accff5eddefbbf62b251f54a0a189c",
+    "STL/Ver.2/ボディ.stl": "28c005e7025f135558247f5392ee522b16fe11687e66e30fe9dfe2fcad60f31f",
+    "STL/Ver.2/ボディ2.stl": "5cd97c55d25d73a9f1080f547a49c44729b8fe77f21df972445790044488de8b",
+    "STL/Ver.2/ボディ3.stl": "7d72a5a7872325f814a4e6b4e7f1fda9d39e49b993f785fc1b2cadbcbce56b71",
+    "STL/Ver.2/ボディ4.stl": "690d985d1d763e52065dab913853d18d868e3742d1520ec16c607aeeb8c4a559",
+    "STL/Ver.2/ボディ5.stl": "4bd6cada7b9a7c3f7b09bbd872a4c662b8d0bea9d3d4b8e4cd6a9eaa453e6f63",
+    "STL/Ver.2/ボディ6A.stl": "850ab018ab0de1dc92e23668f978f01aff3939ebffcf49137878dc6b93edffe8",
+    "STL/Ver.2/ボディ6B.stl": "d09f0e08031d39e8b75a8b3775e077a0384510cc61e768d68988bc15f2f880dd",
+    "STL/Ver.2/背骨V2.2.stl": "2f31056344bce7e1c38efb334d787b102873ca28954166dbf3de1978707e5e4f",
+    "STL/Ver.2/背骨V2.stl": "3bbe6967dca3bfe3f690c34a3f7f35b34ed850350045d29d43931ebeed840869",
+    "STL/Ver.2/背骨v2A.stl": "ea6ae60cd515b25b6590378292b9a7ed811ad45bcf05854b664c6c319d5abdd3",
+    "STL/Ver.2/背骨v2B.stl": "64fa1fce8915de41aa97b1a22930a2ded00f1efa0b98e24ce104871a03a35888",
+    "STL/Ver.2/軸制御.stl": "6579bee78b35d52ff64f629d3e8e637b821e0e87dfc9cbe8ad335ebcfc048313",
+    "STL/Ver.2/軸制御short.stl": "3764bd86276f11a03eba2fd605ab1697339fbfac1b130fbfa722b5ecf374f720",
+    "docs/images/2339528.jpg": "023dd9660d0f331448b294ffac77c9b6b6b286db5c03e24e3a78df412d8b6bc1",
+    "docs/images/339.png": "93a8d564b665f64ddc540b0e9dc1cd92d139a383bde161f23d78365ca56f2441",
+    "docs/images/87809_0.jpg": "2d223a01415a147f8083b98f8d9b869c205cd4f860bcd74d0774d510a795456e",
+    "docs/images/87810_0.jpg": "797a4e3f463b84357096b9fb7b2b7ccb69f498d08957c69e0ba09e4490cd42ac",
+    "docs/images/87811_0.jpg": "f92d4404f027137e458dd84d578d4eaf465a9a7e6e3d6cc68069cd1d07c92cf5",
+    "docs/images/87812.jpg": "d2409d4f10cf99d2b255ab81449ec169b2202ca507bc5f12463e073fc868389e",
+    "docs/images/87813.jpg": "25cfb7803d4eaf3367bb680ff4f7fe5249e5f7ffb74bf14819f32c734922d69d",
+    "docs/images/87814.jpg": "6d4c92096e047605c726e826c7822b4ebbf5bab32b361e0998e72589c8e63868",
+    "docs/images/87816.jpg": "c64ed6677c12ee12a4bf67441aaac306745c5c887267d35633b3955697e3db81",
+    "docs/images/87817.jpg": "fe24373978ca808929e89da4f0f3ac73118462345ca94165bc41f44d2568daa1",
+    "docs/images/87890_0.jpg": "78e0e776d59e9da9e90b91673deb901c513903495661e88e9f0ac6cb2db13a8f",
+    "docs/images/88059_0.jpg": "126e9028197c6ec33b5d53406221515a73234e7c1982c0f7ddb2442d95c018d0",
+    "docs/images/88060_0.jpg": "5ea0226923fc7041150c73dd6d7413bd15c06329902eff731329617ed0fb6d3b",
+    "docs/images/88061_0.jpg": "64e0bcc8a68929eb848dc6faa999ad7e367d1bf6701b8c32cd76722d4f91eff1",
+    "docs/images/88062_0.jpg": "25532cc3c8dfec89e14a9ee7db0e5bf58c2b6d591ec1c502dcbe29198d56cc78",
+    "docs/images/88072.jpg": "6ebcec1223374e8d7f19ee54594c810ac8633d3e82d4ba50aec8dba7db9074dc",
+    "docs/images/88072_0.jpg": "6ebcec1223374e8d7f19ee54594c810ac8633d3e82d4ba50aec8dba7db9074dc",
+    "docs/images/88073_0.jpg": "28b8a496e0cbf42960cb0c98607ff41e9591dd27e2dd1a587eaa011e755667f1",
+    "docs/images/88074_0.jpg": "05491dfe34bcd9ead8421543fae908a1becc253a4aa66faff4a4045dab2766c3",
+    "docs/images/88075_0.jpg": "d533f86d475d9954611c1df07a59ff26247f1fbec750b3f0e2958787d37983a9",
+    "docs/images/88076_0.jpg": "1a42df25530fd14f4e45862e787d5b305df9cd448ff4fa014793e67c0e9a2064",
+    "docs/images/88089_0.jpg": "2db3dfc2f7921de90be3fcbabc1422df76a2c85b178ee4b2bcade0467339395e",
+    "docs/images/88187.jpg": "28bd25a4380b6ad34f7af68814839de2f51ebf63d198bd6e8620504d41988a8f",
+    "docs/images/88208_0.jpg": "2a9ae5d85273254768775dd37581e0cb477dd010a1b930fa2c5dc569957167d9",
+    "docs/images/88209_0.jpg": "9196af6a1f055dcdedd51245ecb5d8a2c0993522bbbc5a9106c5d8456e56915b",
+    "docs/images/88210_0.jpg": "e39c4e6333da9f6a69d50da1a4e46b4aade3402d81939afb18df662f50c71532",
+    "docs/images/88476.jpg": "aa50ecfc9b98d91b6b3dbc4dc009e94cb062c885bb1ec029a40791e9f72c6aa1",
+    "docs/images/GD1.jpg": "ae933eaed6240ac7a2015eb39dbc1e7048b7db1c1de964faa5521b4268c7416f",
+    "docs/images/README.md": "51e2393bf7efbd630dc7adcc99f04670959fa4c836404936d630e812e1ab1325",
+    "docs/images/Wheel1.jpg": "558ad2f91e3a53811ae7d8cbc8dfbb4d02cc2c3d9dd7f3ba26b2cd7541c8472b",
+    "docs/images/Wheel2.jpg": "db63645b9815a560fbe30486f259176ef50a4ff318c52005964f4e9e25f26daa",
+    "docs/images/Wheel3.jpg": "9543efc7f7c028e1d61d1e54a70f9aff152340a2c786297a2ad6fb2b2fbd5754",
+    "docs/images/hook.jpg": "e2932f12cc31e15dbae725414c7fe9f9ed2c1a783b263df3b0a4280cdb1333b8",
+    "docs/images/hook2.jpg": "3bc077f2c04e7f52681bc6488533c7cf451521978ec4586c0d7c66173c7c2db2",
+    "docs/images/テオヤンセン1.png": "c1d172a0dba4e81aa1238e0969ef55aaad88158685c2eb36a306e9d289a4cd48",
+    "docs/images/テオヤンセン10.png": "199297c58cdde83e3554dfc3b7eab712797cb0aefb49ff9c1205ec1974d61ad9",
+    "docs/images/テオヤンセン2.png": "b4ac07cdaf0e31a45d9822391a7f8eae2aedcb731299623b81534658153c438c",
+    "docs/images/テオヤンセン3.png": "bfb9b47223af1428dc23c1a831f24d370f555b68b14b0b4f13752239ff42b903",
+    "docs/images/テオヤンセン4.png": "453d5952006ee410118c72b93be9eb51a24329e8dce1822d1dd5d3faa3cc6d6c",
+    "docs/images/テオヤンセン5.png": "45744a88a751233f6332386e35b9a22ec695f2c35652e89938a7f64bc98e5643",
+    "docs/images/テオヤンセン6.png": "fbf0c2298cdd8247618fca5b58bb4444497d32a9c8fea5a9192e8e3737947842",
+    "docs/images/テオヤンセン7.png": "7fe7c8595b3ecf799198ca5cb3c2781fd0e60ebd638b687377024a120a619614",
+    "docs/images/テオヤンセン8.png": "4b0675a5dda5f7dc10848651ac62b2a99b1e0e837ae8f288c1cf401522726280",
+    "docs/images/テオヤンセンv2joint v24.png": "b7f3f9931342f64f48ff642a3adcb81520bb140b2134c934807fccdec1c25ca7",
+    "docs/images/テオヤンセンv2joint v25.png": "a09dd3d7f5d5aa91760368230c50190ef7be315dd353192816641366e684e390",
+    "docs/images/テオヤンセンv2joint v2555.png": "04905094c435554fcc1a670a0243d4c5fd68f57e5b345b2cd6756c3f915d5e1f",
+    "docs/images/テオヤンセンv2joint v32.png": "c096cc85d8ea5ff123107ae49fc124ff11e105570452b0447ecdb9ac7b050c16",
+    "docs/images/テオヤンセンv2joint v322.png": "db069aa83490fe943bad99074d56c6db611dd2ebc1f467d229836ed97d399659",
+    "docs/images/テオヤンセンv4joint v15.1.png": "bee4caf44c867285b3967b2cb47770c00ceb082330577467e6590e6ac6bec82d",
+    "docs/images/テオヤンセンv4joint v15.png": "137afdcc6bbb9e27dde82fecc8fe99801815162e87cba6960edf84ced0c4da7a",
+    "docs/images/テオヤンセンver1完成1.jpg": "f087a4e76cfe48621df36c9456272d7e000d5d8657287ef9e0d3a3654d0347fb",
+    "docs/images/テオヤンセンver1完成2.jpg": "5c85c9f816dee0070deb5738d4cadd034ae4716d14e5a95c8a81c0b2b9841b2f",
+    "docs/images/テオヤンセンver1完成3.jpg": "2515d411c08bd13fcc498e0c9d541df73c1168a213dd7591188b8e110aa31c93",
+    "docs/images/テオヤンセンver1完成4.jpg": "fe96f3f9e2a36b9d2bbb4ba2191e333cd7903f6052f5d00d38698961053ae4bb",
+    "docs/images/テオヤンセンver1完成5.jpg": "04fe591b187292313a870610e7b4d5f7ef866372b49662f276a0a3711b1f2526",
+    "docs/images/テオヤンセンver1完成6.jpg": "d8c7b10e81999b951dd9c74ba806fce2e104d7411ee215b2b356e9676a95b58e",
+    "docs/images/テオヤンセンver2完成1.jpg": "7e8497c07a3bf5c7e1cc64313520328f85c25734557da356e103368c5451b293",
+    "docs/images/テオヤンセンver2完成2.jpg": "267205d50f6524d7c61ada681601d884d2f29eae8f1a698190ad98bf94304b29",
+    "docs/images/テオヤンセンver2完成3.jpg": "5dad6edcf8efe2a2cb076d59cdb1bfd31707687d6168fcdf4961c6100b0f1bb6",
+    "docs/images/テオヤンセンver2完成4.jpg": "3183e612439df9154c7f364a56b619e3fd2251ba6e07e8412fc3c3013450a22e",
+    "docs/images/テオヤンセンver2完成5.jpg": "7cfb6995608e0d51351770c583beab1ef714255f4e468834be499de36ad8590a",
+    "docs/images/テオヤンセンver2完成6.jpg": "fcc3b8601a69f1dcf864e4586134226902f3c7bc76fb29354527ad5c320ea0c6",
+    "docs/テオヤンセン2Dv1.pdf": "0afd1a34352ab9fbfe220e341e75e5c71769f8575ce5b9bf27807486b9913535",
+    "docs/テオヤンセン2D図面最新.pdf": "49de1c6ed53ec255e4f26b4596f789d04a75d1b04dfeb4eefda74947239bb689",
+    "site/app.js": "09ef2b0555dcbf2d3f4e664c168ab036d59eff83161a8380934a76ad21d22f26",
+    "site/i18n.js": "11279b778c171018040e9c8dec68baadddbf89e4aa69802cc8acbc8ef0778ecc",
+    "site/production.html": "6c1fc00d54871419f23d68d4b23f3a1d654711cc55731245a3e7b16343de1bc5",
+    "site/styles.css": "c9f936b42e9b21f4f50219c871938aa82dd0f7fa6beb29077323c1040eeee3fa"
+  },
+  "readme": {
+    "README.md": {
+      "prefix": "fe5a9ec4cae9307b2dc0a70f453b8b8cccb5d604995ba41d23e78695af7e5b62",
+      "legacy": "88e237b3151b3896659b3e6429beb0fcc7770c30d0b2b359534e146c6a8a725a"
+    },
+    "README_ja.md": {
+      "prefix": "7cc9c4f1606d93b54b2ecbfa523697f718f7b603241a6b31a7550894c790d9a9",
+      "legacy": "937c571437e6bbd45ee7156be91e0a5be25583c13ce69f3ee50b94e8ce8f08d7"
+    }
+  },
+  "renderedProductionSha256": {
+    "production.html": "80bf97fda599f7be4152cccc53bc02e6caab8e728bb0da8a98877a153c189b7d",
+    "en/production.html": "3d2e54a61261d78e545b27d100fc3baff86a9db7f80ab4daf628ba7ec96678aa"
+  },
+  "homeCompletedSections": {
+    "index.html": {
+      "ver1": {
+        "text": "\n      01VER.1 / FIRST PROTOTYPEつくって初めて、分かったこと。Fusion 360で形を起こし、出力・研磨・塗装・組立まで進めた初期試作。\n      \n        画像を読み込めませんでした。原典リンクから確認できます。Ver.1 · 実物の完成写真 原典画像 ↗\n        \n          実物あり・過去の記録\n          風車から、脚の動きへ。\n          六枚羽型の風車と歯車、クランク、リンク機構で構成。観察した形をまず自分で再現し、メカニカルな外観にも工夫を加えました。\n          一方、制作記録には、風でうまく回らない、軸がぶれる、手で回すとフックなどが外れる課題が残っています。ギア比や支持の考え方を学び直すきっかけになりました。\n          初期の六枚羽型風車と歯車伝達3Dプリント・表面仕上げ・塗装までの実物制作トルク、軸支持、抜けるフックが次の改良課題\n          写真でたどるVer.1の製作工程 →\n          既存の組立動画をYouTubeで見る ↗既存の動作シミュレーションを見る ↗Ver.1のテスト記録を見る ↗\n          外部動画はクリック時にYouTubeで開きます。ここでは動画を新規投稿せず、過去の記録を今回の実測結果とも扱っていません。\n        \n      \n      出力して終わりではない、実物をつくる八つの工程。動画・画像からの情報収集とFusion 360設計。ABS出力の向き・分割・サポートの選択から、#400 → #600 → #800の研磨、超音波洗浄、接着、ブース内のエアブラシ塗装へ。デカールと艶消し仕上げ、ステンレス丸棒の準備と組立まで、作者の写真を工程ごとに整理しました。出力・研磨・洗浄塗装・デカール金属軸・組立Ver.1完成写真6方向主にVer.1の製作ログに基づく当時の記録です。写真ごとの倍率や、原典にない印刷・硬化条件を推定してはいません。\n      Ver.1の設計CGと実物の違いを見る画像を読み込めませんでした。原典リンクから確認できます。Ver.1 · Fusion 360設計CG／実物写真ではありません 原典画像 ↗\n      Ver.1の原典組立参考図PDF詳細参考図PDFSTL一覧\n    ",
+        "images": [
+          {
+            "src": "assets/v1-photo.webp",
+            "alt": "六枚羽の風車を備えたVer.1実物の斜めからの写真。",
+            "width": "1050",
+            "height": "978",
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          {
+            "src": "assets/v1-cg.webp",
+            "alt": "Ver.1設計CG。屋外の背景を使ったレンダリングで、実物の屋外撮影ではない。",
+            "width": "1050",
+            "height": "788",
+            "loading": "lazy",
+            "decoding": "async"
+          }
+        ],
+        "links": [
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/blob/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/docs/images/%E3%83%86%E3%82%AA%E3%83%A4%E3%83%B3%E3%82%BB%E3%83%B3ver1%E5%AE%8C%E6%88%901.jpg",
+          "production.html#ver1",
+          "https://youtu.be/Q7d0sq1SNJ0",
+          "https://www.youtube.com/watch?v=RxUTcOTfPt0",
+          "https://youtu.be/Ic3GasmMlio",
+          "production.html#printing",
+          "production.html#painting",
+          "production.html#assembly",
+          "production.html#ver1-gallery",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/blob/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/docs/images/%E3%83%86%E3%82%AA%E3%83%A4%E3%83%B3%E3%82%BB%E3%83%B32.png",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/raw/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/docs/%E3%83%86%E3%82%AA%E3%83%A4%E3%83%B3%E3%82%BB%E3%83%B32Dv1.pdf",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/raw/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/docs/%E3%83%86%E3%82%AA%E3%83%A4%E3%83%B3%E3%82%BB%E3%83%B32D%E5%9B%B3%E9%9D%A2%E6%9C%80%E6%96%B0.pdf",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/tree/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/STL/Ver.1"
+        ]
+      },
+      "ver2": {
+        "text": "\n      \n        02VER.2 / LEARNING FROM MOTION風を受ける形、支える構造。動かなかった理由を、風車・伝達・支持・接続の四つから見直しました。\n        \n          \n            実物あり・改良と動作の記録\n            サボニウス型へ。ギアと支持も再設計。\n            カップ形状の風車を採用し、ギア比と歯形、ステンレス棒を支える構造を改良。フックには力を受け止める面を設け、外れにくい接続を目指しました。\n            READMEには初動と紹介・再検証の映像が記録されています。ここでの説明は当時の制作記録の要約で、特定の風速・効率・寿命を新たに検証したものではありません。\n            風車六枚羽 → カップ形状伝達ギア比・歯形を再検討支持軸のたわみとぶれへ対処接続フックに受け止め面を追加\n            写真と比較CGでVer.2の改良を追う →\n            既存の初回動作テストを見る ↗既存の紹介・再検証動画を見る ↗MakerWorldの既存掲載ページ ↗\n          \n          「何が起きたか」から、「どこを変えたか」へ。大小の歯車を並べた試作、六枚羽とサボニウスの実物比較、軸支持の前後CG、フックの受け止め面。四つの改良を、作者の観察・考察・実際の変更に分けて紹介します。Ver.2専用の未記録工程を足すのではなく、Ver.1で得た製作経験と、公開されている分割風車・クランクなどの部品をつなぐ記録です。歯車の試作風車の形状比較軸支持とフックVer.2完成写真6方向\n          画像を読み込めませんでした。原典リンクから確認できます。Ver.2 · 実物の完成写真（表示用トリミング） 原典画像 ↗\n        \n        NEXT QUESTIONそれでも残った「接合の滑り」。その後、風車・歯車と棒の接合が滑り、一体で回らなくなることや始動の難しさが報告されました。これがVer.3の出発点です。軸受の焼付きが確認された、と原因を置き換えてはいません。\n        Ver.2の資料STL一覧改良の記録を読む専用の組立PDF・詳細な手順書は未整備です。\n      \n    ",
+        "images": [
+          {
+            "src": "assets/v2-photo.webp",
+            "alt": "Ver.2の実物。カップ状の風車と脚・歯車の構成が見える。",
+            "width": "940",
+            "height": "1025",
+            "loading": "lazy",
+            "decoding": "async"
+          }
+        ],
+        "links": [
+          "production.html#ver2",
+          "https://youtu.be/T3U7c1Mr3Y8",
+          "https://youtu.be/JzXOxTJvHzw",
+          "https://makerworld.com/ja/models/1971139-n-gundam-style-strandbeest-ver-2",
+          "production.html#v2-gears",
+          "production.html#v2-turbine",
+          "production.html#v2-support",
+          "production.html#ver2-gallery",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/blob/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/docs/images/%E3%83%86%E3%82%AA%E3%83%A4%E3%83%B3%E3%82%BB%E3%83%B3ver2%E5%AE%8C%E6%88%901.jpg",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/tree/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/STL/Ver.2",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/blob/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/README_ja.md"
+        ]
+      }
+    },
+    "en/index.html": {
+      "ver1": {
+        "text": "\n       01 VER.1 / FIRST PROTOTYPELessons that only building revealed.The first prototype: modeled in Fusion 360, printed, sanded, painted and assembled.\n      \n        The image could not load. Use the source link.Ver.1 · Completed physical-model photograph  Source image ↗ \n        \n           Physical model; historical record \n          From rotor rotation to leg movement.\n          A six-vane rotor drives gears, cranks and linkage. The author first reproduced the observed form by hand, adding a mechanical visual style.\n          The build record also retains problems: poor wind-driven rotation, shaft wobble and hooks detaching during hand rotation. These prompted a fresh look at ratios and support.\n          Initial six-vane rotor and geared transmissionPhysical fabrication through 3D printing, surface finishing and paintingTorque, shaft support and escaping hooks become the next challenges\n           Follow the Ver.1 build in photographs → \n           Existing assembly video on YouTube (original language) ↗  Existing motion simulation (original language) ↗  Ver.1 test record (original-language video) ↗ \n          External videos open on YouTube only when clicked. No videos are newly uploaded here, and historical records are not treated as measurements made in this update.\n        \n      \n      Printing is only the beginning: eight stages of a physical build.Video/image research and Fusion 360 design; ABS orientation, splitting and supports; sanding through #400 → #600 → #800; ultrasonic cleaning, bonding and airbrushing in a booth. The author's photographs follow each stage through decals, matte finish, stainless-rod preparation and assembly. Printing, sanding and cleaning  Painting and decals  Metal shafts and assembly  Completed Ver.1: 6 views A historical account based mainly on the Ver.1 build log. No per-photograph scale or unrecorded printing/curing conditions are inferred.\n      Distinguish Ver.1 design renderings from the physical modelThe image could not load. Use the source link.Ver.1 · Fusion 360 design rendering, not a physical photograph  Source image ↗ \n       Ver.1 sources  Assembly-reference PDF · Original drawing (Japanese)  Detail-reference PDF · Original drawing (Japanese)  STL list (language-neutral) \n    ",
+        "images": [
+          {
+            "src": "../assets/v1-photo.webp",
+            "alt": "Oblique photograph of physical Ver.1 with its six-vane rotor.",
+            "width": "1050",
+            "height": "978",
+            "loading": "lazy",
+            "decoding": "async"
+          },
+          {
+            "src": "../assets/v1-cg.webp",
+            "alt": "Ver.1 design rendering with an outdoor background, not an outdoor photograph of a physical model.",
+            "width": "1050",
+            "height": "788",
+            "loading": "lazy",
+            "decoding": "async"
+          }
+        ],
+        "links": [
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/blob/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/docs/images/%E3%83%86%E3%82%AA%E3%83%A4%E3%83%B3%E3%82%BB%E3%83%B3ver1%E5%AE%8C%E6%88%901.jpg",
+          "production.html#ver1",
+          "https://youtu.be/Q7d0sq1SNJ0",
+          "https://www.youtube.com/watch?v=RxUTcOTfPt0",
+          "https://youtu.be/Ic3GasmMlio",
+          "production.html#printing",
+          "production.html#painting",
+          "production.html#assembly",
+          "production.html#ver1-gallery",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/blob/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/docs/images/%E3%83%86%E3%82%AA%E3%83%A4%E3%83%B3%E3%82%BB%E3%83%B32.png",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/raw/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/docs/%E3%83%86%E3%82%AA%E3%83%A4%E3%83%B3%E3%82%BB%E3%83%B32Dv1.pdf",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/raw/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/docs/%E3%83%86%E3%82%AA%E3%83%A4%E3%83%B3%E3%82%BB%E3%83%B32D%E5%9B%B3%E9%9D%A2%E6%9C%80%E6%96%B0.pdf",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/tree/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/STL/Ver.1"
+        ]
+      },
+      "ver2": {
+        "text": "\n      \n         02 VER.2 / LEARNING FROM MOTIONCatching the wind. Supporting the mechanism.Revisiting failure through four areas: rotor, transmission, supports and connections.\n        \n          \n             Physical model; improvement and motion records \n            A Savonius rotor, with redesigned gearing and supports.\n            A cup-shaped rotor replaced the original. Ratios, tooth forms and stainless-rod supports were revised; hooks gained load-bearing surfaces intended to resist detachment.\n            The README records initial motion and overview/recheck videos. This is a summary of that historical build, not new verification at a particular airspeed, efficiency or service life.\n             Rotor  Six vanes → cup shape  Transmission  Ratios and tooth forms reconsidered  Support  Addressing shaft bending and wobble  Connection  Added hook bearing surfaces \n             Follow Ver.2 improvements in photographs and comparison renderings → \n             Existing first-motion test (original-language video) ↗  Existing overview/recheck video (original language) ↗  Existing MakerWorld listing ↗ \n          \n          From what happened to what changed.Prototype gears of different sizes, physical six-vane/Savonius comparisons, before/after support renderings and hook bearing surfaces. Four improvements distinguish observation, interpretation and actual changes. Rather than inventing unrecorded Ver.2 stages, the record connects Ver.1 fabrication experience to published split-rotor and crank parts. Gear prototypes  Rotor-shape comparison  Shaft supports and hooks  Completed Ver.2: 6 views \n          The image could not load. Use the source link.Ver.2 · Completed physical model (cropped for display)  Source image ↗ \n        \n         NEXT QUESTION Joint slip remained.Later reports described rotor/gear joints slipping relative to the rods and difficult starting. This became Ver.3's starting point. The cause is not relabeled as confirmed bearing seizure.\n         Ver.2 documents  STL list (language-neutral)  Read the improvement record  A dedicated assembly PDF and detailed manual are not available. \n      \n    ",
+        "images": [
+          {
+            "src": "../assets/v2-photo.webp",
+            "alt": "Physical Ver.2, showing the cup-shaped rotor, legs and gears.",
+            "width": "940",
+            "height": "1025",
+            "loading": "lazy",
+            "decoding": "async"
+          }
+        ],
+        "links": [
+          "production.html#ver2",
+          "https://youtu.be/T3U7c1Mr3Y8",
+          "https://youtu.be/JzXOxTJvHzw",
+          "https://makerworld.com/ja/models/1971139-n-gundam-style-strandbeest-ver-2",
+          "production.html#v2-gears",
+          "production.html#v2-turbine",
+          "production.html#v2-support",
+          "production.html#ver2-gallery",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/blob/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/docs/images/%E3%83%86%E3%82%AA%E3%83%A4%E3%83%B3%E3%82%BB%E3%83%B3ver2%E5%AE%8C%E6%88%901.jpg",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/tree/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/STL/Ver.2",
+          "https://github.com/ktanino10/TeoJansen_Rhinoceros/blob/18dd3f40fb811b3d50cfa527b6fafbfa55a6e781/README.md"
+        ]
+      }
+    }
+  },
+  "publishedImageSources": {
+    "assets/hero.webp": {
+      "source": "docs/images/テオヤンセンver2完成3.jpg",
+      "source_sha256": "5dad6edcf8efe2a2cb076d59cdb1bfd31707687d6168fcdf4961c6100b0f1bb6",
+      "crop": [
+        320,
+        0,
+        1240,
+        1100
+      ],
+      "metadata_removed": true,
+      "width": 920,
+      "height": 1100,
+      "bytes": 76522,
+      "sha256": "62d2f722d177fa8cdad7b3e969131aeb2e10d810ca2956005fb24d368e65f9dc"
+    },
+    "assets/v1-photo.webp": {
+      "source": "docs/images/テオヤンセンver1完成1.jpg",
+      "source_sha256": "f087a4e76cfe48621df36c9456272d7e000d5d8657287ef9e0d3a3654d0347fb",
+      "crop": [
+        70,
+        0,
+        1240,
+        1090
+      ],
+      "metadata_removed": true,
+      "width": 1050,
+      "height": 978,
+      "bytes": 56154,
+      "sha256": "29033552d82f6dee2e6ff2abd1c963d8baeb13939391b6a7e15f43ff4faf21fb"
+    },
+    "assets/v1-cg.webp": {
+      "source": "docs/images/テオヤンセン2.png",
+      "source_sha256": "b4ac07cdaf0e31a45d9822391a7f8eae2aedcb731299623b81534658153c438c",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 1050,
+      "height": 788,
+      "bytes": 79788,
+      "sha256": "fcd6830072d47b0bfc19a3eee2ce2e34087e57a99fd5c70923b47c5ef0ce13c9"
+    },
+    "assets/v2-photo.webp": {
+      "source": "docs/images/テオヤンセンver2完成1.jpg",
+      "source_sha256": "7e8497c07a3bf5c7e1cc64313520328f85c25734557da356e103368c5451b293",
+      "crop": [
+        330,
+        20,
+        1270,
+        1045
+      ],
+      "metadata_removed": true,
+      "width": 940,
+      "height": 1025,
+      "bytes": 96294,
+      "sha256": "db7a3da954a0a07142a55eb30ca4e3896240db21f949093577408609f187f47c"
+    },
+    "assets/making-printer.webp": {
+      "source": "docs/images/88187.jpg",
+      "source_sha256": "28bd25a4380b6ad34f7af68814839de2f51ebf63d198bd6e8620504d41988a8f",
+      "crop": [
+        20,
+        0,
+        920,
+        1110
+      ],
+      "metadata_removed": true,
+      "width": 700,
+      "height": 863,
+      "bytes": 46512,
+      "sha256": "ab2254041ccc90027459d66710894faed7024fe8aa1e2cb512dc500b247113e4"
+    },
+    "assets/making-sanding.webp": {
+      "source": "docs/images/88075_0.jpg",
+      "source_sha256": "d533f86d475d9954611c1df07a59ff26247f1fbec750b3f0e2958787d37983a9",
+      "crop": [
+        190,
+        210,
+        1450,
+        1050
+      ],
+      "metadata_removed": true,
+      "width": 850,
+      "height": 567,
+      "bytes": 46456,
+      "sha256": "d3a80e0b497fc542dcbd34bdb146b025f8e3a079d8ffe73999116605422185c6"
+    },
+    "assets/making-cleaning.webp": {
+      "source": "docs/images/88073_0.jpg",
+      "source_sha256": "28b8a496e0cbf42960cb0c98607ff41e9591dd27e2dd1a587eaa011e755667f1",
+      "crop": [
+        90,
+        170,
+        1080,
+        1380
+      ],
+      "metadata_removed": true,
+      "width": 700,
+      "height": 856,
+      "bytes": 47280,
+      "sha256": "5f02f7eadfd5b602a400e25fcd0b55da9dfb5a5436e071540cbd4d08aa18b994"
+    },
+    "assets/making-booth.webp": {
+      "source": "docs/images/88072.jpg",
+      "source_sha256": "6ebcec1223374e8d7f19ee54594c810ac8633d3e82d4ba50aec8dba7db9074dc",
+      "crop": [
+        130,
+        100,
+        1350,
+        1020
+      ],
+      "metadata_removed": true,
+      "width": 800,
+      "height": 603,
+      "bytes": 44122,
+      "sha256": "8eef04dfee2d160ab4a07f929f81e49410ba080c683bed407ccff0e0aadfcd71"
+    },
+    "assets/making-airbrush.webp": {
+      "source": "docs/images/2339528.jpg",
+      "source_sha256": "023dd9660d0f331448b294ffac77c9b6b6b286db5c03e24e3a78df412d8b6bc1",
+      "crop": [
+        400,
+        20,
+        3420,
+        2950
+      ],
+      "metadata_removed": true,
+      "width": 800,
+      "height": 776,
+      "bytes": 52888,
+      "sha256": "3caea6e805e79a4ad47114e564a492c1265ed006a78bee34024a1dec88378707"
+    },
+    "assets/making-paint-prep.webp": {
+      "source": "docs/images/88208_0.jpg",
+      "source_sha256": "2a9ae5d85273254768775dd37581e0cb477dd010a1b930fa2c5dc569957167d9",
+      "crop": [
+        290,
+        25,
+        1360,
+        1090
+      ],
+      "metadata_removed": true,
+      "width": 800,
+      "height": 796,
+      "bytes": 90574,
+      "sha256": "77b25da2cdf60f3773e771d8cf89cea6bd1fa2202995f6fc74b3e567cc803d99"
+    },
+    "assets/making-drying.webp": {
+      "source": "docs/images/88089_0.jpg",
+      "source_sha256": "2db3dfc2f7921de90be3fcbabc1422df76a2c85b178ee4b2bcade0467339395e",
+      "crop": [
+        565,
+        30,
+        1310,
+        780
+      ],
+      "metadata_removed": true,
+      "width": 700,
+      "height": 705,
+      "bytes": 107516,
+      "sha256": "bb3644717c92358aff8ff368ac3729de66295c2f18f36dc2484160f2f837a7de"
+    },
+    "assets/making-finish.webp": {
+      "source": "docs/images/88209_0.jpg",
+      "source_sha256": "9196af6a1f055dcdedd51245ecb5d8a2c0993522bbbc5a9106c5d8456e56915b",
+      "crop": [
+        135,
+        100,
+        1410,
+        1070
+      ],
+      "metadata_removed": true,
+      "width": 850,
+      "height": 647,
+      "bytes": 45654,
+      "sha256": "4f7c996cc65d64ec1429f4ac84ff2a253e67da4d18d52f9a81cb2f562f5b0371"
+    },
+    "assets/making-decals.webp": {
+      "source": "docs/images/88060_0.jpg",
+      "source_sha256": "5ea0226923fc7041150c73dd6d7413bd15c06329902eff731329617ed0fb6d3b",
+      "crop": [
+        210,
+        235,
+        1360,
+        1000
+      ],
+      "metadata_removed": true,
+      "width": 800,
+      "height": 532,
+      "bytes": 87386,
+      "sha256": "1be558cc83b558c7db6f3b2f506e018b95b5d9ab4f50584adc75af9ae19e76ad"
+    },
+    "assets/making-topcoat.webp": {
+      "source": "docs/images/88061_0.jpg",
+      "source_sha256": "64e0bcc8a68929eb848dc6faa999ad7e367d1bf6701b8c32cd76722d4f91eff1",
+      "crop": [
+        130,
+        130,
+        1440,
+        1080
+      ],
+      "metadata_removed": true,
+      "width": 800,
+      "height": 580,
+      "bytes": 61602,
+      "sha256": "2459c37c44094a9b6931ba37320eac798df0a3c5ddbaee0d4f6f70154c41267e"
+    },
+    "assets/making-finished-panels.webp": {
+      "source": "docs/images/88059_0.jpg",
+      "source_sha256": "126e9028197c6ec33b5d53406221515a73234e7c1982c0f7ddb2442d95c018d0",
+      "crop": [
+        90,
+        270,
+        1400,
+        980
+      ],
+      "metadata_removed": true,
+      "width": 800,
+      "height": 434,
+      "bytes": 43586,
+      "sha256": "573b31235166edefb65e082747c217bbc6da6fee1a6531cb34ff2f611ec9219a"
+    },
+    "assets/v1-concept-angle.webp": {
+      "source": "docs/images/テオヤンセン1.png",
+      "source_sha256": "c1d172a0dba4e81aa1238e0969ef55aaad88158685c2eb36a306e9d289a4cd48",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 600,
+      "bytes": 64172,
+      "sha256": "fb8f17014c2e1bbfc53ef1c011603e1f18fa223bf50dc84d00c1671c85b2ea00"
+    },
+    "assets/v1-concept-side.webp": {
+      "source": "docs/images/テオヤンセン3.png",
+      "source_sha256": "bfb9b47223af1428dc23c1a831f24d370f555b68b14b0b4f13752239ff42b903",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 600,
+      "bytes": 61772,
+      "sha256": "68b4c9528d12abc4f8c65856e9f072d424645f5079ccb94335b8399b7236c1c3"
+    },
+    "assets/v1-view-2.webp": {
+      "source": "docs/images/テオヤンセンver1完成2.jpg",
+      "source_sha256": "5c85c9f816dee0070deb5738d4cadd034ae4716d14e5a95c8a81c0b2b9841b2f",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 602,
+      "bytes": 45174,
+      "sha256": "ba8ad4ff2c6d5559fbb9aaafb5a5b3a64099075f1aa01367bfb3a68ba6aa8719"
+    },
+    "assets/v1-view-3.webp": {
+      "source": "docs/images/テオヤンセンver1完成3.jpg",
+      "source_sha256": "2515d411c08bd13fcc498e0c9d541df73c1168a213dd7591188b8e110aa31c93",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 602,
+      "bytes": 51768,
+      "sha256": "2715f4c71ce6b907d5f910f3935b32c6024ea27587c0cfab2329c7e2006ec7cf"
+    },
+    "assets/v1-view-4.webp": {
+      "source": "docs/images/テオヤンセンver1完成4.jpg",
+      "source_sha256": "fe96f3f9e2a36b9d2bbb4ba2191e333cd7903f6052f5d00d38698961053ae4bb",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 602,
+      "bytes": 50600,
+      "sha256": "406db5d6d895a11ef0dcb5218f3360a45a1ca2d8723960942620a719812c87a9"
+    },
+    "assets/v1-view-5.webp": {
+      "source": "docs/images/テオヤンセンver1完成5.jpg",
+      "source_sha256": "04fe591b187292313a870610e7b4d5f7ef866372b49662f276a0a3711b1f2526",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 602,
+      "bytes": 51672,
+      "sha256": "250e99fb3285e9e46699cee8c5ff608a62cd21cfb28baa798f039488c631b42a"
+    },
+    "assets/v1-view-6.webp": {
+      "source": "docs/images/テオヤンセンver1完成6.jpg",
+      "source_sha256": "d8c7b10e81999b951dd9c74ba806fce2e104d7411ee215b2b356e9676a95b58e",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 602,
+      "bytes": 71814,
+      "sha256": "ac2e3bea02be436fb40dd8e8c97c3af7e9be32314e1aa35f18a3745100a981ce"
+    },
+    "assets/v2-view-2.webp": {
+      "source": "docs/images/テオヤンセンver2完成2.jpg",
+      "source_sha256": "267205d50f6524d7c61ada681601d884d2f29eae8f1a698190ad98bf94304b29",
+      "crop": [
+        285,
+        0,
+        1270,
+        1070
+      ],
+      "metadata_removed": true,
+      "width": 800,
+      "height": 869,
+      "bytes": 67222,
+      "sha256": "d7e161ff306b73410dc40d86e67869cc44dded5d61c5b657bfde7de13a805465"
+    },
+    "assets/v2-view-4.webp": {
+      "source": "docs/images/テオヤンセンver2完成4.jpg",
+      "source_sha256": "3183e612439df9154c7f364a56b619e3fd2251ba6e07e8412fc3c3013450a22e",
+      "crop": [
+        295,
+        0,
+        1250,
+        1090
+      ],
+      "metadata_removed": true,
+      "width": 800,
+      "height": 913,
+      "bytes": 65842,
+      "sha256": "4fdcea6a933809017cee360a5ef9cb59eb540f7c621966aa2b085f2f110e0b90"
+    },
+    "assets/v2-view-5.webp": {
+      "source": "docs/images/テオヤンセンver2完成5.jpg",
+      "source_sha256": "7cfb6995608e0d51351770c583beab1ef714255f4e468834be499de36ad8590a",
+      "crop": [
+        395,
+        0,
+        1230,
+        1080
+      ],
+      "metadata_removed": true,
+      "width": 800,
+      "height": 1035,
+      "bytes": 64708,
+      "sha256": "4647dd0f4c816f1e6945a9d8f59adfb7b7b12989226baac7205cc3b188c3e599"
+    },
+    "assets/v2-view-6.webp": {
+      "source": "docs/images/テオヤンセンver2完成6.jpg",
+      "source_sha256": "fcc3b8601a69f1dcf864e4586134226902f3c7bc76fb29354527ad5c320ea0c6",
+      "crop": [
+        275,
+        0,
+        1270,
+        1080
+      ],
+      "metadata_removed": true,
+      "width": 800,
+      "height": 868,
+      "bytes": 67714,
+      "sha256": "356f8782657440687abc8c8a5109e9e837caa834a3d2e094e50de462ec527543"
+    },
+    "assets/gear-trial.webp": {
+      "source": "docs/images/88476.jpg",
+      "source_sha256": "aa50ecfc9b98d91b6b3dbc4dc009e94cb062c885bb1ec029a40791e9f72c6aa1",
+      "crop": [
+        140,
+        100,
+        1000,
+        1240
+      ],
+      "metadata_removed": true,
+      "width": 700,
+      "height": 928,
+      "bytes": 39172,
+      "sha256": "196d3f0275aa5936cd977c25f6cf22808990a4126ec696a4f2f8d467339582ba"
+    },
+    "assets/gear-prototypes.webp": {
+      "source": "docs/images/87813.jpg",
+      "source_sha256": "25cfb7803d4eaf3367bb680ff4f7fe5249e5f7ffb74bf14819f32c734922d69d",
+      "crop": [
+        0,
+        130,
+        1370,
+        1110
+      ],
+      "metadata_removed": true,
+      "width": 850,
+      "height": 608,
+      "bytes": 56152,
+      "sha256": "01ec87c00222950556285cd5c98ba60177492bf23f465ee3584a283e28321cc3"
+    },
+    "assets/turbines-real.webp": {
+      "source": "docs/images/87816.jpg",
+      "source_sha256": "c64ed6677c12ee12a4bf67441aaac306745c5c887267d35633b3955697e3db81",
+      "crop": [
+        45,
+        205,
+        1215,
+        1090
+      ],
+      "metadata_removed": true,
+      "width": 850,
+      "height": 643,
+      "bytes": 39972,
+      "sha256": "bb9da4a0052415fb8a76c82834e039230b051bd16a499f8478fdc645faf0d581"
+    },
+    "assets/turbines-angle.webp": {
+      "source": "docs/images/Wheel2.jpg",
+      "source_sha256": "db63645b9815a560fbe30486f259176ef50a4ff318c52005964f4e9e25f26daa",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 551,
+      "bytes": 32082,
+      "sha256": "9d4719bc774dd7014ac84a83a0bd220930f72b633ee5734636cd2d3ebdb02b3b"
+    },
+    "assets/turbines-top.webp": {
+      "source": "docs/images/Wheel3.jpg",
+      "source_sha256": "9543efc7f7c028e1d61d1e54a70f9aff152340a2c786297a2ad6fb2b2fbd5754",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 650,
+      "height": 630,
+      "bytes": 23304,
+      "sha256": "2cddab934919aecd6c4ea23db75531828e487ba3f65d340155fd5dd843d2aee6"
+    },
+    "assets/hook-front.webp": {
+      "source": "docs/images/hook.jpg",
+      "source_sha256": "e2932f12cc31e15dbae725414c7fe9f9ed2c1a783b263df3b0a4280cdb1333b8",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 222,
+      "height": 293,
+      "bytes": 4978,
+      "sha256": "b637234a523fe61061c8b3b6d989b4385e0ed8b22e3cbf6a712ede9934cf80b1"
+    },
+    "assets/hook-side.webp": {
+      "source": "docs/images/hook2.jpg",
+      "source_sha256": "3bc077f2c04e7f52681bc6488533c7cf451521978ec4586c0d7c66173c7c2db2",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 213,
+      "height": 220,
+      "bytes": 2404,
+      "sha256": "415a0f7dff324a58788f25f555298a70e107ffd085580ddc66ddce812a2eba48"
+    },
+    "assets/v1-drive-front.webp": {
+      "source": "docs/images/テオヤンセンv2joint v32.png",
+      "source_sha256": "c096cc85d8ea5ff123107ae49fc124ff11e105570452b0447ecdb9ac7b050c16",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 600,
+      "bytes": 51454,
+      "sha256": "5ee4a1ac6ff9c6e2c0b85b300f2453293eb7c8db3e4f78758f349d7248d11561"
+    },
+    "assets/v1-drive-side.webp": {
+      "source": "docs/images/テオヤンセンv2joint v322.png",
+      "source_sha256": "db069aa83490fe943bad99074d56c6db611dd2ebc1f467d229836ed97d399659",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 600,
+      "bytes": 50556,
+      "sha256": "d0bdb3ab9ffa9514f8b713356eb59c73b3866f117ebd82f67f631e73b8c6e7c9"
+    },
+    "assets/v2-drive-front.webp": {
+      "source": "docs/images/テオヤンセンv4joint v15.1.png",
+      "source_sha256": "bee4caf44c867285b3967b2cb47770c00ceb082330577467e6590e6ac6bec82d",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 600,
+      "bytes": 50450,
+      "sha256": "76d69e6fd0e0271465f77adabc344c19ec556667275d9f52b0c8c00b697065d2"
+    },
+    "assets/v2-drive-side.webp": {
+      "source": "docs/images/テオヤンセンv4joint v15.png",
+      "source_sha256": "137afdcc6bbb9e27dde82fecc8fe99801815162e87cba6960edf84ced0c4da7a",
+      "crop": null,
+      "metadata_removed": true,
+      "width": 800,
+      "height": 600,
+      "bytes": 52438,
+      "sha256": "e43f3de18652540be72b9ddb1fb4eb9d0f9613a0352cdefe399e5b3a68563440"
+    }
+  }
+}

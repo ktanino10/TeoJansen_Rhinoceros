@@ -1,0 +1,19 @@
+{
+  "revisionId": "v3.4-a-m3-r1",
+  "staticStatus": "PASS",
+  "changedInstances": 138,
+  "testedStaticPairs": 530,
+  "newIntersections": [],
+  "nominalMassG": 1119.4247391474596,
+  "massChangeFrom31G": 54.03715893562867,
+  "fullMotionStatus": "PENDING",
+  "floorStatus": "PENDING",
+  "physicalQualification": "UNKNOWN",
+  "nativeReopened": true,
+  "instanceCount": 754,
+  "stepSolids": 792,
+  "stepVolumeDifferenceMm3": 0.0009493516990914941,
+  "nativeSha256": "8a9d55bf469602fd3469a3aa18829ee0c2c103daf8dfa1a6a5fc27e04c5e5bc9",
+  "maximumSolidVolumeDifferenceMm3": 0.0007669447586522438,
+  "stepCorrespondenceMethod": "same solid count and sorted per-solid volumes; do not use compound.Volume as a sum"
+}

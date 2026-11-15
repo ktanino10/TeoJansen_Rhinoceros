@@ -43,14 +43,14 @@ async function jsonAt(path, expectedHash) {
 }
 
 function assertLocalAsset(path) {
-  if (!/^assets\/(?:assembly-[ABC]\.json|ver3-[ABC]\.glb|r7-assembly-[ABC]\.json|r7-[ABC]\.glb\.gz)$/.test(path)) {
+  if (!/^assets\/(?:assembly-[ABC]\.json|ver3-[ABC]\.glb|r7-assembly-[ABC]\.json|r7-[ABC]\.glb\.gz|m3-assembly-A\.json|m3-A\.glb|a34-assembly-A\.json|a34-A\.glb\.gz)$/.test(path)) {
     throw new Error("3Dデータの参照先が許可された配信ファイルではありません");
   }
   return path;
 }
 
 export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
-  if (!["assets/viewer-index.json", "assets/r7-viewer-index.json"].includes(catalogUrl)) {
+  if (!["assets/viewer-index.json", "assets/r7-viewer-index.json", "assets/m3-viewer-index.json", "assets/a34-viewer-index.json"].includes(catalogUrl)) {
     throw new Error("未知の版カタログです");
   }
   const host = $("canvas-host");
@@ -746,7 +746,7 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
     for (const material of materials) material.dispose();
     records = loaded;
     guide = localizeData(data);
-    grid.visible = !r7;
+    grid.visible = data.renderGroundGrid ?? !r7;
     const [lo, hi] = guide.model.boundsMm;
     fullBox = new THREE.Box3(
       new THREE.Vector3(lo[0], lo[2], -hi[1]).multiplyScalar(0.001),
@@ -776,8 +776,8 @@ export function createViewer({ catalogUrl = "assets/viewer-index.json" } = {}) {
       `Ver.3 design ${design} CAD-derived 3D model. ${guide.model.instanceCount} instances. Arrows rotate; Shift and arrows pan.`));
     $("clip-section").checked = false;
     goStep(guide.completeStep, true);
-    if (focus && (focusPredicates[focus] || (r7 && data.focusGroups?.[focus]))) {
-      const predicate = r7 && data.focusGroups?.[focus] ? (r) => data.focusGroups[focus].includes(r.instanceId) : focusPredicates[focus];
+    if (focus && (focusPredicates[focus] || data.focusGroups?.[focus])) {
+      const predicate = data.focusGroups?.[focus] ? (r) => data.focusGroups[focus].includes(r.instanceId) : focusPredicates[focus];
       highlighted = new Set(records.filter((r) => r.role === "assembly" && predicate(r)).map((r) => r.instanceId));
       $("stage-operation").textContent = l(`Matrixの対象「${focus}」を強調しています。組立工程を選ぶと、対応する工程表示へ切り替わります。`,
         `Highlighting matrix group “${focus}”. Select an assembly stage to switch to its stage display.`);
