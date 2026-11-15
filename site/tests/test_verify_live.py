@@ -22,7 +22,7 @@ class LiveVerificationTests(unittest.TestCase):
         raw_prefix = f"https://raw.githubusercontent.com/ktanino10/TeoJansen_Rhinoceros/{self.manifest['source_commit']}/"
         if url.startswith(raw_prefix):
             path = url.removeprefix(raw_prefix)
-            self.assertIn(path, verify_live.DOCUMENT_EXAMPLES)
+            self.assertIn(path, {*verify_live.DOCUMENT_EXAMPLES, *verify_live.development_examples()})
             return (ROOT / path).read_bytes()
         engineering_prefix = f"https://raw.githubusercontent.com/ktanino10/TeoJansen_Rhinoceros/{self.manifest['r7_source']['publicSourceCommit']}/"
         if url.startswith(engineering_prefix):
@@ -36,14 +36,17 @@ class LiveVerificationTests(unittest.TestCase):
     def test_all_pages_assets_and_source_hashes_are_checked(self):
         with patch.object(verify_live, "fetch_bytes", side_effect=self.fixture_fetch) as fetch:
             report = verify_live.verify(self.manifest["source_commit"])
-        self.assertEqual(report["pages"], 14)
+        self.assertEqual(report["pages"], 20)
         self.assertEqual(report["assets"], len(self.manifest["assets"]))
         self.assertEqual(report["all_gets"], 200)
         self.assertEqual(report["external_images"], 1)
-        self.assertEqual(report["english_documents"], 3)
-        self.assertEqual(report["current_version"], "3.1")
+        self.assertEqual(report["english_documents"], 4)
+        self.assertEqual(report["completed_version"], "2")
+        self.assertEqual(report["development_version"], "3.4")
+        self.assertEqual(report["completed_html_and_images"], "unchanged")
+        self.assertEqual(report["development_downloads"], 4)
         self.assertEqual(report["engineering_downloads"], 3)
-        self.assertEqual(fetch.call_count, 1 + 14 + len(verify_live.STATIC_FILES) + len(self.manifest["assets"]) + 1 + 3 + 3)
+        self.assertEqual(fetch.call_count, 1 + 20 + len(verify_live.STATIC_FILES) + len(self.manifest["assets"]) + 1 + 4 + 3 + 4)
 
     def test_stale_commit_and_external_paths_are_rejected(self):
         with self.assertRaisesRegex(ValueError, "Published commit differs"):

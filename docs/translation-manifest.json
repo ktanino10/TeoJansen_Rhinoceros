@@ -30,6 +30,18 @@
     {
       "ja": "walking.html",
       "en": "en/walking.html"
+    },
+    {
+      "ja": "development.html",
+      "en": "en/development.html"
+    },
+    {
+      "ja": "ver3-2.html",
+      "en": "en/ver3-2.html"
+    },
+    {
+      "ja": "ver3-4.html",
+      "en": "en/ver3-4.html"
     }
   ],
   "engineeringInvariant": "Translation only: no CAD, kinematics, physics, quantities, prices, release status or qualification changes.",
@@ -415,11 +427,11 @@
     {
       "source": "README_ja.md",
       "sourceLanguage": "ja",
-      "sourceSha256": "5ec9a6d6062625900080ce019ec4c9d9ba6d1d617969c4d0fe822ccf42cfb8fe",
+      "sourceSha256": "dfbd54d818459d0d91f9c34c6c63c9e072764932a7371571f351df8d73dc3ed1",
       "target": "README.md",
       "targetLanguage": "en",
-      "targetSha256": "1385760ac34086f69458670e525f74cbdc219b17c3b73647e5cb9f90f0b5e672",
-      "coverage": "current Ver.3.1 entry point and historical Ver.1/2/3.0 records"
+      "targetSha256": "d2a300ed34c558a695e26d474a5723688c7bb2b15f6d8a02e140e86a7e0774e6",
+      "coverage": "completed Ver.2, Ver.3.4 development entry and retained version records"
     },
     {
       "source": "docs/USER_GUIDE_ja.md",
@@ -429,6 +441,33 @@
       "targetLanguage": "en",
       "targetSha256": "caca4907f51bc41fe2a9d8e4e0301f8ee26fdf74cdf3bffefe008c1e1716aefb",
       "coverage": "website and document use; shared-resource legend"
+    },
+    {
+      "source": "docs/ver3/m3_r1/README_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "b74dffc86d704a6932b6eefb4b6b5a46edec7e313f9d8b4d10514f7a6a357f09",
+      "target": "docs/ver3/m3_r1/README_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "ee087bfb55d42a3251b4833895f5d64ae5acf9134a3ed75316c29c7995b7e3af",
+      "coverage": "paired development prose; same-revision CAD and numerical sources"
+    },
+    {
+      "source": "docs/ver3/m3_a34/README_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "3b6bc9c4814b38b0350309ff8aa8c3da04e22f1b11a3a5f32a025c2a9d0dec35",
+      "target": "docs/ver3/m3_a34/README_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "a04211a0ddf9cb7e72bcdd326ef0853c835987fe30de642037724cac0335a953",
+      "coverage": "paired development prose; same-revision CAD and numerical sources"
+    },
+    {
+      "source": "docs/ver3/m3_a34/DESIGN_ja.md",
+      "sourceLanguage": "ja",
+      "sourceSha256": "c064437307171ff699c91b369348fabd89df62144b7cb2804dbbec4f727d8311",
+      "target": "docs/ver3/m3_a34/DESIGN_en.md",
+      "targetLanguage": "en",
+      "targetSha256": "a9f9556237a4a9c5f9ede0ae2b74ebf7abbc01f68314e1e17ff0cd4abefaa670",
+      "coverage": "paired development prose; same-revision CAD and numerical sources"
     }
   ],
   "archivalOriginals": [

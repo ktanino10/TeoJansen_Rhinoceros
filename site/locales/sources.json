@@ -20011,5 +20011,1398 @@
     "origins": [
       "walking.js"
     ]
+  },
+  "00037fe60d9e976a": {
+    "source": "Ver.{0} M{1}接合試験・全機未統合",
+    "example": "Ver.3.2 M3接合試験・全機未統合",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "be8bcc8ad8a7c394": {
+    "source": "捕捉座付き{0}歯",
+    "example": "捕捉座付き42歯",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "ade1e42fb07281c7": {
+    "source": "M{0}固定ブラケット",
+    "example": "M3固定ブラケット",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c97e8463b3b9812f": {
+    "source": "自由回転リンク",
+    "example": "自由回転リンク",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "4ebb28310951a0f9": {
+    "source": "平滑スリーブ試験片",
+    "example": "平滑スリーブ試験片",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "50ec9948cc762b91": {
+    "source": "ナット・六角軸試験片",
+    "example": "ナット・六角軸試験片",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "d1e4d9780840596c": {
+    "source": "{0}mm六角キー・{1}mmスパナ・ノギス",
+    "example": "2.5mm六角キー・5.5mmスパナ・ノギス",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "12a3cd812c191992": {
+    "source": "まだ組み立てていない状態です。",
+    "example": "まだ組み立てていない状態です。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "0b3fb3a60a36bf3c": {
+    "source": "完成位置での工程表示です。挿入運動や実物の組立成功を表しません。",
+    "example": "完成位置での工程表示です。挿入運動や実物の組立成功を表しません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "9b26a45ed7902050": {
+    "source": "はめあい試験片",
+    "example": "はめあい試験片",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "04c14698e768a4ae": {
+    "source": "実ナット・平滑スリーブ・六角軸を試験片で確認。無理な押込みはしません。",
+    "example": "実ナット・平滑スリーブ・六角軸を試験片で確認。無理な押込みはしません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "db61738509c50e8c": {
+    "source": "歯車の捕捉座",
+    "example": "歯車の捕捉座",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "6a0f76d99dcd6ebf": {
+    "source": "新しい歯車の側面から内側座金、内ナットの順に挿入します。",
+    "example": "新しい歯車の側面から内側座金、内ナットの順に挿入します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "50af2c3639288dd9": {
+    "source": "六角軸と割締め",
+    "example": "六角軸と割締め",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c384d3716009b73c": {
+    "source": "六角面で回り止め。ねじ、外側座金、外ナットを加え、内ナットに当てます。",
+    "example": "六角面で回り止め。ねじ、外側座金、外ナットを加え、内ナットに当てます。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "56caebcc835c0e97": {
+    "source": "歯車対の参照配置",
+    "example": "歯車対の参照配置",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "0dac60ef5bf6daab": {
+    "source": "{0}mm軸間の{1}:{2}試験対。支持治具や動力源は含まず、動力運転しません。",
+    "example": "42mm軸間の1:1試験対。支持治具や動力源は含まず、動力運転しません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "76082062f9310bf2": {
+    "source": "脚ピンの準備",
+    "example": "脚ピンの準備",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "f8413011dd0f2f48": {
+    "source": "ブラケット側面から上座金と内ナットを入れ、リンクを耳の間に置きます。",
+    "example": "ブラケット側面から上座金と内ナットを入れ、リンクを耳の間に置きます。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "8ec18c8717ab1bf3": {
+    "source": "金属スリーブを通す",
+    "example": "金属スリーブを通す",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "3827391a60f6570b": {
+    "source": "平滑な{0}mm金属スリーブへリンクを通す。ねじ山は回転面にしません。",
+    "example": "平滑な12mm金属スリーブへリンクを通す。ねじ山は回転面にしません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "adcb947b2d973708": {
+    "source": "抜け止め",
+    "example": "抜け止め",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "6296cc3984c2911f": {
+    "source": "下からM{0}ねじと座金、上に外ナット。締結力は金属端面へ逃がし、リンクを挟みません。",
+    "example": "下からM3ねじと座金、上に外ナット。締結力は金属端面へ逃がし、リンクを挟みません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "7a0ca5f62d2178e5": {
+    "source": "試験体の全点",
+    "example": "試験体の全点",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "638715c147864448": {
+    "source": "自由回転、相対滑り、軸方向保持を別々に確認。全機キットへの統合は設計待ちです。",
+    "example": "自由回転、相対滑り、軸方向保持を別々に確認。全機キットへの統合は設計待ちです。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "2f51b1301d1ea053": {
+    "source": "Ver.{0} 開発資料",
+    "example": "Ver.3 開発資料",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "1af694ae07c595bf": {
+    "source": "完成版Ver.{0}はそのまま。仕組みを理解してから、少量で試す。",
+    "example": "完成版Ver.2はそのまま。仕組みを理解してから、少量で試す。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "b0a359cbc855dec3": {
+    "source": "Ver.{0}以降は作業中です。{1}は全体の参照設計、{2}はM{3}接合試験で、完成版の置換ではありません。",
+    "example": "Ver.3以降は作業中です。3.1は全体の参照設計、3.2はM3接合試験で、完成版の置換ではありません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "9ba170960917b0f7": {
+    "source": "全体の仕組み：Ver.{0} {1}",
+    "example": "全体の仕組み：Ver.3.1 A",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "5af7bddde7cf98bd": {
+    "source": "新しい接合：Ver.{0} M{1}試験",
+    "example": "新しい接合：Ver.3.2 M3試験",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "d4793cf46462078e": {
+    "source": "全体{0}点の旧形状と、試験体{1}点の新形状は別です。旧動画を新しい形状の証明に使いません。",
+    "example": "全体750点の旧形状と、試験体22点の新形状は別です。旧動画を新しい形状の証明に使いません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "76c66e59064cd688": {
+    "source": "試験体の軸方向はZ。組立参照配置で、歩行・風・負荷のシミュレーションではありません。",
+    "example": "試験体の軸方向はZ。組立参照配置で、歩行・風・負荷のシミュレーションではありません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "4a359bb34710d4dd": {
+    "source": "工具包絡と側面挿入は試験体だけの有限確認です。実物の工具・はめあい・締付けは未確認です。",
+    "example": "工具包絡と側面挿入は試験体だけの有限確認です。実物の工具・はめあい・締付けは未確認です。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "a6cf10e8d7854d42": {
+    "source": "EEHD{0}CJH / BSカラー {1}×{2}",
+    "example": "EEHD-6CJH / BSカラー 3×12",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "572435de23e1efe7": {
+    "source": "開発資料の目次",
+    "example": "開発資料の目次",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "1b7f763b14230487": {
+    "source": "完成版Ver.{0}・制作記録",
+    "example": "完成版Ver.2・制作記録",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "04010704ec8b5484": {
+    "source": "組立",
+    "example": "組立",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "8ba60bd6375e6863": {
+    "source": "印刷",
+    "example": "印刷",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c450a95965e686bf": {
+    "source": "購入部品",
+    "example": "購入部品",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "08633b60bc3f08bb": {
+    "source": "風車→入力軸→減速歯車→同期軸→脚。回転・拡大・部品選択と既存{0}工程で構成を確認できます。",
+    "example": "風車→入力軸→減速歯車→同期軸→脚。回転・拡大・部品選択と既存12工程で構成を確認できます。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "969de425b2237c98": {
+    "source": "全体を{0}度で見る",
+    "example": "全体を360度で見る",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "2ea5af21d752f312": {
+    "source": "歯車と軸の接合へ",
+    "example": "歯車と軸の接合へ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "b1eea5aadd1a6e2c": {
+    "source": "抜け止めへ",
+    "example": "抜け止めへ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "9583fdcdd57d7f63": {
+    "source": "脚の仕組みへ",
+    "example": "脚の仕組みへ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "9c1c211ae4d3f1eb": {
+    "source": "旧{0}の印刷一覧",
+    "example": "旧Aの印刷一覧",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "e683f75a589f89f6": {
+    "source": "旧{0}の購入一覧",
+    "example": "旧Aの購入一覧",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "562fbb8b85a2de38": {
+    "source": "新STLは{0}種類・{1}点。M{2}ねじ{3}本、ナット{4}個、座金{5}枚。全機の購入・印刷数は未確定です。",
+    "example": "新STLは5種類・6点。M3ねじ3本、ナット6個、座金6枚。全機の購入・印刷数は未確定です。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "7eca6835f13a6e87": {
+    "source": "詳しい組立・印刷・入手先",
+    "example": "詳しい組立・印刷・入手先",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "f8cecf80dda041cd": {
+    "source": "試験体BOM",
+    "example": "試験体BOM",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "e49c0d52bbeba124": {
+    "source": "固定する面と、自由に回す面を分ける",
+    "example": "固定する面と、自由に回す面を分ける",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "0c6ae2dcba5adf93": {
+    "source": "六角面がトルクを伝え、割締めと二重ナットが軸方向を保持。脚では金属スリーブだけを締め、リンクは挟みません。",
+    "example": "六角面がトルクを伝え、割締めと二重ナットが軸方向を保持。脚では金属スリーブだけを締め、リンクは挟みません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "fd742dd2511cf4b1": {
+    "source": "接合表：旧方式・新方式・工具方向・確認方法",
+    "example": "接合表：旧方式・新方式・工具方向・確認方法",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "a3a90aa4a913c06d": {
+    "source": "新しい歯車接合の実断面：ねじ・座金・内外ナット",
+    "example": "新しい歯車接合の実断面：ねじ・座金・内外ナット",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "690e6bf40c1b7c4e": {
+    "source": "新しい脚ピンの実断面：平滑スリーブと自由すきま",
+    "example": "新しい脚ピンの実断面：平滑スリーブと自由すきま",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "36688a22e6742c51": {
+    "source": "既存入力ハブ・左右支持のCAD図（{0}参照）",
+    "example": "既存入力ハブ・左右支持のCAD図（3.1参照）",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "fe2018d0c478e2da": {
+    "source": "既存{0}の入力軸・ハブ・保持部品",
+    "example": "既存3.1の入力軸・ハブ・保持部品",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "f33475ad175f111c": {
+    "source": "既存{0}の左右支持と軸受キャップ",
+    "example": "既存3.1の左右支持と軸受キャップ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "e7563fa96d0d9bcc": {
+    "source": "M{0}接合試験体を{1}度で見る",
+    "example": "M3接合試験体を360度で見る",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "308c6e1123e81fc2": {
+    "source": "全体の歩行機ではありません。形と金具は新しいCADそのものです。試験片は工程{0}で表示します。",
+    "example": "全体の歩行機ではありません。形と金具は新しいCADそのものです。試験片は工程1で表示します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c899e82293d19544": {
+    "source": "表示対象",
+    "example": "表示対象",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "559aca1d75047442": {
+    "source": "新しい接合の{0}Dを読み込む",
+    "example": "新しい接合の3Dを読み込む",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "a50ca5ce966e465e": {
+    "source": "{0}Dは操作時だけ読み込みます。",
+    "example": "3Dは操作時だけ読み込みます。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "ff142074fd4d3ae8": {
+    "source": "新しい六角穴・捕捉座のCAD形状",
+    "example": "新しい六角穴・捕捉座のCAD形状",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "b13d824097350a77": {
+    "source": "静的な組立手順へ",
+    "example": "静的な組立手順へ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "9a275e330ec1f1b2": {
+    "source": "JavaScriptなしでも下の手順とファイルを利用できます。",
+    "example": "JavaScriptなしでも下の手順とファイルを利用できます。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "829ad68a682fb60f": {
+    "source": "番号付き組立手順",
+    "example": "番号付き組立手順",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c0ad267de47908d2": {
+    "source": "詳細な順序・ねじの積層・注意点",
+    "example": "詳細な順序・ねじの積層・注意点",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "05140953495126ca": {
+    "source": "印刷リスト：まず試験片から",
+    "example": "印刷リスト：まず試験片から",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "cf6dddcf3ff2a41d": {
+    "source": "mm・{0}%。{1}mmはノズル径です。P{2}S・PETG・層高{3}mmは検査上の仮定で、本人の機種・材料は未確認です。",
+    "example": "mm・100%。0.2mmはノズル径です。P1S・PETG・層高0.10mmは検査上の仮定で、本人の機種・材料は未確認です。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "1ebcbda710dbf81c": {
+    "source": "試験用印刷一覧",
+    "example": "試験用印刷一覧",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "a8df40502f55bec8": {
+    "source": "数",
+    "example": "数",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "05b36669c4ad9a73": {
+    "source": "用途",
+    "example": "用途",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "5d1760f10e47374e": {
+    "source": "姿勢・支持・未確認を含むCSV",
+    "example": "姿勢・支持・未確認を含むCSV",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "31c935a0fecf7abd": {
+    "source": "{0}mmノズルの実層検査",
+    "example": "0.2mmノズルの実層検査",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "d81873c8a1aca99d": {
+    "source": "必要な購入部品：手持ちは先に差し引く",
+    "example": "必要な購入部品：手持ちは先に差し引く",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "f8e559c837039b30": {
+    "source": "締結{0}品は手持ちゼロなら最小{1}円。軸材・工具・材料・送料は別です。{2}{3}{4}の公式掲載で、来店時の在庫保証ではありません。",
+    "example": "締結4品は手持ちゼロなら最小900円。軸材・工具・材料・送料は別です。2026-11-15の公式掲載で、来店時の在庫保証ではありません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "a3aa183ef4343a1c": {
+    "source": "試験用購入一覧",
+    "example": "試験用購入一覧",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "2008317fbc7c5bc9": {
+    "source": "規格",
+    "example": "規格",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "7073cb5831661fc7": {
+    "source": "公式取扱い",
+    "example": "公式取扱い",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c6c6798a5c838aa6": {
+    "source": "材質・販売単位・必要数・確認日のCSV",
+    "example": "材質・販売単位・必要数・確認日のCSV",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "033b9fdc24cfa1ae": {
+    "source": "計算と現物未確認を分ける",
+    "example": "計算と現物未確認を分ける",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "517b9fc6749c295b": {
+    "source": "試験対は{0}歯・モジュール{1}・圧力角{2}度・{3}:{4}。接触比{5}、最小歯先厚{6}mm。歯の許容荷重・摩耗・実風歩行は未認定です。",
+    "example": "試験対は42歯・モジュール1・圧力角25度・1:1。接触比1.362、最小歯先厚0.539mm。歯の許容荷重・摩耗・実風歩行は未認定です。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "e69af3b2704077bf": {
+    "source": "比較対象の{0}接合だけで、ねじ種類は{1}から{2}、締結工具寸法は{3}から{4}。ナットは省かず、座金とハブの質量は増えます。全機の削減率ではありません。",
+    "example": "比較対象の3接合だけで、ねじ種類は2から1、締結工具寸法は4から2。ナットは省かず、座金とハブの質量は増えます。全機の削減率ではありません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "638931ac342ceeb5": {
+    "source": "CAD・挿入・工具・可動域・歯形の検査値",
+    "example": "CAD・挿入・工具・可動域・歯形の検査値",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "79c6ee4670587098": {
+    "source": "部品・工具・質量の比較",
+    "example": "部品・工具・質量の比較",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "1572b4a14454d827": {
+    "source": "空転、軸方向の抜け、樹脂クリープ、穴摩耗、ねじ緩み、歯の破損は別の故障です。購入・印刷・機器運転は実施していません。",
+    "example": "空転、軸方向の抜け、樹脂クリープ、穴摩耗、ねじ緩み、歯の破損は別の故障です。購入・印刷・機器運転は実施していません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "908ea2f4458bd447": {
+    "source": "完成版Ver.{0}は変更していません",
+    "example": "完成版Ver.2は変更していません",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "eddd7b88cc7578e5": {
+    "source": "先頭へ",
+    "example": "先頭へ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "322e5b55e9bb335c": {
+    "source": "Ver.{0}開発入口：組立・印刷・購入部品・新M{1}接合",
+    "example": "Ver.3開発入口：組立・印刷・購入部品・新M3接合",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "607061de5d045cd6": {
+    "source": "Ver.{0} {1}・M{2}統合開発版・実機未検証",
+    "example": "Ver.3.4 A・M3統合開発版・実機未検証",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "b629108b2fce6d21": {
+    "source": "改訂・試験部品 H_M{0}_BOLT_M{1}_{2}",
+    "example": "改訂・試験部品 H_M34_BOLT_M3_15",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "7b0a1f1383d39bdb": {
+    "source": "改訂・試験部品 H_M{0}_NUT_M{1}",
+    "example": "改訂・試験部品 H_M34_NUT_M3",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "bbc5474314c42376": {
+    "source": "改訂・試験部品 H_M{0}_WASHER{1}",
+    "example": "改訂・試験部品 H_M34_WASHER3",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "53cc7d146771e28f": {
+    "source": "改訂・試験部品 H_M{0}_THRUST{1}",
+    "example": "改訂・試験部品 H_M34_THRUST6",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "71c9c237da7c9977": {
+    "source": "改訂・試験部品 H_M{0}_SLEEVE_{1}",
+    "example": "改訂・試験部品 H_M34_SLEEVE_8",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "bbfa6b7f156f8c27": {
+    "source": "改訂・試験部品 P_M{0}_LEG_AB_L",
+    "example": "改訂・試験部品 P_M34_LEG_AB_L",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "3f293863814d9879": {
+    "source": "改訂・試験部品 P_M{0}_LEG_AC_L",
+    "example": "改訂・試験部品 P_M34_LEG_AC_L",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "59af77b7babfb7af": {
+    "source": "改訂・試験部品 P_M{0}_LEG_PBD_L",
+    "example": "改訂・試験部品 P_M34_LEG_PBD_L",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "91f955046a17a963": {
+    "source": "改訂・試験部品 P_M{0}_LEG_DE_L",
+    "example": "改訂・試験部品 P_M34_LEG_DE_L",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "6b5b8e6e8132aa9a": {
+    "source": "改訂・試験部品 P_M{0}_LEG_AB_R",
+    "example": "改訂・試験部品 P_M34_LEG_AB_R",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c87f553240d078f3": {
+    "source": "改訂・試験部品 P_M{0}_LEG_AC_R",
+    "example": "改訂・試験部品 P_M34_LEG_AC_R",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "b3b281cc95a59a8d": {
+    "source": "改訂・試験部品 P_M{0}_LEG_PBD_R",
+    "example": "改訂・試験部品 P_M34_LEG_PBD_R",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "ea1b6134e648a51d": {
+    "source": "改訂・試験部品 P_M{0}_LEG_DE_R",
+    "example": "改訂・試験部品 P_M34_LEG_DE_R",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "edb6faed012a604f": {
+    "source": "改訂・試験部品 P_M{0}_CRANK_JOURNAL_{1}_{2}",
+    "example": "改訂・試験部品 P_M34_CRANK_JOURNAL_-1_0",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "6d4eb9004f428090": {
+    "source": "改訂・試験部品 P_M{0}_LAYER_SPACER_{1}_{2}",
+    "example": "改訂・試験部品 P_M34_LAYER_SPACER_7_4",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "dced1cb32b855277": {
+    "source": "改訂・試験部品 P_M{0}_SYNC_DRIVE",
+    "example": "改訂・試験部品 P_M34_SYNC_DRIVE",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "70941d3661e6458a": {
+    "source": "改訂・試験部品 Q_SLEEVE_FIT",
+    "example": "改訂・試験部品 Q_SLEEVE_FIT",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "d8d8cf5bf3a968af": {
+    "source": "改訂・試験部品 Q_NUT_HEX_FIT",
+    "example": "改訂・試験部品 Q_NUT_HEX_FIT",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "487f5f56c7d65d6c": {
+    "source": "未配置表示",
+    "example": "未配置表示",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "24118843709a7d8e": {
+    "source": "保存した嵌合試験片",
+    "example": "保存した嵌合試験片",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "6ff2a5d802da78b1": {
+    "source": "全体構成",
+    "example": "全体構成",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "824b1455a443ffa4": {
+    "source": "変更部を強調",
+    "example": "変更部を強調",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "6bf4e2608f2df097": {
+    "source": "全体の参照状態",
+    "example": "全体の参照状態",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "33370f829191842b": {
+    "source": "これは構成の表示切替で、組立順や挿入運動ではありません。実作業は下の番号付き計画を参照してください。",
+    "example": "これは構成の表示切替で、組立順や挿入運動ではありません。実作業は下の番号付き計画を参照してください。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "5181d153d040b308": {
+    "source": "Ver.{0} {1} — M{2}組立優先の開発版",
+    "example": "Ver.3.4 A — M3組立優先の開発版",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c0328b71ca80f582": {
+    "source": "完成版Ver.{0}とは別の作業中です。旧{1}の表示名を変えただけではなく、{2}の実接合を変更しました。実印刷・実組立・実風歩行は未検証です。",
+    "example": "完成版Ver.2とは別の作業中です。旧3.1の表示名を変えただけではなく、Aの実接合を変更しました。実印刷・実組立・実風歩行は未検証です。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "496eed849ea78c19": {
+    "source": "全体{0}点。印刷{1}種類・{2}点のうち、変更した印刷品は{3}点です。",
+    "example": "全体754点。印刷45種類・115点のうち、変更した印刷品は38点です。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "6fcbd13af936e1e8": {
+    "source": "前・中央の同期歯車に捕捉ナット座、全{0}脚の{1}/DピンにM{2}と平滑{3}mmスリーブを統合。干渉を避けるためP/{4}/{5}/E、足とアイドラーのM{6}は残します。",
+    "example": "前・中央の同期歯車に捕捉ナット座、全6脚のA/DピンにM3と平滑6mmスリーブを統合。干渉を避けるためP/B/C/E、足とアイドラーのM2は残します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "93c960e8ecc1d031": {
+    "source": "構成の表示切替（組立順ではない）",
+    "example": "構成の表示切替（組立順ではない）",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "a77fbb371c815370": {
+    "source": "表示する範囲",
+    "example": "表示する範囲",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "6c29829eeaf19b17": {
+    "source": "旧版の工具経路を新形状へ合格として転記していません。ねじ頭側の作業は、脚とクランクの単体組立時に行います。",
+    "example": "旧版の工具経路を新形状へ合格として転記していません。ねじ頭側の作業は、脚とクランクの単体組立時に行います。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "e56c1c458014c267": {
+    "source": "{0}. 版・部品を仕分ける",
+    "example": "1. 版・部品を仕分ける",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "2a9bfc49d0cb802d": {
+    "source": "{0}の印刷一覧とBOMを使います。変更品と{1}から保持した品を混同せず、試験片で実スリーブ・ナット・軸を確認します。",
+    "example": "3.4の印刷一覧とBOMを使います。変更品と3.1から保持した品を混同せず、試験片で実スリーブ・ナット・軸を確認します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "a92017ec2b3a902c": {
+    "source": "{0}. 歯車接合を単体で準備",
+    "example": "2. 歯車接合を単体で準備",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "72db1d79708bb36b": {
+    "source": "側面溝へ内側座金と内ナットを入れ、M{0}×{1}・頭側座金・外ナットで割締め。既存{2}mm対辺軸へ合う穴の向きを維持します。",
+    "example": "側面溝へ内側座金と内ナットを入れ、M3×20・頭側座金・外ナットで割締め。既存5mm対辺軸へ合う穴の向きを維持します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "6b2b9be437211bce": {
+    "source": "{0}. 左側から軸・歯車を置く",
+    "example": "3. 左側から軸・歯車を置く",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "1ca7414ce0856981": {
+    "source": "固定側軸受、六角軸、減速歯車と同期歯車を準備。後ろの同期歯車と減速段の既存構成は変えません。",
+    "example": "固定側軸受、六角軸、減速歯車と同期歯車を準備。後ろの同期歯車と減速段の既存構成は変えません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "a370692ed81b677b": {
+    "source": "{0}. 位置決めキーで右フレームを閉じる",
+    "example": "4. 位置決めキーで右フレームを閉じる",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "165ddcfb7dfea7fd": {
+    "source": "前の六角キーと後の逃げキーを合わせ、M{0}継手を締結。固定側と浮動側を区別し、PET板を軸受の圧縮スペーサーにしません。",
+    "example": "前の六角キーと後の逃げキーを合わせ、M3継手を締結。固定側と浮動側を区別し、PET板を軸受の圧縮スペーサーにしません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "931d49c6266f6642": {
+    "source": "{0}. PETと入力風車・ガード",
+    "example": "5. PETと入力風車・ガード",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "d6c23d669c50eb22": {
+    "source": "保持した{0}手順のPET退避と風車バスケット経路を参照。金属{1}Dハブ・入力カラー・M{2}締結は保持し、旧動画を新しい作業の実証としません。",
+    "example": "保持した3.1手順のPET退避と風車バスケット経路を参照。金属6Dハブ・入力カラー・M4締結は保持し、旧動画を新しい作業の実証としません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "1a97c84d75e6a359": {
+    "source": "{0}. 脚とクランクを単体で準備",
+    "example": "6. 脚とクランクを単体で準備",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "be6b16d1009045e6": {
+    "source": "{0}はM{1}×{2}と連続{3}mmスリーブ、DはM{4}×{5}と{6}mmスリーブ。両端M{7}座金と二重ナットを残し、頭側を本体に入れる前に作業します。",
+    "example": "AはM3×30と連続20mmスリーブ、DはM3×15と8mmスリーブ。両端M3座金と二重ナットを残し、頭側を本体に入れる前に作業します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "4f8592e54dfe8cb7": {
+    "source": "{0}. 座金座と位相を合わせる",
+    "example": "7. 座金座と位相を合わせる",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "611dd0f3e99ec9a6": {
+    "source": "M{0}座金は{1}mm逃げへ配置し、リンクを挟みません。P/{2}/{3}/Eと足は元のM{4}構成。左右位相は前から{5}/{6}、{7}/{8}、{9}/{10}度です。",
+    "example": "M6座金は0.3mm逃げへ配置し、リンクを挟みません。P/B/C/Eと足は元のM2構成。左右位相は前から0/180、180/0、0/180度です。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "0827f29af8fcc193": {
+    "source": "{0}. 接合ごとに確認してから全機へ",
+    "example": "8. 接合ごとに確認してから全機へ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "31c4cd0a22a42433": {
+    "source": "回り止め、軸方向保持、自由回転を別々に確認。実工具の到達、すきま、白化、ねじ緩み、摩耗を記録します。購入・印刷・送風運転は実施していません。",
+    "example": "回り止め、軸方向保持、自由回転を別々に確認。実工具の到達、すきま、白化、ねじ緩み、摩耗を記録します。購入・印刷・送風運転は実施していません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "ef18451cf0f93de3": {
+    "source": "組立計画・固定・注意点",
+    "example": "組立計画・固定・注意点",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "8abb366794f9709f": {
+    "source": "全機の印刷リスト",
+    "example": "全機の印刷リスト",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "910cfc3522d4eb1c": {
+    "source": "全機の購入部品リスト",
+    "example": "全機の購入部品リスト",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "085855a053e71e36": {
+    "source": "全機BOM",
+    "example": "全機BOM",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "1bc196c7cde48e56": {
+    "source": "全体の{0}度",
+    "example": "全体の360度",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "81b2d657008ce077": {
+    "source": "固定の実断面",
+    "example": "固定の実断面",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "fe9bbaa355d52baa": {
+    "source": "組立計画",
+    "example": "組立計画",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "918bd3431496a938": {
+    "source": "駆動計算",
+    "example": "駆動計算",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "ced1a73bd3de3a61": {
+    "source": "印刷・購入ファイル",
+    "example": "印刷・購入ファイル",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "a10f75466a341546": {
+    "source": "回り止めと抜け止めは別です",
+    "example": "回り止めと抜け止めは別です",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "f53dbfacebd13a1f": {
+    "source": "歯車は六角面でトルクを伝え、割締めと二重ナットで軸方向を保持。脚は平滑スリーブの外周で回り、ねじ山を摺動面にしません。",
+    "example": "歯車は六角面でトルクを伝え、割締めと二重ナットで軸方向を保持。脚は平滑スリーブの外周で回り、ねじ山を摺動面にしません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "cddf8e110118bb09": {
+    "source": "{0}全体CADから切り出した歯車の締結断面",
+    "example": "3.4全体CADから切り出した歯車の締結断面",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "32eb168f84c705d9": {
+    "source": "{0}全体CADから切り出した{1}ピン・座金・ナットの断面",
+    "example": "3.4全体CADから切り出したAピン・座金・ナットの断面",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "24cc46e766265070": {
+    "source": "Ver.{0} {1}を{2}度で見る",
+    "example": "Ver.3.4 Aを360度で見る",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "8e8e56b86ca6d87a": {
+    "source": "Ver.{0}全体の{1}Dを読み込む",
+    "example": "Ver.3.4全体の3Dを読み込む",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "31550482ead76ee7": {
+    "source": "操作時だけ、この版のCADメッシュを取得します。",
+    "example": "操作時だけ、この版のCADメッシュを取得します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "69e9a4af381c0f2f": {
+    "source": "{0}の実歯車形状と回り止め穴",
+    "example": "3.4の実歯車形状と回り止め穴",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "56ad49b0e5a96c84": {
+    "source": "CAD・静的資料へ",
+    "example": "CAD・静的資料へ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c466ef292c0cfdb5": {
+    "source": "JavaScriptなしでも手順とダウンロードを利用できます。",
+    "example": "JavaScriptなしでも手順とダウンロードを利用できます。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "cdbf95e26fdadc41": {
+    "source": "番号付き組立計画",
+    "example": "番号付き組立計画",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "04342bda67894ee4": {
+    "source": "実組立は未実施です。{0}Dの構成表示を作業順と混同せず、単体組立と全機への取付けを分けます。",
+    "example": "実組立は未実施です。3Dの構成表示を作業順と混同せず、単体組立と全機への取付けを分けます。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "80c3a1c6e21de39a": {
+    "source": "実CAD質量・反力から始動要求を再計算",
+    "example": "実CAD質量・反力から始動要求を再計算",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "651192b1be01a807": {
+    "source": "名目質量は{0}gから{1}g。{2}/Dの径{3}→{4}mmは同荷重なら摩擦トルク{5}倍ですが、新しい質量と反力で全位相を解き直しています。",
+    "example": "名目質量は1065.39gから1119.42g。A/Dの径4→6mmは同荷重なら摩擦トルク1.5倍ですが、新しい質量と反力で全位相を解き直しています。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "cec92ea841b4d0db": {
+    "source": "全位相トルク比較",
+    "example": "全位相トルク比較",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "51e5e63d83fbd29a": {
+    "source": "抵抗ケース",
+    "example": "抵抗ケース",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "102eeface50acd5d": {
+    "source": "旧要求 mN·m",
+    "example": "旧要求 mN·m",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "be85828295143d63": {
+    "source": "新要求 mN·m",
+    "example": "新要求 mN·m",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "4308c693def76b48": {
+    "source": "供給代理最小 mN·m",
+    "example": "供給代理最小 mN·m",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "2485930ce5ebb033": {
+    "source": "同位相余裕 mN·m",
+    "example": "同位相余裕 mN·m",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "973fd09ced87ebaf": {
+    "source": "供給半減時 mN·m",
+    "example": "供給半減時 mN·m",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "5c5a7cd9ac0cb7fa": {
+    "source": "減速は{0}×{1}＝{2}:{3}を保持。冷風{4}m/s・広がり{5}mmは未校正の代理条件です。高抵抗や供給半減では不足し、負荷付き速度・自己始動・実{6}cm歩行はUNKNOWNです。",
+    "example": "減速は12×12＝144:1を保持。冷風6.4m/s・広がり20mmは未校正の代理条件です。高抵抗や供給半減では不足し、負荷付き速度・自己始動・実30cm歩行はUNKNOWNです。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "2116f90efbeacdf8": {
+    "source": "各段・全位相の駆動計算",
+    "example": "各段・全位相の駆動計算",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "686e4d2d99668243": {
+    "source": "同条件の新旧比較",
+    "example": "同条件の新旧比較",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c06d698373124f88": {
+    "source": "可動域の有限確認",
+    "example": "可動域の有限確認",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "00c3a51f85e818cf": {
+    "source": "全物体の床確認",
+    "example": "全物体の床確認",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "2d22c88f116c6b87": {
+    "source": "印刷・購入・組立ファイルを同じ版で",
+    "example": "印刷・購入・組立ファイルを同じ版で",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "558c469452ec1f48": {
+    "source": "一覧は全機の必要数で、未確認の手持ちは差し引いていません。変更STLと保持した{0} STLを区別します。{1}mmはノズル径で、P{2}S/PETGは検査用仮定です。",
+    "example": "一覧は全機の必要数で、未確認の手持ちは差し引いていません。変更STLと保持した3.1 STLを区別します。0.2mmはノズル径で、P1S/PETGは検査用仮定です。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "73f6bab86e90b53a": {
+    "source": "新しい{0}形状の{1}mm実層",
+    "example": "新しい3.4形状の0.2mm実層",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "1f4d9595e7c39ba0": {
+    "source": "数量・工具・調達例外",
+    "example": "数量・工具・調達例外",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "980ace4bf5ca68b9": {
+    "source": "M{0}が最多ですが、全工具の種類は減っていません。{1}mm連続金属スリーブは国内メーカーの調達例外です。{2}円は保存した接合試験の締結{3}品だけで、全機価格ではありません。",
+    "example": "M3が最多ですが、全工具の種類は減っていません。20mm連続金属スリーブは国内メーカーの調達例外です。900円は保存した接合試験の締結4品だけで、全機価格ではありません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "ed710ccdfd27a42d": {
+    "source": "保存した{0}接合試験へ",
+    "example": "保存した3.2接合試験へ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "34a5196dc56e64a6": {
+    "source": "元の{0}全体参照へ",
+    "example": "元の3.1全体参照へ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "3a2eb6d36e81077f": {
+    "source": "Ver.{0}開発入口",
+    "example": "Ver.3開発入口",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "7eb2524ad7f02790": {
+    "source": "開発入口へ",
+    "example": "開発入口へ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "fa9971c86457a682": {
+    "source": "Ver.{0}以降の開発入口",
+    "example": "Ver.3以降の開発入口",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "72930afe5c59f7d8": {
+    "source": "完成版Ver.{0}",
+    "example": "完成版Ver.2",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "47b8397475b9e64f": {
+    "source": "元の見た目・写真・動画・PDF・STL・既存URLを維持します。",
+    "example": "元の見た目・写真・動画・PDF・STL・既存URLを維持します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "49c94d27edac3b4c": {
+    "source": "完成版の制作記録へ",
+    "example": "完成版の制作記録へ",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "82e8cb7e1b1f2883": {
+    "source": "{0}の全体{1}度・組立・印刷・購入",
+    "example": "3.4の全体360度・組立・印刷・購入",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "672a5bed61070dbb": {
+    "source": "Ver.{0}：全体の参照設計",
+    "example": "Ver.3.1：全体の参照設計",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "c9b10af6bfeef80e": {
+    "source": "旧形状の{0}度と{1}工程",
+    "example": "旧形状の360度と12工程",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "0b93da8242a466b0": {
+    "source": "Ver.{0}：保存した接合試験",
+    "example": "Ver.3.2：保存した接合試験",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "647354921faf92de": {
+    "source": "試験体・嵌合片・限定結果",
+    "example": "試験体・嵌合片・限定結果",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "15ee8c75491c8bd5": {
+    "source": "Ver.{0}を完成したことにはしていません。大きい版番号は完成や性能保証の意味ではありません。",
+    "example": "Ver.3.3を完成したことにはしていません。大きい版番号は完成や性能保証の意味ではありません。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "b207611a7fcca59f": {
+    "source": "Ver.{0} M{1}接合試験・保存版",
+    "example": "Ver.3.2 M3接合試験・保存版",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "b0688a6a8bf9c90d": {
+    "source": "{0}はM{1}×{2}と連続{3}mmスリーブ、DはM{4}×{5}と{6}mmスリーブ。{7}mm頭側座金を側面から置き、{8}mm通路からねじを挿入。本体の外で二重ナットを締結します。",
+    "example": "AはM3×30と連続20mmスリーブ、DはM3×15と8mmスリーブ。8mm頭側座金を側面から置き、6.2mm通路からねじを挿入。本体の外で二重ナットを締結します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "b2fe4aa5895866a8": {
+    "source": "{0}. 座金座と残りの脚を準備",
+    "example": "7. 座金座と残りの脚を準備",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "79fea02d48775d53": {
+    "source": "M{0}座金は{1}mm逃げへ配置し、リンクを挟みません。P/{2}/{3}/Eと足は元のM{4}構成を保持します。",
+    "example": "M6座金は0.3mm逃げへ配置し、リンクを挟みません。P/B/C/Eと足は元のM2構成を保持します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "4521fac5e5a35f9f": {
+    "source": "{0}. 本体へ取り付けて位相を合わせる",
+    "example": "8. 本体へ取り付けて位相を合わせる",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "26199f9eb9daa019": {
+    "source": "主軸の正係合と固定Pを合わせます。左右位相は前から{0}/{1}、{2}/{3}、{4}/{5}度。単体での工具作業を先に終え、保持とガードを戻します。",
+    "example": "主軸の正係合と固定Pを合わせます。左右位相は前から0/180、180/0、0/180度。単体での工具作業を先に終え、保持とガードを戻します。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "2cb6c7991e2ec9f6": {
+    "source": "{0}. 接合ごとの確認を記録",
+    "example": "9. 接合ごとの確認を記録",
+    "origins": [
+      "site/ver3_data.py"
+    ]
+  },
+  "f66c572fe6d74953": {
+    "source": "個体IDは{0}からの追跡用IDを保持します。名称にM{1}が残る場合も、規格・購入は更新したPartIdと{2}のBOMを参照してください。",
+    "example": "個体IDは3.1からの追跡用IDを保持します。名称にM2が残る場合も、規格・購入は更新したPartIdと3.4のBOMを参照してください。",
+    "origins": [
+      "site/ver3_data.py"
+    ]
   }
 }

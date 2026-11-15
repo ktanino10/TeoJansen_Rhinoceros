@@ -1,0 +1,535 @@
+{
+  "revisionId": "v3.2-m3-r1-bench",
+  "status": "PASS_WITH_SCOPE",
+  "nativeReopened": true,
+  "stepSolidCount": 24,
+  "nativeStepMaxVolumeDifferenceMm3": 2.773958840407431e-10,
+  "staticIntersections": [],
+  "pivotRotationSamples": [
+    {
+      "degrees": -80,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.29999999999999893
+    },
+    {
+      "degrees": -70,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.299999999999999
+    },
+    {
+      "degrees": -60,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.2999999999999998
+    },
+    {
+      "degrees": -50,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.2999999999999998
+    },
+    {
+      "degrees": -40,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.2999999999999998
+    },
+    {
+      "degrees": -30,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.29999999999999893
+    },
+    {
+      "degrees": -20,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.29999999999999893
+    },
+    {
+      "degrees": -10,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.29999999999999893
+    },
+    {
+      "degrees": 0,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.2999999999999998
+    },
+    {
+      "degrees": 10,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.2999999999999998
+    },
+    {
+      "degrees": 20,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.29999999999999916
+    },
+    {
+      "degrees": 30,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.29999999999999905
+    },
+    {
+      "degrees": 40,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.29999999999999893
+    },
+    {
+      "degrees": 50,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.29999999999999893
+    },
+    {
+      "degrees": 60,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.2999999999999998
+    },
+    {
+      "degrees": 70,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.29999999999999893
+    },
+    {
+      "degrees": 80,
+      "intersectionMm3": 0.0,
+      "clearanceMm": 0.2999999999999998
+    }
+  ],
+  "gearMeshSamples": [
+    {
+      "degrees": 0.0,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 0.47619047619047616,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 0.9523809523809523,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 1.4285714285714284,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 1.9047619047619047,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 2.380952380952381,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 2.8571428571428568,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 3.333333333333333,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 3.8095238095238093,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 4.285714285714286,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 4.761904761904762,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 5.238095238095238,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 5.7142857142857135,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 6.19047619047619,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 6.666666666666666,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 7.142857142857142,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 7.619047619047619,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 8.095238095238095,
+      "intersectionMm3": 0.0
+    },
+    {
+      "degrees": 8.571428571428571,
+      "intersectionMm3": 0.0
+    }
+  ],
+  "sideInsertionSamples": [
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 0,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 1,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 2,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 3,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 4,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 5,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 6,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 7,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 8,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 9,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 10,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 11,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 12,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 0,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 1,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 2,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 3,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 4,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 5,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 6,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 7,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 8,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 9,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 10,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 11,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "gear",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 12,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 0,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 1,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 2,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 3,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 4,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 5,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 6,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 7,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 8,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 9,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 10,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 11,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_NUT",
+      "sideOffsetMm": 12,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 0,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 1,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 2,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 3,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 4,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 5,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 6,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 7,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 8,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 9,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 10,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 11,
+      "intersectionMm3": 0.0
+    },
+    {
+      "joint": "pivot",
+      "part": "H_M3_WASHER",
+      "sideOffsetMm": 12,
+      "intersectionMm3": 0.0
+    }
+  ],
+  "toolEnvelopeIntersections": {
+    "gearHeadKeyApproachMm3": 0.0,
+    "gearOuterNutSpannerEnvelopeMm3": 0.0,
+    "pivotHeadKeyApproachMm3": 0.0,
+    "pivotOuterNutSpannerEnvelopeMm3": 0.0
+  },
+  "pivotAxialGapMm": 0.5999999999999996,
+  "pivotDiametralClearanceMm": 0.20000000000000018,
+  "pivotBoltProjectionMm": 2.1999999999999993,
+  "gearBoltProjectionMm": 4.199999999999999,
+  "sleeveWallMmAssumed": 1.4,
+  "linkHoleEdgeMm": 3.4,
+  "gearMetrics": {
+    "moduleMm": 1,
+    "pinionTeeth": 42,
+    "wheelTeeth": 42,
+    "centerDistanceMm": 42.0,
+    "pressureAngleDeg": 25,
+    "contactRatio": 1.3618599118988133,
+    "minimumTipThicknessMm": 0.5393225612840492,
+    "rackUndercutMinimumTeeth": 11.19781986422678,
+    "noStandardRackUndercut": true,
+    "backlashMm": 0.3,
+    "profileShifts": [
+      0.0,
+      -0.0
+    ],
+    "addendumCoefficients": [
+      0.89,
+      0.89
+    ],
+    "profileDefinition": "Paired zero-total-shift involutes; per-mesh module/pressure, truncated addenda sized to>=0.53mm then rounded down. Mesh center and tooth-count ratio are preserved.",
+    "radialForcePerTangential": 0.46630765815499864,
+    "rootProfile": "radial continuation below base circle; no claimed generated hob trochoid",
+    "printedProfileNeedsCoupon": true,
+    "rootChordMm": 2.25092856918773,
+    "faceWidthMm": 3.2,
+    "tangentialForceNPerNm": 47.61904761904762,
+    "radialForceNPerNm": 22.20512657880946,
+    "rootSectionModulusMm3": 2.702229025912278,
+    "allowableToothLoadN": null,
+    "strengthNote": "Geometric root section only; no PETG strength/creep/fatigue allowable or load rating."
+  },
+  "nominalBenchMassG": 39.942673787202864,
+  "physicalFitStrengthWear": "UNKNOWN",
+  "fullWalkerMotionFloorClearance": "NOT_RUN_NOT_INTEGRATED",
+  "toolAccess": "Finite 4mm-diameter straight key approach and 10mm-wide/2mm-thick outer-nut spanner envelopes. Actual tool body, hand space and torque UNKNOWN.",
+  "scope": "Bench intersections and finite unloaded rotation only; no material strength, wear, preload or walking certification."
+}

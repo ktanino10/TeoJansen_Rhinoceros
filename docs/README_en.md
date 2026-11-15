@@ -6,11 +6,21 @@ Full English counterparts of the major public documents. Frozen Japanese enginee
 
 [English website](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/) · [How to use / resource legend](USER_GUIDE_en.md) · [Source and coverage manifest](translation-manifest.json)
 
-**Current: Ver.3.1** (engineering `v3-integrated-walkers-r7-16-floor2`). **Archive: Ver.3.0** (first-cut concepts). Original engineering titles, IDs and hashes are retained; r2/r3/r4/r6 are internal study/subassembly revisions, not public product versions.
+**Completed: Ver.2. Development: Ver.3.4 A.** Ver.3.2 is the retained joint trial. **Reference: Ver.3.1** (engineering `v3-integrated-walkers-r7-16-floor2`). **Archive: Ver.3.0** (first-cut concepts). Original engineering titles, IDs and hashes are retained; r2/r3/r4/r6 are internal study/subassembly revisions, not public product versions.
+
+## Ver.3.4 — Integrated development / Ver.3.2 retained trial
+
+[Development index](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/development.html) · [Ver.3.4 whole360 view](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/ver3-4.html)
+
+- [Ver.3.4 assembly and limitations](ver3/m3_a34/README_en.md)
+- [Design decisions and sourcing exceptions](ver3/m3_a34/DESIGN_en.md)
+- [Print list](ver3/m3_a34/print-list.csv)
+- [Required hardware](ver3/m3_a34/purchase-list.csv)
+- [Retained Ver.3.2 trial](ver3/m3_r1/README_en.md)
 
 [Ver.3.1 comparison / 360° / assembly](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/r7.html) · [Current native CAD / STEP / STL / BOM](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/index.html#downloads) · [Current walking display / videos](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/walking.html)
 
-## Ver.3.1 — Current design and source records
+## Ver.3.1 — Retained reference and source records
 
 | Document | 日本語 | English |
 |---|---|---|

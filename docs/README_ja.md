@@ -6,11 +6,21 @@
 
 [日本語サイト](https://ktanino10.github.io/TeoJansen_Rhinoceros/) · [使い方・資料の凡例](USER_GUIDE_ja.md) · [出典・対応範囲manifest](translation-manifest.json)
 
-**現行：Ver.3.1**（内部設計ID `v3-integrated-walkers-r7-16-floor2`）。**履歴：Ver.3.0**（第一カットの初期比較案）。原資料の題名・ID・ハッシュは保持しています。r2/r3/r4/r6は内部研究・部分設計の改訂で、作品の公開版番号ではありません。
+**完成版：Ver.2。開発中：Ver.3.4 A。** Ver.3.2は保存した接合試験です。**参照設計：Ver.3.1**（内部設計ID `v3-integrated-walkers-r7-16-floor2`）。**履歴：Ver.3.0**（第一カットの初期比較案）。原資料の題名・ID・ハッシュは保持しています。r2/r3/r4/r6は内部研究・部分設計の改訂で、作品の公開版番号ではありません。
+
+## Ver.3.4 — 統合開発版／Ver.3.2保存試験
+
+[開発入口](https://ktanino10.github.io/TeoJansen_Rhinoceros/development.html) · [Ver.3.4全体360度](https://ktanino10.github.io/TeoJansen_Rhinoceros/ver3-4.html)
+
+- [Ver.3.4組立と未確認事項](ver3/m3_a34/README_ja.md)
+- [設計判断と調達例外](ver3/m3_a34/DESIGN_ja.md)
+- [全機印刷リスト](ver3/m3_a34/print-list.csv)
+- [必要購入部品](ver3/m3_a34/purchase-list.csv)
+- [保存したVer.3.2接合試験](ver3/m3_r1/README_ja.md)
 
 [Ver.3.1 比較・360°・組立](https://ktanino10.github.io/TeoJansen_Rhinoceros/r7.html) · [現行CAD・STEP・STL・BOM](https://ktanino10.github.io/TeoJansen_Rhinoceros/index.html#downloads) · [現行の連続歩行表示・動画](https://ktanino10.github.io/TeoJansen_Rhinoceros/walking.html)
 
-## Ver.3.1 — 現行設計と出典資料
+## Ver.3.1 — 保存した参照設計と出典資料
 
 | 資料 | 日本語 | English |
 |---|---|---|

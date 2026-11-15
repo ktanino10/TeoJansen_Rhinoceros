@@ -1,0 +1,794 @@
+{
+  "id": "A",
+  "units": "mm",
+  "revisionId": "v3.2-m3-r1-bench",
+  "publicVersion": "3.2",
+  "status": "BENCH_PROTOTYPE_NOT_FULL_KIT",
+  "manufacturingRelease": false,
+  "physicalQualification": "UNKNOWN",
+  "baseCommit": "18dd3f40fb811b3d50cfa527b6fafbfa55a6e781",
+  "parts": {
+    "P_M3_GEAR42": {
+      "category": "printed",
+      "description": "42T positive hex drive; side-loaded captive inner nut; not an r7 drop-in",
+      "quantity": 2,
+      "volumeMm3": 4998.012226513132,
+      "nominalMassG": 6.347475527671678,
+      "densityGcm3Assumed": 1.27
+    },
+    "P_M3_PIVOT": {
+      "category": "printed",
+      "description": "12mm metal compression path; 6mm free gap; captive inner nut; bench clevis",
+      "quantity": 1,
+      "volumeMm3": 2376.492257008448,
+      "nominalMassG": 3.0181451664007293,
+      "densityGcm3Assumed": 1.27
+    },
+    "P_M3_LINK": {
+      "category": "printed",
+      "description": "26.5mm pitch retained; 6.2mm smooth sleeve bores; enlarged local bosses",
+      "quantity": 1,
+      "volumeMm3": 2250.9947455857337,
+      "nominalMassG": 2.8587633268938815,
+      "densityGcm3Assumed": 1.27
+    },
+    "Q_SLEEVE_FIT": {
+      "category": "printed",
+      "description": "Left-to-right bores 6.1 / 6.2 / 6.3 mm; no machine quantity",
+      "quantity": 0,
+      "volumeMm3": 3093.648703334953,
+      "nominalMassG": 3.9289338532353906,
+      "densityGcm3Assumed": 1.27
+    },
+    "Q_NUT_HEX_FIT": {
+      "category": "printed",
+      "description": "Near row nut AF 5.6/5.7/5.8; far row shaft AF 5.08/5.12/5.2 mm",
+      "quantity": 0,
+      "volumeMm3": 4462.687890629586,
+      "nominalMassG": 5.667613621099575,
+      "densityGcm3Assumed": 1.27
+    },
+    "H_M3_20": {
+      "category": "purchased",
+      "description": "Sengoku EEHD-6D5E; M3x20 socket head, pitch 0.5 nominal, stainless grade unknown",
+      "quantity": 3,
+      "volumeMm3": 204.52756457937997,
+      "nominalMassG": 1.6157677601771017,
+      "densityGcm3Assumed": 7.9
+    },
+    "H_M3_NUT": {
+      "category": "purchased",
+      "description": "Akizuki 114372; brass M3x0.5; AF5.5/H2.4 are acceptance assumptions, not supplier tolerances",
+      "quantity": 6,
+      "volumeMm3": 45.90884398536536,
+      "nominalMassG": 0.39022517387560557,
+      "densityGcm3Assumed": 8.5
+    },
+    "H_M3_WASHER": {
+      "category": "purchased",
+      "description": "Sengoku EEHD-6EC4 BSW3mm; nickel-plated brass M3x8x0.5; actual bore/tolerances to measure",
+      "quantity": 6,
+      "volumeMm3": 21.11150263212341,
+      "nominalMassG": 0.17944777237304899,
+      "densityGcm3Assumed": 8.5
+    },
+    "H_M3_SLEEVE12": {
+      "category": "purchased",
+      "description": "Sengoku EEHD-6CJH BS3x12; approx OD6, M3 through hole; end groove not modelled, inspect actual edge",
+      "quantity": 1,
+      "volumeMm3": 242.7822802694192,
+      "nominalMassG": 2.0636493822900634,
+      "densityGcm3Assumed": 8.5
+    },
+    "H_HEX5_30": {
+      "category": "cut_to_length",
+      "description": "Two 30mm lengths from the existing 3.1 HEX5 brass-stock family; no end tapping; price not refreshed",
+      "quantity": 2,
+      "volumeMm3": 649.5190528383291,
+      "nominalMassG": 5.520911949125797,
+      "densityGcm3Assumed": 8.5
+    }
+  },
+  "instances": [
+    {
+      "name": "P_M3_GEAR42_001",
+      "part_id": "P_M3_GEAR42",
+      "group": "gear",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_HEX5_30_001",
+      "part_id": "H_HEX5_30",
+      "group": "gear",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -6.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_20_001",
+      "part_id": "H_M3_20",
+      "group": "gear",
+      "transform": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          2.220446049250313e-16,
+          1.0,
+          -5.5
+        ],
+        [
+          -0.0,
+          -1.0,
+          2.220446049250313e-16,
+          10.2
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_WASHER_001",
+      "part_id": "H_M3_WASHER",
+      "group": "gear",
+      "transform": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          2.220446049250313e-16,
+          1.0,
+          -5.5
+        ],
+        [
+          -0.0,
+          -1.0,
+          2.220446049250313e-16,
+          10.2
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_WASHER_002",
+      "part_id": "H_M3_WASHER",
+      "group": "gear",
+      "transform": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          2.220446049250313e-16,
+          1.0,
+          5.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          2.220446049250313e-16,
+          10.2
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_NUT_001",
+      "part_id": "H_M3_NUT",
+      "group": "gear",
+      "transform": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          2.220446049250313e-16,
+          1.0,
+          5.5
+        ],
+        [
+          -0.0,
+          -1.0,
+          2.220446049250313e-16,
+          10.2
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_NUT_002",
+      "part_id": "H_M3_NUT",
+      "group": "gear",
+      "transform": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          2.220446049250313e-16,
+          1.0,
+          7.9
+        ],
+        [
+          -0.0,
+          -1.0,
+          2.220446049250313e-16,
+          10.2
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "P_M3_GEAR42_002",
+      "part_id": "P_M3_GEAR42",
+      "group": "gear",
+      "transform": [
+        [
+          -0.9972037971811805,
+          0.07473009358642399,
+          0.0,
+          42.0
+        ],
+        [
+          -0.07473009358642399,
+          -0.9972037971811805,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_HEX5_30_002",
+      "part_id": "H_HEX5_30",
+      "group": "gear",
+      "transform": [
+        [
+          -0.9972037971811805,
+          0.07473009358642399,
+          0.0,
+          42.0
+        ],
+        [
+          -0.07473009358642399,
+          -0.9972037971811805,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -6.000000000000002
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_20_002",
+      "part_id": "H_M3_20",
+      "group": "gear",
+      "transform": [
+        [
+          -0.9972037971811805,
+          7.368736932058811e-18,
+          0.07473009358642399,
+          35.605761702187586
+        ],
+        [
+          -0.07473009358642398,
+          -2.220446049250313e-16,
+          -0.9972037971811802,
+          5.036240322977948
+        ],
+        [
+          -1.4979737166149529e-18,
+          -1.0000000000000002,
+          1.1102230246251565e-16,
+          10.200000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_WASHER_003",
+      "part_id": "H_M3_WASHER",
+      "group": "gear",
+      "transform": [
+        [
+          -0.9972037971811805,
+          7.368736932058811e-18,
+          0.07473009358642399,
+          35.605761702187586
+        ],
+        [
+          -0.07473009358642398,
+          -2.220446049250313e-16,
+          -0.9972037971811802,
+          5.036240322977948
+        ],
+        [
+          -1.4979737166149529e-18,
+          -1.0000000000000002,
+          1.1102230246251565e-16,
+          10.200000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_WASHER_004",
+      "part_id": "H_M3_WASHER",
+      "group": "gear",
+      "transform": [
+        [
+          -0.9972037971811805,
+          7.368736932058811e-18,
+          0.07473009358642399,
+          36.39042768484504
+        ],
+        [
+          -0.07473009358642398,
+          -2.220446049250313e-16,
+          -0.9972037971811802,
+          -5.434399547424445
+        ],
+        [
+          -1.4979737166149529e-18,
+          -1.0000000000000002,
+          1.1102230246251565e-16,
+          10.200000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_NUT_003",
+      "part_id": "H_M3_NUT",
+      "group": "gear",
+      "transform": [
+        [
+          -0.9972037971811805,
+          7.368736932058811e-18,
+          0.07473009358642399,
+          36.42779273163825
+        ],
+        [
+          -0.07473009358642398,
+          -2.220446049250313e-16,
+          -0.9972037971811802,
+          -5.9330014460150355
+        ],
+        [
+          -1.4979737166149529e-18,
+          -1.0000000000000002,
+          1.1102230246251565e-16,
+          10.200000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_NUT_004",
+      "part_id": "H_M3_NUT",
+      "group": "gear",
+      "transform": [
+        [
+          -0.9972037971811805,
+          7.368736932058811e-18,
+          0.07473009358642399,
+          36.60714495624567
+        ],
+        [
+          -0.07473009358642398,
+          -2.220446049250313e-16,
+          -0.9972037971811802,
+          -8.32629055924987
+        ],
+        [
+          -1.4979737166149529e-18,
+          -1.0000000000000002,
+          1.1102230246251565e-16,
+          10.200000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "P_M3_PIVOT_001",
+      "part_id": "P_M3_PIVOT",
+      "group": "pivot",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          62.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "P_M3_LINK_001",
+      "part_id": "P_M3_LINK",
+      "group": "pivot",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          62.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.3
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_SLEEVE12_001",
+      "part_id": "H_M3_SLEEVE12",
+      "group": "pivot",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          62.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_20_003",
+      "part_id": "H_M3_20",
+      "group": "pivot",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          62.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_WASHER_005",
+      "part_id": "H_M3_WASHER",
+      "group": "pivot",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          62.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_WASHER_006",
+      "part_id": "H_M3_WASHER",
+      "group": "pivot",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          62.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          12.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_NUT_005",
+      "part_id": "H_M3_NUT",
+      "group": "pivot",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          62.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          12.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "H_M3_NUT_006",
+      "part_id": "H_M3_NUT",
+      "group": "pivot",
+      "transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          62.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          14.9
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "coupons": [
+    "Q_SLEEVE_FIT",
+    "Q_NUT_HEX_FIT"
+  ],
+  "cadMeshes": "FreeCAD/Ver.3/m3_r1/render_geometry.json.gz",
+  "sourceHashes": {
+    "scripts/ver3/build_m3_trial.py": "968d15dac388e371d44a0a1148e1e9b47ea42ea4b6775c329602fd5d6e83e371",
+    "scripts/ver3/walker_geometry.py": "d976d6cd480a3875856c2c4397671ee1ac89fd0c73269a68dec095c05b12e2c6",
+    "docs/ver3/integrated_r7/A/assembly.json": "1750f667aa9029aec39f9b409a6039f8f6b4d5ad99e81c71653dd04739fd1e3d",
+    "FreeCAD/Ver.3/integrated_r7/A/Walker_A.FCStd": "4584762d480d940bc26a23b4ccd44491ffb051e7b1872559a2436af664473e88",
+    "docs/ver3/m3_r1/joints.csv": "a89203a512910451c1f3a219e40b4256c086d98509071ba6b0a8549bae68c854"
+  },
+  "assumptions": {
+    "printer": "Bambu Lab P1S inspection-only; user machine UNKNOWN",
+    "nozzleDiameterMm": 0.2,
+    "material": "Generic PETG inspection-only; user material UNKNOWN",
+    "supplierGeometry": "Dimension envelopes, not supplied vendor CAD. Measure nut AF/height, sleeve OD/ID/groove and washer bore."
+  }
+}

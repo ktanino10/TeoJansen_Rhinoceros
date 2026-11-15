@@ -1,0 +1,12 @@
+{
+  "revisionId": "v3.4-a-m3-r1",
+  "status": "PASS",
+  "complete": true,
+  "poses": 72,
+  "uniqueBrepPairs": 6085,
+  "intersections": [],
+  "nativeSha256": "8a9d55bf469602fd3469a3aa18829ee0c2c103daf8dfa1a6a5fc27e04c5e5bc9",
+  "scope": "All changed instances against the complete current assembly at10deg crank increments and0/6mm foot compression. Unchanged pairs retain their frozen3.1 evidence; no continuous collision or physical assembly claim.",
+  "rockerAngleDeg": 0,
+  "physicalMotionTest": false
+}

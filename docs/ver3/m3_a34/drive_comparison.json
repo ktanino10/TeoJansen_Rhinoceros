@@ -1,0 +1,56 @@
+{
+  "revisionId": "v3.4-a-m3-r1",
+  "control31Reproduced": true,
+  "oldMassG": 1065.3875802118287,
+  "newMassG": 1119.4247391474573,
+  "perNodeDiameterMm": {
+    "A": 6,
+    "P": 4,
+    "B": 4,
+    "C": 4,
+    "D": 6,
+    "E": 4
+  },
+  "sameLoadRadiusRatioForChangedNodes": 1.5,
+  "reactionMethod": "Re-solved actual CAD masses/contact and signed joint reactions; not whole-loss multiplication by1.5.",
+  "caseRows": [
+    {
+      "case": "low",
+      "oldRequiredNm": 0.000778686071827508,
+      "newRequiredNm": 0.0008112241527774444,
+      "rawSupplyMinimumNm": 0.0016165637970188239,
+      "rawPhaseMarginNm": 0.0008053694267138449,
+      "halfSupplyPhaseMarginNm": -2.9155919008951947e-06,
+      "oldJournalWorkNmm": 19.45927476869516,
+      "newJournalWorkNmm": 24.526399800252474
+    },
+    {
+      "case": "nominal",
+      "oldRequiredNm": 0.0014344017782157695,
+      "newRequiredNm": 0.001484950929944876,
+      "rawSupplyMinimumNm": 0.0016165637970188239,
+      "rawPhaseMarginNm": 0.00013164868246999138,
+      "halfSupplyPhaseMarginNm": -0.0006766363361447487,
+      "oldJournalWorkNmm": 38.91854953739032,
+      "newJournalWorkNmm": 49.05279960050495
+    },
+    {
+      "case": "high",
+      "oldRequiredNm": 0.00371006441080194,
+      "newRequiredNm": 0.003817264147179206,
+      "rawSupplyMinimumNm": 0.0016165637970188239,
+      "rawPhaseMarginNm": -0.0022006446470151397,
+      "halfSupplyPhaseMarginNm": -0.00300892966562988,
+      "oldJournalWorkNmm": 70.05338916730258,
+      "newJournalWorkNmm": 88.29503928090891
+    }
+  ],
+  "actualLoadedRpm": null,
+  "physicalSelfStart": "UNKNOWN",
+  "sourceHashes": {
+    "scripts/ver3/verify_m3_a34.py": "dc578abff293383f9847f59e89c04fb961c750872c39c2c52fa9f37733e89fdc",
+    "scripts/ver3/m3_a34_analysis.py": "140d4aaec320640e9507101747fc2f84a3e3812a7c0d177895965cd795fae808",
+    "docs/ver3/m3_a34/assembly.json": "42d49b25e42ad820445ca9780f904d117243e66ca9f5b602fac7b81bba318278",
+    "docs/ver3/m3_a34/work_budget.json": "5f68c111af2562174833a82b7b1d6d3941fbbc1b0ef0dd25740f19c3572d679a"
+  }
+}

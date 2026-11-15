@@ -43,6 +43,11 @@ DOCUMENTS = (
     "docs/ver3/integrated_r7/C/SLICING_ja.md",
     "docs/ver3/r7_walking_v1/MODEL_ja.md",
 )
+DEVELOPMENT_DOCUMENTS = (
+    "docs/ver3/m3_r1/README_ja.md",
+    "docs/ver3/m3_a34/README_ja.md",
+    "docs/ver3/m3_a34/DESIGN_ja.md",
+)
 CSV_DOCUMENTS = (
     *(f"docs/ver3/BOM_{d}.csv" for d in "ABC"),
     "docs/ver3/common_input_r4/BOM.csv",
@@ -129,7 +134,7 @@ class Catalog:
 def english_path(path: str) -> str:
     if path == "README_ja.md":
         return "README.md"
-    if path in DOCUMENTS:
+    if path in (*DOCUMENTS, *DEVELOPMENT_DOCUMENTS):
         return path.replace("_ja.md", "_en.md")
     if path in CSV_DOCUMENTS and JAPANESE.search((ROOT / path).read_text()):
         return path[:-4] + "_en.csv"
@@ -147,8 +152,9 @@ def translated_link(href: str, ref: str) -> str:
     target = english_path(original)
     if target == original:
         return href
+    target_ref = pieces[4] if original == "README_ja.md" else ref
     return urlunsplit((parsed.scheme, parsed.netloc,
-                      f"/ktanino10/TeoJansen_Rhinoceros/{pieces[3]}/{ref}/{quote(target, safe='/')}",
+                      f"/ktanino10/TeoJansen_Rhinoceros/{pieces[3]}/{target_ref}/{quote(target, safe='/')}",
                       parsed.query, parsed.fragment))
 
 
@@ -265,13 +271,14 @@ def build_locales(output: Path, pages: tuple[str, ...], ref: str) -> dict:
             raise ValueError(f"Stale document derivative; run localization.py --documents: {name}")
     (output / "en").mkdir()
     for page in pages:
+        page_ref = "18dd3f40fb811b3d50cfa527b6fafbfa55a6e781" if page == "production.html" else ref
         source = source_markup((output / page).read_text())
         source = re.sub(r'<a href="([^"]+)">((?:日本語の原典README|日本語README)[^<]*)</a>',
                         r'<a data-original-language="ja" href="\1">\2</a>', source)
-        translated = LocalizedHTML(catalog, page, ref)
+        translated = LocalizedHTML(catalog, page, page_ref)
         translated.feed(source)
-        (output / "en" / page).write_text(resource_notice(metadata("".join(translated.output), page, "en"), ref, "en"))
-        (output / page).write_text(resource_notice(metadata(source, page, "ja"), ref, "ja"))
+        (output / "en" / page).write_text(resource_notice(metadata("".join(translated.output), page, "en"), page_ref, "en"))
+        (output / page).write_text(resource_notice(metadata(source, page, "ja"), page_ref, "ja"))
     registry = json.loads((LOCALES / "sources.json").read_text())
     messages = {entry["source"]: catalog.translations[ident] for ident, entry in registry.items()
                 if ident in catalog.translations and any(not origin.startswith("docs/") for origin in entry["origins"])}
@@ -422,19 +429,22 @@ def document_outputs() -> dict[str, str]:
         entries.append({"source": source, "sourceLanguage": "ja", "sourceSha256": digest((ROOT / source).read_bytes()),
                         "target": source, "targetLanguage": "ja-original", "coverage": "unchanged original drawing; not an English drawing"})
     archives = sorted(path.relative_to(ROOT).as_posix() for path in (ROOT / "docs/ver3").rglob("*_ja.md")
-                      if path.relative_to(ROOT).as_posix() not in DOCUMENTS)
+                      if path.relative_to(ROOT).as_posix() not in (*DOCUMENTS, *DEVELOPMENT_DOCUMENTS))
     manifest = {
         "schemaVersion": 1, "defaultLanguage": "ja", "englishSitePrefix": "en/",
         "pagePairs": [{"ja": page, "en": "en/" + page} for page in (
-            "index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html")],
+            "index.html", "production.html", "comparison.html", "viewer.html", "calculations.html", "r7.html", "walking.html",
+            "development.html", "ver3-2.html", "ver3-4.html")],
         "engineeringInvariant": "Translation only: no CAD, kinematics, physics, quantities, prices, release status or qualification changes.",
         "entries": entries,
         "existingPairs": [
             {"source": ja, "sourceLanguage": "ja", "sourceSha256": digest((ROOT / ja).read_bytes()),
              "target": en, "targetLanguage": "en", "targetSha256": digest((ROOT / en).read_bytes()), "coverage": coverage}
             for ja, en, coverage in (
-                ("README_ja.md", "README.md", "current Ver.3.1 entry point and historical Ver.1/2/3.0 records"),
+                ("README_ja.md", "README.md", "completed Ver.2, Ver.3.4 development entry and retained version records"),
                 ("docs/USER_GUIDE_ja.md", "docs/USER_GUIDE_en.md", "website and document use; shared-resource legend"),
+                *((ja, ja.replace("_ja.md", "_en.md"), "paired development prose; same-revision CAD and numerical sources")
+                  for ja in DEVELOPMENT_DOCUMENTS),
             )
         ],
         "archivalOriginals": [{"path": path, "language": "ja", "sourceSha256": digest((ROOT / path).read_bytes()),
@@ -459,13 +469,26 @@ def document_outputs() -> dict[str, str]:
                  f"[{'English website' if english else '日本語サイト'}]({PUBLIC_URL}{'en/' if english else ''}) · "
                  f"[{'How to use / resource legend' if english else '使い方・資料の凡例'}](USER_GUIDE_{locale}.md) · "
                  f"[{'Source and coverage manifest' if english else '出典・対応範囲manifest'}](translation-manifest.json)", "",
-                 ("**Current: Ver.3.1** (engineering `v3-integrated-walkers-r7-16-floor2`). "
+                 ("**Completed: Ver.2. Development: Ver.3.4 A.** Ver.3.2 is the retained joint trial. "
+                  "**Reference: Ver.3.1** (engineering `v3-integrated-walkers-r7-16-floor2`). "
                   "**Archive: Ver.3.0** (first-cut concepts). Original engineering titles, IDs and hashes are retained; "
                   "r2/r3/r4/r6 are internal study/subassembly revisions, not public product versions."
-                  if english else "**現行：Ver.3.1**（内部設計ID `v3-integrated-walkers-r7-16-floor2`）。"
+                  if english else "**完成版：Ver.2。開発中：Ver.3.4 A。** Ver.3.2は保存した接合試験です。"
+                  "**参照設計：Ver.3.1**（内部設計ID `v3-integrated-walkers-r7-16-floor2`）。"
                   "**履歴：Ver.3.0**（第一カットの初期比較案）。原資料の題名・ID・ハッシュは保持しています。"
                   "r2/r3/r4/r6は内部研究・部分設計の改訂で、作品の公開版番号ではありません。"), ""]
         site_url = PUBLIC_URL + ("en/" if english else "")
+        lines += [
+            "## Ver.3.4 — Integrated development / Ver.3.2 retained trial" if english else "## Ver.3.4 — 統合開発版／Ver.3.2保存試験",
+            "",
+            f"[{'Development index' if english else '開発入口'}]({site_url}development.html) · "
+            f"[{'Ver.3.4 whole360 view' if english else 'Ver.3.4全体360度'}]({site_url}ver3-4.html)", "",
+            f"- [{'Ver.3.4 assembly and limitations' if english else 'Ver.3.4組立と未確認事項'}](ver3/m3_a34/README_{locale}.md)",
+            f"- [{'Design decisions and sourcing exceptions' if english else '設計判断と調達例外'}](ver3/m3_a34/DESIGN_{locale}.md)",
+            f"- [{'Print list' if english else '全機印刷リスト'}](ver3/m3_a34/print-list.csv)",
+            f"- [{'Required hardware' if english else '必要購入部品'}](ver3/m3_a34/purchase-list.csv)",
+            f"- [{'Retained Ver.3.2 trial' if english else '保存したVer.3.2接合試験'}](ver3/m3_r1/README_{locale}.md)", "",
+        ]
         lines += [
             f"[{'Ver.3.1 comparison / 360° / assembly' if english else 'Ver.3.1 比較・360°・組立'}]({site_url}r7.html) · "
             f"[{'Current native CAD / STEP / STL / BOM' if english else '現行CAD・STEP・STL・BOM'}]({site_url}index.html#downloads) · "
@@ -475,7 +498,7 @@ def document_outputs() -> dict[str, str]:
         archive = list(DOCUMENTS[:3])
         research = [source for source in DOCUMENTS if source not in current + archive]
         for heading, documents in (
-            ("Ver.3.1 — Current design and source records" if english else "Ver.3.1 — 現行設計と出典資料", current),
+            ("Ver.3.1 — Retained reference and source records" if english else "Ver.3.1 — 保存した参照設計と出典資料", current),
             ("Ver.3.0 — Initial concepts (archive)" if english else "Ver.3.0 — 初期比較案（履歴）", archive),
             ("Internal studies and subassemblies (separate conditions)" if english else "内部研究・部分設計（別条件）", research),
         ):

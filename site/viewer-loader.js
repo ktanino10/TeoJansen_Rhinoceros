@@ -7,7 +7,7 @@ const workspace = document.getElementById("viewer-workspace");
 const fallback = document.getElementById("viewer-fallback");
 const requested = new URL(location.href).searchParams;
 const catalogUrl = document.body.dataset.viewerCatalog || "assets/viewer-index.json";
-if (["A", "B", "C"].includes(requested.get("design"))) design.value = requested.get("design");
+if ([...design.options].some(option => option.value === requested.get("design"))) design.value = requested.get("design");
 let controller;
 let loading = false;
 start.hidden = false;

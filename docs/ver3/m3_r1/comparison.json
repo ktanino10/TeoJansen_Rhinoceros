@@ -1,0 +1,80 @@
+{
+  "revisionId": "v3.2-m3-r1-bench",
+  "baseCommit": "18dd3f40fb811b3d50cfa527b6fafbfa55a6e781",
+  "unchangedFull31A": {
+    "printedTypes": 44,
+    "printedQuantity": 115,
+    "boltsById": {
+      "H_BOLT_M3_16": 18,
+      "H_BOLT_M3_20": 16,
+      "H_BOLT_M4_20": 10,
+      "H_BOLT_M2_16": 14,
+      "H_BOLT_M2_30": 12,
+      "H_BOLT_M2_25": 18,
+      "H_BOLT_M4_12": 4,
+      "H_BOLT_M2_12": 6
+    },
+    "physicalQualification": "UNKNOWN"
+  },
+  "matchedFastenerComparison": {
+    "scope": "two 42T drive clamps plus one free pivot only, NOT two whole machines",
+    "oldBolts": {
+      "M3x16": 2,
+      "M2x16": 1
+    },
+    "newBolts": {
+      "M3x20": 3
+    },
+    "oldNutCount": 6,
+    "newNutCount": 6,
+    "oldWasherCount": 2,
+    "newWasherCount": 6,
+    "oldToolSizes": [
+      "hex1.5",
+      "hex2.5",
+      "spanner4",
+      "spanner5.5"
+    ],
+    "newToolSizes": [
+      "hex2.5",
+      "spanner5.5"
+    ],
+    "oldTwoGearPlasticMassG": 9.774177931631906,
+    "newTwoGearPlasticMassG": 12.694951055343356,
+    "twoGearPlasticMassDifferenceG": 2.9207731237114505,
+    "massBasis": "same assumed 1.27 g/cm3 solid density; not slicer or measured masses"
+  },
+  "benchInstanceCount": 22,
+  "trialPrintedTypes": 5,
+  "trialPrintedQuantity": 6,
+  "full32MachineQuantity": null,
+  "full32MassAndBudget": null,
+  "fastenerMinimumOrderJpyIfNoneOwned": 900,
+  "excludedCosts": [
+    "metal shaft stock/cutting",
+    "tools",
+    "filament",
+    "shipping",
+    "travel"
+  ],
+  "tools": [
+    {
+      "name": "2.5mm hex key",
+      "source": "https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-6TMA",
+      "checkedDate": "2026-11-15",
+      "priceJpy": 110,
+      "onHand": null
+    },
+    {
+      "name": "5.5mm spanner; inspect 2mm-thick jaw/10mm width envelope",
+      "source": null,
+      "priceJpy": null,
+      "onHand": null
+    },
+    {
+      "name": "caliper; saw/file only if cutting spare metal stock",
+      "source": null,
+      "onHand": null
+    }
+  ]
+}

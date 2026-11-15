@@ -8,6 +8,12 @@
 
 ## Ver.3.1 — Current design
 
+**Ver.2 remains the completed public build; Ver.3 and later are separate work in progress.**
+[Ver.3 development index](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/development.html) ·
+[Ver.3.4 A: whole-machine 360°, M3 assembly, print and hardware lists](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/ver3-4.html) ·
+[Ver.3.4 source files and limitations](docs/ver3/m3_a34/README_en.md).
+Ver.3.1 below is the retained reference design, not a physically qualified release. The completed Ver.2 records below are unchanged.
+
 [Current comparison, 360° and 12-stage assembly](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/r7.html) · [Continuous walking display and English videos](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/walking.html) · [Current CAD / STEP / STL / BOM downloads](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/index.html#downloads)
 
 ![Ver.3.1 floor-corrected A, B and C at the same scale; CAD rendering, not a physical build](docs/ver3/r7_display_floor2/comparison.png)
@@ -16,7 +22,7 @@
 
 `manufacturingRelease=false`, physically qualified count 0; real wind, self-starting and physical 30 cm walking remain UNKNOWN. Seven representative slicing inspections are not whole-machine print/fit qualification. Walking uses prescribed 120 rpm input and 16× time compression, not measured performance. Existing r7 labels inside media refer to this Ver.3.1 geometry; canonical results, nulls and BOMs are unchanged.
 
-**Version guide:** Ver.1/2 = historical physical builds; [Ver.3.0 = initial concepts, archived CAD and videos](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/comparison.html); Ver.3.1 = current design. Internal r2/r3/r4/r6 study IDs are not public product versions. The build log below preserves the historical Ver.1/2 account.
+**Version guide:** Ver.1 = physical build record; Ver.2 = completed public build; [Ver.3.0 = initial concepts, archived CAD and videos](https://ktanino10.github.io/TeoJansen_Rhinoceros/en/comparison.html); Ver.3.1 = retained reference design; Ver.3.2 = retained M3 joint trial; Ver.3.4 = integrated A development. No completed Ver.3.3 is claimed. Internal r2/r3/r4/r6 study IDs are not public product versions. The build log below preserves the original Ver.1/2 account.
 
 ---
 ## Repository Contents

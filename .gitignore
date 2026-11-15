@@ -33,6 +33,8 @@ $RECYCLE.BIN/
 # Ver.3 Python regeneration cache
 __pycache__/
 *.pyc
+FreeCAD/Ver.3/**/*.FCBak
+FreeCAD/Ver.3/**/*.FCStd1
 
 # Showcase build and browser-test output
 site/dist/

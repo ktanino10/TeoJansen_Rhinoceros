@@ -7,6 +7,12 @@
 
 ## Ver.3.1 — 現行設計
 
+**Ver.2は完成版として公開を維持し、Ver.3以降は別の作業中資料として管理します。**
+[Ver.3開発入口](https://ktanino10.github.io/TeoJansen_Rhinoceros/development.html) ·
+[Ver.3.4 A：全体360度・M3組立・印刷／購入一覧](https://ktanino10.github.io/TeoJansen_Rhinoceros/ver3-4.html) ·
+[Ver.3.4の実ファイルと未確認事項](docs/ver3/m3_a34/README_ja.md)。
+以下のVer.3.1は保存した参照設計で、実機認定済みではありません。完成版Ver.2の記録は変更していません。
+
 [現行の比較・360°・12工程](https://ktanino10.github.io/TeoJansen_Rhinoceros/r7.html) · [連続歩行表示と日本語動画](https://ktanino10.github.io/TeoJansen_Rhinoceros/walking.html) · [現行CAD・STEP・STL・BOMのダウンロード](https://ktanino10.github.io/TeoJansen_Rhinoceros/index.html#downloads)
 
 ![Ver.3.1の床是正版A・B・Cを同一尺度で比較。実物ではなくCAD由来のCG](docs/ver3/r7_display_floor2/comparison.png)
@@ -15,7 +21,7 @@
 
 `manufacturingRelease=false`、実機合格0、実風・実自己始動・実30 cm歩行はUNKNOWN。代表7部品の層確認は全機の実造形・はめあい認定ではありません。歩行は規定入力120 rpm・16倍の計算表示で、実測ではありません。媒体に残るr7表記もこのVer.3.1形状を指し、元の物理結果・null・BOMは変更していません。
 
-**版の案内：** Ver.1/2＝過去の実物記録、[Ver.3.0＝初期比較案・旧CADと動画の履歴](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html)、Ver.3.1＝現行設計。内部研究r2/r3/r4/r6は作品の公開版番号ではありません。以下の製作ログは当時のVer.1/2の記録を保持しています。
+**版の案内：** Ver.1＝実物記録、Ver.2＝完成版、[Ver.3.0＝初期比較案・旧CADと動画の履歴](https://ktanino10.github.io/TeoJansen_Rhinoceros/comparison.html)、Ver.3.1＝保存した参照設計、Ver.3.2＝保存したM3接合試験、Ver.3.4＝Aの統合開発版。Ver.3.3を完成したことにはしていません。内部研究r2/r3/r4/r6は作品の公開版番号ではありません。以下の製作ログは当時のVer.1/2原文を保持しています。
 
 ---
 
